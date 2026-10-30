@@ -107,28 +107,32 @@ exports[`AuthorsSection component should render NTRO design form fields 1`] = `
                     <div
                       class="MuiBox-root css-wsew38"
                     >
-                      <button
+                      <span
                         aria-label="Add designer"
-                        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1a0ye8w-MuiButtonBase-root-MuiIconButton-root"
+                        class=""
                         data-mui-internal-clone-element="true"
-                        data-testid="rek-author-add-designer"
-                        id="rek-author-add-designer"
-                        tabindex="0"
-                        type="button"
                       >
-                        <svg
-                          aria-hidden="true"
-                          class="MuiSvgIcon-root MuiSvgIcon-colorPrimary MuiSvgIcon-fontSizeLarge css-7qpz8x-MuiSvgIcon-root"
-                          data-testid="rek-author-add"
-                          focusable="false"
-                          id="rek-author-add"
-                          viewBox="0 0 24 24"
+                        <button
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1a0ye8w-MuiButtonBase-root-MuiIconButton-root"
+                          data-testid="rek-author-add-designer"
+                          id="rek-author-add-designer"
+                          tabindex="0"
+                          type="button"
                         >
-                          <path
-                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m5 11h-4v4h-2v-4H7v-2h4V7h2v4h4z"
-                          />
-                        </svg>
-                      </button>
+                          <svg
+                            aria-hidden="true"
+                            class="MuiSvgIcon-root MuiSvgIcon-colorPrimary MuiSvgIcon-fontSizeLarge css-7qpz8x-MuiSvgIcon-root"
+                            data-testid="rek-author-add"
+                            focusable="false"
+                            id="rek-author-add"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m5 11h-4v4h-2v-4H7v-2h4V7h2v4h4z"
+                            />
+                          </svg>
+                        </button>
+                      </span>
                       <div
                         class="MuiBox-root css-1p0wbhh"
                       >
@@ -144,7 +148,7 @@ exports[`AuthorsSection component should render NTRO design form fields 1`] = `
                   >
                     <table
                       class="MuiTable-root MuiTable-stickyHeader css-iwmzly-MuiTable-root"
-                      style="--header-nameAsPublished-size: 250; --col-nameAsPublished-size: 250; --header-uqIdentifier-size: 150; --col-uqIdentifier-size: 150; --header-orgaff-size: 250; --col-orgaff-size: 250; --header-mrt_row_actions-size: 100; --col-mrt_row_actions-size: 100;"
+                      style="--header-nameAsPublished-size: 250; --col-nameAsPublished-size: 250; --header-uqIdentifier-size: 150; --col-uqIdentifier-size: 150; --header-externalIdentifier-size: 175; --col-externalIdentifier-size: 175; --header-externalIdentifierType-size: 150; --col-externalIdentifierType-size: 150; --header-orgaff-size: 250; --col-orgaff-size: 250; --header-mrt_row_actions-size: 100; --col-mrt_row_actions-size: 100;"
                     >
                       <thead
                         class="MuiTableHead-root css-7psuou-MuiTableHead-root"
@@ -295,10 +299,128 @@ exports[`AuthorsSection component should render NTRO design form fields 1`] = `
                           </th>
                           <th
                             aria-sort="none"
-                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-qqsuh1-MuiTableCell-root"
+                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-hvhjml-MuiTableCell-root"
                             colspan="1"
                             data-can-sort="true"
                             data-index="2"
+                            scope="col"
+                          >
+                            <div
+                              class="Mui-TableHeadCell-Content MuiBox-root css-1w86f15"
+                            >
+                              <div
+                                class="Mui-TableHeadCell-Content-Labels MuiBox-root css-68rqdf"
+                              >
+                                <div
+                                  class="Mui-TableHeadCell-Content-Wrapper MuiBox-root css-lapokc"
+                                >
+                                  <span
+                                    class="MuiTypography-root MuiTypography-caption css-8t45xm-MuiTypography-root"
+                                  >
+                                    External identifier
+                                  </span>
+                                </div>
+                                <span
+                                  aria-label="Sort by External identifier descending"
+                                  class="MuiBadge-root css-63ezxx-MuiBadge-root"
+                                  data-mui-internal-clone-element="true"
+                                >
+                                  <span
+                                    aria-label="Sort by External identifier descending"
+                                    class="MuiButtonBase-root MuiTableSortLabel-root Mui-active MuiTableSortLabel-directionAsc css-bgz9z4-MuiButtonBase-root-MuiTableSortLabel-root"
+                                    role="button"
+                                    tabindex="0"
+                                  >
+                                    <svg
+                                      aria-hidden="true"
+                                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionAsc css-7ojauk-MuiSvgIcon-root-MuiTableSortLabel-icon"
+                                      data-testid="SyncAltIcon"
+                                      focusable="false"
+                                      style="transform: rotate(-90deg) scaleX(0.9) translateX(-1px);"
+                                      viewBox="0 0 24 24"
+                                    >
+                                      <path
+                                        d="m18 12 4-4-4-4v3H3v2h15zM6 12l-4 4 4 4v-3h15v-2H6z"
+                                      />
+                                    </svg>
+                                  </span>
+                                  <span
+                                    class="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightCircular MuiBadge-overlapCircular css-h5xmwp-MuiBadge-badge"
+                                  >
+                                    0
+                                  </span>
+                                </span>
+                              </div>
+                              <div
+                                class="Mui-TableHeadCell-Content-Actions MuiBox-root css-epvm6"
+                              />
+                            </div>
+                          </th>
+                          <th
+                            aria-sort="none"
+                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-txqgkj-MuiTableCell-root"
+                            colspan="1"
+                            data-can-sort="true"
+                            data-index="3"
+                            scope="col"
+                          >
+                            <div
+                              class="Mui-TableHeadCell-Content MuiBox-root css-1w86f15"
+                            >
+                              <div
+                                class="Mui-TableHeadCell-Content-Labels MuiBox-root css-68rqdf"
+                              >
+                                <div
+                                  class="Mui-TableHeadCell-Content-Wrapper MuiBox-root css-1t5kuvk"
+                                >
+                                  <span
+                                    class="MuiTypography-root MuiTypography-caption css-8t45xm-MuiTypography-root"
+                                  >
+                                    External identifier type
+                                  </span>
+                                </div>
+                                <span
+                                  aria-label="Sort by External identifier type descending"
+                                  class="MuiBadge-root css-63ezxx-MuiBadge-root"
+                                  data-mui-internal-clone-element="true"
+                                >
+                                  <span
+                                    aria-label="Sort by External identifier type descending"
+                                    class="MuiButtonBase-root MuiTableSortLabel-root Mui-active MuiTableSortLabel-directionAsc css-bgz9z4-MuiButtonBase-root-MuiTableSortLabel-root"
+                                    role="button"
+                                    tabindex="0"
+                                  >
+                                    <svg
+                                      aria-hidden="true"
+                                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionAsc css-7ojauk-MuiSvgIcon-root-MuiTableSortLabel-icon"
+                                      data-testid="SyncAltIcon"
+                                      focusable="false"
+                                      style="transform: rotate(-90deg) scaleX(0.9) translateX(-1px);"
+                                      viewBox="0 0 24 24"
+                                    >
+                                      <path
+                                        d="m18 12 4-4-4-4v3H3v2h15zM6 12l-4 4 4 4v-3h15v-2H6z"
+                                      />
+                                    </svg>
+                                  </span>
+                                  <span
+                                    class="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightCircular MuiBadge-overlapCircular css-h5xmwp-MuiBadge-badge"
+                                  >
+                                    0
+                                  </span>
+                                </span>
+                              </div>
+                              <div
+                                class="Mui-TableHeadCell-Content-Actions MuiBox-root css-epvm6"
+                              />
+                            </div>
+                          </th>
+                          <th
+                            aria-sort="none"
+                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-qqsuh1-MuiTableCell-root"
+                            colspan="1"
+                            data-can-sort="true"
+                            data-index="4"
                             scope="col"
                           >
                             <div
@@ -356,7 +478,7 @@ exports[`AuthorsSection component should render NTRO design form fields 1`] = `
                             aria-sort="none"
                             class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignCenter MuiTableCell-sizeMedium css-ps3wyf-MuiTableCell-root"
                             colspan="1"
-                            data-index="3"
+                            data-index="5"
                             scope="col"
                           >
                             <div
@@ -385,7 +507,7 @@ exports[`AuthorsSection component should render NTRO design form fields 1`] = `
                           style="display: grid;"
                         >
                           <td
-                            colspan="4"
+                            colspan="6"
                             style="display: grid;"
                           >
                             <p
@@ -519,28 +641,32 @@ exports[`AuthorsSection component should render NTRO design form fields 1`] = `
                     <div
                       class="MuiBox-root css-wsew38"
                     >
-                      <button
+                      <span
                         aria-label="Add contributor"
-                        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1a0ye8w-MuiButtonBase-root-MuiIconButton-root"
+                        class=""
                         data-mui-internal-clone-element="true"
-                        data-testid="rek-contributor-add-contributor"
-                        id="rek-contributor-add-contributor"
-                        tabindex="0"
-                        type="button"
                       >
-                        <svg
-                          aria-hidden="true"
-                          class="MuiSvgIcon-root MuiSvgIcon-colorPrimary MuiSvgIcon-fontSizeLarge css-7qpz8x-MuiSvgIcon-root"
-                          data-testid="rek-contributor-add"
-                          focusable="false"
-                          id="rek-contributor-add"
-                          viewBox="0 0 24 24"
+                        <button
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1a0ye8w-MuiButtonBase-root-MuiIconButton-root"
+                          data-testid="rek-contributor-add-contributor"
+                          id="rek-contributor-add-contributor"
+                          tabindex="0"
+                          type="button"
                         >
-                          <path
-                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m5 11h-4v4h-2v-4H7v-2h4V7h2v4h4z"
-                          />
-                        </svg>
-                      </button>
+                          <svg
+                            aria-hidden="true"
+                            class="MuiSvgIcon-root MuiSvgIcon-colorPrimary MuiSvgIcon-fontSizeLarge css-7qpz8x-MuiSvgIcon-root"
+                            data-testid="rek-contributor-add"
+                            focusable="false"
+                            id="rek-contributor-add"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m5 11h-4v4h-2v-4H7v-2h4V7h2v4h4z"
+                            />
+                          </svg>
+                        </button>
+                      </span>
                       <div
                         class="MuiBox-root css-1p0wbhh"
                       >
@@ -556,7 +682,7 @@ exports[`AuthorsSection component should render NTRO design form fields 1`] = `
                   >
                     <table
                       class="MuiTable-root MuiTable-stickyHeader css-iwmzly-MuiTable-root"
-                      style="--header-nameAsPublished-size: 250; --col-nameAsPublished-size: 250; --header-uqIdentifier-size: 150; --col-uqIdentifier-size: 150; --header-orgaff-size: 250; --col-orgaff-size: 250; --header-mrt_row_actions-size: 100; --col-mrt_row_actions-size: 100;"
+                      style="--header-nameAsPublished-size: 250; --col-nameAsPublished-size: 250; --header-uqIdentifier-size: 150; --col-uqIdentifier-size: 150; --header-externalIdentifier-size: 175; --col-externalIdentifier-size: 175; --header-externalIdentifierType-size: 150; --col-externalIdentifierType-size: 150; --header-orgaff-size: 250; --col-orgaff-size: 250; --header-mrt_row_actions-size: 100; --col-mrt_row_actions-size: 100;"
                     >
                       <thead
                         class="MuiTableHead-root css-7psuou-MuiTableHead-root"
@@ -707,10 +833,128 @@ exports[`AuthorsSection component should render NTRO design form fields 1`] = `
                           </th>
                           <th
                             aria-sort="none"
-                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-qqsuh1-MuiTableCell-root"
+                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-hvhjml-MuiTableCell-root"
                             colspan="1"
                             data-can-sort="true"
                             data-index="2"
+                            scope="col"
+                          >
+                            <div
+                              class="Mui-TableHeadCell-Content MuiBox-root css-1w86f15"
+                            >
+                              <div
+                                class="Mui-TableHeadCell-Content-Labels MuiBox-root css-68rqdf"
+                              >
+                                <div
+                                  class="Mui-TableHeadCell-Content-Wrapper MuiBox-root css-lapokc"
+                                >
+                                  <span
+                                    class="MuiTypography-root MuiTypography-caption css-8t45xm-MuiTypography-root"
+                                  >
+                                    External identifier
+                                  </span>
+                                </div>
+                                <span
+                                  aria-label="Sort by External identifier descending"
+                                  class="MuiBadge-root css-63ezxx-MuiBadge-root"
+                                  data-mui-internal-clone-element="true"
+                                >
+                                  <span
+                                    aria-label="Sort by External identifier descending"
+                                    class="MuiButtonBase-root MuiTableSortLabel-root Mui-active MuiTableSortLabel-directionAsc css-bgz9z4-MuiButtonBase-root-MuiTableSortLabel-root"
+                                    role="button"
+                                    tabindex="0"
+                                  >
+                                    <svg
+                                      aria-hidden="true"
+                                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionAsc css-7ojauk-MuiSvgIcon-root-MuiTableSortLabel-icon"
+                                      data-testid="SyncAltIcon"
+                                      focusable="false"
+                                      style="transform: rotate(-90deg) scaleX(0.9) translateX(-1px);"
+                                      viewBox="0 0 24 24"
+                                    >
+                                      <path
+                                        d="m18 12 4-4-4-4v3H3v2h15zM6 12l-4 4 4 4v-3h15v-2H6z"
+                                      />
+                                    </svg>
+                                  </span>
+                                  <span
+                                    class="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightCircular MuiBadge-overlapCircular css-h5xmwp-MuiBadge-badge"
+                                  >
+                                    0
+                                  </span>
+                                </span>
+                              </div>
+                              <div
+                                class="Mui-TableHeadCell-Content-Actions MuiBox-root css-epvm6"
+                              />
+                            </div>
+                          </th>
+                          <th
+                            aria-sort="none"
+                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-txqgkj-MuiTableCell-root"
+                            colspan="1"
+                            data-can-sort="true"
+                            data-index="3"
+                            scope="col"
+                          >
+                            <div
+                              class="Mui-TableHeadCell-Content MuiBox-root css-1w86f15"
+                            >
+                              <div
+                                class="Mui-TableHeadCell-Content-Labels MuiBox-root css-68rqdf"
+                              >
+                                <div
+                                  class="Mui-TableHeadCell-Content-Wrapper MuiBox-root css-1t5kuvk"
+                                >
+                                  <span
+                                    class="MuiTypography-root MuiTypography-caption css-8t45xm-MuiTypography-root"
+                                  >
+                                    External identifier type
+                                  </span>
+                                </div>
+                                <span
+                                  aria-label="Sort by External identifier type descending"
+                                  class="MuiBadge-root css-63ezxx-MuiBadge-root"
+                                  data-mui-internal-clone-element="true"
+                                >
+                                  <span
+                                    aria-label="Sort by External identifier type descending"
+                                    class="MuiButtonBase-root MuiTableSortLabel-root Mui-active MuiTableSortLabel-directionAsc css-bgz9z4-MuiButtonBase-root-MuiTableSortLabel-root"
+                                    role="button"
+                                    tabindex="0"
+                                  >
+                                    <svg
+                                      aria-hidden="true"
+                                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionAsc css-7ojauk-MuiSvgIcon-root-MuiTableSortLabel-icon"
+                                      data-testid="SyncAltIcon"
+                                      focusable="false"
+                                      style="transform: rotate(-90deg) scaleX(0.9) translateX(-1px);"
+                                      viewBox="0 0 24 24"
+                                    >
+                                      <path
+                                        d="m18 12 4-4-4-4v3H3v2h15zM6 12l-4 4 4 4v-3h15v-2H6z"
+                                      />
+                                    </svg>
+                                  </span>
+                                  <span
+                                    class="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightCircular MuiBadge-overlapCircular css-h5xmwp-MuiBadge-badge"
+                                  >
+                                    0
+                                  </span>
+                                </span>
+                              </div>
+                              <div
+                                class="Mui-TableHeadCell-Content-Actions MuiBox-root css-epvm6"
+                              />
+                            </div>
+                          </th>
+                          <th
+                            aria-sort="none"
+                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-qqsuh1-MuiTableCell-root"
+                            colspan="1"
+                            data-can-sort="true"
+                            data-index="4"
                             scope="col"
                           >
                             <div
@@ -768,7 +1012,7 @@ exports[`AuthorsSection component should render NTRO design form fields 1`] = `
                             aria-sort="none"
                             class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignCenter MuiTableCell-sizeMedium css-ps3wyf-MuiTableCell-root"
                             colspan="1"
-                            data-index="3"
+                            data-index="5"
                             scope="col"
                           >
                             <div
@@ -797,7 +1041,7 @@ exports[`AuthorsSection component should render NTRO design form fields 1`] = `
                           style="display: grid;"
                         >
                           <td
-                            colspan="4"
+                            colspan="6"
                             style="display: grid;"
                           >
                             <p
@@ -940,28 +1184,32 @@ exports[`AuthorsSection component should render default view 1`] = `
                     <div
                       class="MuiBox-root css-wsew38"
                     >
-                      <button
+                      <span
                         aria-label="Add author"
-                        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1a0ye8w-MuiButtonBase-root-MuiIconButton-root"
+                        class=""
                         data-mui-internal-clone-element="true"
-                        data-testid="rek-author-add-author"
-                        id="rek-author-add-author"
-                        tabindex="0"
-                        type="button"
                       >
-                        <svg
-                          aria-hidden="true"
-                          class="MuiSvgIcon-root MuiSvgIcon-colorPrimary MuiSvgIcon-fontSizeLarge css-7qpz8x-MuiSvgIcon-root"
-                          data-testid="rek-author-add"
-                          focusable="false"
-                          id="rek-author-add"
-                          viewBox="0 0 24 24"
+                        <button
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1a0ye8w-MuiButtonBase-root-MuiIconButton-root"
+                          data-testid="rek-author-add-author"
+                          id="rek-author-add-author"
+                          tabindex="0"
+                          type="button"
                         >
-                          <path
-                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m5 11h-4v4h-2v-4H7v-2h4V7h2v4h4z"
-                          />
-                        </svg>
-                      </button>
+                          <svg
+                            aria-hidden="true"
+                            class="MuiSvgIcon-root MuiSvgIcon-colorPrimary MuiSvgIcon-fontSizeLarge css-7qpz8x-MuiSvgIcon-root"
+                            data-testid="rek-author-add"
+                            focusable="false"
+                            id="rek-author-add"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m5 11h-4v4h-2v-4H7v-2h4V7h2v4h4z"
+                            />
+                          </svg>
+                        </button>
+                      </span>
                       <div
                         class="MuiBox-root css-1p0wbhh"
                       >
@@ -977,7 +1225,7 @@ exports[`AuthorsSection component should render default view 1`] = `
                   >
                     <table
                       class="MuiTable-root MuiTable-stickyHeader css-iwmzly-MuiTable-root"
-                      style="--header-mrt_row_expand-size: 20; --col-mrt_row_expand-size: 20; --header-nameAsPublished-size: 250; --col-nameAsPublished-size: 250; --header-uqIdentifier-size: 150; --col-uqIdentifier-size: 150; --header-mrt_row_actions-size: 100; --col-mrt_row_actions-size: 100;"
+                      style="--header-mrt_row_expand-size: 20; --col-mrt_row_expand-size: 20; --header-nameAsPublished-size: 250; --col-nameAsPublished-size: 250; --header-uqIdentifier-size: 150; --col-uqIdentifier-size: 150; --header-externalIdentifier-size: 175; --col-externalIdentifier-size: 175; --header-externalIdentifierType-size: 150; --col-externalIdentifierType-size: 150; --header-mrt_row_actions-size: 100; --col-mrt_row_actions-size: 100;"
                     >
                       <thead
                         class="MuiTableHead-root css-7psuou-MuiTableHead-root"
@@ -1150,9 +1398,127 @@ exports[`AuthorsSection component should render default view 1`] = `
                           </th>
                           <th
                             aria-sort="none"
+                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-hvhjml-MuiTableCell-root"
+                            colspan="1"
+                            data-can-sort="true"
+                            data-index="3"
+                            scope="col"
+                          >
+                            <div
+                              class="Mui-TableHeadCell-Content MuiBox-root css-1w86f15"
+                            >
+                              <div
+                                class="Mui-TableHeadCell-Content-Labels MuiBox-root css-68rqdf"
+                              >
+                                <div
+                                  class="Mui-TableHeadCell-Content-Wrapper MuiBox-root css-lapokc"
+                                >
+                                  <span
+                                    class="MuiTypography-root MuiTypography-caption css-8t45xm-MuiTypography-root"
+                                  >
+                                    External identifier
+                                  </span>
+                                </div>
+                                <span
+                                  aria-label="Sort by External identifier descending"
+                                  class="MuiBadge-root css-63ezxx-MuiBadge-root"
+                                  data-mui-internal-clone-element="true"
+                                >
+                                  <span
+                                    aria-label="Sort by External identifier descending"
+                                    class="MuiButtonBase-root MuiTableSortLabel-root Mui-active MuiTableSortLabel-directionAsc css-bgz9z4-MuiButtonBase-root-MuiTableSortLabel-root"
+                                    role="button"
+                                    tabindex="0"
+                                  >
+                                    <svg
+                                      aria-hidden="true"
+                                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionAsc css-7ojauk-MuiSvgIcon-root-MuiTableSortLabel-icon"
+                                      data-testid="SyncAltIcon"
+                                      focusable="false"
+                                      style="transform: rotate(-90deg) scaleX(0.9) translateX(-1px);"
+                                      viewBox="0 0 24 24"
+                                    >
+                                      <path
+                                        d="m18 12 4-4-4-4v3H3v2h15zM6 12l-4 4 4 4v-3h15v-2H6z"
+                                      />
+                                    </svg>
+                                  </span>
+                                  <span
+                                    class="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightCircular MuiBadge-overlapCircular css-h5xmwp-MuiBadge-badge"
+                                  >
+                                    0
+                                  </span>
+                                </span>
+                              </div>
+                              <div
+                                class="Mui-TableHeadCell-Content-Actions MuiBox-root css-epvm6"
+                              />
+                            </div>
+                          </th>
+                          <th
+                            aria-sort="none"
+                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-txqgkj-MuiTableCell-root"
+                            colspan="1"
+                            data-can-sort="true"
+                            data-index="4"
+                            scope="col"
+                          >
+                            <div
+                              class="Mui-TableHeadCell-Content MuiBox-root css-1w86f15"
+                            >
+                              <div
+                                class="Mui-TableHeadCell-Content-Labels MuiBox-root css-68rqdf"
+                              >
+                                <div
+                                  class="Mui-TableHeadCell-Content-Wrapper MuiBox-root css-1t5kuvk"
+                                >
+                                  <span
+                                    class="MuiTypography-root MuiTypography-caption css-8t45xm-MuiTypography-root"
+                                  >
+                                    External identifier type
+                                  </span>
+                                </div>
+                                <span
+                                  aria-label="Sort by External identifier type descending"
+                                  class="MuiBadge-root css-63ezxx-MuiBadge-root"
+                                  data-mui-internal-clone-element="true"
+                                >
+                                  <span
+                                    aria-label="Sort by External identifier type descending"
+                                    class="MuiButtonBase-root MuiTableSortLabel-root Mui-active MuiTableSortLabel-directionAsc css-bgz9z4-MuiButtonBase-root-MuiTableSortLabel-root"
+                                    role="button"
+                                    tabindex="0"
+                                  >
+                                    <svg
+                                      aria-hidden="true"
+                                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionAsc css-7ojauk-MuiSvgIcon-root-MuiTableSortLabel-icon"
+                                      data-testid="SyncAltIcon"
+                                      focusable="false"
+                                      style="transform: rotate(-90deg) scaleX(0.9) translateX(-1px);"
+                                      viewBox="0 0 24 24"
+                                    >
+                                      <path
+                                        d="m18 12 4-4-4-4v3H3v2h15zM6 12l-4 4 4 4v-3h15v-2H6z"
+                                      />
+                                    </svg>
+                                  </span>
+                                  <span
+                                    class="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightCircular MuiBadge-overlapCircular css-h5xmwp-MuiBadge-badge"
+                                  >
+                                    0
+                                  </span>
+                                </span>
+                              </div>
+                              <div
+                                class="Mui-TableHeadCell-Content-Actions MuiBox-root css-epvm6"
+                              />
+                            </div>
+                          </th>
+                          <th
+                            aria-sort="none"
                             class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignCenter MuiTableCell-sizeMedium css-ps3wyf-MuiTableCell-root"
                             colspan="1"
-                            data-index="3"
+                            data-index="5"
                             scope="col"
                           >
                             <div
@@ -1181,7 +1547,7 @@ exports[`AuthorsSection component should render default view 1`] = `
                           style="display: grid;"
                         >
                           <td
-                            colspan="4"
+                            colspan="6"
                             style="display: grid;"
                           >
                             <p
@@ -1324,29 +1690,33 @@ exports[`AuthorsSection component should render disabled view 1`] = `
                     <div
                       class="MuiBox-root css-wsew38"
                     >
-                      <button
+                      <span
                         aria-label="Add author"
-                        class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-1a0ye8w-MuiButtonBase-root-MuiIconButton-root"
+                        class=""
                         data-mui-internal-clone-element="true"
-                        data-testid="rek-author-add-author"
-                        disabled=""
-                        id="rek-author-add-author"
-                        tabindex="-1"
-                        type="button"
                       >
-                        <svg
-                          aria-hidden="true"
-                          class="MuiSvgIcon-root MuiSvgIcon-colorPrimary MuiSvgIcon-fontSizeLarge css-7qpz8x-MuiSvgIcon-root"
-                          data-testid="rek-author-add"
-                          focusable="false"
-                          id="rek-author-add"
-                          viewBox="0 0 24 24"
+                        <button
+                          class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-1a0ye8w-MuiButtonBase-root-MuiIconButton-root"
+                          data-testid="rek-author-add-author"
+                          disabled=""
+                          id="rek-author-add-author"
+                          tabindex="-1"
+                          type="button"
                         >
-                          <path
-                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m5 11h-4v4h-2v-4H7v-2h4V7h2v4h4z"
-                          />
-                        </svg>
-                      </button>
+                          <svg
+                            aria-hidden="true"
+                            class="MuiSvgIcon-root MuiSvgIcon-colorPrimary MuiSvgIcon-fontSizeLarge css-7qpz8x-MuiSvgIcon-root"
+                            data-testid="rek-author-add"
+                            focusable="false"
+                            id="rek-author-add"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m5 11h-4v4h-2v-4H7v-2h4V7h2v4h4z"
+                            />
+                          </svg>
+                        </button>
+                      </span>
                       <div
                         class="MuiBox-root css-1p0wbhh"
                       >
@@ -1362,7 +1732,7 @@ exports[`AuthorsSection component should render disabled view 1`] = `
                   >
                     <table
                       class="MuiTable-root MuiTable-stickyHeader css-iwmzly-MuiTable-root"
-                      style="--header-mrt_row_expand-size: 20; --col-mrt_row_expand-size: 20; --header-nameAsPublished-size: 250; --col-nameAsPublished-size: 250; --header-uqIdentifier-size: 150; --col-uqIdentifier-size: 150; --header-mrt_row_actions-size: 100; --col-mrt_row_actions-size: 100;"
+                      style="--header-mrt_row_expand-size: 20; --col-mrt_row_expand-size: 20; --header-nameAsPublished-size: 250; --col-nameAsPublished-size: 250; --header-uqIdentifier-size: 150; --col-uqIdentifier-size: 150; --header-externalIdentifier-size: 175; --col-externalIdentifier-size: 175; --header-externalIdentifierType-size: 150; --col-externalIdentifierType-size: 150; --header-mrt_row_actions-size: 100; --col-mrt_row_actions-size: 100;"
                     >
                       <thead
                         class="MuiTableHead-root css-7psuou-MuiTableHead-root"
@@ -1535,9 +1905,127 @@ exports[`AuthorsSection component should render disabled view 1`] = `
                           </th>
                           <th
                             aria-sort="none"
+                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-hvhjml-MuiTableCell-root"
+                            colspan="1"
+                            data-can-sort="true"
+                            data-index="3"
+                            scope="col"
+                          >
+                            <div
+                              class="Mui-TableHeadCell-Content MuiBox-root css-1w86f15"
+                            >
+                              <div
+                                class="Mui-TableHeadCell-Content-Labels MuiBox-root css-68rqdf"
+                              >
+                                <div
+                                  class="Mui-TableHeadCell-Content-Wrapper MuiBox-root css-lapokc"
+                                >
+                                  <span
+                                    class="MuiTypography-root MuiTypography-caption css-8t45xm-MuiTypography-root"
+                                  >
+                                    External identifier
+                                  </span>
+                                </div>
+                                <span
+                                  aria-label="Sort by External identifier descending"
+                                  class="MuiBadge-root css-63ezxx-MuiBadge-root"
+                                  data-mui-internal-clone-element="true"
+                                >
+                                  <span
+                                    aria-label="Sort by External identifier descending"
+                                    class="MuiButtonBase-root MuiTableSortLabel-root Mui-active MuiTableSortLabel-directionAsc css-bgz9z4-MuiButtonBase-root-MuiTableSortLabel-root"
+                                    role="button"
+                                    tabindex="0"
+                                  >
+                                    <svg
+                                      aria-hidden="true"
+                                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionAsc css-7ojauk-MuiSvgIcon-root-MuiTableSortLabel-icon"
+                                      data-testid="SyncAltIcon"
+                                      focusable="false"
+                                      style="transform: rotate(-90deg) scaleX(0.9) translateX(-1px);"
+                                      viewBox="0 0 24 24"
+                                    >
+                                      <path
+                                        d="m18 12 4-4-4-4v3H3v2h15zM6 12l-4 4 4 4v-3h15v-2H6z"
+                                      />
+                                    </svg>
+                                  </span>
+                                  <span
+                                    class="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightCircular MuiBadge-overlapCircular css-h5xmwp-MuiBadge-badge"
+                                  >
+                                    0
+                                  </span>
+                                </span>
+                              </div>
+                              <div
+                                class="Mui-TableHeadCell-Content-Actions MuiBox-root css-epvm6"
+                              />
+                            </div>
+                          </th>
+                          <th
+                            aria-sort="none"
+                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-txqgkj-MuiTableCell-root"
+                            colspan="1"
+                            data-can-sort="true"
+                            data-index="4"
+                            scope="col"
+                          >
+                            <div
+                              class="Mui-TableHeadCell-Content MuiBox-root css-1w86f15"
+                            >
+                              <div
+                                class="Mui-TableHeadCell-Content-Labels MuiBox-root css-68rqdf"
+                              >
+                                <div
+                                  class="Mui-TableHeadCell-Content-Wrapper MuiBox-root css-1t5kuvk"
+                                >
+                                  <span
+                                    class="MuiTypography-root MuiTypography-caption css-8t45xm-MuiTypography-root"
+                                  >
+                                    External identifier type
+                                  </span>
+                                </div>
+                                <span
+                                  aria-label="Sort by External identifier type descending"
+                                  class="MuiBadge-root css-63ezxx-MuiBadge-root"
+                                  data-mui-internal-clone-element="true"
+                                >
+                                  <span
+                                    aria-label="Sort by External identifier type descending"
+                                    class="MuiButtonBase-root MuiTableSortLabel-root Mui-active MuiTableSortLabel-directionAsc css-bgz9z4-MuiButtonBase-root-MuiTableSortLabel-root"
+                                    role="button"
+                                    tabindex="0"
+                                  >
+                                    <svg
+                                      aria-hidden="true"
+                                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionAsc css-7ojauk-MuiSvgIcon-root-MuiTableSortLabel-icon"
+                                      data-testid="SyncAltIcon"
+                                      focusable="false"
+                                      style="transform: rotate(-90deg) scaleX(0.9) translateX(-1px);"
+                                      viewBox="0 0 24 24"
+                                    >
+                                      <path
+                                        d="m18 12 4-4-4-4v3H3v2h15zM6 12l-4 4 4 4v-3h15v-2H6z"
+                                      />
+                                    </svg>
+                                  </span>
+                                  <span
+                                    class="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightCircular MuiBadge-overlapCircular css-h5xmwp-MuiBadge-badge"
+                                  >
+                                    0
+                                  </span>
+                                </span>
+                              </div>
+                              <div
+                                class="Mui-TableHeadCell-Content-Actions MuiBox-root css-epvm6"
+                              />
+                            </div>
+                          </th>
+                          <th
+                            aria-sort="none"
                             class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignCenter MuiTableCell-sizeMedium css-ps3wyf-MuiTableCell-root"
                             colspan="1"
-                            data-index="3"
+                            data-index="5"
                             scope="col"
                           >
                             <div
@@ -1566,7 +2054,7 @@ exports[`AuthorsSection component should render disabled view 1`] = `
                           style="display: grid;"
                         >
                           <td
-                            colspan="4"
+                            colspan="6"
                             style="display: grid;"
                           >
                             <p
@@ -1709,28 +2197,32 @@ exports[`AuthorsSection component should render edited book form fields 1`] = `
                     <div
                       class="MuiBox-root css-wsew38"
                     >
-                      <button
+                      <span
                         aria-label="Add author"
-                        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1a0ye8w-MuiButtonBase-root-MuiIconButton-root"
+                        class=""
                         data-mui-internal-clone-element="true"
-                        data-testid="rek-author-add-author"
-                        id="rek-author-add-author"
-                        tabindex="0"
-                        type="button"
                       >
-                        <svg
-                          aria-hidden="true"
-                          class="MuiSvgIcon-root MuiSvgIcon-colorPrimary MuiSvgIcon-fontSizeLarge css-7qpz8x-MuiSvgIcon-root"
-                          data-testid="rek-author-add"
-                          focusable="false"
-                          id="rek-author-add"
-                          viewBox="0 0 24 24"
+                        <button
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1a0ye8w-MuiButtonBase-root-MuiIconButton-root"
+                          data-testid="rek-author-add-author"
+                          id="rek-author-add-author"
+                          tabindex="0"
+                          type="button"
                         >
-                          <path
-                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m5 11h-4v4h-2v-4H7v-2h4V7h2v4h4z"
-                          />
-                        </svg>
-                      </button>
+                          <svg
+                            aria-hidden="true"
+                            class="MuiSvgIcon-root MuiSvgIcon-colorPrimary MuiSvgIcon-fontSizeLarge css-7qpz8x-MuiSvgIcon-root"
+                            data-testid="rek-author-add"
+                            focusable="false"
+                            id="rek-author-add"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m5 11h-4v4h-2v-4H7v-2h4V7h2v4h4z"
+                            />
+                          </svg>
+                        </button>
+                      </span>
                       <div
                         class="MuiBox-root css-1p0wbhh"
                       >
@@ -1746,7 +2238,7 @@ exports[`AuthorsSection component should render edited book form fields 1`] = `
                   >
                     <table
                       class="MuiTable-root MuiTable-stickyHeader css-iwmzly-MuiTable-root"
-                      style="--header-mrt_row_expand-size: 20; --col-mrt_row_expand-size: 20; --header-nameAsPublished-size: 250; --col-nameAsPublished-size: 250; --header-uqIdentifier-size: 150; --col-uqIdentifier-size: 150; --header-mrt_row_actions-size: 100; --col-mrt_row_actions-size: 100;"
+                      style="--header-mrt_row_expand-size: 20; --col-mrt_row_expand-size: 20; --header-nameAsPublished-size: 250; --col-nameAsPublished-size: 250; --header-uqIdentifier-size: 150; --col-uqIdentifier-size: 150; --header-externalIdentifier-size: 175; --col-externalIdentifier-size: 175; --header-externalIdentifierType-size: 150; --col-externalIdentifierType-size: 150; --header-mrt_row_actions-size: 100; --col-mrt_row_actions-size: 100;"
                     >
                       <thead
                         class="MuiTableHead-root css-7psuou-MuiTableHead-root"
@@ -1919,9 +2411,127 @@ exports[`AuthorsSection component should render edited book form fields 1`] = `
                           </th>
                           <th
                             aria-sort="none"
+                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-hvhjml-MuiTableCell-root"
+                            colspan="1"
+                            data-can-sort="true"
+                            data-index="3"
+                            scope="col"
+                          >
+                            <div
+                              class="Mui-TableHeadCell-Content MuiBox-root css-1w86f15"
+                            >
+                              <div
+                                class="Mui-TableHeadCell-Content-Labels MuiBox-root css-68rqdf"
+                              >
+                                <div
+                                  class="Mui-TableHeadCell-Content-Wrapper MuiBox-root css-lapokc"
+                                >
+                                  <span
+                                    class="MuiTypography-root MuiTypography-caption css-8t45xm-MuiTypography-root"
+                                  >
+                                    External identifier
+                                  </span>
+                                </div>
+                                <span
+                                  aria-label="Sort by External identifier descending"
+                                  class="MuiBadge-root css-63ezxx-MuiBadge-root"
+                                  data-mui-internal-clone-element="true"
+                                >
+                                  <span
+                                    aria-label="Sort by External identifier descending"
+                                    class="MuiButtonBase-root MuiTableSortLabel-root Mui-active MuiTableSortLabel-directionAsc css-bgz9z4-MuiButtonBase-root-MuiTableSortLabel-root"
+                                    role="button"
+                                    tabindex="0"
+                                  >
+                                    <svg
+                                      aria-hidden="true"
+                                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionAsc css-7ojauk-MuiSvgIcon-root-MuiTableSortLabel-icon"
+                                      data-testid="SyncAltIcon"
+                                      focusable="false"
+                                      style="transform: rotate(-90deg) scaleX(0.9) translateX(-1px);"
+                                      viewBox="0 0 24 24"
+                                    >
+                                      <path
+                                        d="m18 12 4-4-4-4v3H3v2h15zM6 12l-4 4 4 4v-3h15v-2H6z"
+                                      />
+                                    </svg>
+                                  </span>
+                                  <span
+                                    class="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightCircular MuiBadge-overlapCircular css-h5xmwp-MuiBadge-badge"
+                                  >
+                                    0
+                                  </span>
+                                </span>
+                              </div>
+                              <div
+                                class="Mui-TableHeadCell-Content-Actions MuiBox-root css-epvm6"
+                              />
+                            </div>
+                          </th>
+                          <th
+                            aria-sort="none"
+                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-txqgkj-MuiTableCell-root"
+                            colspan="1"
+                            data-can-sort="true"
+                            data-index="4"
+                            scope="col"
+                          >
+                            <div
+                              class="Mui-TableHeadCell-Content MuiBox-root css-1w86f15"
+                            >
+                              <div
+                                class="Mui-TableHeadCell-Content-Labels MuiBox-root css-68rqdf"
+                              >
+                                <div
+                                  class="Mui-TableHeadCell-Content-Wrapper MuiBox-root css-1t5kuvk"
+                                >
+                                  <span
+                                    class="MuiTypography-root MuiTypography-caption css-8t45xm-MuiTypography-root"
+                                  >
+                                    External identifier type
+                                  </span>
+                                </div>
+                                <span
+                                  aria-label="Sort by External identifier type descending"
+                                  class="MuiBadge-root css-63ezxx-MuiBadge-root"
+                                  data-mui-internal-clone-element="true"
+                                >
+                                  <span
+                                    aria-label="Sort by External identifier type descending"
+                                    class="MuiButtonBase-root MuiTableSortLabel-root Mui-active MuiTableSortLabel-directionAsc css-bgz9z4-MuiButtonBase-root-MuiTableSortLabel-root"
+                                    role="button"
+                                    tabindex="0"
+                                  >
+                                    <svg
+                                      aria-hidden="true"
+                                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionAsc css-7ojauk-MuiSvgIcon-root-MuiTableSortLabel-icon"
+                                      data-testid="SyncAltIcon"
+                                      focusable="false"
+                                      style="transform: rotate(-90deg) scaleX(0.9) translateX(-1px);"
+                                      viewBox="0 0 24 24"
+                                    >
+                                      <path
+                                        d="m18 12 4-4-4-4v3H3v2h15zM6 12l-4 4 4 4v-3h15v-2H6z"
+                                      />
+                                    </svg>
+                                  </span>
+                                  <span
+                                    class="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightCircular MuiBadge-overlapCircular css-h5xmwp-MuiBadge-badge"
+                                  >
+                                    0
+                                  </span>
+                                </span>
+                              </div>
+                              <div
+                                class="Mui-TableHeadCell-Content-Actions MuiBox-root css-epvm6"
+                              />
+                            </div>
+                          </th>
+                          <th
+                            aria-sort="none"
                             class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignCenter MuiTableCell-sizeMedium css-ps3wyf-MuiTableCell-root"
                             colspan="1"
-                            data-index="3"
+                            data-index="5"
                             scope="col"
                           >
                             <div
@@ -1950,7 +2560,7 @@ exports[`AuthorsSection component should render edited book form fields 1`] = `
                           style="display: grid;"
                         >
                           <td
-                            colspan="4"
+                            colspan="6"
                             style="display: grid;"
                           >
                             <p
@@ -2084,28 +2694,32 @@ exports[`AuthorsSection component should render edited book form fields 1`] = `
                     <div
                       class="MuiBox-root css-wsew38"
                     >
-                      <button
+                      <span
                         aria-label="Add editor"
-                        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1a0ye8w-MuiButtonBase-root-MuiIconButton-root"
+                        class=""
                         data-mui-internal-clone-element="true"
-                        data-testid="rek-contributor-add-editor"
-                        id="rek-contributor-add-editor"
-                        tabindex="0"
-                        type="button"
                       >
-                        <svg
-                          aria-hidden="true"
-                          class="MuiSvgIcon-root MuiSvgIcon-colorPrimary MuiSvgIcon-fontSizeLarge css-7qpz8x-MuiSvgIcon-root"
-                          data-testid="rek-contributor-add"
-                          focusable="false"
-                          id="rek-contributor-add"
-                          viewBox="0 0 24 24"
+                        <button
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1a0ye8w-MuiButtonBase-root-MuiIconButton-root"
+                          data-testid="rek-contributor-add-editor"
+                          id="rek-contributor-add-editor"
+                          tabindex="0"
+                          type="button"
                         >
-                          <path
-                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m5 11h-4v4h-2v-4H7v-2h4V7h2v4h4z"
-                          />
-                        </svg>
-                      </button>
+                          <svg
+                            aria-hidden="true"
+                            class="MuiSvgIcon-root MuiSvgIcon-colorPrimary MuiSvgIcon-fontSizeLarge css-7qpz8x-MuiSvgIcon-root"
+                            data-testid="rek-contributor-add"
+                            focusable="false"
+                            id="rek-contributor-add"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m5 11h-4v4h-2v-4H7v-2h4V7h2v4h4z"
+                            />
+                          </svg>
+                        </button>
+                      </span>
                       <div
                         class="MuiBox-root css-1p0wbhh"
                       >
@@ -2121,7 +2735,7 @@ exports[`AuthorsSection component should render edited book form fields 1`] = `
                   >
                     <table
                       class="MuiTable-root MuiTable-stickyHeader css-iwmzly-MuiTable-root"
-                      style="--header-mrt_row_expand-size: 20; --col-mrt_row_expand-size: 20; --header-nameAsPublished-size: 250; --col-nameAsPublished-size: 250; --header-uqIdentifier-size: 150; --col-uqIdentifier-size: 150; --header-mrt_row_actions-size: 100; --col-mrt_row_actions-size: 100;"
+                      style="--header-mrt_row_expand-size: 20; --col-mrt_row_expand-size: 20; --header-nameAsPublished-size: 250; --col-nameAsPublished-size: 250; --header-uqIdentifier-size: 150; --col-uqIdentifier-size: 150; --header-externalIdentifier-size: 175; --col-externalIdentifier-size: 175; --header-externalIdentifierType-size: 150; --col-externalIdentifierType-size: 150; --header-mrt_row_actions-size: 100; --col-mrt_row_actions-size: 100;"
                     >
                       <thead
                         class="MuiTableHead-root css-7psuou-MuiTableHead-root"
@@ -2294,9 +2908,127 @@ exports[`AuthorsSection component should render edited book form fields 1`] = `
                           </th>
                           <th
                             aria-sort="none"
+                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-hvhjml-MuiTableCell-root"
+                            colspan="1"
+                            data-can-sort="true"
+                            data-index="3"
+                            scope="col"
+                          >
+                            <div
+                              class="Mui-TableHeadCell-Content MuiBox-root css-1w86f15"
+                            >
+                              <div
+                                class="Mui-TableHeadCell-Content-Labels MuiBox-root css-68rqdf"
+                              >
+                                <div
+                                  class="Mui-TableHeadCell-Content-Wrapper MuiBox-root css-lapokc"
+                                >
+                                  <span
+                                    class="MuiTypography-root MuiTypography-caption css-8t45xm-MuiTypography-root"
+                                  >
+                                    External identifier
+                                  </span>
+                                </div>
+                                <span
+                                  aria-label="Sort by External identifier descending"
+                                  class="MuiBadge-root css-63ezxx-MuiBadge-root"
+                                  data-mui-internal-clone-element="true"
+                                >
+                                  <span
+                                    aria-label="Sort by External identifier descending"
+                                    class="MuiButtonBase-root MuiTableSortLabel-root Mui-active MuiTableSortLabel-directionAsc css-bgz9z4-MuiButtonBase-root-MuiTableSortLabel-root"
+                                    role="button"
+                                    tabindex="0"
+                                  >
+                                    <svg
+                                      aria-hidden="true"
+                                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionAsc css-7ojauk-MuiSvgIcon-root-MuiTableSortLabel-icon"
+                                      data-testid="SyncAltIcon"
+                                      focusable="false"
+                                      style="transform: rotate(-90deg) scaleX(0.9) translateX(-1px);"
+                                      viewBox="0 0 24 24"
+                                    >
+                                      <path
+                                        d="m18 12 4-4-4-4v3H3v2h15zM6 12l-4 4 4 4v-3h15v-2H6z"
+                                      />
+                                    </svg>
+                                  </span>
+                                  <span
+                                    class="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightCircular MuiBadge-overlapCircular css-h5xmwp-MuiBadge-badge"
+                                  >
+                                    0
+                                  </span>
+                                </span>
+                              </div>
+                              <div
+                                class="Mui-TableHeadCell-Content-Actions MuiBox-root css-epvm6"
+                              />
+                            </div>
+                          </th>
+                          <th
+                            aria-sort="none"
+                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-txqgkj-MuiTableCell-root"
+                            colspan="1"
+                            data-can-sort="true"
+                            data-index="4"
+                            scope="col"
+                          >
+                            <div
+                              class="Mui-TableHeadCell-Content MuiBox-root css-1w86f15"
+                            >
+                              <div
+                                class="Mui-TableHeadCell-Content-Labels MuiBox-root css-68rqdf"
+                              >
+                                <div
+                                  class="Mui-TableHeadCell-Content-Wrapper MuiBox-root css-1t5kuvk"
+                                >
+                                  <span
+                                    class="MuiTypography-root MuiTypography-caption css-8t45xm-MuiTypography-root"
+                                  >
+                                    External identifier type
+                                  </span>
+                                </div>
+                                <span
+                                  aria-label="Sort by External identifier type descending"
+                                  class="MuiBadge-root css-63ezxx-MuiBadge-root"
+                                  data-mui-internal-clone-element="true"
+                                >
+                                  <span
+                                    aria-label="Sort by External identifier type descending"
+                                    class="MuiButtonBase-root MuiTableSortLabel-root Mui-active MuiTableSortLabel-directionAsc css-bgz9z4-MuiButtonBase-root-MuiTableSortLabel-root"
+                                    role="button"
+                                    tabindex="0"
+                                  >
+                                    <svg
+                                      aria-hidden="true"
+                                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionAsc css-7ojauk-MuiSvgIcon-root-MuiTableSortLabel-icon"
+                                      data-testid="SyncAltIcon"
+                                      focusable="false"
+                                      style="transform: rotate(-90deg) scaleX(0.9) translateX(-1px);"
+                                      viewBox="0 0 24 24"
+                                    >
+                                      <path
+                                        d="m18 12 4-4-4-4v3H3v2h15zM6 12l-4 4 4 4v-3h15v-2H6z"
+                                      />
+                                    </svg>
+                                  </span>
+                                  <span
+                                    class="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightCircular MuiBadge-overlapCircular css-h5xmwp-MuiBadge-badge"
+                                  >
+                                    0
+                                  </span>
+                                </span>
+                              </div>
+                              <div
+                                class="Mui-TableHeadCell-Content-Actions MuiBox-root css-epvm6"
+                              />
+                            </div>
+                          </th>
+                          <th
+                            aria-sort="none"
                             class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignCenter MuiTableCell-sizeMedium css-ps3wyf-MuiTableCell-root"
                             colspan="1"
-                            data-index="3"
+                            data-index="5"
                             scope="col"
                           >
                             <div
@@ -2325,7 +3057,7 @@ exports[`AuthorsSection component should render edited book form fields 1`] = `
                           style="display: grid;"
                         >
                           <td
-                            colspan="4"
+                            colspan="6"
                             style="display: grid;"
                           >
                             <p
@@ -2468,28 +3200,32 @@ exports[`AuthorsSection component should render non-NTRO design form fields 1`] 
                     <div
                       class="MuiBox-root css-wsew38"
                     >
-                      <button
+                      <span
                         aria-label="Add designer"
-                        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1a0ye8w-MuiButtonBase-root-MuiIconButton-root"
+                        class=""
                         data-mui-internal-clone-element="true"
-                        data-testid="rek-author-add-designer"
-                        id="rek-author-add-designer"
-                        tabindex="0"
-                        type="button"
                       >
-                        <svg
-                          aria-hidden="true"
-                          class="MuiSvgIcon-root MuiSvgIcon-colorPrimary MuiSvgIcon-fontSizeLarge css-7qpz8x-MuiSvgIcon-root"
-                          data-testid="rek-author-add"
-                          focusable="false"
-                          id="rek-author-add"
-                          viewBox="0 0 24 24"
+                        <button
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1a0ye8w-MuiButtonBase-root-MuiIconButton-root"
+                          data-testid="rek-author-add-designer"
+                          id="rek-author-add-designer"
+                          tabindex="0"
+                          type="button"
                         >
-                          <path
-                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m5 11h-4v4h-2v-4H7v-2h4V7h2v4h4z"
-                          />
-                        </svg>
-                      </button>
+                          <svg
+                            aria-hidden="true"
+                            class="MuiSvgIcon-root MuiSvgIcon-colorPrimary MuiSvgIcon-fontSizeLarge css-7qpz8x-MuiSvgIcon-root"
+                            data-testid="rek-author-add"
+                            focusable="false"
+                            id="rek-author-add"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m5 11h-4v4h-2v-4H7v-2h4V7h2v4h4z"
+                            />
+                          </svg>
+                        </button>
+                      </span>
                       <div
                         class="MuiBox-root css-1p0wbhh"
                       >
@@ -2505,7 +3241,7 @@ exports[`AuthorsSection component should render non-NTRO design form fields 1`] 
                   >
                     <table
                       class="MuiTable-root MuiTable-stickyHeader css-iwmzly-MuiTable-root"
-                      style="--header-mrt_row_expand-size: 20; --col-mrt_row_expand-size: 20; --header-nameAsPublished-size: 250; --col-nameAsPublished-size: 250; --header-uqIdentifier-size: 150; --col-uqIdentifier-size: 150; --header-mrt_row_actions-size: 100; --col-mrt_row_actions-size: 100;"
+                      style="--header-mrt_row_expand-size: 20; --col-mrt_row_expand-size: 20; --header-nameAsPublished-size: 250; --col-nameAsPublished-size: 250; --header-uqIdentifier-size: 150; --col-uqIdentifier-size: 150; --header-externalIdentifier-size: 175; --col-externalIdentifier-size: 175; --header-externalIdentifierType-size: 150; --col-externalIdentifierType-size: 150; --header-mrt_row_actions-size: 100; --col-mrt_row_actions-size: 100;"
                     >
                       <thead
                         class="MuiTableHead-root css-7psuou-MuiTableHead-root"
@@ -2678,9 +3414,127 @@ exports[`AuthorsSection component should render non-NTRO design form fields 1`] 
                           </th>
                           <th
                             aria-sort="none"
+                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-hvhjml-MuiTableCell-root"
+                            colspan="1"
+                            data-can-sort="true"
+                            data-index="3"
+                            scope="col"
+                          >
+                            <div
+                              class="Mui-TableHeadCell-Content MuiBox-root css-1w86f15"
+                            >
+                              <div
+                                class="Mui-TableHeadCell-Content-Labels MuiBox-root css-68rqdf"
+                              >
+                                <div
+                                  class="Mui-TableHeadCell-Content-Wrapper MuiBox-root css-lapokc"
+                                >
+                                  <span
+                                    class="MuiTypography-root MuiTypography-caption css-8t45xm-MuiTypography-root"
+                                  >
+                                    External identifier
+                                  </span>
+                                </div>
+                                <span
+                                  aria-label="Sort by External identifier descending"
+                                  class="MuiBadge-root css-63ezxx-MuiBadge-root"
+                                  data-mui-internal-clone-element="true"
+                                >
+                                  <span
+                                    aria-label="Sort by External identifier descending"
+                                    class="MuiButtonBase-root MuiTableSortLabel-root Mui-active MuiTableSortLabel-directionAsc css-bgz9z4-MuiButtonBase-root-MuiTableSortLabel-root"
+                                    role="button"
+                                    tabindex="0"
+                                  >
+                                    <svg
+                                      aria-hidden="true"
+                                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionAsc css-7ojauk-MuiSvgIcon-root-MuiTableSortLabel-icon"
+                                      data-testid="SyncAltIcon"
+                                      focusable="false"
+                                      style="transform: rotate(-90deg) scaleX(0.9) translateX(-1px);"
+                                      viewBox="0 0 24 24"
+                                    >
+                                      <path
+                                        d="m18 12 4-4-4-4v3H3v2h15zM6 12l-4 4 4 4v-3h15v-2H6z"
+                                      />
+                                    </svg>
+                                  </span>
+                                  <span
+                                    class="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightCircular MuiBadge-overlapCircular css-h5xmwp-MuiBadge-badge"
+                                  >
+                                    0
+                                  </span>
+                                </span>
+                              </div>
+                              <div
+                                class="Mui-TableHeadCell-Content-Actions MuiBox-root css-epvm6"
+                              />
+                            </div>
+                          </th>
+                          <th
+                            aria-sort="none"
+                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-txqgkj-MuiTableCell-root"
+                            colspan="1"
+                            data-can-sort="true"
+                            data-index="4"
+                            scope="col"
+                          >
+                            <div
+                              class="Mui-TableHeadCell-Content MuiBox-root css-1w86f15"
+                            >
+                              <div
+                                class="Mui-TableHeadCell-Content-Labels MuiBox-root css-68rqdf"
+                              >
+                                <div
+                                  class="Mui-TableHeadCell-Content-Wrapper MuiBox-root css-1t5kuvk"
+                                >
+                                  <span
+                                    class="MuiTypography-root MuiTypography-caption css-8t45xm-MuiTypography-root"
+                                  >
+                                    External identifier type
+                                  </span>
+                                </div>
+                                <span
+                                  aria-label="Sort by External identifier type descending"
+                                  class="MuiBadge-root css-63ezxx-MuiBadge-root"
+                                  data-mui-internal-clone-element="true"
+                                >
+                                  <span
+                                    aria-label="Sort by External identifier type descending"
+                                    class="MuiButtonBase-root MuiTableSortLabel-root Mui-active MuiTableSortLabel-directionAsc css-bgz9z4-MuiButtonBase-root-MuiTableSortLabel-root"
+                                    role="button"
+                                    tabindex="0"
+                                  >
+                                    <svg
+                                      aria-hidden="true"
+                                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionAsc css-7ojauk-MuiSvgIcon-root-MuiTableSortLabel-icon"
+                                      data-testid="SyncAltIcon"
+                                      focusable="false"
+                                      style="transform: rotate(-90deg) scaleX(0.9) translateX(-1px);"
+                                      viewBox="0 0 24 24"
+                                    >
+                                      <path
+                                        d="m18 12 4-4-4-4v3H3v2h15zM6 12l-4 4 4 4v-3h15v-2H6z"
+                                      />
+                                    </svg>
+                                  </span>
+                                  <span
+                                    class="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightCircular MuiBadge-overlapCircular css-h5xmwp-MuiBadge-badge"
+                                  >
+                                    0
+                                  </span>
+                                </span>
+                              </div>
+                              <div
+                                class="Mui-TableHeadCell-Content-Actions MuiBox-root css-epvm6"
+                              />
+                            </div>
+                          </th>
+                          <th
+                            aria-sort="none"
                             class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignCenter MuiTableCell-sizeMedium css-ps3wyf-MuiTableCell-root"
                             colspan="1"
-                            data-index="3"
+                            data-index="5"
                             scope="col"
                           >
                             <div
@@ -2709,7 +3563,7 @@ exports[`AuthorsSection component should render non-NTRO design form fields 1`] 
                           style="display: grid;"
                         >
                           <td
-                            colspan="4"
+                            colspan="6"
                             style="display: grid;"
                           >
                             <p
@@ -2843,28 +3697,32 @@ exports[`AuthorsSection component should render non-NTRO design form fields 1`] 
                     <div
                       class="MuiBox-root css-wsew38"
                     >
-                      <button
+                      <span
                         aria-label="Add contributor"
-                        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1a0ye8w-MuiButtonBase-root-MuiIconButton-root"
+                        class=""
                         data-mui-internal-clone-element="true"
-                        data-testid="rek-contributor-add-contributor"
-                        id="rek-contributor-add-contributor"
-                        tabindex="0"
-                        type="button"
                       >
-                        <svg
-                          aria-hidden="true"
-                          class="MuiSvgIcon-root MuiSvgIcon-colorPrimary MuiSvgIcon-fontSizeLarge css-7qpz8x-MuiSvgIcon-root"
-                          data-testid="rek-contributor-add"
-                          focusable="false"
-                          id="rek-contributor-add"
-                          viewBox="0 0 24 24"
+                        <button
+                          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1a0ye8w-MuiButtonBase-root-MuiIconButton-root"
+                          data-testid="rek-contributor-add-contributor"
+                          id="rek-contributor-add-contributor"
+                          tabindex="0"
+                          type="button"
                         >
-                          <path
-                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m5 11h-4v4h-2v-4H7v-2h4V7h2v4h4z"
-                          />
-                        </svg>
-                      </button>
+                          <svg
+                            aria-hidden="true"
+                            class="MuiSvgIcon-root MuiSvgIcon-colorPrimary MuiSvgIcon-fontSizeLarge css-7qpz8x-MuiSvgIcon-root"
+                            data-testid="rek-contributor-add"
+                            focusable="false"
+                            id="rek-contributor-add"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m5 11h-4v4h-2v-4H7v-2h4V7h2v4h4z"
+                            />
+                          </svg>
+                        </button>
+                      </span>
                       <div
                         class="MuiBox-root css-1p0wbhh"
                       >
@@ -2880,7 +3738,7 @@ exports[`AuthorsSection component should render non-NTRO design form fields 1`] 
                   >
                     <table
                       class="MuiTable-root MuiTable-stickyHeader css-iwmzly-MuiTable-root"
-                      style="--header-mrt_row_expand-size: 20; --col-mrt_row_expand-size: 20; --header-nameAsPublished-size: 250; --col-nameAsPublished-size: 250; --header-uqIdentifier-size: 150; --col-uqIdentifier-size: 150; --header-mrt_row_actions-size: 100; --col-mrt_row_actions-size: 100;"
+                      style="--header-mrt_row_expand-size: 20; --col-mrt_row_expand-size: 20; --header-nameAsPublished-size: 250; --col-nameAsPublished-size: 250; --header-uqIdentifier-size: 150; --col-uqIdentifier-size: 150; --header-externalIdentifier-size: 175; --col-externalIdentifier-size: 175; --header-externalIdentifierType-size: 150; --col-externalIdentifierType-size: 150; --header-mrt_row_actions-size: 100; --col-mrt_row_actions-size: 100;"
                     >
                       <thead
                         class="MuiTableHead-root css-7psuou-MuiTableHead-root"
@@ -3053,9 +3911,127 @@ exports[`AuthorsSection component should render non-NTRO design form fields 1`] 
                           </th>
                           <th
                             aria-sort="none"
+                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-hvhjml-MuiTableCell-root"
+                            colspan="1"
+                            data-can-sort="true"
+                            data-index="3"
+                            scope="col"
+                          >
+                            <div
+                              class="Mui-TableHeadCell-Content MuiBox-root css-1w86f15"
+                            >
+                              <div
+                                class="Mui-TableHeadCell-Content-Labels MuiBox-root css-68rqdf"
+                              >
+                                <div
+                                  class="Mui-TableHeadCell-Content-Wrapper MuiBox-root css-lapokc"
+                                >
+                                  <span
+                                    class="MuiTypography-root MuiTypography-caption css-8t45xm-MuiTypography-root"
+                                  >
+                                    External identifier
+                                  </span>
+                                </div>
+                                <span
+                                  aria-label="Sort by External identifier descending"
+                                  class="MuiBadge-root css-63ezxx-MuiBadge-root"
+                                  data-mui-internal-clone-element="true"
+                                >
+                                  <span
+                                    aria-label="Sort by External identifier descending"
+                                    class="MuiButtonBase-root MuiTableSortLabel-root Mui-active MuiTableSortLabel-directionAsc css-bgz9z4-MuiButtonBase-root-MuiTableSortLabel-root"
+                                    role="button"
+                                    tabindex="0"
+                                  >
+                                    <svg
+                                      aria-hidden="true"
+                                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionAsc css-7ojauk-MuiSvgIcon-root-MuiTableSortLabel-icon"
+                                      data-testid="SyncAltIcon"
+                                      focusable="false"
+                                      style="transform: rotate(-90deg) scaleX(0.9) translateX(-1px);"
+                                      viewBox="0 0 24 24"
+                                    >
+                                      <path
+                                        d="m18 12 4-4-4-4v3H3v2h15zM6 12l-4 4 4 4v-3h15v-2H6z"
+                                      />
+                                    </svg>
+                                  </span>
+                                  <span
+                                    class="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightCircular MuiBadge-overlapCircular css-h5xmwp-MuiBadge-badge"
+                                  >
+                                    0
+                                  </span>
+                                </span>
+                              </div>
+                              <div
+                                class="Mui-TableHeadCell-Content-Actions MuiBox-root css-epvm6"
+                              />
+                            </div>
+                          </th>
+                          <th
+                            aria-sort="none"
+                            class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignLeft MuiTableCell-sizeMedium css-txqgkj-MuiTableCell-root"
+                            colspan="1"
+                            data-can-sort="true"
+                            data-index="4"
+                            scope="col"
+                          >
+                            <div
+                              class="Mui-TableHeadCell-Content MuiBox-root css-1w86f15"
+                            >
+                              <div
+                                class="Mui-TableHeadCell-Content-Labels MuiBox-root css-68rqdf"
+                              >
+                                <div
+                                  class="Mui-TableHeadCell-Content-Wrapper MuiBox-root css-1t5kuvk"
+                                >
+                                  <span
+                                    class="MuiTypography-root MuiTypography-caption css-8t45xm-MuiTypography-root"
+                                  >
+                                    External identifier type
+                                  </span>
+                                </div>
+                                <span
+                                  aria-label="Sort by External identifier type descending"
+                                  class="MuiBadge-root css-63ezxx-MuiBadge-root"
+                                  data-mui-internal-clone-element="true"
+                                >
+                                  <span
+                                    aria-label="Sort by External identifier type descending"
+                                    class="MuiButtonBase-root MuiTableSortLabel-root Mui-active MuiTableSortLabel-directionAsc css-bgz9z4-MuiButtonBase-root-MuiTableSortLabel-root"
+                                    role="button"
+                                    tabindex="0"
+                                  >
+                                    <svg
+                                      aria-hidden="true"
+                                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTableSortLabel-icon MuiTableSortLabel-iconDirectionAsc css-7ojauk-MuiSvgIcon-root-MuiTableSortLabel-icon"
+                                      data-testid="SyncAltIcon"
+                                      focusable="false"
+                                      style="transform: rotate(-90deg) scaleX(0.9) translateX(-1px);"
+                                      viewBox="0 0 24 24"
+                                    >
+                                      <path
+                                        d="m18 12 4-4-4-4v3H3v2h15zM6 12l-4 4 4 4v-3h15v-2H6z"
+                                      />
+                                    </svg>
+                                  </span>
+                                  <span
+                                    class="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightCircular MuiBadge-overlapCircular css-h5xmwp-MuiBadge-badge"
+                                  >
+                                    0
+                                  </span>
+                                </span>
+                              </div>
+                              <div
+                                class="Mui-TableHeadCell-Content-Actions MuiBox-root css-epvm6"
+                              />
+                            </div>
+                          </th>
+                          <th
+                            aria-sort="none"
                             class="MuiTableCell-root MuiTableCell-head MuiTableCell-stickyHeader MuiTableCell-alignCenter MuiTableCell-sizeMedium css-ps3wyf-MuiTableCell-root"
                             colspan="1"
-                            data-index="3"
+                            data-index="5"
                             scope="col"
                           >
                             <div
@@ -3084,7 +4060,7 @@ exports[`AuthorsSection component should render non-NTRO design form fields 1`] 
                           style="display: grid;"
                         >
                           <td
-                            colspan="4"
+                            colspan="6"
                             style="display: grid;"
                           >
                             <p

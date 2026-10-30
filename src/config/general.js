@@ -1767,8 +1767,10 @@ export const ALTERNATE_IDENTIFIER_TYPE = [
     { value: 457084, text: 'Other' },
 ];
 
+export const AUTHOR_EXTERNAL_IDENTIFIER_TYPE_ORCID_VALUE = 457086;
+
 export const AUTHOR_EXTERNAL_IDENTIFIER_TYPE = [
-    { value: 457086, text: 'Orcid' },
+    { value: AUTHOR_EXTERNAL_IDENTIFIER_TYPE_ORCID_VALUE, text: 'Orcid' },
     { value: 457087, text: 'ROR' },
 ];
 

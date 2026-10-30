@@ -44,6 +44,7 @@ export class ContributorsEditor extends PureComponent {
         showIdentifierLookup: PropTypes.bool,
         showRoleInput: PropTypes.bool,
         showExternalIdentifierInput: PropTypes.bool,
+        defaultExternalIdentifierType: PropTypes.number,
         record: PropTypes.object,
         maintainSelected: PropTypes.bool,
         actions: PropTypes.any,
@@ -70,6 +71,7 @@ export class ContributorsEditor extends PureComponent {
         showIdentifierLookup: false,
         showRoleInput: false,
         showExternalIdentifierInput: false,
+        defaultExternalIdentifierType: null,
         useFormReducer: false,
         scaleOfSignificance: [],
         hideNamesPopoverForm: false,
@@ -503,6 +505,7 @@ export class ContributorsEditor extends PureComponent {
             showIdentifierLookup,
             showRoleInput,
             showExternalIdentifierInput,
+            defaultExternalIdentifierType,
             useFormReducer,
         } = this.props;
 
@@ -523,6 +526,8 @@ export class ContributorsEditor extends PureComponent {
                     list={contributors}
                     onChange={this.handleAuthorsListChange}
                     showRoleInput={showRoleInput}
+                    showExternalIdentifierInput={showExternalIdentifierInput}
+                    defaultExternalIdentifierType={defaultExternalIdentifierType}
                     locale={this.state.locale}
                     isNtro={isNtro}
                     useFormReducer={useFormReducer}
@@ -535,6 +540,7 @@ export class ContributorsEditor extends PureComponent {
                     onChange={this.handleAuthorsListChange}
                     showRoleInput={showRoleInput}
                     showExternalIdentifierInput={showExternalIdentifierInput}
+                    defaultExternalIdentifierType={defaultExternalIdentifierType}
                     locale={this.state.locale}
                     isNtro={isNtro}
                     useFormReducer={useFormReducer}

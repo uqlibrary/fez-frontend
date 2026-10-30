@@ -21,7 +21,7 @@ import { ConfirmationBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogB
 import { tableIcons } from './AuthorsListIcons';
 import Typography from '@mui/material/Typography';
 import { UqIdField } from 'modules/SharedComponents/LookupFields';
-import { TextField as CustomTextField } from 'modules/SharedComponents/Toolbox/TextField';
+import { TextField, TextField as CustomTextField } from 'modules/SharedComponents/Toolbox/TextField';
 
 import IconButton from '@mui/material/IconButton';
 import PlaylistAddCheckIcon from '@mui/icons-material/PlaylistAddCheck';
@@ -33,8 +33,10 @@ import EditAuthorAffiliations from './EditAuthorAffiliations';
 import { hasAffiliationProblemsByAuthor } from 'helpers/authorAffiliations';
 
 import { useMrtTable } from 'hooks';
-import { default as validationRules } from './validationRules';
+import { default as defaultValidationRules, extendedValidationRules } from './validationRules';
 import { commitRowChanges } from './utils';
+import { AUTHOR_EXTERNAL_IDENTIFIER_TYPE } from '../../../../config/general';
+import { NewGenericSelectField } from '../../../SharedComponents/GenericSelectField/components/NewGenericSelectField';
 
 const MUI_SAVE_BUTTON_CLASS = '.MuiIconButton-colorInfo';
 
@@ -129,8 +131,21 @@ export const AuthorDetailPanel = ({ rowData, locale, isEditing, setEditing, onCh
     );
 };
 
-export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list, locale, onChange }) => {
+export const AuthorsListWithAffiliates = ({
+    contributorEditorId,
+    disabled,
+    list,
+    locale,
+    onChange,
+    showExternalIdentifierInput,
+    defaultExternalIdentifierType,
+}) => {
     const theme = useTheme();
+
+    const validationRules = showExternalIdentifierInput
+        ? [...defaultValidationRules, ...extendedValidationRules]
+        : defaultValidationRules;
+
     const [editState, setIsEditing] = useState({ editing: false, aut_id: undefined });
 
     // eslint-disable-next-line camelcase
@@ -149,13 +164,21 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
         tablePageSizeOptions,
         largeListDefaultPageSize,
         header: {
-            locale: { nameColumn, identifierColumn },
+            locale: { nameColumn, identifierColumn, externalIdentifierColumn, externalIdentifierTypeColumn },
         },
         row: {
             locale: { moveUpHint, moveDownHint, deleteHint, editHint, suffix, deleteRecordConfirmation },
         },
         form: {
-            locale: { addButton, nameAsPublishedLabel, nameAsPublishedHint, identifierLabel },
+            locale: {
+                addButton,
+                nameAsPublishedLabel,
+                nameAsPublishedHint,
+                identifierLabel,
+                externalIdentifierLabel,
+                externalIdentifierHint,
+                externalIdentifierTypeLabel,
+            },
         },
     } = locale;
 
@@ -369,8 +392,116 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
                         />
                     );
                 },
-                size: 300,
+                size: 150,
+                minSize: 150,
                 grow: true,
+            },
+            {
+                accessorKey: 'externalIdentifier',
+                header: externalIdentifierColumn,
+                Header: ({ column }) => (
+                    <Typography variant="caption" color="secondary">
+                        {column.columnDef.header}
+                    </Typography>
+                ),
+                Cell: ({ cell, row }) => {
+                    const value = cell.getValue();
+                    return (
+                        <Typography
+                            variant="body2"
+                            id={`${contributorEditorId}-list-row-${row.index}-external-identifier`}
+                            data-testid={`${contributorEditorId}-list-row-${row.index}-external-identifier`}
+                        >
+                            {value}
+                        </Typography>
+                    );
+                },
+                Edit: ({ row, column }) => {
+                    const value = row._valuesCache.externalIdentifier || '';
+                    const errors = validationErrors[row.id] || [];
+                    const error = getValidationError(errors, 'externalIdentifier');
+
+                    const handleChange = e => {
+                        row._valuesCache = {
+                            ...row._valuesCache,
+                            [column.id]: e.target.value || /* istanbul ignore next */ null,
+                        };
+                        handleValidation(row, column.id, e.target.value || /* istanbul ignore next */ null);
+                    };
+                    return (
+                        <Grid container spacing={2} sx={{ width: '100%' }}>
+                            <Grid style={{ flexGrow: '1' }}>
+                                <TextField
+                                    value={value}
+                                    onChange={handleChange}
+                                    textFieldId={`${contributorEditorId}-external-identifier`}
+                                    error={!!error}
+                                    errorText={error}
+                                    label={externalIdentifierLabel}
+                                    placeholder={externalIdentifierHint}
+                                    fullWidth
+                                />
+                            </Grid>
+                        </Grid>
+                    );
+                },
+                size: 175,
+                grow: true,
+            },
+            {
+                accessorKey: 'externalIdentifierType',
+                header: externalIdentifierTypeColumn,
+                Header: ({ column }) => (
+                    <Typography variant="caption" color="secondary">
+                        {column.columnDef.header}
+                    </Typography>
+                ),
+                Cell: ({ cell, row }) => {
+                    const value = cell.getValue();
+                    return (
+                        <Typography
+                            variant="body2"
+                            id={`${contributorEditorId}-list-row-${row.index}-external-identifier-type`}
+                            data-testid={`${contributorEditorId}-list-row-${row.index}-external-identifier-type`}
+                        >
+                            {AUTHOR_EXTERNAL_IDENTIFIER_TYPE.find(type => type.value === value)?.text}
+                        </Typography>
+                    );
+                },
+                Edit: ({ row, column }) => {
+                    const contributor = { ...row.original, ...row._valuesCache };
+                    const value = contributor.externalIdentifierType || defaultExternalIdentifierType || '';
+
+                    const handleChange = (value, skipValidation = false) => {
+                        row._valuesCache = {
+                            ...row._valuesCache,
+                            [column.id]: value || /* istanbul ignore next */ null,
+                        };
+                        if (skipValidation) return;
+                        handleValidation(row, column.id, value || /* istanbul ignore next */ null);
+                    };
+
+                    if (!contributor.externalIdentifierType && defaultExternalIdentifierType) {
+                        handleChange(value, true);
+                    }
+
+                    return (
+                        <Grid container spacing={2} sx={{ width: '100%' }}>
+                            <Grid style={{ flexGrow: '1' }}>
+                                <NewGenericSelectField
+                                    itemsList={AUTHOR_EXTERNAL_IDENTIFIER_TYPE}
+                                    onChange={handleChange}
+                                    value={value}
+                                    key={`${contributor.externalIdentifierType}-${contributor.externalIdentifier}`}
+                                    genericSelectFieldId={`${contributorEditorId}-external-identifier-type`}
+                                    label={externalIdentifierTypeLabel}
+                                    disabled={!!defaultExternalIdentifierType}
+                                />
+                            </Grid>
+                        </Grid>
+                    );
+                },
+                size: 150,
             },
         ],
         // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -382,8 +513,16 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
         return [...data, { ...newAuthor, affiliations: [] }];
     };
 
+    const mergeValues = (values, row) => ({
+        ...row.original,
+        ...row._valuesCache,
+        ...values,
+        // remove type when external identifier is empty
+        externalIdentifierType: !values.externalIdentifier?.trim?.() ? '' : values.externalIdentifierType,
+    });
+
     const handleCreate = ({ values, table, row }) => {
-        const newAuthor = { ...row.original, ...row._valuesCache, ...values };
+        const newAuthor = mergeValues(values, row);
 
         const errors = validate(newAuthor);
         /* istanbul ignore if  */
@@ -410,7 +549,7 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
     };
 
     const handleEdit = ({ values, table, row }) => {
-        const updatedAuthor = { ...row.original, ...row._valuesCache, ...values };
+        const updatedAuthor = mergeValues(values, row);
         const errors = validate(updatedAuthor);
         /* istanbul ignore if  */
         if (!!errors) {
@@ -505,6 +644,12 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
         state: {
             showAlertBanner: false,
             showLoadingOverlay: isBusy,
+            columnVisibility: {
+                nameAsPublished: true,
+                uqIdentifier: true,
+                externalIdentifier: showExternalIdentifierInput,
+                externalIdentifierType: showExternalIdentifierInput,
+            },
         },
         displayColumnDefOptions: {
             'mrt-row-actions': {
@@ -793,6 +938,8 @@ AuthorsListWithAffiliates.propTypes = {
     locale: PropTypes.object,
     onChange: PropTypes.func,
     showRoleInput: PropTypes.bool,
+    showExternalIdentifierInput: PropTypes.bool,
+    defaultExternalIdentifierType: PropTypes.number,
 };
 
 export default React.memo(AuthorsListWithAffiliates);
