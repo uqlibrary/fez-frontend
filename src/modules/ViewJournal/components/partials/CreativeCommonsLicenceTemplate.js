@@ -42,7 +42,7 @@ const CreativeCommonsLicenceTemplate = ({ data: { by, nd, nc, sa }, fieldId }) =
                     aria-label={ariaLabel}
                     openInNewIcon={false}
                 >
-                    <div className={`fez-icon license cc-${licence}`} />
+                    <div className={`fez-icon license cc-${licence} xxlarge`} />
                 </ExternalLink>
             </Grid>
         </Grid>

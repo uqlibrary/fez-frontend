@@ -139,7 +139,7 @@ export const optionDoubleRowRender = (props, option) => {
                                 variant="outlined"
                                 color="primary"
                                 label={binding.replace(':', '').replace('_', ' ')}
-                                size="small"
+                                size="medium"
                             />
                         ))}
                     </Stack>
@@ -224,7 +224,7 @@ export const getSystemAlertColumns = (locale, users, currentUser, statusOptions)
                     data-testid={`alert-status-${params.id}`}
                     label={params.formattedValue}
                     variant="filled"
-                    size="small"
+                    size="medium"
                     color={alertStatusOption.includes(params.formattedValue) ? 'default' : 'primary'}
                 />
             ),

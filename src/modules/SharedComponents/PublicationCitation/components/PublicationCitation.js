@@ -203,8 +203,9 @@ const renderCopyCitationTextButton = pid => {
                 >
                     <Copy
                         color={isEnabled ? 'secondary' : 'disabled'}
-                        style={{ width: 14, marginLeft: 6, marginTop: -6 }}
+                        style={{ marginLeft: 6, marginTop: -6 }}
                         sx={{ display: { xs: 'none', sm: 'inline' } }}
+                        fontSize="medium"
                     />
                 </IconButton>
             </span>

@@ -23,7 +23,7 @@ const IdentifierIconLink: React.FC<{
     type: types;
     iconSize: sizes;
     iconOnly?: boolean;
-}> = ({ type, id, iconSize = 'large', iconOnly = false }) => {
+}> = ({ type, id, iconSize = 'xxlarge', iconOnly = false }) => {
     const trimmedId = id?.trim?.();
     if (!trimmedId) return null;
 

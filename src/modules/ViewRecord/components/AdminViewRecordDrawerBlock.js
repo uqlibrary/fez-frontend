@@ -58,7 +58,7 @@ export const AdminRecordDrawerBlock = ({ block, parentIndex, index, copyToClipbo
                             data-analyticsid={`drawer-${variant}-clipboard-button-${parentIndex}-${index}`}
                             data-testid={`drawer-${variant}-clipboard-button-${parentIndex}-${index}`}
                             aria-label="Copy to clipboard"
-                            size="small"
+                            size="medium"
                         >
                             <FileCopyOutlinedIcon fontSize="inherit" />
                         </IconButton>

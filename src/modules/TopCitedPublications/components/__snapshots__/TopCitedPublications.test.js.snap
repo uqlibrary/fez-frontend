@@ -389,7 +389,7 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
                                   title="Full citation in Web of science will open in a new window"
                                 >
                                   <span
-                                    class="fez-icon wos large"
+                                    class="fez-icon wos xxlarge"
                                   />
                                   <span
                                     class="MuiBox-root css-19k1sqg"
@@ -410,7 +410,7 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
                                   title="Full citation in Scopus will open in a new window"
                                 >
                                   <span
-                                    class="fez-icon scopus large"
+                                    class="fez-icon scopus xxlarge"
                                   />
                                   <span
                                     class="MuiBox-root css-19k1sqg"
@@ -431,7 +431,7 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
                                   title="Full citation in Altmetric will open in a new window"
                                 >
                                   <span
-                                    class="fez-icon altmetric large"
+                                    class="fez-icon altmetric xxlarge"
                                   />
                                   <span
                                     class="MuiBox-root css-19k1sqg"
@@ -452,7 +452,7 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
                                   title="Full citation in Google scholar will open in a new window"
                                 >
                                   <span
-                                    class="fez-icon google large"
+                                    class="fez-icon google xxlarge"
                                   />
                                 </a>
                                 <span
@@ -850,7 +850,7 @@ exports[`Component TopCitedPublications should render top cited publications wit
                                   title="Full citation in Web of science will open in a new window"
                                 >
                                   <span
-                                    class="fez-icon wos large"
+                                    class="fez-icon wos xxlarge"
                                   />
                                   <span
                                     class="MuiBox-root css-19k1sqg"
@@ -871,7 +871,7 @@ exports[`Component TopCitedPublications should render top cited publications wit
                                   title="Full citation in Scopus will open in a new window"
                                 >
                                   <span
-                                    class="fez-icon scopus large"
+                                    class="fez-icon scopus xxlarge"
                                   />
                                   <span
                                     class="MuiBox-root css-19k1sqg"
@@ -892,7 +892,7 @@ exports[`Component TopCitedPublications should render top cited publications wit
                                   title="Full citation in Altmetric will open in a new window"
                                 >
                                   <span
-                                    class="fez-icon altmetric large"
+                                    class="fez-icon altmetric xxlarge"
                                   />
                                   <span
                                     class="MuiBox-root css-19k1sqg"
@@ -913,7 +913,7 @@ exports[`Component TopCitedPublications should render top cited publications wit
                                   title="Full citation in Google scholar will open in a new window"
                                 >
                                   <span
-                                    class="fez-icon google large"
+                                    class="fez-icon google xxlarge"
                                   />
                                 </a>
                                 <span

@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from 'test-utils';
+import { render, preview } from 'test-utils';
 
 import IdentifierIconLink from './IdentifierIconLink';
 
@@ -22,7 +22,7 @@ describe('IdentifierIconLink test', () => {
         expect(link).toHaveAttribute('aria-label', 'Open DOI 10.1234/test in a new tab');
         expect(link).toHaveTextContent('10.1234/test');
 
-        const icon = link.querySelector('.fez-icon.doi.large');
+        const icon = link.querySelector('.fez-icon.doi.xxlarge');
         expect(icon).toBeInTheDocument();
     });
 
@@ -36,7 +36,7 @@ describe('IdentifierIconLink test', () => {
         const link = getByTestId('identifier-icon-link-0000_0002_1825_0097');
 
         expect(link).toHaveAttribute('href', 'https://orcid.org/0000-0002-1825-0097');
-
+        preview.debug();
         const icon = link.querySelector('.fez-icon.orcid.medium');
         expect(icon).toBeInTheDocument();
     });

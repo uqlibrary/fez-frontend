@@ -15,7 +15,7 @@ exports[`CitationCountView test  should render component with given count 1`] = 
     title="Google"
   >
     <span
-      class="fez-icon wos large"
+      class="fez-icon wos xxlarge"
     />
     <span
       class="MuiBox-root css-19k1sqg"

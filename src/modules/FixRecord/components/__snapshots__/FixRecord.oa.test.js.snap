@@ -307,7 +307,7 @@ exports[`Component FixRecord for non-compliant Open Access should render fix rec
                                       title="Full citation in Web of science will open in a new window"
                                     >
                                       <span
-                                        class="fez-icon wos large"
+                                        class="fez-icon wos xxlarge"
                                       />
                                       <span
                                         class="MuiBox-root css-19k1sqg"
@@ -328,7 +328,7 @@ exports[`Component FixRecord for non-compliant Open Access should render fix rec
                                       title="Full citation in Google scholar will open in a new window"
                                     >
                                       <span
-                                        class="fez-icon google large"
+                                        class="fez-icon google xxlarge"
                                       />
                                     </a>
                                     <span
@@ -1141,7 +1141,7 @@ exports[`Component FixRecord for non-compliant Open Access should render record 
                                       title="Full citation in Web of science will open in a new window"
                                     >
                                       <span
-                                        class="fez-icon wos large"
+                                        class="fez-icon wos xxlarge"
                                       />
                                       <span
                                         class="MuiBox-root css-19k1sqg"
@@ -1162,7 +1162,7 @@ exports[`Component FixRecord for non-compliant Open Access should render record 
                                       title="Full citation in Google scholar will open in a new window"
                                     >
                                       <span
-                                        class="fez-icon google large"
+                                        class="fez-icon google xxlarge"
                                       />
                                     </a>
                                     <span
