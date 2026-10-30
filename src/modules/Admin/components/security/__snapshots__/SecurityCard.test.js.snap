@@ -15,13 +15,13 @@ exports[`SecurityCard component should fallback to default form values 1`] = `
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-zsosoh-MuiCardHeader-root"
+          class="MuiCardHeader-root css-1r4fcjp-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h4
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-186qltm-MuiTypography-root"
               data-testid="record-security-card-header"
               id="record-security-card-header"
             >
@@ -52,7 +52,7 @@ exports[`SecurityCard component should fallback to default form values 1`] = `
                 style="padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
               >
                 <h6
-                  class="MuiTypography-root MuiTypography-h6 css-1dw9hd0-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h6 css-9tkj37-MuiTypography-root"
                   style="margin-top: -8px;"
                 >
                   Inherited security policy details
@@ -65,7 +65,7 @@ exports[`SecurityCard component should fallback to default form values 1`] = `
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-3xooq5-MuiGrid-root"
                   >
                     <h6
-                      class="MuiTypography-root MuiTypography-subtitle1 css-1x7sf19-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-subtitle1 css-1a9di1j-MuiTypography-root"
                     >
                       Test collection
                     </h6>
@@ -74,7 +74,7 @@ exports[`SecurityCard component should fallback to default form values 1`] = `
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-7 css-1h3akp7-MuiGrid-root"
                   >
                     <h6
-                      class="MuiTypography-root MuiTypography-subtitle2 css-1ep8msm-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-subtitle2 css-tzzf1z-MuiTypography-root"
                     >
                       undefined
                     </h6>
@@ -83,7 +83,7 @@ exports[`SecurityCard component should fallback to default form values 1`] = `
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-1cixae8-MuiGrid-root"
                   >
                     <p
-                      class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-body2 css-1n3eekp-MuiTypography-root"
                     >
                       Theses Assessors (2)
                     </p>
@@ -98,7 +98,7 @@ exports[`SecurityCard component should fallback to default form values 1`] = `
                 class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-19opgx6-MuiFormControlLabel-root"
               >
                 <span
-                  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1cql8xn-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+                  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-mdqx3b-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
                 >
                   <input
                     class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
@@ -106,6 +106,7 @@ exports[`SecurityCard component should fallback to default form values 1`] = `
                     data-indeterminate="false"
                     data-testid="rek-security-inherited-input"
                     id="rek-security-inherited-input"
+                    tabindex="0"
                     type="checkbox"
                   />
                   <svg
@@ -121,7 +122,7 @@ exports[`SecurityCard component should fallback to default form values 1`] = `
                   </svg>
                 </span>
                 <span
-                  class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-n8yw9v-MuiTypography-root"
                 >
                   Override inherited security (detailed below)
                 </span>
@@ -150,13 +151,13 @@ exports[`SecurityCard component should mount with default props for a collection
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-zsosoh-MuiCardHeader-root"
+          class="MuiCardHeader-root css-1r4fcjp-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h4
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-186qltm-MuiTypography-root"
               data-testid="record-security-card-header"
               id="record-security-card-header"
             >
@@ -193,7 +194,7 @@ exports[`SecurityCard component should mount with default props for a collection
                     style="width: 100%;"
                   >
                     <label
-                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1oa6jqe-MuiFormLabel-root-MuiInputLabel-root"
+                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-g9hqv8-MuiFormLabel-root-MuiInputLabel-root"
                       data-shrink="true"
                       id="rek-security-policy-label"
                     >
@@ -207,7 +208,7 @@ exports[`SecurityCard component should mount with default props for a collection
                       </span>
                     </label>
                     <div
-                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-9q5l3d-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       required=""
                       validation="function required(value) {
   return value ? undefined : _validationErrors["default"].validationErrors.required;
@@ -218,7 +219,7 @@ exports[`SecurityCard component should mount with default props for a collection
                         aria-haspopup="listbox"
                         aria-labelledby="rek-security-policy-select"
                         aria-required="true"
-                        class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                        class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-25r9xh-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                         data-testid="rek-security-policy-select"
                         id="rek-security-policy-select"
                         role="combobox"
@@ -258,7 +259,7 @@ exports[`SecurityCard component should mount with default props for a collection
                   style="margin-top: 12px; padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
                 >
                   <h6
-                    class="MuiTypography-root MuiTypography-h6 css-1dw9hd0-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h6 css-9tkj37-MuiTypography-root"
                     style="margin-top: -8px;"
                   >
                     Current collection level security policy details
@@ -297,7 +298,7 @@ exports[`SecurityCard component should mount with default props for a collection
                     style="width: 100%;"
                   >
                     <label
-                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1oa6jqe-MuiFormLabel-root-MuiInputLabel-root"
+                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-g9hqv8-MuiFormLabel-root-MuiInputLabel-root"
                       data-shrink="true"
                       id="rek-datastream-policy-label"
                     >
@@ -317,7 +318,7 @@ exports[`SecurityCard component should mount with default props for a collection
                       </span>
                     </label>
                     <div
-                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-9q5l3d-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       required=""
                       validation="function required(value) {
   return value ? undefined : _validationErrors["default"].validationErrors.required;
@@ -328,7 +329,7 @@ exports[`SecurityCard component should mount with default props for a collection
                         aria-haspopup="listbox"
                         aria-labelledby="rek-datastream-policy-select"
                         aria-required="true"
-                        class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                        class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-25r9xh-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                         data-testid="rek-datastream-policy-select"
                         id="rek-datastream-policy-select"
                         role="combobox"
@@ -368,7 +369,7 @@ exports[`SecurityCard component should mount with default props for a collection
                   style="margin-top: 12px; padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
                 >
                   <h6
-                    class="MuiTypography-root MuiTypography-h6 css-1dw9hd0-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h6 css-9tkj37-MuiTypography-root"
                     style="margin-top: -8px;"
                   >
                     <span>
@@ -422,13 +423,13 @@ exports[`SecurityCard component should mount with default props for a record 1`]
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-zsosoh-MuiCardHeader-root"
+          class="MuiCardHeader-root css-1r4fcjp-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h4
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-186qltm-MuiTypography-root"
               data-testid="record-security-card-header"
               id="record-security-card-header"
             >
@@ -459,7 +460,7 @@ exports[`SecurityCard component should mount with default props for a record 1`]
                 style="padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
               >
                 <h6
-                  class="MuiTypography-root MuiTypography-h6 css-1dw9hd0-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h6 css-9tkj37-MuiTypography-root"
                   style="margin-top: -8px;"
                 >
                   Inherited security policy details
@@ -472,7 +473,7 @@ exports[`SecurityCard component should mount with default props for a record 1`]
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-3xooq5-MuiGrid-root"
                   >
                     <h6
-                      class="MuiTypography-root MuiTypography-subtitle1 css-1x7sf19-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-subtitle1 css-1a9di1j-MuiTypography-root"
                     >
                       Test collection
                     </h6>
@@ -481,7 +482,7 @@ exports[`SecurityCard component should mount with default props for a record 1`]
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-7 css-1h3akp7-MuiGrid-root"
                   >
                     <h6
-                      class="MuiTypography-root MuiTypography-subtitle2 css-1ep8msm-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-subtitle2 css-tzzf1z-MuiTypography-root"
                     >
                       undefined
                     </h6>
@@ -490,7 +491,7 @@ exports[`SecurityCard component should mount with default props for a record 1`]
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-1cixae8-MuiGrid-root"
                   >
                     <p
-                      class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-body2 css-1n3eekp-MuiTypography-root"
                     >
                       Theses Assessors (2)
                     </p>
@@ -505,7 +506,7 @@ exports[`SecurityCard component should mount with default props for a record 1`]
                 class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-19opgx6-MuiFormControlLabel-root"
               >
                 <span
-                  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1cql8xn-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+                  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-mdqx3b-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
                 >
                   <input
                     class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
@@ -513,6 +514,7 @@ exports[`SecurityCard component should mount with default props for a record 1`]
                     data-indeterminate="false"
                     data-testid="rek-security-inherited-input"
                     id="rek-security-inherited-input"
+                    tabindex="0"
                     type="checkbox"
                   />
                   <svg
@@ -528,7 +530,7 @@ exports[`SecurityCard component should mount with default props for a record 1`]
                   </svg>
                 </span>
                 <span
-                  class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-n8yw9v-MuiTypography-root"
                 >
                   Override inherited security (detailed below)
                 </span>
@@ -548,13 +550,13 @@ exports[`SecurityCard component should mount with default props for a record 1`]
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-zsosoh-MuiCardHeader-root"
+          class="MuiCardHeader-root css-1r4fcjp-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h4
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-186qltm-MuiTypography-root"
               data-testid="datastream-security-card-header"
               id="datastream-security-card-header"
             >
@@ -585,7 +587,7 @@ exports[`SecurityCard component should mount with default props for a record 1`]
                 style="padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
               >
                 <h6
-                  class="MuiTypography-root MuiTypography-h6 css-1dw9hd0-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h6 css-9tkj37-MuiTypography-root"
                   style="margin-top: -8px;"
                 >
                   Inherited datastream security policy details
@@ -598,7 +600,7 @@ exports[`SecurityCard component should mount with default props for a record 1`]
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-3xooq5-MuiGrid-root"
                   >
                     <h6
-                      class="MuiTypography-root MuiTypography-subtitle1 css-1x7sf19-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-subtitle1 css-1a9di1j-MuiTypography-root"
                     >
                       Test collection
                     </h6>
@@ -607,7 +609,7 @@ exports[`SecurityCard component should mount with default props for a record 1`]
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-7 css-1h3akp7-MuiGrid-root"
                   >
                     <h6
-                      class="MuiTypography-root MuiTypography-subtitle2 css-1ep8msm-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-subtitle2 css-tzzf1z-MuiTypography-root"
                     >
                       undefined
                     </h6>
@@ -616,7 +618,7 @@ exports[`SecurityCard component should mount with default props for a record 1`]
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-1cixae8-MuiGrid-root"
                   >
                     <p
-                      class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-body2 css-1n3eekp-MuiTypography-root"
                     >
                       Administrators (1)
                     </p>
@@ -628,7 +630,7 @@ exports[`SecurityCard component should mount with default props for a record 1`]
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
             >
               <h6
-                class="MuiTypography-root MuiTypography-h6 css-1dw9hd0-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h6 css-9tkj37-MuiTypography-root"
               >
                 Override datastream security policy details
               </h6>
@@ -642,14 +644,14 @@ exports[`SecurityCard component should mount with default props for a record 1`]
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-126lnbt-MuiGrid-root"
                   >
                     <a
-                      class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-imw6ub-MuiTypography-root-MuiLink-root"
+                      class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-pnrz8z-MuiTypography-root-MuiLink-root"
                       title="test7.txt"
                     >
                       test7.txt
                     </a>
                     <br />
                     <span
-                      class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-caption css-hodw82-MuiTypography-root"
                     >
                       Overridden
                     </span>
@@ -662,7 +664,7 @@ exports[`SecurityCard component should mount with default props for a record 1`]
                       style="width: 100%;"
                     >
                       <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1oa6jqe-MuiFormLabel-root-MuiInputLabel-root"
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-g9hqv8-MuiFormLabel-root-MuiInputLabel-root"
                         data-shrink="true"
                         id="dsi-security-policy-0-label"
                       >
@@ -676,7 +678,7 @@ exports[`SecurityCard component should mount with default props for a record 1`]
                         </span>
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-9q5l3d-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                         required=""
                         validation="function required(value) {
   return value ? undefined : _validationErrors["default"].validationErrors.required;
@@ -687,7 +689,7 @@ exports[`SecurityCard component should mount with default props for a record 1`]
                           aria-haspopup="listbox"
                           aria-labelledby="dsi-security-policy-0-select"
                           aria-required="true"
-                          class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                          class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-25r9xh-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                           data-testid="dsi-security-policy-0-select"
                           id="dsi-security-policy-0-select"
                           role="combobox"
@@ -748,13 +750,13 @@ exports[`SecurityCard component should not render data stream security selector 
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-zsosoh-MuiCardHeader-root"
+          class="MuiCardHeader-root css-1r4fcjp-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h4
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-186qltm-MuiTypography-root"
               data-testid="record-security-card-header"
               id="record-security-card-header"
             >
@@ -785,7 +787,7 @@ exports[`SecurityCard component should not render data stream security selector 
                 style="padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
               >
                 <h6
-                  class="MuiTypography-root MuiTypography-h6 css-1dw9hd0-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h6 css-9tkj37-MuiTypography-root"
                   style="margin-top: -8px;"
                 >
                   Inherited security policy details
@@ -798,7 +800,7 @@ exports[`SecurityCard component should not render data stream security selector 
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-3xooq5-MuiGrid-root"
                   >
                     <h6
-                      class="MuiTypography-root MuiTypography-subtitle1 css-1x7sf19-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-subtitle1 css-1a9di1j-MuiTypography-root"
                     >
                       Test collection
                     </h6>
@@ -807,7 +809,7 @@ exports[`SecurityCard component should not render data stream security selector 
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-7 css-1h3akp7-MuiGrid-root"
                   >
                     <h6
-                      class="MuiTypography-root MuiTypography-subtitle2 css-1ep8msm-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-subtitle2 css-tzzf1z-MuiTypography-root"
                     >
                       undefined
                     </h6>
@@ -816,7 +818,7 @@ exports[`SecurityCard component should not render data stream security selector 
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-1cixae8-MuiGrid-root"
                   >
                     <p
-                      class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-body2 css-1n3eekp-MuiTypography-root"
                     >
                       Theses Assessors (2)
                     </p>
@@ -831,7 +833,7 @@ exports[`SecurityCard component should not render data stream security selector 
                 class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-19opgx6-MuiFormControlLabel-root"
               >
                 <span
-                  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1cql8xn-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+                  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-mdqx3b-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
                 >
                   <input
                     class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
@@ -839,6 +841,7 @@ exports[`SecurityCard component should not render data stream security selector 
                     data-indeterminate="false"
                     data-testid="rek-security-inherited-input"
                     id="rek-security-inherited-input"
+                    tabindex="0"
                     type="checkbox"
                   />
                   <svg
@@ -854,7 +857,7 @@ exports[`SecurityCard component should not render data stream security selector 
                   </svg>
                 </span>
                 <span
-                  class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-n8yw9v-MuiTypography-root"
                 >
                   Override inherited security (detailed below)
                 </span>
@@ -883,13 +886,13 @@ exports[`SecurityCard component should render security card correctly for collec
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-zsosoh-MuiCardHeader-root"
+          class="MuiCardHeader-root css-1r4fcjp-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h4
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-186qltm-MuiTypography-root"
               data-testid="record-security-card-header"
               id="record-security-card-header"
             >
@@ -926,7 +929,7 @@ exports[`SecurityCard component should render security card correctly for collec
                     style="width: 100%;"
                   >
                     <label
-                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1oa6jqe-MuiFormLabel-root-MuiInputLabel-root"
+                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-g9hqv8-MuiFormLabel-root-MuiInputLabel-root"
                       data-shrink="true"
                       id="rek-security-policy-label"
                     >
@@ -940,7 +943,7 @@ exports[`SecurityCard component should render security card correctly for collec
                       </span>
                     </label>
                     <div
-                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl MuiSelect-root css-9q5l3d-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       required=""
                       validation="function required(value) {
   return value ? undefined : _validationErrors["default"].validationErrors.required;
@@ -952,7 +955,7 @@ exports[`SecurityCard component should render security card correctly for collec
                         aria-haspopup="listbox"
                         aria-labelledby="rek-security-policy-select"
                         aria-required="true"
-                        class="MuiSelect-select MuiSelect-standard Mui-disabled MuiInputBase-input MuiInput-input Mui-disabled css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                        class="MuiSelect-select MuiSelect-standard Mui-disabled MuiInputBase-input MuiInput-input Mui-disabled css-25r9xh-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                         data-testid="rek-security-policy-select"
                         id="rek-security-policy-select"
                         role="combobox"
@@ -992,7 +995,7 @@ exports[`SecurityCard component should render security card correctly for collec
                   style="margin-top: 12px; padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
                 >
                   <h6
-                    class="MuiTypography-root MuiTypography-h6 css-1dw9hd0-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h6 css-9tkj37-MuiTypography-root"
                     style="margin-top: -8px;"
                   >
                     Current collection level security policy details
@@ -1031,7 +1034,7 @@ exports[`SecurityCard component should render security card correctly for collec
                     style="width: 100%;"
                   >
                     <label
-                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1oa6jqe-MuiFormLabel-root-MuiInputLabel-root"
+                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-g9hqv8-MuiFormLabel-root-MuiInputLabel-root"
                       data-shrink="true"
                       id="rek-datastream-policy-label"
                     >
@@ -1051,7 +1054,7 @@ exports[`SecurityCard component should render security card correctly for collec
                       </span>
                     </label>
                     <div
-                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl MuiSelect-root css-9q5l3d-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       required=""
                       validation="function required(value) {
   return value ? undefined : _validationErrors["default"].validationErrors.required;
@@ -1063,7 +1066,7 @@ exports[`SecurityCard component should render security card correctly for collec
                         aria-haspopup="listbox"
                         aria-labelledby="rek-datastream-policy-select"
                         aria-required="true"
-                        class="MuiSelect-select MuiSelect-standard Mui-disabled MuiInputBase-input MuiInput-input Mui-disabled css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                        class="MuiSelect-select MuiSelect-standard Mui-disabled MuiInputBase-input MuiInput-input Mui-disabled css-25r9xh-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                         data-testid="rek-datastream-policy-select"
                         id="rek-datastream-policy-select"
                         role="combobox"
@@ -1103,7 +1106,7 @@ exports[`SecurityCard component should render security card correctly for collec
                   style="margin-top: 12px; padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
                 >
                   <h6
-                    class="MuiTypography-root MuiTypography-h6 css-1dw9hd0-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h6 css-9tkj37-MuiTypography-root"
                     style="margin-top: -8px;"
                   >
                     <span>
@@ -1157,13 +1160,13 @@ exports[`SecurityCard component should render security card correctly for commun
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-zsosoh-MuiCardHeader-root"
+          class="MuiCardHeader-root css-1r4fcjp-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h4
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-186qltm-MuiTypography-root"
               data-testid="record-security-card-header"
               id="record-security-card-header"
             >
@@ -1200,7 +1203,7 @@ exports[`SecurityCard component should render security card correctly for commun
                     style="width: 100%;"
                   >
                     <label
-                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1oa6jqe-MuiFormLabel-root-MuiInputLabel-root"
+                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-g9hqv8-MuiFormLabel-root-MuiInputLabel-root"
                       data-shrink="true"
                       id="rek-security-policy-label"
                     >
@@ -1214,7 +1217,7 @@ exports[`SecurityCard component should render security card correctly for commun
                       </span>
                     </label>
                     <div
-                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-9q5l3d-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       required=""
                       validation="function required(value) {
   return value ? undefined : _validationErrors["default"].validationErrors.required;
@@ -1225,7 +1228,7 @@ exports[`SecurityCard component should render security card correctly for commun
                         aria-haspopup="listbox"
                         aria-labelledby="rek-security-policy-select"
                         aria-required="true"
-                        class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                        class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-25r9xh-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                         data-testid="rek-security-policy-select"
                         id="rek-security-policy-select"
                         role="combobox"
@@ -1265,7 +1268,7 @@ exports[`SecurityCard component should render security card correctly for commun
                   style="margin-top: 12px; padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
                 >
                   <h6
-                    class="MuiTypography-root MuiTypography-h6 css-1dw9hd0-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h6 css-9tkj37-MuiTypography-root"
                     style="margin-top: -8px;"
                   >
                     Selected community record security policy details
@@ -1313,13 +1316,13 @@ exports[`SecurityCard component should render security card correctly for record
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-zsosoh-MuiCardHeader-root"
+          class="MuiCardHeader-root css-1r4fcjp-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h4
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-186qltm-MuiTypography-root"
               data-testid="record-security-card-header"
               id="record-security-card-header"
             >
@@ -1350,7 +1353,7 @@ exports[`SecurityCard component should render security card correctly for record
                 style="padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
               >
                 <h6
-                  class="MuiTypography-root MuiTypography-h6 css-1dw9hd0-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h6 css-9tkj37-MuiTypography-root"
                   style="margin-top: -8px;"
                 >
                   Inherited security policy details
@@ -1363,7 +1366,7 @@ exports[`SecurityCard component should render security card correctly for record
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-3xooq5-MuiGrid-root"
                   >
                     <h6
-                      class="MuiTypography-root MuiTypography-subtitle1 css-1x7sf19-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-subtitle1 css-1a9di1j-MuiTypography-root"
                     >
                       Test collection
                     </h6>
@@ -1372,7 +1375,7 @@ exports[`SecurityCard component should render security card correctly for record
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-7 css-1h3akp7-MuiGrid-root"
                   >
                     <h6
-                      class="MuiTypography-root MuiTypography-subtitle2 css-1ep8msm-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-subtitle2 css-tzzf1z-MuiTypography-root"
                     >
                       undefined
                     </h6>
@@ -1381,7 +1384,7 @@ exports[`SecurityCard component should render security card correctly for record
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-1cixae8-MuiGrid-root"
                   >
                     <p
-                      class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-body2 css-1n3eekp-MuiTypography-root"
                     >
                       Theses Assessors (2)
                     </p>
@@ -1396,7 +1399,7 @@ exports[`SecurityCard component should render security card correctly for record
                 class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-19opgx6-MuiFormControlLabel-root"
               >
                 <span
-                  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1cql8xn-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+                  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-mdqx3b-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
                 >
                   <input
                     class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
@@ -1404,6 +1407,7 @@ exports[`SecurityCard component should render security card correctly for record
                     data-indeterminate="false"
                     data-testid="rek-security-inherited-input"
                     id="rek-security-inherited-input"
+                    tabindex="0"
                     type="checkbox"
                   />
                   <svg
@@ -1419,7 +1423,7 @@ exports[`SecurityCard component should render security card correctly for record
                   </svg>
                 </span>
                 <span
-                  class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-n8yw9v-MuiTypography-root"
                 >
                   Override inherited security (detailed below)
                 </span>
@@ -1439,13 +1443,13 @@ exports[`SecurityCard component should render security card correctly for record
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-zsosoh-MuiCardHeader-root"
+          class="MuiCardHeader-root css-1r4fcjp-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h4
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-186qltm-MuiTypography-root"
               data-testid="datastream-security-card-header"
               id="datastream-security-card-header"
             >
@@ -1476,7 +1480,7 @@ exports[`SecurityCard component should render security card correctly for record
                 style="padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
               >
                 <h6
-                  class="MuiTypography-root MuiTypography-h6 css-1dw9hd0-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h6 css-9tkj37-MuiTypography-root"
                   style="margin-top: -8px;"
                 >
                   Inherited datastream security policy details
@@ -1489,7 +1493,7 @@ exports[`SecurityCard component should render security card correctly for record
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-3xooq5-MuiGrid-root"
                   >
                     <h6
-                      class="MuiTypography-root MuiTypography-subtitle1 css-1x7sf19-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-subtitle1 css-1a9di1j-MuiTypography-root"
                     >
                       Test collection
                     </h6>
@@ -1498,7 +1502,7 @@ exports[`SecurityCard component should render security card correctly for record
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-7 css-1h3akp7-MuiGrid-root"
                   >
                     <h6
-                      class="MuiTypography-root MuiTypography-subtitle2 css-1ep8msm-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-subtitle2 css-tzzf1z-MuiTypography-root"
                     >
                       undefined
                     </h6>
@@ -1507,7 +1511,7 @@ exports[`SecurityCard component should render security card correctly for record
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-1cixae8-MuiGrid-root"
                   >
                     <p
-                      class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-body2 css-1n3eekp-MuiTypography-root"
                     >
                       Administrators (1)
                     </p>
@@ -1519,7 +1523,7 @@ exports[`SecurityCard component should render security card correctly for record
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
             >
               <h6
-                class="MuiTypography-root MuiTypography-h6 css-1dw9hd0-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h6 css-9tkj37-MuiTypography-root"
               >
                 Override datastream security policy details
               </h6>
@@ -1533,14 +1537,14 @@ exports[`SecurityCard component should render security card correctly for record
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-126lnbt-MuiGrid-root"
                   >
                     <a
-                      class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-imw6ub-MuiTypography-root-MuiLink-root"
+                      class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-pnrz8z-MuiTypography-root-MuiLink-root"
                       title="test1.txt"
                     >
                       test1.txt
                     </a>
                     <br />
                     <span
-                      class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-caption css-hodw82-MuiTypography-root"
                     >
                       Overridden
                     </span>
@@ -1553,7 +1557,7 @@ exports[`SecurityCard component should render security card correctly for record
                       style="width: 100%;"
                     >
                       <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1oa6jqe-MuiFormLabel-root-MuiInputLabel-root"
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-g9hqv8-MuiFormLabel-root-MuiInputLabel-root"
                         data-shrink="true"
                         id="dsi-security-policy-0-label"
                       >
@@ -1567,7 +1571,7 @@ exports[`SecurityCard component should render security card correctly for record
                         </span>
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-9q5l3d-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                         required=""
                         validation="function required(value) {
   return value ? undefined : _validationErrors["default"].validationErrors.required;
@@ -1578,7 +1582,7 @@ exports[`SecurityCard component should render security card correctly for record
                           aria-haspopup="listbox"
                           aria-labelledby="dsi-security-policy-0-select"
                           aria-required="true"
-                          class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                          class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-25r9xh-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                           data-testid="dsi-security-policy-0-select"
                           id="dsi-security-policy-0-select"
                           role="combobox"
@@ -1639,13 +1643,13 @@ exports[`SecurityCard component should render security card correctly for record
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-zsosoh-MuiCardHeader-root"
+          class="MuiCardHeader-root css-1r4fcjp-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h4
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-186qltm-MuiTypography-root"
               data-testid="record-security-card-header"
               id="record-security-card-header"
             >
@@ -1676,7 +1680,7 @@ exports[`SecurityCard component should render security card correctly for record
                 style="padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
               >
                 <h6
-                  class="MuiTypography-root MuiTypography-h6 css-1dw9hd0-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h6 css-9tkj37-MuiTypography-root"
                   style="margin-top: -8px;"
                 >
                   Inherited security policy details
@@ -1689,7 +1693,7 @@ exports[`SecurityCard component should render security card correctly for record
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-3xooq5-MuiGrid-root"
                   >
                     <h6
-                      class="MuiTypography-root MuiTypography-subtitle1 css-1x7sf19-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-subtitle1 css-1a9di1j-MuiTypography-root"
                     >
                       Test collection
                     </h6>
@@ -1698,7 +1702,7 @@ exports[`SecurityCard component should render security card correctly for record
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-7 css-1h3akp7-MuiGrid-root"
                   >
                     <h6
-                      class="MuiTypography-root MuiTypography-subtitle2 css-1ep8msm-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-subtitle2 css-tzzf1z-MuiTypography-root"
                     >
                       undefined
                     </h6>
@@ -1707,7 +1711,7 @@ exports[`SecurityCard component should render security card correctly for record
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-1cixae8-MuiGrid-root"
                   >
                     <p
-                      class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-body2 css-1n3eekp-MuiTypography-root"
                     >
                       Theses Assessors (2)
                     </p>
@@ -1722,7 +1726,7 @@ exports[`SecurityCard component should render security card correctly for record
                 class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-19opgx6-MuiFormControlLabel-root"
               >
                 <span
-                  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1cql8xn-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+                  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-mdqx3b-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
                 >
                   <input
                     checked=""
@@ -1731,6 +1735,7 @@ exports[`SecurityCard component should render security card correctly for record
                     data-indeterminate="false"
                     data-testid="rek-security-inherited-input"
                     id="rek-security-inherited-input"
+                    tabindex="0"
                     type="checkbox"
                   />
                   <svg
@@ -1746,7 +1751,7 @@ exports[`SecurityCard component should render security card correctly for record
                   </svg>
                 </span>
                 <span
-                  class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-n8yw9v-MuiTypography-root"
                 >
                   Override inherited security (detailed below)
                 </span>
@@ -1766,7 +1771,7 @@ exports[`SecurityCard component should render security card correctly for record
                     style="width: 100%;"
                   >
                     <label
-                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1oa6jqe-MuiFormLabel-root-MuiInputLabel-root"
+                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-g9hqv8-MuiFormLabel-root-MuiInputLabel-root"
                       data-shrink="true"
                       id="rek-security-policy-label"
                     >
@@ -1780,7 +1785,7 @@ exports[`SecurityCard component should render security card correctly for record
                       </span>
                     </label>
                     <div
-                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-9q5l3d-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       required=""
                       validation="function required(value) {
   return value ? undefined : _validationErrors["default"].validationErrors.required;
@@ -1791,7 +1796,7 @@ exports[`SecurityCard component should render security card correctly for record
                         aria-haspopup="listbox"
                         aria-labelledby="rek-security-policy-select"
                         aria-required="true"
-                        class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                        class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-25r9xh-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                         data-testid="rek-security-policy-select"
                         id="rek-security-policy-select"
                         role="combobox"
@@ -1831,7 +1836,7 @@ exports[`SecurityCard component should render security card correctly for record
                   style="margin-top: 12px; padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
                 >
                   <h6
-                    class="MuiTypography-root MuiTypography-h6 css-1dw9hd0-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h6 css-9tkj37-MuiTypography-root"
                     style="margin-top: -8px;"
                   >
                     Selected work level security policy details
@@ -1870,13 +1875,13 @@ exports[`SecurityCard component should render security card correctly for record
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-zsosoh-MuiCardHeader-root"
+          class="MuiCardHeader-root css-1r4fcjp-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h4
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-186qltm-MuiTypography-root"
               data-testid="datastream-security-card-header"
               id="datastream-security-card-header"
             >
@@ -1907,7 +1912,7 @@ exports[`SecurityCard component should render security card correctly for record
                 style="padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
               >
                 <h6
-                  class="MuiTypography-root MuiTypography-h6 css-1dw9hd0-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h6 css-9tkj37-MuiTypography-root"
                   style="margin-top: -8px;"
                 >
                   Inherited datastream security policy details
@@ -1920,7 +1925,7 @@ exports[`SecurityCard component should render security card correctly for record
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-3xooq5-MuiGrid-root"
                   >
                     <h6
-                      class="MuiTypography-root MuiTypography-subtitle1 css-1x7sf19-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-subtitle1 css-1a9di1j-MuiTypography-root"
                     >
                       Test collection
                     </h6>
@@ -1929,7 +1934,7 @@ exports[`SecurityCard component should render security card correctly for record
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-7 css-1h3akp7-MuiGrid-root"
                   >
                     <h6
-                      class="MuiTypography-root MuiTypography-subtitle2 css-1ep8msm-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-subtitle2 css-tzzf1z-MuiTypography-root"
                     >
                       undefined
                     </h6>
@@ -1938,7 +1943,7 @@ exports[`SecurityCard component should render security card correctly for record
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-1cixae8-MuiGrid-root"
                   >
                     <p
-                      class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-body2 css-1n3eekp-MuiTypography-root"
                     >
                       Administrators (1)
                     </p>
@@ -1950,7 +1955,7 @@ exports[`SecurityCard component should render security card correctly for record
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
             >
               <h6
-                class="MuiTypography-root MuiTypography-h6 css-1dw9hd0-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h6 css-9tkj37-MuiTypography-root"
               >
                 Override datastream security policy details
               </h6>
@@ -1964,14 +1969,14 @@ exports[`SecurityCard component should render security card correctly for record
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-126lnbt-MuiGrid-root"
                   >
                     <a
-                      class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-imw6ub-MuiTypography-root-MuiLink-root"
+                      class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-pnrz8z-MuiTypography-root-MuiLink-root"
                       title="test2.txt"
                     >
                       test2.txt
                     </a>
                     <br />
                     <span
-                      class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-caption css-hodw82-MuiTypography-root"
                     >
                       Overridden
                     </span>
@@ -1984,7 +1989,7 @@ exports[`SecurityCard component should render security card correctly for record
                       style="width: 100%;"
                     >
                       <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1oa6jqe-MuiFormLabel-root-MuiInputLabel-root"
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-g9hqv8-MuiFormLabel-root-MuiInputLabel-root"
                         data-shrink="true"
                         id="dsi-security-policy-0-label"
                       >
@@ -1998,7 +2003,7 @@ exports[`SecurityCard component should render security card correctly for record
                         </span>
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-9q5l3d-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                         required=""
                         validation="function required(value) {
   return value ? undefined : _validationErrors["default"].validationErrors.required;
@@ -2009,7 +2014,7 @@ exports[`SecurityCard component should render security card correctly for record
                           aria-haspopup="listbox"
                           aria-labelledby="dsi-security-policy-0-select"
                           aria-required="true"
-                          class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                          class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-25r9xh-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                           data-testid="dsi-security-policy-0-select"
                           id="dsi-security-policy-0-select"
                           role="combobox"
@@ -2070,13 +2075,13 @@ exports[`SecurityCard component should render security card with disabled inputs
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-zsosoh-MuiCardHeader-root"
+          class="MuiCardHeader-root css-1r4fcjp-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h4
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-186qltm-MuiTypography-root"
               data-testid="record-security-card-header"
               id="record-security-card-header"
             >
@@ -2107,7 +2112,7 @@ exports[`SecurityCard component should render security card with disabled inputs
                 style="padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
               >
                 <h6
-                  class="MuiTypography-root MuiTypography-h6 css-1dw9hd0-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h6 css-9tkj37-MuiTypography-root"
                   style="margin-top: -8px;"
                 >
                   Inherited security policy details
@@ -2120,7 +2125,7 @@ exports[`SecurityCard component should render security card with disabled inputs
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-3xooq5-MuiGrid-root"
                   >
                     <h6
-                      class="MuiTypography-root MuiTypography-subtitle1 css-1x7sf19-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-subtitle1 css-1a9di1j-MuiTypography-root"
                     >
                       Test collection
                     </h6>
@@ -2129,7 +2134,7 @@ exports[`SecurityCard component should render security card with disabled inputs
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-7 css-1h3akp7-MuiGrid-root"
                   >
                     <h6
-                      class="MuiTypography-root MuiTypography-subtitle2 css-1ep8msm-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-subtitle2 css-tzzf1z-MuiTypography-root"
                     >
                       undefined
                     </h6>
@@ -2138,7 +2143,7 @@ exports[`SecurityCard component should render security card with disabled inputs
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-1cixae8-MuiGrid-root"
                   >
                     <p
-                      class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-body2 css-1n3eekp-MuiTypography-root"
                     >
                       Theses Assessors (2)
                     </p>
@@ -2154,7 +2159,7 @@ exports[`SecurityCard component should render security card with disabled inputs
               >
                 <span
                   aria-disabled="true"
-                  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-disabled PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked Mui-disabled MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1cql8xn-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+                  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-disabled PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked Mui-disabled MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-mdqx3b-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
                   tabindex="-1"
                 >
                   <input
@@ -2165,6 +2170,7 @@ exports[`SecurityCard component should render security card with disabled inputs
                     data-testid="rek-security-inherited-input"
                     disabled=""
                     id="rek-security-inherited-input"
+                    tabindex="0"
                     type="checkbox"
                   />
                   <svg
@@ -2180,7 +2186,7 @@ exports[`SecurityCard component should render security card with disabled inputs
                   </svg>
                 </span>
                 <span
-                  class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label Mui-disabled css-158z39i-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label Mui-disabled css-n8yw9v-MuiTypography-root"
                 >
                   Override inherited security (detailed below)
                 </span>
@@ -2200,7 +2206,7 @@ exports[`SecurityCard component should render security card with disabled inputs
                     style="width: 100%;"
                   >
                     <label
-                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1oa6jqe-MuiFormLabel-root-MuiInputLabel-root"
+                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-g9hqv8-MuiFormLabel-root-MuiInputLabel-root"
                       data-shrink="true"
                       id="rek-security-policy-label"
                     >
@@ -2214,7 +2220,7 @@ exports[`SecurityCard component should render security card with disabled inputs
                       </span>
                     </label>
                     <div
-                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl MuiSelect-root css-9q5l3d-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       required=""
                       validation="function required(value) {
   return value ? undefined : _validationErrors["default"].validationErrors.required;
@@ -2226,7 +2232,7 @@ exports[`SecurityCard component should render security card with disabled inputs
                         aria-haspopup="listbox"
                         aria-labelledby="rek-security-policy-select"
                         aria-required="true"
-                        class="MuiSelect-select MuiSelect-standard Mui-disabled MuiInputBase-input MuiInput-input Mui-disabled css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                        class="MuiSelect-select MuiSelect-standard Mui-disabled MuiInputBase-input MuiInput-input Mui-disabled css-25r9xh-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                         data-testid="rek-security-policy-select"
                         id="rek-security-policy-select"
                         role="combobox"
@@ -2266,7 +2272,7 @@ exports[`SecurityCard component should render security card with disabled inputs
                   style="margin-top: 12px; padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
                 >
                   <h6
-                    class="MuiTypography-root MuiTypography-h6 css-1dw9hd0-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h6 css-9tkj37-MuiTypography-root"
                     style="margin-top: -8px;"
                   >
                     Selected work level security policy details
@@ -2305,13 +2311,13 @@ exports[`SecurityCard component should render security card with disabled inputs
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-zsosoh-MuiCardHeader-root"
+          class="MuiCardHeader-root css-1r4fcjp-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h4
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-186qltm-MuiTypography-root"
               data-testid="datastream-security-card-header"
               id="datastream-security-card-header"
             >
@@ -2342,7 +2348,7 @@ exports[`SecurityCard component should render security card with disabled inputs
                 style="padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
               >
                 <h6
-                  class="MuiTypography-root MuiTypography-h6 css-1dw9hd0-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h6 css-9tkj37-MuiTypography-root"
                   style="margin-top: -8px;"
                 >
                   Inherited datastream security policy details
@@ -2355,7 +2361,7 @@ exports[`SecurityCard component should render security card with disabled inputs
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-3xooq5-MuiGrid-root"
                   >
                     <h6
-                      class="MuiTypography-root MuiTypography-subtitle1 css-1x7sf19-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-subtitle1 css-1a9di1j-MuiTypography-root"
                     >
                       Test collection
                     </h6>
@@ -2364,7 +2370,7 @@ exports[`SecurityCard component should render security card with disabled inputs
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-7 css-1h3akp7-MuiGrid-root"
                   >
                     <h6
-                      class="MuiTypography-root MuiTypography-subtitle2 css-1ep8msm-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-subtitle2 css-tzzf1z-MuiTypography-root"
                     >
                       undefined
                     </h6>
@@ -2373,7 +2379,7 @@ exports[`SecurityCard component should render security card with disabled inputs
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-1cixae8-MuiGrid-root"
                   >
                     <p
-                      class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-body2 css-1n3eekp-MuiTypography-root"
                     >
                       Administrators (1)
                     </p>
@@ -2385,7 +2391,7 @@ exports[`SecurityCard component should render security card with disabled inputs
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
             >
               <h6
-                class="MuiTypography-root MuiTypography-h6 css-1dw9hd0-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h6 css-9tkj37-MuiTypography-root"
               >
                 Override datastream security policy details
               </h6>
@@ -2399,14 +2405,14 @@ exports[`SecurityCard component should render security card with disabled inputs
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-126lnbt-MuiGrid-root"
                   >
                     <a
-                      class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-imw6ub-MuiTypography-root-MuiLink-root"
+                      class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-pnrz8z-MuiTypography-root-MuiLink-root"
                       title="test3.txt"
                     >
                       test3.txt
                     </a>
                     <br />
                     <span
-                      class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-caption css-hodw82-MuiTypography-root"
                     >
                       Overridden
                     </span>
@@ -2419,7 +2425,7 @@ exports[`SecurityCard component should render security card with disabled inputs
                       style="width: 100%;"
                     >
                       <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1oa6jqe-MuiFormLabel-root-MuiInputLabel-root"
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-g9hqv8-MuiFormLabel-root-MuiInputLabel-root"
                         data-shrink="true"
                         id="dsi-security-policy-0-label"
                       >
@@ -2433,7 +2439,7 @@ exports[`SecurityCard component should render security card with disabled inputs
                         </span>
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl MuiSelect-root css-9q5l3d-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                         required=""
                         validation="function required(value) {
   return value ? undefined : _validationErrors["default"].validationErrors.required;
@@ -2445,7 +2451,7 @@ exports[`SecurityCard component should render security card with disabled inputs
                           aria-haspopup="listbox"
                           aria-labelledby="dsi-security-policy-0-select"
                           aria-required="true"
-                          class="MuiSelect-select MuiSelect-standard Mui-disabled MuiInputBase-input MuiInput-input Mui-disabled css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                          class="MuiSelect-select MuiSelect-standard Mui-disabled MuiInputBase-input MuiInput-input Mui-disabled css-25r9xh-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                           data-testid="dsi-security-policy-0-select"
                           id="dsi-security-policy-0-select"
                           role="combobox"
@@ -2506,13 +2512,13 @@ exports[`SecurityCard component should render security card with disabled inputs
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-zsosoh-MuiCardHeader-root"
+          class="MuiCardHeader-root css-1r4fcjp-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h4
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-186qltm-MuiTypography-root"
               data-testid="record-security-card-header"
               id="record-security-card-header"
             >
@@ -2543,7 +2549,7 @@ exports[`SecurityCard component should render security card with disabled inputs
                 style="padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
               >
                 <h6
-                  class="MuiTypography-root MuiTypography-h6 css-1dw9hd0-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h6 css-9tkj37-MuiTypography-root"
                   style="margin-top: -8px;"
                 >
                   Inherited security policy details
@@ -2556,7 +2562,7 @@ exports[`SecurityCard component should render security card with disabled inputs
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-3xooq5-MuiGrid-root"
                   >
                     <h6
-                      class="MuiTypography-root MuiTypography-subtitle1 css-1x7sf19-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-subtitle1 css-1a9di1j-MuiTypography-root"
                     >
                       Test collection
                     </h6>
@@ -2565,7 +2571,7 @@ exports[`SecurityCard component should render security card with disabled inputs
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-7 css-1h3akp7-MuiGrid-root"
                   >
                     <h6
-                      class="MuiTypography-root MuiTypography-subtitle2 css-1ep8msm-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-subtitle2 css-tzzf1z-MuiTypography-root"
                     >
                       undefined
                     </h6>
@@ -2574,7 +2580,7 @@ exports[`SecurityCard component should render security card with disabled inputs
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-1cixae8-MuiGrid-root"
                   >
                     <p
-                      class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-body2 css-1n3eekp-MuiTypography-root"
                     >
                       Theses Assessors (2)
                     </p>
@@ -2590,7 +2596,7 @@ exports[`SecurityCard component should render security card with disabled inputs
               >
                 <span
                   aria-disabled="true"
-                  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-disabled PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked Mui-disabled MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1cql8xn-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+                  class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-disabled PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked Mui-disabled MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-mdqx3b-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
                   tabindex="-1"
                 >
                   <input
@@ -2601,6 +2607,7 @@ exports[`SecurityCard component should render security card with disabled inputs
                     data-testid="rek-security-inherited-input"
                     disabled=""
                     id="rek-security-inherited-input"
+                    tabindex="0"
                     type="checkbox"
                   />
                   <svg
@@ -2616,7 +2623,7 @@ exports[`SecurityCard component should render security card with disabled inputs
                   </svg>
                 </span>
                 <span
-                  class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label Mui-disabled css-158z39i-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label Mui-disabled css-n8yw9v-MuiTypography-root"
                 >
                   Override inherited security (detailed below)
                 </span>
@@ -2636,7 +2643,7 @@ exports[`SecurityCard component should render security card with disabled inputs
                     style="width: 100%;"
                   >
                     <label
-                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1oa6jqe-MuiFormLabel-root-MuiInputLabel-root"
+                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-g9hqv8-MuiFormLabel-root-MuiInputLabel-root"
                       data-shrink="true"
                       id="rek-security-policy-label"
                     >
@@ -2650,7 +2657,7 @@ exports[`SecurityCard component should render security card with disabled inputs
                       </span>
                     </label>
                     <div
-                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                      class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl MuiSelect-root css-9q5l3d-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       required=""
                       validation="function required(value) {
   return value ? undefined : _validationErrors["default"].validationErrors.required;
@@ -2662,7 +2669,7 @@ exports[`SecurityCard component should render security card with disabled inputs
                         aria-haspopup="listbox"
                         aria-labelledby="rek-security-policy-select"
                         aria-required="true"
-                        class="MuiSelect-select MuiSelect-standard Mui-disabled MuiInputBase-input MuiInput-input Mui-disabled css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                        class="MuiSelect-select MuiSelect-standard Mui-disabled MuiInputBase-input MuiInput-input Mui-disabled css-25r9xh-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                         data-testid="rek-security-policy-select"
                         id="rek-security-policy-select"
                         role="combobox"
@@ -2702,7 +2709,7 @@ exports[`SecurityCard component should render security card with disabled inputs
                   style="margin-top: 12px; padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
                 >
                   <h6
-                    class="MuiTypography-root MuiTypography-h6 css-1dw9hd0-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h6 css-9tkj37-MuiTypography-root"
                     style="margin-top: -8px;"
                   >
                     Selected work level security policy details
@@ -2741,13 +2748,13 @@ exports[`SecurityCard component should render security card with disabled inputs
         style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
       >
         <div
-          class="MuiCardHeader-root css-zsosoh-MuiCardHeader-root"
+          class="MuiCardHeader-root css-1r4fcjp-MuiCardHeader-root"
         >
           <div
             class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
           >
             <h4
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-186qltm-MuiTypography-root"
               data-testid="datastream-security-card-header"
               id="datastream-security-card-header"
             >
@@ -2778,7 +2785,7 @@ exports[`SecurityCard component should render security card with disabled inputs
                 style="padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
               >
                 <h6
-                  class="MuiTypography-root MuiTypography-h6 css-1dw9hd0-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h6 css-9tkj37-MuiTypography-root"
                   style="margin-top: -8px;"
                 >
                   Inherited datastream security policy details
@@ -2791,7 +2798,7 @@ exports[`SecurityCard component should render security card with disabled inputs
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-3xooq5-MuiGrid-root"
                   >
                     <h6
-                      class="MuiTypography-root MuiTypography-subtitle1 css-1x7sf19-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-subtitle1 css-1a9di1j-MuiTypography-root"
                     >
                       Test collection
                     </h6>
@@ -2800,7 +2807,7 @@ exports[`SecurityCard component should render security card with disabled inputs
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-7 css-1h3akp7-MuiGrid-root"
                   >
                     <h6
-                      class="MuiTypography-root MuiTypography-subtitle2 css-1ep8msm-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-subtitle2 css-tzzf1z-MuiTypography-root"
                     >
                       undefined
                     </h6>
@@ -2809,7 +2816,7 @@ exports[`SecurityCard component should render security card with disabled inputs
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-1cixae8-MuiGrid-root"
                   >
                     <p
-                      class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-body2 css-1n3eekp-MuiTypography-root"
                     >
                       Administrators (1)
                     </p>
@@ -2821,7 +2828,7 @@ exports[`SecurityCard component should render security card with disabled inputs
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
             >
               <h6
-                class="MuiTypography-root MuiTypography-h6 css-1dw9hd0-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h6 css-9tkj37-MuiTypography-root"
               >
                 Override datastream security policy details
               </h6>
@@ -2835,14 +2842,14 @@ exports[`SecurityCard component should render security card with disabled inputs
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-126lnbt-MuiGrid-root"
                   >
                     <a
-                      class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-imw6ub-MuiTypography-root-MuiLink-root"
+                      class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-pnrz8z-MuiTypography-root-MuiLink-root"
                       title="test3.txt"
                     >
                       test3.txt
                     </a>
                     <br />
                     <span
-                      class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-caption css-hodw82-MuiTypography-root"
                     >
                       Overridden
                     </span>
@@ -2855,7 +2862,7 @@ exports[`SecurityCard component should render security card with disabled inputs
                       style="width: 100%;"
                     >
                       <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1oa6jqe-MuiFormLabel-root-MuiInputLabel-root"
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-g9hqv8-MuiFormLabel-root-MuiInputLabel-root"
                         data-shrink="true"
                         id="dsi-security-policy-0-label"
                       >
@@ -2869,7 +2876,7 @@ exports[`SecurityCard component should render security card with disabled inputs
                         </span>
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl MuiSelect-root css-a9tjgg-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl MuiSelect-root css-9q5l3d-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                         required=""
                         validation="function required(value) {
   return value ? undefined : _validationErrors["default"].validationErrors.required;
@@ -2881,7 +2888,7 @@ exports[`SecurityCard component should render security card with disabled inputs
                           aria-haspopup="listbox"
                           aria-labelledby="dsi-security-policy-0-select"
                           aria-required="true"
-                          class="MuiSelect-select MuiSelect-standard Mui-disabled MuiInputBase-input MuiInput-input Mui-disabled css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+                          class="MuiSelect-select MuiSelect-standard Mui-disabled MuiInputBase-input MuiInput-input Mui-disabled css-25r9xh-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                           data-testid="dsi-security-policy-0-select"
                           id="dsi-security-policy-0-select"
                           role="combobox"

@@ -102,7 +102,7 @@ exports[`Dashboard Researcher IDs test Render the authors Researcher IDs as expe
         title="Click to visit your ORCID profile"
       >
         <span
-          class="MuiTypography-root MuiTypography-caption css-h9ag8w-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-caption css-l8llah-MuiTypography-root"
         >
           orcid.org/0000-0001-1111-1111
         </span>
@@ -392,7 +392,7 @@ exports[`Dashboard Researcher IDs test Testing google scholar id with orcid capt
         title="Click to visit your ORCID profile"
       >
         <span
-          class="MuiTypography-root MuiTypography-caption css-h9ag8w-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-caption css-l8llah-MuiTypography-root"
         >
           orcid.org/0000-0001-1111-1111
         </span>
@@ -588,7 +588,7 @@ exports[`Dashboard Researcher IDs test Testing orcid caption 1`] = `
         title="Click to visit your ORCID profile"
       >
         <span
-          class="MuiTypography-root MuiTypography-caption css-h9ag8w-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-caption css-l8llah-MuiTypography-root"
         >
           orcid.org/0000-0001-1111-1111
         </span>
@@ -688,11 +688,11 @@ exports[`Dashboard Researcher IDs test should show orcid sync UI 1`] = `
         />
       </a>
       <span
-        class="css-1o7ot5c"
+        class="css-s7ee5q"
       >
         <button
           aria-label="Information about uploading your UQ eSpace works to ORCID"
-          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-1t8iw5z-MuiButtonBase-root-MuiIconButton-root"
           data-analyticsid="help-icon-orcid"
           data-mui-internal-clone-element="true"
           data-testid="help-icon-orcid"
@@ -727,7 +727,7 @@ exports[`Dashboard Researcher IDs test should show orcid sync UI 1`] = `
         title="Click to visit your ORCID profile"
       >
         <span
-          class="MuiTypography-root MuiTypography-caption css-h9ag8w-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-caption css-l8llah-MuiTypography-root"
         >
           orcid.org/0000-0001-1111-1111
         </span>

@@ -37,12 +37,12 @@ exports[`Component ContributorRow Row should be clickable when showContributorAs
           class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-n9w13b-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1c9bxr1-MuiTypography-root"
           >
             J. Smith
           </p>
           <span
-            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-18bwmlt-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1eeip7f-MuiTypography-root"
           >
             First  listed contributor
           </span>
@@ -57,12 +57,12 @@ exports[`Component ContributorRow Row should be clickable when showContributorAs
           class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-n9w13b-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1c9bxr1-MuiTypography-root"
           >
             Professor J Researcher
           </p>
           <span
-            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-18bwmlt-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1eeip7f-MuiTypography-root"
           >
             The University of Queensland (uqresearcher - 410)
           </span>
@@ -80,7 +80,7 @@ exports[`Component ContributorRow Row should be clickable when showContributorAs
         >
           <button
             aria-label="Remove this record"
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-ydiqbj-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="test-list-row-0-delete"
             data-testid="test-list-row-0-delete"
             id="test-list-row-delete-0"
@@ -143,12 +143,12 @@ exports[`Component ContributorRow Row should not be clickable when showContribut
           class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-n9w13b-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1c9bxr1-MuiTypography-root"
           >
             J. Smith
           </p>
           <span
-            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-18bwmlt-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1eeip7f-MuiTypography-root"
           >
             First  listed contributor
           </span>
@@ -163,12 +163,12 @@ exports[`Component ContributorRow Row should not be clickable when showContribut
           class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-n9w13b-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1c9bxr1-MuiTypography-root"
           >
             Professor J Researcher
           </p>
           <span
-            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-18bwmlt-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1eeip7f-MuiTypography-root"
           >
             The University of Queensland (uqresearcher - 410)
           </span>
@@ -186,7 +186,7 @@ exports[`Component ContributorRow Row should not be clickable when showContribut
         >
           <button
             aria-label="Remove this record"
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-ydiqbj-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="test-list-row-0-delete"
             data-testid="test-list-row-0-delete"
             id="test-list-row-delete-0"
@@ -249,12 +249,12 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
           class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-n9w13b-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1c9bxr1-MuiTypography-root"
           >
             A. Smith
           </p>
           <span
-            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-18bwmlt-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1eeip7f-MuiTypography-root"
           >
             First  listed contributor
           </span>
@@ -272,7 +272,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
         >
           <button
             aria-label="Remove this record"
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-ydiqbj-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="test-list-row-0-delete"
             data-testid="test-list-row-0-delete"
             id="test-list-row-delete-0"
@@ -335,12 +335,12 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
           class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-n9w13b-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1c9bxr1-MuiTypography-root"
           >
             A. Smith
           </p>
           <span
-            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-18bwmlt-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1eeip7f-MuiTypography-root"
           >
             First  listed contributor
           </span>
@@ -358,7 +358,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
         >
           <button
             aria-label="Remove this record"
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-ydiqbj-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="test-list-row-0-delete"
             data-testid="test-list-row-0-delete"
             id="test-list-row-delete-0"
@@ -421,12 +421,12 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
           class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-n9w13b-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1c9bxr1-MuiTypography-root"
           >
             J. Smith
           </p>
           <span
-            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-18bwmlt-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1eeip7f-MuiTypography-root"
           >
             First  listed contributor
           </span>
@@ -441,12 +441,12 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
           class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-n9w13b-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1c9bxr1-MuiTypography-root"
           >
             Professor J Researcher
           </p>
           <span
-            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-18bwmlt-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1eeip7f-MuiTypography-root"
           >
             The University of Queensland (uqresearcher - 410)
           </span>
@@ -464,7 +464,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
         >
           <button
             aria-label="Move record up the order"
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-ydiqbj-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="test-list-row-0-move-up"
             data-testid="test-list-row-0-move-up"
             id="test-list-row-move-up-0"
@@ -491,7 +491,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
         >
           <button
             aria-label="Move record down the order"
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-ydiqbj-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="test-list-row-0-move-down"
             data-testid="test-list-row-0-move-down"
             id="test-list-row-move-down-0"
@@ -518,7 +518,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
         >
           <button
             aria-label="Remove this record"
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-ydiqbj-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="test-list-row-0-delete"
             data-testid="test-list-row-0-delete"
             id="test-list-row-delete-0"
@@ -581,12 +581,12 @@ exports[`Component ContributorRow a row with index and contributor with author d
           class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iecvfn-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1p1mbj8-MuiTypography-root"
           >
             J. Smith
           </p>
           <span
-            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-u25or3-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-zd7gfh-MuiTypography-root"
           >
             First  listed contributor
           </span>
@@ -604,7 +604,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
         >
           <button
             aria-label="Remove this record"
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-ydiqbj-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="test-list-row-0-delete"
             data-testid="test-list-row-0-delete"
             id="test-list-row-delete-0"
@@ -667,12 +667,12 @@ exports[`Component ContributorRow a row with index and contributor with author d
           class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iecvfn-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1p1mbj8-MuiTypography-root"
           >
             J. Smith
           </p>
           <span
-            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-u25or3-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-zd7gfh-MuiTypography-root"
           >
             First  listed contributor
           </span>
@@ -690,7 +690,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
         >
           <button
             aria-label="Remove this record"
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-ydiqbj-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="test-list-row-0-delete"
             data-testid="test-list-row-0-delete"
             id="test-list-row-delete-0"
@@ -753,12 +753,12 @@ exports[`Component ContributorRow a row with index and contributor with author d
           class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-n9w13b-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1c9bxr1-MuiTypography-root"
           >
             J. Smith
           </p>
           <span
-            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-18bwmlt-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1eeip7f-MuiTypography-root"
           >
             First  listed contributor
           </span>
@@ -773,12 +773,12 @@ exports[`Component ContributorRow a row with index and contributor with author d
           class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-n9w13b-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1c9bxr1-MuiTypography-root"
           >
             Professor J Researcher
           </p>
           <span
-            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-18bwmlt-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1eeip7f-MuiTypography-root"
           >
             The University of Queensland (uqresearcher - 410)
           </span>
@@ -796,7 +796,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
         >
           <button
             aria-label="Remove this record"
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-ydiqbj-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="test-list-row-0-delete"
             data-testid="test-list-row-0-delete"
             id="test-list-row-delete-0"
@@ -859,12 +859,12 @@ exports[`Component ContributorRow a row with index and creator with creator role
           class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iecvfn-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1p1mbj8-MuiTypography-root"
           >
             J. Smith
           </p>
           <span
-            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-u25or3-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-zd7gfh-MuiTypography-root"
           >
             First  listed contributor
           </span>
@@ -879,7 +879,7 @@ exports[`Component ContributorRow a row with index and creator with creator role
           class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iecvfn-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1p1mbj8-MuiTypography-root"
           >
             Investigator
           </p>
@@ -897,7 +897,7 @@ exports[`Component ContributorRow a row with index and creator with creator role
         >
           <button
             aria-label="Remove this record"
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-ydiqbj-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="test-list-row-0-delete"
             data-testid="test-list-row-0-delete"
             id="test-list-row-delete-0"
@@ -960,12 +960,12 @@ exports[`Component ContributorRow a row with index and creator with creator role
           class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iecvfn-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1p1mbj8-MuiTypography-root"
           >
             J. Smith
           </p>
           <span
-            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-u25or3-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-zd7gfh-MuiTypography-root"
           >
             First  listed contributor
           </span>
@@ -980,7 +980,7 @@ exports[`Component ContributorRow a row with index and creator with creator role
           class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iecvfn-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1p1mbj8-MuiTypography-root"
           >
             Investigator
           </p>
@@ -998,7 +998,7 @@ exports[`Component ContributorRow a row with index and creator with creator role
         >
           <button
             aria-label="Remove this record"
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-ydiqbj-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="test-list-row-0-delete"
             data-testid="test-list-row-0-delete"
             id="test-list-row-delete-0"
@@ -1061,12 +1061,12 @@ exports[`Component ContributorRow should handle edits 1`] = `
           class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-n9w13b-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1c9bxr1-MuiTypography-root"
           >
             A. Smith
           </p>
           <span
-            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-18bwmlt-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1eeip7f-MuiTypography-root"
           >
             Third  listed contributor
           </span>
@@ -1084,7 +1084,7 @@ exports[`Component ContributorRow should handle edits 1`] = `
         >
           <button
             aria-label="Edit this record"
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-ydiqbj-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="test-list-row-2-edit"
             data-testid="test-list-row-2-edit"
             id="test-list-row-edit-2"
@@ -1111,7 +1111,7 @@ exports[`Component ContributorRow should handle edits 1`] = `
         >
           <button
             aria-label="Remove this record"
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-ydiqbj-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="test-list-row-2-delete"
             data-testid="test-list-row-2-delete"
             id="test-list-row-delete-2"
@@ -1180,7 +1180,7 @@ exports[`Component ContributorRow should render a row with a disabled contributo
           class="MuiListItemText-root css-cfq8qh-MuiListItemText-root"
         >
           <span
-            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-18bwmlt-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1eeip7f-MuiTypography-root"
           >
             First  listed contributor
           </span>
@@ -1198,7 +1198,7 @@ exports[`Component ContributorRow should render a row with a disabled contributo
         >
           <button
             aria-label="Remove this record"
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-ydiqbj-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="test-list-row-0-delete"
             data-testid="test-list-row-0-delete"
             id="test-list-row-delete-0"
@@ -1228,7 +1228,7 @@ exports[`Component ContributorRow should render contributor row linked class for
 <div>
   <li
     aria-label="Select this record (Test) to assign it to you"
-    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-1fm2ijt-MuiListItem-root"
+    class="MuiListItem-root MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-ke7me-MuiListItem-root"
     data-testid="test-list-row-0"
     id="test-list-row-0"
     tabindex="0"
@@ -1262,12 +1262,12 @@ exports[`Component ContributorRow should render contributor row linked class for
           class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-n9w13b-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1c9bxr1-MuiTypography-root"
           >
             Test
           </p>
           <span
-            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-18bwmlt-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1eeip7f-MuiTypography-root"
           >
             First  listed contributor
           </span>
@@ -1285,7 +1285,7 @@ exports[`Component ContributorRow should render contributor row linked class for
         >
           <button
             aria-label="Edit this record"
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-ydiqbj-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="test-list-row-0-edit"
             data-testid="test-list-row-0-edit"
             id="test-list-row-edit-0"
@@ -1312,7 +1312,7 @@ exports[`Component ContributorRow should render contributor row linked class for
         >
           <button
             aria-label="Remove this record"
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-ydiqbj-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="test-list-row-0-delete"
             data-testid="test-list-row-0-delete"
             id="test-list-row-delete-0"
@@ -1375,12 +1375,12 @@ exports[`Component ContributorRow should render row as required 1`] = `
           class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-n9w13b-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1c9bxr1-MuiTypography-root"
           >
             Test
           </p>
           <span
-            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-18bwmlt-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1eeip7f-MuiTypography-root"
           >
             First  listed contributor
           </span>
@@ -1398,7 +1398,7 @@ exports[`Component ContributorRow should render row as required 1`] = `
         >
           <button
             aria-label="Remove this record"
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-ydiqbj-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="test-list-row-0-delete"
             data-testid="test-list-row-0-delete"
             id="test-list-row-delete-0"
@@ -1461,12 +1461,12 @@ exports[`Component ContributorRow should render with default props 1`] = `
           class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-n9w13b-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1c9bxr1-MuiTypography-root"
           >
             A. Smith
           </p>
           <span
-            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-18bwmlt-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1eeip7f-MuiTypography-root"
           >
             First  listed contributor
           </span>
@@ -1484,7 +1484,7 @@ exports[`Component ContributorRow should render with default props 1`] = `
         >
           <button
             aria-label="Remove this record"
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-ydiqbj-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="test-list-row-0-delete"
             data-testid="test-list-row-0-delete"
             id="test-list-row-delete-0"
@@ -1547,12 +1547,12 @@ exports[`Component ContributorRow should render with missing aria label if selec
           class="MuiListItemText-root MuiListItemText-multiline css-14ln1j6-MuiListItemText-root"
         >
           <p
-            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-n9w13b-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1c9bxr1-MuiTypography-root"
           >
             A. Smith
           </p>
           <span
-            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-18bwmlt-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1eeip7f-MuiTypography-root"
           >
             First undefined
           </span>
@@ -1568,7 +1568,7 @@ exports[`Component ContributorRow should render with missing aria label if selec
           data-mui-internal-clone-element="true"
         >
           <button
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-ydiqbj-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="test-list-row-0-delete"
             data-testid="test-list-row-0-delete"
             id="test-list-row-delete-0"

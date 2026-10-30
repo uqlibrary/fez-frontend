@@ -4,7 +4,7 @@ exports[`Component FileUploadRowStatus should render circular progress if upload
 <div>
   <span
     aria-valuenow="50"
-    class="MuiCircularProgress-root MuiCircularProgress-determinate MuiCircularProgress-colorPrimary css-p69bgp-MuiCircularProgress-root"
+    class="MuiCircularProgress-root MuiCircularProgress-determinate MuiCircularProgress-colorPrimary css-1w61st7-MuiCircularProgress-root"
     role="progressbar"
     style="width: 20px; height: 20px; transform: rotate(-90deg);"
   >
@@ -25,7 +25,7 @@ exports[`Component FileUploadRowStatus should render circular progress if upload
   </span>
   <span
     aria-label="50%"
-    class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
+    class="MuiTypography-root MuiTypography-caption css-hodw82-MuiTypography-root"
   >
     50%
   </span>
@@ -40,7 +40,7 @@ exports[`Component FileUploadRowStatus should render default view 1`] = `
     data-mui-internal-clone-element="true"
   >
     <button
-      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-ydiqbj-MuiButtonBase-root-MuiIconButton-root"
       data-analyticsid="undefined-delete"
       data-testid="undefined-delete"
       tabindex="0"
@@ -70,7 +70,7 @@ exports[`Component FileUploadRowStatus should render disabled view 1`] = `
     data-mui-internal-clone-element="true"
   >
     <button
-      class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+      class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-ydiqbj-MuiButtonBase-root-MuiIconButton-root"
       data-analyticsid="undefined-delete"
       data-testid="undefined-delete"
       disabled=""
@@ -96,7 +96,7 @@ exports[`Component FileUploadRowStatus should render disabled view 1`] = `
 exports[`Component FileUploadRowStatus should render done icon if upload is finished 1`] = `
 <div>
   <button
-    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-ydiqbj-MuiButtonBase-root-MuiIconButton-root"
     tabindex="0"
     type="button"
   >
@@ -118,7 +118,7 @@ exports[`Component FileUploadRowStatus should render done icon if upload is fini
 exports[`Component FileUploadRowStatus should render for edge browser if file is being uploaded but no progress data 1`] = `
 <div>
   <span
-    class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-1jjkwrz-MuiCircularProgress-root"
+    class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-75v4vq-MuiCircularProgress-root"
     role="progressbar"
     style="width: 20px; height: 20px;"
   >
@@ -138,7 +138,7 @@ exports[`Component FileUploadRowStatus should render for edge browser if file is
   </span>
   <span
     aria-label="Uploading..."
-    class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
+    class="MuiTypography-root MuiTypography-caption css-hodw82-MuiTypography-root"
   >
     Uploading...
   </span>
@@ -153,7 +153,7 @@ exports[`Component FileUploadRowStatus should render if file uploaded successful
     data-mui-internal-clone-element="true"
   >
     <button
-      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-ydiqbj-MuiButtonBase-root-MuiIconButton-root"
       data-analyticsid="undefined-delete"
       data-testid="undefined-delete"
       tabindex="0"

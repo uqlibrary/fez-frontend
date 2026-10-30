@@ -9,7 +9,7 @@ exports[`Component PossiblyMyRecords renders active filters 1`] = `
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-r5u0km-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-1q6yj2m-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -36,13 +36,13 @@ exports[`Component PossiblyMyRecords renders active filters 1`] = `
             style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
           >
             <div
-              class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
+              class="MuiCardHeader-root css-1q4c87n-MuiCardHeader-root"
             >
               <div
                 class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-186qltm-MuiTypography-root"
                   data-testid="standard-card-no-matching-works-found-header"
                   id="standard-card-no-matching-works-found-header"
                 >
@@ -74,7 +74,7 @@ exports[`Component PossiblyMyRecords renders active filters 1`] = `
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1yois81-MuiGrid-root"
             >
               <div
-                class="MuiTypography-root MuiTypography-h6 StandardRighthandCard-title css-15ej3kz-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h6 StandardRighthandCard-title css-1el68xc-MuiTypography-root"
               >
                 Refine results
               </div>
@@ -112,7 +112,7 @@ exports[`Component PossiblyMyRecords renders alert when the hide pub api fails 1
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-r5u0km-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-1q6yj2m-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -131,7 +131,7 @@ exports[`Component PossiblyMyRecords renders alert when the hide pub api fails 1
         style="margin-top: 5px;"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-qpkc91-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-tpfpyf-MuiGrid-root"
           data-analyticsid="alert-error"
           data-testid="alert-error"
           id="alert-error"
@@ -187,13 +187,13 @@ exports[`Component PossiblyMyRecords renders alert when the hide pub api fails 1
             style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
           >
             <div
-              class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
+              class="MuiCardHeader-root css-1q4c87n-MuiCardHeader-root"
             >
               <div
                 class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-186qltm-MuiTypography-root"
                   data-testid="standard-card-no-matching-works-found-header"
                   id="standard-card-no-matching-works-found-header"
                 >
@@ -230,7 +230,7 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-r5u0km-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-1q6yj2m-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -270,7 +270,7 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1ynczkt-MuiGrid-root"
               >
                 <p
-                  class="MuiTypography-root MuiTypography-body1 css-158z39i-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-body1 css-n8yw9v-MuiTypography-root"
                 >
                   3 out of 5 potential match(es) displayed. Select any item to claim it as your work.
                 </p>
@@ -309,18 +309,19 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                                 style="min-width: 1px;"
                               >
                                 <h6
-                                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
+                                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ck53x-MuiTypography-root"
                                 >
                                   <a
                                     data-discover="true"
                                     href="/view/UQ:1"
+                                    tabindex="0"
                                   >
                                     1
                                   </a>
                                 </h6>
                               </div>
                               <div
-                                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
+                                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-15rindd-MuiGrid-root"
                               >
                                 <div>
                                   Citation display not available for 
@@ -343,7 +344,7 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                                       >
                                         <a
                                           aria-label="Full citation in Google scholar will open in a new window"
-                                          class="googleCitationCount css-1h1gyme"
+                                          class="googleCitationCount css-1lzpyxx"
                                           data-analyticsid="google-citation-count-link"
                                           data-testid="google-citation-count-link"
                                           href="https://scholar.google.com/scholar?q=intitle:1"
@@ -382,7 +383,7 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
                           >
                             <button
-                              class="MuiButtonBase-root MuiButton-root UQ1 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root UQ1 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder0 css-bsq87r-MuiButtonBase-root-MuiButton-root"
+                              class="MuiButtonBase-root MuiButton-root UQ1 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root UQ1 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder0 css-x152mb-MuiButtonBase-root-MuiButton-root"
                               data-analyticsid="publication-action-UQ1-primary"
                               data-testid="publication-action-UQ1-primary"
                               tabindex="0"
@@ -395,7 +396,7 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
                           >
                             <button
-                              class="MuiButtonBase-root MuiButton-root UQ1 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root UQ1 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder1 css-1wuwh5x-MuiButtonBase-root-MuiButton-root"
+                              class="MuiButtonBase-root MuiButton-root UQ1 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root UQ1 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder1 css-16ovmh1-MuiButtonBase-root-MuiButton-root"
                               data-testid="publication-action-UQ1-secondary"
                               tabindex="0"
                               type="button"
@@ -431,18 +432,19 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                                 style="min-width: 1px;"
                               >
                                 <h6
-                                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
+                                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ck53x-MuiTypography-root"
                                 >
                                   <a
                                     data-discover="true"
                                     href="/view/UQ:2"
+                                    tabindex="0"
                                   >
                                     2
                                   </a>
                                 </h6>
                               </div>
                               <div
-                                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
+                                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-15rindd-MuiGrid-root"
                               >
                                 <div>
                                   Citation display not available for 
@@ -465,7 +467,7 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                                       >
                                         <a
                                           aria-label="Full citation in Google scholar will open in a new window"
-                                          class="googleCitationCount css-1h1gyme"
+                                          class="googleCitationCount css-1lzpyxx"
                                           data-analyticsid="google-citation-count-link"
                                           data-testid="google-citation-count-link"
                                           href="https://scholar.google.com/scholar?q=intitle:2"
@@ -504,7 +506,7 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
                           >
                             <button
-                              class="MuiButtonBase-root MuiButton-root UQ2 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root UQ2 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder0 css-bsq87r-MuiButtonBase-root-MuiButton-root"
+                              class="MuiButtonBase-root MuiButton-root UQ2 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root UQ2 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder0 css-x152mb-MuiButtonBase-root-MuiButton-root"
                               data-analyticsid="publication-action-UQ2-primary"
                               data-testid="publication-action-UQ2-primary"
                               tabindex="0"
@@ -517,7 +519,7 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
                           >
                             <button
-                              class="MuiButtonBase-root MuiButton-root UQ2 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root UQ2 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder1 css-1wuwh5x-MuiButtonBase-root-MuiButton-root"
+                              class="MuiButtonBase-root MuiButton-root UQ2 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root UQ2 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder1 css-16ovmh1-MuiButtonBase-root-MuiButton-root"
                               data-testid="publication-action-UQ2-secondary"
                               tabindex="0"
                               type="button"
@@ -553,18 +555,19 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                                 style="min-width: 1px;"
                               >
                                 <h6
-                                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ydc770-MuiTypography-root"
+                                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-1ck53x-MuiTypography-root"
                                 >
                                   <a
                                     data-discover="true"
                                     href="/view/UQ:3"
+                                    tabindex="0"
                                   >
                                     3
                                   </a>
                                 </h6>
                               </div>
                               <div
-                                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-70m0da-MuiGrid-root"
+                                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-15rindd-MuiGrid-root"
                               >
                                 <div>
                                   Citation display not available for 
@@ -587,7 +590,7 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                                       >
                                         <a
                                           aria-label="Full citation in Google scholar will open in a new window"
-                                          class="googleCitationCount css-1h1gyme"
+                                          class="googleCitationCount css-1lzpyxx"
                                           data-analyticsid="google-citation-count-link"
                                           data-testid="google-citation-count-link"
                                           href="https://scholar.google.com/scholar?q=intitle:3"
@@ -626,7 +629,7 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
                           >
                             <button
-                              class="MuiButtonBase-root MuiButton-root UQ3 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root UQ3 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder0 css-bsq87r-MuiButtonBase-root-MuiButton-root"
+                              class="MuiButtonBase-root MuiButton-root UQ3 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root UQ3 MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder0 css-x152mb-MuiButtonBase-root-MuiButton-root"
                               data-analyticsid="publication-action-UQ3-primary"
                               data-testid="publication-action-UQ3-primary"
                               tabindex="0"
@@ -639,7 +642,7 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
                           >
                             <button
-                              class="MuiButtonBase-root MuiButton-root UQ3 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root UQ3 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder1 css-1wuwh5x-MuiButtonBase-root-MuiButton-root"
+                              class="MuiButtonBase-root MuiButton-root UQ3 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root UQ3 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth publicationAction buttonOrder1 css-16ovmh1-MuiButtonBase-root-MuiButton-root"
                               data-testid="publication-action-UQ3-secondary"
                               tabindex="0"
                               type="button"
@@ -669,7 +672,7 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1yois81-MuiGrid-root"
             >
               <div
-                class="MuiTypography-root MuiTypography-h6 StandardRighthandCard-title css-15ej3kz-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-h6 StandardRighthandCard-title css-1el68xc-MuiTypography-root"
               >
                 Refine results
               </div>
@@ -697,7 +700,7 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                   >
                     <div
                       aria-expanded="false"
-                      class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-dense MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-dense MuiListItemButton-gutters css-jscz35-MuiButtonBase-root-MuiListItemButton-root"
+                      class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-dense MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-dense MuiListItemButton-gutters css-t27u1e-MuiButtonBase-root-MuiListItemButton-root"
                       data-testid="clickable-facet-category-display-type"
                       id="clickable-facet-category-display-type"
                       role="button"
@@ -707,7 +710,7 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                         class="MuiListItemText-root MuiListItemText-dense css-cfq8qh-MuiListItemText-root"
                       >
                         <p
-                          class="MuiTypography-root MuiTypography-body2 css-187wtja-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-body2 css-494bbu-MuiTypography-root"
                           data-testid="facet-category-display-type"
                           id="facet-category-display-type"
                         >
@@ -733,7 +736,7 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                   >
                     <div
                       aria-expanded="false"
-                      class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-dense MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-dense MuiListItemButton-gutters css-jscz35-MuiButtonBase-root-MuiListItemButton-root"
+                      class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-dense MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-dense MuiListItemButton-gutters css-t27u1e-MuiButtonBase-root-MuiListItemButton-root"
                       data-testid="clickable-facet-category-keywords"
                       id="clickable-facet-category-keywords"
                       role="button"
@@ -743,7 +746,7 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                         class="MuiListItemText-root MuiListItemText-dense css-cfq8qh-MuiListItemText-root"
                       >
                         <p
-                          class="MuiTypography-root MuiTypography-body2 css-187wtja-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-body2 css-494bbu-MuiTypography-root"
                           data-testid="facet-category-keywords"
                           id="facet-category-keywords"
                         >
@@ -769,7 +772,7 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                   >
                     <div
                       aria-expanded="false"
-                      class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-dense MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-dense MuiListItemButton-gutters css-jscz35-MuiButtonBase-root-MuiListItemButton-root"
+                      class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-dense MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-dense MuiListItemButton-gutters css-t27u1e-MuiButtonBase-root-MuiListItemButton-root"
                       data-testid="clickable-facet-category-date-range"
                       id="clickable-facet-category-date-range"
                       role="button"
@@ -779,7 +782,7 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                         class="MuiListItemText-root MuiListItemText-dense css-cfq8qh-MuiListItemText-root"
                       >
                         <p
-                          class="MuiTypography-root MuiTypography-body2 css-187wtja-MuiTypography-root"
+                          class="MuiTypography-root MuiTypography-body2 css-494bbu-MuiTypography-root"
                           data-testid="facet-category-date-range"
                           id="facet-category-date-range"
                         >
@@ -820,7 +823,7 @@ exports[`Component PossiblyMyRecords renders loading component while loading pub
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-r5u0km-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-1q6yj2m-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -858,7 +861,7 @@ exports[`Component PossiblyMyRecords renders loading component while loading pub
               >
                 <span
                   aria-label="Loading"
-                  class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-1jjkwrz-MuiCircularProgress-root"
+                  class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-75v4vq-MuiCircularProgress-root"
                   role="progressbar"
                   style="width: 18px; height: 18px;"
                 >
@@ -882,7 +885,7 @@ exports[`Component PossiblyMyRecords renders loading component while loading pub
                 style="text-align: center;"
               >
                 <span
-                  class="MuiTypography-root MuiTypography-h5 css-18sdkeq-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 css-c56spg-MuiTypography-root"
                   style="font-size: 1.33rem;"
                 >
                   Searching for possibly your works
@@ -915,7 +918,7 @@ exports[`Component PossiblyMyRecords renders loading screen while loading public
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-r5u0km-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-1q6yj2m-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -953,7 +956,7 @@ exports[`Component PossiblyMyRecords renders loading screen while loading public
               >
                 <span
                   aria-label="Loading"
-                  class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-1jjkwrz-MuiCircularProgress-root"
+                  class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-75v4vq-MuiCircularProgress-root"
                   role="progressbar"
                   style="width: 18px; height: 18px;"
                 >
@@ -977,7 +980,7 @@ exports[`Component PossiblyMyRecords renders loading screen while loading public
                 style="text-align: center;"
               >
                 <span
-                  class="MuiTypography-root MuiTypography-h5 css-18sdkeq-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 css-c56spg-MuiTypography-root"
                   style="font-size: 1.33rem;"
                 >
                   Searching for possibly your works
@@ -1010,7 +1013,7 @@ exports[`Component PossiblyMyRecords renders no results 1`] = `
       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root MuiTypography-body1 css-r5u0km-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body1 css-1q6yj2m-MuiTypography-root"
         data-analyticsid="page-title"
         data-testid="page-title"
         id="page-title"
@@ -1037,13 +1040,13 @@ exports[`Component PossiblyMyRecords renders no results 1`] = `
             style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
           >
             <div
-              class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
+              class="MuiCardHeader-root css-1q4c87n-MuiCardHeader-root"
             >
               <div
                 class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-186qltm-MuiTypography-root"
                   data-testid="standard-card-no-matching-works-found-header"
                   id="standard-card-no-matching-works-found-header"
                 >

@@ -32,7 +32,7 @@ exports[`ContentLoader snapshots tests renders loader 1`] = `
               >
                 <span
                   aria-label="Loading"
-                  class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-1jjkwrz-MuiCircularProgress-root"
+                  class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-75v4vq-MuiCircularProgress-root"
                   role="progressbar"
                   style="width: 18px; height: 18px;"
                 >
@@ -56,7 +56,7 @@ exports[`ContentLoader snapshots tests renders loader 1`] = `
                 style="text-align: center;"
               >
                 <span
-                  class="MuiTypography-root MuiTypography-h5 css-18sdkeq-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h5 css-c56spg-MuiTypography-root"
                   style="font-size: 1.33rem;"
                 >
                   Waiting to load...

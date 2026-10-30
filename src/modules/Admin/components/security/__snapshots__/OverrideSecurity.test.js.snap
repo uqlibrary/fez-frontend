@@ -6,7 +6,7 @@ exports[`OverrideSecurity component should render properly 1`] = `
     class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-19opgx6-MuiFormControlLabel-root"
   >
     <span
-      class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1cql8xn-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+      class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-mdqx3b-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
     >
       <input
         class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
@@ -14,6 +14,7 @@ exports[`OverrideSecurity component should render properly 1`] = `
         data-indeterminate="false"
         data-testid="test-input"
         id="test-input"
+        tabindex="0"
         type="checkbox"
       />
       <svg
@@ -29,7 +30,7 @@ exports[`OverrideSecurity component should render properly 1`] = `
       </svg>
     </span>
     <span
-      class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-158z39i-MuiTypography-root"
+      class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-n8yw9v-MuiTypography-root"
     >
       test
     </span>
