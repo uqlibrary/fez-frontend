@@ -17,7 +17,7 @@ const deployment = {
         // reusablejs: 'https://assets.library.uq.edu.au/reusable-webcomponents/uq-lib-reusable.min.js',
         // reusablejs: 'https://assets.library.uq.edu.au/reusable-webcomponents-development/[INSERT BRANCH NAME]/uq-lib-reusable.min.js', // dev
         reusablejs:
-            'https://assets.library.uq.edu.au/reusable-webcomponents-development/feature-leadegroot/uq-lib-reusable.min.js', // dev
+            'https://assets.library.uq.edu.au/reusable-webcomponents-development/feature-leadegroot-B/uq-lib-reusable.min.js', // dev
     },
     staging: {
         url: () => 'https://fez-staging.library.uq.edu.au/',
