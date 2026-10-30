@@ -441,10 +441,12 @@ exports[`Application component Should display mobile correctly 1`] = `
       </button>
       <div
         aria-label="eSpace alerts"
+        id="espace-alerts-area"
         role="region"
         style="padding-bottom: 24px;"
       >
         <alert-list
+          id="alert-list"
           system="espace"
         />
       </div>
@@ -1022,10 +1024,12 @@ exports[`Application component should render alert if user is not fez author 1`]
       </button>
       <div
         aria-label="eSpace alerts"
+        id="espace-alerts-area"
         role="region"
         style="padding-bottom: 24px;"
       >
         <alert-list
+          id="alert-list"
           system="espace"
         />
       </div>
@@ -1590,10 +1594,12 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
       </button>
       <div
         aria-label="eSpace alerts"
+        id="espace-alerts-area"
         role="region"
         style="padding-bottom: 24px;"
       >
         <alert-list
+          id="alert-list"
           system="espace"
         />
       </div>
@@ -2094,10 +2100,12 @@ exports[`Application component should render app for account with fez author wit
       </button>
       <div
         aria-label="eSpace alerts"
+        id="espace-alerts-area"
         role="region"
         style="padding-bottom: 24px;"
       >
         <alert-list
+          id="alert-list"
           system="espace"
         />
       </div>
@@ -2598,10 +2606,12 @@ exports[`Application component should render application with routing for the us
       </button>
       <div
         aria-label="eSpace alerts"
+        id="espace-alerts-area"
         role="region"
         style="padding-bottom: 24px;"
       >
         <alert-list
+          id="alert-list"
           system="espace"
         />
       </div>
@@ -2889,10 +2899,12 @@ exports[`Application component should render for anon user 1`] = `
       </button>
       <div
         aria-label="eSpace alerts"
+        id="espace-alerts-area"
         role="region"
         style="padding-bottom: 24px;"
       >
         <alert-list
+          id="alert-list"
           system="espace"
         />
       </div>
