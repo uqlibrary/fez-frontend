@@ -3,40 +3,40 @@
 exports[`FormViewToggler component should render default view 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-wjsns7-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
     >
       <span
-        class="MuiSwitch-root MuiSwitch-sizeMedium css-rehya9-MuiSwitch-root"
+        class="MuiSwitch-root MuiSwitch-sizeMedium css-MuiSwitch-root"
       >
         <span
           aria-label="Switch to tabbed mode"
-          class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-26sq2m-MuiButtonBase-root-MuiSwitchBase-root-MuiSwitch-switchBase"
+          class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-MuiButtonBase-root-MuiSwitchBase-root-MuiSwitch-switchBase"
           data-mui-internal-clone-element="true"
         >
           <input
-            class="PrivateSwitchBase-input MuiSwitch-input css-12xagqm-MuiSwitchBase-root"
+            class="PrivateSwitchBase-input MuiSwitch-input css-MuiSwitchBase-root"
             role="switch"
             type="checkbox"
             value="tabbed"
           />
           <span
-            class="MuiSwitch-thumb css-17jyosd-MuiSwitch-thumb"
+            class="MuiSwitch-thumb css-MuiSwitch-thumb"
           />
         </span>
         <span
-          class="MuiSwitch-track css-tj8d99-MuiSwitch-track"
+          class="MuiSwitch-track css-MuiSwitch-track"
         />
       </span>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
     >
       <button
         aria-label="Learn about keyboard shortcuts"
-        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1a0ye8w-MuiButtonBase-root-MuiIconButton-root"
+        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-MuiButtonBase-root-MuiIconButton-root"
         data-analyticsid="help-icon"
         data-mui-internal-clone-element="true"
         data-testid="help-icon"
@@ -45,7 +45,7 @@ exports[`FormViewToggler component should render default view 1`] = `
         type="button"
       >
         <svg
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-2y2fa1-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
           data-testid="KeyboardIcon"
           focusable="false"
           role="img"
@@ -67,41 +67,41 @@ exports[`FormViewToggler component should render default view 1`] = `
 exports[`FormViewToggler component should render tooltip for full form 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-wjsns7-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
     >
       <span
-        class="MuiSwitch-root MuiSwitch-sizeMedium css-rehya9-MuiSwitch-root"
+        class="MuiSwitch-root MuiSwitch-sizeMedium css-MuiSwitch-root"
       >
         <span
           aria-label="Switch to full form mode"
-          class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-26sq2m-MuiButtonBase-root-MuiSwitchBase-root-MuiSwitch-switchBase"
+          class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-MuiButtonBase-root-MuiSwitchBase-root-MuiSwitch-switchBase"
           data-mui-internal-clone-element="true"
         >
           <input
             checked=""
-            class="PrivateSwitchBase-input MuiSwitch-input css-12xagqm-MuiSwitchBase-root"
+            class="PrivateSwitchBase-input MuiSwitch-input css-MuiSwitchBase-root"
             role="switch"
             type="checkbox"
             value="tabbed"
           />
           <span
-            class="MuiSwitch-thumb css-17jyosd-MuiSwitch-thumb"
+            class="MuiSwitch-thumb css-MuiSwitch-thumb"
           />
         </span>
         <span
-          class="MuiSwitch-track css-tj8d99-MuiSwitch-track"
+          class="MuiSwitch-track css-MuiSwitch-track"
         />
       </span>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
     >
       <button
         aria-label="Learn about keyboard shortcuts"
-        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1a0ye8w-MuiButtonBase-root-MuiIconButton-root"
+        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-MuiButtonBase-root-MuiIconButton-root"
         data-analyticsid="help-icon"
         data-mui-internal-clone-element="true"
         data-testid="help-icon"
@@ -110,7 +110,7 @@ exports[`FormViewToggler component should render tooltip for full form 1`] = `
         type="button"
       >
         <svg
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-2y2fa1-MuiSvgIcon-root"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
           data-testid="KeyboardIcon"
           focusable="false"
           role="img"

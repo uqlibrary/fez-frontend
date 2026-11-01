@@ -3,14 +3,14 @@
 exports[`LinkInfoTemplate component should render default view 1`] = `
 <div>
   <p
-    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-1iy8pf8-MuiTypography-root"
+    class="MuiTypography-root MuiTypography-body2 MuiTypography-noWrap css-MuiTypography-root"
   >
     <strong>
       Link: 
     </strong>
   </p>
   <span
-    class="MuiTypography-root MuiTypography-caption css-1thv62w-MuiTypography-root"
+    class="MuiTypography-root MuiTypography-caption css-MuiTypography-root"
   >
     <strong>
       Description: 
