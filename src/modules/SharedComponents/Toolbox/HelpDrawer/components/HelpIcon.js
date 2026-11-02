@@ -16,7 +16,7 @@ export const HelpIcon = forwardRef(
             title,
             text,
             buttonLabel,
-            iconSize,
+            iconSize = 'medium',
             style,
             tooltip = 'Click for more information',
             IconComponent = HelpOutlineIcon,

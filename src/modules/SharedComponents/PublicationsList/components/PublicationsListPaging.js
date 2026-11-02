@@ -134,7 +134,6 @@ export class PublicationsListPaging extends Component {
             <Button
                 variant={'text'}
                 key={key}
-                size={'small'}
                 sx={{
                     flex: '1 0 auto',
                     height: '32px',
