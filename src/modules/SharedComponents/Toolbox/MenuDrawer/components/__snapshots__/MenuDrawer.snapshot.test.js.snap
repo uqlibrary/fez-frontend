@@ -8,13 +8,13 @@ exports[`MenuDrawer Snapshot should create component 1`] = `
     aria-hidden="true"
   />
   <div
-    class="MuiDrawer-root MuiDrawer-anchorLeft MuiDrawer-modal MuiModal-root css-46941x-MuiModal-root-MuiDrawer-root"
+    class="MuiDrawer-root MuiDrawer-anchorLeft MuiDrawer-modal MuiModal-root css-MuiModal-root-MuiDrawer-root"
     id="menudrawer"
     role="presentation"
   >
     <div
       aria-hidden="true"
-      class="MuiBackdrop-root MuiModal-backdrop css-4nmryk-MuiBackdrop-root-MuiModal-backdrop"
+      class="MuiBackdrop-root MuiModal-backdrop css-MuiBackdrop-root-MuiModal-backdrop"
       style="opacity: 1; transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;"
     />
     <div
@@ -23,34 +23,34 @@ exports[`MenuDrawer Snapshot should create component 1`] = `
     />
     <div
       aria-modal="true"
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation16 MuiDrawer-paper MuiDrawer-paperAnchorLeft css-cyqh1t-MuiPaper-root-MuiDrawer-paper"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation16 MuiDrawer-paper MuiDrawer-paperAnchorLeft css-MuiPaper-root-MuiDrawer-paper"
       role="dialog"
       style="--Paper-shadow: 0px 8px 10px -5px rgba(0,0,0,0.2),0px 16px 24px 2px rgba(0,0,0,0.14),0px 6px 30px 5px rgba(0,0,0,0.12);"
       tabindex="-1"
     >
       <nav
-        class="MuiList-root MuiList-padding css-slfd0z-MuiList-root"
+        class="MuiList-root MuiList-padding css-MuiList-root"
         id="mainMenu"
         tabindex="-1"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-isl6k7-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-sm-12 css-1hbyh4q-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-sm-12 css-MuiGrid-root"
           />
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 css-1q71y3e-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 css-MuiGrid-root"
           >
             <button
               aria-label="close"
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-yf5boq-MuiButtonBase-root-MuiIconButton-root"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-MuiButtonBase-root-MuiIconButton-root"
               tabindex="0"
               type="button"
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-q9efh0-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
                 data-testid="KeyboardArrowLeftIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -63,25 +63,25 @@ exports[`MenuDrawer Snapshot should create component 1`] = `
           </div>
         </div>
         <li
-          class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-b9nkh6-MuiListItem-root"
+          class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-MuiListItem-root"
         >
           <div
-            class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters menu-item-container css-99gdkh-MuiButtonBase-root-MuiListItemButton-root"
+            class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters menu-item-container css-MuiButtonBase-root-MuiListItemButton-root"
             id="menu-item-0"
             role="button"
             tabindex="0"
           >
             <div
-              class="MuiListItemText-root MuiListItemText-multiline css-27e8jo-MuiListItemText-root"
+              class="MuiListItemText-root MuiListItemText-multiline css-MuiListItemText-root"
               id="menu-itemText-0"
             >
               <span
-                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-158z39i-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-MuiTypography-root"
               >
                 Primary text 0
               </span>
               <p
-                class="MuiTypography-root MuiTypography-body2 MuiListItemText-secondary css-cvkt6l-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 MuiListItemText-secondary css-MuiTypography-root"
               >
                 secondary text 0
               </p>
@@ -89,23 +89,23 @@ exports[`MenuDrawer Snapshot should create component 1`] = `
           </div>
         </li>
         <li
-          class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-b9nkh6-MuiListItem-root"
+          class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-MuiListItem-root"
         >
           <div
-            class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters menu-item-container css-99gdkh-MuiButtonBase-root-MuiListItemButton-root"
+            class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters menu-item-container css-MuiButtonBase-root-MuiListItemButton-root"
             id="menu-item-1"
             role="button"
             tabindex="0"
           >
             <div
-              class="MuiListItemText-root css-1m1ovvh-MuiListItemText-root"
+              class="MuiListItemText-root css-MuiListItemText-root"
               id="menu-itemText-1"
             >
               <span
-                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-158z39i-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-MuiTypography-root"
               >
                 <a
-                  class="noHover css-1maagub"
+                  class="noHover css"
                   data-analyticsid="1-external-link-link"
                   data-testid="1-external-link-link"
                   id="1-external-link-link"
@@ -116,7 +116,7 @@ exports[`MenuDrawer Snapshot should create component 1`] = `
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1rso8a2-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
                     data-testid="OpenInNewIcon"
                     focusable="false"
                     id="1-external-link-link-new-window-icon"
@@ -139,11 +139,11 @@ exports[`MenuDrawer Snapshot should create component 1`] = `
         tabindex="-1"
       />
       <div
-        class="MuiBox-root css-n5zwdn"
+        class="MuiBox-root css"
       >
         CRICOS Provider No: 
         <a
-          class="css-1oqhn84"
+          class="css"
           data-analyticsid="cricos-link"
           data-testid="cricos-link"
           href="http://www.uq.edu.au/about/cricos-link"

@@ -3,10 +3,10 @@
 exports[`Component FileUploadDropzone should render component with default props 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
     >
       <div
         id="FileUploadDropZone"
@@ -25,27 +25,27 @@ exports[`Component FileUploadDropzone should render component with default props
           type="file"
         />
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row FileUploadTermsAndConditions-root css-gogl66-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row FileUploadTermsAndConditions-root css-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-13xb3fr-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body1 css-xgyevo-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 css-MuiTypography-root"
             />
           </div>
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-13xb3fr-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-MuiGrid-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column css-fvr8mz-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column css-MuiGrid-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
               >
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-cyae3y-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
                   data-testid="CloudUploadIcon"
                   focusable="false"
                   viewBox="0 0 24 24"
@@ -56,7 +56,7 @@ exports[`Component FileUploadDropzone should render component with default props
                 </svg>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
               />
             </div>
           </div>
@@ -70,10 +70,10 @@ exports[`Component FileUploadDropzone should render component with default props
 exports[`Component FileUploadDropzone should render disabled component 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
     >
       <div
         id="FileUploadDropZone"
@@ -92,27 +92,27 @@ exports[`Component FileUploadDropzone should render disabled component 1`] = `
           type="file"
         />
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row FileUploadTermsAndConditions-root css-gogl66-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row FileUploadTermsAndConditions-root css-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-13xb3fr-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body1 css-xgyevo-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 css-MuiTypography-root"
             />
           </div>
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-13xb3fr-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-MuiGrid-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column css-fvr8mz-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column css-MuiGrid-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
               >
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-cyae3y-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
                   data-testid="CloudUploadIcon"
                   focusable="false"
                   viewBox="0 0 24 24"
@@ -123,7 +123,7 @@ exports[`Component FileUploadDropzone should render disabled component 1`] = `
                 </svg>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row css-17fpwt7-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
               />
             </div>
           </div>

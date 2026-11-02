@@ -3,23 +3,23 @@
 exports[`LookupForm tests  should render lookup form 1`] = `
 <div>
   <div
-    class="MuiFormControl-root MuiTextField-root css-1xp5r68-MuiFormControl-root-MuiTextField-root"
+    class="MuiFormControl-root MuiTextField-root css-MuiFormControl-root-MuiTextField-root"
   >
     <div
-      class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-46ozfl-MuiInputBase-root-MuiOutlinedInput-root"
+      class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-MuiInputBase-root-MuiOutlinedInput-root"
     >
       <input
         aria-invalid="false"
-        class="MuiInputBase-input MuiOutlinedInput-input css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input"
+        class="MuiInputBase-input MuiOutlinedInput-input css-MuiInputBase-input-MuiOutlinedInput-input"
         id="_r_2_"
         type="text"
       />
       <fieldset
         aria-hidden="true"
-        class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
+        class="MuiOutlinedInput-notchedOutline css-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
       >
         <legend
-          class="css-1nf2c5d-MuiNotchedOutlined-root"
+          class="css-MuiNotchedOutlined-root"
         >
           <span
             aria-hidden="true"

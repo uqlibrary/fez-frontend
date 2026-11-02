@@ -3,20 +3,20 @@
 exports[`ScaleOfSignificanceForm component should render the default view 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-pcl337-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-MuiGrid-root"
     data-testid="rek-significance-form"
   >
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
     >
       <label
-        class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-1gq9gxy-MuiFormControlLabel-root"
+        class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-MuiFormControlLabel-root"
       >
         <span
-          class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-vuhw6e-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
+          class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-MuiButtonBase-root-MuiSwitchBase-root-MuiCheckbox-root"
         >
           <input
-            class="PrivateSwitchBase-input css-12xagqm-MuiSwitchBase-root"
+            class="PrivateSwitchBase-input css-MuiSwitchBase-root"
             data-analyticsid="empty-significance-statement-input"
             data-indeterminate="false"
             data-testid="empty-significance-statement-input"
@@ -25,7 +25,7 @@ exports[`ScaleOfSignificanceForm component should render the default view 1`] = 
           />
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
             data-testid="CheckBoxOutlineBlankIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -36,35 +36,35 @@ exports[`ScaleOfSignificanceForm component should render the default view 1`] = 
           </svg>
         </span>
         <div
-          class="MuiTypography-root MuiTypography-body1 css-voocjn-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body1 css-MuiTypography-root"
           data-testid="empty-significance-statement-label"
           id="empty-significance-statement-label"
         />
       </label>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
       style="flex-grow: 1;"
     >
       <div
-        class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
+        class="MuiFormControl-root MuiFormControl-fullWidth css-MuiFormControl-root"
       >
         <label
-          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-2hy7sk-MuiFormLabel-root-MuiInputLabel-root"
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-MuiFormLabel-root-MuiInputLabel-root"
           data-shrink="false"
           data-testid="rek-significance-label"
           id="rek-significance-label"
         >
           <span
             aria-hidden="true"
-            class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-1ljffdk-MuiFormLabel-asterisk"
+            class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-MuiFormLabel-asterisk"
           >
              
             *
           </span>
         </label>
         <div
-          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiSelect-root css-j218zi-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiSelect-root css-MuiInputBase-root-MuiInput-root-MuiSelect-root"
         >
           <div
             aria-expanded="false"
@@ -72,7 +72,7 @@ exports[`ScaleOfSignificanceForm component should render the default view 1`] = 
             aria-invalid="true"
             aria-labelledby="rek-significance-select"
             aria-required="true"
-            class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-unhb03-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+            class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
             data-testid="rek-significance-select"
             id="rek-significance-select"
             role="combobox"
@@ -89,7 +89,7 @@ exports[`ScaleOfSignificanceForm component should render the default view 1`] = 
             aria-hidden="true"
             aria-invalid="true"
             aria-labelledby="rek-significance-label"
-            class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
+            class="MuiSelect-nativeInput css-MuiSelect-nativeInput"
             data-analyticsid="rek-significance-input"
             data-testid="rek-significance-input"
             id="rek-significance-input"
@@ -99,7 +99,7 @@ exports[`ScaleOfSignificanceForm component should render the default view 1`] = 
           />
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-ug7h84-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
             data-testid="ArrowDropDownIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -110,14 +110,14 @@ exports[`ScaleOfSignificanceForm component should render the default view 1`] = 
           </svg>
         </div>
         <p
-          class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-18y2hez-MuiFormHelperText-root"
+          class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-MuiFormHelperText-root"
           data-testid="rek-significance-helper-text"
           id="rek-significance-helper-text"
         />
       </div>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
     >
       <div
         data-analyticsid="rek-creator-contribution-statement-container"
@@ -126,43 +126,43 @@ exports[`ScaleOfSignificanceForm component should render the default view 1`] = 
       >
         <span />
         <div
-          class="MuiTiptap-FieldContainer-root MuiTiptap-RichTextField-root MuiTiptap-RichTextField-outlined MuiTiptap-FieldContainer-outlined MuiBox-root css-v85zkh-MuiTiptap-FieldContainer-root-MuiTiptap-RichTextField-root"
+          class="MuiTiptap-FieldContainer-root MuiTiptap-RichTextField-root MuiTiptap-RichTextField-outlined MuiTiptap-FieldContainer-outlined MuiBox-root css-MuiTiptap-FieldContainer-root-MuiTiptap-RichTextField-root"
         >
           <div
-            class="MuiCollapse-root MuiCollapse-vertical MuiTiptap-MenuBar-root MuiTiptap-RichTextField-menuBar MuiTiptap-MenuBar-nonSticky MuiCollapse-entered css-cz84b8-MuiCollapse-root-MuiTiptap-MenuBar-root"
+            class="MuiCollapse-root MuiCollapse-vertical MuiTiptap-MenuBar-root MuiTiptap-RichTextField-menuBar MuiTiptap-MenuBar-nonSticky MuiCollapse-entered css-MuiCollapse-root-MuiTiptap-MenuBar-root"
             style="min-height: 0px;"
           >
             <div
-              class="MuiCollapse-wrapper MuiCollapse-vertical css-1x6hinx-MuiCollapse-wrapper"
+              class="MuiCollapse-wrapper MuiCollapse-vertical css-MuiCollapse-wrapper"
             >
               <div
-                class="MuiCollapse-wrapperInner MuiCollapse-vertical css-1i4ywhz-MuiCollapse-wrapperInner"
+                class="MuiCollapse-wrapperInner MuiCollapse-vertical css-MuiCollapse-wrapperInner"
               >
                 <div
-                  class="MuiTiptap-MenuBar-content MuiTiptap-RichTextField-menuBarContent css-1go9yyq-MuiTiptap-MenuBar-content"
+                  class="MuiTiptap-MenuBar-content MuiTiptap-RichTextField-menuBarContent css-MuiTiptap-MenuBar-content"
                 >
                   <div
-                    class="MuiTiptap-MenuControlsContainer-root MuiBox-root css-bllqbn-MuiTiptap-MenuControlsContainer-root"
+                    class="MuiTiptap-MenuControlsContainer-root MuiBox-root css-MuiTiptap-MenuControlsContainer-root"
                   >
                     <span
-                      class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                      class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                     >
                       <span
-                        class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                        class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                         data-mui-internal-clone-element="true"
                       >
                         <button
                           aria-description="Ctrl + B"
                           aria-label="Bold"
                           aria-pressed="false"
-                          class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-qofxz1-MuiButtonBase-root-MuiToggleButton-root"
+                          class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                           tabindex="0"
                           type="button"
                           value="Bold"
                         >
                           <svg
                             aria-hidden="true"
-                            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                             data-testid="FormatBoldIcon"
                             focusable="false"
                             viewBox="0 0 24 24"
@@ -175,24 +175,24 @@ exports[`ScaleOfSignificanceForm component should render the default view 1`] = 
                       </span>
                     </span>
                     <span
-                      class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                      class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                     >
                       <span
-                        class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                        class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                         data-mui-internal-clone-element="true"
                       >
                         <button
                           aria-description="Ctrl + I"
                           aria-label="Italic"
                           aria-pressed="false"
-                          class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-qofxz1-MuiButtonBase-root-MuiToggleButton-root"
+                          class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                           tabindex="0"
                           type="button"
                           value="Italic"
                         >
                           <svg
                             aria-hidden="true"
-                            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                             data-testid="FormatItalicIcon"
                             focusable="false"
                             viewBox="0 0 24 24"
@@ -205,24 +205,24 @@ exports[`ScaleOfSignificanceForm component should render the default view 1`] = 
                       </span>
                     </span>
                     <span
-                      class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                      class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                     >
                       <span
-                        class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                        class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                         data-mui-internal-clone-element="true"
                       >
                         <button
                           aria-description="Ctrl + U"
                           aria-label="Underline"
                           aria-pressed="false"
-                          class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-qofxz1-MuiButtonBase-root-MuiToggleButton-root"
+                          class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                           tabindex="0"
                           type="button"
                           value="Underline"
                         >
                           <svg
                             aria-hidden="true"
-                            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                             data-testid="FormatUnderlinedIcon"
                             focusable="false"
                             viewBox="0 0 24 24"
@@ -235,24 +235,24 @@ exports[`ScaleOfSignificanceForm component should render the default view 1`] = 
                       </span>
                     </span>
                     <span
-                      class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                      class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                     >
                       <span
-                        class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                        class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                         data-mui-internal-clone-element="true"
                       >
                         <button
                           aria-description="Ctrl + Shift + S"
                           aria-label="Strikethrough"
                           aria-pressed="false"
-                          class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-qofxz1-MuiButtonBase-root-MuiToggleButton-root"
+                          class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                           tabindex="0"
                           type="button"
                           value="Strikethrough"
                         >
                           <svg
                             aria-hidden="true"
-                            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                             data-testid="StrikethroughSIcon"
                             focusable="false"
                             viewBox="0 0 24 24"
@@ -265,24 +265,24 @@ exports[`ScaleOfSignificanceForm component should render the default view 1`] = 
                       </span>
                     </span>
                     <span
-                      class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                      class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                     >
                       <span
-                        class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                        class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                         data-mui-internal-clone-element="true"
                       >
                         <button
                           aria-description="Ctrl + ,"
                           aria-label="Subscript"
                           aria-pressed="false"
-                          class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-qofxz1-MuiButtonBase-root-MuiToggleButton-root"
+                          class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                           tabindex="0"
                           type="button"
                           value="Subscript"
                         >
                           <svg
                             aria-hidden="true"
-                            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                             data-testid="SubscriptIcon"
                             focusable="false"
                             viewBox="0 0 24 24"
@@ -295,24 +295,24 @@ exports[`ScaleOfSignificanceForm component should render the default view 1`] = 
                       </span>
                     </span>
                     <span
-                      class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                      class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                     >
                       <span
-                        class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                        class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                         data-mui-internal-clone-element="true"
                       >
                         <button
                           aria-description="Ctrl + ."
                           aria-label="Superscript"
                           aria-pressed="false"
-                          class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-qofxz1-MuiButtonBase-root-MuiToggleButton-root"
+                          class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                           tabindex="0"
                           type="button"
                           value="Superscript"
                         >
                           <svg
                             aria-hidden="true"
-                            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                             data-testid="SuperscriptIcon"
                             focusable="false"
                             viewBox="0 0 24 24"
@@ -326,28 +326,28 @@ exports[`ScaleOfSignificanceForm component should render the default view 1`] = 
                     </span>
                     <div
                       aria-orientation="vertical"
-                      class="MuiDivider-root MuiDivider-fullWidth MuiDivider-vertical MuiTiptap-MenuDivider-root css-1l845hu-MuiDivider-root-MuiTiptap-MenuDivider-root"
+                      class="MuiDivider-root MuiDivider-fullWidth MuiDivider-vertical MuiTiptap-MenuDivider-root css-MuiDivider-root-MuiTiptap-MenuDivider-root"
                       role="separator"
                     />
                     <span
-                      class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                      class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                     >
                       <span
-                        class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                        class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                         data-mui-internal-clone-element="true"
                       >
                         <button
                           aria-description="Ctrl + Shift + U"
                           aria-label="Link"
                           aria-pressed="false"
-                          class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-qofxz1-MuiButtonBase-root-MuiToggleButton-root"
+                          class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                           tabindex="0"
                           type="button"
                           value="Link"
                         >
                           <svg
                             aria-hidden="true"
-                            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                             data-testid="LinkIcon"
                             focusable="false"
                             viewBox="0 0 24 24"
@@ -360,24 +360,24 @@ exports[`ScaleOfSignificanceForm component should render the default view 1`] = 
                       </span>
                     </span>
                     <span
-                      class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                      class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                     >
                       <span
-                        class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                        class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                         data-mui-internal-clone-element="true"
                       >
                         <button
                           aria-description="Ctrl + Shift + 7"
                           aria-label="Ordered list"
                           aria-pressed="false"
-                          class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-qofxz1-MuiButtonBase-root-MuiToggleButton-root"
+                          class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                           tabindex="0"
                           type="button"
                           value="Ordered list"
                         >
                           <svg
                             aria-hidden="true"
-                            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                             data-testid="FormatListNumberedIcon"
                             focusable="false"
                             viewBox="0 0 24 24"
@@ -390,24 +390,24 @@ exports[`ScaleOfSignificanceForm component should render the default view 1`] = 
                       </span>
                     </span>
                     <span
-                      class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                      class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                     >
                       <span
-                        class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                        class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                         data-mui-internal-clone-element="true"
                       >
                         <button
                           aria-description="Ctrl + Shift + 8"
                           aria-label="Bulleted list"
                           aria-pressed="false"
-                          class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-qofxz1-MuiButtonBase-root-MuiToggleButton-root"
+                          class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                           tabindex="0"
                           type="button"
                           value="Bulleted list"
                         >
                           <svg
                             aria-hidden="true"
-                            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                             data-testid="FormatListBulletedIcon"
                             focusable="false"
                             viewBox="0 0 24 24"
@@ -421,27 +421,27 @@ exports[`ScaleOfSignificanceForm component should render the default view 1`] = 
                     </span>
                     <div
                       aria-orientation="vertical"
-                      class="MuiDivider-root MuiDivider-fullWidth MuiDivider-vertical MuiTiptap-MenuDivider-root css-1l845hu-MuiDivider-root-MuiTiptap-MenuDivider-root"
+                      class="MuiDivider-root MuiDivider-fullWidth MuiDivider-vertical MuiTiptap-MenuDivider-root css-MuiDivider-root-MuiTiptap-MenuDivider-root"
                       role="separator"
                     />
                     <span
-                      class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                      class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                     >
                       <span
-                        class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                        class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                         data-mui-internal-clone-element="true"
                       >
                         <button
                           aria-label="Change case"
                           aria-pressed="false"
-                          class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-qofxz1-MuiButtonBase-root-MuiToggleButton-root"
+                          class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                           tabindex="0"
                           type="button"
                           value="Change case"
                         >
                           <svg
                             aria-hidden="true"
-                            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                             data-testid="LetterCaseIcon"
                             focusable="false"
                             viewBox="0 0 24 24"
@@ -461,23 +461,23 @@ exports[`ScaleOfSignificanceForm component should render the default view 1`] = 
                       </span>
                     </span>
                     <span
-                      class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                      class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                     >
                       <span
-                        class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                        class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                         data-mui-internal-clone-element="true"
                       >
                         <button
                           aria-label="Remove inline formatting"
                           aria-pressed="false"
-                          class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-qofxz1-MuiButtonBase-root-MuiToggleButton-root"
+                          class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                           tabindex="0"
                           type="button"
                           value="Remove inline formatting"
                         >
                           <svg
                             aria-hidden="true"
-                            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                             data-testid="FormatClearIcon"
                             focusable="false"
                             viewBox="0 0 24 24"
@@ -491,16 +491,16 @@ exports[`ScaleOfSignificanceForm component should render the default view 1`] = 
                     </span>
                     <span>
                       <span
-                        class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                        class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                       >
                         <span
-                          class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                          class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                           data-mui-internal-clone-element="true"
                         >
                           <button
                             aria-label="Insert special character"
                             aria-pressed="false"
-                            class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-qofxz1-MuiButtonBase-root-MuiToggleButton-root"
+                            class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                             tabindex="0"
                             type="button"
                             value="Insert special character"
@@ -516,28 +516,28 @@ exports[`ScaleOfSignificanceForm component should render the default view 1`] = 
                     </span>
                     <div
                       aria-orientation="vertical"
-                      class="MuiDivider-root MuiDivider-fullWidth MuiDivider-vertical MuiTiptap-MenuDivider-root css-1l845hu-MuiDivider-root-MuiTiptap-MenuDivider-root"
+                      class="MuiDivider-root MuiDivider-fullWidth MuiDivider-vertical MuiTiptap-MenuDivider-root css-MuiDivider-root-MuiTiptap-MenuDivider-root"
                       role="separator"
                     />
                     <span
-                      class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                      class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                     >
                       <span
-                        class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                        class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                         data-mui-internal-clone-element="true"
                       >
                         <button
                           aria-description="Ctrl + Z"
                           aria-label="Undo"
                           aria-pressed="false"
-                          class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-qofxz1-MuiButtonBase-root-MuiToggleButton-root"
+                          class="MuiButtonBase-root MuiToggleButton-root MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                           tabindex="0"
                           type="button"
                           value="Undo"
                         >
                           <svg
                             aria-hidden="true"
-                            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                             data-testid="UndoIcon"
                             focusable="false"
                             viewBox="0 0 24 24"
@@ -550,17 +550,17 @@ exports[`ScaleOfSignificanceForm component should render the default view 1`] = 
                       </span>
                     </span>
                     <span
-                      class="MuiTiptap-MenuButton-root css-2rzjok-MuiTiptap-MenuButton-root"
+                      class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                     >
                       <span
-                        class="MuiTiptap-MenuButtonTooltip-contentWrapper css-lnwhtn-MuiTiptap-MenuButtonTooltip-contentWrapper"
+                        class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                         data-mui-internal-clone-element="true"
                       >
                         <button
                           aria-description="Ctrl + Shift + Z"
                           aria-label="Redo"
                           aria-pressed="false"
-                          class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-qofxz1-MuiButtonBase-root-MuiToggleButton-root"
+                          class="MuiButtonBase-root Mui-disabled MuiToggleButton-root Mui-disabled MuiToggleButton-sizeSmall MuiToggleButton-standard css-MuiButtonBase-root-MuiToggleButton-root"
                           disabled=""
                           tabindex="-1"
                           type="button"
@@ -568,7 +568,7 @@ exports[`ScaleOfSignificanceForm component should render the default view 1`] = 
                         >
                           <svg
                             aria-hidden="true"
-                            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-8sb1vr-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
+                            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiTiptap-MenuButton-icon css-MuiSvgIcon-root-MuiTiptap-MenuButton-icon"
                             data-testid="RedoIcon"
                             focusable="false"
                             viewBox="0 0 24 24"
@@ -586,7 +586,7 @@ exports[`ScaleOfSignificanceForm component should render the default view 1`] = 
             </div>
           </div>
           <div
-            class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-1q1o5op-MuiTiptap-RichTextContent-root"
+            class="MuiTiptap-RichTextContent-root MuiTiptap-RichTextField-content MuiTiptap-RichTextContent-editable css-MuiTiptap-RichTextContent-root"
           >
             <div
               class="tiptap ProseMirror"
@@ -605,16 +605,16 @@ exports[`ScaleOfSignificanceForm component should render the default view 1`] = 
           </div>
           <div
             aria-hidden="true"
-            class="MuiTiptap-FieldContainer-notchedOutline css-f0dl5j-MuiTiptap-FieldContainer-notchedOutline"
+            class="MuiTiptap-FieldContainer-notchedOutline css-MuiTiptap-FieldContainer-notchedOutline"
           />
         </div>
       </div>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-9 css-ilteg3-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-9 css-MuiGrid-root"
     >
       <button
-        class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1k9hkw1-MuiButtonBase-root-MuiButton-root"
+        class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-MuiButtonBase-root-MuiButton-root"
         data-analyticsid="rek-significance-add"
         data-testid="rek-significance-add"
         disabled=""
@@ -626,10 +626,10 @@ exports[`ScaleOfSignificanceForm component should render the default view 1`] = 
       </button>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-MuiGrid-root"
     >
       <button
-        class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-1k9hkw1-MuiButtonBase-root-MuiButton-root"
+        class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-MuiButtonBase-root-MuiButton-root"
         data-analyticsid="rek-significance-clear"
         data-testid="rek-significance-clear"
         id="clear-items"

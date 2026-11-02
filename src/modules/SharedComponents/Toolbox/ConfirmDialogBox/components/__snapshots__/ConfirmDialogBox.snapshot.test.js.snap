@@ -5,7 +5,7 @@ exports[`ConfirmDialogBox snapshots tests renders component with customised loca
   aria-hidden="true"
 >
   <span
-    class="MuiBox-root css-0"
+    class="MuiBox-root css"
     data-testid="confirmDialogBox"
   />
 </div>
@@ -16,7 +16,7 @@ exports[`ConfirmDialogBox snapshots tests renders component with yes 1`] = `
   aria-hidden="true"
 >
   <span
-    class="MuiBox-root css-0"
+    class="MuiBox-root css"
     data-testid="confirmDialogBox"
   />
 </div>
@@ -27,7 +27,7 @@ exports[`ConfirmDialogBox snapshots tests renders component with yes/no buttons 
   aria-hidden="true"
 >
   <span
-    class="MuiBox-root css-0"
+    class="MuiBox-root css"
     data-testid="confirmDialogBox"
   />
 </div>
@@ -38,7 +38,7 @@ exports[`ConfirmDialogBox snapshots tests renders component with yes/no/maybe bu
   aria-hidden="true"
 >
   <span
-    class="MuiBox-root css-0"
+    class="MuiBox-root css"
     data-testid="confirmDialogBox"
   />
 </div>

@@ -55,7 +55,19 @@ const AuthorsPublicationsPerYearChart = ({
             y: -10,
             floating: true,
             shadow: false,
+            itemStyle: {
+                fontSize: '12px',
+                fontWeight: 'bold',
+                lineHeight: '16px',
+            },
             labelFormatter,
+            symbolHeight: 12,
+            symbolWidth: 12,
+            itemMarginTop: -6,
+            itemMarginBottom: -6,
+            navigation: {
+                enabled: false,
+            },
         },
         series,
     };
