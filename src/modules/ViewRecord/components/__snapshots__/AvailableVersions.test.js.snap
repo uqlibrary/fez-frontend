@@ -3,22 +3,22 @@
 exports[`Available Versions Component  should render component 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-available-versions"
       id="standard-card-available-versions"
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
+        class="MuiCardHeader-root css-MuiCardHeader-root"
       >
         <div
-          class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
+          class="MuiCardHeader-content css-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
             data-testid="standard-card-available-versions-header"
             id="standard-card-available-versions-header"
           >
@@ -27,17 +27,17 @@ exports[`Available Versions Component  should render component 1`] = `
         </div>
       </div>
       <div
-        class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
+        class="MuiCardContent-root css-MuiCardContent-root"
         data-analyticsid="standard-card-available-versions-content"
         data-testid="standard-card-available-versions-content"
         id="standard-card-available-versions-content"
       >
         <ul
-          class="publicationList MuiBox-root css-dpoqzr"
+          class="publicationList MuiBox-root css"
         >
           <li>
             <p
-              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
               data-testid="rek-isderivationof-current"
             >
               Data collection mock testing record
@@ -48,7 +48,7 @@ exports[`Available Versions Component  should render component 1`] = `
           </li>
           <li>
             <p
-              class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
               data-testid="rek-has-derivations-0"
             >
               <a

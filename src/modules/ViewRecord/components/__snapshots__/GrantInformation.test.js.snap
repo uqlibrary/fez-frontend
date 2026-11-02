@@ -3,22 +3,22 @@
 exports[`Grant Information Component  should not break if grant text is not in the record 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-grant-information"
       id="standard-card-grant-information"
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
+        class="MuiCardHeader-root css-MuiCardHeader-root"
       >
         <div
-          class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
+          class="MuiCardHeader-content css-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
             data-testid="standard-card-grant-information-header"
             id="standard-card-grant-information-header"
           >
@@ -27,32 +27,32 @@ exports[`Grant Information Component  should not break if grant text is not in t
         </div>
       </div>
       <div
-        class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
+        class="MuiCardContent-root css-MuiCardContent-root"
         data-analyticsid="standard-card-grant-information-content"
         data-testid="standard-card-grant-information-content"
         id="standard-card-grant-information-content"
       >
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css"
         >
           <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-MuiGrid-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-1cixae8-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-MuiGrid-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
                 data-testid="rek-grant-label-0"
               >
                 Grant agency
               </p>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-9 css-xjoeqo-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-9 css-MuiGrid-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
               >
                 <span
                   data-testid="rek-grant-agency-0"
@@ -61,33 +61,33 @@ exports[`Grant Information Component  should not break if grant text is not in t
                 </span>
               </p>
               <p
-                class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
                 data-testid="rek-grant-text-0"
               />
             </div>
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css"
         >
           <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-MuiGrid-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-1cixae8-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-MuiGrid-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
                 data-testid="rek-grant-label-1"
               >
                 Grant agency (Grant ID)
               </p>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-9 css-xjoeqo-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-9 css-MuiGrid-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
               >
                 <span
                   data-testid="rek-grant-agency-1"
@@ -99,7 +99,7 @@ exports[`Grant Information Component  should not break if grant text is not in t
                 >
                    (
                   <a
-                    class="css-1oqhn84"
+                    class="css"
                     data-analyticsid="grant-id-f6f28107cd3d2ddff41edc225eae7582-link"
                     data-testid="grant-id-f6f28107cd3d2ddff41edc225eae7582-link"
                     href="https://doi.org/10.1007/s13596-023-00679-133333"
@@ -111,7 +111,7 @@ exports[`Grant Information Component  should not break if grant text is not in t
                   >
                     <svg
                       aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1rso8a2-MuiSvgIcon-root"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
                       data-testid="OpenInNewIcon"
                       focusable="false"
                       id="grant-id-f6f28107cd3d2ddff41edc225eae7582-link-new-window-icon"
@@ -127,33 +127,33 @@ exports[`Grant Information Component  should not break if grant text is not in t
                 </span>
               </p>
               <p
-                class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
                 data-testid="rek-grant-text-1"
               />
             </div>
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css"
         >
           <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-MuiGrid-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-1cixae8-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-MuiGrid-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
                 data-testid="rek-grant-label-2"
               >
                 Grant agency (Grant ID)
               </p>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-9 css-xjoeqo-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-9 css-MuiGrid-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
               >
                 <span
                   data-testid="rek-grant-agency-2"
@@ -169,7 +169,7 @@ exports[`Grant Information Component  should not break if grant text is not in t
                 </span>
               </p>
               <p
-                class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
                 data-testid="rek-grant-text-2"
               />
             </div>
@@ -184,22 +184,22 @@ exports[`Grant Information Component  should not break if grant text is not in t
 exports[`Grant Information Component  should not break if rek_grant_id is not in the search key 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-grant-information"
       id="standard-card-grant-information"
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
+        class="MuiCardHeader-root css-MuiCardHeader-root"
       >
         <div
-          class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
+          class="MuiCardHeader-content css-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
             data-testid="standard-card-grant-information-header"
             id="standard-card-grant-information-header"
           >
@@ -208,39 +208,39 @@ exports[`Grant Information Component  should not break if rek_grant_id is not in
         </div>
       </div>
       <div
-        class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
+        class="MuiCardContent-root css-MuiCardContent-root"
         data-analyticsid="standard-card-grant-information-content"
         data-testid="standard-card-grant-information-content"
         id="standard-card-grant-information-content"
       >
         <p
-          class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-1j44uo8-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-MuiTypography-root"
           data-testid="rek-grant-text"
           id="grantInformation"
         >
           We thank Jonathan Harris for the provision of DHT and David Miller for technical assistance and Kyle Upton for his critical review of the manuscript. Research was funded by the National Breast Cancer Foundation (NBCF: 2007003445 and CG-12-07) of Australia, the Australian Research Council (ARC: DP0985025), the Cancer Council of Queensland (CCQ: 1026095) and The University of Queensland. DHD was supported by a Collaborative Program Grant from the, National Breast Cancer Foundation [NBCF; CG-08-03]. Institute, Integrative Cancer Biology Program U54CA1113001 (KPN). SLE, JDF, AMS and ED are supported by Fellowships from the NBCF [ID# ECF-10-05, ECF-12-04, ECF-12-12 and ECF-13-04 respectively]. FA is supported by Future Fellowship from the Australian Research Council [ID: FT130101417]. JMWG is funding by a Scientific Fellowship from Breast Cancer Now. MJM and JAB are supported by an Australian Postgraduate Award (APA). AS was supported from NBCF program grant. SJC supported by NHMRC fellowship. Funding to pay the Open Access publication charges for this article was provided by The University of Queensland.
         </p>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css"
         >
           <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-MuiGrid-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-1cixae8-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-MuiGrid-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
                 data-testid="rek-grant-label-0"
               >
                 Grant agency
               </p>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-9 css-xjoeqo-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-9 css-MuiGrid-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
               >
                 <span
                   data-testid="rek-grant-agency-0"
@@ -249,33 +249,33 @@ exports[`Grant Information Component  should not break if rek_grant_id is not in
                 </span>
               </p>
               <p
-                class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
                 data-testid="rek-grant-text-0"
               />
             </div>
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css"
         >
           <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-MuiGrid-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-1cixae8-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-MuiGrid-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
                 data-testid="rek-grant-label-1"
               >
                 Grant agency
               </p>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-9 css-xjoeqo-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-9 css-MuiGrid-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
               >
                 <span
                   data-testid="rek-grant-agency-1"
@@ -284,33 +284,33 @@ exports[`Grant Information Component  should not break if rek_grant_id is not in
                 </span>
               </p>
               <p
-                class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
                 data-testid="rek-grant-text-1"
               />
             </div>
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css"
         >
           <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-MuiGrid-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-1cixae8-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-MuiGrid-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
                 data-testid="rek-grant-label-2"
               >
                 Grant agency
               </p>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-9 css-xjoeqo-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-9 css-MuiGrid-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
               >
                 <span
                   data-testid="rek-grant-agency-2"
@@ -319,7 +319,7 @@ exports[`Grant Information Component  should not break if rek_grant_id is not in
                 </span>
               </p>
               <p
-                class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
                 data-testid="rek-grant-text-2"
               />
             </div>
@@ -336,22 +336,22 @@ exports[`Grant Information Component  should not render component with empty pub
 exports[`Grant Information Component  should render component 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-yqiqnf-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
   >
     <div
-      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-a9pv4w-MuiPaper-root-MuiCard-root"
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root StandardCard css-MuiPaper-root-MuiCard-root"
       data-testid="standard-card-grant-information"
       id="standard-card-grant-information"
       style="--Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);"
     >
       <div
-        class="MuiCardHeader-root css-ruvvjn-MuiCardHeader-root"
+        class="MuiCardHeader-root css-MuiCardHeader-root"
       >
         <div
-          class="MuiCardHeader-content css-1jkp9bu-MuiCardHeader-content"
+          class="MuiCardHeader-content css-MuiCardHeader-content"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-17o8zlu-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
             data-testid="standard-card-grant-information-header"
             id="standard-card-grant-information-header"
           >
@@ -360,39 +360,39 @@ exports[`Grant Information Component  should render component 1`] = `
         </div>
       </div>
       <div
-        class="MuiCardContent-root css-1lt5qva-MuiCardContent-root"
+        class="MuiCardContent-root css-MuiCardContent-root"
         data-analyticsid="standard-card-grant-information-content"
         data-testid="standard-card-grant-information-content"
         id="standard-card-grant-information-content"
       >
         <p
-          class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-1j44uo8-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-MuiTypography-root"
           data-testid="rek-grant-text"
           id="grantInformation"
         >
           We thank Jonathan Harris for the provision of DHT and David Miller for technical assistance and Kyle Upton for his critical review of the manuscript. Research was funded by the National Breast Cancer Foundation (NBCF: 2007003445 and CG-12-07) of Australia, the Australian Research Council (ARC: DP0985025), the Cancer Council of Queensland (CCQ: 1026095) and The University of Queensland. DHD was supported by a Collaborative Program Grant from the, National Breast Cancer Foundation [NBCF; CG-08-03]. Institute, Integrative Cancer Biology Program U54CA1113001 (KPN). SLE, JDF, AMS and ED are supported by Fellowships from the NBCF [ID# ECF-10-05, ECF-12-04, ECF-12-12 and ECF-13-04 respectively]. FA is supported by Future Fellowship from the Australian Research Council [ID: FT130101417]. JMWG is funding by a Scientific Fellowship from Breast Cancer Now. MJM and JAB are supported by an Australian Postgraduate Award (APA). AS was supported from NBCF program grant. SJC supported by NHMRC fellowship. Funding to pay the Open Access publication charges for this article was provided by The University of Queensland.
         </p>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css"
         >
           <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-MuiGrid-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-1cixae8-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-MuiGrid-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
                 data-testid="rek-grant-label-0"
               >
                 Grant agency (Grant ID)
               </p>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-9 css-xjoeqo-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-9 css-MuiGrid-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
               >
                 <span
                   data-testid="rek-grant-agency-0"
@@ -408,33 +408,33 @@ exports[`Grant Information Component  should render component 1`] = `
                 </span>
               </p>
               <p
-                class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
                 data-testid="rek-grant-text-0"
               />
             </div>
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css"
         >
           <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-MuiGrid-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-1cixae8-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-MuiGrid-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
                 data-testid="rek-grant-label-1"
               >
                 Grant agency (Grant ID)
               </p>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-9 css-xjoeqo-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-9 css-MuiGrid-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
               >
                 <span
                   data-testid="rek-grant-agency-1"
@@ -446,7 +446,7 @@ exports[`Grant Information Component  should render component 1`] = `
                 >
                    (
                   <a
-                    class="css-1oqhn84"
+                    class="css"
                     data-analyticsid="grant-id-f6f28107cd3d2ddff41edc225eae7582-link"
                     data-testid="grant-id-f6f28107cd3d2ddff41edc225eae7582-link"
                     href="https://doi.org/10.1007/s13596-023-00679-133333"
@@ -458,7 +458,7 @@ exports[`Grant Information Component  should render component 1`] = `
                   >
                     <svg
                       aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1rso8a2-MuiSvgIcon-root"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
                       data-testid="OpenInNewIcon"
                       focusable="false"
                       id="grant-id-f6f28107cd3d2ddff41edc225eae7582-link-new-window-icon"
@@ -474,33 +474,33 @@ exports[`Grant Information Component  should render component 1`] = `
                 </span>
               </p>
               <p
-                class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
                 data-testid="rek-grant-text-1"
               />
             </div>
           </div>
         </div>
         <div
-          class="MuiBox-root css-fvwuew"
+          class="MuiBox-root css"
         >
           <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-8bh1x2-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-MuiGrid-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-1cixae8-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-MuiGrid-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
                 data-testid="rek-grant-label-2"
               >
                 Grant agency (Grant ID)
               </p>
             </div>
             <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-9 css-xjoeqo-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-9 css-MuiGrid-root"
             >
               <p
-                class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
               >
                 <span
                   data-testid="rek-grant-agency-2"
@@ -516,7 +516,7 @@ exports[`Grant Information Component  should render component 1`] = `
                 </span>
               </p>
               <p
-                class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
                 data-testid="rek-grant-text-2"
               />
             </div>

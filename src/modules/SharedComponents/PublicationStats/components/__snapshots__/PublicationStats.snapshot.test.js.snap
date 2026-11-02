@@ -3,210 +3,210 @@
 exports[`PublicationStats component should render 1 for hindex because they round up to 1 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-k1sqlt-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-MuiGrid-root"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-q1u119-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-MuiTypography-root"
       >
         UQ eSpace works
       </p>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-MuiGrid-root"
       style="text-align: center;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-q1u119-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-MuiTypography-root"
       >
         Web of science
       </p>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-MuiGrid-root"
       style="text-align: right;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-q1u119-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-MuiTypography-root"
       >
         Scopus
       </p>
     </div>
   </div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1qffj97-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-MuiGrid-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-MuiGrid-root"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
       >
         Total works
       </p>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-MuiGrid-root"
       style="text-align: center;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
       >
         301
       </p>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-MuiGrid-root"
       style="text-align: right;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
       >
         210
       </p>
     </div>
   </div>
   <hr
-    class="MuiDivider-root MuiDivider-fullWidth css-1jpc804-MuiDivider-root"
+    class="MuiDivider-root MuiDivider-fullWidth css-MuiDivider-root"
   />
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1qffj97-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-MuiGrid-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-MuiGrid-root"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
       >
         Works year range
       </p>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-MuiGrid-root"
       style="text-align: center;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
       >
         1992-2017
       </p>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-MuiGrid-root"
       style="text-align: right;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
       >
         1992-2017
       </p>
     </div>
   </div>
   <hr
-    class="MuiDivider-root MuiDivider-fullWidth css-1jpc804-MuiDivider-root"
+    class="MuiDivider-root MuiDivider-fullWidth css-MuiDivider-root"
   />
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1qffj97-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-MuiGrid-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-MuiGrid-root"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
       >
         h-index
       </p>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-MuiGrid-root"
       style="text-align: center;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
       >
         1
       </p>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-MuiGrid-root"
       style="text-align: right;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
       >
         1
       </p>
     </div>
   </div>
   <hr
-    class="MuiDivider-root MuiDivider-fullWidth css-1jpc804-MuiDivider-root"
+    class="MuiDivider-root MuiDivider-fullWidth css-MuiDivider-root"
   />
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1qffj97-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-MuiGrid-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-MuiGrid-root"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
       >
         Average citation count per work
       </p>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-MuiGrid-root"
       style="text-align: center;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
       >
         24.5
       </p>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-MuiGrid-root"
       style="text-align: right;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
       >
         25.2
       </p>
     </div>
   </div>
   <hr
-    class="MuiDivider-root MuiDivider-fullWidth css-1jpc804-MuiDivider-root"
+    class="MuiDivider-root MuiDivider-fullWidth css-MuiDivider-root"
   />
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1qffj97-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-MuiGrid-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-MuiGrid-root"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
       >
         Total citations
       </p>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-MuiGrid-root"
       style="text-align: center;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
       >
         7374
       </p>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-MuiGrid-root"
       style="text-align: right;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
       >
         5297
       </p>
@@ -218,210 +218,210 @@ exports[`PublicationStats component should render 1 for hindex because they roun
 exports[`PublicationStats component should render N/A for hindex because it is null 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-k1sqlt-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-MuiGrid-root"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-q1u119-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-MuiTypography-root"
       >
         UQ eSpace works
       </p>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-MuiGrid-root"
       style="text-align: center;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-q1u119-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-MuiTypography-root"
       >
         Web of science
       </p>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-MuiGrid-root"
       style="text-align: right;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-q1u119-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-MuiTypography-root"
       >
         Scopus
       </p>
     </div>
   </div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1qffj97-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-MuiGrid-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-MuiGrid-root"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
       >
         Total works
       </p>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-MuiGrid-root"
       style="text-align: center;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
       >
         301
       </p>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-MuiGrid-root"
       style="text-align: right;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
       >
         210
       </p>
     </div>
   </div>
   <hr
-    class="MuiDivider-root MuiDivider-fullWidth css-1jpc804-MuiDivider-root"
+    class="MuiDivider-root MuiDivider-fullWidth css-MuiDivider-root"
   />
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1qffj97-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-MuiGrid-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-MuiGrid-root"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
       >
         Works year range
       </p>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-MuiGrid-root"
       style="text-align: center;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
       >
         1992-2017
       </p>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-MuiGrid-root"
       style="text-align: right;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
       >
         1992-2017
       </p>
     </div>
   </div>
   <hr
-    class="MuiDivider-root MuiDivider-fullWidth css-1jpc804-MuiDivider-root"
+    class="MuiDivider-root MuiDivider-fullWidth css-MuiDivider-root"
   />
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1qffj97-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-MuiGrid-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-MuiGrid-root"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
       >
         h-index
       </p>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-MuiGrid-root"
       style="text-align: center;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
       >
         N/A
       </p>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-MuiGrid-root"
       style="text-align: right;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
       >
         N/A
       </p>
     </div>
   </div>
   <hr
-    class="MuiDivider-root MuiDivider-fullWidth css-1jpc804-MuiDivider-root"
+    class="MuiDivider-root MuiDivider-fullWidth css-MuiDivider-root"
   />
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1qffj97-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-MuiGrid-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-MuiGrid-root"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
       >
         Average citation count per work
       </p>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-MuiGrid-root"
       style="text-align: center;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
       >
         24.5
       </p>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-MuiGrid-root"
       style="text-align: right;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
       >
         25.2
       </p>
     </div>
   </div>
   <hr
-    class="MuiDivider-root MuiDivider-fullWidth css-1jpc804-MuiDivider-root"
+    class="MuiDivider-root MuiDivider-fullWidth css-MuiDivider-root"
   />
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1qffj97-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-MuiGrid-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-MuiGrid-root"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
       >
         Total citations
       </p>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-MuiGrid-root"
       style="text-align: center;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
       >
         7374
       </p>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-MuiGrid-root"
       style="text-align: right;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
       >
         5297
       </p>
@@ -433,210 +433,210 @@ exports[`PublicationStats component should render N/A for hindex because it is n
 exports[`PublicationStats component should render N/A for hindex because it is undefined 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-k1sqlt-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-MuiGrid-root"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-q1u119-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-MuiTypography-root"
       >
         UQ eSpace works
       </p>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-MuiGrid-root"
       style="text-align: center;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-q1u119-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-MuiTypography-root"
       >
         Web of science
       </p>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-MuiGrid-root"
       style="text-align: right;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-q1u119-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-MuiTypography-root"
       >
         Scopus
       </p>
     </div>
   </div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1qffj97-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-MuiGrid-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-MuiGrid-root"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
       >
         Total works
       </p>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-MuiGrid-root"
       style="text-align: center;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
       >
         301
       </p>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-MuiGrid-root"
       style="text-align: right;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
       >
         210
       </p>
     </div>
   </div>
   <hr
-    class="MuiDivider-root MuiDivider-fullWidth css-1jpc804-MuiDivider-root"
+    class="MuiDivider-root MuiDivider-fullWidth css-MuiDivider-root"
   />
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1qffj97-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-MuiGrid-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-MuiGrid-root"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
       >
         Works year range
       </p>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-MuiGrid-root"
       style="text-align: center;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
       >
         1992-2017
       </p>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-MuiGrid-root"
       style="text-align: right;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
       >
         1992-2017
       </p>
     </div>
   </div>
   <hr
-    class="MuiDivider-root MuiDivider-fullWidth css-1jpc804-MuiDivider-root"
+    class="MuiDivider-root MuiDivider-fullWidth css-MuiDivider-root"
   />
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1qffj97-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-MuiGrid-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-MuiGrid-root"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
       >
         h-index
       </p>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-MuiGrid-root"
       style="text-align: center;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
       >
         N/A
       </p>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-MuiGrid-root"
       style="text-align: right;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
       >
         N/A
       </p>
     </div>
   </div>
   <hr
-    class="MuiDivider-root MuiDivider-fullWidth css-1jpc804-MuiDivider-root"
+    class="MuiDivider-root MuiDivider-fullWidth css-MuiDivider-root"
   />
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1qffj97-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-MuiGrid-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-MuiGrid-root"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
       >
         Average citation count per work
       </p>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-MuiGrid-root"
       style="text-align: center;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
       >
         24.5
       </p>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-MuiGrid-root"
       style="text-align: right;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
       >
         25.2
       </p>
     </div>
   </div>
   <hr
-    class="MuiDivider-root MuiDivider-fullWidth css-1jpc804-MuiDivider-root"
+    class="MuiDivider-root MuiDivider-fullWidth css-MuiDivider-root"
   />
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1qffj97-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-MuiGrid-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-MuiGrid-root"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
       >
         Total citations
       </p>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-MuiGrid-root"
       style="text-align: center;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
       >
         7374
       </p>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-MuiGrid-root"
       style="text-align: right;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
       >
         5297
       </p>
@@ -648,210 +648,210 @@ exports[`PublicationStats component should render N/A for hindex because it is u
 exports[`PublicationStats component should render N/A for hindex because they equal zero 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-k1sqlt-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-MuiGrid-root"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-q1u119-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-MuiTypography-root"
       >
         UQ eSpace works
       </p>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-MuiGrid-root"
       style="text-align: center;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-q1u119-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-MuiTypography-root"
       >
         Web of science
       </p>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-MuiGrid-root"
       style="text-align: right;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-q1u119-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-MuiTypography-root"
       >
         Scopus
       </p>
     </div>
   </div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1qffj97-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-MuiGrid-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-MuiGrid-root"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
       >
         Total works
       </p>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-MuiGrid-root"
       style="text-align: center;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
       >
         301
       </p>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-MuiGrid-root"
       style="text-align: right;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
       >
         210
       </p>
     </div>
   </div>
   <hr
-    class="MuiDivider-root MuiDivider-fullWidth css-1jpc804-MuiDivider-root"
+    class="MuiDivider-root MuiDivider-fullWidth css-MuiDivider-root"
   />
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1qffj97-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-MuiGrid-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-MuiGrid-root"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
       >
         Works year range
       </p>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-MuiGrid-root"
       style="text-align: center;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
       >
         1992-2017
       </p>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-MuiGrid-root"
       style="text-align: right;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
       >
         1992-2017
       </p>
     </div>
   </div>
   <hr
-    class="MuiDivider-root MuiDivider-fullWidth css-1jpc804-MuiDivider-root"
+    class="MuiDivider-root MuiDivider-fullWidth css-MuiDivider-root"
   />
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1qffj97-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-MuiGrid-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-MuiGrid-root"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
       >
         h-index
       </p>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-MuiGrid-root"
       style="text-align: center;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
       >
         N/A
       </p>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-MuiGrid-root"
       style="text-align: right;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
       >
         N/A
       </p>
     </div>
   </div>
   <hr
-    class="MuiDivider-root MuiDivider-fullWidth css-1jpc804-MuiDivider-root"
+    class="MuiDivider-root MuiDivider-fullWidth css-MuiDivider-root"
   />
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1qffj97-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-MuiGrid-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-MuiGrid-root"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
       >
         Average citation count per work
       </p>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-MuiGrid-root"
       style="text-align: center;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
       >
         24.5
       </p>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-MuiGrid-root"
       style="text-align: right;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
       >
         25.2
       </p>
     </div>
   </div>
   <hr
-    class="MuiDivider-root MuiDivider-fullWidth css-1jpc804-MuiDivider-root"
+    class="MuiDivider-root MuiDivider-fullWidth css-MuiDivider-root"
   />
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1qffj97-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-MuiGrid-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-MuiGrid-root"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
       >
         Total citations
       </p>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-MuiGrid-root"
       style="text-align: center;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
       >
         7374
       </p>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-MuiGrid-root"
       style="text-align: right;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
       >
         5297
       </p>
@@ -871,210 +871,210 @@ exports[`PublicationStats component should render an empty component 1`] = `
 exports[`PublicationStats component should render statistics with table and data 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-k1sqlt-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-MuiGrid-root"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-q1u119-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-MuiTypography-root"
       >
         UQ eSpace works
       </p>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-MuiGrid-root"
       style="text-align: center;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-q1u119-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-MuiTypography-root"
       >
         Web of science
       </p>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-MuiGrid-root"
       style="text-align: right;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-q1u119-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 MuiTypography-gutterBottom css-MuiTypography-root"
       >
         Scopus
       </p>
     </div>
   </div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1qffj97-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-MuiGrid-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-MuiGrid-root"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
       >
         Total works
       </p>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-MuiGrid-root"
       style="text-align: center;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
       >
         301
       </p>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-MuiGrid-root"
       style="text-align: right;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
       >
         210
       </p>
     </div>
   </div>
   <hr
-    class="MuiDivider-root MuiDivider-fullWidth css-1jpc804-MuiDivider-root"
+    class="MuiDivider-root MuiDivider-fullWidth css-MuiDivider-root"
   />
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1qffj97-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-MuiGrid-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-MuiGrid-root"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
       >
         Works year range
       </p>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-MuiGrid-root"
       style="text-align: center;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
       >
         1992-2017
       </p>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-MuiGrid-root"
       style="text-align: right;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
       >
         1992-2017
       </p>
     </div>
   </div>
   <hr
-    class="MuiDivider-root MuiDivider-fullWidth css-1jpc804-MuiDivider-root"
+    class="MuiDivider-root MuiDivider-fullWidth css-MuiDivider-root"
   />
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1qffj97-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-MuiGrid-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-MuiGrid-root"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
       >
         h-index
       </p>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-MuiGrid-root"
       style="text-align: center;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
       >
         N/A
       </p>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-MuiGrid-root"
       style="text-align: right;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
       >
         N/A
       </p>
     </div>
   </div>
   <hr
-    class="MuiDivider-root MuiDivider-fullWidth css-1jpc804-MuiDivider-root"
+    class="MuiDivider-root MuiDivider-fullWidth css-MuiDivider-root"
   />
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1qffj97-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-MuiGrid-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-MuiGrid-root"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
       >
         Average citation count per work
       </p>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-MuiGrid-root"
       style="text-align: center;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
       >
         24.5
       </p>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-MuiGrid-root"
       style="text-align: right;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
       >
         25.2
       </p>
     </div>
   </div>
   <hr
-    class="MuiDivider-root MuiDivider-fullWidth css-1jpc804-MuiDivider-root"
+    class="MuiDivider-root MuiDivider-fullWidth css-MuiDivider-root"
   />
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-1qffj97-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-MuiGrid-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-1ml5fja-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-6 css-MuiGrid-root"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
       >
         Total citations
       </p>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-MuiGrid-root"
       style="text-align: center;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
       >
         7374
       </p>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-1lgyuji-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-3 css-MuiGrid-root"
       style="text-align: right;"
     >
       <p
-        class="MuiTypography-root MuiTypography-body2 css-10gqssu-MuiTypography-root"
+        class="MuiTypography-root MuiTypography-body2 css-MuiTypography-root"
       >
         5297
       </p>
