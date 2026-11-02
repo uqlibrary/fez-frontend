@@ -22,7 +22,7 @@ export const CitationCountView = ({ source, count, link, title }) => {
             >
                 <span className={`fez-icon ${source} xxlarge`} />
                 {count !== null && (
-                    <Box component={'span'} sx={{ marginLeft: '0.4em' }}>
+                    <Box component={'span'} sx={{ marginLeft: '0.4em', fontSize: 'initial' }}>
                         {count}
                     </Box>
                 )}
