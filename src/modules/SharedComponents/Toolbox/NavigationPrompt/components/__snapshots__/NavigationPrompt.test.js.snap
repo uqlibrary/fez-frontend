@@ -4,7 +4,7 @@ exports[`NavigationPrompt component should not render 1`] = `
 <div>
   <div>
     <span
-      class="MuiBox-root css-0"
+      class="MuiBox-root css"
       data-testid="confirmDialogBox"
     />
   </div>
@@ -15,7 +15,7 @@ exports[`NavigationPrompt component should render 1`] = `
 <div>
   <div>
     <span
-      class="MuiBox-root css-0"
+      class="MuiBox-root css"
       data-testid="confirmDialogBox"
     />
   </div>

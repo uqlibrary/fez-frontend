@@ -4,7 +4,7 @@ import Typography from '@mui/material/Typography';
 
 export const LinkInfoTemplate = ({ item }) => (
     <React.Fragment>
-        <Typography variant="body2">
+        <Typography variant="body2" noWrap>
             <strong>{'Link: '}</strong>
             {item.key}
         </Typography>

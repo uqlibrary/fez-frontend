@@ -28,6 +28,7 @@ export const numberToWords = value => {
 
 // Authentication
 export const SESSION_COOKIE_NAME = 'UQLID';
+export const SESSION_PTYPE_COOKIE_NAME = 'UQLID_PTYPE';
 export const SESSION_USER_GROUP_COOKIE_NAME = 'UQLID_USER_GROUP';
 // Set by the API on a passive (silent) login attempt to suppress re-attempts until it expires
 export const PASSIVE_LOGIN_CHECK_COOKIE_NAME = 'UQL_PASSIVE_CHECKED';

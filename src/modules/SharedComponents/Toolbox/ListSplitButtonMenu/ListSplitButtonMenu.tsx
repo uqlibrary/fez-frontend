@@ -108,7 +108,7 @@ const ListSplitButtonMenu: React.FC<ListSplitButtonMenuProps> = ({
                 <Button
                     disabled={error || loading || disabled}
                     onClick={handleAction}
-                    aria-label={selectedItem ? undefined : 'Add to list'}
+                    aria-label={selectedItem ? label(selectedItem) : placeholder}
                     data-testid="list-split-button-action-button"
                     sx={{
                         flex: 1,

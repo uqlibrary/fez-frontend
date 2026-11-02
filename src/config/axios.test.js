@@ -1,5 +1,5 @@
 import { api, apiLastRequest, sessionApi } from './axios';
-import { TOKEN_NAME, SESSION_COOKIE_NAME, SESSION_USER_GROUP_COOKIE_NAME } from './general';
+import { TOKEN_NAME, SESSION_COOKIE_NAME, SESSION_USER_GROUP_COOKIE_NAME, SESSION_PTYPE_COOKIE_NAME } from './general';
 import Cookies from 'js-cookie';
 
 describe('axios', () => {
@@ -14,10 +14,12 @@ describe('axios', () => {
             describe('request', () => {
                 it('should include session token as a header if session cookie is present', async () => {
                     jest.spyOn(Cookies, 'get').mockImplementation(key =>
-                        key === SESSION_COOKIE_NAME ? 'fake-token' : null,
+                        [SESSION_COOKIE_NAME, SESSION_PTYPE_COOKIE_NAME].includes(key)
+                            ? `${SESSION_COOKIE_NAME}-fake-value`
+                            : null,
                     );
                     mockSessionApi.onGet('/test').reply(config => {
-                        expect(config.headers[TOKEN_NAME]).toBe('fake-token');
+                        expect(config.headers[TOKEN_NAME]).toBe('UQLID-fake-value');
                         return [200, {}];
                     });
 
@@ -42,15 +44,17 @@ describe('axios', () => {
             describe('request', () => {
                 it('should include session token as a header if session cookie is present', async () => {
                     jest.spyOn(Cookies, 'get').mockImplementation(key =>
-                        key === SESSION_COOKIE_NAME ? 'fake-token' : null,
+                        [SESSION_COOKIE_NAME, SESSION_PTYPE_COOKIE_NAME].includes(key)
+                            ? `${SESSION_COOKIE_NAME}-fake-value`
+                            : null,
                     );
                     mockApi.onGet('/test').reply(config => {
-                        expect(config.headers[TOKEN_NAME]).toBe('fake-token');
+                        expect(config.headers[TOKEN_NAME]).toBe('UQLID-fake-value');
                         return [200, {}];
                     });
 
                     await api.get('/test');
-                    expect(apiLastRequest.headers[TOKEN_NAME]).toBe('fake-token');
+                    expect(apiLastRequest.headers[TOKEN_NAME]).toBe('UQLID-fake-value');
                 });
 
                 it('should not include session token as a header if session cookie is missing', async () => {

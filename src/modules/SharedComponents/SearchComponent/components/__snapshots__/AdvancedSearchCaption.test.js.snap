@@ -6,7 +6,7 @@ exports[`Component AdvancedSearchCaption should render with default props 1`] = 
     data-testid="advanced-search-caption"
   >
     <span
-      class="MuiBox-root css-1hg9omi"
+      class="MuiBox-root css"
       data-testid="advanced-search-caption-container"
     />
   </div>

@@ -324,6 +324,9 @@ export default {
             publicationStatsRowTitle4: 'Total works',
             publicationStatsRowTitle5: 'Works year range',
             publicationStatsNA: 'N/A',
+            hindexHelpUrl: 'https://guides.library.uq.edu.au/research-and-teaching-staff/calculate-h-index',
+            hindexHelpTooltip: 'Learn more about the h-index',
+            hindexHelpAriaLabel: 'Learn more about the h-index (opens in a new tab)',
         },
         publicationCitation: {
             publicationSourcesLabel: 'Found in: ',
@@ -4869,7 +4872,7 @@ export default {
                     },
                     searchJournals: {
                         title: 'Step 3. Search',
-                        aria: 'Search',
+                        aria: 'Step 3. Search',
                     },
                     compareJournals: {
                         title: 'COMPARE SELECTED',
