@@ -14,7 +14,7 @@ export const CitationCountView = ({ source, count, link, title }) => {
             <ExternalLink
                 id={`${source}-citation-count`}
                 className={`${source}CitationCount`}
-                sx={{ ...theme.typography.caption, marginRight: '8px' }}
+                sx={{ ...theme.typography.caption, marginRight: '8px', display: 'inline-flex', alignItems: 'center' }}
                 href={link}
                 aria-label={title}
                 title={title}
