@@ -22,12 +22,12 @@ const JournalFieldsMap = [
             actionsCol: {
                 xs: {
                     width: '10%',
-                    padding: '6px',
+                    padding: '12px',
                 },
                 selectable: {
                     xs: {
                         width: '30%',
-                        padding: '6px',
+                        padding: '12px',
                     },
                     sm: {
                         width: '10%',

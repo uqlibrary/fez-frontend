@@ -118,7 +118,11 @@ export const SimpleSearchComponent = ({
                             {showPrefixIcon && (
                                 <Grid size="auto" sx={{ padding: '4px' }}>
                                     <Search
-                                        sx={theme => ({ fill: theme.palette.secondary.main, opacity: 0.66 })}
+                                        sx={theme => ({
+                                            display: 'flex',
+                                            fill: theme.palette.secondary.main,
+                                            opacity: 0.66,
+                                        })}
                                         className={classes.searchIconPrefix}
                                     />
                                 </Grid>
