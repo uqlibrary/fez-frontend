@@ -324,7 +324,22 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
         rowCount: pagination.resultCount,
         autoResetPageIndex: false,
         enableKeyboardShortcuts: false,
-        displayColumnDefOptions: { 'mrt-row-actions': { minSize: 80 } },
+        displayColumnDefOptions: {
+            'mrt-row-actions': {
+                minSize: 100,
+                muiTableHeadCellProps: {
+                    align: 'center',
+                },
+                muiTableBodyCellProps: {
+                    sx: {
+                        '& > div': {
+                            justifyContent: 'space-between',
+                            gap: 0,
+                        },
+                    },
+                },
+            },
+        },
         initialState: {
             expanded: true,
             columnPinning: { left: ['mrt-row-select'], right: ['mrt-row-actions'] },
@@ -338,6 +353,8 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
         },
         muiPaginationProps: {
             rowsPerPageOptions: tablePageSizeOptions,
+            showFirstButton: true,
+            showLastButton: true,
         },
         muiEditRowDialogProps: ({ table }) => ({
             maxWidth: 'md',
@@ -365,6 +382,40 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
                 alignContent: 'flex-start',
                 padding: 1,
             },
+        },
+        icons: {
+            FirstPageIcon: props => (
+                <tableIcons.FirstPage
+                    id={`manage-users-first-page`}
+                    data-testid={`manage-users-first-page`}
+                    fontSize="large"
+                    {...props}
+                />
+            ),
+            LastPageIcon: props => (
+                <tableIcons.LastPage
+                    id={`manage-users-last-page`}
+                    data-testid={`manage-users-last-page`}
+                    fontSize="large"
+                    {...props}
+                />
+            ),
+            ChevronLeftIcon: props => (
+                <tableIcons.ChevronLeft
+                    id={`manage-users-prev-page`}
+                    data-testid={`manage-users-prev-page`}
+                    fontSize="large"
+                    {...props}
+                />
+            ),
+            ChevronRightIcon: props => (
+                <tableIcons.ChevronRight
+                    id={`manage-users-next-page`}
+                    data-testid={`manage-users-next-page`}
+                    fontSize="large"
+                    {...props}
+                />
+            ),
         },
         muiSelectCheckboxProps: ({ row }) => ({
             id: `select-user-${row.id}`,

@@ -61,9 +61,9 @@ const renderCopyCreatorUsernameButton = row => {
                     id={`${rootId}-${id}-copy-username`}
                     sx={{ p: 0, mt: -1.25, ml: 0.5 }}
                     disabled={disabled}
-                    size="small"
+                    size="medium"
                 >
-                    <Copy color={disabled ? 'disabled' : 'secondary'} fontSize="small" sx={{ width: 14 }} />
+                    <Copy color={disabled ? 'disabled' : 'secondary'} fontSize="medium" sx={{ width: 14 }} />
                 </IconButton>
             </span>
         </Tooltip>

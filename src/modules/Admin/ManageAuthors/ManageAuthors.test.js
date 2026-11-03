@@ -17,6 +17,7 @@ import {
     waitForTextToBeRemoved,
     waitToHaveBeenLastCalledWith,
     setTextField,
+    preview,
 } from 'test-utils';
 import * as ManageAuthorsActions from 'actions/manageAuthors';
 import * as AppActions from 'actions/app';
@@ -421,6 +422,7 @@ describe('ManageAuthors', () => {
         await selectDropDownOptionByElement(el, '50');
 
         await waitFor(() => expect(container.querySelectorAll('.MuiTableRow-root').length - 1).toBe(23));
+        preview.debug();
         expect(loadAuthorListFn).toHaveBeenCalledTimes(2);
     });
 

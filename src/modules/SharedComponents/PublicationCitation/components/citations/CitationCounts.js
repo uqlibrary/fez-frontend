@@ -28,7 +28,7 @@ export const CitationCounts = ({ publication, showAltmetricWidget }) => {
 
     return (
         <Grid container spacing={0}>
-            <Grid size={{ xs: 12, sm: 'auto' }}>
+            <Grid size={{ xs: 12, sm: 'auto' }} sx={{ display: 'flex', '& > a': { pr: '1rem' } }}>
                 {!!publication.fez_record_search_key_isi_loc &&
                     !!publication.fez_record_search_key_isi_loc.rek_isi_loc && (
                         <Partials.CitationCountView

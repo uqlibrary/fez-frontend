@@ -21,7 +21,7 @@ export const KeywordsList = ({ title, list, help }) => {
                 >
                     {title}
                 </Typography>
-                {!!help && <HelpIcon {...help} iconSize={'small'} style={{ marginTop: '-6px' }} />}
+                {!!help && <HelpIcon {...help} style={{ marginTop: '-6px' }} />}
             </Grid>
             {!!list && list.length > 0 ? (
                 list

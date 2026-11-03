@@ -136,7 +136,7 @@ export const ResearcherIdentifierData = () => {
                                                   color="secondary"
                                                   href={getOrcidURL(autOrcidId)}
                                                   target="_blank"
-                                                  size="small"
+                                                  size="medium"
                                               >
                                                   <OpenInNew />
                                               </IconButton>

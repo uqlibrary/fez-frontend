@@ -8,7 +8,7 @@ exports[`Component SocialShare should fire print method on click 1`] = `
   >
     <div
       class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
-      style="margin-right: 4px;"
+      style="margin-right: 12px;"
     >
       <a
         class="css"
@@ -40,7 +40,7 @@ exports[`Component SocialShare should fire print method on click 1`] = `
     </div>
     <div
       class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
-      style="margin-right: 4px;"
+      style="margin-right: 0px;"
     >
       <a
         class="css"
@@ -82,7 +82,7 @@ exports[`Component SocialShare should render component 1`] = `
   >
     <div
       class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
-      style="margin-right: 4px;"
+      style="margin-right: 12px;"
     >
       <a
         class="css"
@@ -114,7 +114,7 @@ exports[`Component SocialShare should render component 1`] = `
     </div>
     <div
       class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
-      style="margin-right: 4px;"
+      style="margin-right: 0px;"
     >
       <a
         class="css"

@@ -431,7 +431,7 @@ exports[`Search record results should render a single claimable item with no aut
                                         title="Full citation in Google scholar will open in a new window"
                                       >
                                         <span
-                                          class="fez-icon google large"
+                                          class="fez-icon google xxlarge"
                                         />
                                       </a>
                                       <span
@@ -1209,7 +1209,7 @@ exports[`Search record results should render a single unclaimable item with no a
                                         title="Full citation in Google scholar will open in a new window"
                                       >
                                         <span
-                                          class="fez-icon google large"
+                                          class="fez-icon google xxlarge"
                                         />
                                       </a>
                                       <span
@@ -1987,7 +1987,7 @@ exports[`Search record results should render a single unclaimable item with no a
                                         title="Full citation in Google scholar will open in a new window"
                                       >
                                         <span
-                                          class="fez-icon google large"
+                                          class="fez-icon google xxlarge"
                                         />
                                       </a>
                                       <span
@@ -2765,7 +2765,7 @@ exports[`Search record results should render publications list with one publicat
                                         title="Full citation in Google scholar will open in a new window"
                                       >
                                         <span
-                                          class="fez-icon google large"
+                                          class="fez-icon google xxlarge"
                                         />
                                       </a>
                                       <span
