@@ -33,6 +33,7 @@ import {
     ORG_TYPES_LOOKUP,
     AFFILIATION_TYPE_UQ,
     AUTHOR_EXTERNAL_IDENTIFIER_TYPE,
+    AUTHOR_EXTERNAL_IDENTIFIER_TYPE_ORCID_VALUE,
 } from 'config/general';
 import { default as globalLocale } from 'locale/global';
 import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField/components/NewGenericSelectField';
@@ -364,7 +365,8 @@ export const AuthorsList = ({
                     </Typography>
                 ),
                 Cell: ({ cell, row }) => {
-                    const value = cell.getValue();
+                    // default to UQ author's ORCID
+                    const value = cell.getValue()?.trim?.() || row?.original?.aut_orcid_id;
                     return (
                         <Typography
                             variant="body2"
@@ -376,23 +378,32 @@ export const AuthorsList = ({
                     );
                 },
                 Edit: ({ row, column }) => {
-                    const value = row._valuesCache.externalIdentifier || '';
-                    const errors = validationErrors[row.id] || [];
+                    const contributor = { ...row.original, ...row._valuesCache };
+                    const value = contributor.externalIdentifier || '';
+                    const fromUQAuthor = !!contributor.aut_orcid_id?.trim?.();
+                    const errors = (!fromUQAuthor && validationErrors[row.id]) || [];
                     const error = getValidationError(errors, 'externalIdentifier');
 
-                    const handleChange = e => {
+                    const handleChange = (value, skipValidation = false) => {
                         row._valuesCache = {
                             ...row._valuesCache,
-                            [column.id]: e.target.value || /* istanbul ignore next */ null,
+                            [column.id]: value || /* istanbul ignore next */ null,
                         };
-                        handleValidation(row, column.id, e.target.value || /* istanbul ignore next */ null);
+                        !skipValidation && handleValidation(row, column.id, value || /* istanbul ignore next */ null);
                     };
+
+                    // set once, only if value is empty
+                    if (!value?.trim?.() && fromUQAuthor) {
+                        handleChange(contributor.aut_orcid_id, true);
+                    }
+
                     return (
                         <Grid container spacing={2} sx={{ width: '100%' }}>
                             <Grid style={{ flexGrow: '1' }}>
                                 <TextField
+                                    disabled={fromUQAuthor}
                                     value={value}
-                                    onChange={handleChange}
+                                    onChange={e => handleChange(e.target.value)}
                                     textFieldId={`${contributorEditorId}-external-identifier`}
                                     error={!!error}
                                     errorText={error}
@@ -416,7 +427,10 @@ export const AuthorsList = ({
                     </Typography>
                 ),
                 Cell: ({ cell, row }) => {
-                    const value = cell.getValue();
+                    // default to ORCID type if it's coming from UQ author
+                    const value =
+                        cell.getValue()?.trim?.() ||
+                        (row?.original?.aut_orcid_id && AUTHOR_EXTERNAL_IDENTIFIER_TYPE_ORCID_VALUE);
                     return (
                         <Typography
                             variant="body2"

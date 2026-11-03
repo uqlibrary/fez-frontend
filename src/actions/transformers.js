@@ -364,22 +364,30 @@ export const getRecordAuthorsExternalIdSearchKey = authors => {
         };
     }
 
-    const ids = [];
-    const idTypes = [];
+    let ids = [];
+    let types = [];
 
     authors.forEach((item, index) => {
-        if (!!item.externalIdentifier && !!item.externalIdentifierType) {
-            ids.push({ rek_author_identifier: item.externalIdentifier, rek_author_identifier_order: index + 1 });
-            idTypes.push({
-                rek_author_identifier_type: item.externalIdentifierType,
-                rek_author_identifier_type_order: index + 1,
-            });
-        }
+        // skip if the ORCID is from an UQ author - the author itself  should be the source of truth for ORCIDs
+        const id = (!item.aut_orcid_id?.trim?.() && item.externalIdentifier) || null;
+        const type = (id && item.externalIdentifierType) || null;
+
+        ids.push({ rek_author_identifier: id, rek_author_identifier_order: index + 1 });
+        types.push({
+            rek_author_identifier_type: type,
+            rek_author_identifier_type_order: index + 1,
+        });
     });
+
+    // reset values in there isn't a single non-empty id
+    if (!ids.some(i => i.rek_author_identifier)) {
+        ids = [];
+        types = [];
+    }
 
     return {
         fez_record_search_key_author_identifier: ids,
-        fez_record_search_key_author_identifier_type: idTypes,
+        fez_record_search_key_author_identifier_type: types,
     };
 };
 
