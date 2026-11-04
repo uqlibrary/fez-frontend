@@ -68,6 +68,11 @@ const StyledAppTitle = styled(Typography, {
             textDecoration: 'underline',
         },
     },
+    '& .appTitleTagline': {
+        [theme.breakpoints.down('md')]: {
+            display: 'none',
+        },
+    },
 }));
 
 const AppClass = ({

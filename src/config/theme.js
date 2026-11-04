@@ -87,6 +87,14 @@ const typography = {
     body2: { lineHeight: 1.6 },
 };
 
+const narrowLabelReflow = {
+    '@media (max-width:899.95px)': {
+        whiteSpace: 'normal',
+        overflow: 'visible',
+        textOverflow: 'clip',
+    },
+};
+
 export const mui1theme = createTheme({
     palette: palette,
     status: {
@@ -108,6 +116,14 @@ export const mui1theme = createTheme({
                     overflow: 'hidden',
                     width: '100%',
                     textOverflow: 'ellipsis',
+                    ...narrowLabelReflow,
+                },
+            },
+        },
+        MuiInputLabel: {
+            styleOverrides: {
+                root: {
+                    ...narrowLabelReflow,
                 },
             },
         },
@@ -214,6 +230,14 @@ export const adminTheme = createTheme({
             styleOverrides: {
                 root: {
                     color: '#4085C6',
+                    ...narrowLabelReflow,
+                },
+            },
+        },
+        MuiInputLabel: {
+            styleOverrides: {
+                root: {
+                    ...narrowLabelReflow,
                 },
             },
         },

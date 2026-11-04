@@ -231,7 +231,14 @@ export const Alert = ({
                     </Grid>
                 </Grid>
                 {action && actionButtonLabel && (
-                    <StyledGridActionButton size={{ xs: 'grow', sm: 'auto' }}>
+                    <StyledGridActionButton
+                        size={{ xs: 'grow', sm: 'auto' }}
+                        sx={{
+                            flexBasis: { xs: '100%', sm: 'auto' },
+                            maxWidth: { xs: '100%', sm: 'none' },
+                            mt: { xs: 1, sm: 0 },
+                        }}
+                    >
                         <Button
                             variant="text"
                             children={actionButtonLabel}
