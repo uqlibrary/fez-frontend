@@ -106,6 +106,7 @@ exports[`SecurityCard component should fallback to default form values 1`] = `
                     data-indeterminate="false"
                     data-testid="rek-security-inherited-input"
                     id="rek-security-inherited-input"
+                    tabindex="0"
                     type="checkbox"
                   />
                   <svg
@@ -513,6 +514,7 @@ exports[`SecurityCard component should mount with default props for a record 1`]
                     data-indeterminate="false"
                     data-testid="rek-security-inherited-input"
                     id="rek-security-inherited-input"
+                    tabindex="0"
                     type="checkbox"
                   />
                   <svg
@@ -839,6 +841,7 @@ exports[`SecurityCard component should not render data stream security selector 
                     data-indeterminate="false"
                     data-testid="rek-security-inherited-input"
                     id="rek-security-inherited-input"
+                    tabindex="0"
                     type="checkbox"
                   />
                   <svg
@@ -1404,6 +1407,7 @@ exports[`SecurityCard component should render security card correctly for record
                     data-indeterminate="false"
                     data-testid="rek-security-inherited-input"
                     id="rek-security-inherited-input"
+                    tabindex="0"
                     type="checkbox"
                   />
                   <svg
@@ -1731,6 +1735,7 @@ exports[`SecurityCard component should render security card correctly for record
                     data-indeterminate="false"
                     data-testid="rek-security-inherited-input"
                     id="rek-security-inherited-input"
+                    tabindex="0"
                     type="checkbox"
                   />
                   <svg
@@ -2165,6 +2170,7 @@ exports[`SecurityCard component should render security card with disabled inputs
                     data-testid="rek-security-inherited-input"
                     disabled=""
                     id="rek-security-inherited-input"
+                    tabindex="0"
                     type="checkbox"
                   />
                   <svg
@@ -2601,6 +2607,7 @@ exports[`SecurityCard component should render security card with disabled inputs
                     data-testid="rek-security-inherited-input"
                     disabled=""
                     id="rek-security-inherited-input"
+                    tabindex="0"
                     type="checkbox"
                   />
                   <svg

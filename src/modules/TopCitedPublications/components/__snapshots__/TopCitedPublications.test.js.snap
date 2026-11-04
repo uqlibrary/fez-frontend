@@ -155,7 +155,7 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
           style="margin-top: -12px;"
         >
           <button
-            aria-label="Click for more information"
+            aria-label="About these metrics - Click for more information"
             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="help-icon"
             data-mui-internal-clone-element="true"
@@ -214,6 +214,7 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
                           <a
                             data-discover="true"
                             href="/view/UQ:330391"
+                            tabindex="0"
                           >
                             Development and implementation of papillomavirus prophylactic vaccines
                           </a>
@@ -608,7 +609,7 @@ exports[`Component TopCitedPublications should render top cited publications wit
           style="margin-top: -12px;"
         >
           <button
-            aria-label="Click for more information"
+            aria-label="About these metrics - Click for more information"
             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="help-icon"
             data-mui-internal-clone-element="true"
@@ -667,6 +668,7 @@ exports[`Component TopCitedPublications should render top cited publications wit
                           <a
                             data-discover="true"
                             href="/view/UQ:330391"
+                            tabindex="0"
                           >
                             Development and implementation of papillomavirus prophylactic vaccines
                           </a>

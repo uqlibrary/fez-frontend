@@ -18,7 +18,7 @@ exports[`Snapshot tests for StandardRighthandCard component renders with title a
       class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
     >
       <button
-        aria-label="Click for more information"
+        aria-label="Help text - Click for more information"
         class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-MuiButtonBase-root-MuiIconButton-root"
         data-analyticsid="help-icon"
         data-mui-internal-clone-element="true"
@@ -72,7 +72,7 @@ exports[`Snapshot tests for StandardRighthandCard component renders with title a
       class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
     >
       <button
-        aria-label="Click for more information"
+        aria-label="Help text - Click for more information"
         class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-MuiButtonBase-root-MuiIconButton-root"
         data-analyticsid="help-icon"
         data-mui-internal-clone-element="true"
@@ -157,7 +157,7 @@ exports[`Snapshot tests for StandardRighthandCard component renders with title, 
       class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
     >
       <button
-        aria-label="Click for more information"
+        aria-label="Help text - Click for more information"
         class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-MuiButtonBase-root-MuiIconButton-root"
         data-analyticsid="help-icon"
         data-mui-internal-clone-element="true"

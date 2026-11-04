@@ -877,6 +877,7 @@ exports[`FilesSection component should render default view for Files on a Data C
                     data-indeterminate="false"
                     data-testid="rek-copyright-input"
                     id="rek-copyright-input"
+                    tabindex="0"
                     type="checkbox"
                   />
                   <svg
@@ -1804,6 +1805,7 @@ exports[`FilesSection component should render default view for Files on a public
                     data-indeterminate="false"
                     data-testid="rek-copyright-input"
                     id="rek-copyright-input"
+                    tabindex="0"
                     type="checkbox"
                   />
                   <svg

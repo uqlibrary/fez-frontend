@@ -104,7 +104,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
           class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
         >
           <button
-            aria-label="Click for more information"
+            aria-label="About these metrics - Click for more information"
             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="help-icon"
             data-mui-internal-clone-element="true"
@@ -161,6 +161,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                           <a
                             data-discover="true"
                             href="/view/UQ:330391"
+                            tabindex="0"
                           >
                             Development and implementation of papillomavirus prophylactic vaccines
                           </a>
@@ -450,7 +451,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
           class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
         >
           <button
-            aria-label="Click for more information"
+            aria-label="About these metrics - Click for more information"
             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="help-icon"
             data-mui-internal-clone-element="true"
@@ -507,6 +508,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                           <a
                             data-discover="true"
                             href="/view/UQ:103860"
+                            tabindex="0"
                           >
                             Prophylactic HPV vaccines: Underlying mechanisms
                           </a>
@@ -811,7 +813,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
           class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
         >
           <button
-            aria-label="Click for more information"
+            aria-label="About these metrics - Click for more information"
             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="help-icon"
             data-mui-internal-clone-element="true"
@@ -868,6 +870,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                           <a
                             data-discover="true"
                             href="/view/UQ:330391"
+                            tabindex="0"
                           >
                             Development and implementation of papillomavirus prophylactic vaccines
                           </a>

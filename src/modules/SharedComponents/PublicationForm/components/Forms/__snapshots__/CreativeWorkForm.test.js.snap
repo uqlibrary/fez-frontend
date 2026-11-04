@@ -377,7 +377,7 @@ exports[`CreativeWorkForm component 1`] = `
             class="MuiCardHeader-action css-MuiCardHeader-action"
           >
             <button
-              aria-label="Click for more information"
+              aria-label="Add authors to a work - Click for more information"
               class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="help-icon"
               data-mui-internal-clone-element="true"
@@ -1131,7 +1131,7 @@ exports[`CreativeWorkForm component with all fields disabled 1`] = `
             class="MuiCardHeader-action css-MuiCardHeader-action"
           >
             <button
-              aria-label="Click for more information"
+              aria-label="Add authors to a work - Click for more information"
               class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="help-icon"
               data-mui-internal-clone-element="true"
@@ -2014,7 +2014,7 @@ exports[`CreativeWorkForm should show content for a random (other) NTRO type cor
             class="MuiCardHeader-action css-MuiCardHeader-action"
           >
             <button
-              aria-label="Click for more information"
+              aria-label="Add authors to a work - Click for more information"
               class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="help-icon"
               data-mui-internal-clone-element="true"
@@ -2326,7 +2326,7 @@ exports[`CreativeWorkForm should show content for a random (other) NTRO type cor
                 class="MuiCardHeader-action css-MuiCardHeader-action"
               >
                 <button
-                  aria-label="Click for more information"
+                  aria-label="NTRO data - Click for more information"
                   class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-MuiButtonBase-root-MuiIconButton-root"
                   data-analyticsid="help-icon"
                   data-mui-internal-clone-element="true"
@@ -4001,7 +4001,7 @@ exports[`CreativeWorkForm should show exhibition content correctly 1`] = `
             class="MuiCardHeader-action css-MuiCardHeader-action"
           >
             <button
-              aria-label="Click for more information"
+              aria-label="Add authors to a work - Click for more information"
               class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="help-icon"
               data-mui-internal-clone-element="true"
@@ -4313,7 +4313,7 @@ exports[`CreativeWorkForm should show exhibition content correctly 1`] = `
                 class="MuiCardHeader-action css-MuiCardHeader-action"
               >
                 <button
-                  aria-label="Click for more information"
+                  aria-label="NTRO data - Click for more information"
                   class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-MuiButtonBase-root-MuiIconButton-root"
                   data-analyticsid="help-icon"
                   data-mui-internal-clone-element="true"

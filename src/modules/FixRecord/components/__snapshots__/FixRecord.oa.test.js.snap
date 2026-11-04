@@ -110,7 +110,7 @@ exports[`Component FixRecord for non-compliant Open Access should render fix rec
                   class="MuiCardHeader-action css-MuiCardHeader-action"
                 >
                   <button
-                    aria-label="Click for more information"
+                    aria-label="Author Accepted Manuscript - Click for more information"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="help-icon"
                     data-mui-internal-clone-element="true"
@@ -166,6 +166,7 @@ exports[`Component FixRecord for non-compliant Open Access should render fix rec
                               <a
                                 data-discover="true"
                                 href="/view/UQ:41878"
+                                tabindex="0"
                               >
                                 Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
                               </a>
@@ -938,7 +939,7 @@ exports[`Component FixRecord for non-compliant Open Access should render record 
                   class="MuiCardHeader-action css-MuiCardHeader-action"
                 >
                   <button
-                    aria-label="Click for more information"
+                    aria-label="Author Accepted Manuscript - Click for more information"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="help-icon"
                     data-mui-internal-clone-element="true"
@@ -994,6 +995,7 @@ exports[`Component FixRecord for non-compliant Open Access should render record 
                               <a
                                 data-discover="true"
                                 href="/view/UQ:41878"
+                                tabindex="0"
                               >
                                 Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
                               </a>

@@ -1160,6 +1160,7 @@ exports[`NotesSection component should render default view 1`] = `
                     data-indeterminate="false"
                     data-testid="attributionIncomplete-input"
                     id="attributionIncomplete-input"
+                    tabindex="0"
                     type="checkbox"
                   />
                   <svg
@@ -2378,6 +2379,7 @@ exports[`NotesSection component should render disabled view 1`] = `
                     data-testid="attributionIncomplete-input"
                     disabled=""
                     id="attributionIncomplete-input"
+                    tabindex="0"
                     type="checkbox"
                   />
                   <svg

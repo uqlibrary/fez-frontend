@@ -51,6 +51,7 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                     <input
                       class="PrivateSwitchBase-input MuiSwitch-input css-MuiSwitchBase-root"
                       role="switch"
+                      tabindex="0"
                       type="checkbox"
                       value="tabbed"
                     />
@@ -67,7 +68,7 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                 class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
               >
                 <button
-                  aria-label="Learn about keyboard shortcuts"
+                  aria-label="Keyboard shortcuts - Learn about keyboard shortcuts"
                   class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-MuiButtonBase-root-MuiIconButton-root"
                   data-analyticsid="help-icon"
                   data-mui-internal-clone-element="true"
@@ -262,7 +263,7 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                                     data-testid="rek-ismemberof-0"
                                     id="rek-ismemberof-0"
                                     role="button"
-                                    tabindex="-1"
+                                    tabindex="0"
                                   >
                                     <span
                                       class="MuiChip-label MuiChip-labelMedium css-MuiChip-label"
@@ -287,7 +288,7 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                                     data-testid="rek-ismemberof-1"
                                     id="rek-ismemberof-1"
                                     role="button"
-                                    tabindex="-1"
+                                    tabindex="0"
                                   >
                                     <span
                                       class="MuiChip-label MuiChip-labelMedium css-MuiChip-label"
@@ -6553,6 +6554,7 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                                   data-indeterminate="false"
                                   data-testid="attributionIncomplete-input"
                                   id="attributionIncomplete-input"
+                                  tabindex="0"
                                   type="checkbox"
                                 />
                                 <svg
@@ -8563,6 +8565,7 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                                   data-indeterminate="false"
                                   data-testid="rek-copyright-input"
                                   id="rek-copyright-input"
+                                  tabindex="0"
                                   type="checkbox"
                                 />
                                 <svg
@@ -8755,6 +8758,7 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                                   data-indeterminate="false"
                                   data-testid="rek-security-inherited-input"
                                   id="rek-security-inherited-input"
+                                  tabindex="0"
                                   type="checkbox"
                                 />
                                 <svg

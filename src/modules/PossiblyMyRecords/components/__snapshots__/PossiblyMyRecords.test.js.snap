@@ -314,6 +314,7 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                                   <a
                                     data-discover="true"
                                     href="/view/UQ:1"
+                                    tabindex="0"
                                   >
                                     1
                                   </a>
@@ -435,6 +436,7 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                                   <a
                                     data-discover="true"
                                     href="/view/UQ:2"
+                                    tabindex="0"
                                   >
                                     2
                                   </a>
@@ -556,6 +558,7 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                                   <a
                                     data-discover="true"
                                     href="/view/UQ:3"
+                                    tabindex="0"
                                   >
                                     3
                                   </a>

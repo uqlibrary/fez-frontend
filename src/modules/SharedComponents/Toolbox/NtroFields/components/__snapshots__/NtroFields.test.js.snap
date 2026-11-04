@@ -32,7 +32,7 @@ exports[`Component NtroFields should call componentDidUpdate 1`] = `
             class="MuiCardHeader-action css-MuiCardHeader-action"
           >
             <button
-              aria-label="Click for more information"
+              aria-label="NTRO data - Click for more information"
               class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="help-icon"
               data-mui-internal-clone-element="true"
@@ -1220,7 +1220,7 @@ exports[`Component NtroFields should not show NTRO data card in the Ntro fields 
             class="MuiCardHeader-action css-MuiCardHeader-action"
           >
             <button
-              aria-label="Click for more information"
+              aria-label="Author/Creator research statement - Click for more information"
               class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="help-icon"
               data-mui-internal-clone-element="true"
@@ -1561,7 +1561,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             class="MuiCardHeader-action css-MuiCardHeader-action"
           >
             <button
-              aria-label="Click for more information"
+              aria-label="Author/Creator research statement - Click for more information"
               class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="help-icon"
               data-mui-internal-clone-element="true"
@@ -2243,7 +2243,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             class="MuiCardHeader-action css-MuiCardHeader-action"
           >
             <button
-              aria-label="Click for more information"
+              aria-label="NTRO data - Click for more information"
               class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="help-icon"
               data-mui-internal-clone-element="true"
@@ -3628,7 +3628,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
             class="MuiCardHeader-action css-MuiCardHeader-action"
           >
             <button
-              aria-label="Click for more information"
+              aria-label="Author/Creator research statement - Click for more information"
               class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="help-icon"
               data-mui-internal-clone-element="true"
@@ -4297,7 +4297,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
             class="MuiCardHeader-action css-MuiCardHeader-action"
           >
             <button
-              aria-label="Click for more information"
+              aria-label="NTRO data - Click for more information"
               class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="help-icon"
               data-mui-internal-clone-element="true"
@@ -5657,7 +5657,7 @@ exports[`Component NtroFields should render default view 1`] = `
             class="MuiCardHeader-action css-MuiCardHeader-action"
           >
             <button
-              aria-label="Click for more information"
+              aria-label="NTRO data - Click for more information"
               class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="help-icon"
               data-mui-internal-clone-element="true"
@@ -7017,7 +7017,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
             class="MuiCardHeader-action css-MuiCardHeader-action"
           >
             <button
-              aria-label="Click for more information"
+              aria-label="Author/Creator research statement - Click for more information"
               class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="help-icon"
               data-mui-internal-clone-element="true"
@@ -7686,7 +7686,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
             class="MuiCardHeader-action css-MuiCardHeader-action"
           >
             <button
-              aria-label="Click for more information"
+              aria-label="NTRO data - Click for more information"
               class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="help-icon"
               data-mui-internal-clone-element="true"
@@ -8859,7 +8859,7 @@ exports[`Component NtroFields should show significance field even if contributio
             class="MuiCardHeader-action css-MuiCardHeader-action"
           >
             <button
-              aria-label="Click for more information"
+              aria-label="Author/Creator research statement - Click for more information"
               class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="help-icon"
               data-mui-internal-clone-element="true"
@@ -9004,7 +9004,7 @@ exports[`Component NtroFields should show significance field even if contributio
             class="MuiCardHeader-action css-MuiCardHeader-action"
           >
             <button
-              aria-label="Click for more information"
+              aria-label="NTRO data - Click for more information"
               class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="help-icon"
               data-mui-internal-clone-element="true"
