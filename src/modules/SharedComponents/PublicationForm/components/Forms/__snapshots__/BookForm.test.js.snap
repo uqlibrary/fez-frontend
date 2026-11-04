@@ -21,7 +21,7 @@ exports[`BookForm component 1`] = `
             class="MuiCardHeader-content css-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
               data-testid="standard-card-book-information-header"
               id="standard-card-book-information-header"
             >
@@ -398,7 +398,7 @@ exports[`BookForm component 1`] = `
             class="MuiCardHeader-content css-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
               data-testid="standard-card-authors-header"
               id="standard-card-authors-header"
             >
@@ -588,7 +588,7 @@ exports[`BookForm component 1`] = `
             class="MuiCardHeader-content css-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
               data-testid="standard-card-editors-header"
               id="standard-card-editors-header"
             >
@@ -728,7 +728,7 @@ exports[`BookForm component 1`] = `
             class="MuiCardHeader-content css-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
               data-testid="standard-card-isbn-header"
               id="standard-card-isbn-header"
             >
@@ -831,7 +831,7 @@ exports[`BookForm component 1`] = `
             class="MuiCardHeader-content css-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
               data-testid="standard-card-issn-header"
               id="standard-card-issn-header"
             >
@@ -934,7 +934,7 @@ exports[`BookForm component 1`] = `
             class="MuiCardHeader-content css-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
               data-testid="standard-card-optional-details-header"
               id="standard-card-optional-details-header"
             >
@@ -1054,7 +1054,7 @@ exports[`BookForm component should render contributor assignment 1`] = `
             class="MuiCardHeader-content css-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
               data-testid="standard-card-book-information-header"
               id="standard-card-book-information-header"
             >
@@ -1431,7 +1431,7 @@ exports[`BookForm component should render contributor assignment 1`] = `
             class="MuiCardHeader-content css-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
               data-testid="standard-card-isbn-header"
               id="standard-card-isbn-header"
             >
@@ -1534,7 +1534,7 @@ exports[`BookForm component should render contributor assignment 1`] = `
             class="MuiCardHeader-content css-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
               data-testid="standard-card-issn-header"
               id="standard-card-issn-header"
             >
@@ -1637,7 +1637,7 @@ exports[`BookForm component should render contributor assignment 1`] = `
             class="MuiCardHeader-content css-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
               data-testid="standard-card-optional-details-header"
               id="standard-card-optional-details-header"
             >
@@ -1757,7 +1757,7 @@ exports[`BookForm component with 4 input fields for NTRO 1`] = `
             class="MuiCardHeader-content css-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
               data-testid="standard-card-book-information-header"
               id="standard-card-book-information-header"
             >
@@ -2099,7 +2099,7 @@ exports[`BookForm component with 4 input fields for NTRO 1`] = `
             class="MuiCardHeader-content css-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
               data-testid="standard-card-authors-header"
               id="standard-card-authors-header"
             >
@@ -2400,7 +2400,7 @@ exports[`BookForm component with 4 input fields for NTRO 1`] = `
             class="MuiCardHeader-content css-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
               data-testid="standard-card-editors-header"
               id="standard-card-editors-header"
             >
@@ -2546,7 +2546,7 @@ exports[`BookForm component with 4 input fields for NTRO 1`] = `
                 class="MuiCardHeader-content css-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
                   data-testid="standard-card-ntro-data-header"
                   id="standard-card-ntro-data-header"
                 >
@@ -3291,7 +3291,7 @@ exports[`BookForm component with 4 input fields for NTRO 1`] = `
                 class="MuiCardHeader-content css-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
                   data-testid="standard-card-grant-details-header"
                   id="standard-card-grant-details-header"
                 >
@@ -3480,7 +3480,7 @@ exports[`BookForm component with 4 input fields for NTRO 1`] = `
             class="MuiCardHeader-content css-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
               data-testid="standard-card-isbn-header"
               id="standard-card-isbn-header"
             >
@@ -3583,7 +3583,7 @@ exports[`BookForm component with 4 input fields for NTRO 1`] = `
             class="MuiCardHeader-content css-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
               data-testid="standard-card-issn-header"
               id="standard-card-issn-header"
             >
@@ -3686,7 +3686,7 @@ exports[`BookForm component with 4 input fields for NTRO 1`] = `
             class="MuiCardHeader-content css-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
               data-testid="standard-card-optional-details-header"
               id="standard-card-optional-details-header"
             >
@@ -3806,7 +3806,7 @@ exports[`BookForm component with 5 input fields for NTRO with musical compositio
             class="MuiCardHeader-content css-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
               data-testid="standard-card-book-information-header"
               id="standard-card-book-information-header"
             >
@@ -4148,7 +4148,7 @@ exports[`BookForm component with 5 input fields for NTRO with musical compositio
             class="MuiCardHeader-content css-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
               data-testid="standard-card-authors-header"
               id="standard-card-authors-header"
             >
@@ -4449,7 +4449,7 @@ exports[`BookForm component with 5 input fields for NTRO with musical compositio
             class="MuiCardHeader-content css-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
               data-testid="standard-card-editors-header"
               id="standard-card-editors-header"
             >
@@ -4595,7 +4595,7 @@ exports[`BookForm component with 5 input fields for NTRO with musical compositio
                 class="MuiCardHeader-content css-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
                   data-testid="standard-card-ntro-data-header"
                   id="standard-card-ntro-data-header"
                 >
@@ -5409,7 +5409,7 @@ exports[`BookForm component with 5 input fields for NTRO with musical compositio
                 class="MuiCardHeader-content css-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
                   data-testid="standard-card-grant-details-header"
                   id="standard-card-grant-details-header"
                 >
@@ -5598,7 +5598,7 @@ exports[`BookForm component with 5 input fields for NTRO with musical compositio
             class="MuiCardHeader-content css-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
               data-testid="standard-card-isbn-header"
               id="standard-card-isbn-header"
             >
@@ -5701,7 +5701,7 @@ exports[`BookForm component with 5 input fields for NTRO with musical compositio
             class="MuiCardHeader-content css-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
               data-testid="standard-card-issn-header"
               id="standard-card-issn-header"
             >
@@ -5804,7 +5804,7 @@ exports[`BookForm component with 5 input fields for NTRO with musical compositio
             class="MuiCardHeader-content css-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
               data-testid="standard-card-optional-details-header"
               id="standard-card-optional-details-header"
             >
@@ -5924,7 +5924,7 @@ exports[`BookForm component with all fields disabled 1`] = `
             class="MuiCardHeader-content css-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
               data-testid="standard-card-book-information-header"
               id="standard-card-book-information-header"
             >
@@ -6309,7 +6309,7 @@ exports[`BookForm component with all fields disabled 1`] = `
             class="MuiCardHeader-content css-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
               data-testid="standard-card-authors-header"
               id="standard-card-authors-header"
             >
@@ -6500,7 +6500,7 @@ exports[`BookForm component with all fields disabled 1`] = `
             class="MuiCardHeader-content css-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
               data-testid="standard-card-editors-header"
               id="standard-card-editors-header"
             >
@@ -6641,7 +6641,7 @@ exports[`BookForm component with all fields disabled 1`] = `
             class="MuiCardHeader-content css-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
               data-testid="standard-card-isbn-header"
               id="standard-card-isbn-header"
             >
@@ -6745,7 +6745,7 @@ exports[`BookForm component with all fields disabled 1`] = `
             class="MuiCardHeader-content css-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
               data-testid="standard-card-issn-header"
               id="standard-card-issn-header"
             >
@@ -6849,7 +6849,7 @@ exports[`BookForm component with all fields disabled 1`] = `
             class="MuiCardHeader-content css-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
               data-testid="standard-card-optional-details-header"
               id="standard-card-optional-details-header"
             >
@@ -6971,7 +6971,7 @@ exports[`BookForm should hide author when is edited book 1`] = `
             class="MuiCardHeader-content css-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
               data-testid="standard-card-book-information-header"
               id="standard-card-book-information-header"
             >
@@ -7348,7 +7348,7 @@ exports[`BookForm should hide author when is edited book 1`] = `
             class="MuiCardHeader-content css-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
               data-testid="standard-card-editors-header"
               id="standard-card-editors-header"
             >
@@ -7488,7 +7488,7 @@ exports[`BookForm should hide author when is edited book 1`] = `
             class="MuiCardHeader-content css-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
               data-testid="standard-card-isbn-header"
               id="standard-card-isbn-header"
             >
@@ -7591,7 +7591,7 @@ exports[`BookForm should hide author when is edited book 1`] = `
             class="MuiCardHeader-content css-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
               data-testid="standard-card-issn-header"
               id="standard-card-issn-header"
             >
@@ -7694,7 +7694,7 @@ exports[`BookForm should hide author when is edited book 1`] = `
             class="MuiCardHeader-content css-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
               data-testid="standard-card-optional-details-header"
               id="standard-card-optional-details-header"
             >

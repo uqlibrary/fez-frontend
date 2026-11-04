@@ -249,7 +249,11 @@ const FixRecord = ({ openAccess = false }) => {
                     <Grid container spacing={3}>
                         <Grid size={12}>
                             <StandardCard title={txt.subTitle} help={txt.help}>
-                                <PublicationCitation publication={recordToFix} citationStyle={'header'} />
+                                <PublicationCitation
+                                    publication={recordToFix}
+                                    citationStyle={'header'}
+                                    titleComponent="h4"
+                                />
                                 {!openAccess && (
                                     <Field
                                         control={control}

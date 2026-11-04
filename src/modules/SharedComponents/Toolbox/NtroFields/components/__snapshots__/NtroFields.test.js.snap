@@ -21,7 +21,7 @@ exports[`Component NtroFields should call componentDidUpdate 1`] = `
             class="MuiCardHeader-content css-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
               data-testid="standard-card-ntro-data-header"
               id="standard-card-ntro-data-header"
             >
@@ -1013,7 +1013,7 @@ exports[`Component NtroFields should call componentDidUpdate 1`] = `
             class="MuiCardHeader-content css-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
               data-testid="standard-card-grant-details-header"
               id="standard-card-grant-details-header"
             >
@@ -1209,7 +1209,7 @@ exports[`Component NtroFields should not show NTRO data card in the Ntro fields 
             class="MuiCardHeader-content css-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
               data-testid="standard-card-author/creator-research-statement-header"
               id="standard-card-author/creator-research-statement-header"
             >
@@ -1354,7 +1354,7 @@ exports[`Component NtroFields should not show NTRO data card in the Ntro fields 
             class="MuiCardHeader-content css-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
               data-testid="standard-card-grant-details-header"
               id="standard-card-grant-details-header"
             >
@@ -1550,7 +1550,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             class="MuiCardHeader-content css-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
               data-testid="standard-card-author/creator-research-statement-header"
               id="standard-card-author/creator-research-statement-header"
             >
@@ -2232,7 +2232,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             class="MuiCardHeader-content css-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
               data-testid="standard-card-ntro-data-header"
               id="standard-card-ntro-data-header"
             >
@@ -3420,7 +3420,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             class="MuiCardHeader-content css-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
               data-testid="standard-card-grant-details-header"
               id="standard-card-grant-details-header"
             >
@@ -3617,7 +3617,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
             class="MuiCardHeader-content css-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
               data-testid="standard-card-author/creator-research-statement-header"
               id="standard-card-author/creator-research-statement-header"
             >
@@ -4286,7 +4286,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
             class="MuiCardHeader-content css-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
               data-testid="standard-card-ntro-data-header"
               id="standard-card-ntro-data-header"
             >
@@ -5450,7 +5450,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
             class="MuiCardHeader-content css-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
               data-testid="standard-card-grant-details-header"
               id="standard-card-grant-details-header"
             >
@@ -5646,7 +5646,7 @@ exports[`Component NtroFields should render default view 1`] = `
             class="MuiCardHeader-content css-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
               data-testid="standard-card-ntro-data-header"
               id="standard-card-ntro-data-header"
             >
@@ -6810,7 +6810,7 @@ exports[`Component NtroFields should render default view 1`] = `
             class="MuiCardHeader-content css-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
               data-testid="standard-card-grant-details-header"
               id="standard-card-grant-details-header"
             >
@@ -7006,7 +7006,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
             class="MuiCardHeader-content css-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
               data-testid="standard-card-author/creator-research-statement-header"
               id="standard-card-author/creator-research-statement-header"
             >
@@ -7675,7 +7675,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
             class="MuiCardHeader-content css-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
               data-testid="standard-card-ntro-data-header"
               id="standard-card-ntro-data-header"
             >
@@ -8848,7 +8848,7 @@ exports[`Component NtroFields should show significance field even if contributio
             class="MuiCardHeader-content css-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
               data-testid="standard-card-author/creator-research-statement-header"
               id="standard-card-author/creator-research-statement-header"
             >
@@ -8993,7 +8993,7 @@ exports[`Component NtroFields should show significance field even if contributio
             class="MuiCardHeader-content css-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
               data-testid="standard-card-ntro-data-header"
               id="standard-card-ntro-data-header"
             >
@@ -10157,7 +10157,7 @@ exports[`Component NtroFields should show significance field even if contributio
             class="MuiCardHeader-content css-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
               data-testid="standard-card-grant-details-header"
               id="standard-card-grant-details-header"
             >

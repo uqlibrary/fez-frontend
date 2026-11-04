@@ -21,7 +21,7 @@ exports[`DesignForm component 1`] = `
             class="MuiCardHeader-content css-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
               data-testid="standard-card-design-information-header"
               id="standard-card-design-information-header"
             >
@@ -566,7 +566,7 @@ exports[`DesignForm component 1`] = `
             class="MuiCardHeader-content css-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
               data-testid="standard-card-designer-name-header"
               id="standard-card-designer-name-header"
             >
@@ -761,7 +761,7 @@ exports[`DesignForm component 1`] = `
             class="MuiCardHeader-content css-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
               data-testid="standard-card-optional-information-header"
               id="standard-card-optional-information-header"
             >
@@ -918,7 +918,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
             class="MuiCardHeader-content css-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
               data-testid="standard-card-design-information-header"
               id="standard-card-design-information-header"
             >
@@ -1463,7 +1463,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
             class="MuiCardHeader-content css-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
               data-testid="standard-card-designer-name-header"
               id="standard-card-designer-name-header"
             >
@@ -1775,7 +1775,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                 class="MuiCardHeader-content css-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
                   data-testid="standard-card-ntro-data-header"
                   id="standard-card-ntro-data-header"
                 >
@@ -2595,7 +2595,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                 class="MuiCardHeader-content css-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
                   data-testid="standard-card-grant-details-header"
                   id="standard-card-grant-details-header"
                 >
@@ -2784,7 +2784,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
             class="MuiCardHeader-content css-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
               data-testid="standard-card-optional-information-header"
               id="standard-card-optional-information-header"
             >
@@ -2941,7 +2941,7 @@ exports[`DesignForm component with all fields disabled 1`] = `
             class="MuiCardHeader-content css-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
               data-testid="standard-card-design-information-header"
               id="standard-card-design-information-header"
             >
@@ -3498,7 +3498,7 @@ exports[`DesignForm component with all fields disabled 1`] = `
             class="MuiCardHeader-content css-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
               data-testid="standard-card-designer-name-header"
               id="standard-card-designer-name-header"
             >
@@ -3694,7 +3694,7 @@ exports[`DesignForm component with all fields disabled 1`] = `
             class="MuiCardHeader-content css-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
               data-testid="standard-card-optional-information-header"
               id="standard-card-optional-information-header"
             >
@@ -3854,7 +3854,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
             class="MuiCardHeader-content css-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
               data-testid="standard-card-design-information-header"
               id="standard-card-design-information-header"
             >
@@ -4399,7 +4399,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
             class="MuiCardHeader-content css-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
               data-testid="standard-card-designer-name-header"
               id="standard-card-designer-name-header"
             >
@@ -4711,7 +4711,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                 class="MuiCardHeader-content css-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
                   data-testid="standard-card-ntro-data-header"
                   id="standard-card-ntro-data-header"
                 >
@@ -5531,7 +5531,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                 class="MuiCardHeader-content css-MuiCardHeader-content"
               >
                 <h3
-                  class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+                  class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
                   data-testid="standard-card-grant-details-header"
                   id="standard-card-grant-details-header"
                 >
@@ -5720,7 +5720,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
             class="MuiCardHeader-content css-MuiCardHeader-content"
           >
             <h3
-              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
               data-testid="standard-card-optional-information-header"
               id="standard-card-optional-information-header"
             >

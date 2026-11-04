@@ -230,7 +230,11 @@ const ClaimRecord = () => {
                     <Grid container spacing={3}>
                         <Grid size={12}>
                             <StandardCard title={txt.claimingInformation.title} help={txt.claimingInformation.help}>
-                                <PublicationCitation publication={publication} citationStyle="header" />
+                                <PublicationCitation
+                                    publication={publication}
+                                    citationStyle="header"
+                                    titleComponent="h4"
+                                />
                             </StandardCard>
                         </Grid>
                         {(!publication.rek_pid || !(authorLinked || contributorLinked)) && (

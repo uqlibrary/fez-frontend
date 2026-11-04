@@ -28,8 +28,8 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-MuiGrid-root"
                 style="min-width: 1px;"
               >
-                <h6
-                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-MuiTypography-root"
+                <h3
+                  class="MuiTypography-root MuiTypography-body1 PublicationCitation-citationTitle css-MuiTypography-root"
                 >
                   <a
                     data-discover="true"
@@ -37,7 +37,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                   >
                     Long noncoding RNAs CUPID1 and CUPID2 mediate breast cancer risk at 11q13 by modulating the response to DNA damage
                   </a>
-                </h6>
+                </h3>
               </div>
               <div
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
@@ -492,8 +492,8 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-MuiGrid-root"
                 style="min-width: 1px;"
               >
-                <h6
-                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-MuiTypography-root"
+                <h3
+                  class="MuiTypography-root MuiTypography-body1 PublicationCitation-citationTitle css-MuiTypography-root"
                 >
                   <a
                     data-discover="true"
@@ -501,7 +501,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                   >
                     Conf A proceedings
                   </a>
-                </h6>
+                </h3>
               </div>
               <div
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
@@ -680,8 +680,8 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-MuiGrid-root"
                 style="min-width: 1px;"
               >
-                <h6
-                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-MuiTypography-root"
+                <h3
+                  class="MuiTypography-root MuiTypography-body1 PublicationCitation-citationTitle css-MuiTypography-root"
                 >
                   <a
                     data-discover="true"
@@ -689,7 +689,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                   >
                     Testing book with cache
                   </a>
-                </h6>
+                </h3>
               </div>
               <div
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
@@ -842,8 +842,8 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-MuiGrid-root"
                 style="min-width: 1px;"
               >
-                <h6
-                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-MuiTypography-root"
+                <h3
+                  class="MuiTypography-root MuiTypography-body1 PublicationCitation-citationTitle css-MuiTypography-root"
                 >
                   <a
                     data-discover="true"
@@ -851,7 +851,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                   >
                     Conference paper with caching
                   </a>
-                </h6>
+                </h3>
               </div>
               <div
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
@@ -1007,8 +1007,8 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-MuiGrid-root"
                 style="min-width: 1px;"
               >
-                <h6
-                  class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-MuiTypography-root"
+                <h3
+                  class="MuiTypography-root MuiTypography-body1 PublicationCitation-citationTitle css-MuiTypography-root"
                 >
                   <a
                     data-discover="true"
@@ -1016,7 +1016,7 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                   >
                     Long-range regulators of the lncRNA HOTAIR enhance its prognostic potential in breast cancer
                   </a>
-                </h6>
+                </h3>
               </div>
               <div
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
