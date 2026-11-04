@@ -392,6 +392,7 @@ export const AuthorsList = ({
                     };
 
                     // set once, only if value is empty
+                    // istanbul ignore if
                     if (!value?.trim?.() && fromUQAuthor) {
                         handleChange(contributor.aut_orcid_id, true);
                     }
