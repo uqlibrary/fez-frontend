@@ -39,19 +39,27 @@ const DrawingControls = ({ draw, ...props }: DrawingControlsProps) => {
                 ...(props?.sx || {}),
             }}
         >
-            <ToggleButton value="static" aria-label="static" data-testid="static-button">
+            <ToggleButton value="static" aria-label="Pan the map view" data-testid="static-button">
                 <PanToolOutlined fontSize="small" />
             </ToggleButton>
-            <ToggleButton value="marker" aria-label="marker" data-testid="marker-button">
+            <ToggleButton value="marker" aria-label="Drop a marker on to the map" data-testid="marker-button">
                 <Room fontSize="small" />
             </ToggleButton>
-            <ToggleButton value="polygon" aria-label="polygon" data-testid="polygon-button">
+            <ToggleButton
+                value="polygon"
+                aria-label="Draw a polygon-shaped boundary area on the map"
+                data-testid="polygon-button"
+            >
                 <PentagonTwoTone fontSize="small" />
             </ToggleButton>
-            <ToggleButton value="rectangle" aria-label="rectangle" data-testid="rectangle-button">
+            <ToggleButton
+                value="rectangle"
+                aria-label="Draw a rectangular-shaped boundary area on the map"
+                data-testid="rectangle-button"
+            >
                 <RectangleTwoTone fontSize="small" />
             </ToggleButton>
-            <ToggleButton value="clear" aria-label="clear" data-testid="clear-button">
+            <ToggleButton value="clear" aria-label="Clear all drawings from the map" data-testid="clear-button">
                 <DeleteForever fontSize="small" />
             </ToggleButton>
         </ToggleButtonGroup>

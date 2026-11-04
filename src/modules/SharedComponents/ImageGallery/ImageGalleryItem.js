@@ -113,11 +113,6 @@ const ImageGalleryItem = ({
               }
             : {};
 
-    const listItemAriaLabel =
-        !advisory && !restricted
-            ? { 'aria-label': txt.components.imageGallery.thumbnail.ariaLabel.replace('[title]', item.rek_title) }
-            : {};
-
     const { ref, inView } = useInView({
         triggerOnce: true,
         rootMargin: '300px 0px', // tweak if needed
@@ -140,14 +135,13 @@ const ImageGalleryItem = ({
             }}
             tabIndex={0}
             onKeyPress={key => handleKeyboardPressActivate(key, () => viewRecord(navigate, url))}
-            {...listItemAriaLabel}
             {...clickLink}
             {...rest}
         >
             <ImageGalleryItemImage
                 item={item}
                 security={security}
-                alt={item.rek_title}
+                alt=""
                 width={itemWidth}
                 height={itemHeight}
                 classes={{

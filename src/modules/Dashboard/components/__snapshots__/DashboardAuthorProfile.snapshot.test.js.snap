@@ -99,7 +99,7 @@ exports[`Dashboard Author Profile test Render the authors profile as expected fo
                   target="_blank"
                 >
                   <div
-                    aria-label="Your Researcher (ISI) ID is A-1137-2007 - Click to review"
+                    aria-label="Click to review your Researcher (ISI) ID (opens in new window)"
                     class="fez-icon researcher ok"
                     data-mui-internal-clone-element="true"
                     style="width: 32px; height: 32px; border-radius: 32px;"
@@ -120,7 +120,7 @@ exports[`Dashboard Author Profile test Render the authors profile as expected fo
                   target="_blank"
                 >
                   <div
-                    aria-label="Your Scopus ID is 35478294000 - Click to review"
+                    aria-label="Click to review your Scopus ID (opens in new window)"
                     class="fez-icon scopus ok"
                     data-mui-internal-clone-element="true"
                     style="width: 32px; height: 32px; border-radius: 32px;"
@@ -141,7 +141,7 @@ exports[`Dashboard Author Profile test Render the authors profile as expected fo
                   target="_blank"
                 >
                   <div
-                    aria-label="Your Google Scholar ID is kUemDfMAAAAJ - Click to review"
+                    aria-label="Click to review your Google Scholar ID (opens in new window)"
                     class="fez-icon google_scholar ok"
                     data-mui-internal-clone-element="true"
                     style="width: 32px; height: 32px; border-radius: 32px;"
@@ -162,7 +162,7 @@ exports[`Dashboard Author Profile test Render the authors profile as expected fo
                   target="_blank"
                 >
                   <div
-                    aria-label="Your ORCID ID is 0000-0001-1111-1111 - Click to review"
+                    aria-label="Click to review your ORCID ID (opens in new window)"
                     class="fez-icon orcid ok"
                     data-mui-internal-clone-element="true"
                     style="width: 32px; height: 32px; border-radius: 32px;"

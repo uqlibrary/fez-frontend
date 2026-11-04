@@ -61,7 +61,6 @@ export const HelpIcon = forwardRef(
                             },
                         }}
                         fontSize={iconSize}
-                        titleAccess={tooltip}
                     />
                 </IconButton>
             </Tooltip>

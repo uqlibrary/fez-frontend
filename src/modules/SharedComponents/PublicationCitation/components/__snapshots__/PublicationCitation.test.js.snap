@@ -1626,7 +1626,6 @@ exports[`PublicationCitation  should render component with default item with ima
       id="publication-image-parent-UQ:676287"
     >
       <div
-        aria-label="Thumbnail image showing TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells"
         class="MuiImageListItem-root css-MuiImageListItem-root"
         data-testid="image-gallery-item-UQ:676287"
         id="image-gallery-item-UQ:676287"
@@ -1634,7 +1633,7 @@ exports[`PublicationCitation  should render component with default item with ima
         tabindex="0"
       >
         <img
-          alt="TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells"
+          alt=""
           class="image-gallery-item-image css"
           data-testid="imageGalleryItemImage-UQ:676287"
           height="150"
@@ -1984,7 +1983,7 @@ exports[`PublicationCitation  should render component with default item with ima
         tabindex="0"
       >
         <img
-          alt="TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells"
+          alt=""
           class="image-gallery-item-image css"
           data-testid="imageGalleryItemImage-UQ:676287"
           height="150"
@@ -4194,7 +4193,6 @@ exports[`PublicationCitation  should render component without image if whitelist
       id="publication-image-parent-UQ:676287"
     >
       <div
-        aria-label="Thumbnail image showing TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells"
         class="MuiImageListItem-root css-MuiImageListItem-root"
         data-testid="image-gallery-item-UQ:676287"
         id="image-gallery-item-UQ:676287"
@@ -4202,7 +4200,7 @@ exports[`PublicationCitation  should render component without image if whitelist
         tabindex="0"
       >
         <img
-          alt="TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells"
+          alt=""
           class="image-gallery-item-image css"
           data-testid="imageGalleryItemImage-UQ:676287"
           height="150"

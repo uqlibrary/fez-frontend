@@ -133,6 +133,7 @@ const JournalsOpenAccessIndicator = ({
                         : classes[status]),
                 }}
                 className={`openAccessIndicator ${type} ${status}`}
+                tabIndex="0"
                 {...rest}
             >
                 <Box

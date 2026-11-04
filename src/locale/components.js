@@ -335,8 +335,8 @@ export default {
                 scopusCountLabel: 'Scopus citation count is [count]',
                 googleCountLabel: 'Citation counts in Google Scholar',
                 altmetricCountLabel: 'Altmetric score is [count]',
-                openAccessLabel: 'Open Access - [oa_status] - Free to read (embargo date might apply)',
-                openAccessLockedLabel: 'Open Access - [oa_status] - Embargoed until [embargo_date]',
+                openAccessLabel: 'This work is Open Access - [oa_status] - Free to read (embargo date might apply)',
+                openAccessLockedLabel: 'This work is Open Access - [oa_status] - Embargoed until [embargo_date]',
                 altmetric: {
                     externalUrl: 'https://queensland.altmetric.com/details/[id]',
                     title: 'Altmetric',
