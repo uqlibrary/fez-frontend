@@ -19,7 +19,7 @@ const RibbonChartContainer = ({ data, locale, colours, label, id, children, ...r
         <React.Fragment>
             <SectionTitle data-testid={`${id}-title`}>{label}</SectionTitle>
             {!!data && (
-                <TableContainer data-testid={`${id}-table`} {...rest}>
+                <TableContainer data-testid={`${id}-table`} tabIndex={0} {...rest}>
                     <Table aria-label="table">
                         <TableHead>
                             <TableRow>
