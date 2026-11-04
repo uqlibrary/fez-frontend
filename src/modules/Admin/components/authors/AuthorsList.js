@@ -427,10 +427,7 @@ export const AuthorsList = ({
                     </Typography>
                 ),
                 Cell: ({ cell, row }) => {
-                    // default to ORCID type if it's coming from UQ author
-                    const value =
-                        cell.getValue()?.trim?.() ||
-                        (row?.original?.aut_orcid_id && AUTHOR_EXTERNAL_IDENTIFIER_TYPE_ORCID_VALUE);
+                    const value = cell.getValue();
                     return (
                         <Typography
                             variant="body2"
