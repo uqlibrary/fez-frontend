@@ -405,7 +405,8 @@ export const AuthorsListWithAffiliates = ({
                     </Typography>
                 ),
                 Cell: ({ cell, row }) => {
-                    const value = cell.getValue();
+                    // default to UQ author's ORCID
+                    const value = cell.getValue()?.trim?.() || row?.original?.aut_orcid_id;
                     return (
                         <Typography
                             variant="body2"
@@ -417,23 +418,32 @@ export const AuthorsListWithAffiliates = ({
                     );
                 },
                 Edit: ({ row, column }) => {
-                    const value = row._valuesCache.externalIdentifier || '';
-                    const errors = validationErrors[row.id] || [];
+                    const contributor = { ...row.original, ...row._valuesCache };
+                    const value = contributor.externalIdentifier || '';
+                    const fromUQAuthor = !!contributor.aut_orcid_id?.trim?.();
+                    const errors = (!fromUQAuthor && validationErrors[row.id]) || [];
                     const error = getValidationError(errors, 'externalIdentifier');
 
-                    const handleChange = e => {
+                    const handleChange = (value, skipValidation = false) => {
                         row._valuesCache = {
                             ...row._valuesCache,
-                            [column.id]: e.target.value || /* istanbul ignore next */ null,
+                            [column.id]: value || /* istanbul ignore next */ null,
                         };
-                        handleValidation(row, column.id, e.target.value || /* istanbul ignore next */ null);
+                        !skipValidation && handleValidation(row, column.id, value || /* istanbul ignore next */ null);
                     };
+
+                    // set once, only if value is empty
+                    if (!value?.trim?.() && fromUQAuthor) {
+                        handleChange(contributor.aut_orcid_id, true);
+                    }
+
                     return (
                         <Grid container spacing={2} sx={{ width: '100%' }}>
                             <Grid style={{ flexGrow: '1' }}>
                                 <TextField
+                                    disabled={fromUQAuthor}
                                     value={value}
-                                    onChange={handleChange}
+                                    onChange={e => handleChange(e.target.value)}
                                     textFieldId={`${contributorEditorId}-external-identifier`}
                                     error={!!error}
                                     errorText={error}
