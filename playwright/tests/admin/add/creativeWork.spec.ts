@@ -1,5 +1,5 @@
 import { test, expect, Page } from '../../../test';
-import { adminEditTabbedView, assertAffiliationsAllowed } from '../helpers';
+import { adminEditTabbedView, assertAffiliationsAllowed, selectUQAuthor } from '../helpers';
 import { clickAutoSuggestion } from '../../../lib/helpers';
 import { typeRichTextEditor } from '../../../lib/richTextEditor';
 
@@ -68,6 +68,16 @@ test.describe('As an admin, I can', () => {
 
         await assertCreateAuthor(page, 'Test Author');
         await assertCreateAuthor(page, 'Second Author');
+        // test autopopulating ORCID when selecting an UQ author
+        await selectUQAuthor(page, 'Steve Su (uqysu4)');
+        await expect(page.getByTestId('rek-author-external-identifier-input')).toHaveValue('0000-0000-0000-1234');
+        await expect(page.getByTestId('rek-author-external-identifier-input')).toBeDisabled();
+        await expect(page.getByTestId('rek-author-external-identifier-type-select')).toContainText('Orcid');
+        await expect(page.getByTestId('rek-author-external-identifier-type-input')).toBeDisabled();
+        await page.getByTestId('rek-author-add-save').click();
+        await expect(page.getByTestId('rek-author-list-row-2-external-identifier')).toHaveText('0000-0000-0000-1234');
+        await expect(page.getByTestId('rek-author-list-row-2-external-identifier-type')).toHaveText('Orcid');
+
         const statement1 = 'Test Author Statement';
         const statement2 = 'Second Author Statement';
         await assertCanSetScaleStatement(page, 0, 1, 'Test Author Statement');

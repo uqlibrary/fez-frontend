@@ -144,6 +144,7 @@ export const searchKeyList = {
             "aut_org_staff_id": "0088630",
             "aut_display_name": "Steve Su",
             "aut_org_username": "uqysu4",
+            "aut_orcid_id": "0000-0000-0000-1234",
             "aut_fname": "Steve",
             "aut_lname": "Su",
             "aut_title": "Dr"
@@ -154,6 +155,7 @@ export const searchKeyList = {
             "aut_org_staff_id": "0090136",
             "aut_display_name": "Steven Platz",
             "aut_org_username": "uqsplatz",
+            "aut_orcid_id": "0000-0000-0000-2345",
             "aut_fname": "Steven",
             "aut_lname": "Platz",
             "aut_title": "Mr"

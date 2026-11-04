@@ -1,7 +1,12 @@
 import { test, expect } from '../../../test';
 import { clickAutoSuggestion } from '../../../lib/helpers';
 import { typeRichTextEditor } from '../../../lib/richTextEditor';
-import { adminEditCheckTabErrorBadge, adminEditTabbedView, assertAffiliationsAllowed } from '../helpers';
+import {
+    adminEditCheckTabErrorBadge,
+    adminEditTabbedView,
+    assertAffiliationsAllowed,
+    selectUQAuthor,
+} from '../helpers';
 
 test.describe('As an admin,', () => {
     test('I can add a video', async ({ page }) => {
@@ -70,5 +75,15 @@ test.describe('Author affiliations', () => {
             orgName: 'The University of Queensland',
             rowId: 0,
         });
+
+        // test autopopulating ORCID when selecting an UQ author
+        await selectUQAuthor(page, 'Steven Platz');
+        await expect(page.getByTestId('rek-author-external-identifier-input')).toHaveValue('0000-0000-0000-2345');
+        await expect(page.getByTestId('rek-author-external-identifier-input')).toBeDisabled();
+        await expect(page.getByTestId('rek-author-external-identifier-type-select')).toContainText('Orcid');
+        await expect(page.getByTestId('rek-author-external-identifier-type-input')).toBeDisabled();
+        await page.getByTestId('rek-author-add-save').click();
+        await expect(page.getByTestId('rek-author-list-row-1-external-identifier')).toHaveText('0000-0000-0000-2345');
+        await expect(page.getByTestId('rek-author-list-row-1-external-identifier-type')).toHaveText('Orcid');
     });
 });
