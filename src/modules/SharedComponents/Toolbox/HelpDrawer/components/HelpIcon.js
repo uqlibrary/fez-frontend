@@ -43,7 +43,7 @@ export const HelpIcon = forwardRef(
                 <IconButton
                     id={id}
                     ref={ref}
-                    aria-label={tooltip}
+                    aria-label={`${title} - ${tooltip}`}
                     data-analyticsid={id}
                     data-testid={id}
                     size={iconSize}
