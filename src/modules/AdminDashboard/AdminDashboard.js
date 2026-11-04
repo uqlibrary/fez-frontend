@@ -88,6 +88,7 @@ const AdminDashboard = () => {
                                     key={tab.title}
                                     label={tab.title}
                                     sx={{ minHeight: 'auto' }}
+                                    tabIndex={0}
                                     {...a11yProps(tab.id)}
                                     {...tabProps.find(_tab => _tab.id === tab.id)?.render(adminDashboardTodayData)}
                                 />

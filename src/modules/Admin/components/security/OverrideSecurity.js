@@ -19,6 +19,7 @@ export const OverrideSecurity = ({ label, value, onChange, disabled, overrideSec
                     disabled={disabled}
                     onChange={e => onChange(overrideSecurityValueNormaliser(e.target.checked))}
                     checked={normalisedValue === 0}
+                    tabIndex={0}
                 />
             }
             {...{ label }}

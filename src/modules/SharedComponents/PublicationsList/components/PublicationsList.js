@@ -105,6 +105,7 @@ export const PublicationsList = ({
                                 name="select-all-publications"
                                 checked={allSelected}
                                 indeterminate={!allSelected && Object.keys(recordsSelected).length > 0}
+                                tabIndex={0}
                             />
                         }
                         label={
@@ -145,6 +146,7 @@ export const PublicationsList = ({
                                 name={`select-publication-${index}-input`}
                                 onChange={handleChange(publication)}
                                 checked={recordsSelected.hasOwnProperty(publication.rek_pid)}
+                                tabIndex={0}
                             />
                         </Grid>
                         <Grid size={{ xs: 10, sm: 11 }}>{renderPublicationCitation(index, publication)}</Grid>
