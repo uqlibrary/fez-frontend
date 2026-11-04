@@ -33,7 +33,6 @@ import {
     ORG_TYPES_LOOKUP,
     AFFILIATION_TYPE_UQ,
     AUTHOR_EXTERNAL_IDENTIFIER_TYPE,
-    AUTHOR_EXTERNAL_IDENTIFIER_TYPE_ORCID_VALUE,
 } from 'config/general';
 import { default as globalLocale } from 'locale/global';
 import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField/components/NewGenericSelectField';

@@ -843,7 +843,10 @@ describe('AuthorsList', () => {
         expect(queryByText('Orcid')).not.toBeInTheDocument();
         fireEvent.click(getByTestId('rek-author-add'));
         fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'test' } });
-        expect(queryByText('Orcid')).toBeInTheDocument();
+        expect(getByTestId('rek-author-external-identifier-type-input')).toHaveValue(
+            String(AUTHOR_EXTERNAL_IDENTIFIER_TYPE_ORCID_VALUE),
+        );
+        expect(getByTestId('rek-author-external-identifier-type-input')).toBeDisabled();
         fireEvent.click(getByTestId('rek-author-add-save'));
 
         expect(queryByText('Orcid')).not.toBeInTheDocument();
@@ -852,10 +855,80 @@ describe('AuthorsList', () => {
         // update author
         fireEvent.click(getByTestId('rek-author-list-row-0-edit'));
         fireEvent.change(getByTestId('rek-author-external-identifier-input'), { target: { value: externalId } });
+        expect(getByTestId('rek-author-external-identifier-type-input')).toHaveValue(
+            String(AUTHOR_EXTERNAL_IDENTIFIER_TYPE_ORCID_VALUE),
+        );
+        expect(getByTestId('rek-author-external-identifier-type-input')).toBeDisabled();
         fireEvent.click(getByTestId('rek-author-update-save'));
 
         expect(queryByText('Orcid')).toBeInTheDocument();
         expect(getByTestId('rek-author-list-row-0-external-identifier')).toHaveTextContent(externalId);
+    });
+
+    it("should render UQ author's ORCID", () => {
+        const uqAuthorOrcid = '0000-0000-0000-1234';
+        const { getByTestId, container, queryByText } = setup({
+            showExternalIdentifierInput: true,
+            defaultExternalIdentifierType: AUTHOR_EXTERNAL_IDENTIFIER_TYPE_ORCID_VALUE,
+            list: [
+                {
+                    nameAsPublished: 'Zed, Zed',
+                    creatorRole: '',
+                    uqIdentifier: '2000000001',
+                    uqUsername: 'uqzed',
+                    aut_id: 2000000001,
+                    orgaff: 'Missing',
+                    orgtype: '',
+                    affiliation: 'NotUQ',
+                    email: '',
+                    externalIdentifier: uqAuthorOrcid,
+                    externalIdentifierType: 457086,
+                    aut_org_username: 'uqzed',
+                    aut_student_username: 's123456',
+                    aut_display_name: 'Zed, Zed',
+                    aut_orcid_id: uqAuthorOrcid,
+                    affiliations: [],
+                    value: 'Zed, Zed (uqzed)',
+                    id: 2000000001,
+                    aut_title: 'Mr',
+                    aut_fname: 'Zed',
+                    aut_lname: 'Zed',
+                },
+                {
+                    nameAsPublished: 'User, Test',
+                    creatorRole: '',
+                    uqIdentifier: '0',
+                    uqUsername: '',
+                    aut_id: 0,
+                    orgaff: 'Missing',
+                    orgtype: '',
+                    affiliation: 'NotUQ',
+                    email: '',
+                    externalIdentifier: null,
+                    externalIdentifierType: null,
+                    aut_org_username: '',
+                    aut_student_username: '',
+                    aut_display_name: 0,
+                    aut_orcid_id: null,
+                    affiliations: [],
+                },
+            ],
+        });
+
+        expect(queryByText('Orcid')).toBeInTheDocument();
+        expect(queryByText(uqAuthorOrcid)).toBeInTheDocument();
+
+        fireEvent.click(getByTestId('rek-author-list-row-0-edit'));
+        expect(getByTestId('rek-author-external-identifier-input')).toHaveValue(uqAuthorOrcid);
+        expect(getByTestId('rek-author-external-identifier-input')).toBeDisabled();
+        expect(getByTestId('rek-author-external-identifier-type-input')).toHaveValue(
+            String(AUTHOR_EXTERNAL_IDENTIFIER_TYPE_ORCID_VALUE),
+        );
+        expect(getByTestId('rek-author-external-identifier-type-input')).toBeDisabled();
+        fireEvent.click(getByTestId('rek-author-update-save'));
+
+        expect(queryByText('Orcid')).toBeInTheDocument();
+        expect(queryByText(uqAuthorOrcid)).toBeInTheDocument();
     });
 
     it('should delete row correctly', async () => {
