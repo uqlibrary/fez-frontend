@@ -46,7 +46,7 @@ const JournalsListCollapsibleDataPanelContent = ({ item, index, data, isFirstRow
                 key={item.key}
                 sx={{
                     display: 'flex',
-                    alignItems: 'flex-end',
+                    alignItems: 'center',
                 }}
             >
                 <Typography
@@ -63,9 +63,7 @@ const JournalsListCollapsibleDataPanelContent = ({ item, index, data, isFirstRow
                         </Box>
                     )}
                 </Typography>
-                {!!item.titleHelp && (
-                    <HelpIcon {...item.titleHelp} testId={`${item.key}-${index}`} iconSize={'small'} />
-                )}
+                {!!item.titleHelp && <HelpIcon {...item.titleHelp} testId={`${item.key}-${index}`} />}
             </Box>
             <Typography
                 variant="body1"

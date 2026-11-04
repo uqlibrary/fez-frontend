@@ -82,10 +82,10 @@ const AddNewDialog: React.FC<CreateListDialogProps> = ({ open, onClose, onCreate
                 <IconButton
                     data-testid="add-to-user-list-dialog-close-button"
                     onClick={handleClose}
-                    size="small"
+                    size="medium"
                     disabled={isSubmitting}
                 >
-                    <CloseIcon fontSize="small" />
+                    <CloseIcon fontSize="medium" />
                 </IconButton>
             </DialogTitle>
             <DialogContent>

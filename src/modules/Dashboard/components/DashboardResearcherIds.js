@@ -72,8 +72,8 @@ export const renderButton = args => {
         }
     }
 
-    const externalIconClassName = `fez-icon ${item} ${values[item] && authenticated[item] ? 'ok' : 'error'}`;
-    const internalIconClassName = `fez-icon ${item} dashboard ${authenticated[item] ? 'ok' : 'error'}`;
+    const externalIconClassName = `fez-icon ${item} ${values[item] && authenticated[item] ? 'ok' : 'error'} xxlarge`;
+    const internalIconClassName = `fez-icon ${item} dashboard ${authenticated[item] ? 'ok' : 'error'} xxlarge`;
 
     return (
         <Grid key={index}>

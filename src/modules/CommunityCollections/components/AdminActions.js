@@ -84,7 +84,7 @@ export const AdminActions = ({
                 onClick={handleClick}
                 size="large"
             >
-                <MoreVertIcon fontSize="small" />
+                <MoreVertIcon fontSize="medium" />
             </IconButton>
             <Menu
                 id={`admin-actions-menu-${record}`}

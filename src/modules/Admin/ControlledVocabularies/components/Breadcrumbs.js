@@ -9,7 +9,7 @@ const Breadcrumbs = ({ id, data, onBreadcrumbClick, disableLastPath = true }) =>
     return (
         <MuiBreadcrumbs
             aria-label="breadcrumb"
-            separator={<NavigateNextIcon fontSize="small" />}
+            separator={<NavigateNextIcon fontSize="medium" />}
             id={id}
             data-testid={id}
         >

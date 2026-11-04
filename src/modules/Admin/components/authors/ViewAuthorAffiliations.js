@@ -54,7 +54,7 @@ const ViewAuthorAffiliations = ({ rowData, locale, onChange }) => {
                             data-testid={`orgChip-${item.af_org_id}`}
                             label={getChipLabel(item.af_percent_affiliation, PRECISION)}
                             variant="outlined"
-                            size={'small'}
+                            size={'medium'}
                             color={hasProblems ? 'error' : 'primary'}
                         />
                     </Grid>
@@ -73,7 +73,7 @@ const ViewAuthorAffiliations = ({ rowData, locale, onChange }) => {
                             data-testid={'orgChip-error'}
                             label={'0%'}
                             variant="outlined"
-                            size={'small'}
+                            size={'medium'}
                             color={'error'}
                         />
                     </Grid>
