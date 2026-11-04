@@ -838,9 +838,9 @@ describe('AuthorsList', () => {
             showExternalIdentifierInput: true,
             defaultExternalIdentifierType: AUTHOR_EXTERNAL_IDENTIFIER_TYPE_ORCID_VALUE,
         });
+        expect(queryByText('Orcid')).not.toBeInTheDocument();
 
         // add a new author
-        expect(queryByText('Orcid')).not.toBeInTheDocument();
         fireEvent.click(getByTestId('rek-author-add'));
         fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'test' } });
         expect(getByTestId('rek-author-external-identifier-type-input')).toHaveValue(
@@ -852,7 +852,7 @@ describe('AuthorsList', () => {
         expect(queryByText('Orcid')).not.toBeInTheDocument();
         expect(container).toHaveTableRowsLength(1);
 
-        // update author
+        // update author and add ORCID
         fireEvent.click(getByTestId('rek-author-list-row-0-edit'));
         fireEvent.change(getByTestId('rek-author-external-identifier-input'), { target: { value: externalId } });
         expect(getByTestId('rek-author-external-identifier-type-input')).toHaveValue(
@@ -861,8 +861,8 @@ describe('AuthorsList', () => {
         expect(getByTestId('rek-author-external-identifier-type-input')).toBeDisabled();
         fireEvent.click(getByTestId('rek-author-update-save'));
 
-        expect(queryByText('Orcid')).toBeInTheDocument();
         expect(getByTestId('rek-author-list-row-0-external-identifier')).toHaveTextContent(externalId);
+        expect(getByTestId('rek-author-list-row-0-external-identifier-type')).toHaveTextContent('Orcid');
     });
 
     it('should delete row correctly', async () => {
