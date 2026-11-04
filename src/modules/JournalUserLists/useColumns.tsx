@@ -114,7 +114,12 @@ export const useColumns = ({
                 headerAlign: 'center',
                 align: 'center',
                 renderCell: (props: GridRenderCellParams) => (
-                    <span data-testid={`fjl-is-public-${props.id}`}>{(props.value && <Done />) || '-'}</span>
+                    <span data-testid={`fjl-is-public-${props.id}`}>
+                        {(props.value && (
+                            <Done role="img" aria-label={`${props.row.label} is shareable`} aria-hidden="false" />
+                        )) ||
+                            '-'}
+                    </span>
                 ),
                 renderEditCell: (props: GridRenderEditCellParams) => (
                     <Switch

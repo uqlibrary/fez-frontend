@@ -8,6 +8,7 @@ import Tooltip from '@mui/material/Tooltip';
 import AcceptedIcon from '@mui/icons-material/School';
 import PublishedIcon from '@mui/icons-material/AutoStoriesOutlined';
 import DiamondIcon from '@mui/icons-material/Diamond';
+import { visuallyHidden } from '@mui/utils';
 
 import { status as oaStatus, types } from './utils';
 
@@ -133,6 +134,7 @@ const JournalsOpenAccessIndicator = ({
                         : classes[status]),
                 }}
                 className={`openAccessIndicator ${type} ${status}`}
+                tabIndex="0"
                 {...rest}
             >
                 <Box
@@ -144,11 +146,14 @@ const JournalsOpenAccessIndicator = ({
                     }}
                     className="wrapper"
                 >
-                    <Box sx={{ gridArea: 'icon', ...columnStyle }} className="iconColumn">
+                    <Box sx={{ gridArea: 'icon', ...columnStyle }} className="iconColumn" aria-hidden="true">
                         {getIcon({ showS2O, embargoPeriod, Icon })}
                     </Box>
                     <Box sx={{ gridArea: 'label', ...columnStyle }} className="labelColumn">
-                        {label ?? status}
+                        <Box component="span" sx={visuallyHidden}>
+                            {tooltip}
+                        </Box>
+                        <span aria-hidden="true">{label ?? status}</span>
                     </Box>
                 </Box>
             </Box>

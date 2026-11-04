@@ -34,7 +34,7 @@ const CulturalNotice = () => {
     return (
         <StandardCard title={txt.title} primaryHeader>
             <StyledCulturalNoticeParent>
-                <StyledCulturalNoticeImage src={txt.imagePath} alt={txt.title} />
+                <StyledCulturalNoticeImage src={txt.imagePath} alt="" />
                 <Typography variant={'body2'}>{txt.text}</Typography>
             </StyledCulturalNoticeParent>
         </StandardCard>

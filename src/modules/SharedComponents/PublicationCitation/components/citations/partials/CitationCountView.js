@@ -17,7 +17,6 @@ export const CitationCountView = ({ source, count, link, title }) => {
                 sx={{ ...theme.typography.caption, marginRight: '8px', display: 'inline-flex', alignItems: 'center' }}
                 href={link}
                 aria-label={title}
-                title={title}
                 openInNewIcon={false}
             >
                 <span className={`fez-icon ${source} xxlarge`} />

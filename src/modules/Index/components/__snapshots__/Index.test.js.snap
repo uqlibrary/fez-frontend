@@ -245,7 +245,7 @@ exports[`Index page should render placeholders 1`] = `
                     class="css"
                   >
                     <img
-                      alt="Open to Collaborate"
+                      alt=""
                       class="css"
                       src="https://assets.library.uq.edu.au/local-contexts/ci_notice_open_to_collaborate.png"
                     />

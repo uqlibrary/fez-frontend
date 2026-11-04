@@ -433,7 +433,6 @@ exports[`PublicationCitation  should render button disabled with spinners on act
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
-                        title="Full citation in Web of science will open in a new window"
                       >
                         <span
                           class="fez-icon wos xxlarge"
@@ -454,7 +453,6 @@ exports[`PublicationCitation  should render button disabled with spinners on act
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
-                        title="Full citation in Google scholar will open in a new window"
                       >
                         <span
                           class="fez-icon google xxlarge"
@@ -672,7 +670,6 @@ exports[`PublicationCitation  should render component with citation unavailable 
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
-                        title="Full citation in Web of science will open in a new window"
                       >
                         <span
                           class="fez-icon wos xxlarge"
@@ -693,7 +690,6 @@ exports[`PublicationCitation  should render component with citation unavailable 
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
-                        title="Full citation in Scopus will open in a new window"
                       >
                         <span
                           class="fez-icon scopus xxlarge"
@@ -714,7 +710,6 @@ exports[`PublicationCitation  should render component with citation unavailable 
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
-                        title="Full citation in Altmetric will open in a new window"
                       >
                         <span
                           class="fez-icon altmetric xxlarge"
@@ -735,7 +730,6 @@ exports[`PublicationCitation  should render component with citation unavailable 
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
-                        title="Full citation in Google scholar will open in a new window"
                       >
                         <span
                           class="fez-icon google xxlarge"
@@ -830,7 +824,6 @@ exports[`PublicationCitation  should render component with citation unavailable 
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
-                        title="Full citation in Web of science will open in a new window"
                       >
                         <span
                           class="fez-icon wos xxlarge"
@@ -851,7 +844,6 @@ exports[`PublicationCitation  should render component with citation unavailable 
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
-                        title="Full citation in Scopus will open in a new window"
                       >
                         <span
                           class="fez-icon scopus xxlarge"
@@ -872,7 +864,6 @@ exports[`PublicationCitation  should render component with citation unavailable 
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
-                        title="Full citation in Altmetric will open in a new window"
                       >
                         <span
                           class="fez-icon altmetric xxlarge"
@@ -893,7 +884,6 @@ exports[`PublicationCitation  should render component with citation unavailable 
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
-                        title="Full citation in Google scholar will open in a new window"
                       >
                         <span
                           class="fez-icon google xxlarge"
@@ -1085,7 +1075,6 @@ exports[`PublicationCitation  should render component with content indicators 1`
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
-                        title="Full citation in Web of science will open in a new window"
                       >
                         <span
                           class="fez-icon wos xxlarge"
@@ -1106,7 +1095,6 @@ exports[`PublicationCitation  should render component with content indicators 1`
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
-                        title="Full citation in Google scholar will open in a new window"
                       >
                         <span
                           class="fez-icon google xxlarge"
@@ -1315,7 +1303,6 @@ exports[`PublicationCitation  should render component with default actions 1`] =
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
-                        title="Full citation in Web of science will open in a new window"
                       >
                         <span
                           class="fez-icon wos xxlarge"
@@ -1336,7 +1323,6 @@ exports[`PublicationCitation  should render component with default actions 1`] =
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
-                        title="Full citation in Google scholar will open in a new window"
                       >
                         <span
                           class="fez-icon google xxlarge"
@@ -1564,7 +1550,6 @@ exports[`PublicationCitation  should render component with default item 1`] = `
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
-                        title="Full citation in Web of science will open in a new window"
                       >
                         <span
                           class="fez-icon wos xxlarge"
@@ -1585,7 +1570,6 @@ exports[`PublicationCitation  should render component with default item 1`] = `
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
-                        title="Full citation in Google scholar will open in a new window"
                       >
                         <span
                           class="fez-icon google xxlarge"
@@ -1642,7 +1626,6 @@ exports[`PublicationCitation  should render component with default item with ima
       id="publication-image-parent-UQ:676287"
     >
       <div
-        aria-label="Thumbnail image showing TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells"
         class="MuiImageListItem-root css-MuiImageListItem-root"
         data-testid="image-gallery-item-UQ:676287"
         id="image-gallery-item-UQ:676287"
@@ -1650,7 +1633,7 @@ exports[`PublicationCitation  should render component with default item with ima
         tabindex="0"
       >
         <img
-          alt="TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells"
+          alt=""
           class="image-gallery-item-image css"
           data-testid="imageGalleryItemImage-UQ:676287"
           height="150"
@@ -1894,7 +1877,6 @@ exports[`PublicationCitation  should render component with default item with ima
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
-                        title="Full citation in Web of science will open in a new window"
                       >
                         <span
                           class="fez-icon wos xxlarge"
@@ -1915,7 +1897,6 @@ exports[`PublicationCitation  should render component with default item with ima
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
-                        title="Full citation in Scopus will open in a new window"
                       >
                         <span
                           class="fez-icon scopus xxlarge"
@@ -1936,7 +1917,6 @@ exports[`PublicationCitation  should render component with default item with ima
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
-                        title="Full citation in Altmetric will open in a new window"
                       >
                         <span
                           class="fez-icon altmetric xxlarge"
@@ -1957,7 +1937,6 @@ exports[`PublicationCitation  should render component with default item with ima
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
-                        title="Full citation in Google scholar will open in a new window"
                       >
                         <span
                           class="fez-icon google xxlarge"
@@ -2004,7 +1983,7 @@ exports[`PublicationCitation  should render component with default item with ima
         tabindex="0"
       >
         <img
-          alt="TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells"
+          alt=""
           class="image-gallery-item-image css"
           data-testid="imageGalleryItemImage-UQ:676287"
           height="150"
@@ -2249,7 +2228,6 @@ exports[`PublicationCitation  should render component with default item with ima
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
-                        title="Full citation in Web of science will open in a new window"
                       >
                         <span
                           class="fez-icon wos xxlarge"
@@ -2270,7 +2248,6 @@ exports[`PublicationCitation  should render component with default item with ima
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
-                        title="Full citation in Scopus will open in a new window"
                       >
                         <span
                           class="fez-icon scopus xxlarge"
@@ -2291,7 +2268,6 @@ exports[`PublicationCitation  should render component with default item with ima
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
-                        title="Full citation in Altmetric will open in a new window"
                       >
                         <span
                           class="fez-icon altmetric xxlarge"
@@ -2312,7 +2288,6 @@ exports[`PublicationCitation  should render component with default item with ima
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
-                        title="Full citation in Google scholar will open in a new window"
                       >
                         <span
                           class="fez-icon google xxlarge"
@@ -2567,7 +2542,6 @@ exports[`PublicationCitation  should render component with default item without 
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
-                        title="Full citation in Web of science will open in a new window"
                       >
                         <span
                           class="fez-icon wos xxlarge"
@@ -2588,7 +2562,6 @@ exports[`PublicationCitation  should render component with default item without 
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
-                        title="Full citation in Scopus will open in a new window"
                       >
                         <span
                           class="fez-icon scopus xxlarge"
@@ -2609,7 +2582,6 @@ exports[`PublicationCitation  should render component with default item without 
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
-                        title="Full citation in Altmetric will open in a new window"
                       >
                         <span
                           class="fez-icon altmetric xxlarge"
@@ -2630,7 +2602,6 @@ exports[`PublicationCitation  should render component with default item without 
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
-                        title="Full citation in Google scholar will open in a new window"
                       >
                         <span
                           class="fez-icon google xxlarge"
@@ -2817,7 +2788,6 @@ exports[`PublicationCitation  should render component with default item without 
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
-                        title="Full citation in Web of science will open in a new window"
                       >
                         <span
                           class="fez-icon wos xxlarge"
@@ -2838,7 +2808,6 @@ exports[`PublicationCitation  should render component with default item without 
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
-                        title="Full citation in Google scholar will open in a new window"
                       >
                         <span
                           class="fez-icon google xxlarge"
@@ -2943,7 +2912,6 @@ exports[`PublicationCitation  should render component with default list hiding t
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
-                        title="Full citation in Web of science will open in a new window"
                       >
                         <span
                           class="fez-icon wos xxlarge"
@@ -2964,7 +2932,6 @@ exports[`PublicationCitation  should render component with default list hiding t
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
-                        title="Full citation in Google scholar will open in a new window"
                       >
                         <span
                           class="fez-icon google xxlarge"
@@ -3173,7 +3140,6 @@ exports[`PublicationCitation  should render component with default list hiding t
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
-                        title="Full citation in Web of science will open in a new window"
                       >
                         <span
                           class="fez-icon wos xxlarge"
@@ -3194,7 +3160,6 @@ exports[`PublicationCitation  should render component with default list hiding t
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
-                        title="Full citation in Google scholar will open in a new window"
                       >
                         <span
                           class="fez-icon google xxlarge"
@@ -3403,7 +3368,6 @@ exports[`PublicationCitation  should render component with default list hiding t
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
-                        title="Full citation in Web of science will open in a new window"
                       >
                         <span
                           class="fez-icon wos xxlarge"
@@ -3424,7 +3388,6 @@ exports[`PublicationCitation  should render component with default list hiding t
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
-                        title="Full citation in Google scholar will open in a new window"
                       >
                         <span
                           class="fez-icon google xxlarge"
@@ -3633,7 +3596,6 @@ exports[`PublicationCitation  should render component with empty custom actions 
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
-                        title="Full citation in Web of science will open in a new window"
                       >
                         <span
                           class="fez-icon wos xxlarge"
@@ -3654,7 +3616,6 @@ exports[`PublicationCitation  should render component with empty custom actions 
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
-                        title="Full citation in Google scholar will open in a new window"
                       >
                         <span
                           class="fez-icon google xxlarge"
@@ -3870,7 +3831,6 @@ exports[`PublicationCitation  should render component with publication from mult
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
-                        title="Full citation in Web of science will open in a new window"
                       >
                         <span
                           class="fez-icon wos xxlarge"
@@ -3891,7 +3851,6 @@ exports[`PublicationCitation  should render component with publication from mult
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
-                        title="Full citation in Google scholar will open in a new window"
                       >
                         <span
                           class="fez-icon google xxlarge"
@@ -4123,7 +4082,6 @@ exports[`PublicationCitation  should render component without a title 1`] = `
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
-                        title="Full citation in Web of science will open in a new window"
                       >
                         <span
                           class="fez-icon wos xxlarge"
@@ -4144,7 +4102,6 @@ exports[`PublicationCitation  should render component without a title 1`] = `
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
-                        title="Full citation in Google scholar will open in a new window"
                       >
                         <span
                           class="fez-icon google xxlarge"
@@ -4236,7 +4193,6 @@ exports[`PublicationCitation  should render component without image if whitelist
       id="publication-image-parent-UQ:676287"
     >
       <div
-        aria-label="Thumbnail image showing TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells"
         class="MuiImageListItem-root css-MuiImageListItem-root"
         data-testid="image-gallery-item-UQ:676287"
         id="image-gallery-item-UQ:676287"
@@ -4244,7 +4200,7 @@ exports[`PublicationCitation  should render component without image if whitelist
         tabindex="0"
       >
         <img
-          alt="TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells"
+          alt=""
           class="image-gallery-item-image css"
           data-testid="imageGalleryItemImage-UQ:676287"
           height="150"
@@ -4489,7 +4445,6 @@ exports[`PublicationCitation  should render component without image if whitelist
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
-                        title="Full citation in Web of science will open in a new window"
                       >
                         <span
                           class="fez-icon wos xxlarge"
@@ -4510,7 +4465,6 @@ exports[`PublicationCitation  should render component without image if whitelist
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
-                        title="Full citation in Scopus will open in a new window"
                       >
                         <span
                           class="fez-icon scopus xxlarge"
@@ -4531,7 +4485,6 @@ exports[`PublicationCitation  should render component without image if whitelist
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
-                        title="Full citation in Altmetric will open in a new window"
                       >
                         <span
                           class="fez-icon altmetric xxlarge"
@@ -4552,7 +4505,6 @@ exports[`PublicationCitation  should render component without image if whitelist
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
-                        title="Full citation in Google scholar will open in a new window"
                       >
                         <span
                           class="fez-icon google xxlarge"
@@ -4744,7 +4696,6 @@ exports[`PublicationCitation  should render primary action button 1`] = `
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
-                        title="Full citation in Web of science will open in a new window"
                       >
                         <span
                           class="fez-icon wos xxlarge"
@@ -4765,7 +4716,6 @@ exports[`PublicationCitation  should render primary action button 1`] = `
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
-                        title="Full citation in Google scholar will open in a new window"
                       >
                         <span
                           class="fez-icon google xxlarge"
@@ -5038,7 +4988,6 @@ exports[`PublicationCitation  should render publication citation metric with cou
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
-                        title="Full citation in Web of science will open in a new window"
                       >
                         <span
                           class="fez-icon wos xxlarge"
@@ -5059,7 +5008,6 @@ exports[`PublicationCitation  should render publication citation metric with cou
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
-                        title="Full citation in Google scholar will open in a new window"
                       >
                         <span
                           class="fez-icon google xxlarge"
@@ -5309,7 +5257,6 @@ exports[`PublicationCitation  should render publication citation metric without 
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
-                        title="Full citation in Web of science will open in a new window"
                       >
                         <span
                           class="fez-icon wos xxlarge"
@@ -5330,7 +5277,6 @@ exports[`PublicationCitation  should render publication citation metric without 
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
-                        title="Full citation in Google scholar will open in a new window"
                       >
                         <span
                           class="fez-icon google xxlarge"
@@ -5575,7 +5521,6 @@ exports[`PublicationCitation  should render publication with unpublished buffer 
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
-                        title="Full citation in Web of science will open in a new window"
                       >
                         <span
                           class="fez-icon wos xxlarge"
@@ -5596,7 +5541,6 @@ exports[`PublicationCitation  should render publication with unpublished buffer 
                         rel="noopener noreferrer"
                         tabindex="0"
                         target="_blank"
-                        title="Full citation in Google scholar will open in a new window"
                       >
                         <span
                           class="fez-icon google xxlarge"
