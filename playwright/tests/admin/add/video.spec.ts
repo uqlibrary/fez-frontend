@@ -71,19 +71,21 @@ test.describe('Author affiliations', () => {
             .first()
             .click();
         await assertAffiliationsAllowed(page, {
-            authorName: 'Steve Su (uqysu4)',
+            authorName: 'Steven Platz (uqsplatz)',
             orgName: 'The University of Queensland',
             rowId: 0,
         });
+        await expect(page.getByTestId('rek-author-list-row-0-external-identifier')).toBeEmpty();
+        await expect(page.getByTestId('rek-author-list-row-0-external-identifier-type')).toBeEmpty();
 
         // test autopopulating ORCID when selecting an UQ author
-        await selectUQAuthor(page, 'Steven Platz');
-        await expect(page.getByTestId('rek-author-external-identifier-input')).toHaveValue('0000-0000-0000-2345');
+        await selectUQAuthor(page, 'Steve Su');
+        await expect(page.getByTestId('rek-author-external-identifier-input')).toHaveValue('0000-0000-0000-1234');
         await expect(page.getByTestId('rek-author-external-identifier-input')).toBeDisabled();
         await expect(page.getByTestId('rek-author-external-identifier-type-select')).toContainText('Orcid');
         await expect(page.getByTestId('rek-author-external-identifier-type-input')).toBeDisabled();
         await page.getByTestId('rek-author-add-save').click();
-        await expect(page.getByTestId('rek-author-list-row-1-external-identifier')).toHaveText('0000-0000-0000-2345');
+        await expect(page.getByTestId('rek-author-list-row-1-external-identifier')).toHaveText('0000-0000-0000-1234');
         await expect(page.getByTestId('rek-author-list-row-1-external-identifier-type')).toHaveText('Orcid');
     });
 });
