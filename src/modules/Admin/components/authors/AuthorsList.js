@@ -33,6 +33,7 @@ import {
     ORG_TYPES_LOOKUP,
     AFFILIATION_TYPE_UQ,
     AUTHOR_EXTERNAL_IDENTIFIER_TYPE,
+    AUTHOR_EXTERNAL_IDENTIFIER_TYPE_ORCID_VALUE,
 } from 'config/general';
 import { default as globalLocale } from 'locale/global';
 import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField/components/NewGenericSelectField';
@@ -378,9 +379,9 @@ export const AuthorsList = ({
                 },
                 Edit: ({ row, column }) => {
                     const contributor = { ...row.original, ...row._valuesCache };
-                    const uqAuthorOrcid = contributor.aut_orcid_id?.trim?.();
-                    const value = contributor.externalIdentifier || uqAuthorOrcid || '';
-                    const errors = (!uqAuthorOrcid && validationErrors[row.id]) || [];
+                    const hasUQAuthorOrcid = contributor.aut_orcid_id?.trim?.();
+                    const value = contributor.externalIdentifier || hasUQAuthorOrcid || '';
+                    const errors = (!hasUQAuthorOrcid && validationErrors[row.id]) || [];
                     const error = getValidationError(errors, 'externalIdentifier');
 
                     const handleChange = (value, skipValidation = false) => {
@@ -401,7 +402,7 @@ export const AuthorsList = ({
                         <Grid container spacing={2} sx={{ width: '100%' }}>
                             <Grid style={{ flexGrow: '1' }}>
                                 <TextField
-                                    disabled={!!uqAuthorOrcid}
+                                    disabled={!!hasUQAuthorOrcid}
                                     value={value}
                                     onChange={e => handleChange(e.target.value)}
                                     textFieldId={`${contributorEditorId}-external-identifier`}
@@ -440,7 +441,11 @@ export const AuthorsList = ({
                 },
                 Edit: ({ row, column }) => {
                     const contributor = { ...row.original, ...row._valuesCache };
-                    const value = contributor.externalIdentifierType || defaultExternalIdentifierType || '';
+                    const hasUQAuthorOrcid = contributor.aut_orcid_id?.trim?.();
+                    const defaultValue = hasUQAuthorOrcid
+                        ? AUTHOR_EXTERNAL_IDENTIFIER_TYPE_ORCID_VALUE
+                        : defaultExternalIdentifierType;
+                    const value = contributor.externalIdentifierType || defaultValue || '';
 
                     const handleChange = (value, skipValidation = false) => {
                         row._valuesCache = {
@@ -452,8 +457,8 @@ export const AuthorsList = ({
                     };
 
                     // sync default value to row
-                    if (!contributor.externalIdentifierType && defaultExternalIdentifierType) {
-                        handleChange(defaultExternalIdentifierType, true);
+                    if (!contributor.externalIdentifierType && defaultValue) {
+                        handleChange(defaultValue, true);
                     }
 
                     return (
@@ -466,7 +471,7 @@ export const AuthorsList = ({
                                     key={`${contributor.externalIdentifierType}-${contributor.externalIdentifier}`}
                                     genericSelectFieldId={`${contributorEditorId}-external-identifier-type`}
                                     label={externalIdentifierTypeLabel}
-                                    disabled={!!defaultExternalIdentifierType}
+                                    disabled={!!hasUQAuthorOrcid || !!defaultExternalIdentifierType}
                                 />
                             </Grid>
                         </Grid>

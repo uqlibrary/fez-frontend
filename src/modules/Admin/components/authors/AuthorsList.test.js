@@ -1,15 +1,6 @@
 import React from 'react';
 import AuthorsList from './AuthorsList';
-import {
-    act,
-    render,
-    fireEvent,
-    WithReduxStore,
-    waitFor,
-    waitForElementToBeRemoved,
-    userEvent,
-    waitForText,
-} from 'test-utils';
+import { act, render, fireEvent, WithReduxStore, waitFor, waitForElementToBeRemoved } from 'test-utils';
 import locale from 'locale/components';
 import * as repositories from 'repositories';
 import { AUTHOR_EXTERNAL_IDENTIFIER_TYPE_ORCID_VALUE } from '../../../../config/general';
@@ -899,11 +890,13 @@ describe('AuthorsList', () => {
 
         // add ROR to author
         fireEvent.click(getByTestId('rek-author-list-row-1-edit'));
-        fireEvent.change(getByTestId('rek-author-external-identifier-input'), {
-            target: { value: updatedExternalId },
-        });
         fireEvent.mouseDown(getByTestId('rek-author-external-identifier-type-select'));
         fireEvent.click(getByText('ROR'));
+        expect(queryByText('rek-author-external-identifier-helper-text')).not.toBeInTheDocument();
+        fireEvent.change(getByTestId('rek-author-external-identifier-input'), { target: { value: '0000' } });
+        expect(getByTestId('rek-author-external-identifier-helper-text')).toHaveTextContent(/ror is not valid/i);
+        fireEvent.change(getByTestId('rek-author-external-identifier-input'), { target: { value: updatedExternalId } });
+        expect(queryByText('rek-author-external-identifier-helper-text')).not.toBeInTheDocument();
         fireEvent.click(getByTestId('rek-author-update-save'));
 
         expect(getByTestId('rek-author-list-row-0-name-as-published')).toHaveTextContent(

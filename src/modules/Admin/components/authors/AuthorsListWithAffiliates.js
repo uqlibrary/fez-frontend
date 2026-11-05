@@ -35,7 +35,10 @@ import { hasAffiliationProblemsByAuthor } from 'helpers/authorAffiliations';
 import { useMrtTable } from 'hooks';
 import { default as defaultValidationRules, extendedValidationRules } from './validationRules';
 import { commitRowChanges } from './utils';
-import { AUTHOR_EXTERNAL_IDENTIFIER_TYPE } from '../../../../config/general';
+import {
+    AUTHOR_EXTERNAL_IDENTIFIER_TYPE,
+    AUTHOR_EXTERNAL_IDENTIFIER_TYPE_ORCID_VALUE,
+} from '../../../../config/general';
 import { NewGenericSelectField } from '../../../SharedComponents/GenericSelectField/components/NewGenericSelectField';
 
 const MUI_SAVE_BUTTON_CLASS = '.MuiIconButton-colorInfo';
@@ -419,9 +422,9 @@ export const AuthorsListWithAffiliates = ({
                 },
                 Edit: ({ row, column }) => {
                     const contributor = { ...row.original, ...row._valuesCache };
-                    const uqAuthorOrcid = contributor.aut_orcid_id?.trim?.();
-                    const value = contributor.externalIdentifier || uqAuthorOrcid || '';
-                    const errors = (!uqAuthorOrcid && validationErrors[row.id]) || [];
+                    const hasUQAuthorOrcid = contributor.aut_orcid_id?.trim?.();
+                    const value = contributor.externalIdentifier || hasUQAuthorOrcid || '';
+                    const errors = (!hasUQAuthorOrcid && validationErrors[row.id]) || [];
                     const error = getValidationError(errors, 'externalIdentifier');
 
                     const handleChange = (value, skipValidation = false) => {
@@ -442,7 +445,7 @@ export const AuthorsListWithAffiliates = ({
                         <Grid container spacing={2} sx={{ width: '100%' }}>
                             <Grid style={{ flexGrow: '1' }}>
                                 <TextField
-                                    disabled={!!uqAuthorOrcid}
+                                    disabled={!!hasUQAuthorOrcid}
                                     value={value}
                                     onChange={e => handleChange(e.target.value)}
                                     textFieldId={`${contributorEditorId}-external-identifier`}
@@ -481,7 +484,11 @@ export const AuthorsListWithAffiliates = ({
                 },
                 Edit: ({ row, column }) => {
                     const contributor = { ...row.original, ...row._valuesCache };
-                    const value = contributor.externalIdentifierType || defaultExternalIdentifierType || '';
+                    const hasUQAuthorOrcid = contributor.aut_orcid_id?.trim?.();
+                    const defaultValue = hasUQAuthorOrcid
+                        ? AUTHOR_EXTERNAL_IDENTIFIER_TYPE_ORCID_VALUE
+                        : defaultExternalIdentifierType;
+                    const value = contributor.externalIdentifierType || defaultValue || '';
 
                     const handleChange = (value, skipValidation = false) => {
                         row._valuesCache = {
@@ -493,8 +500,8 @@ export const AuthorsListWithAffiliates = ({
                     };
 
                     // sync default value to row
-                    if (!contributor.externalIdentifierType && value) {
-                        handleChange(value, true);
+                    if (!contributor.externalIdentifierType && defaultValue) {
+                        handleChange(defaultValue, true);
                     }
 
                     return (
@@ -507,7 +514,7 @@ export const AuthorsListWithAffiliates = ({
                                     key={`${contributor.externalIdentifierType}-${contributor.externalIdentifier}`}
                                     genericSelectFieldId={`${contributorEditorId}-external-identifier-type`}
                                     label={externalIdentifierTypeLabel}
-                                    disabled={!!defaultExternalIdentifierType}
+                                    disabled={!!hasUQAuthorOrcid || !!defaultExternalIdentifierType}
                                 />
                             </Grid>
                         </Grid>

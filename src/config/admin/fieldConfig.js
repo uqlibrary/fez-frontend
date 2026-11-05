@@ -2057,6 +2057,7 @@ export default {
             authors: () => ({
                 showRoleInput: false,
                 showExternalIdentifierInput: true,
+                defaultExternalIdentifierType: null,
                 locale: locale.components.authorsList('manufacturer').field,
             }),
             contactName: () => ({
