@@ -50,6 +50,7 @@ export const ListRowHeader = ({
                     <Tooltip title={deleteAll}>
                         <span>
                             <IconButton
+                                aria-label={deleteAll}
                                 onClick={showConfirmation}
                                 disabled={disabled}
                                 id={`delete-all-${listEditorId}`}

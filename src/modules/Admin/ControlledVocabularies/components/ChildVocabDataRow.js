@@ -89,17 +89,21 @@ export const ChildVocabDataRow = ({ row, parentId, rootId, locked }) => {
                     </Grid>
                     {!locked && (
                         <Grid size={{ xs: 12, sm: 1 }} data-testid={`child-row-action-${row.cvo_id}`}>
-                            <IconButton
-                                id={`admin-edit-button-${row.cvo_id}`}
-                                data-analyticsid={`admin-edit-button-${row.cvo_id}`}
-                                data-testid={`admin-edit-button-${row.cvo_id}`}
-                                aria-label="Edit"
-                                onClick={() => onAdminEditActionClick({ row, parentId, rootVocabId: rootId })}
-                                size="large"
-                                disabled={state.isOpen}
-                            >
-                                <Edit fontSize="small" />
-                            </IconButton>
+                            <Tooltip title={txt.admin.tooltip.edit} data-testid={`edit-button-${row.cvo_id}`}>
+                                <span>
+                                    <IconButton
+                                        id={`admin-edit-button-${row.cvo_id}`}
+                                        data-analyticsid={`admin-edit-button-${row.cvo_id}`}
+                                        data-testid={`admin-edit-button-${row.cvo_id}`}
+                                        aria-label={txt.admin.tooltip.edit}
+                                        onClick={() => onAdminEditActionClick({ row, parentId, rootVocabId: rootId })}
+                                        size="large"
+                                        disabled={state.isOpen}
+                                    >
+                                        <Edit fontSize="small" />
+                                    </IconButton>
+                                </span>
+                            </Tooltip>
                         </Grid>
                     )}
                 </Box>

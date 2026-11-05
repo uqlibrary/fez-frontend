@@ -34,6 +34,7 @@ export const FileUploadRowStatus = ({
                 <Tooltip title={deleteHint}>
                     <span>
                         <IconButton
+                            aria-label={deleteHint}
                             onClick={onDelete}
                             disabled={disabled}
                             data-analyticsid={`${fileUploadRowStatusId}-delete`}
@@ -53,11 +54,7 @@ export const FileUploadRowStatus = ({
                     </Typography>
                 </Fragment>
             )}
-            {isUploadInProgress && progress === 100 && (
-                <IconButton size="large">
-                    <Done />
-                </IconButton>
-            )}
+            {isUploadInProgress && progress === 100 && <Done textSize="large" sx={{ padding: '0.75rem' }} />}
         </Fragment>
     );
 };

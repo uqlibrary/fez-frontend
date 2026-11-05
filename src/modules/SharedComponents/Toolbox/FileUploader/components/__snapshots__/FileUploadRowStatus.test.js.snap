@@ -93,6 +93,23 @@ exports[`Component FileUploadRowStatus should render disabled view 1`] = `
 </div>
 `;
 
+exports[`Component FileUploadRowStatus should render done icon if progress is 100% but uploading is still in progress 1`] = `
+<div>
+  <svg
+    aria-hidden="true"
+    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
+    data-testid="DoneIcon"
+    focusable="false"
+    textSize="large"
+    viewBox="0 0 24 24"
+  >
+    <path
+      d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"
+    />
+  </svg>
+</div>
+`;
+
 exports[`Component FileUploadRowStatus should render done icon if upload is finished 1`] = `
 <div>
   <button

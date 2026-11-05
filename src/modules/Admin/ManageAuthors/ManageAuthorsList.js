@@ -484,6 +484,7 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                     <Tooltip title={scopusIngestButtonTooltip}>
                         <span>
                             <IconButton
+                                aria-label={scopusIngestButtonTooltip}
                                 onClick={handleShowScopusIngestConfirmation(row.original.aut_id)}
                                 disabled={
                                     isCookieSet ||
@@ -513,6 +514,7 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                                     table.setEditingRow(row);
                                 }}
                                 disabled={isPendingDelete || !!isBusy || !!editingRow}
+                                aria-label={editButtonTooltip}
                                 id={`authors-list-row-${row.index}-${editButtonTooltip.toLowerCase().replace(/ /g, '-')}`}
                                 data-testid={`authors-list-row-${row.index}-${editButtonTooltip
                                     .toLowerCase()
@@ -527,6 +529,7 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                             <IconButton
                                 onClick={openDeleteConfirmModal(row.index)}
                                 disabled={isPendingDelete || !!isBusy || !!editingRow}
+                                aria-label={deleteButtonTooltip}
                                 id={`authors-list-row-${row.index}-${deleteButtonTooltip.toLowerCase().replace(/ /g, '-')}`}
                                 data-testid={`authors-list-row-${row.index}-${deleteButtonTooltip
                                     .toLowerCase()

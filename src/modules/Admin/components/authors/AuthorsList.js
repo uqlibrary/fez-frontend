@@ -878,6 +878,7 @@ export const AuthorsList = ({
                         // immediately force validation of new row
                         handleValidation({ id: 'mrt-row-create' }, columns[0].accessorKey, '');
                     }}
+                    aria-label={addButton}
                 >
                     <AddCircle
                         color="primary"

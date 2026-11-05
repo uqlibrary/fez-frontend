@@ -103,7 +103,7 @@ export const AuthorDetailPanel = ({ rowData, locale, isEditing, setEditing, onCh
                     <Tooltip title={affiliationsLocale.editButton.tooltip}>
                         <span>
                             <IconButton
-                                aria-label="delete"
+                                aria-label={affiliationsLocale.editButton.tooltip}
                                 onClick={() => setEditing({ editing: !isEditing, aut_id: rowData.aut_id })}
                                 size={'small'}
                                 id={`affiliationEditBtn-${rowData.aut_id}`}
@@ -611,6 +611,7 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
             <Tooltip title={addButton}>
                 <span>
                     <IconButton
+                        aria-label={addButton}
                         id={`${contributorEditorId}-${addButton.toLowerCase().replace(/ /g, '-')}`}
                         data-testid={`${contributorEditorId}-${addButton.toLowerCase().replace(/ /g, '-')}`}
                         disabled={disabled || table.getState().creatingRow !== null}
@@ -638,6 +639,7 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
                     <Tooltip title={deleteHint}>
                         <span>
                             <IconButton
+                                aria-label={deleteHint}
                                 onClick={openDeleteConfirmModal(row.index)}
                                 disabled={
                                     disabled ||
@@ -658,6 +660,7 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
                     <Tooltip title={editHint}>
                         <span>
                             <IconButton
+                                aria-label={editHint}
                                 onClick={() => {
                                     setEditRow(row);
                                     table.setCreatingRow(null);
@@ -683,6 +686,7 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
                     <Tooltip title={moveDownHint}>
                         <span>
                             <IconButton
+                                aria-label={moveDownHint}
                                 onClick={() => {
                                     const index = row.index;
                                     /* istanbul ignore else */
@@ -714,6 +718,7 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
                     <Tooltip title={moveUpHint}>
                         <span>
                             <IconButton
+                                aria-label={moveUpHint}
                                 onClick={() => {
                                     const index = row.index;
                                     /* istanbul ignore else */

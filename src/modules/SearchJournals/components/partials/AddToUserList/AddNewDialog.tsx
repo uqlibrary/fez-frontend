@@ -80,6 +80,7 @@ const AddNewDialog: React.FC<CreateListDialogProps> = ({ open, onClose, onCreate
             >
                 {txt.title}
                 <IconButton
+                    aria-label="Close dialog"
                     data-testid="add-to-user-list-dialog-close-button"
                     onClick={handleClose}
                     size="small"

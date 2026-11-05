@@ -631,6 +631,7 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                 <Box sx={{ display: 'flex', flexWrap: 'nowrap' }}>
                     <Tooltip title={editButtonTooltip}>
                         <IconButton
+                            aria-label={editButtonTooltip}
                             onClick={() => {
                                 setEditRow(row);
                                 table.setCreatingRow(null);
@@ -649,6 +650,7 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                     </Tooltip>
                     <Tooltip title={deleteButtonTooltip}>
                         <IconButton
+                            aria-label={deleteButtonTooltip}
                             onClick={openDeleteConfirmModal(row.id)}
                             disabled={!!pendingDeleteRowId || !!isBusy || !!editingRow}
                             id={`my-editorial-appointments-list-row-${

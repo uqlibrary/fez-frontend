@@ -54,7 +54,7 @@ export const CommunityDataRow = ({ conf, row, adminUser, labels, autoCollapse })
                         <Box sx={{ float: 'left', width: '24px' }}>
                             <IconButton
                                 sx={{ paddingTop: '5px' }}
-                                aria-label="expand row"
+                                aria-label="Expand row to view collections"
                                 size="small"
                                 onClick={() => handleSetOpen(!open)}
                                 id={`expand-row-${row.rek_pid}`}

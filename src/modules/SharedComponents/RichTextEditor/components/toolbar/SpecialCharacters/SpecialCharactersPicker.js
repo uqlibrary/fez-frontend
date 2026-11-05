@@ -149,7 +149,12 @@ const SpecialCharactersPicker = ({ open, position, onClose }) => {
                     Special characters
                 </Typography>
 
-                <IconButton size="small" onClick={onClose} data-testid="special-character-close-button">
+                <IconButton
+                    aria-label="Close special characters panel"
+                    size="small"
+                    onClick={onClose}
+                    data-testid="special-character-close-button"
+                >
                     <CloseIcon fontSize="small" />
                 </IconButton>
             </Box>
