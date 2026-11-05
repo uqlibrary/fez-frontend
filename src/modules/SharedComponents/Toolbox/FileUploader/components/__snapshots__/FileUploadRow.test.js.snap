@@ -124,6 +124,7 @@ exports[`FileUploadRow renders with uploaded file 1`] = `
           data-mui-internal-clone-element="true"
         >
           <button
+            aria-label="Remove this file"
             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="dsi-dsid-0-delete"
             data-testid="dsi-dsid-0-delete"
@@ -327,6 +328,7 @@ exports[`FileUploadRow should show confirmation and delete file 1`] = `
           data-mui-internal-clone-element="true"
         >
           <button
+            aria-label="Remove this file"
             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="dsi-dsid-0-delete"
             data-testid="dsi-dsid-0-delete"

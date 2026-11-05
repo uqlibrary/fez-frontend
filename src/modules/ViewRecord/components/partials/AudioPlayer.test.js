@@ -29,8 +29,8 @@ describe('Audio Player Component ', () => {
     it('should play and pause via buttons clicks', () => {
         const { getByRole, queryByRole } = setup();
 
-        const playBtnLabel = 'Click to play audio file test_t.mp3';
-        const pauseBtnLabel = 'Click to pause audio file test_t.mp3';
+        const playBtnLabel = 'Play audio file test_t.mp3';
+        const pauseBtnLabel = 'Pause audio file test_t.mp3';
         // play
         fireEvent.click(getByRole('button', { name: playBtnLabel }));
         expect(playMock).toHaveBeenCalledTimes(1);
@@ -47,8 +47,8 @@ describe('Audio Player Component ', () => {
         playMock = jest.spyOn(window.HTMLAudioElement.prototype, 'play').mockImplementation(() => Promise.resolve());
         const { getByRole, queryByRole } = setup();
 
-        const playBtnLabel = 'Click to play audio file test_t.mp3';
-        const pauseBtnLabel = 'Click to pause audio file test_t.mp3';
+        const playBtnLabel = 'Play audio file test_t.mp3';
+        const pauseBtnLabel = 'Pause audio file test_t.mp3';
 
         await waitFor(() => fireEvent.click(getByRole('button', { name: playBtnLabel })));
         expect(playMock).toHaveBeenCalledTimes(1);

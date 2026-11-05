@@ -87,6 +87,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
             data-mui-internal-clone-element="true"
           >
             <button
+              aria-label="Remove all items"
               class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="delete-all-test"
               data-testid="delete-all-test"
@@ -148,6 +149,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
                   data-mui-internal-clone-element="true"
                 >
                   <button
+                    aria-label="Move item down the order"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="test-list-row-0-move-down"
                     data-testid="test-list-row-0-move-down"
@@ -180,6 +182,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this item"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="test-list-row-0-delete"
                 data-testid="test-list-row-0-delete"
@@ -235,6 +238,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
                   data-mui-internal-clone-element="true"
                 >
                   <button
+                    aria-label="Move item up the order"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="test-list-row-1-move-up"
                     data-testid="test-list-row-1-move-up"
@@ -265,6 +269,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
                   data-mui-internal-clone-element="true"
                 >
                   <button
+                    aria-label="Move item down the order"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="test-list-row-1-move-down"
                     data-testid="test-list-row-1-move-down"
@@ -297,6 +302,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this item"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="test-list-row-1-delete"
                 data-testid="test-list-row-1-delete"
@@ -352,6 +358,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
                   data-mui-internal-clone-element="true"
                 >
                   <button
+                    aria-label="Move item up the order"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="test-list-row-2-move-up"
                     data-testid="test-list-row-2-move-up"
@@ -382,6 +389,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
                   data-mui-internal-clone-element="true"
                 >
                   <button
+                    aria-label="Move item down the order"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="test-list-row-2-move-down"
                     data-testid="test-list-row-2-move-down"
@@ -414,6 +422,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this item"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="test-list-row-2-delete"
                 data-testid="test-list-row-2-delete"
@@ -469,6 +478,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
                   data-mui-internal-clone-element="true"
                 >
                   <button
+                    aria-label="Move item up the order"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="test-list-row-3-move-up"
                     data-testid="test-list-row-3-move-up"
@@ -499,6 +509,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
                   data-mui-internal-clone-element="true"
                 >
                   <button
+                    aria-label="Move item down the order"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="test-list-row-3-move-down"
                     data-testid="test-list-row-3-move-down"
@@ -531,6 +542,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this item"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="test-list-row-3-delete"
                 data-testid="test-list-row-3-delete"
@@ -586,6 +598,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
                   data-mui-internal-clone-element="true"
                 >
                   <button
+                    aria-label="Move item up the order"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="test-list-row-4-move-up"
                     data-testid="test-list-row-4-move-up"
@@ -616,6 +629,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
                   data-mui-internal-clone-element="true"
                 >
                   <button
+                    aria-label="Move item down the order"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="test-list-row-4-move-down"
                     data-testid="test-list-row-4-move-down"
@@ -648,6 +662,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this item"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="test-list-row-4-delete"
                 data-testid="test-list-row-4-delete"
@@ -703,6 +718,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
                   data-mui-internal-clone-element="true"
                 >
                   <button
+                    aria-label="Move item up the order"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="test-list-row-5-move-up"
                     data-testid="test-list-row-5-move-up"
@@ -733,6 +749,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
                   data-mui-internal-clone-element="true"
                 >
                   <button
+                    aria-label="Move item down the order"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="test-list-row-5-move-down"
                     data-testid="test-list-row-5-move-down"
@@ -765,6 +782,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this item"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="test-list-row-5-delete"
                 data-testid="test-list-row-5-delete"
@@ -820,6 +838,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
                   data-mui-internal-clone-element="true"
                 >
                   <button
+                    aria-label="Move item up the order"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="test-list-row-6-move-up"
                     data-testid="test-list-row-6-move-up"
@@ -850,6 +869,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
                   data-mui-internal-clone-element="true"
                 >
                   <button
+                    aria-label="Move item down the order"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="test-list-row-6-move-down"
                     data-testid="test-list-row-6-move-down"
@@ -882,6 +902,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this item"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="test-list-row-6-delete"
                 data-testid="test-list-row-6-delete"
@@ -937,6 +958,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
                   data-mui-internal-clone-element="true"
                 >
                   <button
+                    aria-label="Move item up the order"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="test-list-row-7-move-up"
                     data-testid="test-list-row-7-move-up"
@@ -967,6 +989,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
                   data-mui-internal-clone-element="true"
                 >
                   <button
+                    aria-label="Move item down the order"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="test-list-row-7-move-down"
                     data-testid="test-list-row-7-move-down"
@@ -999,6 +1022,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this item"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="test-list-row-7-delete"
                 data-testid="test-list-row-7-delete"
@@ -1054,6 +1078,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
                   data-mui-internal-clone-element="true"
                 >
                   <button
+                    aria-label="Move item up the order"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="test-list-row-8-move-up"
                     data-testid="test-list-row-8-move-up"
@@ -1084,6 +1109,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
                   data-mui-internal-clone-element="true"
                 >
                   <button
+                    aria-label="Move item down the order"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="test-list-row-8-move-down"
                     data-testid="test-list-row-8-move-down"
@@ -1116,6 +1142,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this item"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="test-list-row-8-delete"
                 data-testid="test-list-row-8-delete"
@@ -1171,6 +1198,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
                   data-mui-internal-clone-element="true"
                 >
                   <button
+                    aria-label="Move item up the order"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="test-list-row-9-move-up"
                     data-testid="test-list-row-9-move-up"
@@ -1203,6 +1231,7 @@ exports[`ListEditor tests Should render a list of many items in a scrollable HTM
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this item"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="test-list-row-9-delete"
                 data-testid="test-list-row-9-delete"
@@ -1321,6 +1350,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
             data-mui-internal-clone-element="true"
           >
             <button
+              aria-label="Remove all items"
               class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="delete-all-test"
               data-testid="delete-all-test"
@@ -1380,6 +1410,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
                   data-mui-internal-clone-element="true"
                 >
                   <button
+                    aria-label="Move item down the order"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="test-list-row-0-move-down"
                     data-testid="test-list-row-0-move-down"
@@ -1412,6 +1443,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this item"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="test-list-row-0-delete"
                 data-testid="test-list-row-0-delete"
@@ -1467,6 +1499,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
                   data-mui-internal-clone-element="true"
                 >
                   <button
+                    aria-label="Move item up the order"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="test-list-row-1-move-up"
                     data-testid="test-list-row-1-move-up"
@@ -1497,6 +1530,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
                   data-mui-internal-clone-element="true"
                 >
                   <button
+                    aria-label="Move item down the order"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="test-list-row-1-move-down"
                     data-testid="test-list-row-1-move-down"
@@ -1529,6 +1563,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this item"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="test-list-row-1-delete"
                 data-testid="test-list-row-1-delete"
@@ -1584,6 +1619,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
                   data-mui-internal-clone-element="true"
                 >
                   <button
+                    aria-label="Move item up the order"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="test-list-row-2-move-up"
                     data-testid="test-list-row-2-move-up"
@@ -1614,6 +1650,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
                   data-mui-internal-clone-element="true"
                 >
                   <button
+                    aria-label="Move item down the order"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="test-list-row-2-move-down"
                     data-testid="test-list-row-2-move-down"
@@ -1646,6 +1683,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this item"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="test-list-row-2-delete"
                 data-testid="test-list-row-2-delete"
@@ -1701,6 +1739,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
                   data-mui-internal-clone-element="true"
                 >
                   <button
+                    aria-label="Move item up the order"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="test-list-row-3-move-up"
                     data-testid="test-list-row-3-move-up"
@@ -1731,6 +1770,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
                   data-mui-internal-clone-element="true"
                 >
                   <button
+                    aria-label="Move item down the order"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="test-list-row-3-move-down"
                     data-testid="test-list-row-3-move-down"
@@ -1763,6 +1803,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this item"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="test-list-row-3-delete"
                 data-testid="test-list-row-3-delete"
@@ -1818,6 +1859,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
                   data-mui-internal-clone-element="true"
                 >
                   <button
+                    aria-label="Move item up the order"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="test-list-row-4-move-up"
                     data-testid="test-list-row-4-move-up"
@@ -1848,6 +1890,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
                   data-mui-internal-clone-element="true"
                 >
                   <button
+                    aria-label="Move item down the order"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="test-list-row-4-move-down"
                     data-testid="test-list-row-4-move-down"
@@ -1880,6 +1923,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this item"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="test-list-row-4-delete"
                 data-testid="test-list-row-4-delete"
@@ -1935,6 +1979,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
                   data-mui-internal-clone-element="true"
                 >
                   <button
+                    aria-label="Move item up the order"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="test-list-row-5-move-up"
                     data-testid="test-list-row-5-move-up"
@@ -1965,6 +2010,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
                   data-mui-internal-clone-element="true"
                 >
                   <button
+                    aria-label="Move item down the order"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="test-list-row-5-move-down"
                     data-testid="test-list-row-5-move-down"
@@ -1997,6 +2043,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this item"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="test-list-row-5-delete"
                 data-testid="test-list-row-5-delete"
@@ -2052,6 +2099,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
                   data-mui-internal-clone-element="true"
                 >
                   <button
+                    aria-label="Move item up the order"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="test-list-row-6-move-up"
                     data-testid="test-list-row-6-move-up"
@@ -2082,6 +2130,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
                   data-mui-internal-clone-element="true"
                 >
                   <button
+                    aria-label="Move item down the order"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="test-list-row-6-move-down"
                     data-testid="test-list-row-6-move-down"
@@ -2114,6 +2163,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this item"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="test-list-row-6-delete"
                 data-testid="test-list-row-6-delete"
@@ -2169,6 +2219,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
                   data-mui-internal-clone-element="true"
                 >
                   <button
+                    aria-label="Move item up the order"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="test-list-row-7-move-up"
                     data-testid="test-list-row-7-move-up"
@@ -2199,6 +2250,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
                   data-mui-internal-clone-element="true"
                 >
                   <button
+                    aria-label="Move item down the order"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="test-list-row-7-move-down"
                     data-testid="test-list-row-7-move-down"
@@ -2231,6 +2283,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this item"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="test-list-row-7-delete"
                 data-testid="test-list-row-7-delete"
@@ -2286,6 +2339,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
                   data-mui-internal-clone-element="true"
                 >
                   <button
+                    aria-label="Move item up the order"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="test-list-row-8-move-up"
                     data-testid="test-list-row-8-move-up"
@@ -2316,6 +2370,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
                   data-mui-internal-clone-element="true"
                 >
                   <button
+                    aria-label="Move item down the order"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="test-list-row-8-move-down"
                     data-testid="test-list-row-8-move-down"
@@ -2348,6 +2403,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this item"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="test-list-row-8-delete"
                 data-testid="test-list-row-8-delete"
@@ -2403,6 +2459,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
                   data-mui-internal-clone-element="true"
                 >
                   <button
+                    aria-label="Move item up the order"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="test-list-row-9-move-up"
                     data-testid="test-list-row-9-move-up"
@@ -2435,6 +2492,7 @@ exports[`ListEditor tests Should render a list of many items inline 1 1`] = `
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this item"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="test-list-row-9-delete"
                 data-testid="test-list-row-9-delete"
@@ -2553,6 +2611,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
             data-mui-internal-clone-element="true"
           >
             <button
+              aria-label="Remove all items"
               class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="delete-all-test"
               data-testid="delete-all-test"
@@ -2612,6 +2671,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
                   data-mui-internal-clone-element="true"
                 >
                   <button
+                    aria-label="Move item down the order"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="test-list-row-0-move-down"
                     data-testid="test-list-row-0-move-down"
@@ -2644,6 +2704,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this item"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="test-list-row-0-delete"
                 data-testid="test-list-row-0-delete"
@@ -2699,6 +2760,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
                   data-mui-internal-clone-element="true"
                 >
                   <button
+                    aria-label="Move item up the order"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="test-list-row-1-move-up"
                     data-testid="test-list-row-1-move-up"
@@ -2729,6 +2791,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
                   data-mui-internal-clone-element="true"
                 >
                   <button
+                    aria-label="Move item down the order"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="test-list-row-1-move-down"
                     data-testid="test-list-row-1-move-down"
@@ -2761,6 +2824,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this item"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="test-list-row-1-delete"
                 data-testid="test-list-row-1-delete"
@@ -2816,6 +2880,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
                   data-mui-internal-clone-element="true"
                 >
                   <button
+                    aria-label="Move item up the order"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="test-list-row-2-move-up"
                     data-testid="test-list-row-2-move-up"
@@ -2846,6 +2911,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
                   data-mui-internal-clone-element="true"
                 >
                   <button
+                    aria-label="Move item down the order"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="test-list-row-2-move-down"
                     data-testid="test-list-row-2-move-down"
@@ -2878,6 +2944,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this item"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="test-list-row-2-delete"
                 data-testid="test-list-row-2-delete"
@@ -2933,6 +3000,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
                   data-mui-internal-clone-element="true"
                 >
                   <button
+                    aria-label="Move item up the order"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="test-list-row-3-move-up"
                     data-testid="test-list-row-3-move-up"
@@ -2963,6 +3031,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
                   data-mui-internal-clone-element="true"
                 >
                   <button
+                    aria-label="Move item down the order"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="test-list-row-3-move-down"
                     data-testid="test-list-row-3-move-down"
@@ -2995,6 +3064,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this item"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="test-list-row-3-delete"
                 data-testid="test-list-row-3-delete"
@@ -3050,6 +3120,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
                   data-mui-internal-clone-element="true"
                 >
                   <button
+                    aria-label="Move item up the order"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="test-list-row-4-move-up"
                     data-testid="test-list-row-4-move-up"
@@ -3080,6 +3151,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
                   data-mui-internal-clone-element="true"
                 >
                   <button
+                    aria-label="Move item down the order"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="test-list-row-4-move-down"
                     data-testid="test-list-row-4-move-down"
@@ -3112,6 +3184,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this item"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="test-list-row-4-delete"
                 data-testid="test-list-row-4-delete"
@@ -3167,6 +3240,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
                   data-mui-internal-clone-element="true"
                 >
                   <button
+                    aria-label="Move item up the order"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="test-list-row-5-move-up"
                     data-testid="test-list-row-5-move-up"
@@ -3197,6 +3271,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
                   data-mui-internal-clone-element="true"
                 >
                   <button
+                    aria-label="Move item down the order"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="test-list-row-5-move-down"
                     data-testid="test-list-row-5-move-down"
@@ -3229,6 +3304,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this item"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="test-list-row-5-delete"
                 data-testid="test-list-row-5-delete"
@@ -3284,6 +3360,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
                   data-mui-internal-clone-element="true"
                 >
                   <button
+                    aria-label="Move item up the order"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="test-list-row-6-move-up"
                     data-testid="test-list-row-6-move-up"
@@ -3314,6 +3391,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
                   data-mui-internal-clone-element="true"
                 >
                   <button
+                    aria-label="Move item down the order"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="test-list-row-6-move-down"
                     data-testid="test-list-row-6-move-down"
@@ -3346,6 +3424,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this item"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="test-list-row-6-delete"
                 data-testid="test-list-row-6-delete"
@@ -3401,6 +3480,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
                   data-mui-internal-clone-element="true"
                 >
                   <button
+                    aria-label="Move item up the order"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="test-list-row-7-move-up"
                     data-testid="test-list-row-7-move-up"
@@ -3431,6 +3511,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
                   data-mui-internal-clone-element="true"
                 >
                   <button
+                    aria-label="Move item down the order"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="test-list-row-7-move-down"
                     data-testid="test-list-row-7-move-down"
@@ -3463,6 +3544,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this item"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="test-list-row-7-delete"
                 data-testid="test-list-row-7-delete"
@@ -3518,6 +3600,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
                   data-mui-internal-clone-element="true"
                 >
                   <button
+                    aria-label="Move item up the order"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="test-list-row-8-move-up"
                     data-testid="test-list-row-8-move-up"
@@ -3548,6 +3631,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
                   data-mui-internal-clone-element="true"
                 >
                   <button
+                    aria-label="Move item down the order"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="test-list-row-8-move-down"
                     data-testid="test-list-row-8-move-down"
@@ -3580,6 +3664,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this item"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="test-list-row-8-delete"
                 data-testid="test-list-row-8-delete"
@@ -3635,6 +3720,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
                   data-mui-internal-clone-element="true"
                 >
                   <button
+                    aria-label="Move item up the order"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="test-list-row-9-move-up"
                     data-testid="test-list-row-9-move-up"
@@ -3667,6 +3753,7 @@ exports[`ListEditor tests Should render a list of many items inline 2 1`] = `
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this item"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="test-list-row-9-delete"
                 data-testid="test-list-row-9-delete"
@@ -3763,6 +3850,7 @@ exports[`ListEditor tests should add an item with id and set state 2`] = `
             data-mui-internal-clone-element="true"
           >
             <button
+              aria-label="Remove all items"
               class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="delete-all-test"
               data-testid="delete-all-test"
@@ -3823,6 +3911,7 @@ exports[`ListEditor tests should add an item with id and set state 2`] = `
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this item"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="test-list-row-0-delete"
                 data-testid="test-list-row-0-delete"
@@ -3919,6 +4008,7 @@ exports[`ListEditor tests should add item with key and set state 2`] = `
             data-mui-internal-clone-element="true"
           >
             <button
+              aria-label="Remove all items"
               class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="delete-all-test"
               data-testid="delete-all-test"
@@ -3979,6 +4069,7 @@ exports[`ListEditor tests should add item with key and set state 2`] = `
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this item"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="test-list-row-0-delete"
                 data-testid="test-list-row-0-delete"
@@ -4123,6 +4214,7 @@ exports[`ListEditor tests should move down an item 1`] = `
             data-mui-internal-clone-element="true"
           >
             <button
+              aria-label="Remove all items"
               class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="delete-all-test"
               data-testid="delete-all-test"
@@ -4182,6 +4274,7 @@ exports[`ListEditor tests should move down an item 1`] = `
                   data-mui-internal-clone-element="true"
                 >
                   <button
+                    aria-label="Move item down the order"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="test-list-row-0-move-down"
                     data-testid="test-list-row-0-move-down"
@@ -4214,6 +4307,7 @@ exports[`ListEditor tests should move down an item 1`] = `
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this item"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="test-list-row-0-delete"
                 data-testid="test-list-row-0-delete"
@@ -4269,6 +4363,7 @@ exports[`ListEditor tests should move down an item 1`] = `
                   data-mui-internal-clone-element="true"
                 >
                   <button
+                    aria-label="Move item up the order"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="test-list-row-1-move-up"
                     data-testid="test-list-row-1-move-up"
@@ -4299,6 +4394,7 @@ exports[`ListEditor tests should move down an item 1`] = `
                   data-mui-internal-clone-element="true"
                 >
                   <button
+                    aria-label="Move item down the order"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="test-list-row-1-move-down"
                     data-testid="test-list-row-1-move-down"
@@ -4331,6 +4427,7 @@ exports[`ListEditor tests should move down an item 1`] = `
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this item"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="test-list-row-1-delete"
                 data-testid="test-list-row-1-delete"
@@ -4386,6 +4483,7 @@ exports[`ListEditor tests should move down an item 1`] = `
                   data-mui-internal-clone-element="true"
                 >
                   <button
+                    aria-label="Move item up the order"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="test-list-row-2-move-up"
                     data-testid="test-list-row-2-move-up"
@@ -4418,6 +4516,7 @@ exports[`ListEditor tests should move down an item 1`] = `
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this item"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="test-list-row-2-delete"
                 data-testid="test-list-row-2-delete"
@@ -4536,6 +4635,7 @@ exports[`ListEditor tests should move up an item 1`] = `
             data-mui-internal-clone-element="true"
           >
             <button
+              aria-label="Remove all items"
               class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="delete-all-test"
               data-testid="delete-all-test"
@@ -4595,6 +4695,7 @@ exports[`ListEditor tests should move up an item 1`] = `
                   data-mui-internal-clone-element="true"
                 >
                   <button
+                    aria-label="Move item down the order"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="test-list-row-0-move-down"
                     data-testid="test-list-row-0-move-down"
@@ -4627,6 +4728,7 @@ exports[`ListEditor tests should move up an item 1`] = `
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this item"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="test-list-row-0-delete"
                 data-testid="test-list-row-0-delete"
@@ -4682,6 +4784,7 @@ exports[`ListEditor tests should move up an item 1`] = `
                   data-mui-internal-clone-element="true"
                 >
                   <button
+                    aria-label="Move item up the order"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="test-list-row-1-move-up"
                     data-testid="test-list-row-1-move-up"
@@ -4712,6 +4815,7 @@ exports[`ListEditor tests should move up an item 1`] = `
                   data-mui-internal-clone-element="true"
                 >
                   <button
+                    aria-label="Move item down the order"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="test-list-row-1-move-down"
                     data-testid="test-list-row-1-move-down"
@@ -4744,6 +4848,7 @@ exports[`ListEditor tests should move up an item 1`] = `
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this item"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="test-list-row-1-delete"
                 data-testid="test-list-row-1-delete"
@@ -4799,6 +4904,7 @@ exports[`ListEditor tests should move up an item 1`] = `
                   data-mui-internal-clone-element="true"
                 >
                   <button
+                    aria-label="Move item up the order"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="test-list-row-2-move-up"
                     data-testid="test-list-row-2-move-up"
@@ -4831,6 +4937,7 @@ exports[`ListEditor tests should move up an item 1`] = `
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this item"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="test-list-row-2-delete"
                 data-testid="test-list-row-2-delete"
@@ -4969,6 +5076,7 @@ exports[`ListEditor tests should render input value as itemList 1`] = `
             data-mui-internal-clone-element="true"
           >
             <button
+              aria-label="Remove all items"
               class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="delete-all-test"
               data-testid="delete-all-test"
@@ -5028,6 +5136,7 @@ exports[`ListEditor tests should render input value as itemList 1`] = `
                   data-mui-internal-clone-element="true"
                 >
                   <button
+                    aria-label="Move item down the order"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="test-list-row-0-move-down"
                     data-testid="test-list-row-0-move-down"
@@ -5060,6 +5169,7 @@ exports[`ListEditor tests should render input value as itemList 1`] = `
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this item"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="test-list-row-0-delete"
                 data-testid="test-list-row-0-delete"
@@ -5115,6 +5225,7 @@ exports[`ListEditor tests should render input value as itemList 1`] = `
                   data-mui-internal-clone-element="true"
                 >
                   <button
+                    aria-label="Move item up the order"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="test-list-row-1-move-up"
                     data-testid="test-list-row-1-move-up"
@@ -5147,6 +5258,7 @@ exports[`ListEditor tests should render input value as itemList 1`] = `
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this item"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="test-list-row-1-delete"
                 data-testid="test-list-row-1-delete"
@@ -5221,6 +5333,7 @@ exports[`ListEditor tests should render input value as itemList for List 1`] = `
             data-mui-internal-clone-element="true"
           >
             <button
+              aria-label="Remove all items"
               class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="delete-all-test"
               data-testid="delete-all-test"
@@ -5280,6 +5393,7 @@ exports[`ListEditor tests should render input value as itemList for List 1`] = `
                   data-mui-internal-clone-element="true"
                 >
                   <button
+                    aria-label="Move item down the order"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="test-list-row-0-move-down"
                     data-testid="test-list-row-0-move-down"
@@ -5312,6 +5426,7 @@ exports[`ListEditor tests should render input value as itemList for List 1`] = `
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this item"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="test-list-row-0-delete"
                 data-testid="test-list-row-0-delete"
@@ -5367,6 +5482,7 @@ exports[`ListEditor tests should render input value as itemList for List 1`] = `
                   data-mui-internal-clone-element="true"
                 >
                   <button
+                    aria-label="Move item up the order"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="test-list-row-1-move-up"
                     data-testid="test-list-row-1-move-up"
@@ -5399,6 +5515,7 @@ exports[`ListEditor tests should render input value as itemList for List 1`] = `
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this item"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="test-list-row-1-delete"
                 data-testid="test-list-row-1-delete"
@@ -5517,6 +5634,7 @@ exports[`ListEditor tests should update an issn with selected index 1`] = `
             data-mui-internal-clone-element="true"
           >
             <button
+              aria-label="Remove all items"
               class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="delete-all-test"
               data-testid="delete-all-test"
@@ -5576,6 +5694,7 @@ exports[`ListEditor tests should update an issn with selected index 1`] = `
                   data-mui-internal-clone-element="true"
                 >
                   <button
+                    aria-label="Move item down the order"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="test-list-row-0-move-down"
                     data-testid="test-list-row-0-move-down"
@@ -5635,6 +5754,7 @@ exports[`ListEditor tests should update an issn with selected index 1`] = `
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this item"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="test-list-row-0-delete"
                 data-testid="test-list-row-0-delete"
@@ -5690,6 +5810,7 @@ exports[`ListEditor tests should update an issn with selected index 1`] = `
                   data-mui-internal-clone-element="true"
                 >
                   <button
+                    aria-label="Move item up the order"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="test-list-row-1-move-up"
                     data-testid="test-list-row-1-move-up"
@@ -5749,6 +5870,7 @@ exports[`ListEditor tests should update an issn with selected index 1`] = `
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this item"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="test-list-row-1-delete"
                 data-testid="test-list-row-1-delete"
@@ -5867,6 +5989,7 @@ exports[`ListEditor tests should update an item with selected index 1`] = `
             data-mui-internal-clone-element="true"
           >
             <button
+              aria-label="Remove all items"
               class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="delete-all-test"
               data-testid="delete-all-test"
@@ -5926,6 +6049,7 @@ exports[`ListEditor tests should update an item with selected index 1`] = `
                   data-mui-internal-clone-element="true"
                 >
                   <button
+                    aria-label="Move item down the order"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="test-list-row-0-move-down"
                     data-testid="test-list-row-0-move-down"
@@ -5985,6 +6109,7 @@ exports[`ListEditor tests should update an item with selected index 1`] = `
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this item"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="test-list-row-0-delete"
                 data-testid="test-list-row-0-delete"
@@ -6040,6 +6165,7 @@ exports[`ListEditor tests should update an item with selected index 1`] = `
                   data-mui-internal-clone-element="true"
                 >
                   <button
+                    aria-label="Move item up the order"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="test-list-row-1-move-up"
                     data-testid="test-list-row-1-move-up"
@@ -6070,6 +6196,7 @@ exports[`ListEditor tests should update an item with selected index 1`] = `
                   data-mui-internal-clone-element="true"
                 >
                   <button
+                    aria-label="Move item down the order"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="test-list-row-1-move-down"
                     data-testid="test-list-row-1-move-down"
@@ -6129,6 +6256,7 @@ exports[`ListEditor tests should update an item with selected index 1`] = `
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this item"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="test-list-row-1-delete"
                 data-testid="test-list-row-1-delete"
@@ -6184,6 +6312,7 @@ exports[`ListEditor tests should update an item with selected index 1`] = `
                   data-mui-internal-clone-element="true"
                 >
                   <button
+                    aria-label="Move item up the order"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="test-list-row-2-move-up"
                     data-testid="test-list-row-2-move-up"
@@ -6243,6 +6372,7 @@ exports[`ListEditor tests should update an item with selected index 1`] = `
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this item"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="test-list-row-2-delete"
                 data-testid="test-list-row-2-delete"

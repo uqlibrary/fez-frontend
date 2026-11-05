@@ -106,7 +106,7 @@ exports[`Application component Should display mobile correctly 1`] = `
                 class="MuiBox-root css"
               >
                 <button
-                  aria-label="Click to search eSpace"
+                  aria-label="Search eSpace"
                   class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                   data-mui-internal-clone-element="true"
                   tabindex="0"
@@ -946,7 +946,7 @@ exports[`Application component should render alert if user is not fez author 1`]
                 class="MuiBox-root css"
               >
                 <button
-                  aria-label="Click to search eSpace"
+                  aria-label="Search eSpace"
                   class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                   data-mui-internal-clone-element="true"
                   tabindex="0"
@@ -1516,7 +1516,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                 class="MuiBox-root css"
               >
                 <button
-                  aria-label="Click to search eSpace"
+                  aria-label="Search eSpace"
                   class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                   data-mui-internal-clone-element="true"
                   tabindex="0"
@@ -2022,7 +2022,7 @@ exports[`Application component should render app for account with fez author wit
                 class="MuiBox-root css"
               >
                 <button
-                  aria-label="Click to search eSpace"
+                  aria-label="Search eSpace"
                   class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                   data-mui-internal-clone-element="true"
                   tabindex="0"
@@ -2528,7 +2528,7 @@ exports[`Application component should render application with routing for the us
                 class="MuiBox-root css"
               >
                 <button
-                  aria-label="Click to search eSpace"
+                  aria-label="Search eSpace"
                   class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                   data-mui-internal-clone-element="true"
                   tabindex="0"
@@ -2821,7 +2821,7 @@ exports[`Application component should render for anon user 1`] = `
                 class="MuiBox-root css"
               >
                 <button
-                  aria-label="Click to search eSpace"
+                  aria-label="Search eSpace"
                   class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                   data-mui-internal-clone-element="true"
                   tabindex="0"

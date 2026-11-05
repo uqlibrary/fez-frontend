@@ -2316,7 +2316,7 @@ exports[`Files Component  should render audio files with _xt in their filename f
                       />
                     </audio>
                     <button
-                      aria-label="Click to play audio file http://localhost/view/UQ:676287/audio.wav"
+                      aria-label="Play audio file http://localhost/view/UQ:676287/audio.wav"
                       class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                       id="playButton"
                       style="margin-top: -10px; margin-bottom: -10px;"
@@ -2475,7 +2475,7 @@ exports[`Files Component  should render audio files with _xt in their filename f
                       />
                     </audio>
                     <button
-                      aria-label="Click to play audio file http://localhost/view/UQ:676287/audiotest_xt.mp3"
+                      aria-label="Play audio file http://localhost/view/UQ:676287/audiotest_xt.mp3"
                       class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                       id="playButton"
                       style="margin-top: -10px; margin-bottom: -10px;"
@@ -4902,7 +4902,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
                       />
                     </audio>
                     <button
-                      aria-label="Click to play audio file http://localhost/view/UQ:1/preview_test.jpg"
+                      aria-label="Play audio file http://localhost/view/UQ:1/preview_test.jpg"
                       class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                       id="playButton"
                       style="margin-top: -10px; margin-bottom: -10px;"
