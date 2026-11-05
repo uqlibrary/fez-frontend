@@ -388,7 +388,8 @@ export const AuthorsList = ({
                             ...row._valuesCache,
                             [column.id]: value || /* istanbul ignore next */ null,
                         };
-                        !skipValidation && handleValidation(row, column.id, value || /* istanbul ignore next */ null);
+                        if (skipValidation) return;
+                        handleValidation(row, column.id, value || /* istanbul ignore next */ null);
                     };
 
                     // sync default value to row
@@ -451,8 +452,8 @@ export const AuthorsList = ({
                     };
 
                     // sync default value to row
-                    if (!contributor.externalIdentifierType && value) {
-                        handleChange(value, true);
+                    if (!contributor.externalIdentifierType && defaultExternalIdentifierType) {
+                        handleChange(defaultExternalIdentifierType, true);
                     }
 
                     return (

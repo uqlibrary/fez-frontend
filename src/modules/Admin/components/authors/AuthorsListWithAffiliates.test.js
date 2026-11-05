@@ -893,9 +893,13 @@ describe('AuthorsListWithAffiliates', () => {
         // add a new author with ORCID
         fireEvent.click(getByTestId('rek-author-add'));
         fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'Author with ORCID' } });
-        fireEvent.change(getByTestId('rek-author-external-identifier-input'), { target: { value: externalId } });
         fireEvent.mouseDown(getByTestId('rek-author-external-identifier-type-select'));
         fireEvent.click(getByText('Orcid'));
+        expect(queryByText('rek-author-external-identifier-helper-text')).not.toBeInTheDocument();
+        fireEvent.change(getByTestId('rek-author-external-identifier-input'), { target: { value: '0000' } });
+        expect(getByTestId('rek-author-external-identifier-helper-text')).toHaveTextContent(/orcid is not valid/i);
+        fireEvent.change(getByTestId('rek-author-external-identifier-input'), { target: { value: externalId } });
+        expect(queryByText('rek-author-external-identifier-helper-text')).not.toBeInTheDocument();
         fireEvent.click(getByTestId('rek-author-add-save'));
 
         expect(container).toHaveTableRowsLength(2);
@@ -967,7 +971,7 @@ describe('AuthorsListWithAffiliates', () => {
         expect(getByTestId('rek-author-list-row-1-external-identifier-type')).toHaveTextContent('ROR');
     });
 
-    it('should be able to add and update external identifier with default value', () => {
+    it('should be able to add and update external identifier with default value', async () => {
         const externalId = '0000-0000-0000-0001';
         const { getByTestId, container, queryByText, getByText } = setup({
             showExternalIdentifierInput: true,
@@ -996,11 +1000,15 @@ describe('AuthorsListWithAffiliates', () => {
         // add a new author with ORCID
         fireEvent.click(getByTestId('rek-author-add'));
         fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'Author with ORCID' } });
-        fireEvent.change(getByTestId('rek-author-external-identifier-input'), { target: { value: externalId } });
         expect(getByTestId('rek-author-external-identifier-type-input')).toHaveValue(
             String(AUTHOR_EXTERNAL_IDENTIFIER_TYPE_ORCID_VALUE),
         );
         expect(getByTestId('rek-author-external-identifier-type-input')).toBeDisabled();
+        expect(queryByText('rek-author-external-identifier-helper-text')).not.toBeInTheDocument();
+        fireEvent.change(getByTestId('rek-author-external-identifier-input'), { target: { value: '0000' } });
+        expect(getByTestId('rek-author-external-identifier-helper-text')).toHaveTextContent(/orcid is not valid/i);
+        fireEvent.change(getByTestId('rek-author-external-identifier-input'), { target: { value: externalId } });
+        expect(queryByText('rek-author-external-identifier-helper-text')).not.toBeInTheDocument();
         fireEvent.click(getByTestId('rek-author-add-save'));
 
         expect(container).toHaveTableRowsLength(2);
