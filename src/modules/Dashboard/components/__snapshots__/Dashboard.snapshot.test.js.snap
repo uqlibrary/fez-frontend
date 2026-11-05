@@ -187,7 +187,7 @@ exports[`Dashboard test Rendering MyLatestPublications tab 1`] = `
                           class="css"
                         >
                           <button
-                            aria-label="ORCID Upload - View information about uploading your UQ eSpace works to ORCID"
+                            aria-label="View information about uploading your UQ eSpace works to ORCID"
                             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-MuiButtonBase-root-MuiIconButton-root"
                             data-analyticsid="help-icon-orcid"
                             data-mui-internal-clone-element="true"
@@ -922,7 +922,7 @@ exports[`Dashboard test Rendering MyTrendingPublications tab 1`] = `
                           class="css"
                         >
                           <button
-                            aria-label="ORCID Upload - View information about uploading your UQ eSpace works to ORCID"
+                            aria-label="View information about uploading your UQ eSpace works to ORCID"
                             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-MuiButtonBase-root-MuiIconButton-root"
                             data-analyticsid="help-icon-orcid"
                             data-mui-internal-clone-element="true"
@@ -1691,7 +1691,7 @@ exports[`Dashboard test Should only render barChart 1`] = `
                           class="css"
                         >
                           <button
-                            aria-label="ORCID Upload - View information about uploading your UQ eSpace works to ORCID"
+                            aria-label="View information about uploading your UQ eSpace works to ORCID"
                             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-MuiButtonBase-root-MuiIconButton-root"
                             data-analyticsid="help-icon-orcid"
                             data-mui-internal-clone-element="true"
@@ -2040,7 +2040,7 @@ exports[`Dashboard test componentDidMount without account id 1`] = `
                           class="css"
                         >
                           <button
-                            aria-label="ORCID Upload - View information about uploading your UQ eSpace works to ORCID"
+                            aria-label="View information about uploading your UQ eSpace works to ORCID"
                             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-MuiButtonBase-root-MuiIconButton-root"
                             data-analyticsid="help-icon-orcid"
                             data-mui-internal-clone-element="true"
@@ -2839,7 +2839,7 @@ exports[`Dashboard test displays a lure to a single work when the user has incom
                           class="css"
                         >
                           <button
-                            aria-label="ORCID Upload - View information about uploading your UQ eSpace works to ORCID"
+                            aria-label="View information about uploading your UQ eSpace works to ORCID"
                             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-MuiButtonBase-root-MuiIconButton-root"
                             data-analyticsid="help-icon-orcid"
                             data-mui-internal-clone-element="true"
@@ -3216,7 +3216,7 @@ exports[`Dashboard test displays a lure when the user has incomplete NTRO submis
                           class="css"
                         >
                           <button
-                            aria-label="ORCID Upload - View information about uploading your UQ eSpace works to ORCID"
+                            aria-label="View information about uploading your UQ eSpace works to ORCID"
                             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-MuiButtonBase-root-MuiIconButton-root"
                             data-analyticsid="help-icon-orcid"
                             data-mui-internal-clone-element="true"
@@ -3593,7 +3593,7 @@ exports[`Dashboard test displays a lure when the user has non-compliant open acc
                           class="css"
                         >
                           <button
-                            aria-label="ORCID Upload - View information about uploading your UQ eSpace works to ORCID"
+                            aria-label="View information about uploading your UQ eSpace works to ORCID"
                             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-MuiButtonBase-root-MuiIconButton-root"
                             data-analyticsid="help-icon-orcid"
                             data-mui-internal-clone-element="true"
@@ -3906,7 +3906,7 @@ exports[`Dashboard test does render latest and trending publications tabs correc
                           class="css"
                         >
                           <button
-                            aria-label="ORCID Upload - View information about uploading your UQ eSpace works to ORCID"
+                            aria-label="View information about uploading your UQ eSpace works to ORCID"
                             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-MuiButtonBase-root-MuiIconButton-root"
                             data-analyticsid="help-icon-orcid"
                             data-mui-internal-clone-element="true"
@@ -4399,7 +4399,7 @@ exports[`Dashboard test does render latest publications tab correctly 1`] = `
                           class="css"
                         >
                           <button
-                            aria-label="ORCID Upload - View information about uploading your UQ eSpace works to ORCID"
+                            aria-label="View information about uploading your UQ eSpace works to ORCID"
                             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-MuiButtonBase-root-MuiIconButton-root"
                             data-analyticsid="help-icon-orcid"
                             data-mui-internal-clone-element="true"
@@ -4820,7 +4820,7 @@ exports[`Dashboard test does render the donut/bar graph cards when data is avail
                           class="css"
                         >
                           <button
-                            aria-label="ORCID Upload - View information about uploading your UQ eSpace works to ORCID"
+                            aria-label="View information about uploading your UQ eSpace works to ORCID"
                             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-MuiButtonBase-root-MuiIconButton-root"
                             data-analyticsid="help-icon-orcid"
                             data-mui-internal-clone-element="true"
@@ -5205,7 +5205,7 @@ exports[`Dashboard test does render trending publications tab correctly 1`] = `
                           class="css"
                         >
                           <button
-                            aria-label="ORCID Upload - View information about uploading your UQ eSpace works to ORCID"
+                            aria-label="View information about uploading your UQ eSpace works to ORCID"
                             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-MuiButtonBase-root-MuiIconButton-root"
                             data-analyticsid="help-icon-orcid"
                             data-mui-internal-clone-element="true"
@@ -5631,7 +5631,7 @@ exports[`Dashboard test doesn't render either the publications lure or the add a
                           class="css"
                         >
                           <button
-                            aria-label="ORCID Upload - View information about uploading your UQ eSpace works to ORCID"
+                            aria-label="View information about uploading your UQ eSpace works to ORCID"
                             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-MuiButtonBase-root-MuiIconButton-root"
                             data-analyticsid="help-icon-orcid"
                             data-mui-internal-clone-element="true"
@@ -5880,7 +5880,7 @@ exports[`Dashboard test doesn't render possibly your publications lure and shows
                           class="css"
                         >
                           <button
-                            aria-label="ORCID Upload - View information about uploading your UQ eSpace works to ORCID"
+                            aria-label="View information about uploading your UQ eSpace works to ORCID"
                             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-MuiButtonBase-root-MuiIconButton-root"
                             data-analyticsid="help-icon-orcid"
                             data-mui-internal-clone-element="true"
@@ -6193,7 +6193,7 @@ exports[`Dashboard test doesn't render possibly your publications lure or the ad
                           class="css"
                         >
                           <button
-                            aria-label="ORCID Upload - View information about uploading your UQ eSpace works to ORCID"
+                            aria-label="View information about uploading your UQ eSpace works to ORCID"
                             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-MuiButtonBase-root-MuiIconButton-root"
                             data-analyticsid="help-icon-orcid"
                             data-mui-internal-clone-element="true"
@@ -6442,7 +6442,7 @@ exports[`Dashboard test doesn't render the bar/donut graph cards when no data is
                           class="css"
                         >
                           <button
-                            aria-label="ORCID Upload - View information about uploading your UQ eSpace works to ORCID"
+                            aria-label="View information about uploading your UQ eSpace works to ORCID"
                             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-MuiButtonBase-root-MuiIconButton-root"
                             data-analyticsid="help-icon-orcid"
                             data-mui-internal-clone-element="true"
@@ -6796,7 +6796,7 @@ exports[`Dashboard test publicationStats should render stats 1`] = `
                           class="css"
                         >
                           <button
-                            aria-label="ORCID Upload - View information about uploading your UQ eSpace works to ORCID"
+                            aria-label="View information about uploading your UQ eSpace works to ORCID"
                             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-MuiButtonBase-root-MuiIconButton-root"
                             data-analyticsid="help-icon-orcid"
                             data-mui-internal-clone-element="true"
@@ -7384,7 +7384,7 @@ exports[`Dashboard test publicationStats should render stats 1 1`] = `
                           class="css"
                         >
                           <button
-                            aria-label="ORCID Upload - View information about uploading your UQ eSpace works to ORCID"
+                            aria-label="View information about uploading your UQ eSpace works to ORCID"
                             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-MuiButtonBase-root-MuiIconButton-root"
                             data-analyticsid="help-icon-orcid"
                             data-mui-internal-clone-element="true"
@@ -7900,7 +7900,7 @@ exports[`Dashboard test publicationStats should render stats 2 1`] = `
                           class="css"
                         >
                           <button
-                            aria-label="ORCID Upload - View information about uploading your UQ eSpace works to ORCID"
+                            aria-label="View information about uploading your UQ eSpace works to ORCID"
                             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-MuiButtonBase-root-MuiIconButton-root"
                             data-analyticsid="help-icon-orcid"
                             data-mui-internal-clone-element="true"
@@ -8416,7 +8416,7 @@ exports[`Dashboard test publicationStats should render stats with ancient date 1
                           class="css"
                         >
                           <button
-                            aria-label="ORCID Upload - View information about uploading your UQ eSpace works to ORCID"
+                            aria-label="View information about uploading your UQ eSpace works to ORCID"
                             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-MuiButtonBase-root-MuiIconButton-root"
                             data-analyticsid="help-icon-orcid"
                             data-mui-internal-clone-element="true"
@@ -9346,7 +9346,7 @@ exports[`Dashboard test renders alert for non-authors 1`] = `
                           class="css"
                         >
                           <button
-                            aria-label="ORCID Upload - View information about uploading your UQ eSpace works to ORCID"
+                            aria-label="View information about uploading your UQ eSpace works to ORCID"
                             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-MuiButtonBase-root-MuiIconButton-root"
                             data-analyticsid="help-icon-orcid"
                             data-mui-internal-clone-element="true"
@@ -9659,7 +9659,7 @@ exports[`Dashboard test renders dashboard header only 1`] = `
                           class="css"
                         >
                           <button
-                            aria-label="ORCID Upload - View information about uploading your UQ eSpace works to ORCID"
+                            aria-label="View information about uploading your UQ eSpace works to ORCID"
                             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-MuiButtonBase-root-MuiIconButton-root"
                             data-analyticsid="help-icon-orcid"
                             data-mui-internal-clone-element="true"
@@ -10052,7 +10052,7 @@ exports[`Dashboard test renders possibly your publications lure but not the add 
                           class="css"
                         >
                           <button
-                            aria-label="ORCID Upload - View information about uploading your UQ eSpace works to ORCID"
+                            aria-label="View information about uploading your UQ eSpace works to ORCID"
                             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-MuiButtonBase-root-MuiIconButton-root"
                             data-analyticsid="help-icon-orcid"
                             data-mui-internal-clone-element="true"
@@ -10326,7 +10326,7 @@ exports[`Dashboard test sets context for showing ORCID sync UI 1`] = `
                           class="css"
                         >
                           <button
-                            aria-label="ORCID Upload - View information about uploading your UQ eSpace works to ORCID"
+                            aria-label="View information about uploading your UQ eSpace works to ORCID"
                             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-MuiButtonBase-root-MuiIconButton-root"
                             data-analyticsid="help-icon-orcid"
                             data-mui-internal-clone-element="true"
@@ -10600,7 +10600,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                           class="css"
                         >
                           <button
-                            aria-label="ORCID Upload - View information about uploading your UQ eSpace works to ORCID"
+                            aria-label="View information about uploading your UQ eSpace works to ORCID"
                             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-MuiButtonBase-root-MuiIconButton-root"
                             data-analyticsid="help-icon-orcid"
                             data-mui-internal-clone-element="true"

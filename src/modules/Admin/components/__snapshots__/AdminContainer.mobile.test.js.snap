@@ -68,7 +68,7 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                 class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
               >
                 <button
-                  aria-label="Keyboard shortcuts - Learn about keyboard shortcuts"
+                  aria-label="Learn about keyboard shortcuts"
                   class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-MuiButtonBase-root-MuiIconButton-root"
                   data-analyticsid="help-icon"
                   data-mui-internal-clone-element="true"
