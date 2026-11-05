@@ -49,10 +49,12 @@ const StyledGridCard = styled(Grid)(({ theme }) => ({
     },
 }));
 
-const StyledAppTitle = styled(Typography, {
-    shouldForwardProp: prop => prop !== 'indentTitle',
-})(({ theme, indentTitle }) => ({
-    ...(indentTitle ? { textIndent: '282px' } : {}),
+// Width of "<title> : Celebrating 20 years" at the title font size, from the title length (the suffix varies
+// per environment). Measured in Montserrat at 24px: ~11.1em for the tagline plus up to ~0.65em per title
+// character; it slightly overestimates, so the tagline hides rather than clips.
+const taglineMinWidthEm = (11.1 + 0.65 * locale.global.title.trim().length).toFixed(2);
+
+const StyledAppTitle = styled(Typography)(({ theme }) => ({
     // Keep the semantic h1 (and its Montserrat), but size the banner title for the header rather than
     // the document h1 scale (DS h1 = 40px would overflow). DS $font-size-xxl (24px), fixed across widths.
     fontSize: '1.5rem',
@@ -68,8 +70,12 @@ const StyledAppTitle = styled(Typography, {
             textDecoration: 'underline',
         },
     },
-    '& .appTitleTagline': {
-        [theme.breakpoints.down('md')]: {
+    // Size the title against its own cell rather than the viewport: the docked drawer and the search box
+    // both eat into the space, so a viewport breakpoint can't tell when the tagline fits (zoom left it
+    // clipped behind the search box). Hide the tagline when the cell is narrower than the full title.
+    containerType: 'inline-size',
+    [`@container (max-width: ${taglineMinWidthEm}em)`]: {
+        '& .appTitleTagline': {
             display: 'none',
         },
     },
@@ -339,14 +345,14 @@ const AppClass = ({
                         >
                             <Grid container spacing={2} alignItems="center" justifyContent="flex-start" wrap={'nowrap'}>
                                 {!docked && !menuDrawerOpen && (
-                                    <Grid sx={{ display: { xs: 'none', sm: 'block' } }}>
+                                    <Grid sx={{ display: { xs: 'none', sm: 'block' }, flexShrink: 0 }}>
                                         <div id="logo" className="smallLogo" style={{ height: 66, width: 60 }}>
                                             {locale.global.logo.label}
                                         </div>
                                     </Grid>
                                 )}
-                                <Grid size="auto" style={{ overflow: 'hidden', textOverflow: 'ellipsis' }}>
-                                    <StyledAppTitle variant="h1" component={'h1'} noWrap indentTitle={docked}>
+                                <Grid size="grow" style={{ minWidth: 0, overflow: 'hidden', textOverflow: 'ellipsis' }}>
+                                    <StyledAppTitle variant="h1" component={'h1'} noWrap>
                                         {locale.global.appTitle}
                                     </StyledAppTitle>
                                 </Grid>
