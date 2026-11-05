@@ -871,62 +871,191 @@ describe('AuthorsListWithAffiliates', () => {
     it('should be able to add and update external identifier', () => {
         const externalId = '0000-0000-0000-0001';
         const updatedExternalId = '02mhbdp94';
-        const { getByTestId, container, getByText } = setup({
+        const { container, getByTestId, queryByText, getByText } = setup({
             showExternalIdentifierInput: true,
         });
 
-        // add a new author
+        expect(queryByText('Orcid')).not.toBeInTheDocument();
+        expect(queryByText('Ror')).not.toBeInTheDocument();
+
+        // add a new author without ORCID
         fireEvent.click(getByTestId('rek-author-add'));
-        fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'test' } });
+        fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'Author without ORCID' } });
+        fireEvent.click(getByTestId('rek-author-add-save'));
+
+        expect(container).toHaveTableRowsLength(1);
+        expect(getByTestId('rek-author-list-row-0-name-as-published')).toHaveTextContent('Author without ORCID');
+        expect(getByTestId('rek-author-list-row-0-external-identifier')).toHaveTextContent('');
+        expect(getByTestId('rek-author-list-row-0-external-identifier-type')).toHaveTextContent('');
+        expect(queryByText('Orcid')).not.toBeInTheDocument();
+        expect(queryByText('Ror')).not.toBeInTheDocument();
+
+        // add a new author with ORCID
+        fireEvent.click(getByTestId('rek-author-add'));
+        fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'Author with ORCID' } });
         fireEvent.change(getByTestId('rek-author-external-identifier-input'), { target: { value: externalId } });
         fireEvent.mouseDown(getByTestId('rek-author-external-identifier-type-select'));
         fireEvent.click(getByText('Orcid'));
         fireEvent.click(getByTestId('rek-author-add-save'));
 
-        expect(container).toHaveTableRowsLength(1);
-        expect(getByTestId('rek-author-list-row-0-external-identifier')).toHaveTextContent(externalId);
+        expect(container).toHaveTableRowsLength(2);
+        expect(getByTestId('rek-author-list-row-0-name-as-published')).toHaveTextContent('Author without ORCID');
+        expect(getByTestId('rek-author-list-row-0-external-identifier')).toHaveTextContent('');
+        expect(getByTestId('rek-author-list-row-0-external-identifier-type')).toHaveTextContent('');
+        expect(getByTestId('rek-author-list-row-1-name-as-published')).toHaveTextContent('Author with ORCID');
+        expect(getByTestId('rek-author-list-row-1-external-identifier')).toHaveTextContent(externalId);
+        expect(getByTestId('rek-author-list-row-1-external-identifier-type')).toHaveTextContent('Orcid');
 
-        // update author
+        // update author without ORCID
         fireEvent.click(getByTestId('rek-author-list-row-0-edit'));
-        fireEvent.change(getByTestId('rek-author-external-identifier-input'), { target: { value: updatedExternalId } });
+        fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'Author without ORCID (updated)' } });
+        fireEvent.click(getByTestId('rek-author-update-save'));
+
+        expect(getByTestId('rek-author-list-row-0-name-as-published')).toHaveTextContent(
+            'Author without ORCID (updated)',
+        );
+        expect(getByTestId('rek-author-list-row-0-external-identifier')).toHaveTextContent('');
+        expect(getByTestId('rek-author-list-row-0-external-identifier-type')).toHaveTextContent('');
+        expect(getByTestId('rek-author-list-row-1-name-as-published')).toHaveTextContent('Author with ORCID');
+        expect(getByTestId('rek-author-list-row-1-external-identifier')).toHaveTextContent(externalId);
+        expect(getByTestId('rek-author-list-row-1-external-identifier-type')).toHaveTextContent('Orcid');
+
+        // update author with ORCID
+        fireEvent.click(getByTestId('rek-author-list-row-1-edit'));
+        fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'Author with ORCID (updated)' } });
+        fireEvent.click(getByTestId('rek-author-update-save'));
+
+        expect(getByTestId('rek-author-list-row-0-name-as-published')).toHaveTextContent(
+            'Author without ORCID (updated)',
+        );
+        expect(getByTestId('rek-author-list-row-0-external-identifier')).toHaveTextContent('');
+        expect(getByTestId('rek-author-list-row-0-external-identifier-type')).toHaveTextContent('');
+        expect(getByTestId('rek-author-list-row-1-name-as-published')).toHaveTextContent('Author with ORCID (updated)');
+        expect(getByTestId('rek-author-list-row-1-external-identifier')).toHaveTextContent(externalId);
+        expect(getByTestId('rek-author-list-row-1-external-identifier-type')).toHaveTextContent('Orcid');
+
+        // remove ORCID from author
+        fireEvent.click(getByTestId('rek-author-list-row-1-edit'));
+        fireEvent.change(getByTestId('rek-author-external-identifier-input'), { target: { value: '' } });
+        fireEvent.click(getByTestId('rek-author-update-save'));
+
+        expect(getByTestId('rek-author-list-row-0-name-as-published')).toHaveTextContent(
+            'Author without ORCID (updated)',
+        );
+        expect(getByTestId('rek-author-list-row-0-external-identifier')).toHaveTextContent('');
+        expect(getByTestId('rek-author-list-row-0-external-identifier-type')).toHaveTextContent('');
+        expect(getByTestId('rek-author-list-row-1-name-as-published')).toHaveTextContent('Author with ORCID (updated)');
+        expect(getByTestId('rek-author-list-row-1-external-identifier')).toHaveTextContent('');
+        expect(getByTestId('rek-author-list-row-1-external-identifier-type')).toHaveTextContent('');
+
+        // add ROR to author
+        fireEvent.click(getByTestId('rek-author-list-row-1-edit'));
+        fireEvent.change(getByTestId('rek-author-external-identifier-input'), {
+            target: { value: updatedExternalId },
+        });
         fireEvent.mouseDown(getByTestId('rek-author-external-identifier-type-select'));
         fireEvent.click(getByText('ROR'));
         fireEvent.click(getByTestId('rek-author-update-save'));
 
-        expect(getByTestId('rek-author-list-row-0-external-identifier')).toHaveTextContent(updatedExternalId);
+        expect(getByTestId('rek-author-list-row-0-name-as-published')).toHaveTextContent(
+            'Author without ORCID (updated)',
+        );
+        expect(getByTestId('rek-author-list-row-0-external-identifier')).toHaveTextContent('');
+        expect(getByTestId('rek-author-list-row-0-external-identifier-type')).toHaveTextContent('');
+        expect(getByTestId('rek-author-list-row-1-name-as-published')).toHaveTextContent('Author with ORCID (updated)');
+        expect(getByTestId('rek-author-list-row-1-external-identifier')).toHaveTextContent(updatedExternalId);
+        expect(getByTestId('rek-author-list-row-1-external-identifier-type')).toHaveTextContent('ROR');
     });
 
     it('should be able to add and update external identifier with default value', () => {
         const externalId = '0000-0000-0000-0001';
-        const { getByTestId, container, queryByText } = setup({
+        const { getByTestId, container, queryByText, getByText } = setup({
             showExternalIdentifierInput: true,
             defaultExternalIdentifierType: AUTHOR_EXTERNAL_IDENTIFIER_TYPE_ORCID_VALUE,
         });
-        expect(queryByText('Orcid')).not.toBeInTheDocument();
 
-        // add a new author
+        expect(queryByText('Orcid')).not.toBeInTheDocument();
+        expect(queryByText('Ror')).not.toBeInTheDocument();
+
+        // add a new author without ORCID
         fireEvent.click(getByTestId('rek-author-add'));
-        fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'test' } });
+        fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'Author without ORCID' } });
         expect(getByTestId('rek-author-external-identifier-type-input')).toHaveValue(
             String(AUTHOR_EXTERNAL_IDENTIFIER_TYPE_ORCID_VALUE),
         );
         expect(getByTestId('rek-author-external-identifier-type-input')).toBeDisabled();
         fireEvent.click(getByTestId('rek-author-add-save'));
 
-        expect(queryByText('Orcid')).not.toBeInTheDocument();
         expect(container).toHaveTableRowsLength(1);
+        expect(getByTestId('rek-author-list-row-0-name-as-published')).toHaveTextContent('Author without ORCID');
+        expect(getByTestId('rek-author-list-row-0-external-identifier')).toHaveTextContent('');
+        expect(getByTestId('rek-author-list-row-0-external-identifier-type')).toHaveTextContent('');
+        expect(queryByText('Orcid')).not.toBeInTheDocument();
+        expect(queryByText('Ror')).not.toBeInTheDocument();
 
-        // update author and add ORCID
-        fireEvent.click(getByTestId('rek-author-list-row-0-edit'));
+        // add a new author with ORCID
+        fireEvent.click(getByTestId('rek-author-add'));
+        fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'Author with ORCID' } });
         fireEvent.change(getByTestId('rek-author-external-identifier-input'), { target: { value: externalId } });
+        expect(getByTestId('rek-author-external-identifier-type-input')).toHaveValue(
+            String(AUTHOR_EXTERNAL_IDENTIFIER_TYPE_ORCID_VALUE),
+        );
+        expect(getByTestId('rek-author-external-identifier-type-input')).toBeDisabled();
+        fireEvent.click(getByTestId('rek-author-add-save'));
+
+        expect(container).toHaveTableRowsLength(2);
+        expect(getByTestId('rek-author-list-row-0-name-as-published')).toHaveTextContent('Author without ORCID');
+        expect(getByTestId('rek-author-list-row-0-external-identifier')).toHaveTextContent('');
+        expect(getByTestId('rek-author-list-row-0-external-identifier-type')).toHaveTextContent('');
+        expect(getByTestId('rek-author-list-row-1-name-as-published')).toHaveTextContent('Author with ORCID');
+        expect(getByTestId('rek-author-list-row-1-external-identifier')).toHaveTextContent(externalId);
+        expect(getByTestId('rek-author-list-row-1-external-identifier-type')).toHaveTextContent('Orcid');
+
+        // update author without ORCID
+        fireEvent.click(getByTestId('rek-author-list-row-0-edit'));
+        fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'Author without ORCID (updated)' } });
         expect(getByTestId('rek-author-external-identifier-type-input')).toHaveValue(
             String(AUTHOR_EXTERNAL_IDENTIFIER_TYPE_ORCID_VALUE),
         );
         expect(getByTestId('rek-author-external-identifier-type-input')).toBeDisabled();
         fireEvent.click(getByTestId('rek-author-update-save'));
 
-        expect(getByTestId('rek-author-list-row-0-external-identifier')).toHaveTextContent(externalId);
-        expect(getByTestId('rek-author-list-row-0-external-identifier-type')).toHaveTextContent('Orcid');
+        expect(getByTestId('rek-author-list-row-0-name-as-published')).toHaveTextContent(
+            'Author without ORCID (updated)',
+        );
+        expect(getByTestId('rek-author-list-row-0-external-identifier')).toHaveTextContent('');
+        expect(getByTestId('rek-author-list-row-0-external-identifier-type')).toHaveTextContent('');
+        expect(getByTestId('rek-author-list-row-1-name-as-published')).toHaveTextContent('Author with ORCID');
+        expect(getByTestId('rek-author-list-row-1-external-identifier')).toHaveTextContent(externalId);
+        expect(getByTestId('rek-author-list-row-1-external-identifier-type')).toHaveTextContent('Orcid');
+
+        // update author with ORCID
+        fireEvent.click(getByTestId('rek-author-list-row-1-edit'));
+        fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'Author with ORCID (updated)' } });
+        fireEvent.click(getByTestId('rek-author-update-save'));
+
+        expect(getByTestId('rek-author-list-row-0-name-as-published')).toHaveTextContent(
+            'Author without ORCID (updated)',
+        );
+        expect(getByTestId('rek-author-list-row-0-external-identifier')).toHaveTextContent('');
+        expect(getByTestId('rek-author-list-row-0-external-identifier-type')).toHaveTextContent('');
+        expect(getByTestId('rek-author-list-row-1-name-as-published')).toHaveTextContent('Author with ORCID (updated)');
+        expect(getByTestId('rek-author-list-row-1-external-identifier')).toHaveTextContent(externalId);
+        expect(getByTestId('rek-author-list-row-1-external-identifier-type')).toHaveTextContent('Orcid');
+
+        // remove ORCID from author
+        fireEvent.click(getByTestId('rek-author-list-row-1-edit'));
+        fireEvent.change(getByTestId('rek-author-external-identifier-input'), { target: { value: '' } });
+        fireEvent.click(getByTestId('rek-author-update-save'));
+
+        expect(getByTestId('rek-author-list-row-0-name-as-published')).toHaveTextContent(
+            'Author without ORCID (updated)',
+        );
+        expect(getByTestId('rek-author-list-row-0-external-identifier')).toHaveTextContent('');
+        expect(getByTestId('rek-author-list-row-0-external-identifier-type')).toHaveTextContent('');
+        expect(getByTestId('rek-author-list-row-1-name-as-published')).toHaveTextContent('Author with ORCID (updated)');
+        expect(getByTestId('rek-author-list-row-1-external-identifier')).toHaveTextContent('');
+        expect(getByTestId('rek-author-list-row-1-external-identifier-type')).toHaveTextContent('');
     });
 
     it('should delete row correctly', async () => {
