@@ -3,6 +3,7 @@ import AuthorsList from './AuthorsList';
 import { act, render, fireEvent, WithReduxStore, waitFor, waitForElementToBeRemoved } from 'test-utils';
 import locale from 'locale/components';
 import * as repositories from 'repositories';
+import { AUTHOR_EXTERNAL_IDENTIFIER_TYPE_ORCID_VALUE } from '../../../../config/general';
 
 const props = {
     contributorEditorId: 'rek-author',
@@ -829,6 +830,39 @@ describe('AuthorsList', () => {
         fireEvent.click(getByTestId('rek-author-update-save'));
 
         expect(getByTestId('rek-author-list-row-0-external-identifier')).toHaveTextContent(updatedExternalId);
+    });
+
+    it('should be able to add and update external identifier with default value', () => {
+        const externalId = '0000-0000-0000-0001';
+        const { getByTestId, container, queryByText } = setup({
+            showExternalIdentifierInput: true,
+            defaultExternalIdentifierType: AUTHOR_EXTERNAL_IDENTIFIER_TYPE_ORCID_VALUE,
+        });
+        expect(queryByText('Orcid')).not.toBeInTheDocument();
+
+        // add a new author
+        fireEvent.click(getByTestId('rek-author-add'));
+        fireEvent.change(getByTestId('rek-author-input'), { target: { value: 'test' } });
+        expect(getByTestId('rek-author-external-identifier-type-input')).toHaveValue(
+            String(AUTHOR_EXTERNAL_IDENTIFIER_TYPE_ORCID_VALUE),
+        );
+        expect(getByTestId('rek-author-external-identifier-type-input')).toBeDisabled();
+        fireEvent.click(getByTestId('rek-author-add-save'));
+
+        expect(queryByText('Orcid')).not.toBeInTheDocument();
+        expect(container).toHaveTableRowsLength(1);
+
+        // update author and add ORCID
+        fireEvent.click(getByTestId('rek-author-list-row-0-edit'));
+        fireEvent.change(getByTestId('rek-author-external-identifier-input'), { target: { value: externalId } });
+        expect(getByTestId('rek-author-external-identifier-type-input')).toHaveValue(
+            String(AUTHOR_EXTERNAL_IDENTIFIER_TYPE_ORCID_VALUE),
+        );
+        expect(getByTestId('rek-author-external-identifier-type-input')).toBeDisabled();
+        fireEvent.click(getByTestId('rek-author-update-save'));
+
+        expect(getByTestId('rek-author-list-row-0-external-identifier')).toHaveTextContent(externalId);
+        expect(getByTestId('rek-author-list-row-0-external-identifier-type')).toHaveTextContent('Orcid');
     });
 
     it('should delete row correctly', async () => {

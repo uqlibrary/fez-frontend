@@ -75,6 +75,12 @@ export async function assertChangeSelectFromTo(page: Page, item: string, changeF
     await expect(select).toContainText(changeTo);
 }
 
+export async function selectUQAuthor(page: Page, username: string) {
+    await page.getByTestId('rek-author-add').click();
+    await page.getByTestId('rek-author-id-input').fill('uq');
+    await page.getByTestId('rek-author-id-options').locator(`li:has-text("${username}")`).click();
+}
+
 export async function addAuthorAndAssert(
     page: Page,
     authorUqname: string,
@@ -82,9 +88,7 @@ export async function addAuthorAndAssert(
     expand = true,
     edit = true,
 ) {
-    await page.getByTestId('rek-author-add').click();
-    await page.getByTestId('rek-author-id-input').fill('uq');
-    await page.getByTestId('rek-author-id-options').locator(`li:has-text("${authorUqname}")`).click();
+    await selectUQAuthor(page, authorUqname);
     await page.getByTestId('rek-author-add-save').click();
     await expect(await page.locator('[data-testid^=contributor-errorIcon-]').count()).toBeGreaterThanOrEqual(1);
 

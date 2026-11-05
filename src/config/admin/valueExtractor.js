@@ -92,6 +92,7 @@ const authorsGetValue = record => {
         aut_org_username: ((authorIds[order] || {}).author || {}).aut_org_username || '',
         aut_student_username: ((authorIds[order] || {}).author || {}).aut_student_username || '',
         aut_display_name: (authorIds[order] || {}).rek_author_id_lookup || 0,
+        aut_orcid_id: authorIds[order]?.author?.aut_orcid_id || null,
     }));
 
     // delete record.fez_record_search_key_author_id;

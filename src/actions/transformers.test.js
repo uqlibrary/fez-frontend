@@ -164,11 +164,27 @@ describe('transformers', () => {
                         rek_author_identifier: 'ext id',
                         rek_author_identifier_order: 1,
                     },
+                    {
+                        rek_author_identifier: 'ext id 2',
+                        rek_author_identifier_order: 2,
+                    },
+                    {
+                        rek_author_identifier: null,
+                        rek_author_identifier_order: 3,
+                    },
                 ],
                 fez_record_search_key_author_identifier_type: [
                     {
                         rek_author_identifier_type: '111',
                         rek_author_identifier_type_order: 1,
+                    },
+                    {
+                        rek_author_identifier_type: null,
+                        rek_author_identifier_type_order: 2,
+                    },
+                    {
+                        rek_author_identifier_type: null,
+                        rek_author_identifier_type_order: 3,
                     },
                 ],
             };

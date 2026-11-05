@@ -133,9 +133,9 @@ describe('ContributorsEditor', () => {
     });
 
     it('appends a contributor to the list as an admin', () => {
-        const { getByTestId, getByRole } = setup({ isAdmin: true });
+        const { getByTestId } = setup({ isAdmin: true });
 
-        fireEvent.click(getByRole('button', { name: 'Add contributor' }));
+        fireEvent.click(getByTestId('test-add-contributor'));
         fireEvent.change(getByTestId('test-input'), { target: { value: 'J.Smith' } });
         fireEvent.click(getByTestId('test-add-save'));
 

@@ -103,6 +103,7 @@ export const AuthorsList = ({
     onChange,
     showRoleInput,
     showExternalIdentifierInput,
+    defaultExternalIdentifierType,
 }) => {
     const theme = useTheme();
 
@@ -363,7 +364,8 @@ export const AuthorsList = ({
                     </Typography>
                 ),
                 Cell: ({ cell, row }) => {
-                    const value = cell.getValue();
+                    // default to UQ author's ORCID
+                    const value = cell.getValue()?.trim?.() || row?.original?.aut_orcid_id;
                     return (
                         <Typography
                             variant="body2"
@@ -375,23 +377,32 @@ export const AuthorsList = ({
                     );
                 },
                 Edit: ({ row, column }) => {
-                    const value = row._valuesCache.externalIdentifier || '';
-                    const errors = validationErrors[row.id] || [];
+                    const contributor = { ...row.original, ...row._valuesCache };
+                    const value = contributor.externalIdentifier || '';
+                    const fromUQAuthor = !!contributor.aut_orcid_id?.trim?.();
+                    const errors = (!fromUQAuthor && validationErrors[row.id]) || [];
                     const error = getValidationError(errors, 'externalIdentifier');
 
-                    const handleChange = e => {
+                    const handleChange = (value, skipValidation = false) => {
                         row._valuesCache = {
                             ...row._valuesCache,
-                            [column.id]: e.target.value || /* istanbul ignore next */ null,
+                            [column.id]: value || /* istanbul ignore next */ null,
                         };
-                        handleValidation(row, column.id, e.target.value || /* istanbul ignore next */ null);
+                        !skipValidation && handleValidation(row, column.id, value || /* istanbul ignore next */ null);
                     };
+
+                    // set once, only if value is empty
+                    if (!value?.trim?.() && fromUQAuthor) {
+                        handleChange(contributor.aut_orcid_id, true);
+                    }
+
                     return (
                         <Grid container spacing={2} sx={{ width: '100%' }}>
                             <Grid style={{ flexGrow: '1' }}>
                                 <TextField
+                                    disabled={fromUQAuthor}
                                     value={value}
-                                    onChange={handleChange}
+                                    onChange={e => handleChange(e.target.value)}
                                     textFieldId={`${contributorEditorId}-external-identifier`}
                                     error={!!error}
                                     errorText={error}
@@ -428,15 +439,21 @@ export const AuthorsList = ({
                 },
                 Edit: ({ row, column }) => {
                     const contributor = { ...row.original, ...row._valuesCache };
-                    const value = contributor.externalIdentifierType || '';
+                    const value = contributor.externalIdentifierType || defaultExternalIdentifierType || '';
 
-                    const handleChange = value => {
+                    const handleChange = (value, skipValidation = false) => {
                         row._valuesCache = {
                             ...row._valuesCache,
                             [column.id]: value || /* istanbul ignore next */ null,
                         };
+                        if (skipValidation) return;
                         handleValidation(row, column.id, value || /* istanbul ignore next */ null);
                     };
+
+                    if (!contributor.externalIdentifierType && defaultExternalIdentifierType) {
+                        handleChange(value, true);
+                    }
+
                     return (
                         <Grid container spacing={2} sx={{ width: '100%' }}>
                             <Grid style={{ flexGrow: '1' }}>
@@ -447,6 +464,7 @@ export const AuthorsList = ({
                                     key={`${contributor.externalIdentifierType}-${contributor.externalIdentifier}`}
                                     genericSelectFieldId={`${contributorEditorId}-external-identifier-type`}
                                     label={externalIdentifierTypeLabel}
+                                    disabled={!!defaultExternalIdentifierType}
                                 />
                             </Grid>
                         </Grid>
@@ -632,16 +650,22 @@ export const AuthorsList = ({
         return [...data, { ...newAuthor, affiliations: [] }];
     };
 
+    const mergeValues = (values, row) => ({
+        ...row.original,
+        ...row._valuesCache,
+        ...values,
+        // remove type when external identifier is empty
+        externalIdentifierType: !values.externalIdentifier?.trim?.() ? '' : values.externalIdentifierType,
+    });
+
     const handleCreate = ({ values, table, row }) => {
-        const newAuthor = { ...row.original, ...row._valuesCache, ...values };
+        const newAuthor = mergeValues(values, row);
 
         const errors = validate(newAuthor);
-
         /* istanbul ignore if  */
         if (!!errors) {
             return;
         }
-
         const duplicate =
             data.filter(contributor => !!contributor.aut_id && contributor.aut_id === newAuthor.aut_id).length > 0;
 
@@ -662,7 +686,7 @@ export const AuthorsList = ({
     };
 
     const handleEdit = ({ values, table, row }) => {
-        const updatedAuthor = { ...row.original, ...row._valuesCache, ...values };
+        const updatedAuthor = mergeValues(values, row);
         const errors = validate(updatedAuthor);
         /* istanbul ignore if  */
         if (!!errors) {
@@ -884,128 +908,138 @@ export const AuthorsList = ({
         },
         renderTopToolbarCustomActions: ({ table }) => (
             <Tooltip title={addButton}>
-                <IconButton
-                    id={`${contributorEditorId}-${addButton.toLowerCase().replace(/ /g, '-')}`}
-                    data-testid={`${contributorEditorId}-${addButton.toLowerCase().replace(/ /g, '-')}`}
-                    disabled={disabled || table.getState().creatingRow !== null}
-                    onClick={() => {
-                        resetEditRow();
-                        table.setEditingRow(null);
-                        table.setCreatingRow(true);
-                        // immediately force validation of new row
-                        handleValidation({ id: 'mrt-row-create' }, columns[0].accessorKey, '');
-                    }}
-                >
-                    <AddCircle
-                        color="primary"
-                        fontSize="large"
-                        id={`${contributorEditorId}-add`}
-                        data-testid={`${contributorEditorId}-add`}
-                    />
-                </IconButton>
+                <span>
+                    <IconButton
+                        id={`${contributorEditorId}-${addButton.toLowerCase().replace(/ /g, '-')}`}
+                        data-testid={`${contributorEditorId}-${addButton.toLowerCase().replace(/ /g, '-')}`}
+                        disabled={disabled || table.getState().creatingRow !== null}
+                        onClick={() => {
+                            resetEditRow();
+                            table.setEditingRow(null);
+                            table.setCreatingRow(true);
+                            // immediately force validation of new row
+                            handleValidation({ id: 'mrt-row-create' }, columns[0].accessorKey, '');
+                        }}
+                    >
+                        <AddCircle
+                            color="primary"
+                            fontSize="large"
+                            id={`${contributorEditorId}-add`}
+                            data-testid={`${contributorEditorId}-add`}
+                        />
+                    </IconButton>
+                </span>
             </Tooltip>
         ),
         renderRowActions: ({ table, row }) => {
             return (
                 <Box sx={{ display: 'flex', flexWrap: 'nowrap' }}>
                     <Tooltip title={moveUpHint}>
-                        <IconButton
-                            onClick={() => {
-                                const index = row.index;
-                                /* istanbul ignore else */
-                                if (index > 0) {
-                                    const newData = [...data];
-                                    const temp = newData[index - 1];
-                                    newData[index - 1] = newData[index];
-                                    newData[index] = temp;
-                                    setData(newData);
-                                    onChange(newData);
+                        <span>
+                            <IconButton
+                                onClick={() => {
+                                    const index = row.index;
+                                    /* istanbul ignore else */
+                                    if (index > 0) {
+                                        const newData = [...data];
+                                        const temp = newData[index - 1];
+                                        newData[index - 1] = newData[index];
+                                        newData[index] = temp;
+                                        setData(newData);
+                                        onChange(newData);
+                                    }
+                                }}
+                                disabled={
+                                    isPendingDelete ||
+                                    !!isBusy ||
+                                    !!editingRow ||
+                                    row.index === 0 ||
+                                    table.getState().creatingRow !== null
                                 }
-                            }}
-                            disabled={
-                                isPendingDelete ||
-                                !!isBusy ||
-                                !!editingRow ||
-                                row.index === 0 ||
-                                table.getState().creatingRow !== null
-                            }
-                            id={`${contributorEditorId}-list-row-${row.index}-move-up`}
-                            data-testid={`${contributorEditorId}-list-row-${row.index}-move-up`}
-                            size="medium"
-                            color="primary"
-                        >
-                            <KeyboardArrowUp />
-                        </IconButton>
+                                id={`${contributorEditorId}-list-row-${row.index}-move-up`}
+                                data-testid={`${contributorEditorId}-list-row-${row.index}-move-up`}
+                                size="medium"
+                                color="primary"
+                            >
+                                <KeyboardArrowUp />
+                            </IconButton>
+                        </span>
                     </Tooltip>
                     <Tooltip title={moveDownHint}>
-                        <IconButton
-                            onClick={() => {
-                                const index = row.index;
-                                /* istanbul ignore else */
-                                if (index < data.length - 1) {
-                                    const newData = [...data];
-                                    const temp = newData[index + 1];
-                                    newData[index + 1] = newData[index];
-                                    newData[index] = temp;
-                                    setData(newData);
-                                    onChange(newData);
+                        <span>
+                            <IconButton
+                                onClick={() => {
+                                    const index = row.index;
+                                    /* istanbul ignore else */
+                                    if (index < data.length - 1) {
+                                        const newData = [...data];
+                                        const temp = newData[index + 1];
+                                        newData[index + 1] = newData[index];
+                                        newData[index] = temp;
+                                        setData(newData);
+                                        onChange(newData);
+                                    }
+                                }}
+                                disabled={
+                                    isPendingDelete ||
+                                    !!isBusy ||
+                                    !!editingRow ||
+                                    row.index === data.length - 1 ||
+                                    table.getState().creatingRow !== null
                                 }
-                            }}
-                            disabled={
-                                isPendingDelete ||
-                                !!isBusy ||
-                                !!editingRow ||
-                                row.index === data.length - 1 ||
-                                table.getState().creatingRow !== null
-                            }
-                            id={`${contributorEditorId}-list-row-${row.index}-move-down`}
-                            data-testid={`${contributorEditorId}-list-row-${row.index}-move-down`}
-                            size="medium"
-                            color="primary"
-                        >
-                            <KeyboardArrowDown fontSize="medium" />
-                        </IconButton>
+                                id={`${contributorEditorId}-list-row-${row.index}-move-down`}
+                                data-testid={`${contributorEditorId}-list-row-${row.index}-move-down`}
+                                size="medium"
+                                color="primary"
+                            >
+                                <KeyboardArrowDown fontSize="medium" />
+                            </IconButton>
+                        </span>
                     </Tooltip>
 
                     <Tooltip title={editHint}>
-                        <IconButton
-                            onClick={() => {
-                                setEditRow(row);
-                                table.setCreatingRow(null);
-                                table.setEditingRow(row);
-                            }}
-                            disabled={
-                                disabled ||
-                                !!pendingDeleteRowId ||
-                                !!isBusy ||
-                                !!editingRow ||
-                                table.getState().creatingRow !== null
-                            }
-                            id={`${contributorEditorId}-list-row-${row.index}-edit`}
-                            data-testid={`${contributorEditorId}-list-row-${row.index}-edit`}
-                            size="medium"
-                            color="primary"
-                        >
-                            <tableIcons.Edit />
-                        </IconButton>
+                        <span>
+                            <IconButton
+                                onClick={() => {
+                                    setEditRow(row);
+                                    table.setCreatingRow(null);
+                                    table.setEditingRow(row);
+                                }}
+                                disabled={
+                                    disabled ||
+                                    !!pendingDeleteRowId ||
+                                    !!isBusy ||
+                                    !!editingRow ||
+                                    table.getState().creatingRow !== null
+                                }
+                                id={`${contributorEditorId}-list-row-${row.index}-edit`}
+                                data-testid={`${contributorEditorId}-list-row-${row.index}-edit`}
+                                size="medium"
+                                color="primary"
+                            >
+                                <tableIcons.Edit />
+                            </IconButton>
+                        </span>
                     </Tooltip>
                     <Tooltip title={deleteHint}>
-                        <IconButton
-                            onClick={openDeleteConfirmModal(row.index)}
-                            disabled={
-                                disabled ||
-                                isPendingDelete ||
-                                !!isBusy ||
-                                !!editingRow ||
-                                table.getState().creatingRow !== null
-                            }
-                            id={`${contributorEditorId}-list-row-${row.index}-delete`}
-                            data-testid={`${contributorEditorId}-list-row-${row.index}-delete`}
-                            size="medium"
-                            color="primary"
-                        >
-                            <tableIcons.Delete />
-                        </IconButton>
+                        <span>
+                            <IconButton
+                                onClick={openDeleteConfirmModal(row.index)}
+                                disabled={
+                                    disabled ||
+                                    isPendingDelete ||
+                                    !!isBusy ||
+                                    !!editingRow ||
+                                    table.getState().creatingRow !== null
+                                }
+                                id={`${contributorEditorId}-list-row-${row.index}-delete`}
+                                data-testid={`${contributorEditorId}-list-row-${row.index}-delete`}
+                                size="medium"
+                                color="primary"
+                            >
+                                <tableIcons.Delete />
+                            </IconButton>
+                        </span>
                     </Tooltip>
                 </Box>
             );
@@ -1059,6 +1093,7 @@ AuthorsList.propTypes = {
     onChange: PropTypes.func,
     showRoleInput: PropTypes.bool,
     showExternalIdentifierInput: PropTypes.bool,
+    defaultExternalIdentifierType: PropTypes.number,
     useFormReducer: PropTypes.bool,
 };
 
