@@ -21,7 +21,7 @@ exports[`Snapshot tests for StandardPage component renders StandardPage with hel
       class="MuiBox-root css"
     >
       <button
-        aria-label="Click for more information"
+        aria-label="Test - Click for more information"
         class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-MuiButtonBase-root-MuiIconButton-root"
         data-analyticsid="help-icon"
         data-mui-internal-clone-element="true"

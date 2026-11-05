@@ -577,7 +577,7 @@ exports[`DesignForm component 1`] = `
             class="MuiCardHeader-action css-MuiCardHeader-action"
           >
             <button
-              aria-label="Click for more information"
+              aria-label="Designers - Click for more information"
               class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="help-icon"
               data-mui-internal-clone-element="true"
@@ -1474,7 +1474,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
             class="MuiCardHeader-action css-MuiCardHeader-action"
           >
             <button
-              aria-label="Click for more information"
+              aria-label="Designers - Click for more information"
               class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="help-icon"
               data-mui-internal-clone-element="true"
@@ -1786,7 +1786,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                 class="MuiCardHeader-action css-MuiCardHeader-action"
               >
                 <button
-                  aria-label="Click for more information"
+                  aria-label="NTRO data - Click for more information"
                   class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-MuiButtonBase-root-MuiIconButton-root"
                   data-analyticsid="help-icon"
                   data-mui-internal-clone-element="true"
@@ -3509,7 +3509,7 @@ exports[`DesignForm component with all fields disabled 1`] = `
             class="MuiCardHeader-action css-MuiCardHeader-action"
           >
             <button
-              aria-label="Click for more information"
+              aria-label="Designers - Click for more information"
               class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="help-icon"
               data-mui-internal-clone-element="true"
@@ -4410,7 +4410,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
             class="MuiCardHeader-action css-MuiCardHeader-action"
           >
             <button
-              aria-label="Click for more information"
+              aria-label="Designers - Click for more information"
               class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="help-icon"
               data-mui-internal-clone-element="true"
@@ -4722,7 +4722,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                 class="MuiCardHeader-action css-MuiCardHeader-action"
               >
                 <button
-                  aria-label="Click for more information"
+                  aria-label="NTRO data - Click for more information"
                   class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-MuiButtonBase-root-MuiIconButton-root"
                   data-analyticsid="help-icon"
                   data-mui-internal-clone-element="true"

@@ -519,7 +519,7 @@ exports[`ResearchReportForm component 1`] = `
             class="MuiCardHeader-action css-MuiCardHeader-action"
           >
             <button
-              aria-label="Click for more information"
+              aria-label="Add authors to a work - Click for more information"
               class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="help-icon"
               data-mui-internal-clone-element="true"
@@ -1544,7 +1544,7 @@ exports[`ResearchReportForm component with 5 input fields for NTRO 1`] = `
             class="MuiCardHeader-action css-MuiCardHeader-action"
           >
             <button
-              aria-label="Click for more information"
+              aria-label="Add authors to a work - Click for more information"
               class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="help-icon"
               data-mui-internal-clone-element="true"
@@ -1856,7 +1856,7 @@ exports[`ResearchReportForm component with 5 input fields for NTRO 1`] = `
                 class="MuiCardHeader-action css-MuiCardHeader-action"
               >
                 <button
-                  aria-label="Click for more information"
+                  aria-label="NTRO data - Click for more information"
                   class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-MuiButtonBase-root-MuiIconButton-root"
                   data-analyticsid="help-icon"
                   data-mui-internal-clone-element="true"
@@ -3656,7 +3656,7 @@ exports[`ResearchReportForm component with all fields disabled 1`] = `
             class="MuiCardHeader-action css-MuiCardHeader-action"
           >
             <button
-              aria-label="Click for more information"
+              aria-label="Add authors to a work - Click for more information"
               class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="help-icon"
               data-mui-internal-clone-element="true"
