@@ -174,7 +174,7 @@ exports[`AdminContainer component should render default view 1`] = `
                   class="MuiCardHeader-content css-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h4 MuiCardHeader-title css-MuiTypography-root"
                     data-testid="admin-section-header"
                     id="admin-section-header"
                   >
@@ -867,7 +867,7 @@ exports[`AdminContainer component should render default view 1`] = `
                   class="MuiCardHeader-content css-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h4 MuiCardHeader-title css-MuiTypography-root"
                     data-testid="bibliographic-section-header"
                     id="bibliographic-section-header"
                   >
@@ -3211,7 +3211,7 @@ exports[`AdminContainer component should render default view 1`] = `
                   class="MuiCardHeader-content css-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h4 MuiCardHeader-title css-MuiTypography-root"
                     data-testid="authors-section-header"
                     id="authors-section-header"
                   >
@@ -4696,7 +4696,7 @@ exports[`AdminContainer component should render default view 1`] = `
                   class="MuiCardHeader-content css-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h4 MuiCardHeader-title css-MuiTypography-root"
                     data-testid="identifiers-section-header"
                     id="identifiers-section-header"
                   >
@@ -4966,7 +4966,7 @@ exports[`AdminContainer component should render default view 1`] = `
                   class="MuiCardHeader-content css-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h4 MuiCardHeader-title css-MuiTypography-root"
                     data-testid="grants-section-header"
                     id="grants-section-header"
                   >
@@ -5206,7 +5206,7 @@ exports[`AdminContainer component should render default view 1`] = `
                   class="MuiCardHeader-content css-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h4 MuiCardHeader-title css-MuiTypography-root"
                     data-testid="related-services-section-header"
                     id="related-services-section-header"
                   >
@@ -5700,7 +5700,7 @@ exports[`AdminContainer component should render default view 1`] = `
                   class="MuiCardHeader-content css-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h4 MuiCardHeader-title css-MuiTypography-root"
                     data-testid="notes-section-header"
                     id="notes-section-header"
                   >
@@ -6919,7 +6919,7 @@ exports[`AdminContainer component should render default view 1`] = `
                   class="MuiCardHeader-content css-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h4 MuiCardHeader-title css-MuiTypography-root"
                     data-testid="files-section-header"
                     id="files-section-header"
                   >
@@ -6955,7 +6955,7 @@ exports[`AdminContainer component should render default view 1`] = `
                             class="MuiCardHeader-content css-MuiCardHeader-content"
                           >
                             <h4
-                              class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+                              class="MuiTypography-root MuiTypography-h4 MuiCardHeader-title css-MuiTypography-root"
                               data-testid="standard-card-attached-files-header"
                               id="standard-card-attached-files-header"
                             >
@@ -8913,7 +8913,7 @@ exports[`AdminContainer component should render default view 1`] = `
                   class="MuiCardHeader-content css-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h6 MuiCardHeader-title css-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h4 MuiCardHeader-title css-MuiTypography-root"
                     data-testid="security-section-header"
                     id="security-section-header"
                   >
@@ -8946,7 +8946,7 @@ exports[`AdminContainer component should render default view 1`] = `
                           class="MuiCardHeader-content css-MuiCardHeader-content"
                         >
                           <h4
-                            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-h4 MuiCardHeader-title css-MuiTypography-root"
                             data-testid="record-security-card-header"
                             id="record-security-card-header"
                           >
@@ -9099,7 +9099,7 @@ exports[`AdminContainer component should render default view 1`] = `
                           class="MuiCardHeader-content css-MuiCardHeader-content"
                         >
                           <h4
-                            class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+                            class="MuiTypography-root MuiTypography-h4 MuiCardHeader-title css-MuiTypography-root"
                             data-testid="datastream-security-card-header"
                             id="datastream-security-card-header"
                           >
