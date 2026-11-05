@@ -117,7 +117,7 @@ const JournalsListDataRow = ({ row, index, isSelectable = false, onChange, check
                         )}
                         <Grid size={6}>
                             <IconButton
-                                aria-label="expand row"
+                                aria-label={`View percentiles for ${row.jnl_title}`}
                                 size="medium"
                                 onClick={() => setOpen(!open)}
                                 id={`journal-list-expander-btn-${index}`}

@@ -210,6 +210,7 @@ exports[`Component FileUploadRowMobileView should not render embargo date picker
           data-mui-internal-clone-element="true"
         >
           <button
+            aria-label="Remove this file"
             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="dsi-dsid-0-delete"
             data-testid="dsi-dsid-0-delete"
@@ -409,6 +410,7 @@ exports[`Component FileUploadRowMobileView should render default view 1`] = `
           data-mui-internal-clone-element="true"
         >
           <button
+            aria-label="Remove this file"
             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="dsi-dsid-0-delete"
             data-testid="dsi-dsid-0-delete"
@@ -612,6 +614,7 @@ exports[`Component FileUploadRowMobileView should render default view for admin 
           data-mui-internal-clone-element="true"
         >
           <button
+            aria-label="Remove this file"
             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="dsi-dsid-0-delete"
             data-testid="dsi-dsid-0-delete"
@@ -839,6 +842,7 @@ exports[`Component FileUploadRowMobileView should render embargo date picker if 
           data-mui-internal-clone-element="true"
         >
           <button
+            aria-label="Remove this file"
             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="dsi-dsid-0-delete"
             data-testid="dsi-dsid-0-delete"

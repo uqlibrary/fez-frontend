@@ -40,6 +40,7 @@ exports[`Component FileUploadRowStatus should render default view 1`] = `
     data-mui-internal-clone-element="true"
   >
     <button
+      aria-label="Remove this file"
       class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
       data-analyticsid="undefined-delete"
       data-testid="undefined-delete"
@@ -70,6 +71,7 @@ exports[`Component FileUploadRowStatus should render disabled view 1`] = `
     data-mui-internal-clone-element="true"
   >
     <button
+      aria-label="Remove this file"
       class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
       data-analyticsid="undefined-delete"
       data-testid="undefined-delete"
@@ -93,25 +95,37 @@ exports[`Component FileUploadRowStatus should render disabled view 1`] = `
 </div>
 `;
 
+exports[`Component FileUploadRowStatus should render done icon if progress is 100% but uploading is still in progress 1`] = `
+<div>
+  <svg
+    aria-hidden="true"
+    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
+    data-testid="DoneIcon"
+    focusable="false"
+    textSize="large"
+    viewBox="0 0 24 24"
+  >
+    <path
+      d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"
+    />
+  </svg>
+</div>
+`;
+
 exports[`Component FileUploadRowStatus should render done icon if upload is finished 1`] = `
 <div>
-  <button
-    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
-    tabindex="0"
-    type="button"
+  <svg
+    aria-hidden="true"
+    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
+    data-testid="DoneIcon"
+    focusable="false"
+    textSize="large"
+    viewBox="0 0 24 24"
   >
-    <svg
-      aria-hidden="true"
-      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
-      data-testid="DoneIcon"
-      focusable="false"
-      viewBox="0 0 24 24"
-    >
-      <path
-        d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"
-      />
-    </svg>
-  </button>
+    <path
+      d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"
+    />
+  </svg>
 </div>
 `;
 
@@ -153,6 +167,7 @@ exports[`Component FileUploadRowStatus should render if file uploaded successful
     data-mui-internal-clone-element="true"
   >
     <button
+      aria-label="Remove this file"
       class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
       data-analyticsid="undefined-delete"
       data-testid="undefined-delete"

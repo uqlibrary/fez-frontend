@@ -2411,11 +2411,12 @@ export default {
             searchBoxHint: 'Enter your search query to search all fields in eSpace',
             ariaInputLabel: 'Enter your search query to search eSpace and then press Enter',
             searchButtonHint: 'Search eSpace',
-            mobileSearchButtonAriaLabel: 'Click to search eSpace',
+            mobileSearchButtonAriaLabel: 'Search eSpace',
+            mobileSearchCloseButtonAriaLabel: 'Close search',
             advancedSearchButtonText: 'Advanced search',
-            advancedSearchButtonAriaLabel: 'Click to switch to Advanced search',
+            advancedSearchButtonAriaLabel: 'Switch to Advanced search',
             searchButtonText: 'Search',
-            searchButtonAriaLabel: 'Click to search eSpace',
+            searchButtonAriaLabel: 'Search eSpace',
             simpleSearchToggle: 'Simple search',
             advancedSearch: {
                 title: 'Advanced search',
@@ -2424,8 +2425,8 @@ export default {
                     show: 'Show advanced search',
                     hide: 'Hide advanced search',
                 },
-                selectAria: 'Click to select a field to search from the list - [current_selection] currently selected',
-                deleteAria: 'Click to delete this search row',
+                selectAria: 'Select a field to search from the list - [current_selection] currently selected',
+                deleteAria: 'Delete this search row',
                 fieldTypes: {
                     0: {
                         order: 0, // order of appearance in adv search field list
@@ -4423,6 +4424,9 @@ export default {
                     },
                 },
                 tooltip: {
+                    show: 'Show child vocabularies',
+                    hide: 'Hide child vocabularies',
+                    edit: 'Edit this vocabulary',
                     hidden: 'This vocabulary is hidden',
                     readonly: 'This vocabulary and children are read-only',
                 },

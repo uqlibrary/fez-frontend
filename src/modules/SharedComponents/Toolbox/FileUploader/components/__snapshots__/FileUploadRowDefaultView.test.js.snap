@@ -54,6 +54,7 @@ exports[`Component FileUploadRowDefaultView should not render access selector or
           data-mui-internal-clone-element="true"
         >
           <button
+            aria-label="Remove this file"
             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="dsi-dsid-0-delete"
             data-testid="dsi-dsid-0-delete"
@@ -191,6 +192,7 @@ exports[`Component FileUploadRowDefaultView should not render embargo date picke
           data-mui-internal-clone-element="true"
         >
           <button
+            aria-label="Remove this file"
             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="dsi-dsid-0-delete"
             data-testid="dsi-dsid-0-delete"
@@ -336,6 +338,7 @@ exports[`Component FileUploadRowDefaultView should render default view 1`] = `
           data-mui-internal-clone-element="true"
         >
           <button
+            aria-label="Remove this file"
             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="dsi-dsid-0-delete"
             data-testid="dsi-dsid-0-delete"
@@ -485,6 +488,7 @@ exports[`Component FileUploadRowDefaultView should render default view for admin
           data-mui-internal-clone-element="true"
         >
           <button
+            aria-label="Remove this file"
             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="dsi-dsid-0-delete"
             data-testid="dsi-dsid-0-delete"
@@ -658,6 +662,7 @@ exports[`Component FileUploadRowDefaultView should render embargo date picker if
           data-mui-internal-clone-element="true"
         >
           <button
+            aria-label="Remove this file"
             class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
             data-analyticsid="dsi-dsid-0-delete"
             data-testid="dsi-dsid-0-delete"

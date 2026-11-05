@@ -52,9 +52,9 @@ describe('BulkExport component', () => {
         await findByRole('dialog');
         expect(actions.resetExportPublicationsStatus).toHaveBeenCalledTimes(1);
 
-        expect(getByLabelText('close')).toBeInTheDocument();
+        expect(getByLabelText('Close dialog')).toBeInTheDocument();
         act(() => {
-            fireEvent.click(getByLabelText('close'));
+            fireEvent.click(getByLabelText('Close dialog'));
         });
         await waitForElementToBeRemoved(queryByRole('dialog'));
         expect(queryByRole('dialog')).toBeNull();

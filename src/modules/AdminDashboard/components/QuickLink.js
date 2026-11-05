@@ -104,7 +104,7 @@ const QuickLink = ({ link, index, locale, itemCount, onMenuItemClick, ...rest })
                 action={
                     <React.Fragment>
                         <IconButton
-                            aria-label="settings"
+                            aria-label="Settings"
                             onClick={handleOpen}
                             data-testid={`admin-actions-button-${index}`}
                         >

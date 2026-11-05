@@ -193,7 +193,7 @@ const renderCopyCitationTextButton = pid => {
         <Tooltip title={isEnabled ? 'Copy citation text' : 'Feature unavailable'}>
             <span>
                 <IconButton
-                    aria-label={isEnabled ? `Copy ${pid}'s citation text` : 'Unavailable feature'}
+                    aria-label={`Copy ${pid}'s citation text`}
                     onClick={handleCopy(pid)}
                     id={`publication-citation-copy-button-${pid}`}
                     data-analyticsid={`publication-citation-copy-button-${pid}`}

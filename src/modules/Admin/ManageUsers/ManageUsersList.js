@@ -510,6 +510,7 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
                 <Box sx={{ display: 'flex', flexWrap: 'nowrap' }}>
                     <Tooltip title={editButtonTooltip}>
                         <IconButton
+                            aria-label={editButtonTooltip}
                             onClick={() => {
                                 setEditRow(row);
                                 table.setCreatingRow(null);
@@ -526,6 +527,7 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
                     </Tooltip>
                     <Tooltip title={deleteButtonTooltip}>
                         <IconButton
+                            aria-label={deleteButtonTooltip}
                             onClick={openDeleteConfirmModal(row.index)}
                             disabled={isPendingDelete || !!isBusy || !!editingRow}
                             id={`users-list-row-${row.index}-${deleteButtonTooltip.toLowerCase().replace(/ /g, '-')}`}

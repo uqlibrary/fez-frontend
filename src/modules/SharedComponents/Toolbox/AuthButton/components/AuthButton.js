@@ -21,6 +21,7 @@ export const AuthButton = ({ isAuthorizedUser, signOutTooltipText, signInTooltip
                 }}
             >
                 <IconButton
+                    aria-label={isAuthorizedUser ? signOutTooltipText : signInTooltipText}
                     onClick={onClick}
                     className={isAuthorizedUser ? 'log-out-button' : 'log-in-button'}
                     size="large"

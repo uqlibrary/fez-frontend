@@ -13,7 +13,7 @@ exports[`Audio Player Component  should render component 1`] = `
       />
     </audio>
     <button
-      aria-label="Click to play audio file test_t.mp3"
+      aria-label="Play audio file test_t.mp3"
       class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
       id="playButton"
       style="margin-top: -10px; margin-bottom: -10px;"

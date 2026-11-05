@@ -40,7 +40,7 @@ const CopyToClipboardDialog = ({ title, open, text, onCopy, onClose }: CopyDialo
             >
                 {title}
 
-                <IconButton onClick={onClose} aria-label="close" edge="end">
+                <IconButton onClick={onClose} aria-label="Close dialog" edge="end">
                     <CloseIcon />
                 </IconButton>
             </DialogTitle>
@@ -57,10 +57,11 @@ const CopyToClipboardDialog = ({ title, open, text, onCopy, onClose }: CopyDialo
                         endAdornment: (
                             <InputAdornment position="end">
                                 <IconButton
+                                    aria-label="Copy to clipboard"
                                     onClick={onCopy}
                                     color="info"
                                     edge="end"
-                                    data-testid="copy-to-clipboard-dialog-copy=button"
+                                    data-testid="copy-to-clipboard-dialog-copy-button"
                                 >
                                     <ContentCopyIcon />
                                 </IconButton>
