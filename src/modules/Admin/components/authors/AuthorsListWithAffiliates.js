@@ -35,7 +35,10 @@ import { hasAffiliationProblemsByAuthor } from 'helpers/authorAffiliations';
 import { useMrtTable } from 'hooks';
 import { default as defaultValidationRules, extendedValidationRules } from './validationRules';
 import { commitRowChanges } from './utils';
-import { AUTHOR_EXTERNAL_IDENTIFIER_TYPE } from '../../../../config/general';
+import {
+    AUTHOR_EXTERNAL_IDENTIFIER_TYPE,
+    AUTHOR_EXTERNAL_IDENTIFIER_TYPE_ORCID_VALUE,
+} from '../../../../config/general';
 import { NewGenericSelectField } from '../../../SharedComponents/GenericSelectField/components/NewGenericSelectField';
 
 const MUI_SAVE_BUTTON_CLASS = '.MuiIconButton-colorInfo';
@@ -419,9 +422,9 @@ export const AuthorsListWithAffiliates = ({
                 },
                 Edit: ({ row, column }) => {
                     const contributor = { ...row.original, ...row._valuesCache };
-                    const value = contributor.externalIdentifier || '';
-                    const fromUQAuthor = !!contributor.aut_orcid_id?.trim?.();
-                    const errors = (!fromUQAuthor && validationErrors[row.id]) || [];
+                    const hasUQAuthorOrcid = contributor.aut_orcid_id?.trim?.();
+                    const value = contributor.externalIdentifier || hasUQAuthorOrcid || '';
+                    const errors = (!hasUQAuthorOrcid && validationErrors[row.id]) || [];
                     const error = getValidationError(errors, 'externalIdentifier');
 
                     const handleChange = (value, skipValidation = false) => {
@@ -429,19 +432,20 @@ export const AuthorsListWithAffiliates = ({
                             ...row._valuesCache,
                             [column.id]: value || /* istanbul ignore next */ null,
                         };
-                        !skipValidation && handleValidation(row, column.id, value || /* istanbul ignore next */ null);
+                        if (skipValidation) return;
+                        handleValidation(row, column.id, value || /* istanbul ignore next */ null);
                     };
 
-                    // set once, only if value is empty
-                    if (!value?.trim?.() && fromUQAuthor) {
-                        handleChange(contributor.aut_orcid_id, true);
+                    // sync default value to row
+                    if (!contributor.externalIdentifier && value) {
+                        handleChange(value, true);
                     }
 
                     return (
                         <Grid container spacing={2} sx={{ width: '100%' }}>
                             <Grid style={{ flexGrow: '1' }}>
                                 <TextField
-                                    disabled={fromUQAuthor}
+                                    disabled={!!hasUQAuthorOrcid}
                                     value={value}
                                     onChange={e => handleChange(e.target.value)}
                                     textFieldId={`${contributorEditorId}-external-identifier`}
@@ -480,7 +484,11 @@ export const AuthorsListWithAffiliates = ({
                 },
                 Edit: ({ row, column }) => {
                     const contributor = { ...row.original, ...row._valuesCache };
-                    const value = contributor.externalIdentifierType || defaultExternalIdentifierType || '';
+                    const hasUQAuthorOrcid = contributor.aut_orcid_id?.trim?.();
+                    const defaultValue = hasUQAuthorOrcid
+                        ? AUTHOR_EXTERNAL_IDENTIFIER_TYPE_ORCID_VALUE
+                        : defaultExternalIdentifierType;
+                    const value = contributor.externalIdentifierType || defaultValue || '';
 
                     const handleChange = (value, skipValidation = false) => {
                         row._valuesCache = {
@@ -491,8 +499,9 @@ export const AuthorsListWithAffiliates = ({
                         handleValidation(row, column.id, value || /* istanbul ignore next */ null);
                     };
 
-                    if (!contributor.externalIdentifierType && defaultExternalIdentifierType) {
-                        handleChange(value, true);
+                    // sync default value to row
+                    if (!contributor.externalIdentifierType && defaultValue) {
+                        handleChange(defaultValue, true);
                     }
 
                     return (
@@ -505,7 +514,7 @@ export const AuthorsListWithAffiliates = ({
                                     key={`${contributor.externalIdentifierType}-${contributor.externalIdentifier}`}
                                     genericSelectFieldId={`${contributorEditorId}-external-identifier-type`}
                                     label={externalIdentifierTypeLabel}
-                                    disabled={!!defaultExternalIdentifierType}
+                                    disabled={!!hasUQAuthorOrcid || !!defaultExternalIdentifierType}
                                 />
                             </Grid>
                         </Grid>

@@ -68,6 +68,11 @@ test.describe('As an admin, I can', () => {
 
         await assertCreateAuthor(page, 'Test Author');
         await assertCreateAuthor(page, 'Second Author');
+        await expect(page.getByTestId('rek-author-list-row-0-external-identifier')).toBeEmpty();
+        await expect(page.getByTestId('rek-author-list-row-0-external-identifier-type')).toBeEmpty();
+        await expect(page.getByTestId('rek-author-list-row-1-external-identifier')).toBeEmpty();
+        await expect(page.getByTestId('rek-author-list-row-1-external-identifier-type')).toBeEmpty();
+
         // test autopopulating ORCID when selecting an UQ author
         await selectUQAuthor(page, 'Steve Su (uqysu4)');
         await expect(page.getByTestId('rek-author-external-identifier-input')).toHaveValue('0000-0000-0000-1234');
