@@ -51,7 +51,6 @@ const Links = ({ publication, isAdmin }) => {
                 }),
             ]}
         >
-            {console.log({ link, linkId, description, openAccessStatus })}
             <Grid data-testid={`${linkId}-link`} size={{ xs: 12, sm: 6 }}>
                 <Typography variant={'body2'} component={'span'}>
                     {link}

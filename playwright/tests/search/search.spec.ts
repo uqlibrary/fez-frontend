@@ -50,7 +50,7 @@ test.describe('Search', () => {
         await expect(page.getByTestId('show-advanced-search')).toHaveText(/Advanced search/);
         await expect(page.getByTestId('show-advanced-search')).toHaveAttribute(
             'aria-label',
-            'Click to switch to Advanced search',
+            'Switch to Advanced search',
         );
         await page.getByTestId('show-advanced-search').click();
         await expect(page.locator('#advancedSearchForm h5')).toHaveText(/Advanced search/);
@@ -70,10 +70,7 @@ test.describe('Search', () => {
         const selectFieldLocator = page.getByText(/Select a field/).first();
         await expect(
             selectFieldLocator.locator('xpath=ancestor::*[contains(@class, "MuiInput-root")]'),
-        ).toHaveAttribute(
-            'aria-label',
-            'Click to select a field to search from the list - Select a field currently selected',
-        );
+        ).toHaveAttribute('aria-label', 'Select a field to search from the list - Select a field currently selected');
         await expect(
             selectFieldLocator
                 .locator(
