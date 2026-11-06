@@ -571,9 +571,12 @@ exports[`Files Component  Should render the correct icon for a valid transcoded 
               data-testid="dsi-mimetype-0"
             >
               <a
+                aria-label="Click to open a preview of image.jpg"
                 data-testid="preview-link-image.jpg"
                 id="preview-link-image.jpg"
-                title="Click to open a preview of http://localhost/view/UQ:676287/image.jpg"
+                role="button"
+                tabindex="0"
+                title="Click to open a preview of image.jpg"
               >
                 <span
                   class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-MuiCircularProgress-root"
@@ -973,9 +976,12 @@ exports[`Files Component  should not render advisory statement 1`] = `
               data-testid="dsi-mimetype-0"
             >
               <a
+                aria-label="Click to open a preview of image.jpg"
                 data-testid="preview-link-image.jpg"
                 id="preview-link-image.jpg"
-                title="Click to open a preview of http://localhost/view/UQ:676287/image.jpg"
+                role="button"
+                tabindex="0"
+                title="Click to open a preview of image.jpg"
               >
                 <span
                   class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-MuiCircularProgress-root"
@@ -1336,9 +1342,12 @@ exports[`Files Component  should not render sensitive handling note - scenario 1
               data-testid="dsi-mimetype-0"
             >
               <a
+                aria-label="Click to open a preview of image.jpg"
                 data-testid="preview-link-image.jpg"
                 id="preview-link-image.jpg"
-                title="Click to open a preview of http://localhost/view/UQ:676287/image.jpg"
+                role="button"
+                tabindex="0"
+                title="Click to open a preview of image.jpg"
               >
                 <span
                   class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-MuiCircularProgress-root"
@@ -1697,9 +1706,12 @@ exports[`Files Component  should not render sensitive handling note - scenario 2
               data-testid="dsi-mimetype-0"
             >
               <a
+                aria-label="Click to open a preview of image.jpg"
                 data-testid="preview-link-image.jpg"
                 id="preview-link-image.jpg"
-                title="Click to open a preview of http://localhost/view/UQ:676287/image.jpg"
+                role="button"
+                tabindex="0"
+                title="Click to open a preview of image.jpg"
               >
                 <span
                   class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-MuiCircularProgress-root"
@@ -2654,9 +2666,12 @@ exports[`Files Component  should render component 1`] = `
               data-testid="dsi-mimetype-0"
             >
               <a
+                aria-label="Click to open a preview of image.jpg"
                 data-testid="preview-link-image.jpg"
                 id="preview-link-image.jpg"
-                title="Click to open a preview of http://localhost/view/UQ:676287/image.jpg"
+                role="button"
+                tabindex="0"
+                title="Click to open a preview of image.jpg"
               >
                 <span
                   class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-MuiCircularProgress-root"
@@ -3034,9 +3049,12 @@ exports[`Files Component  should render component 2`] = `
               data-testid="dsi-mimetype-0"
             >
               <a
+                aria-label="Click to open a preview of CH7409_movie_1.mov"
                 data-testid="preview-link-CH7409_movie_1.mov"
                 id="preview-link-CH7409_movie_1.mov"
-                title="Click to open a preview of http://localhost/view/UQ:185044/CH7409_movie_1.mov?dsi_version=6184c7e506d64459e5a3fff2c5e6a8fb"
+                role="button"
+                tabindex="0"
+                title="Click to open a preview of CH7409_movie_1.mov"
               >
                 <span
                   class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-MuiCircularProgress-root"
@@ -3172,9 +3190,12 @@ exports[`Files Component  should render component 2`] = `
               data-testid="dsi-mimetype-1"
             >
               <a
+                aria-label="Click to open a preview of CH7409_movie_2.mov"
                 data-testid="preview-link-CH7409_movie_2.mov"
                 id="preview-link-CH7409_movie_2.mov"
-                title="Click to open a preview of http://localhost/view/UQ:185044/CH7409_movie_2.mov"
+                role="button"
+                tabindex="0"
+                title="Click to open a preview of CH7409_movie_2.mov"
               >
                 <span
                   class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-MuiCircularProgress-root"
@@ -3296,9 +3317,12 @@ exports[`Files Component  should render component 2`] = `
               data-testid="dsi-mimetype-2"
             >
               <a
+                aria-label="Click to open a preview of CH7409_movie_3.mov"
                 data-testid="preview-link-CH7409_movie_3.mov"
                 id="preview-link-CH7409_movie_3.mov"
-                title="Click to open a preview of http://localhost/view/UQ:185044/CH7409_movie_3.mov"
+                role="button"
+                tabindex="0"
+                title="Click to open a preview of CH7409_movie_3.mov"
               >
                 <span
                   class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-MuiCircularProgress-root"
@@ -3420,9 +3444,12 @@ exports[`Files Component  should render component 2`] = `
               data-testid="dsi-mimetype-3"
             >
               <a
+                aria-label="Click to open a preview of CH7409_movie_4.mov"
                 data-testid="preview-link-CH7409_movie_4.mov"
                 id="preview-link-CH7409_movie_4.mov"
-                title="Click to open a preview of http://localhost/view/UQ:185044/CH7409_movie_4.mov"
+                role="button"
+                tabindex="0"
+                title="Click to open a preview of CH7409_movie_4.mov"
               >
                 <span
                   class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-MuiCircularProgress-root"
@@ -3544,9 +3571,12 @@ exports[`Files Component  should render component 2`] = `
               data-testid="dsi-mimetype-4"
             >
               <a
+                aria-label="Click to open a preview of CH7409_movie_5.mov"
                 data-testid="preview-link-CH7409_movie_5.mov"
                 id="preview-link-CH7409_movie_5.mov"
-                title="Click to open a preview of http://localhost/view/UQ:185044/CH7409_movie_5.mov"
+                role="button"
+                tabindex="0"
+                title="Click to open a preview of CH7409_movie_5.mov"
               >
                 <span
                   class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-MuiCircularProgress-root"
@@ -4580,9 +4610,12 @@ exports[`Files Component  should render icon for mimeType 1`] = `
               data-testid="dsi-mimetype-2"
             >
               <a
+                aria-label="Click to open a preview of test.jpg"
                 data-testid="preview-link-test.jpg"
                 id="preview-link-test.jpg"
-                title="Click to open a preview of http://localhost/view/UQ:1/test.jpg"
+                role="button"
+                tabindex="0"
+                title="Click to open a preview of test.jpg"
               >
                 <span
                   class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-MuiCircularProgress-root"
@@ -4702,9 +4735,12 @@ exports[`Files Component  should render icon for mimeType 1`] = `
               data-testid="dsi-mimetype-3"
             >
               <a
+                aria-label="Click to open a preview of test.mov"
                 data-testid="preview-link-test.mov"
                 id="preview-link-test.mov"
-                title="Click to open a preview of http://localhost/view/UQ:1/test.mov"
+                role="button"
+                tabindex="0"
+                title="Click to open a preview of test.mov"
               >
                 <span
                   class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-MuiCircularProgress-root"
@@ -4824,9 +4860,12 @@ exports[`Files Component  should render icon for mimeType 1`] = `
               data-testid="dsi-mimetype-4"
             >
               <a
+                aria-label="Click to open a preview of test.mp3"
                 data-testid="preview-link-test.mp3"
                 id="preview-link-test.mp3"
-                title="Click to open a preview of http://localhost/view/UQ:1/test.mp3"
+                role="button"
+                tabindex="0"
+                title="Click to open a preview of test.mp3"
               >
                 <span
                   class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-MuiCircularProgress-root"
@@ -4995,6 +5034,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
               data-testid="dsi-mimetype-5"
             >
               <a
+                aria-label="Open test.pdf in a new tab"
                 class="css"
                 data-analyticsid="thumbnail-link"
                 data-testid="thumbnail-link"
@@ -5137,9 +5177,12 @@ exports[`Files Component  should render icon for mimeType 1`] = `
               data-testid="dsi-mimetype-6"
             >
               <a
+                aria-label="Click to open a preview of test.tiff"
                 data-testid="preview-link-test.tiff"
                 id="preview-link-test.tiff"
-                title="Click to open a preview of http://localhost/view/UQ:1/test.tiff"
+                role="button"
+                tabindex="0"
+                title="Click to open a preview of test.tiff"
               >
                 <span
                   class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-MuiCircularProgress-root"
@@ -5386,9 +5429,12 @@ exports[`Files Component  should render sensitive handling note - other 1`] = `
               data-testid="dsi-mimetype-0"
             >
               <a
+                aria-label="Click to open a preview of image.jpg"
                 data-testid="preview-link-image.jpg"
                 id="preview-link-image.jpg"
-                title="Click to open a preview of http://localhost/view/UQ:676287/image.jpg"
+                role="button"
+                tabindex="0"
+                title="Click to open a preview of image.jpg"
               >
                 <span
                   class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-MuiCircularProgress-root"
@@ -5747,9 +5793,12 @@ exports[`Files Component  should render sensitive handling note 1`] = `
               data-testid="dsi-mimetype-0"
             >
               <a
+                aria-label="Click to open a preview of image.jpg"
                 data-testid="preview-link-image.jpg"
                 id="preview-link-image.jpg"
-                title="Click to open a preview of http://localhost/view/UQ:676287/image.jpg"
+                role="button"
+                tabindex="0"
+                title="Click to open a preview of image.jpg"
               >
                 <span
                   class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-MuiCircularProgress-root"
