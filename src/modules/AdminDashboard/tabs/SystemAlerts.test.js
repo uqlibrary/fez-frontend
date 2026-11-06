@@ -185,6 +185,26 @@ describe('SystemAlerts tab', () => {
         await waitForElementToBeRemoved(getByTestId('system-alert-detail'));
     });
 
+    it('should open the drawer once from the keyboard-reachable status button, not just the row click', async () => {
+        mockApi
+            .onGet(repositories.routes.ADMIN_DASHBOARD_SYSTEM_ALERTS_API().apiUrl)
+            .reply(200, { data: [...adminDashboardSystemAlerts] });
+
+        const { getByTestId, queryByTestId } = setup();
+        await waitForElementToBeRemoved(getByTestId('admin-dashboard-systemalerts-skeleton'));
+
+        const statusButton = within(getByTestId('alert-status-1').closest('[role=gridcell]')).getByRole('button', {
+            name: /^Click to view details of .+ - Unassigned$/,
+        });
+        expect(queryByTestId('system-alert-detail')).not.toBeInTheDocument();
+
+        statusButton.focus();
+        expect(statusButton).toHaveFocus();
+        await userEvent.keyboard('{Enter}');
+
+        await waitFor(() => expect(getByTestId('system-alert-detail')).toBeInTheDocument());
+    });
+
     it('filters Mine correctly', async () => {
         mockApi.onGet(repositories.routes.ADMIN_DASHBOARD_SYSTEM_ALERTS_API().apiUrl).reply(200, {
             data: [
@@ -317,7 +337,7 @@ describe('SystemAlerts tab', () => {
         await userEvent.click(checkboxes[1]);
 
         expect(getByText(/1 selected/i)).toBeInTheDocument();
-        expect(getByLabelText(/assign/i)).toBeInTheDocument();
+        expect(getByLabelText(/^assign$/i)).toBeInTheDocument();
     });
 
     it('should call batch assign API with correct payload', async () => {
@@ -344,7 +364,7 @@ describe('SystemAlerts tab', () => {
         await userEvent.click(checkboxes[1]); // select first row
 
         // open assign dropdown
-        await userEvent.click(getByLabelText(/assign/i));
+        await userEvent.click(getByLabelText(/^assign$/i));
 
         // select user
         await userEvent.click(getByRole('option', { name: 'Staff' }));
@@ -373,7 +393,7 @@ describe('SystemAlerts tab', () => {
         await userEvent.click(checkboxes[1]);
         await userEvent.click(checkboxes[4]);
 
-        expect(getByLabelText(/assign/i)).toBeDisabled();
+        expect(getByLabelText(/^assign$/i)).toBeDisabled();
     });
 
     it('should keep selection if batch assign fails', async () => {
@@ -390,7 +410,7 @@ describe('SystemAlerts tab', () => {
         const checkboxes = getAllByRole('checkbox');
         await userEvent.click(checkboxes[1]);
 
-        await userEvent.click(getByLabelText(/assign/i));
+        await userEvent.click(getByLabelText(/^assign$/i));
         await userEvent.click(getByRole('option', { name: 'Staff' }));
 
         await waitFor(() => {

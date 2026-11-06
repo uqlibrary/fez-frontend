@@ -133,6 +133,7 @@ export default {
                         noconfig: 'No config available',
                     },
                     updating: 'Updating...',
+                    viewDetails: (title, status) => `Click to view details of ${title} - ${status}`,
                     columns: {
                         createdDate: 'Created',
                         topic: 'Topic',
