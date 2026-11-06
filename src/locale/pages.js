@@ -676,6 +676,7 @@ export default {
         viewRecord: {
             loadingMessage: 'Loading work',
             thumbnailTitle: 'Click to open a preview of [image]',
+            thumbnailExternalLinkLabel: 'Open [file] in a new tab',
             deletedAlert: {
                 type: 'info_outline',
                 title: '',

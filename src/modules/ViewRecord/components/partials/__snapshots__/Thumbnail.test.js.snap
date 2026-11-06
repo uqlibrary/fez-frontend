@@ -3,8 +3,11 @@
 exports[`Thumbnail component should render component 1`] = `
 <div>
   <a
+    aria-label="Click to open a preview of /test/mediaUrl"
     data-testid="preview-link-undefined"
     id="preview-link-undefined"
+    role="button"
+    tabindex="0"
     title="Click to open a preview of /test/mediaUrl"
   >
     <svg
