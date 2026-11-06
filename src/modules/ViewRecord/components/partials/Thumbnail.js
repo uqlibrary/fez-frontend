@@ -23,7 +23,6 @@ const Thumbnail = ({
     webMediaUrl,
     previewMediaUrl,
     thumbnailMediaUrl,
-    thumbnailFileName,
     securityStatus,
     fileName,
     mimeType,
@@ -31,41 +30,56 @@ const Thumbnail = ({
     checksums,
 }) => {
     const txt = locale.pages.viewRecord;
+    const fileLabel = fileName || mediaUrl;
 
     if (
         (fileName && mimeType.indexOf('pdf') >= 0) ||
         (mimeType.indexOf('octet-stream') >= 0 && mediaUrl.indexOf('flv') >= 0)
     ) {
         return (
-            <ExternalLink href={mediaUrl} title={fileName} openInNewIcon={false} id="thumbnail">
+            <ExternalLink
+                href={mediaUrl}
+                title={fileName}
+                aria-label={fileLabel && txt.thumbnailExternalLinkLabel.replace('[file]', fileLabel)}
+                openInNewIcon={false}
+                id="thumbnail"
+            >
                 <StyledThumbnailImage
                     crossorigin="anonymous"
                     src={thumbnailMediaUrl}
-                    alt={thumbnailFileName}
+                    alt=""
                     loader={<CircularProgress size={15} thickness={1} />}
                     unloader={<BrokenImage color={'secondary'} data-testid={`${fileName}-error`} />}
                 />
             </ExternalLink>
         );
     }
+    const openPreview = () =>
+        onClick({ fileName, mediaUrl, previewMediaUrl, mimeType, webMediaUrl, securityStatus, checksums });
+
     return (
         <a
+            role="button"
+            tabIndex={0}
             onClick={e => {
                 e.preventDefault?.();
-                onClick({ fileName, mediaUrl, previewMediaUrl, mimeType, webMediaUrl, securityStatus, checksums });
+                openPreview();
             }}
-            onKeyPress={e => {
-                e.preventDefault?.();
-                onClick({ fileName, mediaUrl, previewMediaUrl, mimeType, webMediaUrl, securityStatus, checksums });
+            onKeyDown={e => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    openPreview();
+                }
             }}
-            title={mediaUrl && txt.thumbnailTitle.replace('[image]', mediaUrl)}
+            title={fileLabel && txt.thumbnailTitle.replace('[image]', fileLabel)}
+            aria-label={fileLabel && txt.thumbnailTitle.replace('[image]', fileLabel)}
             id={getTestId(fileName)}
             data-testid={getTestId(fileName)}
         >
             {securityStatus ? (
                 <StyledThumbnailImage
                     src={thumbnailMediaUrl}
-                    alt={thumbnailFileName}
+                    alt=""
                     loader={<CircularProgress size={15} thickness={1} />}
                     unloader={<BrokenImage color={'secondary'} />}
                 />
@@ -80,7 +94,6 @@ Thumbnail.propTypes = {
     webMediaUrl: PropTypes.string,
     previewMediaUrl: PropTypes.string,
     thumbnailMediaUrl: PropTypes.string,
-    thumbnailFileName: PropTypes.string,
     securityStatus: PropTypes.bool,
     fileName: PropTypes.string,
     mimeType: PropTypes.string.isRequired,

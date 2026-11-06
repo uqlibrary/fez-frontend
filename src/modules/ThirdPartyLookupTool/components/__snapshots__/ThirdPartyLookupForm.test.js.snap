@@ -37,10 +37,10 @@ exports[`Component ThirdPartyLookupForm should display form in minimised view 1`
               class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
             >
               <button
+                aria-label="Show form for Test Form"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-testid="minimise-toggle"
                 tabindex="0"
-                tooltip="Show form for Test Form"
                 type="button"
               >
                 <svg
@@ -101,10 +101,10 @@ exports[`Component ThirdPartyLookupForm should display form without a secondary 
               class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
             >
               <button
+                aria-label="Hide form for Incites"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-testid="minimise-toggle"
                 tabindex="0"
-                tooltip="Hide form for Incites"
                 type="button"
               >
                 <svg
@@ -204,10 +204,10 @@ exports[`Component ThirdPartyLookupForm should show form with non-minimised form
               class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
             >
               <button
+                aria-label="Hide form for Test Form"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-testid="minimise-toggle"
                 tabindex="0"
-                tooltip="Hide form for Test Form"
                 type="button"
               >
                 <svg
@@ -329,10 +329,10 @@ exports[`Component ThirdPartyLookupForm should toggle nested items on click 1`] 
               class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
             >
               <button
+                aria-label="Show form for Test Form"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-testid="minimise-toggle"
                 tabindex="0"
-                tooltip="Show form for Test Form"
                 type="button"
               >
                 <svg
@@ -393,10 +393,10 @@ exports[`Component ThirdPartyLookupForm should toggle nested items on click 2`] 
               class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
             >
               <button
+                aria-label="Hide form for Test Form"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-testid="minimise-toggle"
                 tabindex="0"
-                tooltip="Hide form for Test Form"
                 type="button"
               >
                 <svg
@@ -518,10 +518,10 @@ exports[`Component ThirdPartyLookupForm should toggle nested items on click 3`] 
               class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
             >
               <button
+                aria-label="Show form for Test Form"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-testid="minimise-toggle"
                 tabindex="0"
-                tooltip="Show form for Test Form"
                 type="button"
               >
                 <svg
@@ -582,10 +582,10 @@ exports[`Component ThirdPartyLookupForm should use defaults when locale values a
               class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
             >
               <button
+                aria-label="Test hide this form"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-testid="minimise-toggle"
                 tabindex="0"
-                tooltip="Test hide this form"
                 type="button"
               >
                 <svg
@@ -709,10 +709,10 @@ exports[`Component ThirdPartyLookupForm should use locale values when provided 1
               class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
             >
               <button
+                aria-label="Hide form for this form"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-testid="minimise-toggle"
                 tabindex="0"
-                tooltip="Hide form for this form"
                 type="button"
               >
                 <svg

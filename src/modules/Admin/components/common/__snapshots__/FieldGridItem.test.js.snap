@@ -547,6 +547,7 @@ exports[`FieldGridItem should render with correct props 1`] = `
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Add editor"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-MuiButtonBase-root-MuiIconButton-root"
                 data-testid="rek-contributor-add-editor"
                 id="rek-contributor-add-editor"

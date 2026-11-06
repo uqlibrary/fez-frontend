@@ -30,7 +30,6 @@ export const HelpIcon = forwardRef(
         useImperativeHandle(ref, () => ({
             openDrawer,
         }));
-
         const id = sanitiseId(`help-icon${!!testId ? `-${testId}` : ''}`);
         return (
             <Tooltip
@@ -43,7 +42,7 @@ export const HelpIcon = forwardRef(
                 <IconButton
                     id={id}
                     ref={ref}
-                    aria-label={tooltip}
+                    aria-label={title && IconComponent === HelpOutlineIcon ? `${title} - ${tooltip}` : tooltip}
                     data-analyticsid={id}
                     data-testid={id}
                     size={iconSize}
@@ -61,7 +60,6 @@ export const HelpIcon = forwardRef(
                             },
                         }}
                         fontSize={iconSize}
-                        titleAccess={tooltip}
                     />
                 </IconButton>
             </Tooltip>

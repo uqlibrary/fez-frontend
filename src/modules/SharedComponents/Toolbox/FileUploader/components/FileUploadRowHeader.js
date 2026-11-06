@@ -87,6 +87,7 @@ export const FileUploadRowHeader = ({
                         <Tooltip title={deleteAllFiles}>
                             <span>
                                 <IconButton
+                                    aria-label={deleteAllFiles}
                                     onClick={showConfirmation}
                                     disabled={disabled}
                                     id="delete-all-files"

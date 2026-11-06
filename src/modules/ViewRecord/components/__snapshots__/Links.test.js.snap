@@ -121,12 +121,14 @@ exports[`Component Links  Full mount render 1`] = `
             style="text-align: right;"
           >
             <svg
-              aria-hidden="true"
+              aria-hidden="false"
               aria-label="Open Access - PMC - Free to read"
               class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
               data-mui-internal-clone-element="true"
               data-testid="oa-icon"
               focusable="false"
+              role="img"
+              tabindex="0"
               viewBox="0 0 24 24"
             >
               <path
@@ -253,12 +255,14 @@ exports[`Component Links  Full mount render 1`] = `
             style="text-align: right;"
           >
             <svg
-              aria-hidden="true"
+              aria-hidden="false"
               aria-label="Open Access - Free to read"
               class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
               data-mui-internal-clone-element="true"
               data-testid="oa-icon"
               focusable="false"
+              role="img"
+              tabindex="0"
               viewBox="0 0 24 24"
             >
               <path
@@ -321,12 +325,14 @@ exports[`Component Links  Full mount render 1`] = `
             style="text-align: right;"
           >
             <svg
-              aria-hidden="true"
+              aria-hidden="false"
               aria-label="Open Access - Free to read"
               class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
               data-mui-internal-clone-element="true"
               data-testid="oa-icon"
               focusable="false"
+              role="img"
+              tabindex="0"
               viewBox="0 0 24 24"
             >
               <path
@@ -598,12 +604,14 @@ exports[`Component Links  Rendering due to a pubmed central id 1`] = `
             style="text-align: right;"
           >
             <svg
-              aria-hidden="true"
+              aria-hidden="false"
               aria-label="Open Access - PMC - Free to read"
               class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
               data-mui-internal-clone-element="true"
               data-testid="oa-icon"
               focusable="false"
+              role="img"
+              tabindex="0"
               viewBox="0 0 24 24"
             >
               <path
@@ -814,12 +822,14 @@ exports[`Component Links  should render 3 non OA links and NO OA google scholar 
             style="text-align: right;"
           >
             <svg
-              aria-hidden="true"
+              aria-hidden="false"
               aria-label="Open Access - Free to read"
               class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
               data-mui-internal-clone-element="true"
               data-testid="oa-icon"
               focusable="false"
+              role="img"
+              tabindex="0"
               viewBox="0 0 24 24"
             >
               <path
@@ -882,12 +892,14 @@ exports[`Component Links  should render 3 non OA links and NO OA google scholar 
             style="text-align: right;"
           >
             <svg
-              aria-hidden="true"
+              aria-hidden="false"
               aria-label="Open Access - Free to read"
               class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
               data-mui-internal-clone-element="true"
               data-testid="oa-icon"
               focusable="false"
+              role="img"
+              tabindex="0"
               viewBox="0 0 24 24"
             >
               <path
@@ -950,12 +962,14 @@ exports[`Component Links  should render 3 non OA links and NO OA google scholar 
             style="text-align: right;"
           >
             <svg
-              aria-hidden="true"
+              aria-hidden="false"
               aria-label="Open Access - Free to read"
               class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
               data-mui-internal-clone-element="true"
               data-testid="oa-icon"
               focusable="false"
+              role="img"
+              tabindex="0"
               viewBox="0 0 24 24"
             >
               <path
@@ -1091,12 +1105,14 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
             style="text-align: right;"
           >
             <svg
-              aria-hidden="true"
+              aria-hidden="false"
               aria-label="Open Access - PMC - Free to read"
               class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
               data-mui-internal-clone-element="true"
               data-testid="oa-icon"
               focusable="false"
+              role="img"
+              tabindex="0"
               viewBox="0 0 24 24"
             >
               <path
@@ -1164,12 +1180,14 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
             style="text-align: right;"
           >
             <svg
-              aria-hidden="true"
+              aria-hidden="false"
               aria-label="Open Access - DOI - Free to read"
               class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
               data-mui-internal-clone-element="true"
               data-testid="oa-icon"
               focusable="false"
+              role="img"
+              tabindex="0"
               viewBox="0 0 24 24"
             >
               <path
@@ -1482,12 +1500,14 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
             style="text-align: right;"
           >
             <svg
-              aria-hidden="true"
+              aria-hidden="false"
               aria-label="Open Access - PMC - Free to read"
               class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
               data-mui-internal-clone-element="true"
               data-testid="oa-icon"
               focusable="false"
+              role="img"
+              tabindex="0"
               viewBox="0 0 24 24"
             >
               <path
@@ -1864,12 +1884,14 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
             style="text-align: right;"
           >
             <svg
-              aria-hidden="true"
+              aria-hidden="false"
               aria-label="Open Access - PMC - Free to read"
               class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
               data-mui-internal-clone-element="true"
               data-testid="oa-icon"
               focusable="false"
+              role="img"
+              tabindex="0"
               viewBox="0 0 24 24"
             >
               <path
@@ -2182,12 +2204,14 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
             style="text-align: right;"
           >
             <svg
-              aria-hidden="true"
+              aria-hidden="false"
               aria-label="Open Access - PMC - Free to read"
               class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
               data-mui-internal-clone-element="true"
               data-testid="oa-icon"
               focusable="false"
+              role="img"
+              tabindex="0"
               viewBox="0 0 24 24"
             >
               <path
@@ -2564,12 +2588,14 @@ exports[`Component Links  should render OA for OPEN_ACCESS_ID_FILE_AUTHOR_PREPRI
             style="text-align: right;"
           >
             <svg
-              aria-hidden="true"
+              aria-hidden="false"
               aria-label="Open Access - PMC - Free to read"
               class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
               data-mui-internal-clone-element="true"
               data-testid="oa-icon"
               focusable="false"
+              role="img"
+              tabindex="0"
               viewBox="0 0 24 24"
             >
               <path
@@ -2950,12 +2976,14 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
             style="text-align: right;"
           >
             <svg
-              aria-hidden="true"
+              aria-hidden="false"
               aria-label="DOI - Open access after 24th December 2020"
               class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
               data-mui-internal-clone-element="true"
               data-testid="embargoed-oa-icon"
               focusable="false"
+              role="img"
+              tabindex="0"
               viewBox="0 0 24 24"
             >
               <path
@@ -3272,12 +3300,14 @@ exports[`Component Links  should render no oa icon and embargo dates for embargo
               Open access after 2100-01-01 
             </span>
             <svg
-              aria-hidden="true"
+              aria-hidden="false"
               aria-label="Open Access - Open access after 2100-01-01"
               class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
               data-mui-internal-clone-element="true"
               data-testid="embargoed-oa-icon"
               focusable="false"
+              role="img"
+              tabindex="0"
               viewBox="0 0 24 24"
             >
               <path
@@ -3543,12 +3573,14 @@ exports[`Component Links  should render oa icon for Link (no DOI) for link 1`] =
             style="text-align: right;"
           >
             <svg
-              aria-hidden="true"
+              aria-hidden="false"
               aria-label="Open Access - Free to read"
               class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
               data-mui-internal-clone-element="true"
               data-testid="oa-icon"
               focusable="false"
+              role="img"
+              tabindex="0"
               viewBox="0 0 24 24"
             >
               <path
@@ -3683,12 +3715,14 @@ exports[`Component Links  should render oa icon for open access rdm link 1`] = `
             style="text-align: right;"
           >
             <svg
-              aria-hidden="true"
+              aria-hidden="false"
               aria-label="Open Access - Open Access - Free to read"
               class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
               data-mui-internal-clone-element="true"
               data-testid="oa-icon"
               focusable="false"
+              role="img"
+              tabindex="0"
               viewBox="0 0 24 24"
             >
               <path
@@ -3823,12 +3857,14 @@ exports[`Component Links  should render oa icon for past embargo date open acces
             style="text-align: right;"
           >
             <svg
-              aria-hidden="true"
+              aria-hidden="false"
               aria-label="Open Access - Open Access - Free to read"
               class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
               data-mui-internal-clone-element="true"
               data-testid="oa-icon"
               focusable="false"
+              role="img"
+              tabindex="0"
               viewBox="0 0 24 24"
             >
               <path

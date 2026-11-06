@@ -70,7 +70,6 @@ exports[`PublicationsList renders component with custom subset actions 1`] = `
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Google scholar will open in a new window"
                         >
                           <span
                             class="fez-icon google xxlarge"
@@ -308,7 +307,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Scopus will open in a new window"
                         >
                           <span
                             class="fez-icon scopus xxlarge"
@@ -329,7 +327,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Altmetric will open in a new window"
                         >
                           <span
                             class="fez-icon altmetric xxlarge"
@@ -350,7 +347,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Google scholar will open in a new window"
                         >
                           <span
                             class="fez-icon google xxlarge"
@@ -630,7 +626,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Web of science will open in a new window"
                         >
                           <span
                             class="fez-icon wos xxlarge"
@@ -651,7 +646,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Scopus will open in a new window"
                         >
                           <span
                             class="fez-icon scopus xxlarge"
@@ -672,7 +666,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Altmetric will open in a new window"
                         >
                           <span
                             class="fez-icon altmetric xxlarge"
@@ -693,7 +686,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Google scholar will open in a new window"
                         >
                           <span
                             class="fez-icon google xxlarge"
@@ -881,7 +873,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Google scholar will open in a new window"
                         >
                           <span
                             class="fez-icon google xxlarge"
@@ -1139,7 +1130,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Web of science will open in a new window"
                         >
                           <span
                             class="fez-icon wos xxlarge"
@@ -1160,7 +1150,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Scopus will open in a new window"
                         >
                           <span
                             class="fez-icon scopus xxlarge"
@@ -1181,7 +1170,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Altmetric will open in a new window"
                         >
                           <span
                             class="fez-icon altmetric xxlarge"
@@ -1202,7 +1190,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Google scholar will open in a new window"
                         >
                           <span
                             class="fez-icon google xxlarge"
@@ -1466,7 +1453,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Web of science will open in a new window"
                         >
                           <span
                             class="fez-icon wos xxlarge"
@@ -1487,7 +1473,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Scopus will open in a new window"
                         >
                           <span
                             class="fez-icon scopus xxlarge"
@@ -1508,7 +1493,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Altmetric will open in a new window"
                         >
                           <span
                             class="fez-icon altmetric xxlarge"
@@ -1529,7 +1513,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Google scholar will open in a new window"
                         >
                           <span
                             class="fez-icon google xxlarge"
@@ -1781,7 +1764,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Web of science will open in a new window"
                         >
                           <span
                             class="fez-icon wos xxlarge"
@@ -1802,7 +1784,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Scopus will open in a new window"
                         >
                           <span
                             class="fez-icon scopus xxlarge"
@@ -1823,7 +1804,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Altmetric will open in a new window"
                         >
                           <span
                             class="fez-icon altmetric xxlarge"
@@ -1844,7 +1824,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Google scholar will open in a new window"
                         >
                           <span
                             class="fez-icon google xxlarge"
@@ -2101,7 +2080,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Web of science will open in a new window"
                         >
                           <span
                             class="fez-icon wos xxlarge"
@@ -2122,7 +2100,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Scopus will open in a new window"
                         >
                           <span
                             class="fez-icon scopus xxlarge"
@@ -2143,7 +2120,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Altmetric will open in a new window"
                         >
                           <span
                             class="fez-icon altmetric xxlarge"
@@ -2164,7 +2140,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Google scholar will open in a new window"
                         >
                           <span
                             class="fez-icon google xxlarge"
@@ -2428,7 +2403,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Web of science will open in a new window"
                         >
                           <span
                             class="fez-icon wos xxlarge"
@@ -2449,7 +2423,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Scopus will open in a new window"
                         >
                           <span
                             class="fez-icon scopus xxlarge"
@@ -2470,7 +2443,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Altmetric will open in a new window"
                         >
                           <span
                             class="fez-icon altmetric xxlarge"
@@ -2491,7 +2463,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Google scholar will open in a new window"
                         >
                           <span
                             class="fez-icon google xxlarge"
@@ -2729,7 +2700,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Web of science will open in a new window"
                         >
                           <span
                             class="fez-icon wos xxlarge"
@@ -2750,7 +2720,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Scopus will open in a new window"
                         >
                           <span
                             class="fez-icon scopus xxlarge"
@@ -2771,7 +2740,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Altmetric will open in a new window"
                         >
                           <span
                             class="fez-icon altmetric xxlarge"
@@ -2792,7 +2760,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Google scholar will open in a new window"
                         >
                           <span
                             class="fez-icon google xxlarge"
@@ -3007,7 +2974,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Web of science will open in a new window"
                         >
                           <span
                             class="fez-icon wos xxlarge"
@@ -3028,7 +2994,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Scopus will open in a new window"
                         >
                           <span
                             class="fez-icon scopus xxlarge"
@@ -3049,7 +3014,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Altmetric will open in a new window"
                         >
                           <span
                             class="fez-icon altmetric xxlarge"
@@ -3070,7 +3034,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Google scholar will open in a new window"
                         >
                           <span
                             class="fez-icon google xxlarge"
@@ -3334,7 +3297,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Web of science will open in a new window"
                         >
                           <span
                             class="fez-icon wos xxlarge"
@@ -3355,7 +3317,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Scopus will open in a new window"
                         >
                           <span
                             class="fez-icon scopus xxlarge"
@@ -3376,7 +3337,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Altmetric will open in a new window"
                         >
                           <span
                             class="fez-icon altmetric xxlarge"
@@ -3397,7 +3357,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Google scholar will open in a new window"
                         >
                           <span
                             class="fez-icon google xxlarge"
@@ -3780,7 +3739,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Web of science will open in a new window"
                         >
                           <span
                             class="fez-icon wos xxlarge"
@@ -3801,7 +3759,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Scopus will open in a new window"
                         >
                           <span
                             class="fez-icon scopus xxlarge"
@@ -3822,7 +3779,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Altmetric will open in a new window"
                         >
                           <span
                             class="fez-icon altmetric xxlarge"
@@ -3843,7 +3799,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Google scholar will open in a new window"
                         >
                           <span
                             class="fez-icon google xxlarge"
@@ -4093,7 +4048,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Web of science will open in a new window"
                         >
                           <span
                             class="fez-icon wos xxlarge"
@@ -4114,7 +4068,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Scopus will open in a new window"
                         >
                           <span
                             class="fez-icon scopus xxlarge"
@@ -4135,7 +4088,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Google scholar will open in a new window"
                         >
                           <span
                             class="fez-icon google xxlarge"
@@ -4359,7 +4311,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Web of science will open in a new window"
                         >
                           <span
                             class="fez-icon wos xxlarge"
@@ -4380,7 +4331,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Scopus will open in a new window"
                         >
                           <span
                             class="fez-icon scopus xxlarge"
@@ -4401,7 +4351,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Google scholar will open in a new window"
                         >
                           <span
                             class="fez-icon google xxlarge"
@@ -4644,7 +4593,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Web of science will open in a new window"
                         >
                           <span
                             class="fez-icon wos xxlarge"
@@ -4665,7 +4613,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Scopus will open in a new window"
                         >
                           <span
                             class="fez-icon scopus xxlarge"
@@ -4686,7 +4633,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Altmetric will open in a new window"
                         >
                           <span
                             class="fez-icon altmetric xxlarge"
@@ -4707,7 +4653,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Google scholar will open in a new window"
                         >
                           <span
                             class="fez-icon google xxlarge"
@@ -4922,7 +4867,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Web of science will open in a new window"
                         >
                           <span
                             class="fez-icon wos xxlarge"
@@ -4943,7 +4887,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Scopus will open in a new window"
                         >
                           <span
                             class="fez-icon scopus xxlarge"
@@ -4964,7 +4907,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Google scholar will open in a new window"
                         >
                           <span
                             class="fez-icon google xxlarge"
@@ -5199,7 +5141,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Web of science will open in a new window"
                         >
                           <span
                             class="fez-icon wos xxlarge"
@@ -5220,7 +5161,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Scopus will open in a new window"
                         >
                           <span
                             class="fez-icon scopus xxlarge"
@@ -5241,7 +5181,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Google scholar will open in a new window"
                         >
                           <span
                             class="fez-icon google xxlarge"
@@ -5521,7 +5460,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Web of science will open in a new window"
                         >
                           <span
                             class="fez-icon wos xxlarge"
@@ -5542,7 +5480,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Scopus will open in a new window"
                         >
                           <span
                             class="fez-icon scopus xxlarge"
@@ -5563,7 +5500,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Altmetric will open in a new window"
                         >
                           <span
                             class="fez-icon altmetric xxlarge"
@@ -5584,7 +5520,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Google scholar will open in a new window"
                         >
                           <span
                             class="fez-icon google xxlarge"
@@ -5869,7 +5804,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Web of science will open in a new window"
                         >
                           <span
                             class="fez-icon wos xxlarge"
@@ -5890,7 +5824,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Scopus will open in a new window"
                         >
                           <span
                             class="fez-icon scopus xxlarge"
@@ -5911,7 +5844,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Altmetric will open in a new window"
                         >
                           <span
                             class="fez-icon altmetric xxlarge"
@@ -5932,7 +5864,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Google scholar will open in a new window"
                         >
                           <span
                             class="fez-icon google xxlarge"
@@ -6175,7 +6106,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Web of science will open in a new window"
                         >
                           <span
                             class="fez-icon wos xxlarge"
@@ -6196,7 +6126,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Scopus will open in a new window"
                         >
                           <span
                             class="fez-icon scopus xxlarge"
@@ -6217,7 +6146,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Google scholar will open in a new window"
                         >
                           <span
                             class="fez-icon google xxlarge"
@@ -6407,7 +6335,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Web of science will open in a new window"
                         >
                           <span
                             class="fez-icon wos xxlarge"
@@ -6428,7 +6355,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Google scholar will open in a new window"
                         >
                           <span
                             class="fez-icon google xxlarge"
@@ -6692,7 +6618,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Web of science will open in a new window"
                         >
                           <span
                             class="fez-icon wos xxlarge"
@@ -6713,7 +6638,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Scopus will open in a new window"
                         >
                           <span
                             class="fez-icon scopus xxlarge"
@@ -6734,7 +6658,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Altmetric will open in a new window"
                         >
                           <span
                             class="fez-icon altmetric xxlarge"
@@ -6755,7 +6678,6 @@ exports[`PublicationsList renders component with items 1`] = `
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Google scholar will open in a new window"
                         >
                           <span
                             class="fez-icon google xxlarge"

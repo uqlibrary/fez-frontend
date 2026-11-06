@@ -113,6 +113,7 @@ exports[`AuthorsSection component should render NTRO design form fields 1`] = `
                         data-mui-internal-clone-element="true"
                       >
                         <button
+                          aria-label="Add designer"
                           class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-MuiButtonBase-root-MuiIconButton-root"
                           data-testid="rek-author-add-designer"
                           id="rek-author-add-designer"
@@ -647,6 +648,7 @@ exports[`AuthorsSection component should render NTRO design form fields 1`] = `
                         data-mui-internal-clone-element="true"
                       >
                         <button
+                          aria-label="Add contributor"
                           class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-MuiButtonBase-root-MuiIconButton-root"
                           data-testid="rek-contributor-add-contributor"
                           id="rek-contributor-add-contributor"
@@ -1190,6 +1192,7 @@ exports[`AuthorsSection component should render default view 1`] = `
                         data-mui-internal-clone-element="true"
                       >
                         <button
+                          aria-label="Add author"
                           class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-MuiButtonBase-root-MuiIconButton-root"
                           data-testid="rek-author-add-author"
                           id="rek-author-add-author"
@@ -1696,6 +1699,7 @@ exports[`AuthorsSection component should render disabled view 1`] = `
                         data-mui-internal-clone-element="true"
                       >
                         <button
+                          aria-label="Add author"
                           class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium css-MuiButtonBase-root-MuiIconButton-root"
                           data-testid="rek-author-add-author"
                           disabled=""
@@ -2203,6 +2207,7 @@ exports[`AuthorsSection component should render edited book form fields 1`] = `
                         data-mui-internal-clone-element="true"
                       >
                         <button
+                          aria-label="Add author"
                           class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-MuiButtonBase-root-MuiIconButton-root"
                           data-testid="rek-author-add-author"
                           id="rek-author-add-author"
@@ -2700,6 +2705,7 @@ exports[`AuthorsSection component should render edited book form fields 1`] = `
                         data-mui-internal-clone-element="true"
                       >
                         <button
+                          aria-label="Add editor"
                           class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-MuiButtonBase-root-MuiIconButton-root"
                           data-testid="rek-contributor-add-editor"
                           id="rek-contributor-add-editor"
@@ -3206,6 +3212,7 @@ exports[`AuthorsSection component should render non-NTRO design form fields 1`] 
                         data-mui-internal-clone-element="true"
                       >
                         <button
+                          aria-label="Add designer"
                           class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-MuiButtonBase-root-MuiIconButton-root"
                           data-testid="rek-author-add-designer"
                           id="rek-author-add-designer"
@@ -3703,6 +3710,7 @@ exports[`AuthorsSection component should render non-NTRO design form fields 1`] 
                         data-mui-internal-clone-element="true"
                       >
                         <button
+                          aria-label="Add contributor"
                           class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-MuiButtonBase-root-MuiIconButton-root"
                           data-testid="rek-contributor-add-contributor"
                           id="rek-contributor-add-contributor"

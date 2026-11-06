@@ -90,6 +90,7 @@ exports[`NewListEditorField component should render new list editor component wi
             data-mui-internal-clone-element="true"
           >
             <button
+              aria-label="Remove all items"
               class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="delete-all-test"
               data-testid="delete-all-test"
@@ -149,6 +150,7 @@ exports[`NewListEditorField component should render new list editor component wi
                   data-mui-internal-clone-element="true"
                 >
                   <button
+                    aria-label="Move item down the order"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="test-list-row-0-move-down"
                     data-testid="test-list-row-0-move-down"
@@ -181,6 +183,7 @@ exports[`NewListEditorField component should render new list editor component wi
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this item"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="test-list-row-0-delete"
                 data-testid="test-list-row-0-delete"
@@ -236,6 +239,7 @@ exports[`NewListEditorField component should render new list editor component wi
                   data-mui-internal-clone-element="true"
                 >
                   <button
+                    aria-label="Move item up the order"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="test-list-row-1-move-up"
                     data-testid="test-list-row-1-move-up"
@@ -268,6 +272,7 @@ exports[`NewListEditorField component should render new list editor component wi
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this item"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="test-list-row-1-delete"
                 data-testid="test-list-row-1-delete"
@@ -391,6 +396,7 @@ exports[`NewListEditorField component should render new list editor component wi
             data-mui-internal-clone-element="true"
           >
             <button
+              aria-label="Remove all items"
               class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="delete-all-test"
               data-testid="delete-all-test"
@@ -450,6 +456,7 @@ exports[`NewListEditorField component should render new list editor component wi
                   data-mui-internal-clone-element="true"
                 >
                   <button
+                    aria-label="Move item down the order"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="test-list-row-0-move-down"
                     data-testid="test-list-row-0-move-down"
@@ -482,6 +489,7 @@ exports[`NewListEditorField component should render new list editor component wi
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this item"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="test-list-row-0-delete"
                 data-testid="test-list-row-0-delete"
@@ -537,6 +545,7 @@ exports[`NewListEditorField component should render new list editor component wi
                   data-mui-internal-clone-element="true"
                 >
                   <button
+                    aria-label="Move item up the order"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="test-list-row-1-move-up"
                     data-testid="test-list-row-1-move-up"
@@ -569,6 +578,7 @@ exports[`NewListEditorField component should render new list editor component wi
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this item"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="test-list-row-1-delete"
                 data-testid="test-list-row-1-delete"

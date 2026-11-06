@@ -39,14 +39,14 @@ describe('CopyToClipboardDialog', () => {
     it('should call onCopy when copy icon is clicked', async () => {
         const { getByTestId } = setup();
 
-        await userEvent.click(getByTestId('copy-to-clipboard-dialog-copy=button'));
+        await userEvent.click(getByTestId('copy-to-clipboard-dialog-copy-button'));
         expect(onCopy).toHaveBeenCalledTimes(1);
     });
 
     it('should call onClose when close icon is clicked', async () => {
         const { getByLabelText } = setup();
 
-        await userEvent.click(getByLabelText('close'));
+        await userEvent.click(getByLabelText('Close dialog'));
         expect(onClose).toHaveBeenCalledTimes(1);
     });
 
