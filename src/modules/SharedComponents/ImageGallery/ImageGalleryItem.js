@@ -109,7 +109,9 @@ const ImageGalleryItem = ({
         !!url && url.length > 0
             ? {
                   onClick: () => viewRecord(navigate, url),
+                  onKeyPress: key => handleKeyboardPressActivate(key, () => viewRecord(navigate, url)),
                   role: 'button',
+                  tabIndex: 0,
               }
             : {};
 
@@ -133,8 +135,6 @@ const ImageGalleryItem = ({
                     ...(!!clickLink.onClick && internalClasses.imageListItemWithLink),
                 },
             }}
-            tabIndex={0}
-            onKeyPress={key => handleKeyboardPressActivate(key, () => viewRecord(navigate, url))}
             {...clickLink}
             {...rest}
         >
