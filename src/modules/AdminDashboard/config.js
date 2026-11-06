@@ -193,7 +193,7 @@ export const buildStatusFilterOptions = (users = [], currentUser, locale) => {
     ];
 };
 
-export const getSystemAlertColumns = (locale, users, currentUser, statusOptions) => {
+export const getSystemAlertColumns = (locale, users, currentUser, statusOptions, onViewDetails) => {
     const alertStatus = locale.alertStatus;
     const alertStatusOption = Object.values(alertStatus);
     const userMap = new Map(users.map(u => [u.id, u.preferred_name]));
@@ -226,6 +226,20 @@ export const getSystemAlertColumns = (locale, users, currentUser, statusOptions)
                     variant="filled"
                     size="medium"
                     color={alertStatusOption.includes(params.formattedValue) ? 'default' : 'primary'}
+                    {...(!!onViewDetails && {
+                        'aria-label': locale.viewDetails(params.row.sat_title, params.formattedValue),
+                        // stop the click reaching the grid's onRowClick so the action only runs once
+                        onClick: e => {
+                            e.stopPropagation();
+                            onViewDetails(params.row);
+                        },
+                        // Enter/Space are activation keys for the chip; keep the grid from treating them as navigation
+                        onKeyDown: e => {
+                            if (e.key === 'Enter' || e.key === ' ') {
+                                e.stopPropagation();
+                            }
+                        },
+                    })}
                 />
             ),
             filterable: true,

@@ -18,10 +18,10 @@ export const useSystemAlertDrawer = data => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [data]);
 
-    const openDrawer = row => {
+    const openDrawer = React.useCallback(row => {
         _setRow(row);
         _setOpen(true);
-    };
+    }, []);
     const closeDrawer = () => {
         _setRow({});
         _setOpen(false);
@@ -82,7 +82,7 @@ export const useAdminUserOptions = unassignedLabel => {
     );
 };
 
-export const useSystemAlertColumns = locale => {
+export const useSystemAlertColumns = (locale, onViewDetails) => {
     const { users, currentUser } = useAdminUsers();
 
     const statusOptions = React.useMemo(
@@ -91,7 +91,7 @@ export const useSystemAlertColumns = locale => {
     );
 
     return React.useMemo(
-        () => getSystemAlertColumns(locale, users, currentUser, statusOptions),
-        [locale, users, currentUser, statusOptions],
+        () => getSystemAlertColumns(locale, users, currentUser, statusOptions, onViewDetails),
+        [locale, users, currentUser, statusOptions, onViewDetails],
     );
 };

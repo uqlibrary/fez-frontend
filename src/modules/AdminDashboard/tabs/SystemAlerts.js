@@ -80,7 +80,7 @@ const SystemAlerts = () => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
-    const columns = useSystemAlertColumns(txt);
+    const columns = useSystemAlertColumns(txt, openDrawer);
 
     const handleRowClick = params => {
         openDrawer(params.row);
@@ -216,6 +216,7 @@ const SystemAlerts = () => {
                                 }}
                                 pageSizeOptions={[10, 25, 50, 100]}
                                 onRowClick={handleRowClick}
+                                sx={{ '& .MuiDataGrid-row': { cursor: 'pointer' } }}
                                 autoHeight
                                 getRowId={row => row.sat_id}
                                 disableColumnSelector
