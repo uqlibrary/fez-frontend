@@ -1636,7 +1636,6 @@ exports[`PublicationCitation  should render component with default item with ima
         data-testid="image-gallery-item-UQ:676287"
         id="image-gallery-item-UQ:676287"
         style="height: auto; grid-column-end: span 1; grid-row-end: span 1;"
-        tabindex="0"
       >
         <img
           alt=""
@@ -1987,7 +1986,6 @@ exports[`PublicationCitation  should render component with default item with ima
         data-testid="image-gallery-item-UQ:676287"
         id="image-gallery-item-UQ:676287"
         style="height: auto; grid-column-end: span 1; grid-row-end: span 1;"
-        tabindex="0"
       >
         <img
           alt=""
@@ -4211,7 +4209,6 @@ exports[`PublicationCitation  should render component without image if whitelist
         data-testid="image-gallery-item-UQ:676287"
         id="image-gallery-item-UQ:676287"
         style="height: auto; grid-column-end: span 1; grid-row-end: span 1;"
-        tabindex="0"
       >
         <img
           alt=""

@@ -44,6 +44,24 @@ describe('Image Gallery Item', () => {
         expect(getByText(collectionSearchResultsImages.data[1].rek_title)).toBeInTheDocument();
     });
 
+    it('should not be focusable or expose a button role if no URL prop supplied', () => {
+        const pid = collectionSearchResultsImages.data[1].rek_pid;
+        const { getByTestId } = setup({ item: collectionSearchResultsImages.data[1], withTitle: false });
+        const element = getByTestId(`image-gallery-item-${pid}`);
+        expect(element).not.toHaveAttribute('tabindex');
+        expect(element).not.toHaveAttribute('role');
+        fireEvent.keyPress(element, { charCode: 13, code: 'Enter' });
+        expect(mockUseNavigate).not.toHaveBeenCalled();
+    });
+
+    it('should be a focusable button if URL prop supplied', () => {
+        const pid = collectionSearchResultsImages.data[1].rek_pid;
+        const { getByTestId } = setup({ item: collectionSearchResultsImages.data[1], url: pid });
+        const element = getByTestId(`image-gallery-item-${pid}`);
+        expect(element).toHaveAttribute('tabindex', '0');
+        expect(element).toHaveAttribute('role', 'button');
+    });
+
     it('should enable clickable gallery item if URL prop supplied', () => {
         const pid = collectionSearchResultsImages.data[1].rek_pid;
         const { getByTestId } = setup({
