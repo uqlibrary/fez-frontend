@@ -116,7 +116,7 @@ export const SimpleSearchComponent = ({
                             className={classes.inHeader}
                         >
                             {showPrefixIcon && (
-                                <Grid size="auto" sx={{ padding: '4px' }}>
+                                <Grid size="auto" sx={{ padding: '4px', display: 'flex', alignItems: 'center' }}>
                                     <Search
                                         sx={theme => ({
                                             display: 'flex',

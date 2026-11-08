@@ -103,6 +103,14 @@ const typography = {
     body1: { lineHeight: ds.lineHeight.long },
     body2: { lineHeight: ds.lineHeight.long },
 };
+
+const narrowLabelReflow = {
+    '@media (max-width:899.95px)': {
+        whiteSpace: 'normal',
+        overflow: 'visible',
+        textOverflow: 'clip',
+    },
+};
 const dsOutlineStandard = {
     outline: `4px solid ${ds.colour.utility[500]}`,
     outlineOffset: '0px', // Prevents the outline from touching the text
@@ -285,6 +293,14 @@ export const mui1theme = createTheme(
                         overflow: 'hidden',
                         width: '100%',
                         textOverflow: 'ellipsis',
+                        ...narrowLabelReflow,
+                    },
+                },
+            },
+            MuiInputLabel: {
+                styleOverrides: {
+                    root: {
+                        ...narrowLabelReflow,
                     },
                 },
             },
@@ -401,6 +417,14 @@ export const adminTheme = createTheme(
                 styleOverrides: {
                     root: {
                         color: '#4085C6',
+                        ...narrowLabelReflow,
+                    },
+                },
+            },
+            MuiInputLabel: {
+                styleOverrides: {
+                    root: {
+                        ...narrowLabelReflow,
                     },
                 },
             },

@@ -5,36 +5,25 @@ import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 import { ChartDataProvider, ChartsSurface, BarPlot } from '@mui/x-charts';
 
-import debounce from 'debounce-promise';
-
 const VisualisationSystemAlerts = ({
     assigned,
     remaining,
     id = 'system-alerts',
     colours = { assigned: '#338CFA', remaining: '#B60DCE' },
 }) => {
-    const [parentSize, setParentSize] = React.useState({ width: 0, height: 0 });
-    const _parentRef = React.useRef();
-
-    const handleResize = debounce(() => {
-        setParentSize(_parentRef?.current?.getBoundingClientRect() ?? { width: 0, height: 0 });
-    }, 200);
-
-    React.useEffect(() => {
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
-    }, [handleResize]);
-
-    React.useEffect(() => {
-        handleResize();
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
-
     return (
         <Box
             data-testid={`chart-container-${id}`}
-            ref={_parentRef}
             sx={{
+                // Fill the table cell so the ribbon column can shrink at zoom/narrow widths; the bar
+                // stretches horizontally only (preserveAspectRatio="none" on the surface).
+                width: '100%',
+                minWidth: 64,
+                '& svg': {
+                    display: 'block',
+                    width: '100%',
+                    height: 40,
+                },
                 '& rect': {
                     height: '20px !important',
                 },
@@ -61,9 +50,10 @@ const VisualisationSystemAlerts = ({
                     },
                 ]}
                 disableAxisListener
-                margin={{ top: parentSize.height / 4, right: 0, bottom: 0, left: -(parentSize.width / 4) }}
+                // The viewBox is fixed at 200x40, so these are the values the old parent-size measurement settled on.
+                margin={{ top: 10, right: 0, bottom: 0, left: -50 }}
             >
-                <ChartsSurface>
+                <ChartsSurface preserveAspectRatio="none">
                     <BarPlot />
                 </ChartsSurface>
             </ChartDataProvider>

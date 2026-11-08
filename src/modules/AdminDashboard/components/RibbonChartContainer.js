@@ -19,11 +19,33 @@ const RibbonChartContainer = ({ data, locale, colours, label, id, children, ...r
         <React.Fragment>
             <SectionTitle data-testid={`${id}-title`}>{label}</SectionTitle>
             {!!data && (
-                <TableContainer data-testid={`${id}-table`} tabIndex={0} {...rest}>
+                <TableContainer
+                    data-testid={`${id}-table`}
+                    tabIndex={0}
+                    {...rest}
+                    sx={{
+                        // At high zoom / narrow columns the stat columns need all the width: drop the ribbon
+                        // (it repeats the assigned/unassigned figures) and tighten the cell padding.
+                        containerType: 'inline-size',
+                        '@container (max-width: 24em)': {
+                            '& .ribbon-chart-cell': { display: 'none' },
+                            '& .MuiTableCell-root': { paddingInline: theme.spacing(1) },
+                        },
+                        '@container (max-width: 20em)': {
+                            '& .MuiTableCell-root': { paddingInline: theme.spacing(0.5) },
+                        },
+                        ...rest.sx,
+                    }}
+                >
                     <Table aria-label="table">
                         <TableHead>
                             <TableRow>
-                                <TableCell size="small" width={200} aria-hidden="true" />
+                                <TableCell
+                                    className="ribbon-chart-cell"
+                                    size="small"
+                                    sx={{ width: '35%' }}
+                                    aria-hidden="true"
+                                />
                                 {Object.keys(locale)
                                     .filter(item => locale[item].hasOwnProperty('label'))
                                     .map(key => {
@@ -51,7 +73,7 @@ const RibbonChartContainer = ({ data, locale, colours, label, id, children, ...r
                         </TableHead>
                         <TableBody>
                             <TableRow>
-                                <TableCell align="left" size="small" width={150}>
+                                <TableCell className="ribbon-chart-cell" align="left" size="small">
                                     {children}
                                 </TableCell>
                                 {Object.keys(data)
