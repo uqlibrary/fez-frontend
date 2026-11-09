@@ -111,8 +111,8 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-MuiGrid-root"
                             style="min-width: 1px;"
                           >
-                            <h6
-                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-MuiTypography-root"
+                            <h3
+                              class="MuiTypography-root MuiTypography-body1 PublicationCitation-citationTitle css-MuiTypography-root"
                             >
                               <a
                                 data-discover="true"
@@ -120,7 +120,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                               >
                                 Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
                               </a>
-                            </h6>
+                            </h3>
                           </div>
                           <div
                             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
@@ -263,7 +263,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                   class="MuiCardHeader-content css-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
                     data-testid="standard-card-your-details-header"
                     id="standard-card-your-details-header"
                   >
@@ -1066,7 +1066,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                   class="MuiCardHeader-content css-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
                     data-testid="standard-card-i-would-like-to-header"
                     id="standard-card-i-would-like-to-header"
                   >
@@ -1845,8 +1845,8 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-MuiGrid-root"
                             style="min-width: 1px;"
                           >
-                            <h6
-                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-MuiTypography-root"
+                            <h3
+                              class="MuiTypography-root MuiTypography-body1 PublicationCitation-citationTitle css-MuiTypography-root"
                             >
                               <a
                                 data-discover="true"
@@ -1854,7 +1854,7 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                               >
                                 Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
                               </a>
-                            </h6>
+                            </h3>
                           </div>
                           <div
                             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
@@ -1992,7 +1992,7 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                   class="MuiCardHeader-content css-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
                     data-testid="standard-card-your-details-header"
                     id="standard-card-your-details-header"
                   >
@@ -2795,7 +2795,7 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                   class="MuiCardHeader-content css-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
                     data-testid="standard-card-i-would-like-to-header"
                     id="standard-card-i-would-like-to-header"
                   >
@@ -3354,8 +3354,8 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-MuiGrid-root"
                             style="min-width: 1px;"
                           >
-                            <h6
-                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-MuiTypography-root"
+                            <h3
+                              class="MuiTypography-root MuiTypography-body1 PublicationCitation-citationTitle css-MuiTypography-root"
                             >
                               <a
                                 data-discover="true"
@@ -3363,7 +3363,7 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                               >
                                 Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
                               </a>
-                            </h6>
+                            </h3>
                           </div>
                           <div
                             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
@@ -3506,7 +3506,7 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                   class="MuiCardHeader-content css-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
                     data-testid="standard-card-your-details-header"
                     id="standard-card-your-details-header"
                   >
@@ -4309,7 +4309,7 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                   class="MuiCardHeader-content css-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
                     data-testid="standard-card-i-would-like-to-header"
                     id="standard-card-i-would-like-to-header"
                   >
@@ -4959,8 +4959,8 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-MuiGrid-root"
                             style="min-width: 1px;"
                           >
-                            <h6
-                              class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle css-MuiTypography-root"
+                            <h3
+                              class="MuiTypography-root MuiTypography-body1 PublicationCitation-citationTitle css-MuiTypography-root"
                             >
                               <a
                                 data-discover="true"
@@ -4968,7 +4968,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                               >
                                 Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
                               </a>
-                            </h6>
+                            </h3>
                           </div>
                           <div
                             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
@@ -5111,7 +5111,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                   class="MuiCardHeader-content css-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
                     data-testid="standard-card-your-details-header"
                     id="standard-card-your-details-header"
                   >
@@ -5914,7 +5914,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                   class="MuiCardHeader-content css-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
                     data-testid="standard-card-i-would-like-to-header"
                     id="standard-card-i-would-like-to-header"
                   >
