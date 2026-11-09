@@ -8,9 +8,8 @@ import CircularProgress from '@mui/material/CircularProgress';
 import Close from '@mui/icons-material/Close';
 
 import ErrorOutline from '@mui/icons-material/ErrorOutline';
-import Error from '@mui/icons-material/Error';
-import Warning from '@mui/icons-material/Warning';
-import Info from '@mui/icons-material/Info';
+import HighlightOff from '@mui/icons-material/HighlightOff';
+import WarningAmber from '@mui/icons-material/WarningAmber';
 import InfoOutlined from '@mui/icons-material/InfoOutlined';
 import Help from '@mui/icons-material/Help';
 import HelpOutline from '@mui/icons-material/HelpOutline';
@@ -18,10 +17,14 @@ import Done from '@mui/icons-material/Done';
 import Grid from '@mui/material/Grid';
 
 const icon = {
+    // UQ Design System: alert icons render at $space-l (24px) with the thin "standard--" outline
+    // weight, sized to sit with the text rather than dominating it. marginTop aligns the icon with
+    // the first line of the message text (the title cell has 6px top padding); the icon cell is
+    // flex-start so this holds for both single- and multi-line alerts.
     '& .icon': {
-        fontSize: '48px',
-        marginRight: '16px',
-        marginBottom: '-6px',
+        fontSize: '24px',
+        marginRight: '12px',
+        marginTop: '4px',
     },
     '& .spinner': {
         margin: '8px 24px 0 6px',
@@ -56,9 +59,13 @@ const StyledGridWithIcon = styled(Grid, {
     shouldForwardProp: prop => prop !== 'type',
 })(({ theme, type }) => {
     const _type = paletteIndex[type] ?? 'error';
+    // DS "page" alert (from theme.palette.alert): flat (no border-radius/box-shadow), light $*-50 tint
+    // background + $grey-900 text/icon. Matches the DS Storybook page alert exactly. Degrades to the standard
+    // palette if rendered under a theme that lacks the custom `alert` section (e.g. MUI's default theme).
+    const alertColors = theme.palette.alert;
+    const alertText = alertColors?.text ?? theme.palette.text?.primary;
+    const alertBg = alertColors?.[_type]?.background ?? theme.palette[_type]?.light;
     return {
-        borderRadius: '5px',
-        boxShadow: theme.shadows[1],
         padding: '12px',
         marginTop: '5px',
         '&:first-of-type': {
@@ -66,15 +73,15 @@ const StyledGridWithIcon = styled(Grid, {
         },
 
         '& a:link, & a:hover, & a:visited': {
-            color: theme.palette.white?.main,
+            color: alertText,
             textDecoration: 'underline',
         },
 
-        color: theme.palette.white?.main,
-        backgroundColor: type !== 'done' ? theme.palette[_type].main : theme.palette[_type].light,
+        color: alertText,
+        backgroundColor: alertBg,
 
         '& .spinner, & .icon, & button.dismiss': {
-            color: theme.palette[_type].dark,
+            color: alertText,
         },
         '& button.action': {
             color: theme.palette.white?.main,
@@ -86,7 +93,6 @@ const StyledGridWithIcon = styled(Grid, {
 const StyledGridTitle = styled(Grid)(({ theme }) => ({
     alignSelf: 'center',
     padding: '6px 0',
-    textShadow: '1px 1px 1px rgba(0, 0, 0, 0.2)',
 
     '& ul, & ol': {
         [theme.breakpoints.down('sm')]: {
@@ -119,14 +125,16 @@ const StyledGridDismissButton = styled(Grid)(({ theme }) => ({
 
 export const renderIcon = type => {
     switch (type) {
+        // UQ Design System error alert uses a circle-with-X ("standard--x-circle"); HighlightOff is
+        // its MUI outline equivalent (previously a filled circle-"!").
         case 'error':
-            return <Error id="error-icon" className="icon" fontSize="medium" />;
+            return <HighlightOff id="error-icon" className="icon" fontSize="medium" />;
         case 'error_outline':
             return <ErrorOutline id="error-outline-icon" className="icon" fontSize="medium" />;
         case 'warning':
-            return <Warning id="warning-icon" className="icon" fontSize="medium" />;
+            return <WarningAmber id="warning-icon" className="icon" fontSize="medium" />;
         case 'info':
-            return <Info id="info-icon" className="icon" fontSize="medium" />;
+            return <InfoOutlined id="info-icon" className="icon" fontSize="medium" />;
         case 'info_outline':
             return <InfoOutlined id="info-outline-icon" className="icon" fontSize="medium" />;
         case 'help':
@@ -136,7 +144,7 @@ export const renderIcon = type => {
         case 'done':
             return <Done id="done-icon" className="icon" fontSize="medium" />;
         default:
-            return <Error id="error-icon" className="icon" fontSize="medium" />;
+            return <HighlightOff id="error-icon" className="icon" fontSize="medium" />;
     }
 };
 
