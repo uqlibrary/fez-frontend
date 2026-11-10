@@ -1,0 +1,5 @@
+// Focus ring following the UQ Design System style
+@mixin focus-ring($colour: var(--uq-utility-500)) {
+  outline: 4px solid $colour;
+  outline-offset: 0;
+}

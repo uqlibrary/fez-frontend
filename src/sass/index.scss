@@ -10,6 +10,8 @@
 @use "./print";
 // Browser update script styles
 @use './browserUpdate';
+// Shared mixins
+@use './mixins' as *;
 
 html, body {
   overflow: hidden;
@@ -39,8 +41,13 @@ a, button.MuiLink-button:enabled {
     }
   }
   &:focus-visible {
-    outline: 4px solid var(--uq-utility-500);
-    outline-offset: 0px; 
+    @include focus-ring;
+  }
+}
+
+#FileUploadDropZone {
+  &:focus-visible {
+    @include focus-ring;
   }
 }
 
@@ -51,8 +58,7 @@ a, button.MuiLink-button:enabled {
 }
 #main-menu-logo-link {
   &:focus {
-    outline: 4px solid var(--uq-white);
-    outline-offset: 0px; 
+    @include focus-ring(var(--uq-white));
   }
 }
 
