@@ -105,6 +105,7 @@ export const useColumns = ({
                 minWidth: 250,
                 flex: 1,
                 cellClassName: 'cell-styled',
+                rowHeader: true,
             },
             {
                 field: 'is_public',

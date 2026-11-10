@@ -222,8 +222,10 @@ const SystemAlerts = () => {
                                 disableColumnSelector
                                 checkboxSelection
                                 disableRowSelectionOnClick
+                                disableColumnResize
                                 rowSelectionModel={selectionModel}
                                 onRowSelectionModelChange={setSelectionModel}
+                                aria-label={txt.dataGridAriaLabel}
                             />
                             <SystemAlertsDrawer
                                 open={open}

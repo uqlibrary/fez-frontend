@@ -286,8 +286,6 @@ export const getSystemAlertColumns = (locale, users, currentUser, statusOptions,
 
     return [
         {
-            // overrides the grid's built-in selection column so each checkbox is named after its alert;
-            // spreading its definition keeps the default alignment, width and classes
             ...GRID_CHECKBOX_SELECTION_COL_DEF,
             renderCell: params => <SystemAlertCheckboxCell params={params} getLabel={locale.selectRowLabel} />,
         },
@@ -301,7 +299,14 @@ export const getSystemAlertColumns = (locale, users, currentUser, statusOptions,
             valueGetter: value => moment(value, DEFAULT_SERVER_DATE_FORMAT).toDate(),
             valueFormatter: value => moment(value).format(DEFAULT_DATE_FORMAT_WITH_TIME_24H),
         },
-        { field: 'sat_title', headerName: locale.columns.topic, flex: 1, disableColumnMenu: true, filterable: false },
+        {
+            field: 'sat_title',
+            headerName: locale.columns.topic,
+            rowHeader: true,
+            flex: 1,
+            disableColumnMenu: true,
+            filterable: false,
+        },
         {
             field: 'sat_assigned_to',
             headerName: locale.columns.status,

@@ -169,6 +169,7 @@ export const BulkUpdatesList = ({ list }) => {
                 localeText={{
                     noRowsLabel: bulkUpdatesList.noRowLabel,
                 }}
+                aria-label={bulkUpdatesList.ariaLabel}
             />
         </Paper>
     );

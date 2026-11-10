@@ -267,6 +267,23 @@ export const commonThemeOverrides = {
             },
         },
     },
+
+    MuiDataGrid: {
+        styleOverrides: {
+            cell: {
+                '&:focus': {
+                    ...dsOutlineStandard,
+                    outlineOffset: '-4px',
+                },
+            },
+            columnHeader: {
+                '&:focus': {
+                    ...dsOutlineStandard,
+                    outlineOffset: '-4px',
+                },
+            },
+        },
+    },
 };
 
 export const mui1theme = createTheme(
