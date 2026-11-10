@@ -289,13 +289,44 @@ describe('config', () => {
                 const onViewDetails = jest.fn();
                 const onParentClick = jest.fn();
                 const { getByRole } = renderStatusCell(onViewDetails, onParentClick);
-                const button = getByRole('button', { name: 'Click to view details of Broken thing - Unassigned' });
+                const button = getByRole('button', { name: 'Unassigned - click to view details and assign' });
                 expect(button).toHaveAttribute('tabindex', '0');
 
                 fireEvent.click(button);
                 expect(onViewDetails).toHaveBeenCalledTimes(1);
                 expect(onViewDetails).toHaveBeenCalledWith(params.row);
                 expect(onParentClick).not.toHaveBeenCalled();
+            });
+
+            it.each([
+                [{ sat_assigned_to: 13 }, 'Staff', 'Alert is assigned to Staff - click to view details'],
+                [
+                    { sat_assigned_to: 999 },
+                    'Unknown',
+                    'An unknown user is assigned to this alert - click to view details',
+                ],
+            ])('describes the assignment in the label for %j', (rowOverride, formattedValue, expected) => {
+                const columns = getSystemAlertColumns(txt, users, currentUser, statusOptions, jest.fn());
+                const statusCol = columns.find(c => c.field === 'sat_assigned_to');
+                const { getByRole } = render(
+                    statusCol.renderCell({ ...params, formattedValue, row: { ...params.row, ...rowOverride } }),
+                );
+                expect(getByRole('button', { name: expected })).toBeInTheDocument();
+            });
+
+            it('follows the grid roving tabindex and takes focus when its cell is focused', () => {
+                const columns = getSystemAlertColumns(txt, users, currentUser, statusOptions, jest.fn());
+                const statusCol = columns.find(c => c.field === 'sat_assigned_to');
+                const { getByRole, rerender } = render(
+                    statusCol.renderCell({ ...params, tabIndex: -1, hasFocus: false }),
+                );
+                const button = getByRole('button');
+                expect(button).toHaveAttribute('tabindex', '-1');
+                expect(button).not.toHaveFocus();
+
+                rerender(statusCol.renderCell({ ...params, tabIndex: 0, hasFocus: true }));
+                expect(getByRole('button')).toHaveAttribute('tabindex', '0');
+                expect(getByRole('button')).toHaveFocus();
             });
 
             it('activates with Enter and Space without the keys reaching the grid', () => {

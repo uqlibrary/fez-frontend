@@ -133,7 +133,12 @@ export default {
                         noconfig: 'No config available',
                     },
                     updating: 'Updating...',
-                    viewDetails: (title, status) => `Click to view details of ${title} - ${status}`,
+                    selectRowLabel: (title, selected) => `${selected ? 'Unselect' : 'Select'} alert: ${title}`,
+                    viewDetailsLabel: {
+                        unassigned: 'Unassigned - click to view details and assign',
+                        assigned: name => `Alert is assigned to ${name} - click to view details`,
+                        unknown: 'An unknown user is assigned to this alert - click to view details',
+                    },
                     columns: {
                         createdDate: 'Created',
                         topic: 'Topic',

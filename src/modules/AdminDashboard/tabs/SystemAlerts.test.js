@@ -105,6 +105,24 @@ describe('SystemAlerts tab', () => {
         expect(getByTestId('alert-status-12')).toHaveTextContent('Unknown');
         expect(getByTestId('alert-status-13')).toHaveTextContent('Another Staff');
 
+        // row checkboxes are named after their alert
+        expect(
+            getByRole('checkbox', { name: 'Select alert: My Works - Claimed Work - UQ:8efd126 - uqwtomas' }),
+        ).toBeInTheDocument();
+        expect(getByRole('checkbox', { name: 'Select alert: Issues on record - UQ:34555c6' })).toBeInTheDocument();
+
+        // header and row checkboxes share the grid's default centred alignment
+        expect(getByRole('checkbox', { name: 'Select all rows' }).closest('[role=columnheader]')).toHaveClass(
+            'MuiDataGrid-columnHeader--alignCenter',
+        );
+        expect(
+            getByRole('checkbox', { name: 'Select alert: Issues on record - UQ:34555c6' }).closest('[role=gridcell]'),
+        ).toHaveClass('MuiDataGrid-cell--textCenter');
+
+        // the label reflects the selected state
+        await userEvent.click(getByRole('checkbox', { name: 'Select alert: Issues on record - UQ:34555c6' }));
+        expect(getByRole('checkbox', { name: 'Unselect alert: Issues on record - UQ:34555c6' })).toBeChecked();
+
         // pagination buttons
         expect(getByTitle('Go to previous page')).toHaveAttribute('disabled');
         expect(getByTitle('Go to next page')).toHaveAttribute('disabled');
@@ -194,7 +212,7 @@ describe('SystemAlerts tab', () => {
         await waitForElementToBeRemoved(getByTestId('admin-dashboard-systemalerts-skeleton'));
 
         const statusButton = within(getByTestId('alert-status-1').closest('[role=gridcell]')).getByRole('button', {
-            name: /^Click to view details of .+ - Unassigned$/,
+            name: 'Unassigned - click to view details and assign',
         });
         expect(queryByTestId('system-alert-detail')).not.toBeInTheDocument();
 
