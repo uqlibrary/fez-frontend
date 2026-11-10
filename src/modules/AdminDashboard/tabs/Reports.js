@@ -246,6 +246,7 @@ const Reports = () => {
                                         },
                                     }}
                                     forwardedProps={{ 'data-testid': 'report-display-data-grid' }}
+                                    aria-label={txt.ariaLabel}
                                 />
                             </Grid>
                         </Grid>

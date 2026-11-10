@@ -133,6 +133,7 @@ export default {
                         noconfig: 'No config available',
                     },
                     updating: 'Updating...',
+                    dataGridAriaLabel: 'System alerts awaiting resolution',
                     selectRowLabel: (title, selected) => `${selected ? 'Unselect' : 'Select'} alert: ${title}`,
                     viewDetailsLabel: {
                         unassigned: 'Unassigned - click to view details and assign',
@@ -165,6 +166,7 @@ export default {
                 },
                 reports: {
                     tabLabel: 'REPORTS',
+                    ariaLabel: 'Reports matching your criteria',
                     exportTitle: 'Export-only reports',
                     displayTitle: 'Display reports',
                     loading: {
@@ -3577,6 +3579,7 @@ export default {
             label: 'Audience size',
         },
         bulkUpdatesList: {
+            ariaLabel: 'Background tasks processed over the last 7 days',
             tableTitle: '',
             noRowLabel: 'No records to display',
             columns: {
@@ -3611,6 +3614,7 @@ export default {
         },
         favouriteSearchList: {
             tableTitle: '',
+            ariaLabel: 'Table containing your favourite journal searches',
             noRowsLabel: 'No records to display',
             deleteConfirmLabel: 'Are you sure you want to delete this row?',
             columns: {
@@ -4530,6 +4534,7 @@ export default {
             },
         },
         journalUserLists: {
+            ariaLabel: 'Your lists containing favourite journals',
             grid: {
                 noRowsLabel: 'No lists to display',
                 columns: {
