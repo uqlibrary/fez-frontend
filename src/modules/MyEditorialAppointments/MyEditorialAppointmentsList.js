@@ -713,6 +713,7 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
             ),
         },
         muiTableProps: {
+            'aria-label': 'Your current editorial appointments',
             sx: {
                 borderCollapse: 'collapse',
             },

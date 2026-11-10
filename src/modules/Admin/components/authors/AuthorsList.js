@@ -831,6 +831,7 @@ export const AuthorsList = ({
             },
         },
         muiTableProps: {
+            'aria-label': "This work's authors",
             sx: {
                 borderCollapse: 'collapse',
             },

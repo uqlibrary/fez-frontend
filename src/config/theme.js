@@ -311,6 +311,17 @@ export const commonThemeOverrides = {
             },
         },
     },
+
+    MuiTableCell: {
+        styleOverrides: {
+            root: {
+                '&:focus-visible': {
+                    ...dsOutlineStandard,
+                    outlineOffset: '-4px',
+                },
+            },
+        },
+    },
 };
 
 export const mui1theme = createTheme(

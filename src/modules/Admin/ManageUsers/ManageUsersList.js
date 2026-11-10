@@ -368,6 +368,7 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
             },
         }),
         muiTableProps: {
+            'aria-label': 'eSpace users',
             sx: {
                 borderCollapse: 'collapse',
             },

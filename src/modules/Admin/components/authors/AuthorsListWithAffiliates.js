@@ -709,6 +709,7 @@ export const AuthorsListWithAffiliates = ({
             },
         },
         muiTableProps: {
+            'aria-label': "This work's authors with affiliates",
             sx: {
                 borderCollapse: 'collapse',
             },
