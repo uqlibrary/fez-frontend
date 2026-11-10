@@ -44,7 +44,7 @@ test.describe('Delete work form', () => {
         await expect(cards).toHaveCount(2);
         await expect(cards.nth(0).locator('h3')).toHaveText('Work to be deleted');
 
-        await expect(cards.locator('.publicationCitation h6 a')).toContainText(record.rek_title);
+        await expect(cards.locator('.publicationCitation h4 a')).toContainText(record.rek_title);
         await expect(page.getByTestId('rek-content-indicator')).toContainText('Scholarship of Teaching and Learning');
         await expect(page.locator('text=Describe the reason to delete this work')).toBeVisible();
 

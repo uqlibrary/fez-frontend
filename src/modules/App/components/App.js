@@ -53,6 +53,10 @@ const StyledAppTitle = styled(Typography, {
     shouldForwardProp: prop => prop !== 'indentTitle',
 })(({ theme, indentTitle }) => ({
     ...(indentTitle ? { textIndent: '282px' } : {}),
+    // Keep the semantic h1 (and its Montserrat), but size the banner title for the header rather than
+    // the document h1 scale (DS h1 = 40px would overflow). DS $font-size-xxl (24px), fixed across widths.
+    fontSize: '1.5rem',
+    '@media (min-width:1024px)': { fontSize: '1.5rem' },
     textOverflow: 'ellipsis',
     overflow: 'hidden',
     color: theme.palette.common.white,
@@ -264,6 +268,25 @@ const AppClass = ({
         location.pathname?.startsWith('/records/claim') ||
         false;
 
+    const insertAlertList = () => {
+        if (!!isAdminPage) {
+            return null; // admins don't need to see this (enough to use up the sapce)
+        }
+
+        const alertElement = document.getElementById('alert-list');
+        if (!!alertElement) {
+            return null; // already created
+        }
+
+        const html = '<alert-list id="alert-list" system="espace" />';
+        const alertTemplate = document.createElement('template');
+        alertTemplate.innerHTML = html;
+        const alertBlock = document.getElementById('espace-alerts-area');
+        !!alertBlock && !!alertTemplate && alertBlock.appendChild(alertTemplate.content.cloneNode(true));
+
+        return null;
+    };
+
     return (
         <StyledGrid container sx={{ width: '100%' }}>
             <Meta routesConfig={routesConfig} />
@@ -318,7 +341,7 @@ const AppClass = ({
                                     </Grid>
                                 )}
                                 <Grid size="auto" style={{ overflow: 'hidden', textOverflow: 'ellipsis' }}>
-                                    <StyledAppTitle variant="h5" component={'h1'} noWrap indentTitle={docked}>
+                                    <StyledAppTitle variant="h1" component={'h1'} noWrap indentTitle={docked}>
                                         {locale.global.appTitle}
                                     </StyledAppTitle>
                                 </Grid>
@@ -381,8 +404,8 @@ const AppClass = ({
             <div className="content-container" id="content-container" style={containerStyle}>
                 <ScrollTop show containerId="content-container" />
 
-                <div role="region" aria-label="eSpace alerts" style={{ paddingBottom: 24 }}>
-                    {!isAdminPage && <alert-list system="espace" />}
+                <div id="espace-alerts-area" role="region" aria-label="eSpace alerts" style={{ paddingBottom: 24 }}>
+                    {insertAlertList()}
                 </div>
                 <ConfirmDialogBox
                     hideCancelButton

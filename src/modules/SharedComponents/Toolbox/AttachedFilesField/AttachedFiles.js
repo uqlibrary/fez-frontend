@@ -567,12 +567,9 @@ export const AttachedFiles = ({
                                                 sx={{ marginLeft: 1, flexGrow: 1 }}
                                             >
                                                 {(openAccessConfig.openAccessFiles.includes(openAccessStatusId) ||
-                                                    !!item.securityPolicyStatus.isEmbargoed) && (
+                                                    !!item.embargoDate) && (
                                                     <FileUploadEmbargoDate
-                                                        value={
-                                                            item.openAccessStatus.embargoDate ??
-                                                            item.securityPolicyStatus.embargoDate
-                                                        }
+                                                        value={item.embargoDate}
                                                         onChange={onEmbargoDateChange(item.id)}
                                                         onKeyUp={onEmbargoDateKeyUp}
                                                         disabled={disabled}

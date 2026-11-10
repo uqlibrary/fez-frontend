@@ -10,7 +10,7 @@ exports[`NavigationDialogBox component should render 1`] = `
 <div>
   <div>
     <span
-      class="MuiBox-root css-0"
+      class="MuiBox-root css"
       data-testid="confirmDialogBox"
     />
   </div>
