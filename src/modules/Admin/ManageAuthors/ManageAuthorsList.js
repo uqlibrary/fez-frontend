@@ -356,6 +356,7 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
             },
         },
         muiTableProps: {
+            'aria-label': 'eSpace authors',
             sx: {
                 borderCollapse: 'collapse',
             },

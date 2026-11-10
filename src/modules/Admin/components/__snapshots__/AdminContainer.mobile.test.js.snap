@@ -3367,6 +3367,7 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                                   class="MuiTableContainer-root css-MuiTableContainer-root"
                                 >
                                   <table
+                                    aria-label="This work's authors"
                                     class="MuiTable-root MuiTable-stickyHeader css-MuiTable-root"
                                     style="--header-mrt_row_expand-size: 20; --col-mrt_row_expand-size: 20; --header-nameAsPublished-size: 250; --col-nameAsPublished-size: 250; --header-uqIdentifier-size: 150; --col-uqIdentifier-size: 150; --header-mrt_row_actions-size: 100; --col-mrt_row_actions-size: 100;"
                                   >
@@ -4124,6 +4125,7 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                                   class="MuiTableContainer-root css-MuiTableContainer-root"
                                 >
                                   <table
+                                    aria-label="This work's authors"
                                     class="MuiTable-root MuiTable-stickyHeader css-MuiTable-root"
                                     style="--header-mrt_row_expand-size: 20; --col-mrt_row_expand-size: 20; --header-nameAsPublished-size: 250; --col-nameAsPublished-size: 250; --header-uqIdentifier-size: 150; --col-uqIdentifier-size: 150; --header-mrt_row_actions-size: 100; --col-mrt_row_actions-size: 100;"
                                   >
