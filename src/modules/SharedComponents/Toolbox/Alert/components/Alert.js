@@ -96,9 +96,6 @@ const StyledGridTitle = styled(Grid)(({ theme }) => ({
 }));
 
 const StyledGridActionButton = styled(Grid)(({ theme }) => ({
-    [theme.breakpoints.down('xs')]: {
-        minWidth: 'unset',
-    },
     '& .action': {
         [theme.breakpoints.up('xs')]: {
             marginTop: '6px',
@@ -110,9 +107,6 @@ const StyledGridActionButton = styled(Grid)(({ theme }) => ({
 }));
 
 const StyledGridDismissButton = styled(Grid)(({ theme }) => ({
-    [theme.breakpoints.down('xs')]: {
-        minWidth: 'unset',
-    },
     '& .dismiss': {
         [theme.breakpoints.up('xs')]: {
             marginTop: 0,
