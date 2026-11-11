@@ -44,7 +44,6 @@ const StyledTabs = styled(Tabs)(({ theme }) => ({
 export const getQueryStringValue = (location, varName, initialValue) => {
     const queryStringObject = queryString.parse(
         location && ((location.hash && location.hash.replace('?', '&').replace('#', '?')) || location.search),
-        { ignoreQueryPrefix: true },
     );
     return (queryStringObject && queryStringObject[varName]) || initialValue;
 };

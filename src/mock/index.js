@@ -2,6 +2,7 @@
 import { api, SESSION_COOKIE_NAME, SESSION_USER_GROUP_COOKIE_NAME, sessionApi } from 'config';
 import MockAdapter from 'axios-mock-adapter';
 import Cookies from 'js-cookie';
+import queryString from 'query-string';
 import * as routes from 'repositories/routes';
 import * as data from './data';
 import * as mockTestingData from './data/testing/records';
@@ -26,7 +27,6 @@ const playwrightWaitIfRequired = async () => {
 };
 
 export const setup = () => {
-    const queryString = require('query-string');
     const mock = new MockAdapter(api, { delayResponse: 200 });
     const mockSessionApi = new MockAdapter(sessionApi, { delayResponse: 200 });
 
