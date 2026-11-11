@@ -102,6 +102,9 @@ const StyledGridTitle = styled(Grid)(({ theme }) => ({
 }));
 
 const StyledGridActionButton = styled(Grid)(({ theme }) => ({
+    [theme.breakpoints.down('xs')]: {
+        minWidth: 'unset',
+    },
     '& .action': {
         [theme.breakpoints.up('xs')]: {
             marginTop: '6px',
@@ -113,6 +116,9 @@ const StyledGridActionButton = styled(Grid)(({ theme }) => ({
 }));
 
 const StyledGridDismissButton = styled(Grid)(({ theme }) => ({
+    [theme.breakpoints.down('xs')]: {
+        minWidth: 'unset',
+    },
     '& .dismiss': {
         [theme.breakpoints.up('xs')]: {
             marginTop: 0,
@@ -231,6 +237,7 @@ export const Alert = ({
                                     data-analyticsid="dismiss-mobile"
                                     data-testid="dismiss-mobile"
                                     size="large"
+                                    color="white"
                                 >
                                     <Close className="dismiss" />
                                 </IconButton>
@@ -245,6 +252,7 @@ export const Alert = ({
                             flexBasis: { xs: '100%', sm: 'auto' },
                             maxWidth: { xs: '100%', sm: 'none' },
                             mt: { xs: 1, sm: 0 },
+                            minWidth: { xs: 'unset', sm: 'auto' },
                         }}
                     >
                         <Button
@@ -271,7 +279,7 @@ export const Alert = ({
                             data-testid="dismiss"
                             size="large"
                         >
-                            <Close className="dismiss" />
+                            <Close className="dismiss" color="white" />
                         </IconButton>
                     </StyledGridDismissButton>
                 )}
