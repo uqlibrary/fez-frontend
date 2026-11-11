@@ -223,7 +223,7 @@ export const Alert = ({
                                     data-analyticsid="dismiss-mobile"
                                     data-testid="dismiss-mobile"
                                     size="large"
-                                    color="white"
+                                    color="black"
                                 >
                                     <Close className="dismiss" />
                                 </IconButton>
@@ -259,8 +259,9 @@ export const Alert = ({
                             data-analyticsid="dismiss"
                             data-testid="dismiss"
                             size="large"
+                            color="black"
                         >
-                            <Close className="dismiss" color="white" />
+                            <Close className="dismiss" />
                         </IconButton>
                     </StyledGridDismissButton>
                 )}
