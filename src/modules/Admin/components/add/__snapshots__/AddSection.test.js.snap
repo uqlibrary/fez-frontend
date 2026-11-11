@@ -43,7 +43,7 @@ exports[`AddSection component should render default view 1`] = `
                   class="MuiCardHeader-content css-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
                     data-testid="standard-card-identify-your-new-work-header"
                     id="standard-card-identify-your-new-work-header"
                   >
@@ -287,7 +287,7 @@ exports[`AddSection component should render with subtypes 1`] = `
                   class="MuiCardHeader-content css-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
                     data-testid="standard-card-identify-your-new-work-header"
                     id="standard-card-identify-your-new-work-header"
                   >
@@ -593,7 +593,7 @@ exports[`AddSection component with coverage should render with default doc type 
                   class="MuiCardHeader-content css-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-MuiTypography-root"
+                    class="MuiTypography-root MuiTypography-h3 MuiCardHeader-title css-MuiTypography-root"
                     data-testid="standard-card-identify-your-new-work-header"
                     id="standard-card-identify-your-new-work-header"
                   >
