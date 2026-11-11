@@ -587,7 +587,12 @@ export const AttachedFiles = ({
                                                             data-analyticsid={`delete-file-${index}`}
                                                             onClick={onFileDelete(item.fileName)}
                                                             disabled={disabled}
-                                                            sx={{ padding: '12px' }}
+                                                            sx={{
+                                                                padding: '12px',
+                                                                '&.Mui-focusVisible': {
+                                                                    outlineOffset: '-4px !important',
+                                                                },
+                                                            }}
                                                             aria-label={deleteHint}
                                                         >
                                                             <Delete />
