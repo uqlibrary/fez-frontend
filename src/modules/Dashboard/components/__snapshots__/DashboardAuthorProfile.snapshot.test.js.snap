@@ -104,6 +104,11 @@ exports[`Dashboard Author Profile test Render the authors profile as expected fo
                     data-mui-internal-clone-element="true"
                     style="width: 32px; height: 32px; border-radius: 32px;"
                   />
+                  <span
+                    class="sr-only"
+                  >
+                    Click to review your Researcher (ISI) ID (opens in new window)
+                  </span>
                 </a>
               </div>
               <div
@@ -125,6 +130,11 @@ exports[`Dashboard Author Profile test Render the authors profile as expected fo
                     data-mui-internal-clone-element="true"
                     style="width: 32px; height: 32px; border-radius: 32px;"
                   />
+                  <span
+                    class="sr-only"
+                  >
+                    Click to review your Scopus ID (opens in new window)
+                  </span>
                 </a>
               </div>
               <div
@@ -146,6 +156,11 @@ exports[`Dashboard Author Profile test Render the authors profile as expected fo
                     data-mui-internal-clone-element="true"
                     style="width: 32px; height: 32px; border-radius: 32px;"
                   />
+                  <span
+                    class="sr-only"
+                  >
+                    Click to review your Google Scholar ID (opens in new window)
+                  </span>
                 </a>
               </div>
               <div
@@ -167,6 +182,11 @@ exports[`Dashboard Author Profile test Render the authors profile as expected fo
                     data-mui-internal-clone-element="true"
                     style="width: 32px; height: 32px; border-radius: 32px;"
                   />
+                  <span
+                    class="sr-only"
+                  >
+                    Click to review your ORCID ID (opens in new window)
+                  </span>
                 </a>
               </div>
               <div
@@ -279,6 +299,11 @@ exports[`Dashboard Author Profile test Renders empty div if there is no profile 
                     data-mui-internal-clone-element="true"
                     style="width: 32px; height: 32px; border-radius: 32px;"
                   />
+                  <span
+                    class="sr-only"
+                  >
+                    You are not linked to Researcher (ISI) - Click for more information
+                  </span>
                 </a>
               </div>
               <div
@@ -300,6 +325,11 @@ exports[`Dashboard Author Profile test Renders empty div if there is no profile 
                     data-mui-internal-clone-element="true"
                     style="width: 32px; height: 32px; border-radius: 32px;"
                   />
+                  <span
+                    class="sr-only"
+                  >
+                    You are not linked to Scopus - Click for more information
+                  </span>
                 </a>
               </div>
               <div
