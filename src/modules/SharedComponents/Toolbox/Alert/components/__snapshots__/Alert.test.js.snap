@@ -48,7 +48,7 @@ exports[`Alert should dismiss alert 1`] = `
           >
             <button
               aria-label="Click to dismiss this alert"
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorWhite MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorBlack MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="dismiss-mobile"
               data-testid="dismiss-mobile"
               id="dismiss-mobile"
@@ -90,7 +90,7 @@ exports[`Alert should dismiss alert 1`] = `
       >
         <button
           aria-label="Click to dismiss this alert"
-          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorBlack MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
           data-analyticsid="dismiss"
           data-testid="dismiss"
           id="dismiss"
@@ -100,7 +100,7 @@ exports[`Alert should dismiss alert 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-colorWhite MuiSvgIcon-fontSizeMedium dismiss css-MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-MuiSvgIcon-root"
             data-testid="CloseIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -167,7 +167,7 @@ exports[`Alert should display dismiss button for smaller screen size 1`] = `
           >
             <button
               aria-label="Click to dismiss this alert"
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorWhite MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorBlack MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="dismiss-mobile"
               data-testid="dismiss-mobile"
               id="dismiss-mobile"
@@ -209,7 +209,7 @@ exports[`Alert should display dismiss button for smaller screen size 1`] = `
       >
         <button
           aria-label="Click to dismiss this alert"
-          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorBlack MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
           data-analyticsid="dismiss"
           data-testid="dismiss"
           id="dismiss"
@@ -219,7 +219,7 @@ exports[`Alert should display dismiss button for smaller screen size 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-colorWhite MuiSvgIcon-fontSizeMedium dismiss css-MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-MuiSvgIcon-root"
             data-testid="CloseIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -292,7 +292,7 @@ exports[`Alert should display loader 1`] = `
           >
             <button
               aria-label="Click to dismiss this alert"
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorWhite MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorBlack MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="dismiss-mobile"
               data-testid="dismiss-mobile"
               id="dismiss-mobile"
@@ -335,7 +335,7 @@ exports[`Alert should display loader 1`] = `
       >
         <button
           aria-label="Click to dismiss this alert"
-          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorBlack MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
           data-analyticsid="dismiss"
           data-testid="dismiss"
           id="dismiss"
@@ -345,7 +345,7 @@ exports[`Alert should display loader 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-colorWhite MuiSvgIcon-fontSizeMedium dismiss css-MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-MuiSvgIcon-root"
             data-testid="CloseIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -412,7 +412,7 @@ exports[`Alert should fire an action when user clicks on the message text 1`] = 
           >
             <button
               aria-label="Click to dismiss this alert"
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorWhite MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorBlack MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="dismiss-mobile"
               data-testid="dismiss-mobile"
               id="dismiss-mobile"
@@ -454,7 +454,7 @@ exports[`Alert should fire an action when user clicks on the message text 1`] = 
       >
         <button
           aria-label="Click to dismiss this alert"
-          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorBlack MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
           data-analyticsid="dismiss"
           data-testid="dismiss"
           id="dismiss"
@@ -464,7 +464,7 @@ exports[`Alert should fire an action when user clicks on the message text 1`] = 
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-colorWhite MuiSvgIcon-fontSizeMedium dismiss css-MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-MuiSvgIcon-root"
             data-testid="CloseIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -531,7 +531,7 @@ exports[`Alert should not fire an action when user clicks on the message text an
           >
             <button
               aria-label="Click to dismiss this alert"
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorWhite MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorBlack MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="dismiss-mobile"
               data-testid="dismiss-mobile"
               id="dismiss-mobile"
@@ -559,7 +559,7 @@ exports[`Alert should not fire an action when user clicks on the message text an
       >
         <button
           aria-label="Click to dismiss this alert"
-          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorBlack MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
           data-analyticsid="dismiss"
           data-testid="dismiss"
           id="dismiss"
@@ -569,7 +569,7 @@ exports[`Alert should not fire an action when user clicks on the message text an
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-colorWhite MuiSvgIcon-fontSizeMedium dismiss css-MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-MuiSvgIcon-root"
             data-testid="CloseIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -633,7 +633,7 @@ exports[`Alert should render clickable action button 1`] = `
           >
             <button
               aria-label="Click to dismiss this alert"
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorWhite MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorBlack MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="dismiss-mobile"
               data-testid="dismiss-mobile"
               id="dismiss-mobile"
@@ -675,7 +675,7 @@ exports[`Alert should render clickable action button 1`] = `
       >
         <button
           aria-label="Click to dismiss this alert"
-          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorBlack MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
           data-analyticsid="dismiss"
           data-testid="dismiss"
           id="dismiss"
@@ -685,7 +685,7 @@ exports[`Alert should render clickable action button 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-colorWhite MuiSvgIcon-fontSizeMedium dismiss css-MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-MuiSvgIcon-root"
             data-testid="CloseIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -738,7 +738,7 @@ exports[`Alert should render custom alert 1`] = `
           >
             <button
               aria-label="Click to dismiss this alert"
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorWhite MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorBlack MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="dismiss-mobile"
               data-testid="dismiss-mobile"
               id="dismiss-mobile"
@@ -780,7 +780,7 @@ exports[`Alert should render custom alert 1`] = `
       >
         <button
           aria-label="Click to dismiss this alert"
-          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorBlack MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
           data-analyticsid="dismiss"
           data-testid="dismiss"
           id="dismiss"
@@ -790,7 +790,7 @@ exports[`Alert should render custom alert 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-colorWhite MuiSvgIcon-fontSizeMedium dismiss css-MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-MuiSvgIcon-root"
             data-testid="CloseIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -857,7 +857,7 @@ exports[`Alert should render default view 1`] = `
           >
             <button
               aria-label="Click to dismiss this alert"
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorWhite MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorBlack MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="dismiss-mobile"
               data-testid="dismiss-mobile"
               id="dismiss-mobile"
@@ -899,7 +899,7 @@ exports[`Alert should render default view 1`] = `
       >
         <button
           aria-label="Click to dismiss this alert"
-          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorBlack MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
           data-analyticsid="dismiss"
           data-testid="dismiss"
           id="dismiss"
@@ -909,7 +909,7 @@ exports[`Alert should render default view 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-colorWhite MuiSvgIcon-fontSizeMedium dismiss css-MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-MuiSvgIcon-root"
             data-testid="CloseIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -973,7 +973,7 @@ exports[`Alert should render done type of alert 1`] = `
           >
             <button
               aria-label="Click to dismiss this alert"
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorWhite MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorBlack MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="dismiss-mobile"
               data-testid="dismiss-mobile"
               id="dismiss-mobile"
@@ -1015,7 +1015,7 @@ exports[`Alert should render done type of alert 1`] = `
       >
         <button
           aria-label="Click to dismiss this alert"
-          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorBlack MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
           data-analyticsid="dismiss"
           data-testid="dismiss"
           id="dismiss"
@@ -1025,7 +1025,7 @@ exports[`Alert should render done type of alert 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-colorWhite MuiSvgIcon-fontSizeMedium dismiss css-MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-MuiSvgIcon-root"
             data-testid="CloseIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -1089,7 +1089,7 @@ exports[`Alert should render error outline type of alert 1`] = `
           >
             <button
               aria-label="Click to dismiss this alert"
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorWhite MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorBlack MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="dismiss-mobile"
               data-testid="dismiss-mobile"
               id="dismiss-mobile"
@@ -1131,7 +1131,7 @@ exports[`Alert should render error outline type of alert 1`] = `
       >
         <button
           aria-label="Click to dismiss this alert"
-          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorBlack MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
           data-analyticsid="dismiss"
           data-testid="dismiss"
           id="dismiss"
@@ -1141,7 +1141,7 @@ exports[`Alert should render error outline type of alert 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-colorWhite MuiSvgIcon-fontSizeMedium dismiss css-MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-MuiSvgIcon-root"
             data-testid="CloseIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -1205,7 +1205,7 @@ exports[`Alert should render error type of alert 1`] = `
           >
             <button
               aria-label="Click to dismiss this alert"
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorWhite MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorBlack MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="dismiss-mobile"
               data-testid="dismiss-mobile"
               id="dismiss-mobile"
@@ -1247,7 +1247,7 @@ exports[`Alert should render error type of alert 1`] = `
       >
         <button
           aria-label="Click to dismiss this alert"
-          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorBlack MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
           data-analyticsid="dismiss"
           data-testid="dismiss"
           id="dismiss"
@@ -1257,7 +1257,7 @@ exports[`Alert should render error type of alert 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-colorWhite MuiSvgIcon-fontSizeMedium dismiss css-MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-MuiSvgIcon-root"
             data-testid="CloseIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -1321,7 +1321,7 @@ exports[`Alert should render error type of alert by default 1`] = `
           >
             <button
               aria-label="Click to dismiss this alert"
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorWhite MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorBlack MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="dismiss-mobile"
               data-testid="dismiss-mobile"
               id="dismiss-mobile"
@@ -1363,7 +1363,7 @@ exports[`Alert should render error type of alert by default 1`] = `
       >
         <button
           aria-label="Click to dismiss this alert"
-          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorBlack MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
           data-analyticsid="dismiss"
           data-testid="dismiss"
           id="dismiss"
@@ -1373,7 +1373,7 @@ exports[`Alert should render error type of alert by default 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-colorWhite MuiSvgIcon-fontSizeMedium dismiss css-MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-MuiSvgIcon-root"
             data-testid="CloseIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -1437,7 +1437,7 @@ exports[`Alert should render help outline type of alert 1`] = `
           >
             <button
               aria-label="Click to dismiss this alert"
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorWhite MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorBlack MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="dismiss-mobile"
               data-testid="dismiss-mobile"
               id="dismiss-mobile"
@@ -1479,7 +1479,7 @@ exports[`Alert should render help outline type of alert 1`] = `
       >
         <button
           aria-label="Click to dismiss this alert"
-          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorBlack MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
           data-analyticsid="dismiss"
           data-testid="dismiss"
           id="dismiss"
@@ -1489,7 +1489,7 @@ exports[`Alert should render help outline type of alert 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-colorWhite MuiSvgIcon-fontSizeMedium dismiss css-MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-MuiSvgIcon-root"
             data-testid="CloseIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -1553,7 +1553,7 @@ exports[`Alert should render help type of alert 1`] = `
           >
             <button
               aria-label="Click to dismiss this alert"
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorWhite MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorBlack MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="dismiss-mobile"
               data-testid="dismiss-mobile"
               id="dismiss-mobile"
@@ -1595,7 +1595,7 @@ exports[`Alert should render help type of alert 1`] = `
       >
         <button
           aria-label="Click to dismiss this alert"
-          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorBlack MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
           data-analyticsid="dismiss"
           data-testid="dismiss"
           id="dismiss"
@@ -1605,7 +1605,7 @@ exports[`Alert should render help type of alert 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-colorWhite MuiSvgIcon-fontSizeMedium dismiss css-MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-MuiSvgIcon-root"
             data-testid="CloseIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -1669,7 +1669,7 @@ exports[`Alert should render info outline type of alert 1`] = `
           >
             <button
               aria-label="Click to dismiss this alert"
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorWhite MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorBlack MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="dismiss-mobile"
               data-testid="dismiss-mobile"
               id="dismiss-mobile"
@@ -1711,7 +1711,7 @@ exports[`Alert should render info outline type of alert 1`] = `
       >
         <button
           aria-label="Click to dismiss this alert"
-          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorBlack MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
           data-analyticsid="dismiss"
           data-testid="dismiss"
           id="dismiss"
@@ -1721,7 +1721,7 @@ exports[`Alert should render info outline type of alert 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-colorWhite MuiSvgIcon-fontSizeMedium dismiss css-MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-MuiSvgIcon-root"
             data-testid="CloseIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -1785,7 +1785,7 @@ exports[`Alert should render info type of alert 1`] = `
           >
             <button
               aria-label="Click to dismiss this alert"
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorWhite MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorBlack MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="dismiss-mobile"
               data-testid="dismiss-mobile"
               id="dismiss-mobile"
@@ -1827,7 +1827,7 @@ exports[`Alert should render info type of alert 1`] = `
       >
         <button
           aria-label="Click to dismiss this alert"
-          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorBlack MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
           data-analyticsid="dismiss"
           data-testid="dismiss"
           id="dismiss"
@@ -1837,7 +1837,7 @@ exports[`Alert should render info type of alert 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-colorWhite MuiSvgIcon-fontSizeMedium dismiss css-MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-MuiSvgIcon-root"
             data-testid="CloseIcon"
             focusable="false"
             viewBox="0 0 24 24"
