@@ -119,6 +119,11 @@ exports[`Dashboard test Rendering MyLatestPublications tab 1`] = `
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your Researcher (ISI) ID (opens in new window)
+                          </span>
                         </a>
                       </div>
                       <div
@@ -140,6 +145,11 @@ exports[`Dashboard test Rendering MyLatestPublications tab 1`] = `
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your Scopus ID (opens in new window)
+                          </span>
                         </a>
                       </div>
                       <div
@@ -161,6 +171,11 @@ exports[`Dashboard test Rendering MyLatestPublications tab 1`] = `
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your Google Scholar ID (opens in new window)
+                          </span>
                         </a>
                       </div>
                       <div
@@ -182,6 +197,11 @@ exports[`Dashboard test Rendering MyLatestPublications tab 1`] = `
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your ORCID ID (opens in new window)
+                          </span>
                         </a>
                         <span
                           class="css"
@@ -854,6 +874,11 @@ exports[`Dashboard test Rendering MyTrendingPublications tab 1`] = `
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your Researcher (ISI) ID (opens in new window)
+                          </span>
                         </a>
                       </div>
                       <div
@@ -875,6 +900,11 @@ exports[`Dashboard test Rendering MyTrendingPublications tab 1`] = `
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your Scopus ID (opens in new window)
+                          </span>
                         </a>
                       </div>
                       <div
@@ -896,6 +926,11 @@ exports[`Dashboard test Rendering MyTrendingPublications tab 1`] = `
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your Google Scholar ID (opens in new window)
+                          </span>
                         </a>
                       </div>
                       <div
@@ -917,6 +952,11 @@ exports[`Dashboard test Rendering MyTrendingPublications tab 1`] = `
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your ORCID ID (opens in new window)
+                          </span>
                         </a>
                         <span
                           class="css"
@@ -1623,6 +1663,11 @@ exports[`Dashboard test Should only render barChart 1`] = `
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your Researcher (ISI) ID (opens in new window)
+                          </span>
                         </a>
                       </div>
                       <div
@@ -1644,6 +1689,11 @@ exports[`Dashboard test Should only render barChart 1`] = `
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your Scopus ID (opens in new window)
+                          </span>
                         </a>
                       </div>
                       <div
@@ -1665,6 +1715,11 @@ exports[`Dashboard test Should only render barChart 1`] = `
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your Google Scholar ID (opens in new window)
+                          </span>
                         </a>
                       </div>
                       <div
@@ -1686,6 +1741,11 @@ exports[`Dashboard test Should only render barChart 1`] = `
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your ORCID ID (opens in new window)
+                          </span>
                         </a>
                         <span
                           class="css"
@@ -1972,6 +2032,11 @@ exports[`Dashboard test componentDidMount without account id 1`] = `
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your Researcher (ISI) ID (opens in new window)
+                          </span>
                         </a>
                       </div>
                       <div
@@ -1993,6 +2058,11 @@ exports[`Dashboard test componentDidMount without account id 1`] = `
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your Scopus ID (opens in new window)
+                          </span>
                         </a>
                       </div>
                       <div
@@ -2014,6 +2084,11 @@ exports[`Dashboard test componentDidMount without account id 1`] = `
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your Google Scholar ID (opens in new window)
+                          </span>
                         </a>
                       </div>
                       <div
@@ -2035,6 +2110,11 @@ exports[`Dashboard test componentDidMount without account id 1`] = `
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your ORCID ID (opens in new window)
+                          </span>
                         </a>
                         <span
                           class="css"
@@ -2771,6 +2851,11 @@ exports[`Dashboard test displays a lure to a single work when the user has incom
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your Researcher (ISI) ID (opens in new window)
+                          </span>
                         </a>
                       </div>
                       <div
@@ -2792,6 +2877,11 @@ exports[`Dashboard test displays a lure to a single work when the user has incom
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your Scopus ID (opens in new window)
+                          </span>
                         </a>
                       </div>
                       <div
@@ -2813,6 +2903,11 @@ exports[`Dashboard test displays a lure to a single work when the user has incom
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your Google Scholar ID (opens in new window)
+                          </span>
                         </a>
                       </div>
                       <div
@@ -2834,6 +2929,11 @@ exports[`Dashboard test displays a lure to a single work when the user has incom
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your ORCID ID (opens in new window)
+                          </span>
                         </a>
                         <span
                           class="css"
@@ -3148,6 +3248,11 @@ exports[`Dashboard test displays a lure when the user has incomplete NTRO submis
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your Researcher (ISI) ID (opens in new window)
+                          </span>
                         </a>
                       </div>
                       <div
@@ -3169,6 +3274,11 @@ exports[`Dashboard test displays a lure when the user has incomplete NTRO submis
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your Scopus ID (opens in new window)
+                          </span>
                         </a>
                       </div>
                       <div
@@ -3190,6 +3300,11 @@ exports[`Dashboard test displays a lure when the user has incomplete NTRO submis
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your Google Scholar ID (opens in new window)
+                          </span>
                         </a>
                       </div>
                       <div
@@ -3211,6 +3326,11 @@ exports[`Dashboard test displays a lure when the user has incomplete NTRO submis
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your ORCID ID (opens in new window)
+                          </span>
                         </a>
                         <span
                           class="css"
@@ -3525,6 +3645,11 @@ exports[`Dashboard test displays a lure when the user has non-compliant open acc
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your Researcher (ISI) ID (opens in new window)
+                          </span>
                         </a>
                       </div>
                       <div
@@ -3546,6 +3671,11 @@ exports[`Dashboard test displays a lure when the user has non-compliant open acc
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your Scopus ID (opens in new window)
+                          </span>
                         </a>
                       </div>
                       <div
@@ -3567,6 +3697,11 @@ exports[`Dashboard test displays a lure when the user has non-compliant open acc
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your Google Scholar ID (opens in new window)
+                          </span>
                         </a>
                       </div>
                       <div
@@ -3588,6 +3723,11 @@ exports[`Dashboard test displays a lure when the user has non-compliant open acc
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your ORCID ID (opens in new window)
+                          </span>
                         </a>
                         <span
                           class="css"
@@ -3838,6 +3978,11 @@ exports[`Dashboard test does render latest and trending publications tabs correc
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your Researcher (ISI) ID (opens in new window)
+                          </span>
                         </a>
                       </div>
                       <div
@@ -3859,6 +4004,11 @@ exports[`Dashboard test does render latest and trending publications tabs correc
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your Scopus ID (opens in new window)
+                          </span>
                         </a>
                       </div>
                       <div
@@ -3880,6 +4030,11 @@ exports[`Dashboard test does render latest and trending publications tabs correc
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your Google Scholar ID (opens in new window)
+                          </span>
                         </a>
                       </div>
                       <div
@@ -3901,6 +4056,11 @@ exports[`Dashboard test does render latest and trending publications tabs correc
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your ORCID ID (opens in new window)
+                          </span>
                         </a>
                         <span
                           class="css"
@@ -4331,6 +4491,11 @@ exports[`Dashboard test does render latest publications tab correctly 1`] = `
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your Researcher (ISI) ID (opens in new window)
+                          </span>
                         </a>
                       </div>
                       <div
@@ -4352,6 +4517,11 @@ exports[`Dashboard test does render latest publications tab correctly 1`] = `
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your Scopus ID (opens in new window)
+                          </span>
                         </a>
                       </div>
                       <div
@@ -4373,6 +4543,11 @@ exports[`Dashboard test does render latest publications tab correctly 1`] = `
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your Google Scholar ID (opens in new window)
+                          </span>
                         </a>
                       </div>
                       <div
@@ -4394,6 +4569,11 @@ exports[`Dashboard test does render latest publications tab correctly 1`] = `
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your ORCID ID (opens in new window)
+                          </span>
                         </a>
                         <span
                           class="css"
@@ -4752,6 +4932,11 @@ exports[`Dashboard test does render the donut/bar graph cards when data is avail
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your Researcher (ISI) ID (opens in new window)
+                          </span>
                         </a>
                       </div>
                       <div
@@ -4773,6 +4958,11 @@ exports[`Dashboard test does render the donut/bar graph cards when data is avail
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your Scopus ID (opens in new window)
+                          </span>
                         </a>
                       </div>
                       <div
@@ -4794,6 +4984,11 @@ exports[`Dashboard test does render the donut/bar graph cards when data is avail
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your Google Scholar ID (opens in new window)
+                          </span>
                         </a>
                       </div>
                       <div
@@ -4815,6 +5010,11 @@ exports[`Dashboard test does render the donut/bar graph cards when data is avail
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your ORCID ID (opens in new window)
+                          </span>
                         </a>
                         <span
                           class="css"
@@ -5137,6 +5337,11 @@ exports[`Dashboard test does render trending publications tab correctly 1`] = `
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your Researcher (ISI) ID (opens in new window)
+                          </span>
                         </a>
                       </div>
                       <div
@@ -5158,6 +5363,11 @@ exports[`Dashboard test does render trending publications tab correctly 1`] = `
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your Scopus ID (opens in new window)
+                          </span>
                         </a>
                       </div>
                       <div
@@ -5179,6 +5389,11 @@ exports[`Dashboard test does render trending publications tab correctly 1`] = `
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your Google Scholar ID (opens in new window)
+                          </span>
                         </a>
                       </div>
                       <div
@@ -5200,6 +5415,11 @@ exports[`Dashboard test does render trending publications tab correctly 1`] = `
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your ORCID ID (opens in new window)
+                          </span>
                         </a>
                         <span
                           class="css"
@@ -5563,6 +5783,11 @@ exports[`Dashboard test doesn't render either the publications lure or the add a
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your Researcher (ISI) ID (opens in new window)
+                          </span>
                         </a>
                       </div>
                       <div
@@ -5584,6 +5809,11 @@ exports[`Dashboard test doesn't render either the publications lure or the add a
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your Scopus ID (opens in new window)
+                          </span>
                         </a>
                       </div>
                       <div
@@ -5605,6 +5835,11 @@ exports[`Dashboard test doesn't render either the publications lure or the add a
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your Google Scholar ID (opens in new window)
+                          </span>
                         </a>
                       </div>
                       <div
@@ -5626,6 +5861,11 @@ exports[`Dashboard test doesn't render either the publications lure or the add a
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your ORCID ID (opens in new window)
+                          </span>
                         </a>
                         <span
                           class="css"
@@ -5812,6 +6052,11 @@ exports[`Dashboard test doesn't render possibly your publications lure and shows
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your Researcher (ISI) ID (opens in new window)
+                          </span>
                         </a>
                       </div>
                       <div
@@ -5833,6 +6078,11 @@ exports[`Dashboard test doesn't render possibly your publications lure and shows
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your Scopus ID (opens in new window)
+                          </span>
                         </a>
                       </div>
                       <div
@@ -5854,6 +6104,11 @@ exports[`Dashboard test doesn't render possibly your publications lure and shows
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your Google Scholar ID (opens in new window)
+                          </span>
                         </a>
                       </div>
                       <div
@@ -5875,6 +6130,11 @@ exports[`Dashboard test doesn't render possibly your publications lure and shows
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your ORCID ID (opens in new window)
+                          </span>
                         </a>
                         <span
                           class="css"
@@ -6125,6 +6385,11 @@ exports[`Dashboard test doesn't render possibly your publications lure or the ad
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your Researcher (ISI) ID (opens in new window)
+                          </span>
                         </a>
                       </div>
                       <div
@@ -6146,6 +6411,11 @@ exports[`Dashboard test doesn't render possibly your publications lure or the ad
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your Scopus ID (opens in new window)
+                          </span>
                         </a>
                       </div>
                       <div
@@ -6167,6 +6437,11 @@ exports[`Dashboard test doesn't render possibly your publications lure or the ad
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your Google Scholar ID (opens in new window)
+                          </span>
                         </a>
                       </div>
                       <div
@@ -6188,6 +6463,11 @@ exports[`Dashboard test doesn't render possibly your publications lure or the ad
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your ORCID ID (opens in new window)
+                          </span>
                         </a>
                         <span
                           class="css"
@@ -6374,6 +6654,11 @@ exports[`Dashboard test doesn't render the bar/donut graph cards when no data is
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your Researcher (ISI) ID (opens in new window)
+                          </span>
                         </a>
                       </div>
                       <div
@@ -6395,6 +6680,11 @@ exports[`Dashboard test doesn't render the bar/donut graph cards when no data is
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your Scopus ID (opens in new window)
+                          </span>
                         </a>
                       </div>
                       <div
@@ -6416,6 +6706,11 @@ exports[`Dashboard test doesn't render the bar/donut graph cards when no data is
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your Google Scholar ID (opens in new window)
+                          </span>
                         </a>
                       </div>
                       <div
@@ -6437,6 +6732,11 @@ exports[`Dashboard test doesn't render the bar/donut graph cards when no data is
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your ORCID ID (opens in new window)
+                          </span>
                         </a>
                         <span
                           class="css"
@@ -6728,6 +7028,11 @@ exports[`Dashboard test publicationStats should render stats 1`] = `
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your Researcher (ISI) ID (opens in new window)
+                          </span>
                         </a>
                       </div>
                       <div
@@ -6749,6 +7054,11 @@ exports[`Dashboard test publicationStats should render stats 1`] = `
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your Scopus ID (opens in new window)
+                          </span>
                         </a>
                       </div>
                       <div
@@ -6770,6 +7080,11 @@ exports[`Dashboard test publicationStats should render stats 1`] = `
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your Google Scholar ID (opens in new window)
+                          </span>
                         </a>
                       </div>
                       <div
@@ -6791,6 +7106,11 @@ exports[`Dashboard test publicationStats should render stats 1`] = `
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your ORCID ID (opens in new window)
+                          </span>
                         </a>
                         <span
                           class="css"
@@ -7316,6 +7636,11 @@ exports[`Dashboard test publicationStats should render stats 1 1`] = `
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your Researcher (ISI) ID (opens in new window)
+                          </span>
                         </a>
                       </div>
                       <div
@@ -7337,6 +7662,11 @@ exports[`Dashboard test publicationStats should render stats 1 1`] = `
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your Scopus ID (opens in new window)
+                          </span>
                         </a>
                       </div>
                       <div
@@ -7358,6 +7688,11 @@ exports[`Dashboard test publicationStats should render stats 1 1`] = `
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your Google Scholar ID (opens in new window)
+                          </span>
                         </a>
                       </div>
                       <div
@@ -7379,6 +7714,11 @@ exports[`Dashboard test publicationStats should render stats 1 1`] = `
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your ORCID ID (opens in new window)
+                          </span>
                         </a>
                         <span
                           class="css"
@@ -7832,6 +8172,11 @@ exports[`Dashboard test publicationStats should render stats 2 1`] = `
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your Researcher (ISI) ID (opens in new window)
+                          </span>
                         </a>
                       </div>
                       <div
@@ -7853,6 +8198,11 @@ exports[`Dashboard test publicationStats should render stats 2 1`] = `
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your Scopus ID (opens in new window)
+                          </span>
                         </a>
                       </div>
                       <div
@@ -7874,6 +8224,11 @@ exports[`Dashboard test publicationStats should render stats 2 1`] = `
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your Google Scholar ID (opens in new window)
+                          </span>
                         </a>
                       </div>
                       <div
@@ -7895,6 +8250,11 @@ exports[`Dashboard test publicationStats should render stats 2 1`] = `
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your ORCID ID (opens in new window)
+                          </span>
                         </a>
                         <span
                           class="css"
@@ -8348,6 +8708,11 @@ exports[`Dashboard test publicationStats should render stats with ancient date 1
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your Researcher (ISI) ID (opens in new window)
+                          </span>
                         </a>
                       </div>
                       <div
@@ -8369,6 +8734,11 @@ exports[`Dashboard test publicationStats should render stats with ancient date 1
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your Scopus ID (opens in new window)
+                          </span>
                         </a>
                       </div>
                       <div
@@ -8390,6 +8760,11 @@ exports[`Dashboard test publicationStats should render stats with ancient date 1
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your Google Scholar ID (opens in new window)
+                          </span>
                         </a>
                       </div>
                       <div
@@ -8411,6 +8786,11 @@ exports[`Dashboard test publicationStats should render stats with ancient date 1
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your ORCID ID (opens in new window)
+                          </span>
                         </a>
                         <span
                           class="css"
@@ -9278,6 +9658,11 @@ exports[`Dashboard test renders alert for non-authors 1`] = `
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your Researcher (ISI) ID (opens in new window)
+                          </span>
                         </a>
                       </div>
                       <div
@@ -9299,6 +9684,11 @@ exports[`Dashboard test renders alert for non-authors 1`] = `
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your Scopus ID (opens in new window)
+                          </span>
                         </a>
                       </div>
                       <div
@@ -9320,6 +9710,11 @@ exports[`Dashboard test renders alert for non-authors 1`] = `
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your Google Scholar ID (opens in new window)
+                          </span>
                         </a>
                       </div>
                       <div
@@ -9341,6 +9736,11 @@ exports[`Dashboard test renders alert for non-authors 1`] = `
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your ORCID ID (opens in new window)
+                          </span>
                         </a>
                         <span
                           class="css"
@@ -9591,6 +9991,11 @@ exports[`Dashboard test renders dashboard header only 1`] = `
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your Researcher (ISI) ID (opens in new window)
+                          </span>
                         </a>
                       </div>
                       <div
@@ -9612,6 +10017,11 @@ exports[`Dashboard test renders dashboard header only 1`] = `
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your Scopus ID (opens in new window)
+                          </span>
                         </a>
                       </div>
                       <div
@@ -9633,6 +10043,11 @@ exports[`Dashboard test renders dashboard header only 1`] = `
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your Google Scholar ID (opens in new window)
+                          </span>
                         </a>
                       </div>
                       <div
@@ -9654,6 +10069,11 @@ exports[`Dashboard test renders dashboard header only 1`] = `
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your ORCID ID (opens in new window)
+                          </span>
                         </a>
                         <span
                           class="css"
@@ -9984,6 +10404,11 @@ exports[`Dashboard test renders possibly your publications lure but not the add 
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your Researcher (ISI) ID (opens in new window)
+                          </span>
                         </a>
                       </div>
                       <div
@@ -10005,6 +10430,11 @@ exports[`Dashboard test renders possibly your publications lure but not the add 
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your Scopus ID (opens in new window)
+                          </span>
                         </a>
                       </div>
                       <div
@@ -10026,6 +10456,11 @@ exports[`Dashboard test renders possibly your publications lure but not the add 
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your Google Scholar ID (opens in new window)
+                          </span>
                         </a>
                       </div>
                       <div
@@ -10047,6 +10482,11 @@ exports[`Dashboard test renders possibly your publications lure but not the add 
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your ORCID ID (opens in new window)
+                          </span>
                         </a>
                         <span
                           class="css"
@@ -10258,6 +10698,11 @@ exports[`Dashboard test sets context for showing ORCID sync UI 1`] = `
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your Researcher (ISI) ID (opens in new window)
+                          </span>
                         </a>
                       </div>
                       <div
@@ -10279,6 +10724,11 @@ exports[`Dashboard test sets context for showing ORCID sync UI 1`] = `
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your Scopus ID (opens in new window)
+                          </span>
                         </a>
                       </div>
                       <div
@@ -10300,6 +10750,11 @@ exports[`Dashboard test sets context for showing ORCID sync UI 1`] = `
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your Google Scholar ID (opens in new window)
+                          </span>
                         </a>
                       </div>
                       <div
@@ -10321,6 +10776,11 @@ exports[`Dashboard test sets context for showing ORCID sync UI 1`] = `
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your ORCID ID (opens in new window)
+                          </span>
                         </a>
                         <span
                           class="css"
@@ -10532,6 +10992,11 @@ exports[`Dashboard test should get styles for full render 1`] = `
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your Researcher (ISI) ID (opens in new window)
+                          </span>
                         </a>
                       </div>
                       <div
@@ -10553,6 +11018,11 @@ exports[`Dashboard test should get styles for full render 1`] = `
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your Scopus ID (opens in new window)
+                          </span>
                         </a>
                       </div>
                       <div
@@ -10574,6 +11044,11 @@ exports[`Dashboard test should get styles for full render 1`] = `
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your Google Scholar ID (opens in new window)
+                          </span>
                         </a>
                       </div>
                       <div
@@ -10595,6 +11070,11 @@ exports[`Dashboard test should get styles for full render 1`] = `
                             data-mui-internal-clone-element="true"
                             style="width: 32px; height: 32px; border-radius: 32px;"
                           />
+                          <span
+                            class="sr-only"
+                          >
+                            Click to review your ORCID ID (opens in new window)
+                          </span>
                         </a>
                         <span
                           class="css"
