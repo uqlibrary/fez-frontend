@@ -63,7 +63,6 @@ export const CommunityList = () => {
     const queryStringObject = queryString.parse(
         /* istanbul ignore next*/
         location && ((location.hash && location.hash.replace('?', '&').replace('#', '?')) || location.search),
-        { ignoreQueryPrefix: true },
     );
     const { queryParams } = useQueryStringParams(location);
     const { handleCommunityExport } = useCommunityCollectionControls(queryParams, actions);

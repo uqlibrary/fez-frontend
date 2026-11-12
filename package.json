@@ -142,8 +142,8 @@
     "redux-mock-store": "^1.5.1",
     "resize-observer-polyfill": "^1.5.1",
     "robotstxt-webpack-plugin": "^8.0.0",
-    "sass": "^1.70.0",
-    "sass-loader": "^10.2.1",
+    "sass": "^1.108.1",
+    "sass-loader": "^17.1.0",
     "shell-quote": "^1.12.0",
     "snapshot-diff": "^0.10.0",
     "source-map-js": "^1.2.2",
@@ -226,7 +226,7 @@
     "number-to-words": "^1.2.4",
     "prop-types": "^15.7.2",
     "prosemirror-view": "^1.42.6",
-    "query-string": "^6.5.0",
+    "query-string": "^10.0.0",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
     "react-dropzone": "^14.2.3",
@@ -368,6 +368,14 @@
   },
   "jest": {
     "transform": {
+      "node_modules/(query-string|filter-obj|split-on-first)/.*\\.js$": [
+        "<rootDir>/node_modules/babel-jest",
+        {
+          "plugins": [
+            "@babel/plugin-transform-modules-commonjs"
+          ]
+        }
+      ],
       ".*": "<rootDir>/node_modules/babel-jest"
     },
     "testMatch": [
@@ -429,7 +437,7 @@
       "^react-router$": "<rootDir>/__mocks__/react-router.js"
     },
     "transformIgnorePatterns": [
-      "<rootDir>/node_modules/(?!(react-router|cookie-es)/)"
+      "<rootDir>/node_modules/(?!(react-router|cookie-es|query-string|filter-obj|split-on-first)/)"
     ],
     "reporters": [
       "default",
