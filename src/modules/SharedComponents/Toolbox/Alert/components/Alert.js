@@ -2,6 +2,7 @@ import React from 'react';
 import { PropTypes } from 'prop-types';
 import { styled } from '@mui/material/styles';
 
+import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import CircularProgress from '@mui/material/CircularProgress';
@@ -140,6 +141,8 @@ export const renderIcon = type => {
     }
 };
 
+export const ALERTABLE_TYPES = ['error', 'error_outline', 'warning'];
+
 export const Alert = ({
     action,
     actionButtonLabel,
@@ -156,18 +159,15 @@ export const Alert = ({
     type = 'error',
     wiggle = null,
 }) => {
-    /* istanbul ignore next */
     const convertedType = type === 'success' ? 'done' : type;
     const renderedIcon = convertedType !== 'custom' ? renderIcon(convertedType) : customIcon;
+    const effectiveType = !!customIcon ? customType : convertedType;
+    const liveRole = ALERTABLE_TYPES.includes(effectiveType) ? 'alert' : 'status';
     return (
-        // WCAG 4.1.3 (status messages): announce the alert to screen readers the moment it appears.
-        // role="alert" fires on insertion; aria-live="polite" keeps it from cutting off the current
-        // utterance (role="alert" would otherwise be assertive). aria-atomic (default true for the
-        // role) means the title and message are read together.
-        <div data-testid="alert" role="alert" aria-live="polite" style={{ marginTop: '5px' }}>
+        <Box data-testid="alert" mt="5px">
             <StyledGridWithIcon
                 container
-                type={!!customIcon ? customType : convertedType}
+                type={effectiveType}
                 justifyContent="center"
                 alignItems="flex-start"
                 alignContent="center"
@@ -214,8 +214,10 @@ export const Alert = ({
                             onClick={(!disableAlertClick && action) || undefined}
                             onKeyDown={(!disableAlertClick && action) || undefined}
                         >
-                            <b>{title && `${title} - `}</b>
-                            <span data-testid="alert-message">{message}</span>
+                            <span role={liveRole}>
+                                {title && <b>{title}</b>}
+                                <span data-testid="alert-message">{message}</span>
+                            </span>
                         </StyledGridTitle>
                         {allowDismiss && dismissAction && (
                             <StyledGridDismissButton sx={{ display: { xs: 'block', sm: 'none' } }}>
@@ -265,7 +267,7 @@ export const Alert = ({
                     </StyledGridDismissButton>
                 )}
             </StyledGridWithIcon>
-        </div>
+        </Box>
     );
 };
 
