@@ -155,6 +155,7 @@ export const Alert = ({
     message = 'Unexpected error',
     showLoader = false,
     alertId,
+    announce = true,
     title,
     type = 'error',
     wiggle = null,
@@ -162,6 +163,7 @@ export const Alert = ({
     const convertedType = type === 'success' ? 'done' : type;
     const renderedIcon = convertedType !== 'custom' ? renderIcon(convertedType) : customIcon;
     const effectiveType = !!customIcon ? customType : convertedType;
+    // announce={false} renders static content (e.g. alerts present on page load) without a live region
     const liveRole = ALERTABLE_TYPES.includes(effectiveType) ? 'alert' : 'status';
     return (
         <Box data-testid="alert" mt="5px">
@@ -214,7 +216,7 @@ export const Alert = ({
                             onClick={(!disableAlertClick && action) || undefined}
                             onKeyDown={(!disableAlertClick && action) || undefined}
                         >
-                            <span role={liveRole}>
+                            <span role={announce ? liveRole : undefined}>
                                 {title && <b>{title}</b>}
                                 <span data-testid="alert-message">{message}</span>
                             </span>
@@ -294,6 +296,7 @@ Alert.propTypes = {
     message: PropTypes.any.isRequired,
     showLoader: PropTypes.bool,
     alertId: PropTypes.string,
+    announce: PropTypes.bool,
     title: PropTypes.string,
     type: PropTypes.oneOf([
         'error',
