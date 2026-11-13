@@ -218,4 +218,77 @@ describe('Alert', () => {
         expect(actionFn).toHaveBeenCalledTimes(0);
         expect(container).toMatchSnapshot();
     });
+
+    describe('live region announcements', () => {
+        it.each(['error', 'error_outline', 'warning'])('should use role="alert" for %s type', type => {
+            const { getByRole, queryByRole } = setup({ type });
+            expect(getByRole('alert')).toBeInTheDocument();
+            expect(queryByRole('status')).not.toBeInTheDocument();
+        });
+
+        it.each(['info', 'info_outline', 'help', 'help_outline', 'success', 'done'])(
+            'should use role="status" for %s type',
+            type => {
+                const { getByRole, queryByRole } = setup({ type });
+                expect(getByRole('status')).toBeInTheDocument();
+                expect(queryByRole('alert')).not.toBeInTheDocument();
+            },
+        );
+
+        it('should use role="alert" for a custom alert with an assertive customType', () => {
+            const { getByRole } = setup({ type: 'custom', customIcon: 'test', customType: 'error' });
+            expect(getByRole('alert')).toBeInTheDocument();
+        });
+
+        it('should use role="status" for a custom alert with a non-assertive customType', () => {
+            const { getByRole } = setup({ type: 'custom', customIcon: 'test', customType: 'info' });
+            expect(getByRole('status')).toBeInTheDocument();
+        });
+
+        it('should ignore customType when no customIcon is provided', () => {
+            const { getByRole } = setup({ type: 'info', customType: 'error' });
+            expect(getByRole('status')).toBeInTheDocument();
+        });
+
+        it('should not set a role or aria-live on the outer container', () => {
+            const { getByTestId } = setup();
+            const outer = getByTestId('alert');
+            expect(outer).not.toHaveAttribute('role');
+            expect(outer).not.toHaveAttribute('aria-live');
+        });
+
+        it('should only include the title and message in the live region', () => {
+            const { getByRole, queryByTestId } = setup({ type: 'error' });
+            const liveRegion = getByRole('alert');
+            expect(liveRegion).toHaveTextContent('Title');
+            expect(liveRegion).toHaveTextContent('Message');
+            expect(liveRegion).not.toHaveTextContent('button');
+            expect(liveRegion).not.toContainElement(queryByTestId('action-button'));
+            expect(liveRegion).not.toContainElement(queryByTestId('dismiss'));
+        });
+
+        it('should not render a title element when no title is provided', () => {
+            const { getByRole } = setup({ title: undefined });
+            expect(getByRole('alert').querySelector('b')).not.toBeInTheDocument();
+        });
+
+        it.each(['error', 'warning', 'info', 'done'])(
+            'should not render any live region when announce is false for %s type',
+            type => {
+                const { queryByRole, getByText } = setup({ type, announce: false });
+                expect(queryByRole('alert')).not.toBeInTheDocument();
+                expect(queryByRole('status')).not.toBeInTheDocument();
+                expect(getByText('Message')).toBeInTheDocument();
+                expect(getByText(/Title/)).toBeInTheDocument();
+            },
+        );
+
+        it('should announce by default and when announce is explicitly true', () => {
+            const { getByRole, rerender } = setup({ type: 'error' });
+            expect(getByRole('alert')).toBeInTheDocument();
+
+            rerender(<Alert message="Message" type="error" announce />);
+            expect(getByRole('alert')).toBeInTheDocument();
+        });
+    });
 });

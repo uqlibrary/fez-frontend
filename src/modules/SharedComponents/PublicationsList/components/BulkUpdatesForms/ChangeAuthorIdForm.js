@@ -71,7 +71,7 @@ export const ChangeAuthorIdForm = ({ recordsSelected, onCancel }) => {
         <form data-testid="change-author-id-form" id="change-author-id-form">
             <Grid container spacing={2}>
                 <Grid size={12}>
-                    <Alert alertId="alert-info-change-author-id" {...txt.changeAuthorIdForm.alert} />
+                    <Alert alertId="alert-info-change-author-id" {...txt.changeAuthorIdForm.alert} announce="false" />
                 </Grid>
                 {searchAuthorBy === SEARCH_BY_AUTHOR_NAME && !!searchAuthorByName && !!authorNameNoMatchCount && (
                     <Grid size={12}>

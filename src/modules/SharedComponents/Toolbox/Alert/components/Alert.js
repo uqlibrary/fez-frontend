@@ -140,6 +140,8 @@ export const renderIcon = type => {
     }
 };
 
+export const ALERTABLE_TYPES = ['error', 'error_outline', 'warning'];
+
 export const Alert = ({
     action,
     actionButtonLabel,
@@ -152,18 +154,21 @@ export const Alert = ({
     message = 'Unexpected error',
     showLoader = false,
     alertId,
+    announce = true,
     title,
     type = 'error',
     wiggle = null,
 }) => {
-    /* istanbul ignore next */
     const convertedType = type === 'success' ? 'done' : type;
     const renderedIcon = convertedType !== 'custom' ? renderIcon(convertedType) : customIcon;
+    const effectiveType = !!customIcon ? customType : convertedType;
+    // announce={false} renders static content (e.g. alerts present on page load) without a live region
+    const liveRole = ALERTABLE_TYPES.includes(effectiveType) ? 'alert' : 'status';
     return (
         <div data-testid="alert" style={{ marginTop: '5px' }}>
             <StyledGridWithIcon
                 container
-                type={!!customIcon ? customType : convertedType}
+                type={effectiveType}
                 justifyContent="center"
                 alignItems="flex-start"
                 alignContent="center"
@@ -210,8 +215,10 @@ export const Alert = ({
                             onClick={(!disableAlertClick && action) || undefined}
                             onKeyDown={(!disableAlertClick && action) || undefined}
                         >
-                            <b>{title && `${title} - `}</b>
-                            <span data-testid="alert-message">{message}</span>
+                            <span role={announce ? liveRole : undefined}>
+                                {title && <b>{`${title} - `}</b>}
+                                <span data-testid="alert-message">{message}</span>
+                            </span>
                         </StyledGridTitle>
                         {allowDismiss && dismissAction && (
                             <StyledGridDismissButton sx={{ display: { xs: 'block', sm: 'none' } }}>
@@ -288,6 +295,7 @@ Alert.propTypes = {
     message: PropTypes.any.isRequired,
     showLoader: PropTypes.bool,
     alertId: PropTypes.string,
+    announce: PropTypes.bool,
     title: PropTypes.string,
     type: PropTypes.oneOf([
         'error',

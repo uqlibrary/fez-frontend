@@ -383,7 +383,7 @@ const FixRecord = ({ openAccess = false }) => {
                         {fixAction === RECORD_ACTION_UNCLAIM && (
                             <Grid size={12}>
                                 <StandardCard title={txtUnclaimForm.title} help={txtUnclaimForm.help}>
-                                    <Alert {...txtUnclaimForm.alert} />
+                                    <Alert {...txtUnclaimForm.alert} announce="false" />
                                     {txtUnclaimForm.description}
                                     <ConfirmDialogBox
                                         onRef={createConfirmDialogBoxRefAssigner(confirmDialogBoxRef)}

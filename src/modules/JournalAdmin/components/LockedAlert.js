@@ -26,6 +26,7 @@ export const LockedAlert = () => {
         <Grid container style={{ marginTop: 12, marginBottom: 12 }}>
             <Grid size={12}>
                 <Alert
+                    announce="false"
                     {...alert.current}
                     action={handleAction}
                     message={alert.current.message

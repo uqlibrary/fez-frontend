@@ -34,13 +34,17 @@ exports[`Alert should dismiss alert 1`] = `
           <div
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
           >
-            <b>
-              Title - 
-            </b>
             <span
-              data-testid="alert-message"
+              role="alert"
             >
-              Message
+              <b>
+                Title - 
+              </b>
+              <span
+                data-testid="alert-message"
+              >
+                Message
+              </span>
             </span>
           </div>
           <div
@@ -150,13 +154,17 @@ exports[`Alert should display dismiss button for smaller screen size 1`] = `
           <div
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
           >
-            <b>
-              Title - 
-            </b>
             <span
-              data-testid="alert-message"
+              role="alert"
             >
-              Message
+              <b>
+                Title - 
+              </b>
+              <span
+                data-testid="alert-message"
+              >
+                Message
+              </span>
             </span>
           </div>
           <div
@@ -275,13 +283,17 @@ exports[`Alert should display loader 1`] = `
           <div
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
           >
-            <b>
-              Title - 
-            </b>
             <span
-              data-testid="alert-message"
+              role="alert"
             >
-              Message
+              <b>
+                Title - 
+              </b>
+              <span
+                data-testid="alert-message"
+              >
+                Message
+              </span>
             </span>
           </div>
           <div
@@ -392,13 +404,17 @@ exports[`Alert should fire an action when user clicks on the message text 1`] = 
           <div
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
           >
-            <b>
-              Title - 
-            </b>
             <span
-              data-testid="alert-message"
+              role="alert"
             >
-              Click me
+              <b>
+                Title - 
+              </b>
+              <span
+                data-testid="alert-message"
+              >
+                Click me
+              </span>
             </span>
           </div>
           <div
@@ -508,13 +524,17 @@ exports[`Alert should not fire an action when user clicks on the message text an
           <div
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
           >
-            <b>
-              Title - 
-            </b>
             <span
-              data-testid="alert-message"
+              role="alert"
             >
-              Click me
+              <b>
+                Title - 
+              </b>
+              <span
+                data-testid="alert-message"
+              >
+                Click me
+              </span>
             </span>
           </div>
           <div
@@ -610,13 +630,17 @@ exports[`Alert should render clickable action button 1`] = `
           <div
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
           >
-            <b>
-              This is an error title - 
-            </b>
             <span
-              data-testid="alert-message"
+              role="alert"
             >
-              This is an error message
+              <b>
+                This is an error title - 
+              </b>
+              <span
+                data-testid="alert-message"
+              >
+                This is an error message
+              </span>
             </span>
           </div>
           <div
@@ -715,13 +739,17 @@ exports[`Alert should render custom alert 1`] = `
           <div
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
           >
-            <b>
-              This is a custom title - 
-            </b>
             <span
-              data-testid="alert-message"
+              role="alert"
             >
-              This is a custom message
+              <b>
+                This is a custom title - 
+              </b>
+              <span
+                data-testid="alert-message"
+              >
+                This is a custom message
+              </span>
             </span>
           </div>
           <div
@@ -831,13 +859,17 @@ exports[`Alert should render default view 1`] = `
           <div
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
           >
-            <b>
-              Title - 
-            </b>
             <span
-              data-testid="alert-message"
+              role="alert"
             >
-              Message
+              <b>
+                Title - 
+              </b>
+              <span
+                data-testid="alert-message"
+              >
+                Message
+              </span>
             </span>
           </div>
           <div
@@ -947,13 +979,17 @@ exports[`Alert should render done type of alert 1`] = `
           <div
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
           >
-            <b>
-              This is an done title - 
-            </b>
             <span
-              data-testid="alert-message"
+              role="status"
             >
-              This is an done message
+              <b>
+                This is an done title - 
+              </b>
+              <span
+                data-testid="alert-message"
+              >
+                This is an done message
+              </span>
             </span>
           </div>
           <div
@@ -1063,13 +1099,17 @@ exports[`Alert should render error outline type of alert 1`] = `
           <div
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
           >
-            <b>
-              This is an error outline title - 
-            </b>
             <span
-              data-testid="alert-message"
+              role="alert"
             >
-              This is an error outline message
+              <b>
+                This is an error outline title - 
+              </b>
+              <span
+                data-testid="alert-message"
+              >
+                This is an error outline message
+              </span>
             </span>
           </div>
           <div
@@ -1179,13 +1219,17 @@ exports[`Alert should render error type of alert 1`] = `
           <div
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
           >
-            <b>
-              This is an error title - 
-            </b>
             <span
-              data-testid="alert-message"
+              role="alert"
             >
-              This is an error message
+              <b>
+                This is an error title - 
+              </b>
+              <span
+                data-testid="alert-message"
+              >
+                This is an error message
+              </span>
             </span>
           </div>
           <div
@@ -1295,13 +1339,17 @@ exports[`Alert should render error type of alert by default 1`] = `
           <div
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
           >
-            <b>
-              This is an error title - 
-            </b>
             <span
-              data-testid="alert-message"
+              role="status"
             >
-              This is an error message
+              <b>
+                This is an error title - 
+              </b>
+              <span
+                data-testid="alert-message"
+              >
+                This is an error message
+              </span>
             </span>
           </div>
           <div
@@ -1411,13 +1459,17 @@ exports[`Alert should render help outline type of alert 1`] = `
           <div
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
           >
-            <b>
-              This is an help outline title - 
-            </b>
             <span
-              data-testid="alert-message"
+              role="status"
             >
-              This is an help outline message
+              <b>
+                This is an help outline title - 
+              </b>
+              <span
+                data-testid="alert-message"
+              >
+                This is an help outline message
+              </span>
             </span>
           </div>
           <div
@@ -1527,13 +1579,17 @@ exports[`Alert should render help type of alert 1`] = `
           <div
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
           >
-            <b>
-              This is an help title - 
-            </b>
             <span
-              data-testid="alert-message"
+              role="status"
             >
-              This is an help message
+              <b>
+                This is an help title - 
+              </b>
+              <span
+                data-testid="alert-message"
+              >
+                This is an help message
+              </span>
             </span>
           </div>
           <div
@@ -1643,13 +1699,17 @@ exports[`Alert should render info outline type of alert 1`] = `
           <div
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
           >
-            <b>
-              This is an info outline title - 
-            </b>
             <span
-              data-testid="alert-message"
+              role="status"
             >
-              This is an info outline message
+              <b>
+                This is an info outline title - 
+              </b>
+              <span
+                data-testid="alert-message"
+              >
+                This is an info outline message
+              </span>
             </span>
           </div>
           <div
@@ -1759,13 +1819,17 @@ exports[`Alert should render info type of alert 1`] = `
           <div
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
           >
-            <b>
-              This is an info title - 
-            </b>
             <span
-              data-testid="alert-message"
+              role="status"
             >
-              This is an info message
+              <b>
+                This is an info title - 
+              </b>
+              <span
+                data-testid="alert-message"
+              >
+                This is an info message
+              </span>
             </span>
           </div>
           <div

@@ -161,13 +161,17 @@ exports[`Component PossiblyMyRecords renders alert when the hide pub api fails 1
               <div
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
               >
-                <b>
-                  Error - 
-                </b>
                 <span
-                  data-testid="alert-message"
+                  role="alert"
                 >
-                  Error has occurred during request and request cannot be processed. Test error message Please contact eSpace administrators or try again later.
+                  <b>
+                    Error - 
+                  </b>
+                  <span
+                    data-testid="alert-message"
+                  >
+                    Error has occurred during request and request cannot be processed. Test error message Please contact eSpace administrators or try again later.
+                  </span>
                 </span>
               </div>
             </div>

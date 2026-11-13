@@ -283,13 +283,17 @@ exports[`AdminInterface component should disabled button and render alert for fo
                     <div
                       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
                     >
-                      <b>
-                        Saving - 
-                      </b>
                       <span
-                        data-testid="alert-message"
+                        role="status"
                       >
-                        Request is being processed.
+                        <b>
+                          Saving - 
+                        </b>
+                        <span
+                          data-testid="alert-message"
+                        >
+                          Request is being processed.
+                        </span>
                       </span>
                     </div>
                   </div>
@@ -408,11 +412,14 @@ exports[`AdminInterface component should display an alert if editing of a pubtyp
                   <div
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
                   >
-                    <b />
                     <span
-                      data-testid="alert-message"
+                      role="status"
                     >
-                      Editing of record is not yet supported.
+                      <span
+                        data-testid="alert-message"
+                      >
+                        Editing of record is not yet supported.
+                      </span>
                     </span>
                   </div>
                 </div>
@@ -991,13 +998,17 @@ exports[`AdminInterface component should display job created alert 2`] = `
                     <div
                       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
                     >
-                      <b>
-                        Success - 
-                      </b>
                       <span
-                        data-testid="alert-message"
+                        role="status"
                       >
-                        Work has been saved successfully
+                        <b>
+                          Success - 
+                        </b>
+                        <span
+                          data-testid="alert-message"
+                        >
+                          Work has been saved successfully
+                        </span>
                       </span>
                     </div>
                   </div>
@@ -1630,13 +1641,17 @@ exports[`AdminInterface component should display successful alert 2`] = `
                     <div
                       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
                     >
-                      <b>
-                        Success - 
-                      </b>
                       <span
-                        data-testid="alert-message"
+                        role="status"
                       >
-                        Work has been saved successfully
+                        <b>
+                          Success - 
+                        </b>
+                        <span
+                          data-testid="alert-message"
+                        >
+                          Work has been saved successfully
+                        </span>
                       </span>
                     </div>
                   </div>
@@ -3016,13 +3031,17 @@ exports[`AdminInterface component should render locked alert in edit mode 1`] = 
                       <div
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
                       >
-                        <b>
-                          THIS WORK IS LOCKED - 
-                        </b>
                         <span
-                          data-testid="alert-message"
+                          role="alert"
                         >
-                          This work is currently being edited by undefined (uqtest). Make sure that you confirm with this user before ignoring the work lock as it may cause work overwrite issues.
+                          <b>
+                            THIS WORK IS LOCKED - 
+                          </b>
+                          <span
+                            data-testid="alert-message"
+                          >
+                            This work is currently being edited by undefined (uqtest). Make sure that you confirm with this user before ignoring the work lock as it may cause work overwrite issues.
+                          </span>
                         </span>
                       </div>
                     </div>
@@ -3404,13 +3423,17 @@ exports[`AdminInterface component should render locked info alert 1`] = `
                       <div
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
                       >
-                        <b>
-                          THIS WORK IS LOCKED - 
-                        </b>
                         <span
-                          data-testid="alert-message"
+                          role="alert"
                         >
-                          This work is currently being edited by undefined (uqstaff). Make sure that you confirm with this user before ignoring the work lock as it may cause work overwrite issues.
+                          <b>
+                            THIS WORK IS LOCKED - 
+                          </b>
+                          <span
+                            data-testid="alert-message"
+                          >
+                            This work is currently being edited by undefined (uqstaff). Make sure that you confirm with this user before ignoring the work lock as it may cause work overwrite issues.
+                          </span>
                         </span>
                       </div>
                     </div>

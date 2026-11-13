@@ -314,7 +314,12 @@ const MyIncompleteRecord = ({ disableDeleteAllGrants, disableInitialGrants }) =>
                         />
                         <Grid container spacing={3}>
                             <Grid size={12}>
-                                <Alert title={txt.prompt.title} message={txt.prompt.message} type={txt.prompt.type} />
+                                <Alert
+                                    title={txt.prompt.title}
+                                    message={txt.prompt.message}
+                                    type={txt.prompt.type}
+                                    announce="false"
+                                />
                             </Grid>
                             <Grid size={12}>
                                 <StandardCard title={viewRecordLocale.viewRecord.sections.publicationDetails}>

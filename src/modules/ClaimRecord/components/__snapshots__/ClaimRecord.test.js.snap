@@ -5847,19 +5847,23 @@ exports[`Component ClaimRecord  snapshots should render publication citation, er
                     <div
                       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
                     >
-                      <b>
-                        Error - 
-                      </b>
                       <span
-                        data-testid="alert-message"
+                        role="alert"
                       >
-                        <span>
-                          This work has been assigned to you already. If you feel this is incorrect, please notify the eSpace admin team at 
-                          <a
-                            href="mailto:espace@library.uq.edu.au"
-                          >
-                            espace@library.uq.edu.au
-                          </a>
+                        <b>
+                          Error - 
+                        </b>
+                        <span
+                          data-testid="alert-message"
+                        >
+                          <span>
+                            This work has been assigned to you already. If you feel this is incorrect, please notify the eSpace admin team at 
+                            <a
+                              href="mailto:espace@library.uq.edu.au"
+                            >
+                              espace@library.uq.edu.au
+                            </a>
+                          </span>
                         </span>
                       </span>
                     </div>
@@ -6298,19 +6302,23 @@ exports[`Component ClaimRecord  snapshots should show contributor as linked 1`] 
                     <div
                       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
                     >
-                      <b>
-                        Error - 
-                      </b>
                       <span
-                        data-testid="alert-message"
+                        role="alert"
                       >
-                        <span>
-                          This work has been assigned to you already. If you feel this is incorrect, please notify the eSpace admin team at 
-                          <a
-                            href="mailto:espace@library.uq.edu.au"
-                          >
-                            espace@library.uq.edu.au
-                          </a>
+                        <b>
+                          Error - 
+                        </b>
+                        <span
+                          data-testid="alert-message"
+                        >
+                          <span>
+                            This work has been assigned to you already. If you feel this is incorrect, please notify the eSpace admin team at 
+                            <a
+                              href="mailto:espace@library.uq.edu.au"
+                            >
+                              espace@library.uq.edu.au
+                            </a>
+                          </span>
                         </span>
                       </span>
                     </div>

@@ -1284,13 +1284,17 @@ exports[`Component FixRecord should render unclaim form 1`] = `
                         <div
                           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
                         >
-                          <b>
-                            WARNING - 
-                          </b>
                           <span
-                            data-testid="alert-message"
+                            role="alert"
                           >
-                            You are about to remove this work from your eSpace profile.
+                            <b>
+                              WARNING - 
+                            </b>
+                            <span
+                              data-testid="alert-message"
+                            >
+                              You are about to remove this work from your eSpace profile.
+                            </span>
                           </span>
                         </div>
                       </div>
