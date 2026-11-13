@@ -36,6 +36,7 @@ export interface AlertProps {
     message: React.ReactNode; // required
     showLoader?: boolean;
     alertId?: string;
+    announce?: boolean;
     title?: string;
     type?: AlertType;
     wiggle?: boolean | null;

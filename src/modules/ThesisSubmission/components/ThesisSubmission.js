@@ -207,7 +207,12 @@ export const ThesisSubmission = ({ isHdrThesis }) => {
             <StandardPage title={pageTitle} standardPageId="rhd-submission-user-blocked">
                 <Grid container spacing={3}>
                     <Grid size={12}>
-                        <Alert message={thesisLocale.notAllowedMessage} type="info" alertId="alert-info-rdm-redirect" />
+                        <Alert
+                            message={thesisLocale.notAllowedMessage}
+                            type="info"
+                            alertId="alert-info-rdm-redirect"
+                            announce="false"
+                        />
                     </Grid>
                 </Grid>
             </StandardPage>

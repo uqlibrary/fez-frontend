@@ -248,10 +248,8 @@ exports[`Dashboard test Rendering MyLatestPublications tab 1`] = `
           style="margin-top: -27px;"
         >
           <div
-            aria-live="polite"
+            class="MuiBox-root css"
             data-testid="alert"
-            role="alert"
-            style="margin-top: 5px;"
           >
             <div
               class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
@@ -281,13 +279,16 @@ exports[`Dashboard test Rendering MyLatestPublications tab 1`] = `
                   <div
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
                   >
-                    <b>
-                      Add your work to UQ eSpace - 
-                    </b>
-                    <span
-                      data-testid="alert-message"
-                    >
-                      We found nothing new for you to claim, but you may add a work any time.
+                    <span>
+                      <b>
+                        Add your work to UQ eSpace - 
+                      </b>
+                       
+                      <span
+                        data-testid="alert-message"
+                      >
+                        We found nothing new for you to claim, but you may add a work any time.
+                      </span>
                     </span>
                   </div>
                 </div>
@@ -985,10 +986,8 @@ exports[`Dashboard test Rendering MyTrendingPublications tab 1`] = `
           style="margin-top: -27px;"
         >
           <div
-            aria-live="polite"
+            class="MuiBox-root css"
             data-testid="alert"
-            role="alert"
-            style="margin-top: 5px;"
           >
             <div
               class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
@@ -1018,13 +1017,16 @@ exports[`Dashboard test Rendering MyTrendingPublications tab 1`] = `
                   <div
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
                   >
-                    <b>
-                      Add your work to UQ eSpace - 
-                    </b>
-                    <span
-                      data-testid="alert-message"
-                    >
-                      We found nothing new for you to claim, but you may add a work any time.
+                    <span>
+                      <b>
+                        Add your work to UQ eSpace - 
+                      </b>
+                       
+                      <span
+                        data-testid="alert-message"
+                      >
+                        We found nothing new for you to claim, but you may add a work any time.
+                      </span>
                     </span>
                   </div>
                 </div>
@@ -1756,10 +1758,8 @@ exports[`Dashboard test Should only render barChart 1`] = `
           style="margin-top: -27px;"
         >
           <div
-            aria-live="polite"
+            class="MuiBox-root css"
             data-testid="alert"
-            role="alert"
-            style="margin-top: 5px;"
           >
             <div
               class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
@@ -1789,13 +1789,16 @@ exports[`Dashboard test Should only render barChart 1`] = `
                   <div
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
                   >
-                    <b>
-                      Add your work to UQ eSpace - 
-                    </b>
-                    <span
-                      data-testid="alert-message"
-                    >
-                      We found nothing new for you to claim, but you may add a work any time.
+                    <span>
+                      <b>
+                        Add your work to UQ eSpace - 
+                      </b>
+                       
+                      <span
+                        data-testid="alert-message"
+                      >
+                        We found nothing new for you to claim, but you may add a work any time.
+                      </span>
                     </span>
                   </div>
                 </div>
@@ -2107,10 +2110,8 @@ exports[`Dashboard test componentDidMount without account id 1`] = `
           style="margin-top: -27px;"
         >
           <div
-            aria-live="polite"
+            class="MuiBox-root css"
             data-testid="alert"
-            role="alert"
-            style="margin-top: 5px;"
           >
             <div
               class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
@@ -2140,13 +2141,16 @@ exports[`Dashboard test componentDidMount without account id 1`] = `
                   <div
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
                   >
-                    <b>
-                      Add your work to UQ eSpace - 
-                    </b>
-                    <span
-                      data-testid="alert-message"
-                    >
-                      We found nothing new for you to claim, but you may add a work any time.
+                    <span>
+                      <b>
+                        Add your work to UQ eSpace - 
+                      </b>
+                       
+                      <span
+                        data-testid="alert-message"
+                      >
+                        We found nothing new for you to claim, but you may add a work any time.
+                      </span>
                     </span>
                   </div>
                 </div>
@@ -2615,10 +2619,8 @@ exports[`Dashboard test displays a lure to a single work when the user has incom
           style="margin-top: -27px;"
         >
           <div
-            aria-live="polite"
+            class="MuiBox-root css"
             data-testid="alert"
-            role="alert"
-            style="margin-top: 5px;"
           >
             <div
               class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
@@ -2648,13 +2650,16 @@ exports[`Dashboard test displays a lure to a single work when the user has incom
                   <div
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
                   >
-                    <b>
-                      NTRO Data Required - 
-                    </b>
-                    <span
-                      data-testid="alert-message"
-                    >
-                      We have found 1 work(s) that requires more information.
+                    <span>
+                      <b>
+                        NTRO Data Required - 
+                      </b>
+                       
+                      <span
+                        data-testid="alert-message"
+                      >
+                        We have found 1 work(s) that requires more information.
+                      </span>
                     </span>
                   </div>
                 </div>
@@ -2910,10 +2915,8 @@ exports[`Dashboard test displays a lure to a single work when the user has incom
           style="margin-top: -27px;"
         >
           <div
-            aria-live="polite"
+            class="MuiBox-root css"
             data-testid="alert"
-            role="alert"
-            style="margin-top: 5px;"
           >
             <div
               class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
@@ -2943,13 +2946,16 @@ exports[`Dashboard test displays a lure to a single work when the user has incom
                   <div
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
                   >
-                    <b>
-                      Add your work to UQ eSpace - 
-                    </b>
-                    <span
-                      data-testid="alert-message"
-                    >
-                      We found nothing new for you to claim, but you may add a work any time.
+                    <span>
+                      <b>
+                        Add your work to UQ eSpace - 
+                      </b>
+                       
+                      <span
+                        data-testid="alert-message"
+                      >
+                        We found nothing new for you to claim, but you may add a work any time.
+                      </span>
                     </span>
                   </div>
                 </div>
@@ -2996,10 +3002,8 @@ exports[`Dashboard test displays a lure when the user has incomplete NTRO submis
           style="margin-top: -27px;"
         >
           <div
-            aria-live="polite"
+            class="MuiBox-root css"
             data-testid="alert"
-            role="alert"
-            style="margin-top: 5px;"
           >
             <div
               class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
@@ -3029,13 +3033,16 @@ exports[`Dashboard test displays a lure when the user has incomplete NTRO submis
                   <div
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
                   >
-                    <b>
-                      NTRO Data Required - 
-                    </b>
-                    <span
-                      data-testid="alert-message"
-                    >
-                      We have found 2 work(s) that require more information.
+                    <span>
+                      <b>
+                        NTRO Data Required - 
+                      </b>
+                       
+                      <span
+                        data-testid="alert-message"
+                      >
+                        We have found 2 work(s) that require more information.
+                      </span>
                     </span>
                   </div>
                 </div>
@@ -3291,10 +3298,8 @@ exports[`Dashboard test displays a lure when the user has incomplete NTRO submis
           style="margin-top: -27px;"
         >
           <div
-            aria-live="polite"
+            class="MuiBox-root css"
             data-testid="alert"
-            role="alert"
-            style="margin-top: 5px;"
           >
             <div
               class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
@@ -3324,13 +3329,16 @@ exports[`Dashboard test displays a lure when the user has incomplete NTRO submis
                   <div
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
                   >
-                    <b>
-                      Add your work to UQ eSpace - 
-                    </b>
-                    <span
-                      data-testid="alert-message"
-                    >
-                      We found nothing new for you to claim, but you may add a work any time.
+                    <span>
+                      <b>
+                        Add your work to UQ eSpace - 
+                      </b>
+                       
+                      <span
+                        data-testid="alert-message"
+                      >
+                        We found nothing new for you to claim, but you may add a work any time.
+                      </span>
                     </span>
                   </div>
                 </div>
@@ -3377,10 +3385,8 @@ exports[`Dashboard test displays a lure when the user has non-compliant open acc
           style="margin-top: -27px;"
         >
           <div
-            aria-live="polite"
+            class="MuiBox-root css"
             data-testid="alert"
-            role="alert"
-            style="margin-top: 5px;"
           >
             <div
               class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
@@ -3410,13 +3416,16 @@ exports[`Dashboard test displays a lure when the user has non-compliant open acc
                   <div
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
                   >
-                    <b>
-                      Open Access Required - 
-                    </b>
-                    <span
-                      data-testid="alert-message"
-                    >
-                      We have found 2 work(s) that may not meet the funder(s) Open Access requirements.
+                    <span>
+                      <b>
+                        Open Access Required - 
+                      </b>
+                       
+                      <span
+                        data-testid="alert-message"
+                      >
+                        We have found 2 work(s) that may not meet the funder(s) Open Access requirements.
+                      </span>
                     </span>
                   </div>
                 </div>
@@ -3672,10 +3681,8 @@ exports[`Dashboard test displays a lure when the user has non-compliant open acc
           style="margin-top: -27px;"
         >
           <div
-            aria-live="polite"
+            class="MuiBox-root css"
             data-testid="alert"
-            role="alert"
-            style="margin-top: 5px;"
           >
             <div
               class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
@@ -3705,13 +3712,16 @@ exports[`Dashboard test displays a lure when the user has non-compliant open acc
                   <div
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
                   >
-                    <b>
-                      Add your work to UQ eSpace - 
-                    </b>
-                    <span
-                      data-testid="alert-message"
-                    >
-                      We found nothing new for you to claim, but you may add a work any time.
+                    <span>
+                      <b>
+                        Add your work to UQ eSpace - 
+                      </b>
+                       
+                      <span
+                        data-testid="alert-message"
+                      >
+                        We found nothing new for you to claim, but you may add a work any time.
+                      </span>
                     </span>
                   </div>
                 </div>
@@ -3987,10 +3997,8 @@ exports[`Dashboard test does render latest and trending publications tabs correc
           style="margin-top: -27px;"
         >
           <div
-            aria-live="polite"
+            class="MuiBox-root css"
             data-testid="alert"
-            role="alert"
-            style="margin-top: 5px;"
           >
             <div
               class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
@@ -4020,13 +4028,16 @@ exports[`Dashboard test does render latest and trending publications tabs correc
                   <div
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
                   >
-                    <b>
-                      Add your work to UQ eSpace - 
-                    </b>
-                    <span
-                      data-testid="alert-message"
-                    >
-                      We found nothing new for you to claim, but you may add a work any time.
+                    <span>
+                      <b>
+                        Add your work to UQ eSpace - 
+                      </b>
+                       
+                      <span
+                        data-testid="alert-message"
+                      >
+                        We found nothing new for you to claim, but you may add a work any time.
+                      </span>
                     </span>
                   </div>
                 </div>
@@ -4482,10 +4493,8 @@ exports[`Dashboard test does render latest publications tab correctly 1`] = `
           style="margin-top: -27px;"
         >
           <div
-            aria-live="polite"
+            class="MuiBox-root css"
             data-testid="alert"
-            role="alert"
-            style="margin-top: 5px;"
           >
             <div
               class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
@@ -4515,13 +4524,16 @@ exports[`Dashboard test does render latest publications tab correctly 1`] = `
                   <div
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
                   >
-                    <b>
-                      Add your work to UQ eSpace - 
-                    </b>
-                    <span
-                      data-testid="alert-message"
-                    >
-                      We found nothing new for you to claim, but you may add a work any time.
+                    <span>
+                      <b>
+                        Add your work to UQ eSpace - 
+                      </b>
+                       
+                      <span
+                        data-testid="alert-message"
+                      >
+                        We found nothing new for you to claim, but you may add a work any time.
+                      </span>
                     </span>
                   </div>
                 </div>
@@ -4905,10 +4917,8 @@ exports[`Dashboard test does render the donut/bar graph cards when data is avail
           style="margin-top: -27px;"
         >
           <div
-            aria-live="polite"
+            class="MuiBox-root css"
             data-testid="alert"
-            role="alert"
-            style="margin-top: 5px;"
           >
             <div
               class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
@@ -4938,13 +4948,16 @@ exports[`Dashboard test does render the donut/bar graph cards when data is avail
                   <div
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
                   >
-                    <b>
-                      Add your work to UQ eSpace - 
-                    </b>
-                    <span
-                      data-testid="alert-message"
-                    >
-                      We found nothing new for you to claim, but you may add a work any time.
+                    <span>
+                      <b>
+                        Add your work to UQ eSpace - 
+                      </b>
+                       
+                      <span
+                        data-testid="alert-message"
+                      >
+                        We found nothing new for you to claim, but you may add a work any time.
+                      </span>
                     </span>
                   </div>
                 </div>
@@ -5292,10 +5305,8 @@ exports[`Dashboard test does render trending publications tab correctly 1`] = `
           style="margin-top: -27px;"
         >
           <div
-            aria-live="polite"
+            class="MuiBox-root css"
             data-testid="alert"
-            role="alert"
-            style="margin-top: 5px;"
           >
             <div
               class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
@@ -5325,13 +5336,16 @@ exports[`Dashboard test does render trending publications tab correctly 1`] = `
                   <div
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
                   >
-                    <b>
-                      Add your work to UQ eSpace - 
-                    </b>
-                    <span
-                      data-testid="alert-message"
-                    >
-                      We found nothing new for you to claim, but you may add a work any time.
+                    <span>
+                      <b>
+                        Add your work to UQ eSpace - 
+                      </b>
+                       
+                      <span
+                        data-testid="alert-message"
+                      >
+                        We found nothing new for you to claim, but you may add a work any time.
+                      </span>
                     </span>
                   </div>
                 </div>
@@ -5969,10 +5983,8 @@ exports[`Dashboard test doesn't render possibly your publications lure and shows
           style="margin-top: -27px;"
         >
           <div
-            aria-live="polite"
+            class="MuiBox-root css"
             data-testid="alert"
-            role="alert"
-            style="margin-top: 5px;"
           >
             <div
               class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
@@ -6002,13 +6014,16 @@ exports[`Dashboard test doesn't render possibly your publications lure and shows
                   <div
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
                   >
-                    <b>
-                      Add your work to UQ eSpace - 
-                    </b>
-                    <span
-                      data-testid="alert-message"
-                    >
-                      We found nothing new for you to claim, but you may add a work any time.
+                    <span>
+                      <b>
+                        Add your work to UQ eSpace - 
+                      </b>
+                       
+                      <span
+                        data-testid="alert-message"
+                      >
+                        We found nothing new for you to claim, but you may add a work any time.
+                      </span>
                     </span>
                   </div>
                 </div>
@@ -6533,10 +6548,8 @@ exports[`Dashboard test doesn't render the bar/donut graph cards when no data is
           style="margin-top: -27px;"
         >
           <div
-            aria-live="polite"
+            class="MuiBox-root css"
             data-testid="alert"
-            role="alert"
-            style="margin-top: 5px;"
           >
             <div
               class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
@@ -6566,13 +6579,16 @@ exports[`Dashboard test doesn't render the bar/donut graph cards when no data is
                   <div
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
                   >
-                    <b>
-                      Add your work to UQ eSpace - 
-                    </b>
-                    <span
-                      data-testid="alert-message"
-                    >
-                      We found nothing new for you to claim, but you may add a work any time.
+                    <span>
+                      <b>
+                        Add your work to UQ eSpace - 
+                      </b>
+                       
+                      <span
+                        data-testid="alert-message"
+                      >
+                        We found nothing new for you to claim, but you may add a work any time.
+                      </span>
                     </span>
                   </div>
                 </div>
@@ -6889,10 +6905,8 @@ exports[`Dashboard test publicationStats should render stats 1`] = `
           style="margin-top: -27px;"
         >
           <div
-            aria-live="polite"
+            class="MuiBox-root css"
             data-testid="alert"
-            role="alert"
-            style="margin-top: 5px;"
           >
             <div
               class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
@@ -6922,13 +6936,16 @@ exports[`Dashboard test publicationStats should render stats 1`] = `
                   <div
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
                   >
-                    <b>
-                      Add your work to UQ eSpace - 
-                    </b>
-                    <span
-                      data-testid="alert-message"
-                    >
-                      We found nothing new for you to claim, but you may add a work any time.
+                    <span>
+                      <b>
+                        Add your work to UQ eSpace - 
+                      </b>
+                       
+                      <span
+                        data-testid="alert-message"
+                      >
+                        We found nothing new for you to claim, but you may add a work any time.
+                      </span>
                     </span>
                   </div>
                 </div>
@@ -7479,10 +7496,8 @@ exports[`Dashboard test publicationStats should render stats 1 1`] = `
           style="margin-top: -27px;"
         >
           <div
-            aria-live="polite"
+            class="MuiBox-root css"
             data-testid="alert"
-            role="alert"
-            style="margin-top: 5px;"
           >
             <div
               class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
@@ -7512,13 +7527,16 @@ exports[`Dashboard test publicationStats should render stats 1 1`] = `
                   <div
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
                   >
-                    <b>
-                      Add your work to UQ eSpace - 
-                    </b>
-                    <span
-                      data-testid="alert-message"
-                    >
-                      We found nothing new for you to claim, but you may add a work any time.
+                    <span>
+                      <b>
+                        Add your work to UQ eSpace - 
+                      </b>
+                       
+                      <span
+                        data-testid="alert-message"
+                      >
+                        We found nothing new for you to claim, but you may add a work any time.
+                      </span>
                     </span>
                   </div>
                 </div>
@@ -7997,10 +8015,8 @@ exports[`Dashboard test publicationStats should render stats 2 1`] = `
           style="margin-top: -27px;"
         >
           <div
-            aria-live="polite"
+            class="MuiBox-root css"
             data-testid="alert"
-            role="alert"
-            style="margin-top: 5px;"
           >
             <div
               class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
@@ -8030,13 +8046,16 @@ exports[`Dashboard test publicationStats should render stats 2 1`] = `
                   <div
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
                   >
-                    <b>
-                      Add your work to UQ eSpace - 
-                    </b>
-                    <span
-                      data-testid="alert-message"
-                    >
-                      We found nothing new for you to claim, but you may add a work any time.
+                    <span>
+                      <b>
+                        Add your work to UQ eSpace - 
+                      </b>
+                       
+                      <span
+                        data-testid="alert-message"
+                      >
+                        We found nothing new for you to claim, but you may add a work any time.
+                      </span>
                     </span>
                   </div>
                 </div>
@@ -8515,10 +8534,8 @@ exports[`Dashboard test publicationStats should render stats with ancient date 1
           style="margin-top: -27px;"
         >
           <div
-            aria-live="polite"
+            class="MuiBox-root css"
             data-testid="alert"
-            role="alert"
-            style="margin-top: 5px;"
           >
             <div
               class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
@@ -8548,13 +8565,16 @@ exports[`Dashboard test publicationStats should render stats with ancient date 1
                   <div
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
                   >
-                    <b>
-                      Add your work to UQ eSpace - 
-                    </b>
-                    <span
-                      data-testid="alert-message"
-                    >
-                      We found nothing new for you to claim, but you may add a work any time.
+                    <span>
+                      <b>
+                        Add your work to UQ eSpace - 
+                      </b>
+                       
+                      <span
+                        data-testid="alert-message"
+                      >
+                        We found nothing new for you to claim, but you may add a work any time.
+                      </span>
                     </span>
                   </div>
                 </div>
@@ -9447,10 +9467,8 @@ exports[`Dashboard test renders alert for non-authors 1`] = `
           style="margin-top: -27px;"
         >
           <div
-            aria-live="polite"
+            class="MuiBox-root css"
             data-testid="alert"
-            role="alert"
-            style="margin-top: 5px;"
           >
             <div
               class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
@@ -9480,13 +9498,16 @@ exports[`Dashboard test renders alert for non-authors 1`] = `
                   <div
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
                   >
-                    <b>
-                      Add your work to UQ eSpace - 
-                    </b>
-                    <span
-                      data-testid="alert-message"
-                    >
-                      We found nothing new for you to claim, but you may add a work any time.
+                    <span>
+                      <b>
+                        Add your work to UQ eSpace - 
+                      </b>
+                       
+                      <span
+                        data-testid="alert-message"
+                      >
+                        We found nothing new for you to claim, but you may add a work any time.
+                      </span>
                     </span>
                   </div>
                 </div>
@@ -9762,10 +9783,8 @@ exports[`Dashboard test renders dashboard header only 1`] = `
           style="margin-top: -27px;"
         >
           <div
-            aria-live="polite"
+            class="MuiBox-root css"
             data-testid="alert"
-            role="alert"
-            style="margin-top: 5px;"
           >
             <div
               class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
@@ -9795,13 +9814,16 @@ exports[`Dashboard test renders dashboard header only 1`] = `
                   <div
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
                   >
-                    <b>
-                      Add your work to UQ eSpace - 
-                    </b>
-                    <span
-                      data-testid="alert-message"
-                    >
-                      We found nothing new for you to claim, but you may add a work any time.
+                    <span>
+                      <b>
+                        Add your work to UQ eSpace - 
+                      </b>
+                       
+                      <span
+                        data-testid="alert-message"
+                      >
+                        We found nothing new for you to claim, but you may add a work any time.
+                      </span>
                     </span>
                   </div>
                 </div>
@@ -10157,10 +10179,8 @@ exports[`Dashboard test renders possibly your publications lure but not the add 
           style="margin-top: -27px;"
         >
           <div
-            aria-live="polite"
+            class="MuiBox-root css"
             data-testid="alert"
-            role="alert"
-            style="margin-top: 5px;"
           >
             <div
               class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
@@ -10190,13 +10210,16 @@ exports[`Dashboard test renders possibly your publications lure but not the add 
                   <div
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
                   >
-                    <b>
-                      Claim now! - 
-                    </b>
-                    <span
-                      data-testid="alert-message"
-                    >
-                      We have found 5 work(s) that could possibly be your works.
+                    <span>
+                      <b>
+                        Claim now! - 
+                      </b>
+                       
+                      <span
+                        data-testid="alert-message"
+                      >
+                        We have found 5 work(s) that could possibly be your works.
+                      </span>
                     </span>
                   </div>
                 </div>
@@ -10433,10 +10456,8 @@ exports[`Dashboard test sets context for showing ORCID sync UI 1`] = `
           style="margin-top: -27px;"
         >
           <div
-            aria-live="polite"
+            class="MuiBox-root css"
             data-testid="alert"
-            role="alert"
-            style="margin-top: 5px;"
           >
             <div
               class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
@@ -10466,13 +10487,16 @@ exports[`Dashboard test sets context for showing ORCID sync UI 1`] = `
                   <div
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
                   >
-                    <b>
-                      Add your work to UQ eSpace - 
-                    </b>
-                    <span
-                      data-testid="alert-message"
-                    >
-                      We found nothing new for you to claim, but you may add a work any time.
+                    <span>
+                      <b>
+                        Add your work to UQ eSpace - 
+                      </b>
+                       
+                      <span
+                        data-testid="alert-message"
+                      >
+                        We found nothing new for you to claim, but you may add a work any time.
+                      </span>
                     </span>
                   </div>
                 </div>
@@ -10709,10 +10733,8 @@ exports[`Dashboard test should get styles for full render 1`] = `
           style="margin-top: -27px;"
         >
           <div
-            aria-live="polite"
+            class="MuiBox-root css"
             data-testid="alert"
-            role="alert"
-            style="margin-top: 5px;"
           >
             <div
               class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
@@ -10742,13 +10764,16 @@ exports[`Dashboard test should get styles for full render 1`] = `
                   <div
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
                   >
-                    <b>
-                      Add your work to UQ eSpace - 
-                    </b>
-                    <span
-                      data-testid="alert-message"
-                    >
-                      We found nothing new for you to claim, but you may add a work any time.
+                    <span>
+                      <b>
+                        Add your work to UQ eSpace - 
+                      </b>
+                       
+                      <span
+                        data-testid="alert-message"
+                      >
+                        We found nothing new for you to claim, but you may add a work any time.
+                      </span>
                     </span>
                   </div>
                 </div>

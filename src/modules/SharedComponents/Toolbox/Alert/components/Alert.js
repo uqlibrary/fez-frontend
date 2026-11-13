@@ -217,7 +217,7 @@ export const Alert = ({
                             onKeyDown={(!disableAlertClick && action) || undefined}
                         >
                             <span role={announce ? liveRole : undefined}>
-                                {title && <b>{title}</b>}
+                                {title && <b>{`${title} - `}</b>}&nbsp;
                                 <span data-testid="alert-message">{message}</span>
                             </span>
                         </StyledGridTitle>

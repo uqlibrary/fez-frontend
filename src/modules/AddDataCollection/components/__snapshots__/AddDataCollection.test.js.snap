@@ -724,10 +724,8 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
           >
             <div
-              aria-live="polite"
+              class="MuiBox-root css"
               data-testid="alert"
-              role="alert"
-              style="margin-top: 5px;"
             >
               <div
                 class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
@@ -757,13 +755,18 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     <div
                       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
                     >
-                      <b>
-                        Success - 
-                      </b>
                       <span
-                        data-testid="alert-message"
+                        role="status"
                       >
-                        New work has been saved successfully.
+                        <b>
+                          Success - 
+                        </b>
+                         
+                        <span
+                          data-testid="alert-message"
+                        >
+                          New work has been saved successfully.
+                        </span>
                       </span>
                     </div>
                   </div>

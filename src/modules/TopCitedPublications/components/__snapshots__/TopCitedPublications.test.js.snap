@@ -485,10 +485,8 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
 exports[`Component TopCitedPublications should render top cited publications module with not available message 1`] = `
 <div>
   <div
-    aria-live="polite"
+    class="MuiBox-root css"
     data-testid="alert"
-    role="alert"
-    style="margin-top: 5px;"
   >
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
@@ -521,13 +519,18 @@ exports[`Component TopCitedPublications should render top cited publications mod
           <div
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
           >
-            <b>
-              There has been an error - 
-            </b>
             <span
-              data-testid="alert-message"
+              role="alert"
             >
-              Trending works are temporarily unavailable
+              <b>
+                There has been an error - 
+              </b>
+               
+              <span
+                data-testid="alert-message"
+              >
+                Trending works are temporarily unavailable
+              </span>
             </span>
           </div>
         </div>

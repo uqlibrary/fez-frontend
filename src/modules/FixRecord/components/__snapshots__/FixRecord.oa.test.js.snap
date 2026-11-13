@@ -645,10 +645,8 @@ exports[`Component FixRecord for non-compliant Open Access should render fix rec
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
           >
             <div
-              aria-live="polite"
+              class="MuiBox-root css"
               data-testid="alert"
-              role="alert"
-              style="margin-top: 5px;"
             >
               <div
                 class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
@@ -678,21 +676,26 @@ exports[`Component FixRecord for non-compliant Open Access should render fix rec
                     <div
                       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
                     >
-                      <b>
-                        Validation - 
-                      </b>
                       <span
-                        data-testid="alert-message"
+                        role="alert"
                       >
-                        <span>
-                          Form cannot be submitted until all fields are valid. Please review all input fields.
-                          <ul>
-                            <li
-                              data-testid="validation-warning-0"
-                            >
-                              Please provide additional information, corrections or upload file(s).
-                            </li>
-                          </ul>
+                        <b>
+                          Validation - 
+                        </b>
+                         
+                        <span
+                          data-testid="alert-message"
+                        >
+                          <span>
+                            Form cannot be submitted until all fields are valid. Please review all input fields.
+                            <ul>
+                              <li
+                                data-testid="validation-warning-0"
+                              >
+                                Please provide additional information, corrections or upload file(s).
+                              </li>
+                            </ul>
+                          </span>
                         </span>
                       </span>
                     </div>
@@ -1480,10 +1483,8 @@ exports[`Component FixRecord for non-compliant Open Access should render record 
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
           >
             <div
-              aria-live="polite"
+              class="MuiBox-root css"
               data-testid="alert"
-              role="alert"
-              style="margin-top: 5px;"
             >
               <div
                 class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
@@ -1513,21 +1514,26 @@ exports[`Component FixRecord for non-compliant Open Access should render record 
                     <div
                       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
                     >
-                      <b>
-                        Validation - 
-                      </b>
                       <span
-                        data-testid="alert-message"
+                        role="alert"
                       >
-                        <span>
-                          Form cannot be submitted until all fields are valid. Please review all input fields.
-                          <ul>
-                            <li
-                              data-testid="validation-warning-0"
-                            >
-                              Please provide additional information, corrections or upload file(s).
-                            </li>
-                          </ul>
+                        <b>
+                          Validation - 
+                        </b>
+                         
+                        <span
+                          data-testid="alert-message"
+                        >
+                          <span>
+                            Form cannot be submitted until all fields are valid. Please review all input fields.
+                            <ul>
+                              <li
+                                data-testid="validation-warning-0"
+                              >
+                                Please provide additional information, corrections or upload file(s).
+                              </li>
+                            </ul>
+                          </span>
                         </span>
                       </span>
                     </div>

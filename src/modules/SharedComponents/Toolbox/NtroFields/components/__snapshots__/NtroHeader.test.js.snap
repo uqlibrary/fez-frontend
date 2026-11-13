@@ -6,10 +6,8 @@ exports[`Component NtroHeader should render default view 1`] = `
     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
   >
     <div
-      aria-live="polite"
+      class="MuiBox-root css"
       data-testid="alert"
-      role="alert"
-      style="margin-top: 5px;"
     >
       <div
         class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
@@ -39,35 +37,40 @@ exports[`Component NtroHeader should render default view 1`] = `
             <div
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
             >
-              <b>
-                Non-traditional research output (NTRO) requirements - 
-              </b>
               <span
-                data-testid="alert-message"
+                role="status"
               >
-                <p>
-                  In order to submit this NTRO work type or update an existing NTRO work, you must include:
-                </p>
-                <ol>
-                  <li>
-                    A creator research statement of up to 2000 characters (250 – 300 words) that includes the background, contribution and significance of the work. It must be substantiated by the 'Major' or ‘Minor’ Scale/Significance option that you select on the form.
-                     
-                    <b>
-                      This is not for public view.
-                    </b>
-                  </li>
-                  <li>
-                    An abstract/description of the work. This is for public view.
-                  </li>
-                  <li>
-                    At least one evidence file, e.g. a .pdf, .mp4, .tiff or .wav copy, representation or review of the work.
-                  </li>
-                </ol>
-                <p>
-                  Note:
-                  <br />
-                  Your research statement, abstract or evidence file can be updated at any time via the REQUEST CORRECTION button for the work.
-                </p>
+                <b>
+                  Non-traditional research output (NTRO) requirements - 
+                </b>
+                 
+                <span
+                  data-testid="alert-message"
+                >
+                  <p>
+                    In order to submit this NTRO work type or update an existing NTRO work, you must include:
+                  </p>
+                  <ol>
+                    <li>
+                      A creator research statement of up to 2000 characters (250 – 300 words) that includes the background, contribution and significance of the work. It must be substantiated by the 'Major' or ‘Minor’ Scale/Significance option that you select on the form.
+                       
+                      <b>
+                        This is not for public view.
+                      </b>
+                    </li>
+                    <li>
+                      An abstract/description of the work. This is for public view.
+                    </li>
+                    <li>
+                      At least one evidence file, e.g. a .pdf, .mp4, .tiff or .wav copy, representation or review of the work.
+                    </li>
+                  </ol>
+                  <p>
+                    Note:
+                    <br />
+                    Your research statement, abstract or evidence file can be updated at any time via the REQUEST CORRECTION button for the work.
+                  </p>
+                </span>
               </span>
             </div>
           </div>

@@ -375,12 +375,19 @@ export const AttachedFiles = ({
                         allowDismiss
                         type="info"
                         message={getSensitiveHandlingNote(record)}
+                        announce="false"
                     />
                 )}
                 {isFireFox && /* istanbul ignore next */ hasVideo && (
-                    /* istanbul ignore next */ <Alert allowDismiss {...viewRecordLocale.viewRecord.fireFoxAlert} />
+                    /* istanbul ignore next */ <Alert
+                        allowDismiss
+                        {...viewRecordLocale.viewRecord.fireFoxAlert}
+                        announce="false"
+                    />
                 )}
-                {isAdminEditing && <Alert type="warning" message={locale.renamingFilesInstructions.text} />}
+                {isAdminEditing && (
+                    <Alert type="warning" message={locale.renamingFilesInstructions.text} announce="false" />
+                )}
                 <Box sx={{ padding: 1 }}>
                     <Grid
                         container

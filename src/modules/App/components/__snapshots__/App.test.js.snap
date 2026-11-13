@@ -462,10 +462,8 @@ exports[`Application component Should display mobile correctly 1`] = `
           class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
         >
           <div
-            aria-live="polite"
+            class="MuiBox-root css"
             data-testid="alert"
-            role="alert"
-            style="margin-top: 5px;"
           >
             <div
               class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
@@ -498,13 +496,18 @@ exports[`Application component Should display mobile correctly 1`] = `
                   <div
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
                   >
-                    <b>
-                      You are not logged in - 
-                    </b>
                     <span
-                      data-testid="alert-message"
+                      role="status"
                     >
-                      Login to UQ eSpace for full search results and more services.
+                      <b>
+                        You are not logged in - 
+                      </b>
+                       
+                      <span
+                        data-testid="alert-message"
+                      >
+                        Login to UQ eSpace for full search results and more services.
+                      </span>
                     </span>
                   </div>
                 </div>
@@ -1047,10 +1050,8 @@ exports[`Application component should render alert if user is not fez author 1`]
           class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
         >
           <div
-            aria-live="polite"
+            class="MuiBox-root css"
             data-testid="alert"
-            role="alert"
-            style="margin-top: 5px;"
           >
             <div
               class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
@@ -1083,20 +1084,25 @@ exports[`Application component should render alert if user is not fez author 1`]
                   <div
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
                   >
-                    <b>
-                      You are not registered in UQ eSpace as an author - 
-                    </b>
                     <span
-                      data-testid="alert-message"
+                      role="status"
                     >
-                      Please
-                       
-                      <a
-                        href="https://guides.library.uq.edu.au/research-and-teaching-staff/uqespace-publications-datasets/contact-us"
-                        target="_blank"
+                      <b>
+                        You are not registered in UQ eSpace as an author - 
+                      </b>
+                       
+                      <span
+                        data-testid="alert-message"
                       >
-                        contact the UQ eSpace team.
-                      </a>
+                        Please
+                         
+                        <a
+                          href="https://guides.library.uq.edu.au/research-and-teaching-staff/uqespace-publications-datasets/contact-us"
+                          target="_blank"
+                        >
+                          contact the UQ eSpace team.
+                        </a>
+                      </span>
                     </span>
                   </div>
                 </div>
