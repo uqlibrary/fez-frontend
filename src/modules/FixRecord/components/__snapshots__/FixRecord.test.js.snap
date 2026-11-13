@@ -1253,8 +1253,8 @@ exports[`Component FixRecord should render unclaim form 1`] = `
                 id="standard-card-remove-this-work-from-my-profile-content"
               >
                 <div
-                  class="MuiBox-root css"
                   data-testid="alert"
+                  style="margin-top: 5px;"
                 >
                   <div
                     class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"

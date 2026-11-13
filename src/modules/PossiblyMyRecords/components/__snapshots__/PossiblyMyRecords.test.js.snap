@@ -127,8 +127,8 @@ exports[`Component PossiblyMyRecords renders alert when the hide pub api fails 1
       class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
     >
       <div
-        class="MuiBox-root css"
         data-testid="alert"
+        style="margin-top: 5px;"
       >
         <div
           class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"

@@ -462,8 +462,8 @@ exports[`Application component Should display mobile correctly 1`] = `
           class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
         >
           <div
-            class="MuiBox-root css"
             data-testid="alert"
+            style="margin-top: 5px;"
           >
             <div
               class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
@@ -1050,8 +1050,8 @@ exports[`Application component should render alert if user is not fez author 1`]
           class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
         >
           <div
-            class="MuiBox-root css"
             data-testid="alert"
+            style="margin-top: 5px;"
           >
             <div
               class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"

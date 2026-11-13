@@ -2,7 +2,6 @@ import React from 'react';
 import { PropTypes } from 'prop-types';
 import { styled } from '@mui/material/styles';
 
-import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import CircularProgress from '@mui/material/CircularProgress';
@@ -166,7 +165,7 @@ export const Alert = ({
     // announce={false} renders static content (e.g. alerts present on page load) without a live region
     const liveRole = ALERTABLE_TYPES.includes(effectiveType) ? 'alert' : 'status';
     return (
-        <Box data-testid="alert" mt="5px">
+        <div data-testid="alert" style={{ marginTop: '5px' }}>
             <StyledGridWithIcon
                 container
                 type={effectiveType}
@@ -269,7 +268,7 @@ export const Alert = ({
                     </StyledGridDismissButton>
                 )}
             </StyledGridWithIcon>
-        </Box>
+        </div>
     );
 };
 

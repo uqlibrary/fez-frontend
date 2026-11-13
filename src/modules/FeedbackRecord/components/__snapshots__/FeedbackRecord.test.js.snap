@@ -1582,8 +1582,8 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
           >
             <div
-              class="MuiBox-root css"
               data-testid="alert"
+              style="margin-top: 5px;"
             >
               <div
                 class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
@@ -3148,8 +3148,8 @@ exports[`Component FeedbackRecord should render record citation, general fields 
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
           >
             <div
-              class="MuiBox-root css"
               data-testid="alert"
+              style="margin-top: 5px;"
             >
               <div
                 class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
@@ -4755,8 +4755,8 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
           >
             <div
-              class="MuiBox-root css"
               data-testid="alert"
+              style="margin-top: 5px;"
             >
               <div
                 class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
@@ -6807,8 +6807,8 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
           >
             <div
-              class="MuiBox-root css"
               data-testid="alert"
+              style="margin-top: 5px;"
             >
               <div
                 class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"

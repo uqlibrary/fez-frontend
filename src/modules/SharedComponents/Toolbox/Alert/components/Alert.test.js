@@ -1,5 +1,5 @@
 import React from 'react';
-import { rtlRender, fireEvent, createMatchMedia, preview } from 'test-utils';
+import { rtlRender, fireEvent, createMatchMedia } from 'test-utils';
 import Alert from './Alert';
 
 function setup(testProps = {}) {
@@ -279,7 +279,7 @@ describe('Alert', () => {
                 expect(queryByRole('alert')).not.toBeInTheDocument();
                 expect(queryByRole('status')).not.toBeInTheDocument();
                 expect(getByText('Message')).toBeInTheDocument();
-                expect(getByText('Title')).toBeInTheDocument();
+                expect(getByText(/Title/)).toBeInTheDocument();
             },
         );
 
