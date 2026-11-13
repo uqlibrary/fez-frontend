@@ -593,8 +593,8 @@ const internalTitleSearchList = {
         "rek_scopus_doc_type_lookup": "Article (original research)",
         "rek_status_lookup": "Published",
         "rek_wok_doc_type_lookup": null,
-        "rek_editing_user": 'uqlsibba',
-        "rek_editing_user_lookup": 'Lee Sibbald',
+        "rek_editing_user": null,
+        "rek_editing_user_lookup": null,
         "rek_editing_start_date":null,
         "fez_internal_notes": null,
         "fez_author_affiliation": [
