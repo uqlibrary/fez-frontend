@@ -1290,7 +1290,6 @@ exports[`Component FixRecord should render unclaim form 1`] = `
                             <b>
                               WARNING - 
                             </b>
-                             
                             <span
                               data-testid="alert-message"
                             >

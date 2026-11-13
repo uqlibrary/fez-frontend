@@ -525,7 +525,6 @@ exports[`Component TopCitedPublications should render top cited publications mod
               <b>
                 There has been an error - 
               </b>
-               
               <span
                 data-testid="alert-message"
               >

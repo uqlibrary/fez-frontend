@@ -156,7 +156,6 @@ exports[`Component FileUploader should alphabetically order files as they are ad
                   <b>
                     Success - 
                   </b>
-                   
                   <span
                     data-testid="alert-message"
                   >
@@ -210,7 +209,6 @@ exports[`Component FileUploader should alphabetically order files as they are ad
                   <b>
                     Notice - 
                   </b>
-                   
                   <span
                     data-testid="alert-message"
                   >
@@ -611,7 +609,6 @@ exports[`Component FileUploader should alphabetically order files as they are ad
                   <b>
                     Success - 
                   </b>
-                   
                   <span
                     data-testid="alert-message"
                   >
@@ -665,7 +662,6 @@ exports[`Component FileUploader should alphabetically order files as they are ad
                   <b>
                     Notice - 
                   </b>
-                   
                   <span
                     data-testid="alert-message"
                   >
@@ -1264,7 +1260,6 @@ exports[`Component FileUploader should delete first file 1`] = `
                   <b>
                     Success - 
                   </b>
-                   
                   <span
                     data-testid="alert-message"
                   >
@@ -1318,7 +1313,6 @@ exports[`Component FileUploader should delete first file 1`] = `
                   <b>
                     Notice - 
                   </b>
-                   
                   <span
                     data-testid="alert-message"
                   >
@@ -1640,7 +1634,6 @@ exports[`Component FileUploader should drag and drop 2 files 1`] = `
                   <b>
                     Success - 
                   </b>
-                   
                   <span
                     data-testid="alert-message"
                   >
@@ -1694,7 +1687,6 @@ exports[`Component FileUploader should drag and drop 2 files 1`] = `
                   <b>
                     Notice - 
                   </b>
-                   
                   <span
                     data-testid="alert-message"
                   >
@@ -2349,7 +2341,6 @@ exports[`Component FileUploader should not render rows for uploaded files with a
                   <b>
                     Success - 
                   </b>
-                   
                   <span
                     data-testid="alert-message"
                   >
@@ -2403,7 +2394,6 @@ exports[`Component FileUploader should not render rows for uploaded files with a
                   <b>
                     Notice - 
                   </b>
-                   
                   <span
                     data-testid="alert-message"
                   >
@@ -2923,7 +2913,6 @@ exports[`Component FileUploader should not reset file access or embargo date inf
                   <b>
                     Success - 
                   </b>
-                   
                   <span
                     data-testid="alert-message"
                   >
@@ -2977,7 +2966,6 @@ exports[`Component FileUploader should not reset file access or embargo date inf
                   <b>
                     Notice - 
                   </b>
-                   
                   <span
                     data-testid="alert-message"
                   >
@@ -4068,7 +4056,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                   <b>
                     Success - 
                   </b>
-                   
                   <span
                     data-testid="alert-message"
                   >
@@ -4122,7 +4109,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                   <b>
                     Notice - 
                   </b>
-                   
                   <span
                     data-testid="alert-message"
                   >
@@ -4673,7 +4659,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                   <b>
                     Success - 
                   </b>
-                   
                   <span
                     data-testid="alert-message"
                   >
@@ -4727,7 +4712,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                   <b>
                     Notice - 
                   </b>
-                   
                   <span
                     data-testid="alert-message"
                   >
@@ -5270,7 +5254,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                   <b>
                     Success - 
                   </b>
-                   
                   <span
                     data-testid="alert-message"
                   >
@@ -5324,7 +5307,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                   <b>
                     Notice - 
                   </b>
-                   
                   <span
                     data-testid="alert-message"
                   >
@@ -6050,7 +6032,6 @@ exports[`Component FileUploader should render rows for uploaded files with defau
                   <b>
                     Success - 
                   </b>
-                   
                   <span
                     data-testid="alert-message"
                   >
@@ -6104,7 +6085,6 @@ exports[`Component FileUploader should render rows for uploaded files with defau
                   <b>
                     Notice - 
                   </b>
-                   
                   <span
                     data-testid="alert-message"
                   >
@@ -6624,7 +6604,6 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                   <b>
                     Success - 
                   </b>
-                   
                   <span
                     data-testid="alert-message"
                   >
@@ -6678,7 +6657,6 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                   <b>
                     Notice - 
                   </b>
-                   
                   <span
                     data-testid="alert-message"
                   >
@@ -7237,7 +7215,6 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                   <b>
                     Success - 
                   </b>
-                   
                   <span
                     data-testid="alert-message"
                   >
@@ -7291,7 +7268,6 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                   <b>
                     Notice - 
                   </b>
-                   
                   <span
                     data-testid="alert-message"
                   >
@@ -7844,7 +7820,6 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                   <b>
                     Success - 
                   </b>
-                   
                   <span
                     data-testid="alert-message"
                   >
@@ -7898,7 +7873,6 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                   <b>
                     Notice - 
                   </b>
-                   
                   <span
                     data-testid="alert-message"
                   >
@@ -8636,7 +8610,6 @@ exports[`Component FileUploader should set max files error message 1`] = `
                   <b>
                     Success - 
                   </b>
-                   
                   <span
                     data-testid="alert-message"
                   >
@@ -8690,7 +8663,6 @@ exports[`Component FileUploader should set max files error message 1`] = `
                   <b>
                     Notice - 
                   </b>
-                   
                   <span
                     data-testid="alert-message"
                   >
@@ -8744,7 +8716,6 @@ exports[`Component FileUploader should set max files error message 1`] = `
                   <b>
                     Upload Errors - 
                   </b>
-                   
                   <span
                     data-testid="alert-message"
                   >
@@ -9066,7 +9037,6 @@ exports[`Component FileUploader should update file description 1`] = `
                   <b>
                     Success - 
                   </b>
-                   
                   <span
                     data-testid="alert-message"
                   >
@@ -9120,7 +9090,6 @@ exports[`Component FileUploader should update file description 1`] = `
                   <b>
                     Notice - 
                   </b>
-                   
                   <span
                     data-testid="alert-message"
                   >

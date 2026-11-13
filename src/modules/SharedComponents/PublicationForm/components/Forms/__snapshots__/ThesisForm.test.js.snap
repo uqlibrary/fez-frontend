@@ -79,7 +79,6 @@ exports[`ThesisForm component 1`] = `
                         <span
                           role="alert"
                         >
-                           
                           <span
                             data-testid="alert-message"
                           >
@@ -1220,7 +1219,6 @@ exports[`ThesisForm component with all fields disabled 1`] = `
                         <span
                           role="alert"
                         >
-                           
                           <span
                             data-testid="alert-message"
                           >

@@ -43,7 +43,6 @@ exports[`Component NtroHeader should render default view 1`] = `
                 <b>
                   Non-traditional research output (NTRO) requirements - 
                 </b>
-                 
                 <span
                   data-testid="alert-message"
                 >

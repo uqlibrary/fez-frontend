@@ -682,7 +682,6 @@ exports[`Component FixRecord for non-compliant Open Access should render fix rec
                         <b>
                           Validation - 
                         </b>
-                         
                         <span
                           data-testid="alert-message"
                         >
@@ -1520,7 +1519,6 @@ exports[`Component FixRecord for non-compliant Open Access should render record 
                         <b>
                           Validation - 
                         </b>
-                         
                         <span
                           data-testid="alert-message"
                         >

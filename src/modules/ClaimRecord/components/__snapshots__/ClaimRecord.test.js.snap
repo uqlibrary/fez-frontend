@@ -5853,7 +5853,6 @@ exports[`Component ClaimRecord  snapshots should render publication citation, er
                         <b>
                           Error - 
                         </b>
-                         
                         <span
                           data-testid="alert-message"
                         >
@@ -6309,7 +6308,6 @@ exports[`Component ClaimRecord  snapshots should show contributor as linked 1`] 
                         <b>
                           Error - 
                         </b>
-                         
                         <span
                           data-testid="alert-message"
                         >

@@ -761,7 +761,6 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                         <b>
                           Success - 
                         </b>
-                         
                         <span
                           data-testid="alert-message"
                         >

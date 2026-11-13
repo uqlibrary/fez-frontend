@@ -502,7 +502,6 @@ exports[`Application component Should display mobile correctly 1`] = `
                       <b>
                         You are not logged in - 
                       </b>
-                       
                       <span
                         data-testid="alert-message"
                       >
@@ -1090,7 +1089,6 @@ exports[`Application component should render alert if user is not fez author 1`]
                       <b>
                         You are not registered in UQ eSpace as an author - 
                       </b>
-                       
                       <span
                         data-testid="alert-message"
                       >

@@ -289,7 +289,6 @@ exports[`AdminInterface component should disabled button and render alert for fo
                         <b>
                           Saving - 
                         </b>
-                         
                         <span
                           data-testid="alert-message"
                         >
@@ -416,7 +415,6 @@ exports[`AdminInterface component should display an alert if editing of a pubtyp
                     <span
                       role="status"
                     >
-                       
                       <span
                         data-testid="alert-message"
                       >
@@ -1006,7 +1004,6 @@ exports[`AdminInterface component should display job created alert 2`] = `
                         <b>
                           Success - 
                         </b>
-                         
                         <span
                           data-testid="alert-message"
                         >
@@ -1650,7 +1647,6 @@ exports[`AdminInterface component should display successful alert 2`] = `
                         <b>
                           Success - 
                         </b>
-                         
                         <span
                           data-testid="alert-message"
                         >
@@ -3041,7 +3037,6 @@ exports[`AdminInterface component should render locked alert in edit mode 1`] = 
                           <b>
                             THIS WORK IS LOCKED - 
                           </b>
-                           
                           <span
                             data-testid="alert-message"
                           >
@@ -3434,7 +3429,6 @@ exports[`AdminInterface component should render locked info alert 1`] = `
                           <b>
                             THIS WORK IS LOCKED - 
                           </b>
-                           
                           <span
                             data-testid="alert-message"
                           >

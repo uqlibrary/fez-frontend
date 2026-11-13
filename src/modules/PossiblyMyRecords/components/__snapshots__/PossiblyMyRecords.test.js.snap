@@ -167,7 +167,6 @@ exports[`Component PossiblyMyRecords renders alert when the hide pub api fails 1
                   <b>
                     Error - 
                   </b>
-                   
                   <span
                     data-testid="alert-message"
                   >

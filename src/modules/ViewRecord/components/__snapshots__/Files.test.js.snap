@@ -1270,7 +1270,6 @@ exports[`Files Component  should not render sensitive handling note - scenario 1
                   <span
                     role="status"
                   >
-                     
                     <span
                       data-testid="alert-message"
                     >
@@ -1635,7 +1634,6 @@ exports[`Files Component  should not render sensitive handling note - scenario 2
                   <span
                     role="status"
                   >
-                     
                     <span
                       data-testid="alert-message"
                     >
@@ -2000,7 +1998,6 @@ exports[`Files Component  should render an image as the original filename with n
                   <span
                     role="status"
                   >
-                     
                     <span
                       data-testid="alert-message"
                     >
@@ -2967,7 +2964,6 @@ exports[`Files Component  should render component 2`] = `
                     <b>
                       You are not logged in - 
                     </b>
-                     
                     <span
                       data-testid="alert-message"
                     >
@@ -3867,7 +3863,6 @@ exports[`Files Component  should render component for public users 1`] = `
                     <b>
                       You are not logged in - 
                     </b>
-                     
                     <span
                       data-testid="alert-message"
                     >
@@ -5342,7 +5337,6 @@ exports[`Files Component  should render sensitive handling note - other 1`] = `
                   <span
                     role="status"
                   >
-                     
                     <span
                       data-testid="alert-message"
                     >
@@ -5707,7 +5701,6 @@ exports[`Files Component  should render sensitive handling note 1`] = `
                   <span
                     role="status"
                   >
-                     
                     <span
                       data-testid="alert-message"
                     >
@@ -6072,7 +6065,6 @@ exports[`Files Component  should show a blacklisted collection member when the u
                   <span
                     role="status"
                   >
-                     
                     <span
                       data-testid="alert-message"
                     >
