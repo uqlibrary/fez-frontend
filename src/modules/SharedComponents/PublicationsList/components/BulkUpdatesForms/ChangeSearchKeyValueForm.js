@@ -128,6 +128,7 @@ export const CreateOrUpdateDoiForm = ({ onCancel, recordsSelected }) => {
                     {!!isSubmitSuccessful && (
                         <Alert
                             alertId="alert-done-change-search-key-value"
+                            announce="assertive"
                             {...txt.changeSearchKeyValueForm.successAlert}
                         />
                     )}

@@ -273,9 +273,9 @@ describe('Alert', () => {
         });
 
         it.each(['error', 'warning', 'info', 'done'])(
-            'should not render any live region when announce is false for %s type',
+            'should not render any live region when announce is "off" for %s type',
             type => {
-                const { queryByRole, getByText } = setup({ type, announce: false });
+                const { queryByRole, getByText } = setup({ type, announce: 'off' });
                 expect(queryByRole('alert')).not.toBeInTheDocument();
                 expect(queryByRole('status')).not.toBeInTheDocument();
                 expect(getByText('Message')).toBeInTheDocument();
@@ -283,12 +283,34 @@ describe('Alert', () => {
             },
         );
 
-        it('should announce by default and when announce is explicitly true', () => {
+        it.each(['error', 'warning', 'info', 'info_outline', 'help', 'done', 'success'])(
+            'should use role="alert" when announce is "assertive" for %s type',
+            type => {
+                const { getByRole, queryByRole } = setup({ type, announce: 'assertive' });
+                expect(getByRole('alert')).toBeInTheDocument();
+                expect(queryByRole('status')).not.toBeInTheDocument();
+            },
+        );
+
+        it('should use role="alert" when announce is "assertive" for a custom alert', () => {
+            const { getByRole } = setup({
+                type: 'custom',
+                customIcon: 'test',
+                customType: 'info',
+                announce: 'assertive',
+            });
+            expect(getByRole('alert')).toBeInTheDocument();
+        });
+
+        it('should choose the role from the type by default and when announce is "auto"', () => {
             const { getByRole, rerender } = setup({ type: 'error' });
             expect(getByRole('alert')).toBeInTheDocument();
 
-            rerender(<Alert message="Message" type="error" announce />);
+            rerender(<Alert message="Message" type="error" announce="auto" />);
             expect(getByRole('alert')).toBeInTheDocument();
+
+            rerender(<Alert message="Message" type="info" announce="auto" />);
+            expect(getByRole('status')).toBeInTheDocument();
         });
     });
 });

@@ -314,7 +314,7 @@ export const ViewRecord = () => {
                         <Alert
                             {...txt.deletedAlert}
                             message={txt.deletedAlert.message(recordToView)}
-                            announce="false"
+                            announce="off"
                         />
                     </Grid>
                 )}
@@ -324,11 +324,11 @@ export const ViewRecord = () => {
                             {...{
                                 ...txt.version.alert.version,
                                 message: txt.version.alert.version.message(recordToView, isDeletedVersion),
-                                announce: false,
+                                announce: 'off',
                             }}
                         />
                         <br />
-                        <Alert {...txt.version.alert.warning} announce="false" />
+                        <Alert {...txt.version.alert.warning} announce="off" />
                     </Grid>
                 )}
                 {}

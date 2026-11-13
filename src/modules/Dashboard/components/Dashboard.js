@@ -380,7 +380,7 @@ const Dashboard = ({
                         {showOaComplianceAlert && (
                             <Grid size={12} style={{ marginTop: -27 }}>
                                 <Alert
-                                    announce={false}
+                                    announce="off"
                                     title={txt.oacomplianceRecordLure.title}
                                     message={txt.oacomplianceRecordLure.message.replace(
                                         '[count]',
@@ -402,7 +402,7 @@ const Dashboard = ({
                             incomplete.publicationsListPagingData.total > 0 && (
                                 <Grid size={12} style={{ marginTop: -27 }}>
                                     <Alert
-                                        announce={false}
+                                        announce="off"
                                         title={txt.incompleteRecordLure.title}
                                         message={txt.incompleteRecordLure.message
                                             .replace('[count]', incomplete.publicationsListPagingData.total)
@@ -418,7 +418,7 @@ const Dashboard = ({
                         {showCreativeWorkOaAlert && (
                             <Grid size={12} style={{ marginTop: -27 }}>
                                 <Alert
-                                    announce={false}
+                                    announce="off"
                                     title={txt.oacomplianceCreativeWorkRecordLure.title}
                                     message={txt.oacomplianceCreativeWorkRecordLure.message}
                                     actionButtonLabel={txt.oacomplianceCreativeWorkRecordLure.actionButtonLabel}
@@ -434,7 +434,7 @@ const Dashboard = ({
                         possiblyYourPublicationsCount > 0 ? (
                             <Grid size={12} style={{ marginTop: -27 }}>
                                 <Alert
-                                    announce={false}
+                                    announce="off"
                                     title={txt.possiblePublicationsLure.title}
                                     message={txt.possiblePublicationsLure.message.replace(
                                         '[count]',
@@ -452,7 +452,7 @@ const Dashboard = ({
                             !hidePossiblyYourPublicationsLure &&
                             !possiblyYourPublicationsCount && (
                                 <Grid size={12} style={{ marginTop: -27 }}>
-                                    <Alert announce={false} {...txt.nothingToClaimLure} action={_addPublication} />
+                                    <Alert announce="off" {...txt.nothingToClaimLure} action={_addPublication} />
                                 </Grid>
                             )
                         )}
@@ -464,7 +464,7 @@ const Dashboard = ({
                     !hideTurnOnOrcidSyncReminder && (
                         <Grid size={12} style={{ marginTop: -27 }}>
                             <Alert
-                                announce={false}
+                                announce="off"
                                 title={txt.enableOrcidSyncLure.title}
                                 message={txt.enableOrcidSyncLure.message}
                                 type={txt.enableOrcidSyncLure.type}

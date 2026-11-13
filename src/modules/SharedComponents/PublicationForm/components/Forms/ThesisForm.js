@@ -32,7 +32,7 @@ export const ThesisForm = ({ isSubmitting, control }) => {
                                 message={txt.information.message}
                                 type="warning"
                                 alertId="alert-warning-rdm-redirect"
-                                announce="false"
+                                announce="off"
                             />
                         </Grid>
                     </Grid>

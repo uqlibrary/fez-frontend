@@ -211,7 +211,7 @@ export const ThesisSubmission = ({ isHdrThesis }) => {
                             message={thesisLocale.notAllowedMessage}
                             type="info"
                             alertId="alert-info-rdm-redirect"
-                            announce="false"
+                            announce="off"
                         />
                     </Grid>
                 </Grid>

@@ -37,9 +37,7 @@ exports[`Component NtroHeader should render default view 1`] = `
             <div
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
             >
-              <span
-                role="status"
-              >
+              <span>
                 <b>
                   Non-traditional research output (NTRO) requirements - 
                 </b>

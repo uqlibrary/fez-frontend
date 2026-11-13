@@ -412,9 +412,7 @@ exports[`AdminInterface component should display an alert if editing of a pubtyp
                   <div
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
                   >
-                    <span
-                      role="status"
-                    >
+                    <span>
                       <span
                         data-testid="alert-message"
                       >
@@ -3031,9 +3029,7 @@ exports[`AdminInterface component should render locked alert in edit mode 1`] = 
                       <div
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
                       >
-                        <span
-                          role="alert"
-                        >
+                        <span>
                           <b>
                             THIS WORK IS LOCKED - 
                           </b>
@@ -3423,9 +3419,7 @@ exports[`AdminInterface component should render locked info alert 1`] = `
                       <div
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
                       >
-                        <span
-                          role="alert"
-                        >
+                        <span>
                           <b>
                             THIS WORK IS LOCKED - 
                           </b>

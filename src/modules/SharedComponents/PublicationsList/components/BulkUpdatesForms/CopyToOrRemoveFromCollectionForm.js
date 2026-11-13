@@ -135,6 +135,7 @@ export const CopyToOrRemoveFromCollectionForm = ({ isRemoveFrom, onCancel, recor
                     {isSubmitSuccessful && (
                         <Alert
                             alertId={`alert-done-${idText}-collection`}
+                            announce="assertive"
                             {...txt.copyToOrRemoveFromCollectionForm.successAlert(isRemoveFrom)}
                         />
                     )}
