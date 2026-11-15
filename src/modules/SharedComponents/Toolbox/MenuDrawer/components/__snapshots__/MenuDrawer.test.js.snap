@@ -36,7 +36,7 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider 1`
     >
       <nav
         aria-label="Main menu"
-        class="MuiList-root MuiList-padding css-MuiList-root"
+        class="MuiBox-root css"
         id="mainMenu"
         tabindex="-1"
       >
@@ -88,61 +88,69 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider 1`
             </button>
           </div>
         </div>
-        <li
-          class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-MuiListItem-root"
+        <ul
+          class="MuiList-root MuiList-padding css-MuiList-root"
         >
-          <div
-            class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters menu-item-container css-MuiButtonBase-root-MuiListItemButton-root"
-            id="menu-item-0"
-            role="button"
-            tabindex="0"
+          <li
+            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-MuiListItem-root"
           >
             <div
-              class="MuiListItemText-root MuiListItemText-multiline css-MuiListItemText-root"
-              id="menu-itemText-0"
+              class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters menu-item-container css-MuiButtonBase-root-MuiListItemButton-root"
+              id="menu-item-0"
+              role="button"
+              tabindex="0"
             >
-              <span
-                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-MuiTypography-root"
+              <div
+                class="MuiListItemText-root MuiListItemText-multiline css-MuiListItemText-root"
+                id="menu-itemText-0"
               >
-                Primary text 0
-              </span>
-              <p
-                class="MuiTypography-root MuiTypography-body2 MuiListItemText-secondary css-MuiTypography-root"
-              >
-                secondary text 0
-              </p>
+                <span
+                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-MuiTypography-root"
+                >
+                  Primary text 0
+                </span>
+                <p
+                  class="MuiTypography-root MuiTypography-body2 MuiListItemText-secondary css-MuiTypography-root"
+                >
+                  secondary text 0
+                </p>
+              </div>
             </div>
-          </div>
-        </li>
+          </li>
+        </ul>
         <hr
           class="MuiDivider-root MuiDivider-fullWidth css-MuiDivider-root"
         />
-        <li
-          class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-MuiListItem-root"
+        <ul
+          class="MuiList-root MuiList-padding css-MuiList-root"
         >
-          <div
-            class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters menu-item-container css-MuiButtonBase-root-MuiListItemButton-root"
-            id="menu-item-2"
-            role="button"
-            tabindex="0"
+          <li
+            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-MuiListItem-root"
           >
             <div
-              class="MuiListItemText-root MuiListItemText-multiline css-MuiListItemText-root"
-              id="menu-itemText-2"
+              class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters menu-item-container css-MuiButtonBase-root-MuiListItemButton-root"
+              id="menu-item-2"
+              role="button"
+              tabindex="0"
             >
-              <span
-                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-MuiTypography-root"
+              <div
+                class="MuiListItemText-root MuiListItemText-multiline css-MuiListItemText-root"
+                id="menu-itemText-2"
               >
-                Primary text 1
-              </span>
-              <p
-                class="MuiTypography-root MuiTypography-body2 MuiListItemText-secondary css-MuiTypography-root"
-              >
-                secondary text 1
-              </p>
+                <span
+                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-MuiTypography-root"
+                >
+                  Primary text 1
+                </span>
+                <p
+                  class="MuiTypography-root MuiTypography-body2 MuiListItemText-secondary css-MuiTypography-root"
+                >
+                  secondary text 1
+                </p>
+              </div>
             </div>
-          </div>
-        </li>
+          </li>
+        </ul>
       </nav>
       <div
         data-testid="after-menu-drawer"
@@ -191,7 +199,7 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
       >
         <nav
           aria-label="Main menu"
-          class="MuiList-root MuiList-padding css-MuiList-root"
+          class="MuiBox-root css"
           id="mainMenu"
           tabindex="-1"
         >
@@ -257,61 +265,69 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
               Skip navigation
             </button>
           </div>
-          <li
-            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-MuiListItem-root"
+          <ul
+            class="MuiList-root MuiList-padding css-MuiList-root"
           >
-            <div
-              class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters menu-item-container css-MuiButtonBase-root-MuiListItemButton-root"
-              id="menu-item-0"
-              role="button"
-              tabindex="0"
+            <li
+              class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-MuiListItem-root"
             >
               <div
-                class="MuiListItemText-root MuiListItemText-multiline css-MuiListItemText-root"
-                id="menu-itemText-0"
+                class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters menu-item-container css-MuiButtonBase-root-MuiListItemButton-root"
+                id="menu-item-0"
+                role="button"
+                tabindex="0"
               >
-                <span
-                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-MuiTypography-root"
+                <div
+                  class="MuiListItemText-root MuiListItemText-multiline css-MuiListItemText-root"
+                  id="menu-itemText-0"
                 >
-                  Primary text 0
-                </span>
-                <p
-                  class="MuiTypography-root MuiTypography-body2 MuiListItemText-secondary css-MuiTypography-root"
-                >
-                  secondary text 0
-                </p>
+                  <span
+                    class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-MuiTypography-root"
+                  >
+                    Primary text 0
+                  </span>
+                  <p
+                    class="MuiTypography-root MuiTypography-body2 MuiListItemText-secondary css-MuiTypography-root"
+                  >
+                    secondary text 0
+                  </p>
+                </div>
               </div>
-            </div>
-          </li>
+            </li>
+          </ul>
           <hr
             class="MuiDivider-root MuiDivider-fullWidth css-MuiDivider-root"
           />
-          <li
-            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-MuiListItem-root"
+          <ul
+            class="MuiList-root MuiList-padding css-MuiList-root"
           >
-            <div
-              class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters menu-item-container css-MuiButtonBase-root-MuiListItemButton-root"
-              id="menu-item-2"
-              role="button"
-              tabindex="0"
+            <li
+              class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-MuiListItem-root"
             >
               <div
-                class="MuiListItemText-root MuiListItemText-multiline css-MuiListItemText-root"
-                id="menu-itemText-2"
+                class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters menu-item-container css-MuiButtonBase-root-MuiListItemButton-root"
+                id="menu-item-2"
+                role="button"
+                tabindex="0"
               >
-                <span
-                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-MuiTypography-root"
+                <div
+                  class="MuiListItemText-root MuiListItemText-multiline css-MuiListItemText-root"
+                  id="menu-itemText-2"
                 >
-                  Primary text 1
-                </span>
-                <p
-                  class="MuiTypography-root MuiTypography-body2 MuiListItemText-secondary css-MuiTypography-root"
-                >
-                  secondary text 1
-                </p>
+                  <span
+                    class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-MuiTypography-root"
+                  >
+                    Primary text 1
+                  </span>
+                  <p
+                    class="MuiTypography-root MuiTypography-body2 MuiListItemText-secondary css-MuiTypography-root"
+                  >
+                    secondary text 1
+                  </p>
+                </div>
               </div>
-            </div>
-          </li>
+            </li>
+          </ul>
         </nav>
         <div
           data-testid="after-menu-drawer"

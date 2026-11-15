@@ -1,6 +1,6 @@
 import React from 'react';
 import { MenuDrawer } from './MenuDrawer';
-import { render, WithMemoryRouter, fireEvent } from 'test-utils';
+import { render, WithMemoryRouter, fireEvent, within } from 'test-utils';
 
 const defaultMenuItems = [
     {
@@ -64,6 +64,13 @@ describe('Component MenuDrawer', () => {
     it('should label the menu navigation and put the CRICOS notice in a footer landmark', () => {
         const { getByRole } = setup({ drawerOpen: true, docked: true });
         expect(getByRole('navigation', { name: 'Main menu' })).toHaveAttribute('id', 'mainMenu');
+        // the items either side of a divider are separate real lists inside the nav
+        const nav = getByRole('navigation', { name: 'Main menu' });
+        const lists = within(nav).getAllByRole('list');
+        expect(lists).toHaveLength(2);
+        lists.forEach(list => expect(list.querySelectorAll(':scope > :not(li)')).toHaveLength(0));
+        expect(within(nav).getAllByRole('listitem')).toHaveLength(defaultMenuItems.filter(i => !i.divider).length);
+        expect(within(nav).getByRole('separator')).toBeInTheDocument();
         expect(getByRole('contentinfo')).toHaveTextContent('CRICOS');
     });
 

@@ -120,16 +120,35 @@ const renderMenuItem = (
     );
 };
 
+// Each run of items between dividers is its own list, so screen readers announce real lists with the
+// divider as a separator between them (WCAG 1.3.1). Item indexes stay global so element ids are unchanged.
 const renderMenuItems = (
     navigateToLink: (url: string, target?: string) => void,
     items: MenuItem[],
-): React.JSX.Element[] =>
-    items.map((menuItem, index) => {
+): React.JSX.Element[] => {
+    const elements: React.JSX.Element[] = [];
+    let listKey = 0;
+    let listItems: React.JSX.Element[] = [];
+    const closeList = (): void => {
+        elements.push(
+            <List key={`menu_list_${listKey}`} sx={{ paddingTop: 0, paddingBottom: 0 }}>
+                {listItems}
+            </List>,
+        );
+    };
+    items.forEach((menuItem: MenuItem, index: number) => {
         if (menuItem.divider) {
-            return <Divider key={`menu_item_${index}`} />;
+            closeList();
+            elements.push(<Divider key={`menu_item_${index}`} />);
+            listKey = index;
+            listItems = [];
+        } else {
+            listItems.push(renderMenuItem(navigateToLink, menuItem, index));
         }
-        return renderMenuItem(navigateToLink, menuItem, index);
     });
+    closeList();
+    return elements;
+};
 
 export const MenuDrawer: React.FC<MenuDrawerProps> = ({
     menuItems,
@@ -193,11 +212,13 @@ export const MenuDrawer: React.FC<MenuDrawerProps> = ({
         >
             {drawerOpen && (
                 <Fragment>
-                    <List
+                    {/* The nav holds the menu header and the lists of menu items. position: relative anchors
+                        the skip nav. */}
+                    <Box
                         component="nav"
                         id="mainMenu"
                         aria-label={locale.navAriaLabel}
-                        sx={{ outline: 'none', flexGrow: 1, paddingTop: 0 }}
+                        sx={{ outline: 'none', flexGrow: 1, position: 'relative', paddingBottom: '8px' }}
                         tabIndex={-1}
                     >
                         <Grid container spacing={0} wrap="nowrap" alignContent="center" alignItems="center">
@@ -262,7 +283,7 @@ export const MenuDrawer: React.FC<MenuDrawerProps> = ({
                             )
                         }
                         {renderMenuItems(navigateToLink, menuItems)}
-                    </List>
+                    </Box>
                     <div id="afterMenuDrawer" data-testid="after-menu-drawer" tabIndex={-1} />
                     <Box
                         component="footer"
