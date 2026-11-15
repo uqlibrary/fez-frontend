@@ -42,7 +42,7 @@ test.describe('Search', () => {
         await expect(page.getByTestId('search-records-results')).toHaveText(
             /Displaying works 1 to 7 of 7 total works\./,
         );
-        await expect(page.getByTestId('refine-results-facets').locator('div.StandardRighthandCard-title')).toHaveText(
+        await expect(page.getByTestId('refine-results-facets').locator('h3.StandardRighthandCard-title')).toHaveText(
             /Refine results/,
         );
 
@@ -53,7 +53,7 @@ test.describe('Search', () => {
             'Click to switch to Advanced search',
         );
         await page.getByTestId('show-advanced-search').click();
-        await expect(page.locator('#advancedSearchForm h5')).toHaveText(/Advanced search/);
+        await expect(page.locator('#advancedSearchForm h3')).toHaveText(/Advanced search/);
         await expect(page.getByTestId('any-field-input')).toHaveValue('cats and dogs');
         await page.getByTestId('any-field-input').press('Home');
         await page.getByTestId('any-field-input').pressSequentially("it's raining ");

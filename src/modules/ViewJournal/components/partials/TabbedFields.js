@@ -34,6 +34,7 @@ const TabbedFields = ({ tabId, tabTitle, tabContent: contentConfig, data, title 
                 <Grid size={12} style={{ marginTop: 20 }}>
                     <Typography
                         variant="subtitle1"
+                        component="h4"
                         id={`${tabId}-header`}
                         data-testid={`${tabId}-header`}
                         sx={{ fontWeight: 400 }}

@@ -89,6 +89,13 @@ describe('Application component', () => {
         expect(container).toMatchSnapshot();
     });
 
+    it('should render the page landmarks', () => {
+        const { getByRole } = setup({ account, author });
+        expect(getByRole('banner')).toBeInTheDocument();
+        expect(getByRole('search', { name: 'Site search' })).toBeInTheDocument();
+        expect(getByRole('main')).toHaveAttribute('id', 'content-container');
+    });
+
     it('should render for anon user', () => {
         const { container } = setup();
         expect(container).toMatchSnapshot();

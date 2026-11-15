@@ -138,7 +138,7 @@ exports[`MenuDrawer Snapshot should create component 1`] = `
         id="afterMenuDrawer"
         tabindex="-1"
       />
-      <div
+      <footer
         class="MuiBox-root css"
       >
         CRICOS Provider No: 
@@ -155,7 +155,7 @@ exports[`MenuDrawer Snapshot should create component 1`] = `
         >
           00025B
         </a>
-      </div>
+      </footer>
     </div>
     <div
       data-testid="sentinelEnd"

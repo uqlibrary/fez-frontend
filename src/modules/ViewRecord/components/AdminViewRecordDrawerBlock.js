@@ -10,6 +10,7 @@ export const AdminRecordDrawerBlock = ({ block, parentIndex, index, copyToClipbo
         return (
             <Typography
                 variant={'subtitle2'}
+                component={'h6'}
                 sx={{
                     textTransform: 'uppercase',
                     fontWeight: 500,

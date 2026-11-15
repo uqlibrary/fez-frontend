@@ -22,6 +22,7 @@ const defaultLocale = {
     skipNavTitle: 'Skip navigation',
     skipNavAriaLabel: 'Skip navigation',
     closeMenuLabel: 'Close menu',
+    navAriaLabel: 'Main menu',
 };
 
 const mockUseNavigate = jest.fn();
@@ -58,6 +59,12 @@ describe('Component MenuDrawer', () => {
     it('should render empty drawer', () => {
         const { baseElement } = setup();
         expect(baseElement).toMatchSnapshot();
+    });
+
+    it('should label the menu navigation and put the CRICOS notice in a footer landmark', () => {
+        const { getByRole } = setup({ drawerOpen: true, docked: true });
+        expect(getByRole('navigation', { name: 'Main menu' })).toHaveAttribute('id', 'mainMenu');
+        expect(getByRole('contentinfo')).toHaveTextContent('CRICOS');
     });
 
     it('should render opened drawer with menus, divider', () => {

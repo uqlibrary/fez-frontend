@@ -55,6 +55,8 @@ exports[`Application component Should display mobile correctly 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-4 css-MuiGrid-root"
           >
             <form
+              aria-label="Site search"
+              role="search"
               style="margin: 8px;"
             >
               <div
@@ -167,6 +169,7 @@ exports[`Application component Should display mobile correctly 1`] = `
         style="--Paper-shadow: none;"
       >
         <nav
+          aria-label="Main menu"
           class="MuiList-root MuiList-padding css-MuiList-root"
           id="mainMenu"
           tabindex="-1"
@@ -394,7 +397,7 @@ exports[`Application component Should display mobile correctly 1`] = `
           id="afterMenuDrawer"
           tabindex="-1"
         />
-        <div
+        <footer
           class="MuiBox-root css"
         >
           CRICOS Provider No: 
@@ -411,10 +414,10 @@ exports[`Application component Should display mobile correctly 1`] = `
           >
             00025B
           </a>
-        </div>
+        </footer>
       </div>
     </div>
-    <div
+    <main
       class="content-container"
       id="content-container"
       style="padding-left: 260px;"
@@ -788,7 +791,7 @@ exports[`Application component Should display mobile correctly 1`] = `
           </div>
         </div>
       </div>
-    </div>
+    </main>
     <div
       class="offlineSnackbar"
     />
@@ -895,6 +898,8 @@ exports[`Application component should render alert if user is not fez author 1`]
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-4 css-MuiGrid-root"
           >
             <form
+              aria-label="Site search"
+              role="search"
               style="margin: 8px;"
             >
               <div
@@ -998,7 +1003,7 @@ exports[`Application component should render alert if user is not fez author 1`]
         </div>
       </div>
     </header>
-    <div
+    <main
       class="content-container"
       id="content-container"
     >
@@ -1364,7 +1369,7 @@ exports[`Application component should render alert if user is not fez author 1`]
           </div>
         </div>
       </div>
-    </div>
+    </main>
     <div
       class="offlineSnackbar"
     />
@@ -1465,6 +1470,8 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-4 css-MuiGrid-root"
           >
             <form
+              aria-label="Site search"
+              role="search"
               style="margin: 8px;"
             >
               <div
@@ -1568,7 +1575,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         </div>
       </div>
     </header>
-    <div
+    <main
       class="content-container"
       id="content-container"
     >
@@ -1870,7 +1877,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           </div>
         </div>
       </div>
-    </div>
+    </main>
     <div
       class="offlineSnackbar"
     />
@@ -1971,6 +1978,8 @@ exports[`Application component should render app for account with fez author wit
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-4 css-MuiGrid-root"
           >
             <form
+              aria-label="Site search"
+              role="search"
               style="margin: 8px;"
             >
               <div
@@ -2074,7 +2083,7 @@ exports[`Application component should render app for account with fez author wit
         </div>
       </div>
     </header>
-    <div
+    <main
       class="content-container"
       id="content-container"
     >
@@ -2376,7 +2385,7 @@ exports[`Application component should render app for account with fez author wit
           </div>
         </div>
       </div>
-    </div>
+    </main>
     <div
       class="offlineSnackbar"
     />
@@ -2477,6 +2486,8 @@ exports[`Application component should render application with routing for the us
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-4 css-MuiGrid-root"
           >
             <form
+              aria-label="Site search"
+              role="search"
               style="margin: 8px;"
             >
               <div
@@ -2580,7 +2591,7 @@ exports[`Application component should render application with routing for the us
         </div>
       </div>
     </header>
-    <div
+    <main
       class="content-container"
       id="content-container"
     >
@@ -2669,7 +2680,7 @@ exports[`Application component should render application with routing for the us
           />
         </div>
       </div>
-    </div>
+    </main>
     <div
       class="offlineSnackbar"
     />
@@ -2770,6 +2781,8 @@ exports[`Application component should render for anon user 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-4 css-MuiGrid-root"
           >
             <form
+              aria-label="Site search"
+              role="search"
               style="margin: 8px;"
             >
               <div
@@ -2873,7 +2886,7 @@ exports[`Application component should render for anon user 1`] = `
         </div>
       </div>
     </header>
-    <div
+    <main
       class="content-container"
       id="content-container"
     >
@@ -3175,7 +3188,7 @@ exports[`Application component should render for anon user 1`] = `
           </div>
         </div>
       </div>
-    </div>
+    </main>
     <div
       class="offlineSnackbar"
     />

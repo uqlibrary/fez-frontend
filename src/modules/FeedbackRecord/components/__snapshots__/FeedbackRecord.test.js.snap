@@ -567,11 +567,11 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                   <div
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                   >
-                    <h6
+                    <h4
                       class="MuiTypography-root MuiTypography-h6 css-MuiTypography-root"
                     >
                       Do you identify as an Aboriginal and / or Torres Strait Islander person?
-                    </h6>
+                    </h4>
                     <div
                       class="MuiFormControl-root css-MuiFormControl-root"
                       style="width: 100%;"
@@ -783,11 +783,11 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                   <div
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                   >
-                    <h6
+                    <h4
                       class="MuiTypography-root MuiTypography-h6 css-MuiTypography-root"
                     >
                       Do you have a kinship connection to this item?
-                    </h6>
+                    </h4>
                     <div
                       class="MuiFormControl-root css-MuiFormControl-root"
                       style="width: 100%;"
@@ -903,7 +903,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                   <div
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                   >
-                    <h6
+                    <h4
                       class="MuiTypography-root MuiTypography-h6 css-MuiTypography-root"
                     >
                       Are you the Indigenous Cultural Intellectual Property (ICIP) rightsholders for the item?
@@ -933,7 +933,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                           </title>
                         </svg>
                       </button>
-                    </h6>
+                    </h4>
                     <div
                       class="MuiFormControl-root css-MuiFormControl-root"
                       style="width: 100%;"
@@ -1255,11 +1255,11 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                   <div
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                   >
-                    <h6
+                    <h4
                       class="MuiTypography-root MuiTypography-h6 css-MuiTypography-root"
                     >
                       Do you have more information on this item?
-                    </h6>
+                    </h4>
                     <div
                       class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-MuiFormControl-root-MuiTextField-root"
                       data-testid="community-info"
@@ -1313,11 +1313,11 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                   <div
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                   >
-                    <h6
+                    <h4
                       class="MuiTypography-root MuiTypography-h6 css-MuiTypography-root"
                     >
                       Have you identified any people, language and/or place in this item?
-                    </h6>
+                    </h4>
                     <div
                       class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-MuiFormControl-root-MuiTextField-root"
                       data-testid="related-people"
@@ -1400,11 +1400,11 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                   <div
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                   >
-                    <h6
+                    <h4
                       class="MuiTypography-root MuiTypography-h6 css-MuiTypography-root"
                     >
                       UQ Library is grateful for your assistance in caring for our collections
-                    </h6>
+                    </h4>
                     <div
                       class="MuiFormControl-root css-MuiFormControl-root"
                       style="width: 100%;"
@@ -2293,11 +2293,11 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                   <div
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                   >
-                    <h6
+                    <h4
                       class="MuiTypography-root MuiTypography-h6 css-MuiTypography-root"
                     >
                       Do you identify as an Aboriginal and / or Torres Strait Islander person?
-                    </h6>
+                    </h4>
                     <div
                       class="MuiFormControl-root css-MuiFormControl-root"
                       style="width: 100%;"
@@ -2509,11 +2509,11 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                   <div
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                   >
-                    <h6
+                    <h4
                       class="MuiTypography-root MuiTypography-h6 css-MuiTypography-root"
                     >
                       Do you have a kinship connection to this item?
-                    </h6>
+                    </h4>
                     <div
                       class="MuiFormControl-root css-MuiFormControl-root"
                       style="width: 100%;"
@@ -2629,7 +2629,7 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                   <div
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                   >
-                    <h6
+                    <h4
                       class="MuiTypography-root MuiTypography-h6 css-MuiTypography-root"
                     >
                       Are you the Indigenous Cultural Intellectual Property (ICIP) rightsholders for the item?
@@ -2659,7 +2659,7 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                           </title>
                         </svg>
                       </button>
-                    </h6>
+                    </h4>
                     <div
                       class="MuiFormControl-root css-MuiFormControl-root"
                       style="width: 100%;"
@@ -2961,11 +2961,11 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                   <div
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                   >
-                    <h6
+                    <h4
                       class="MuiTypography-root MuiTypography-h6 css-MuiTypography-root"
                     >
                       UQ Library is grateful for your assistance in caring for our collections
-                    </h6>
+                    </h4>
                     <div
                       class="MuiFormControl-root css-MuiFormControl-root"
                       style="width: 100%;"
@@ -3804,11 +3804,11 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                   <div
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                   >
-                    <h6
+                    <h4
                       class="MuiTypography-root MuiTypography-h6 css-MuiTypography-root"
                     >
                       Do you identify as an Aboriginal and / or Torres Strait Islander person?
-                    </h6>
+                    </h4>
                     <div
                       class="MuiFormControl-root css-MuiFormControl-root"
                       style="width: 100%;"
@@ -4020,11 +4020,11 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                   <div
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                   >
-                    <h6
+                    <h4
                       class="MuiTypography-root MuiTypography-h6 css-MuiTypography-root"
                     >
                       Do you have a kinship connection to this item?
-                    </h6>
+                    </h4>
                     <div
                       class="MuiFormControl-root css-MuiFormControl-root"
                       style="width: 100%;"
@@ -4140,7 +4140,7 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                   <div
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                   >
-                    <h6
+                    <h4
                       class="MuiTypography-root MuiTypography-h6 css-MuiTypography-root"
                     >
                       Are you the Indigenous Cultural Intellectual Property (ICIP) rightsholders for the item?
@@ -4170,7 +4170,7 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                           </title>
                         </svg>
                       </button>
-                    </h6>
+                    </h4>
                     <div
                       class="MuiFormControl-root css-MuiFormControl-root"
                       style="width: 100%;"
@@ -4486,11 +4486,11 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                 data-testid="standard-card-content"
                 id="standard-card-content"
               >
-                <h6
+                <h4
                   class="MuiTypography-root MuiTypography-h6 css-MuiTypography-root"
                 >
                   Would you like to share a story or provide more context about this item?
-                </h6>
+                </h4>
                 <div
                   class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-MuiFormControl-root-MuiTextField-root"
                   data-testid="story"
@@ -4563,11 +4563,11 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                   <div
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                   >
-                    <h6
+                    <h4
                       class="MuiTypography-root MuiTypography-h6 css-MuiTypography-root"
                     >
                       UQ Library is grateful for your assistance in caring for our collections
-                    </h6>
+                    </h4>
                     <div
                       class="MuiFormControl-root css-MuiFormControl-root"
                       style="width: 100%;"
@@ -5406,11 +5406,11 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                   <div
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                   >
-                    <h6
+                    <h4
                       class="MuiTypography-root MuiTypography-h6 css-MuiTypography-root"
                     >
                       Do you identify as an Aboriginal and / or Torres Strait Islander person?
-                    </h6>
+                    </h4>
                     <div
                       class="MuiFormControl-root css-MuiFormControl-root"
                       style="width: 100%;"
@@ -5622,11 +5622,11 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                   <div
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                   >
-                    <h6
+                    <h4
                       class="MuiTypography-root MuiTypography-h6 css-MuiTypography-root"
                     >
                       Do you have a kinship connection to this item?
-                    </h6>
+                    </h4>
                     <div
                       class="MuiFormControl-root css-MuiFormControl-root"
                       style="width: 100%;"
@@ -5742,7 +5742,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                   <div
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                   >
-                    <h6
+                    <h4
                       class="MuiTypography-root MuiTypography-h6 css-MuiTypography-root"
                     >
                       Are you the Indigenous Cultural Intellectual Property (ICIP) rightsholders for the item?
@@ -5772,7 +5772,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                           </title>
                         </svg>
                       </button>
-                    </h6>
+                    </h4>
                     <div
                       class="MuiFormControl-root css-MuiFormControl-root"
                       style="width: 100%;"
@@ -6094,11 +6094,11 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                   <div
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                   >
-                    <h6
+                    <h4
                       class="MuiTypography-root MuiTypography-h6 css-MuiTypography-root"
                     >
                       Does the item contain cultural information that is secret/sacred or sensitive?
-                    </h6>
+                    </h4>
                     <div
                       class="MuiFormControl-root css-MuiFormControl-root"
                       style="width: 100%;"
@@ -6319,11 +6319,11 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                   <div
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                   >
-                    <h6
+                    <h4
                       class="MuiTypography-root MuiTypography-h6 css-MuiTypography-root"
                     >
                       Does the item need to be managed with special care?
-                    </h6>
+                    </h4>
                     <div
                       class="MuiFormControl-root css-MuiFormControl-root"
                       style="width: 100%;"
@@ -6610,11 +6610,11 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                   <div
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                   >
-                    <h6
+                    <h4
                       class="MuiTypography-root MuiTypography-h6 css-MuiTypography-root"
                     >
                       UQ Library is grateful for your assistance in caring for our collections
-                    </h6>
+                    </h4>
                     <div
                       class="MuiFormControl-root css-MuiFormControl-root"
                       style="width: 100%;"

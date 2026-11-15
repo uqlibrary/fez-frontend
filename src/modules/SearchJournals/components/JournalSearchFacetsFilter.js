@@ -256,7 +256,7 @@ export const JournalSearchFacetsFilter = ({ facetsData, renameFacetsList = {}, d
             testId="journal-search-facets"
         >
             <div className="facetsFilter" id="facets-filter" data-testid="facets-filter">
-                <List component="nav" dense>
+                <List component="nav" dense aria-label={locale.components.searchJournals.journalFacetsFilter.title}>
                     {facetsToDisplay.map(item => {
                         const id = sanitiseId(`facet-category-${item.facetTitle}`);
                         return (

@@ -91,7 +91,7 @@ export const getRoutesConfig = ({
         },
         {
             path: pathConfig.about,
-            element: <components.StandardPage {...locale.pages.about} />,
+            element: <components.StandardPage {...locale.pages.about} hideTitle />,
         },
         {
             path: pathConfig.records.view(':pid'),

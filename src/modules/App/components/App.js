@@ -398,10 +398,11 @@ const AppClass = ({
                         skipNavAriaLabel: locale.global.skipNav.ariaLabel,
                         skipNavTitle: locale.global.skipNav.title,
                         closeMenuLabel: locale.global.mainNavButton.closeMenuLabel,
+                        navAriaLabel: locale.global.mainNavButton.navAriaLabel,
                     }}
                 />
             )}
-            <div className="content-container" id="content-container" style={containerStyle}>
+            <main className="content-container" id="content-container" style={containerStyle}>
                 <ScrollTop show containerId="content-container" />
 
                 <div id="espace-alerts-area" role="region" aria-label="eSpace alerts" style={{ paddingBottom: 24 }}>
@@ -448,7 +449,7 @@ const AppClass = ({
                         </React.Suspense>
                     </AccountContext.Provider>
                 )}
-            </div>
+            </main>
             <HelpDrawer />
             <OfflineSnackbar />
         </StyledGrid>

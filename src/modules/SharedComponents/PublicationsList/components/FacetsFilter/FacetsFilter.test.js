@@ -41,6 +41,12 @@ describe('FacetsFilter', () => {
         expect(getByTestId('facet-category-open-access')).toBeInTheDocument();
     });
 
+    it('should label the facets navigation', () => {
+        const facetsData = possibleUnclaimedList.filters.facets;
+        const { getByRole } = setup({ facetsData });
+        expect(getByRole('navigation', { name: 'Refine results' })).toBeInTheDocument();
+    });
+
     it('should handle facet click event', () => {
         const onFacetsChangedFn = jest.fn();
         const facetsData = possibleUnclaimedList.filters.facets;

@@ -63,17 +63,21 @@ test.describe('Conference Proceedings admin edit', () => {
         await expect(securityTab.locator('h4').nth(1)).toHaveText(`Datastream level security - ${record.rek_pid}`);
 
         const standardCardNth1 = securityTab.locator('.StandardCard').nth(1);
-        await expect(standardCardNth1.locator('h6').first()).toHaveText('Inherited datastream security policy details');
+        await expect(standardCardNth1.locator('h5').first()).toHaveText('Inherited datastream security policy details');
 
         for (const [index, collection] of record.fez_record_search_key_ismemberof.entries()) {
-            await expect(securityTab.locator('h6').nth(2 * index + 1)).toHaveText(collection.rek_ismemberof);
-            await expect(securityTab.locator('h6').nth(2 * index + 2)).toHaveText(collection.rek_ismemberof_lookup);
+            await expect(securityTab.locator('.MuiTypography-subtitle1').nth(index)).toHaveText(
+                collection.rek_ismemberof,
+            );
+            await expect(securityTab.locator('.MuiTypography-subtitle2').nth(index)).toHaveText(
+                collection.rek_ismemberof_lookup,
+            );
             await expect(securityTab.locator('p').nth(index)).toHaveText(
                 `Public (${collection.parent.rek_security_policy})`,
             );
         }
 
-        const overrideHeading = securityTab.locator('h6').getByText('Override datastream security policy details');
+        const overrideHeading = securityTab.locator('h5').getByText('Override datastream security policy details');
         const dsiPolicyBlock = overrideHeading.locator('+ div'); // Selects the next sibling div
         await expect(dsiPolicyBlock.locator(`a[title="${visibleFilename}"]`)).toHaveText(visibleFilename);
         await expect(dsiPolicyBlock.locator(`input[name="${visibleFilename}"]`)).toHaveValue(
