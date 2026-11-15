@@ -214,7 +214,7 @@ export const AdminInterface = ({
                         <Alert
                             message={txt.current.notSupportedMessage.replace('[pubType]', selectedPublicationType)}
                             type="info"
-                            announce="false"
+                            announce="off"
                         />
                     </Grid>
                 </Grid>
@@ -419,7 +419,7 @@ export const AdminInterface = ({
                             style={{ marginBottom: 12 }}
                         >
                             <Grid size={12}>
-                                <Alert message={txt.current.retractedMessage} type="warning" announce="false" />
+                                <Alert message={txt.current.retractedMessage} type="warning" announce="off" />
                             </Grid>
                         </Grid>
                     )}

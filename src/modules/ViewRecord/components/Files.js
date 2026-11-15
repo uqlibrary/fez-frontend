@@ -378,7 +378,7 @@ const Files = props => {
                         allowDismiss
                         type={'info'}
                         message={getSensitiveHandlingNote(publication)}
-                        announce="false"
+                        announce="off"
                     />
                 )}
                 {
@@ -387,7 +387,7 @@ const Files = props => {
                     ).length > 0 && (
                         <Alert
                             {...{ ...globalLocale.global.loginAlertForFiles, action: redirectUserToLogin() }}
-                            announce="false"
+                            announce="off"
                         />
                     )
                 }

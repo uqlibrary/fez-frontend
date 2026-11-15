@@ -519,9 +519,7 @@ exports[`Component TopCitedPublications should render top cited publications mod
           <div
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
           >
-            <span
-              role="alert"
-            >
+            <span>
               <b>
                 There has been an error - 
               </b>

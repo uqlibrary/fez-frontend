@@ -24,6 +24,8 @@ export type CustomAlertType =
     | 'done'
     | 'custom';
 
+export type AlertAnnounce = 'auto' | 'assertive' | 'off';
+
 export interface AlertProps {
     action?: () => void;
     actionButtonLabel?: string;
@@ -36,7 +38,7 @@ export interface AlertProps {
     message: React.ReactNode; // required
     showLoader?: boolean;
     alertId?: string;
-    announce?: boolean;
+    announce?: AlertAnnounce;
     title?: string;
     type?: AlertType;
     wiggle?: boolean | null;

@@ -318,7 +318,7 @@ const MyIncompleteRecord = ({ disableDeleteAllGrants, disableInitialGrants }) =>
                                     title={txt.prompt.title}
                                     message={txt.prompt.message}
                                     type={txt.prompt.type}
-                                    announce="false"
+                                    announce="off"
                                 />
                             </Grid>
                             <Grid size={12}>

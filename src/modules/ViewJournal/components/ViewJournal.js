@@ -221,7 +221,7 @@ export const ViewJournal = () => {
                     {Object.keys(journalDetails).length > 0 && journalDetails.jnl_advisory_statement && (
                         <Grid size={12}>
                             <Alert
-                                announce="false"
+                                announce="off"
                                 type={
                                     journalDetails?.jnl_advisory_statement_type_lookup?.trim?.().toLowerCase() || 'info'
                                 }
@@ -237,7 +237,7 @@ export const ViewJournal = () => {
                     {(capped === 'approaching' || capped === 'exceeded') && (
                         <Grid size={12}>
                             <Alert
-                                announce="false"
+                                announce="off"
                                 type={'warning'}
                                 title={viewJournalTxt.readAndPublish.alert.title}
                                 message={
@@ -253,7 +253,7 @@ export const ViewJournal = () => {
                     {capped === 'nodeal' && (
                         <Grid size={12}>
                             <Alert
-                                announce="false"
+                                announce="off"
                                 type={'info'}
                                 title={viewJournalTxt.readAndPublish.alert.title}
                                 message={

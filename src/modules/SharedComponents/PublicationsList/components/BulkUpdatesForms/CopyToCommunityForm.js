@@ -136,6 +136,7 @@ export const CopyToCommunityForm = ({ recordsSelected, onCancel, isRemoveFrom })
                     {isSubmitSuccessful && (
                         <Alert
                             alertId={`alert-done-${idText}-community`}
+                            announce="assertive"
                             {...txt.copyToCommunity.successAlert(isRemoveFrom)}
                         />
                     )}

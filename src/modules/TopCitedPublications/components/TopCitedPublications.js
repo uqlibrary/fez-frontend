@@ -149,7 +149,7 @@ export const TopCitedPublications = () => {
                     )}
                 </StandardCard>
             ) : (
-                <Alert {...txt.notAvailableAlert} announce="false" />
+                <Alert {...txt.notAvailableAlert} announce="off" />
             )}
         </React.Fragment>
     );

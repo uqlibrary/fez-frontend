@@ -114,7 +114,7 @@ export const ChangeDisplayTypeForm = ({ onCancel, recordsSelected }) => {
                         />
                     )}
                     {isSubmitSuccessful && (
-                        <Alert alertId="alert-done-change-display-type" {...txt.changeDisplayTypeForm.successAlert} />
+                        <Alert alertId="alert-done-change-display-type" announce="assertive" {...txt.changeDisplayTypeForm.successAlert} />
                     )}
                     {hasServerError && (
                         <Alert alertId="alert-error-change-display-type" {...txt.changeDisplayTypeForm.errorAlert}>

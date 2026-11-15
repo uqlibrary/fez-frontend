@@ -76,9 +76,7 @@ exports[`ThesisForm component 1`] = `
                       <div
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
                       >
-                        <span
-                          role="alert"
-                        >
+                        <span>
                           <span
                             data-testid="alert-message"
                           >
@@ -1216,9 +1214,7 @@ exports[`ThesisForm component with all fields disabled 1`] = `
                       <div
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
                       >
-                        <span
-                          role="alert"
-                        >
+                        <span>
                           <span
                             data-testid="alert-message"
                           >

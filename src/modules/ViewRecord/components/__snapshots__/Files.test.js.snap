@@ -1267,9 +1267,7 @@ exports[`Files Component  should not render sensitive handling note - scenario 1
                 <div
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
                 >
-                  <span
-                    role="status"
-                  >
+                  <span>
                     <span
                       data-testid="alert-message"
                     >
@@ -1631,9 +1629,7 @@ exports[`Files Component  should not render sensitive handling note - scenario 2
                 <div
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
                 >
-                  <span
-                    role="status"
-                  >
+                  <span>
                     <span
                       data-testid="alert-message"
                     >
@@ -1995,9 +1991,7 @@ exports[`Files Component  should render an image as the original filename with n
                 <div
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
                 >
-                  <span
-                    role="status"
-                  >
+                  <span>
                     <span
                       data-testid="alert-message"
                     >
@@ -2958,9 +2952,7 @@ exports[`Files Component  should render component 2`] = `
                 <div
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
                 >
-                  <span
-                    role="status"
-                  >
+                  <span>
                     <b>
                       You are not logged in - 
                     </b>
@@ -3857,9 +3849,7 @@ exports[`Files Component  should render component for public users 1`] = `
                 <div
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
                 >
-                  <span
-                    role="status"
-                  >
+                  <span>
                     <b>
                       You are not logged in - 
                     </b>
@@ -5334,9 +5324,7 @@ exports[`Files Component  should render sensitive handling note - other 1`] = `
                 <div
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
                 >
-                  <span
-                    role="status"
-                  >
+                  <span>
                     <span
                       data-testid="alert-message"
                     >
@@ -5698,9 +5686,7 @@ exports[`Files Component  should render sensitive handling note 1`] = `
                 <div
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
                 >
-                  <span
-                    role="status"
-                  >
+                  <span>
                     <span
                       data-testid="alert-message"
                     >
@@ -6062,9 +6048,7 @@ exports[`Files Component  should show a blacklisted collection member when the u
                 <div
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
                 >
-                  <span
-                    role="status"
-                  >
+                  <span>
                     <span
                       data-testid="alert-message"
                     >

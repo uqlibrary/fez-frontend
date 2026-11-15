@@ -7,7 +7,7 @@ const NtroHeader = ({}) => {
     const txt = componentLocale.components.ntroFields.header;
     return (
         <Grid size={12}>
-            <Alert title={txt.title} message={txt.body} type="info_outline" announce="false" />
+            <Alert title={txt.title} message={txt.body} type="info_outline" announce="off" />
         </Grid>
     );
 };
