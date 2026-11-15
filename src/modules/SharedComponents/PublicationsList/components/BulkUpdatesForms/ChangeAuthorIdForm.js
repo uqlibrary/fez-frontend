@@ -181,7 +181,11 @@ export const ChangeAuthorIdForm = ({ recordsSelected, onCancel }) => {
                         <Alert alertId="alert-info-change-author-id" {...txt.changeAuthorIdForm.submittingAlert} />
                     )}
                     {isSubmitSuccessful && (
-                        <Alert alertId="alert-done-change-author-id" announce="assertive" {...txt.changeAuthorIdForm.successAlert} />
+                        <Alert
+                            alertId="alert-done-change-author-id"
+                            announce="assertive"
+                            {...txt.changeAuthorIdForm.successAlert}
+                        />
                     )}
                     {hasServerError && (
                         <Alert alertId="alert-error-change-author-id" {...txt.changeAuthorIdForm.errorAlert}>

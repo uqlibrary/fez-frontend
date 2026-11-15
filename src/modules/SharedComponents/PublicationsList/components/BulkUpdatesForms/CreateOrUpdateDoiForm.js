@@ -81,7 +81,11 @@ export const CreateOrUpdateDoiForm = ({ onCancel, recordsSelected }) => {
                         />
                     )}
                     {!!isSubmitSuccessful && (
-                        <Alert alertId="alert-done-create-or-update-doi" announce="assertive" {...txt.createOrUpdateDoiForm.successAlert} />
+                        <Alert
+                            alertId="alert-done-create-or-update-doi"
+                            announce="assertive"
+                            {...txt.createOrUpdateDoiForm.successAlert}
+                        />
                     )}
                     {!!hasError && (
                         <Alert alertId="alert-error-create-or-update-doi" {...txt.createOrUpdateDoiForm.errorAlert} />

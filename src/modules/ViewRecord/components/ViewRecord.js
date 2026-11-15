@@ -311,11 +311,7 @@ export const ViewRecord = () => {
                 )}
                 {isDeleted && (
                     <Grid style={{ marginBottom: 24 }} size={12}>
-                        <Alert
-                            {...txt.deletedAlert}
-                            message={txt.deletedAlert.message(recordToView)}
-                            announce="off"
-                        />
+                        <Alert {...txt.deletedAlert} message={txt.deletedAlert.message(recordToView)} announce="off" />
                     </Grid>
                 )}
                 {!!version && !!recordToView?.rek_version && (
