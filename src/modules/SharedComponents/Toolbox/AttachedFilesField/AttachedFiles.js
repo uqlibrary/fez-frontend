@@ -588,6 +588,7 @@ export const AttachedFiles = ({
                                                             onClick={onFileDelete(item.fileName)}
                                                             disabled={disabled}
                                                             sx={{ padding: '12px' }}
+                                                            aria-label={deleteHint}
                                                         >
                                                             <Delete />
                                                         </IconButton>

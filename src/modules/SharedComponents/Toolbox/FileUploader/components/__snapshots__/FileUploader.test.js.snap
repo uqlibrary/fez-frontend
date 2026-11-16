@@ -256,6 +256,7 @@ exports[`Component FileUploader should alphabetically order files as they are ad
                 data-mui-internal-clone-element="true"
               >
                 <button
+                  aria-label="Remove all files from the upload queue"
                   class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                   data-analyticsid="delete-all-files"
                   data-testid="delete-all-files"
@@ -342,6 +343,7 @@ exports[`Component FileUploader should alphabetically order files as they are ad
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this file"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-0-delete"
                 data-testid="dsi-dsid-0-delete"
@@ -421,6 +423,7 @@ exports[`Component FileUploader should alphabetically order files as they are ad
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this file"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-1-delete"
                 data-testid="dsi-dsid-1-delete"
@@ -704,6 +707,7 @@ exports[`Component FileUploader should alphabetically order files as they are ad
                 data-mui-internal-clone-element="true"
               >
                 <button
+                  aria-label="Remove all files from the upload queue"
                   class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                   data-analyticsid="delete-all-files"
                   data-testid="delete-all-files"
@@ -790,6 +794,7 @@ exports[`Component FileUploader should alphabetically order files as they are ad
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this file"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-0-delete"
                 data-testid="dsi-dsid-0-delete"
@@ -869,6 +874,7 @@ exports[`Component FileUploader should alphabetically order files as they are ad
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this file"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-1-delete"
                 data-testid="dsi-dsid-1-delete"
@@ -948,6 +954,7 @@ exports[`Component FileUploader should alphabetically order files as they are ad
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this file"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-2-delete"
                 data-testid="dsi-dsid-2-delete"
@@ -1350,6 +1357,7 @@ exports[`Component FileUploader should delete first file 1`] = `
                 data-mui-internal-clone-element="true"
               >
                 <button
+                  aria-label="Remove all files from the upload queue"
                   class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                   data-analyticsid="delete-all-files"
                   data-testid="delete-all-files"
@@ -1436,6 +1444,7 @@ exports[`Component FileUploader should delete first file 1`] = `
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this file"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-0-delete"
                 data-testid="dsi-dsid-0-delete"
@@ -1719,6 +1728,7 @@ exports[`Component FileUploader should drag and drop 2 files 1`] = `
                 data-mui-internal-clone-element="true"
               >
                 <button
+                  aria-label="Remove all files from the upload queue"
                   class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                   data-analyticsid="delete-all-files"
                   data-testid="delete-all-files"
@@ -1805,6 +1815,7 @@ exports[`Component FileUploader should drag and drop 2 files 1`] = `
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this file"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-0-delete"
                 data-testid="dsi-dsid-0-delete"
@@ -1884,6 +1895,7 @@ exports[`Component FileUploader should drag and drop 2 files 1`] = `
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this file"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-1-delete"
                 data-testid="dsi-dsid-1-delete"
@@ -2421,6 +2433,7 @@ exports[`Component FileUploader should not render rows for uploaded files with a
                 data-mui-internal-clone-element="true"
               >
                 <button
+                  aria-label="Remove all files from the upload queue"
                   class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                   data-analyticsid="delete-all-files"
                   data-testid="delete-all-files"
@@ -2507,6 +2520,7 @@ exports[`Component FileUploader should not render rows for uploaded files with a
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this file"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-0-delete"
                 data-testid="dsi-dsid-0-delete"
@@ -2586,6 +2600,7 @@ exports[`Component FileUploader should not render rows for uploaded files with a
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this file"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-1-delete"
                 data-testid="dsi-dsid-1-delete"
@@ -3006,6 +3021,7 @@ exports[`Component FileUploader should not reset file access or embargo date inf
                 data-mui-internal-clone-element="true"
               >
                 <button
+                  aria-label="Remove all files from the upload queue"
                   class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                   data-analyticsid="delete-all-files"
                   data-testid="delete-all-files"
@@ -3186,6 +3202,7 @@ exports[`Component FileUploader should not reset file access or embargo date inf
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this file"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-0-delete"
                 data-testid="dsi-dsid-0-delete"
@@ -3331,6 +3348,7 @@ exports[`Component FileUploader should not reset file access or embargo date inf
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this file"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-1-delete"
                 data-testid="dsi-dsid-1-delete"
@@ -4144,6 +4162,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                 data-mui-internal-clone-element="true"
               >
                 <button
+                  aria-label="Remove all files from the upload queue"
                   class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                   data-analyticsid="delete-all-files"
                   data-testid="delete-all-files"
@@ -4296,6 +4315,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this file"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-0-delete"
                 data-testid="dsi-dsid-0-delete"
@@ -4441,6 +4461,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this file"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-1-delete"
                 data-testid="dsi-dsid-1-delete"
@@ -4742,6 +4763,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                 data-mui-internal-clone-element="true"
               >
                 <button
+                  aria-label="Remove all files from the upload queue"
                   class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                   data-analyticsid="delete-all-files"
                   data-testid="delete-all-files"
@@ -4886,6 +4908,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this file"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-0-delete"
                 data-testid="dsi-dsid-0-delete"
@@ -5031,6 +5054,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this file"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-1-delete"
                 data-testid="dsi-dsid-1-delete"
@@ -5332,6 +5356,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                 data-mui-internal-clone-element="true"
               >
                 <button
+                  aria-label="Remove all files from the upload queue"
                   class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                   data-analyticsid="delete-all-files"
                   data-testid="delete-all-files"
@@ -5476,6 +5501,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this file"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-0-delete"
                 data-testid="dsi-dsid-0-delete"
@@ -5649,6 +5675,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this file"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-1-delete"
                 data-testid="dsi-dsid-1-delete"
@@ -6087,6 +6114,7 @@ exports[`Component FileUploader should render rows for uploaded files with defau
                 data-mui-internal-clone-element="true"
               >
                 <button
+                  aria-label="Remove all files from the upload queue"
                   class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                   data-analyticsid="delete-all-files"
                   data-testid="delete-all-files"
@@ -6173,6 +6201,7 @@ exports[`Component FileUploader should render rows for uploaded files with defau
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this file"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-0-delete"
                 data-testid="dsi-dsid-0-delete"
@@ -6252,6 +6281,7 @@ exports[`Component FileUploader should render rows for uploaded files with defau
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this file"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-1-delete"
                 data-testid="dsi-dsid-1-delete"
@@ -6672,6 +6702,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                 data-mui-internal-clone-element="true"
               >
                 <button
+                  aria-label="Remove all files from the upload queue"
                   class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                   data-analyticsid="delete-all-files"
                   data-testid="delete-all-files"
@@ -6828,6 +6859,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this file"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-0-delete"
                 data-testid="dsi-dsid-0-delete"
@@ -6977,6 +7009,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this file"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-1-delete"
                 data-testid="dsi-dsid-1-delete"
@@ -7278,6 +7311,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                 data-mui-internal-clone-element="true"
               >
                 <button
+                  aria-label="Remove all files from the upload queue"
                   class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                   data-analyticsid="delete-all-files"
                   data-testid="delete-all-files"
@@ -7428,6 +7462,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this file"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-0-delete"
                 data-testid="dsi-dsid-0-delete"
@@ -7577,6 +7612,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this file"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-1-delete"
                 data-testid="dsi-dsid-1-delete"
@@ -7878,6 +7914,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                 data-mui-internal-clone-element="true"
               >
                 <button
+                  aria-label="Remove all files from the upload queue"
                   class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                   data-analyticsid="delete-all-files"
                   data-testid="delete-all-files"
@@ -8028,6 +8065,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this file"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-0-delete"
                 data-testid="dsi-dsid-0-delete"
@@ -8207,6 +8245,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this file"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-1-delete"
                 data-testid="dsi-dsid-1-delete"
@@ -8694,6 +8733,7 @@ exports[`Component FileUploader should set max files error message 1`] = `
                 data-mui-internal-clone-element="true"
               >
                 <button
+                  aria-label="Remove all files from the upload queue"
                   class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                   data-analyticsid="delete-all-files"
                   data-testid="delete-all-files"
@@ -8780,6 +8820,7 @@ exports[`Component FileUploader should set max files error message 1`] = `
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this file"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-0-delete"
                 data-testid="dsi-dsid-0-delete"
@@ -9081,6 +9122,7 @@ exports[`Component FileUploader should update file description 1`] = `
                 data-mui-internal-clone-element="true"
               >
                 <button
+                  aria-label="Remove all files from the upload queue"
                   class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                   data-analyticsid="delete-all-files"
                   data-testid="delete-all-files"
@@ -9233,6 +9275,7 @@ exports[`Component FileUploader should update file description 1`] = `
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this file"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-0-delete"
                 data-testid="dsi-dsid-0-delete"

@@ -116,13 +116,10 @@ const ImageGalleryItem = ({
         !!url && url.length > 0
             ? {
                   onClick: () => viewRecord(navigate, url),
+                  onKeyPress: key => handleKeyboardPressActivate(key, () => viewRecord(navigate, url)),
                   role: 'button',
+                  tabIndex: 0,
               }
-            : {};
-
-    const listItemAriaLabel =
-        !advisory && !restricted
-            ? { 'aria-label': txt.components.imageGallery.thumbnail.ariaLabel.replace('[title]', item.rek_title) }
             : {};
 
     const { ref, inView } = useInView({
@@ -145,16 +142,13 @@ const ImageGalleryItem = ({
                     ...(!!clickLink.onClick && internalClasses.imageListItemWithLink),
                 },
             }}
-            tabIndex={0}
-            onKeyPress={key => handleKeyboardPressActivate(key, () => viewRecord(navigate, url))}
-            {...listItemAriaLabel}
             {...clickLink}
             {...rest}
         >
             <ImageGalleryItemImage
                 item={item}
                 security={security}
-                alt={item.rek_title}
+                alt=""
                 width={itemWidth}
                 height={itemHeight}
                 classes={{

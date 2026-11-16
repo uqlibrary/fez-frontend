@@ -239,10 +239,9 @@ exports[`Component ClaimRecord  snapshots should render claim form if publicatio
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
-                                      title="Full citation in Web of science will open in a new window"
                                     >
                                       <span
-                                        class="fez-icon wos large"
+                                        class="fez-icon wos xxlarge"
                                       />
                                       <span
                                         class="MuiBox-root css"
@@ -260,10 +259,9 @@ exports[`Component ClaimRecord  snapshots should render claim form if publicatio
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
-                                      title="Full citation in Scopus will open in a new window"
                                     >
                                       <span
-                                        class="fez-icon scopus large"
+                                        class="fez-icon scopus xxlarge"
                                       />
                                       <span
                                         class="MuiBox-root css"
@@ -281,10 +279,9 @@ exports[`Component ClaimRecord  snapshots should render claim form if publicatio
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
-                                      title="Full citation in Altmetric will open in a new window"
                                     >
                                       <span
-                                        class="fez-icon altmetric large"
+                                        class="fez-icon altmetric xxlarge"
                                       />
                                       <span
                                         class="MuiBox-root css"
@@ -459,7 +456,7 @@ exports[`Component ClaimRecord  snapshots should render claim form if publicatio
                   class="MuiCardHeader-action css-MuiCardHeader-action"
                 >
                   <button
-                    aria-label="Click for more information"
+                    aria-label="Content Indicators - Click for more information"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="help-icon"
                     data-mui-internal-clone-element="true"
@@ -469,18 +466,15 @@ exports[`Component ClaimRecord  snapshots should render claim form if publicatio
                     type="button"
                   >
                     <svg
+                      aria-hidden="true"
                       class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
                       data-testid="HelpOutlineIcon"
                       focusable="false"
-                      role="img"
                       viewBox="0 0 24 24"
                     >
                       <path
                         d="M11 18h2v-2h-2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4"
                       />
-                      <title>
-                        Click for more information
-                      </title>
                     </svg>
                   </button>
                 </div>
@@ -1665,10 +1659,9 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
-                                      title="Full citation in Web of science will open in a new window"
                                     >
                                       <span
-                                        class="fez-icon wos large"
+                                        class="fez-icon wos xxlarge"
                                       />
                                       <span
                                         class="MuiBox-root css"
@@ -1686,10 +1679,9 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
-                                      title="Full citation in Scopus will open in a new window"
                                     >
                                       <span
-                                        class="fez-icon scopus large"
+                                        class="fez-icon scopus xxlarge"
                                       />
                                       <span
                                         class="MuiBox-root css"
@@ -1707,10 +1699,9 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
-                                      title="Full citation in Altmetric will open in a new window"
                                     >
                                       <span
-                                        class="fez-icon altmetric large"
+                                        class="fez-icon altmetric xxlarge"
                                       />
                                       <span
                                         class="MuiBox-root css"
@@ -1984,7 +1975,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
                   class="MuiCardHeader-action css-MuiCardHeader-action"
                 >
                   <button
-                    aria-label="Click for more information"
+                    aria-label="Content Indicators - Click for more information"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="help-icon"
                     data-mui-internal-clone-element="true"
@@ -1994,18 +1985,15 @@ exports[`Component ClaimRecord  snapshots should render claim form, author linki
                     type="button"
                   >
                     <svg
+                      aria-hidden="true"
                       class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
                       data-testid="HelpOutlineIcon"
                       focusable="false"
-                      role="img"
                       viewBox="0 0 24 24"
                     >
                       <path
                         d="M11 18h2v-2h-2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4"
                       />
-                      <title>
-                        Click for more information
-                      </title>
                     </svg>
                   </button>
                 </div>
@@ -3146,10 +3134,9 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
-                                      title="Full citation in Web of science will open in a new window"
                                     >
                                       <span
-                                        class="fez-icon wos large"
+                                        class="fez-icon wos xxlarge"
                                       />
                                       <span
                                         class="MuiBox-root css"
@@ -3167,10 +3154,9 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
-                                      title="Full citation in Scopus will open in a new window"
                                     >
                                       <span
-                                        class="fez-icon scopus large"
+                                        class="fez-icon scopus xxlarge"
                                       />
                                       <span
                                         class="MuiBox-root css"
@@ -3188,10 +3174,9 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
-                                      title="Full citation in Altmetric will open in a new window"
                                     >
                                       <span
-                                        class="fez-icon altmetric large"
+                                        class="fez-icon altmetric xxlarge"
                                       />
                                       <span
                                         class="MuiBox-root css"
@@ -3209,10 +3194,9 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
-                                      title="Full citation in Google scholar will open in a new window"
                                     >
                                       <span
-                                        class="fez-icon google large"
+                                        class="fez-icon google xxlarge"
                                       />
                                     </a>
                                     <span
@@ -3880,7 +3864,7 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                   class="MuiCardHeader-action css-MuiCardHeader-action"
                 >
                   <button
-                    aria-label="Click for more information"
+                    aria-label="Content Indicators - Click for more information"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="help-icon"
                     data-mui-internal-clone-element="true"
@@ -3890,18 +3874,15 @@ exports[`Component ClaimRecord  snapshots should render claim form, contributor 
                     type="button"
                   >
                     <svg
+                      aria-hidden="true"
                       class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
                       data-testid="HelpOutlineIcon"
                       focusable="false"
-                      role="img"
                       viewBox="0 0 24 24"
                     >
                       <path
                         d="M11 18h2v-2h-2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4"
                       />
-                      <title>
-                        Click for more information
-                      </title>
                     </svg>
                   </button>
                 </div>
@@ -4451,10 +4432,9 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
-                                      title="Full citation in Web of science will open in a new window"
                                     >
                                       <span
-                                        class="fez-icon wos large"
+                                        class="fez-icon wos xxlarge"
                                       />
                                       <span
                                         class="MuiBox-root css"
@@ -4472,10 +4452,9 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
-                                      title="Full citation in Scopus will open in a new window"
                                     >
                                       <span
-                                        class="fez-icon scopus large"
+                                        class="fez-icon scopus xxlarge"
                                       />
                                       <span
                                         class="MuiBox-root css"
@@ -4493,10 +4472,9 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
-                                      title="Full citation in Altmetric will open in a new window"
                                     >
                                       <span
-                                        class="fez-icon altmetric large"
+                                        class="fez-icon altmetric xxlarge"
                                       />
                                       <span
                                         class="MuiBox-root css"
@@ -4514,10 +4492,9 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
-                                      title="Full citation in Google scholar will open in a new window"
                                     >
                                       <span
-                                        class="fez-icon google large"
+                                        class="fez-icon google xxlarge"
                                       />
                                     </a>
                                     <span
@@ -5202,7 +5179,7 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
                   class="MuiCardHeader-action css-MuiCardHeader-action"
                 >
                   <button
-                    aria-label="Click for more information"
+                    aria-label="Content Indicators - Click for more information"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="help-icon"
                     data-mui-internal-clone-element="true"
@@ -5212,18 +5189,15 @@ exports[`Component ClaimRecord  snapshots should render claim publication form 1
                     type="button"
                   >
                     <svg
+                      aria-hidden="true"
                       class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
                       data-testid="HelpOutlineIcon"
                       focusable="false"
-                      role="img"
                       viewBox="0 0 24 24"
                     >
                       <path
                         d="M11 18h2v-2h-2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4"
                       />
-                      <title>
-                        Click for more information
-                      </title>
                     </svg>
                   </button>
                 </div>
@@ -5720,10 +5694,9 @@ exports[`Component ClaimRecord  snapshots should render publication citation, er
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
-                                      title="Full citation in Web of science will open in a new window"
                                     >
                                       <span
-                                        class="fez-icon wos large"
+                                        class="fez-icon wos xxlarge"
                                       />
                                       <span
                                         class="MuiBox-root css"
@@ -5741,10 +5714,9 @@ exports[`Component ClaimRecord  snapshots should render publication citation, er
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
-                                      title="Full citation in Scopus will open in a new window"
                                     >
                                       <span
-                                        class="fez-icon scopus large"
+                                        class="fez-icon scopus xxlarge"
                                       />
                                       <span
                                         class="MuiBox-root css"
@@ -5762,10 +5734,9 @@ exports[`Component ClaimRecord  snapshots should render publication citation, er
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
-                                      title="Full citation in Altmetric will open in a new window"
                                     >
                                       <span
-                                        class="fez-icon altmetric large"
+                                        class="fez-icon altmetric xxlarge"
                                       />
                                       <span
                                         class="MuiBox-root css"
@@ -5783,10 +5754,9 @@ exports[`Component ClaimRecord  snapshots should render publication citation, er
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
-                                      title="Full citation in Google scholar will open in a new window"
                                     >
                                       <span
-                                        class="fez-icon google large"
+                                        class="fez-icon google xxlarge"
                                       />
                                     </a>
                                     <span
@@ -6171,10 +6141,9 @@ exports[`Component ClaimRecord  snapshots should show contributor as linked 1`] 
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
-                                      title="Full citation in Web of science will open in a new window"
                                     >
                                       <span
-                                        class="fez-icon wos large"
+                                        class="fez-icon wos xxlarge"
                                       />
                                       <span
                                         class="MuiBox-root css"
@@ -6192,10 +6161,9 @@ exports[`Component ClaimRecord  snapshots should show contributor as linked 1`] 
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
-                                      title="Full citation in Scopus will open in a new window"
                                     >
                                       <span
-                                        class="fez-icon scopus large"
+                                        class="fez-icon scopus xxlarge"
                                       />
                                       <span
                                         class="MuiBox-root css"
@@ -6213,10 +6181,9 @@ exports[`Component ClaimRecord  snapshots should show contributor as linked 1`] 
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
-                                      title="Full citation in Altmetric will open in a new window"
                                     >
                                       <span
-                                        class="fez-icon altmetric large"
+                                        class="fez-icon altmetric xxlarge"
                                       />
                                       <span
                                         class="MuiBox-root css"
@@ -6234,10 +6201,9 @@ exports[`Component ClaimRecord  snapshots should show contributor as linked 1`] 
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
-                                      title="Full citation in Google scholar will open in a new window"
                                     >
                                       <span
-                                        class="fez-icon google large"
+                                        class="fez-icon google xxlarge"
                                       />
                                     </a>
                                     <span

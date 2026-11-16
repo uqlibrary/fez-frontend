@@ -20,11 +20,16 @@ exports[`Dashboard Researcher IDs test Render the authors Researcher IDs as expe
         target="_blank"
       >
         <div
-          aria-label="Your Researcher (ISI) ID is A-1137-2007 - Click to review"
-          class="fez-icon researcher ok"
+          aria-label="Click to review your Researcher (ISI) ID (opens in new window)"
+          class="fez-icon researcher ok xxlarge"
           data-mui-internal-clone-element="true"
           style="width: 32px; height: 32px; border-radius: 32px;"
         />
+        <span
+          class="sr-only"
+        >
+          Click to review your Researcher (ISI) ID (opens in new window)
+        </span>
       </a>
     </div>
     <div
@@ -41,11 +46,16 @@ exports[`Dashboard Researcher IDs test Render the authors Researcher IDs as expe
         target="_blank"
       >
         <div
-          aria-label="Your Scopus ID is 35478294000 - Click to review"
-          class="fez-icon scopus error"
+          aria-label="Click to review your Scopus ID (opens in new window)"
+          class="fez-icon scopus error xxlarge"
           data-mui-internal-clone-element="true"
           style="width: 32px; height: 32px; border-radius: 32px;"
         />
+        <span
+          class="sr-only"
+        >
+          Click to review your Scopus ID (opens in new window)
+        </span>
       </a>
     </div>
     <div
@@ -62,11 +72,16 @@ exports[`Dashboard Researcher IDs test Render the authors Researcher IDs as expe
         target="_blank"
       >
         <div
-          aria-label="Your Google Scholar ID is kUemDfMAAAAJ - Click to review"
-          class="fez-icon google_scholar error"
+          aria-label="Click to review your Google Scholar ID (opens in new window)"
+          class="fez-icon google_scholar error xxlarge"
           data-mui-internal-clone-element="true"
           style="width: 32px; height: 32px; border-radius: 32px;"
         />
+        <span
+          class="sr-only"
+        >
+          Click to review your Google Scholar ID (opens in new window)
+        </span>
       </a>
     </div>
     <div
@@ -83,11 +98,16 @@ exports[`Dashboard Researcher IDs test Render the authors Researcher IDs as expe
         target="_blank"
       >
         <div
-          aria-label="Your ORCID ID is 0000-0001-1111-1111 - Click to review"
-          class="fez-icon orcid ok"
+          aria-label="Click to review your ORCID ID (opens in new window)"
+          class="fez-icon orcid ok xxlarge"
           data-mui-internal-clone-element="true"
           style="width: 32px; height: 32px; border-radius: 32px;"
         />
+        <span
+          class="sr-only"
+        >
+          Click to review your ORCID ID (opens in new window)
+        </span>
       </a>
     </div>
     <div
@@ -132,11 +152,16 @@ exports[`Dashboard Researcher IDs test Testing auth internal links 1`] = `
         target="_blank"
       >
         <div
-          aria-label="Your Researcher (ISI) ID is A-1137-2007 - Click to review"
-          class="fez-icon researcher ok"
+          aria-label="Click to review your Researcher (ISI) ID (opens in new window)"
+          class="fez-icon researcher ok xxlarge"
           data-mui-internal-clone-element="true"
           style="width: 32px; height: 32px; border-radius: 32px;"
         />
+        <span
+          class="sr-only"
+        >
+          Click to review your Researcher (ISI) ID (opens in new window)
+        </span>
       </a>
     </div>
     <div
@@ -153,11 +178,16 @@ exports[`Dashboard Researcher IDs test Testing auth internal links 1`] = `
         target="_blank"
       >
         <div
-          aria-label="Your Scopus ID is 35478294000 - Click to review"
-          class="fez-icon scopus ok"
+          aria-label="Click to review your Scopus ID (opens in new window)"
+          class="fez-icon scopus ok xxlarge"
           data-mui-internal-clone-element="true"
           style="width: 32px; height: 32px; border-radius: 32px;"
         />
+        <span
+          class="sr-only"
+        >
+          Click to review your Scopus ID (opens in new window)
+        </span>
       </a>
     </div>
     <div
@@ -174,11 +204,16 @@ exports[`Dashboard Researcher IDs test Testing auth internal links 1`] = `
         target="_blank"
       >
         <div
-          aria-label="Your Google Scholar ID is kUemDfMAAAAJ - Click to review"
-          class="fez-icon google_scholar ok"
+          aria-label="Click to review your Google Scholar ID (opens in new window)"
+          class="fez-icon google_scholar ok xxlarge"
           data-mui-internal-clone-element="true"
           style="width: 32px; height: 32px; border-radius: 32px;"
         />
+        <span
+          class="sr-only"
+        >
+          Click to review your Google Scholar ID (opens in new window)
+        </span>
       </a>
     </div>
     <div
@@ -192,7 +227,7 @@ exports[`Dashboard Researcher IDs test Testing auth internal links 1`] = `
         title="You are not linked to ORCID - Click for more information"
       >
         <div
-          class="fez-icon orcid dashboard ok"
+          class="fez-icon orcid dashboard ok xxlarge"
           title="You are not linked to ORCID - Click for more information"
         />
       </a>
@@ -221,11 +256,16 @@ exports[`Dashboard Researcher IDs test Testing clicking on ID internal links 1`]
         target="_blank"
       >
         <div
-          aria-label="Your Researcher (ISI) ID is A-1137-2007 - Click to review"
-          class="fez-icon researcher error"
+          aria-label="Click to review your Researcher (ISI) ID (opens in new window)"
+          class="fez-icon researcher error xxlarge"
           data-mui-internal-clone-element="true"
           style="width: 32px; height: 32px; border-radius: 32px;"
         />
+        <span
+          class="sr-only"
+        >
+          Click to review your Researcher (ISI) ID (opens in new window)
+        </span>
       </a>
     </div>
     <div
@@ -242,11 +282,16 @@ exports[`Dashboard Researcher IDs test Testing clicking on ID internal links 1`]
         target="_blank"
       >
         <div
-          aria-label="Your Scopus ID is 35478294000 - Click to review"
-          class="fez-icon scopus error"
+          aria-label="Click to review your Scopus ID (opens in new window)"
+          class="fez-icon scopus error xxlarge"
           data-mui-internal-clone-element="true"
           style="width: 32px; height: 32px; border-radius: 32px;"
         />
+        <span
+          class="sr-only"
+        >
+          Click to review your Scopus ID (opens in new window)
+        </span>
       </a>
     </div>
     <div
@@ -263,11 +308,16 @@ exports[`Dashboard Researcher IDs test Testing clicking on ID internal links 1`]
         target="_blank"
       >
         <div
-          aria-label="Your Google Scholar ID is kUemDfMAAAAJ - Click to review"
-          class="fez-icon google_scholar error"
+          aria-label="Click to review your Google Scholar ID (opens in new window)"
+          class="fez-icon google_scholar error xxlarge"
           data-mui-internal-clone-element="true"
           style="width: 32px; height: 32px; border-radius: 32px;"
         />
+        <span
+          class="sr-only"
+        >
+          Click to review your Google Scholar ID (opens in new window)
+        </span>
       </a>
     </div>
     <div
@@ -281,7 +331,7 @@ exports[`Dashboard Researcher IDs test Testing clicking on ID internal links 1`]
         title="You are not linked to ORCID - Click for more information"
       >
         <div
-          class="fez-icon orcid dashboard error"
+          class="fez-icon orcid dashboard error xxlarge"
           title="You are not linked to ORCID - Click for more information"
         />
       </a>
@@ -310,11 +360,16 @@ exports[`Dashboard Researcher IDs test Testing google scholar id with orcid capt
         target="_blank"
       >
         <div
-          aria-label="Your Researcher (ISI) ID is A-1137-2007 - Click to review"
-          class="fez-icon researcher ok"
+          aria-label="Click to review your Researcher (ISI) ID (opens in new window)"
+          class="fez-icon researcher ok xxlarge"
           data-mui-internal-clone-element="true"
           style="width: 32px; height: 32px; border-radius: 32px;"
         />
+        <span
+          class="sr-only"
+        >
+          Click to review your Researcher (ISI) ID (opens in new window)
+        </span>
       </a>
     </div>
     <div
@@ -331,11 +386,16 @@ exports[`Dashboard Researcher IDs test Testing google scholar id with orcid capt
         target="_blank"
       >
         <div
-          aria-label="Your Scopus ID is 35478294000 - Click to review"
-          class="fez-icon scopus ok"
+          aria-label="Click to review your Scopus ID (opens in new window)"
+          class="fez-icon scopus ok xxlarge"
           data-mui-internal-clone-element="true"
           style="width: 32px; height: 32px; border-radius: 32px;"
         />
+        <span
+          class="sr-only"
+        >
+          Click to review your Scopus ID (opens in new window)
+        </span>
       </a>
     </div>
     <div
@@ -353,10 +413,15 @@ exports[`Dashboard Researcher IDs test Testing google scholar id with orcid capt
       >
         <div
           aria-label="You are not linked to Google Scholar - Click to review via ORCID"
-          class="fez-icon google_scholar error"
+          class="fez-icon google_scholar error xxlarge"
           data-mui-internal-clone-element="true"
           style="width: 32px; height: 32px; border-radius: 32px;"
         />
+        <span
+          class="sr-only"
+        >
+          You are not linked to Google Scholar - Click to review via ORCID
+        </span>
       </a>
     </div>
     <div
@@ -373,11 +438,16 @@ exports[`Dashboard Researcher IDs test Testing google scholar id with orcid capt
         target="_blank"
       >
         <div
-          aria-label="Your ORCID ID is 0000-0001-1111-1111 - Click to review"
-          class="fez-icon orcid ok"
+          aria-label="Click to review your ORCID ID (opens in new window)"
+          class="fez-icon orcid ok xxlarge"
           data-mui-internal-clone-element="true"
           style="width: 32px; height: 32px; border-radius: 32px;"
         />
+        <span
+          class="sr-only"
+        >
+          Click to review your ORCID ID (opens in new window)
+        </span>
       </a>
     </div>
     <div
@@ -422,11 +492,16 @@ exports[`Dashboard Researcher IDs test Testing google scholar id without orcid c
         target="_blank"
       >
         <div
-          aria-label="Your Researcher (ISI) ID is A-1137-2007 - Click to review"
-          class="fez-icon researcher ok"
+          aria-label="Click to review your Researcher (ISI) ID (opens in new window)"
+          class="fez-icon researcher ok xxlarge"
           data-mui-internal-clone-element="true"
           style="width: 32px; height: 32px; border-radius: 32px;"
         />
+        <span
+          class="sr-only"
+        >
+          Click to review your Researcher (ISI) ID (opens in new window)
+        </span>
       </a>
     </div>
     <div
@@ -443,11 +518,16 @@ exports[`Dashboard Researcher IDs test Testing google scholar id without orcid c
         target="_blank"
       >
         <div
-          aria-label="Your Scopus ID is 35478294000 - Click to review"
-          class="fez-icon scopus ok"
+          aria-label="Click to review your Scopus ID (opens in new window)"
+          class="fez-icon scopus ok xxlarge"
           data-mui-internal-clone-element="true"
           style="width: 32px; height: 32px; border-radius: 32px;"
         />
+        <span
+          class="sr-only"
+        >
+          Click to review your Scopus ID (opens in new window)
+        </span>
       </a>
     </div>
     <div
@@ -461,7 +541,7 @@ exports[`Dashboard Researcher IDs test Testing google scholar id without orcid c
         title="You are not linked to Google Scholar - Click to link via ORCID"
       >
         <div
-          class="fez-icon google_scholar dashboard ok"
+          class="fez-icon google_scholar dashboard ok xxlarge"
           title="You are not linked to Google Scholar - Click to link via ORCID"
         />
       </a>
@@ -477,7 +557,7 @@ exports[`Dashboard Researcher IDs test Testing google scholar id without orcid c
         title="You are not linked to ORCID - Click for more information"
       >
         <div
-          class="fez-icon orcid dashboard ok"
+          class="fez-icon orcid dashboard ok xxlarge"
           title="You are not linked to ORCID - Click for more information"
         />
       </a>
@@ -506,11 +586,16 @@ exports[`Dashboard Researcher IDs test Testing orcid caption 1`] = `
         target="_blank"
       >
         <div
-          aria-label="Your Researcher (ISI) ID is A-1137-2007 - Click to review"
-          class="fez-icon researcher ok"
+          aria-label="Click to review your Researcher (ISI) ID (opens in new window)"
+          class="fez-icon researcher ok xxlarge"
           data-mui-internal-clone-element="true"
           style="width: 32px; height: 32px; border-radius: 32px;"
         />
+        <span
+          class="sr-only"
+        >
+          Click to review your Researcher (ISI) ID (opens in new window)
+        </span>
       </a>
     </div>
     <div
@@ -527,11 +612,16 @@ exports[`Dashboard Researcher IDs test Testing orcid caption 1`] = `
         target="_blank"
       >
         <div
-          aria-label="Your Scopus ID is 35478294000 - Click to review"
-          class="fez-icon scopus ok"
+          aria-label="Click to review your Scopus ID (opens in new window)"
+          class="fez-icon scopus ok xxlarge"
           data-mui-internal-clone-element="true"
           style="width: 32px; height: 32px; border-radius: 32px;"
         />
+        <span
+          class="sr-only"
+        >
+          Click to review your Scopus ID (opens in new window)
+        </span>
       </a>
     </div>
     <div
@@ -548,11 +638,16 @@ exports[`Dashboard Researcher IDs test Testing orcid caption 1`] = `
         target="_blank"
       >
         <div
-          aria-label="Your Google Scholar ID is kUemDfMAAAAJ - Click to review"
-          class="fez-icon google_scholar ok"
+          aria-label="Click to review your Google Scholar ID (opens in new window)"
+          class="fez-icon google_scholar ok xxlarge"
           data-mui-internal-clone-element="true"
           style="width: 32px; height: 32px; border-radius: 32px;"
         />
+        <span
+          class="sr-only"
+        >
+          Click to review your Google Scholar ID (opens in new window)
+        </span>
       </a>
     </div>
     <div
@@ -569,11 +664,16 @@ exports[`Dashboard Researcher IDs test Testing orcid caption 1`] = `
         target="_blank"
       >
         <div
-          aria-label="Your ORCID ID is 0000-0001-1111-1111 - Click to review"
-          class="fez-icon orcid ok"
+          aria-label="Click to review your ORCID ID (opens in new window)"
+          class="fez-icon orcid ok xxlarge"
           data-mui-internal-clone-element="true"
           style="width: 32px; height: 32px; border-radius: 32px;"
         />
+        <span
+          class="sr-only"
+        >
+          Click to review your ORCID ID (opens in new window)
+        </span>
       </a>
     </div>
     <div
@@ -618,11 +718,16 @@ exports[`Dashboard Researcher IDs test should show orcid sync UI 1`] = `
         target="_blank"
       >
         <div
-          aria-label="Your Researcher (ISI) ID is A-1137-2007 - Click to review"
-          class="fez-icon researcher ok"
+          aria-label="Click to review your Researcher (ISI) ID (opens in new window)"
+          class="fez-icon researcher ok xxlarge"
           data-mui-internal-clone-element="true"
           style="width: 32px; height: 32px; border-radius: 32px;"
         />
+        <span
+          class="sr-only"
+        >
+          Click to review your Researcher (ISI) ID (opens in new window)
+        </span>
       </a>
     </div>
     <div
@@ -639,11 +744,16 @@ exports[`Dashboard Researcher IDs test should show orcid sync UI 1`] = `
         target="_blank"
       >
         <div
-          aria-label="Your Scopus ID is 35478294000 - Click to review"
-          class="fez-icon scopus error"
+          aria-label="Click to review your Scopus ID (opens in new window)"
+          class="fez-icon scopus error xxlarge"
           data-mui-internal-clone-element="true"
           style="width: 32px; height: 32px; border-radius: 32px;"
         />
+        <span
+          class="sr-only"
+        >
+          Click to review your Scopus ID (opens in new window)
+        </span>
       </a>
     </div>
     <div
@@ -660,11 +770,16 @@ exports[`Dashboard Researcher IDs test should show orcid sync UI 1`] = `
         target="_blank"
       >
         <div
-          aria-label="Your Google Scholar ID is kUemDfMAAAAJ - Click to review"
-          class="fez-icon google_scholar error"
+          aria-label="Click to review your Google Scholar ID (opens in new window)"
+          class="fez-icon google_scholar error xxlarge"
           data-mui-internal-clone-element="true"
           style="width: 32px; height: 32px; border-radius: 32px;"
         />
+        <span
+          class="sr-only"
+        >
+          Click to review your Google Scholar ID (opens in new window)
+        </span>
       </a>
     </div>
     <div
@@ -681,17 +796,22 @@ exports[`Dashboard Researcher IDs test should show orcid sync UI 1`] = `
         target="_blank"
       >
         <div
-          aria-label="Your ORCID ID is 0000-0001-1111-1111 - Click to review"
-          class="fez-icon orcid ok"
+          aria-label="Click to review your ORCID ID (opens in new window)"
+          class="fez-icon orcid ok xxlarge"
           data-mui-internal-clone-element="true"
           style="width: 32px; height: 32px; border-radius: 32px;"
         />
+        <span
+          class="sr-only"
+        >
+          Click to review your ORCID ID (opens in new window)
+        </span>
       </a>
       <span
         class="css"
       >
         <button
-          aria-label="Information about uploading your UQ eSpace works to ORCID"
+          aria-label="View information about uploading your UQ eSpace works to ORCID"
           class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-MuiButtonBase-root-MuiIconButton-root"
           data-analyticsid="help-icon-orcid"
           data-mui-internal-clone-element="true"
