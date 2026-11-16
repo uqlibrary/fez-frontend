@@ -42,6 +42,9 @@ module.exports = {
         pathinfo: true,
         publicPath: `http://${url}:${port}/${publicPath}`,
     },
+    experiments: {
+        css: true,
+    },
     devServer: {
         allowedHosts: 'all',
         compress: true,
@@ -94,13 +97,10 @@ module.exports = {
                 use: ['json-loader'],
             },
             {
-                test: /\.css/,
-                use: ['style-loader', 'css-loader'],
-            },
-            {
-                test: /\.scss|\.styl/,
+                test: /\.scss$/i,
                 include: [resolve(__dirname, 'src')],
-                use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
+                type: 'css/auto',
+                use: ['postcss-loader', 'sass-loader'],
             },
             {
                 // Match webpack-dist: asset modules, not file-loader. file-loader under webpack 5 double-processes
@@ -178,6 +178,9 @@ module.exports = {
         new Dotenv(),
     ].filter(Boolean),
     resolve: {
+        alias: {
+            '~': resolve(__dirname),
+        },
         descriptionFiles: ['package.json'],
         enforceExtension: false,
         extensions: ['.jsx', '.js', '.ts', '.tsx', '.json'],
