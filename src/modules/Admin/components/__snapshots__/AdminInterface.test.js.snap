@@ -78,18 +78,15 @@ exports[`AdminInterface component should disabled button and render alert for fo
                   type="button"
                 >
                   <svg
+                    aria-hidden="true"
                     class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
                     data-testid="KeyboardIcon"
                     focusable="false"
-                    role="img"
                     viewBox="0 0 24 24"
                   >
                     <path
                       d="M20 5H4c-1.1 0-1.99.9-1.99 2L2 17c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2m-9 3h2v2h-2zm0 3h2v2h-2zM8 8h2v2H8zm0 3h2v2H8zm-1 2H5v-2h2zm0-3H5V8h2zm9 7H8v-2h8zm0-4h-2v-2h2zm0-3h-2V8h2zm3 3h-2v-2h2zm0-3h-2V8h2z"
                     />
-                    <title>
-                      Learn about keyboard shortcuts
-                    </title>
                   </svg>
                 </button>
               </div>
@@ -504,18 +501,15 @@ exports[`AdminInterface component should display job created alert 1`] = `
                   type="button"
                 >
                   <svg
+                    aria-hidden="true"
                     class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
                     data-testid="KeyboardIcon"
                     focusable="false"
-                    role="img"
                     viewBox="0 0 24 24"
                   >
                     <path
                       d="M20 5H4c-1.1 0-1.99.9-1.99 2L2 17c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2m-9 3h2v2h-2zm0 3h2v2h-2zM8 8h2v2H8zm0 3h2v2H8zm-1 2H5v-2h2zm0-3H5V8h2zm9 7H8v-2h8zm0-4h-2v-2h2zm0-3h-2V8h2zm3 3h-2v-2h2zm0-3h-2V8h2z"
                     />
-                    <title>
-                      Learn about keyboard shortcuts
-                    </title>
                   </svg>
                 </button>
               </div>
@@ -797,18 +791,15 @@ exports[`AdminInterface component should display job created alert 2`] = `
                   type="button"
                 >
                   <svg
+                    aria-hidden="true"
                     class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
                     data-testid="KeyboardIcon"
                     focusable="false"
-                    role="img"
                     viewBox="0 0 24 24"
                   >
                     <path
                       d="M20 5H4c-1.1 0-1.99.9-1.99 2L2 17c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2m-9 3h2v2h-2zm0 3h2v2h-2zM8 8h2v2H8zm0 3h2v2H8zm-1 2H5v-2h2zm0-3H5V8h2zm9 7H8v-2h8zm0-4h-2v-2h2zm0-3h-2V8h2zm3 3h-2v-2h2zm0-3h-2V8h2z"
                     />
-                    <title>
-                      Learn about keyboard shortcuts
-                    </title>
                   </svg>
                 </button>
               </div>
@@ -1143,18 +1134,15 @@ exports[`AdminInterface component should display successful alert 1`] = `
                   type="button"
                 >
                   <svg
+                    aria-hidden="true"
                     class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
                     data-testid="KeyboardIcon"
                     focusable="false"
-                    role="img"
                     viewBox="0 0 24 24"
                   >
                     <path
                       d="M20 5H4c-1.1 0-1.99.9-1.99 2L2 17c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2m-9 3h2v2h-2zm0 3h2v2h-2zM8 8h2v2H8zm0 3h2v2H8zm-1 2H5v-2h2zm0-3H5V8h2zm9 7H8v-2h8zm0-4h-2v-2h2zm0-3h-2V8h2zm3 3h-2v-2h2zm0-3h-2V8h2z"
                     />
-                    <title>
-                      Learn about keyboard shortcuts
-                    </title>
                   </svg>
                 </button>
               </div>
@@ -1436,18 +1424,15 @@ exports[`AdminInterface component should display successful alert 2`] = `
                   type="button"
                 >
                   <svg
+                    aria-hidden="true"
                     class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
                     data-testid="KeyboardIcon"
                     focusable="false"
-                    role="img"
                     viewBox="0 0 24 24"
                   >
                     <path
                       d="M20 5H4c-1.1 0-1.99.9-1.99 2L2 17c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2m-9 3h2v2h-2zm0 3h2v2h-2zM8 8h2v2H8zm0 3h2v2H8zm-1 2H5v-2h2zm0-3H5V8h2zm9 7H8v-2h8zm0-4h-2v-2h2zm0-3h-2V8h2zm3 3h-2v-2h2zm0-3h-2V8h2z"
                     />
-                    <title>
-                      Learn about keyboard shortcuts
-                    </title>
                   </svg>
                 </button>
               </div>
@@ -1789,18 +1774,15 @@ exports[`AdminInterface component should render a title with html correctly 1`] 
                   type="button"
                 >
                   <svg
+                    aria-hidden="true"
                     class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
                     data-testid="KeyboardIcon"
                     focusable="false"
-                    role="img"
                     viewBox="0 0 24 24"
                   >
                     <path
                       d="M20 5H4c-1.1 0-1.99.9-1.99 2L2 17c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2m-9 3h2v2h-2zm0 3h2v2h-2zM8 8h2v2H8zm0 3h2v2H8zm-1 2H5v-2h2zm0-3H5V8h2zm9 7H8v-2h8zm0-4h-2v-2h2zm0-3h-2V8h2zm3 3h-2v-2h2zm0-3h-2V8h2z"
                     />
-                    <title>
-                      Learn about keyboard shortcuts
-                    </title>
                   </svg>
                 </button>
               </div>
@@ -2045,18 +2027,15 @@ exports[`AdminInterface component should render default view as a full form view
                   type="button"
                 >
                   <svg
+                    aria-hidden="true"
                     class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
                     data-testid="KeyboardIcon"
                     focusable="false"
-                    role="img"
                     viewBox="0 0 24 24"
                   >
                     <path
                       d="M20 5H4c-1.1 0-1.99.9-1.99 2L2 17c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2m-9 3h2v2h-2zm0 3h2v2h-2zM8 8h2v2H8zm0 3h2v2H8zm-1 2H5v-2h2zm0-3H5V8h2zm9 7H8v-2h8zm0-4h-2v-2h2zm0-3h-2V8h2zm3 3h-2v-2h2zm0-3h-2V8h2z"
                     />
-                    <title>
-                      Learn about keyboard shortcuts
-                    </title>
                   </svg>
                 </button>
               </div>
@@ -2370,18 +2349,15 @@ exports[`AdminInterface component should render default view as a tabbed form vi
                   type="button"
                 >
                   <svg
+                    aria-hidden="true"
                     class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
                     data-testid="KeyboardIcon"
                     focusable="false"
-                    role="img"
                     viewBox="0 0 24 24"
                   >
                     <path
                       d="M20 5H4c-1.1 0-1.99.9-1.99 2L2 17c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2m-9 3h2v2h-2zm0 3h2v2h-2zM8 8h2v2H8zm0 3h2v2H8zm-1 2H5v-2h2zm0-3H5V8h2zm9 7H8v-2h8zm0-4h-2v-2h2zm0-3h-2V8h2zm3 3h-2v-2h2zm0-3h-2V8h2z"
                     />
-                    <title>
-                      Learn about keyboard shortcuts
-                    </title>
                   </svg>
                 </button>
               </div>
@@ -2672,18 +2648,15 @@ exports[`AdminInterface component should render in create mode 1`] = `
                   type="button"
                 >
                   <svg
+                    aria-hidden="true"
                     class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
                     data-testid="KeyboardIcon"
                     focusable="false"
-                    role="img"
                     viewBox="0 0 24 24"
                   >
                     <path
                       d="M20 5H4c-1.1 0-1.99.9-1.99 2L2 17c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2m-9 3h2v2h-2zm0 3h2v2h-2zM8 8h2v2H8zm0 3h2v2H8zm-1 2H5v-2h2zm0-3H5V8h2zm9 7H8v-2h8zm0-4h-2v-2h2zm0-3h-2V8h2zm3 3h-2v-2h2zm0-3h-2V8h2z"
                     />
-                    <title>
-                      Learn about keyboard shortcuts
-                    </title>
                   </svg>
                 </button>
               </div>
@@ -2957,18 +2930,15 @@ exports[`AdminInterface component should render locked alert in edit mode 1`] = 
                   type="button"
                 >
                   <svg
+                    aria-hidden="true"
                     class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
                     data-testid="KeyboardIcon"
                     focusable="false"
-                    role="img"
                     viewBox="0 0 24 24"
                   >
                     <path
                       d="M20 5H4c-1.1 0-1.99.9-1.99 2L2 17c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2m-9 3h2v2h-2zm0 3h2v2h-2zM8 8h2v2H8zm0 3h2v2H8zm-1 2H5v-2h2zm0-3H5V8h2zm9 7H8v-2h8zm0-4h-2v-2h2zm0-3h-2V8h2zm3 3h-2v-2h2zm0-3h-2V8h2z"
                     />
-                    <title>
-                      Learn about keyboard shortcuts
-                    </title>
                   </svg>
                 </button>
               </div>
@@ -3345,18 +3315,15 @@ exports[`AdminInterface component should render locked info alert 1`] = `
                   type="button"
                 >
                   <svg
+                    aria-hidden="true"
                     class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
                     data-testid="KeyboardIcon"
                     focusable="false"
-                    role="img"
                     viewBox="0 0 24 24"
                   >
                     <path
                       d="M20 5H4c-1.1 0-1.99.9-1.99 2L2 17c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2m-9 3h2v2h-2zm0 3h2v2h-2zM8 8h2v2H8zm0 3h2v2H8zm-1 2H5v-2h2zm0-3H5V8h2zm9 7H8v-2h8zm0-4h-2v-2h2zm0-3h-2V8h2zm3 3h-2v-2h2zm0-3h-2V8h2z"
                     />
-                    <title>
-                      Learn about keyboard shortcuts
-                    </title>
                   </svg>
                 </button>
               </div>
@@ -3729,18 +3696,15 @@ exports[`AdminInterface component should render undelete title and button 1`] = 
                   type="button"
                 >
                   <svg
+                    aria-hidden="true"
                     class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
                     data-testid="KeyboardIcon"
                     focusable="false"
-                    role="img"
                     viewBox="0 0 24 24"
                   >
                     <path
                       d="M20 5H4c-1.1 0-1.99.9-1.99 2L2 17c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2m-9 3h2v2h-2zm0 3h2v2h-2zM8 8h2v2H8zm0 3h2v2H8zm-1 2H5v-2h2zm0-3H5V8h2zm9 7H8v-2h8zm0-4h-2v-2h2zm0-3h-2V8h2zm3 3h-2v-2h2zm0-3h-2V8h2z"
                     />
-                    <title>
-                      Learn about keyboard shortcuts
-                    </title>
                   </svg>
                 </button>
               </div>

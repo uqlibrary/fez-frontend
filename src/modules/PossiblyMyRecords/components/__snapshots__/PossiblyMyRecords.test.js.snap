@@ -351,10 +351,9 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                                           rel="noopener noreferrer"
                                           tabindex="0"
                                           target="_blank"
-                                          title="Full citation in Google scholar will open in a new window"
                                         >
                                           <span
-                                            class="fez-icon google large"
+                                            class="fez-icon google xxlarge"
                                           />
                                         </a>
                                         <span
@@ -473,10 +472,9 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                                           rel="noopener noreferrer"
                                           tabindex="0"
                                           target="_blank"
-                                          title="Full citation in Google scholar will open in a new window"
                                         >
                                           <span
-                                            class="fez-icon google large"
+                                            class="fez-icon google xxlarge"
                                           />
                                         </a>
                                         <span
@@ -595,10 +593,9 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                                           rel="noopener noreferrer"
                                           tabindex="0"
                                           target="_blank"
-                                          title="Full citation in Google scholar will open in a new window"
                                         >
                                           <span
-                                            class="fez-icon google large"
+                                            class="fez-icon google xxlarge"
                                           />
                                         </a>
                                         <span

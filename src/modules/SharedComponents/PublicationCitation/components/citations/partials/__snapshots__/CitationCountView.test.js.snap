@@ -12,10 +12,9 @@ exports[`CitationCountView test  should render component with given count 1`] = 
     rel="noopener noreferrer"
     tabindex="0"
     target="_blank"
-    title="Google"
   >
     <span
-      class="fez-icon wos large"
+      class="fez-icon wos xxlarge"
     />
     <span
       class="MuiBox-root css"
