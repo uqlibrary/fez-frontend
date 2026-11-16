@@ -153,7 +153,7 @@
     "terser-webpack-plugin": "^5.3.6",
     "typescript": "^6.0.3",
     "typescript-eslint": "^8.59.2",
-    "webpack": "^5.107.2",
+    "webpack": "^5.112.2",
     "webpack-bundle-analyzer": "^5.3.0",
     "webpack-cli": "^7.0.3",
     "webpack-dev-middleware": "^8.3.0",
