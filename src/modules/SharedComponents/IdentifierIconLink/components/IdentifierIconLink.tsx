@@ -36,7 +36,9 @@ const IdentifierIconLink: React.FC<{
             rel="noopener noreferrer"
             href={href}
             title={`Open in a new tab`}
-            aria-label={`Open ${type.toUpperCase()} ${trimmedId} in a new tab`}
+            // Concise label: the id (e.g. a full ORCID number) stays in the href rather than being read
+            // out in full by screen readers every time. WCAG 1.1.1 / 4.1.2.
+            aria-label={`Open ${type.toUpperCase()} record`}
             data-testid={`identifier-icon-link-${snakeCase(trimmedId)}`}
         >
             {!iconOnly && trimmedId}

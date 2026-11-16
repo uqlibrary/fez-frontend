@@ -54,7 +54,7 @@ const renderCopyCreatorUsernameButton = row => {
         <Tooltip title={!disabled && 'Copy to clipboard'}>
             <span>
                 <IconButton
-                    aria-label={!disabled && `Copy requester's username (${data}) to clipboard`}
+                    aria-label={`Copy requester's username to clipboard`}
                     onClick={() => handleCopyCreatorUsername(data)}
                     data-analyticsid={`${rootId}-${id}-copy-username`}
                     data-testid={`${rootId}-${id}-copy-username`}

@@ -35,7 +35,7 @@ export const ColumnData = ({ columnDataId, data, copiable }) => {
                     ? {
                           endAdornment: (
                               <InputAdornment position="end">
-                                  <Tooltip title={copyEnabled ? 'Copy to clipboard' : 'Clipboard unavailable'}>
+                                  <Tooltip title="Copy to clipboard">
                                       <span>
                                           <IconButton
                                               aria-label="Copy to clipboard"

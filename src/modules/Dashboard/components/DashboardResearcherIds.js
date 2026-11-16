@@ -84,6 +84,7 @@ export const renderButton = args => {
                         <React.Fragment>
                             <StyledResearchedLink as={ExternalLink} id={item} openInNewIcon={false} href={url}>
                                 {renderIcon(title, externalIconClassName)}
+                                <span className="sr-only">{title}</span>
                             </StyledResearchedLink>
                             {item === 'orcid' && orcidSyncProps?.author && (
                                 <StyledOrcidBadge>
