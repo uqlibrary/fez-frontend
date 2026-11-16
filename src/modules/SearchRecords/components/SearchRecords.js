@@ -207,7 +207,11 @@ const SearchRecords = ({ canUseExport = true, isAdvancedSearch, publicationsList
     };
 
     return (
-        <StandardPage className="page-search-records">
+        <StandardPage
+            className="page-search-records"
+            title={isUnpublishedBufferPage ? locale.pages.unpublished.title : txt.title}
+            hideTitle
+        >
             <Grid container spacing={3}>
                 <Grid size={12}>
                     <StandardCard className="searchComponent" noHeader standardCardId="search-records-queries">

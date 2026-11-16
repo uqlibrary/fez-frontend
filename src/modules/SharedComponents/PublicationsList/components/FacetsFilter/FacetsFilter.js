@@ -222,7 +222,7 @@ export const FacetsFilter = ({
     }
     return (
         <div className="facetsFilter" id="facets-filter" data-testid="facets-filter">
-            <List component="nav" dense>
+            <List component="nav" dense aria-label={locale.components.facetsFilter.title}>
                 {facetsToDisplay.map(item => {
                     // const isActive = this.state.activeFacets.filters.hasOwnProperty(item.title);
                     return (

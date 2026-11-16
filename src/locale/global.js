@@ -64,6 +64,7 @@ export default {
             tooltip: 'Main navigation',
             aria: 'Click to open the main navigation',
             closeMenuLabel: 'Close menu',
+            navAriaLabel: 'Main menu',
         },
         authentication: {
             signInText: 'Log in',

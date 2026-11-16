@@ -55,7 +55,9 @@ export const DataStreamSecuritySelector = ({ attachedDataStreams, collections, d
 
     return (
         <React.Fragment>
-            <Typography variant="h6">{text.overridePrompt}</Typography>
+            <Typography variant="h6" component="h5">
+                {text.overridePrompt}
+            </Typography>
             <div style={{ marginTop: 8, padding: 16 }}>
                 <Grid
                     container

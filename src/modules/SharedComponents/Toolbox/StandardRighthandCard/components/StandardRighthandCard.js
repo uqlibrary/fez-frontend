@@ -12,7 +12,7 @@ export const StandardRighthandCard = ({ children, title, testId, help }) => {
                 {title && (
                     <Typography
                         variant={'h6'}
-                        component={'div'}
+                        component={'h3'}
                         color={'primary'}
                         className={'StandardRighthandCard-title'}
                     >

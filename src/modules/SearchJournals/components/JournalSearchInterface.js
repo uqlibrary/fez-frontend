@@ -62,7 +62,13 @@ export const JournalSearchInterface = ({
                 message={txt.snackbar.message}
                 role="alert"
             />
-            <Grid container spacing={2} sx={{ position: 'relative' }}>
+            <Grid
+                container
+                spacing={2}
+                sx={{ position: 'relative' }}
+                role="search"
+                aria-label={txt.journalSearchInterface.searchAriaLabel}
+            >
                 {showInputControls && (
                     <Grid size={12} id={`${id}-search-input`} data-testid={`${id}-search-input`}>
                         <JournalSearchInput onReset={handleKeywordReset} />

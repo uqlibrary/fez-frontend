@@ -61,6 +61,8 @@ exports[`Application component Should display mobile correctly 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-4 css-MuiGrid-root"
           >
             <form
+              aria-label="Site search"
+              role="search"
               style="margin: 8px;"
             >
               <div
@@ -173,7 +175,8 @@ exports[`Application component Should display mobile correctly 1`] = `
         style="--Paper-shadow: none;"
       >
         <nav
-          class="MuiList-root MuiList-padding css-MuiList-root"
+          aria-label="Main menu"
+          class="MuiBox-root css"
           id="mainMenu"
           tabindex="-1"
         >
@@ -239,168 +242,172 @@ exports[`Application component Should display mobile correctly 1`] = `
               Skip Navigation
             </button>
           </div>
-          <li
-            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-MuiListItem-root"
+          <ul
+            class="MuiList-root MuiList-padding css-MuiList-root"
           >
-            <div
-              class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters menu-item-container css-MuiButtonBase-root-MuiListItemButton-root"
-              id="menu-item-0"
-              role="button"
-              tabindex="0"
+            <li
+              class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-MuiListItem-root"
             >
               <div
-                class="MuiListItemText-root css-MuiListItemText-root"
-                id="menu-itemText-0"
+                class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters menu-item-container css-MuiButtonBase-root-MuiListItemButton-root"
+                id="menu-item-0"
+                role="button"
+                tabindex="0"
               >
-                <span
-                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-MuiTypography-root"
+                <div
+                  class="MuiListItemText-root css-MuiListItemText-root"
+                  id="menu-itemText-0"
                 >
-                  Home
-                </span>
-              </div>
-            </div>
-          </li>
-          <li
-            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-MuiListItem-root"
-          >
-            <div
-              class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters menu-item-container css-MuiButtonBase-root-MuiListItemButton-root"
-              id="menu-item-1"
-              role="button"
-              tabindex="0"
-            >
-              <div
-                class="MuiListItemText-root css-MuiListItemText-root"
-                id="menu-itemText-1"
-              >
-                <span
-                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-MuiTypography-root"
-                >
-                  Search eSpace
-                </span>
-                <p
-                  class="MuiTypography-root MuiTypography-body2 MuiListItemText-secondary css-MuiTypography-root"
-                />
-              </div>
-            </div>
-          </li>
-          <li
-            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-MuiListItem-root"
-          >
-            <div
-              class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters menu-item-container css-MuiButtonBase-root-MuiListItemButton-root"
-              id="menu-item-2"
-              role="button"
-              tabindex="0"
-            >
-              <div
-                class="MuiListItemText-root css-MuiListItemText-root"
-                id="menu-itemText-2"
-              >
-                <span
-                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-MuiTypography-root"
-                >
-                  Browse
-                </span>
-              </div>
-            </div>
-          </li>
-          <li
-            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-MuiListItem-root"
-          >
-            <div
-              class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters menu-item-container css-MuiButtonBase-root-MuiListItemButton-root"
-              id="menu-item-3"
-              role="button"
-              tabindex="0"
-            >
-              <div
-                class="MuiListItemText-root css-MuiListItemText-root"
-                id="menu-itemText-3"
-              >
-                <span
-                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-MuiTypography-root"
-                >
-                  Help
-                </span>
-              </div>
-            </div>
-          </li>
-          <li
-            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-MuiListItem-root"
-          >
-            <div
-              class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters menu-item-container css-MuiButtonBase-root-MuiListItemButton-root"
-              id="menu-item-4"
-              role="button"
-              tabindex="0"
-            >
-              <div
-                class="MuiListItemText-root css-MuiListItemText-root"
-                id="menu-itemText-4"
-              >
-                <span
-                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-MuiTypography-root"
-                >
-                  About
-                </span>
-                <p
-                  class="MuiTypography-root MuiTypography-body2 MuiListItemText-secondary css-MuiTypography-root"
-                />
-              </div>
-            </div>
-          </li>
-          <li
-            class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-MuiListItem-root"
-          >
-            <div
-              class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters menu-item-container css-MuiButtonBase-root-MuiListItemButton-root"
-              id="menu-item-5"
-              role="button"
-              tabindex="0"
-            >
-              <div
-                class="MuiListItemText-root css-MuiListItemText-root"
-                id="menu-itemText-5"
-              >
-                <span
-                  class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-MuiTypography-root"
-                >
-                  <a
-                    class="noHover css"
-                    data-analyticsid="5-copyright-information-link"
-                    data-testid="5-copyright-information-link"
-                    id="5-copyright-information-link"
-                    rel="noopener noreferrer"
-                    tabindex="0"
-                    target="_blank"
-                    title="Copyright Information"
+                  <span
+                    class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-MuiTypography-root"
                   >
-                    <svg
-                      aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
-                      data-testid="OpenInNewIcon"
-                      focusable="false"
-                      id="5-copyright-information-link-new-window-icon"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3z"
-                      />
-                    </svg>
-                    Copyright Information
-                  </a>
-                </span>
+                    Home
+                  </span>
+                </div>
               </div>
-            </div>
-          </li>
+            </li>
+            <li
+              class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-MuiListItem-root"
+            >
+              <div
+                class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters menu-item-container css-MuiButtonBase-root-MuiListItemButton-root"
+                id="menu-item-1"
+                role="button"
+                tabindex="0"
+              >
+                <div
+                  class="MuiListItemText-root css-MuiListItemText-root"
+                  id="menu-itemText-1"
+                >
+                  <span
+                    class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-MuiTypography-root"
+                  >
+                    Search eSpace
+                  </span>
+                  <p
+                    class="MuiTypography-root MuiTypography-body2 MuiListItemText-secondary css-MuiTypography-root"
+                  />
+                </div>
+              </div>
+            </li>
+            <li
+              class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-MuiListItem-root"
+            >
+              <div
+                class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters menu-item-container css-MuiButtonBase-root-MuiListItemButton-root"
+                id="menu-item-2"
+                role="button"
+                tabindex="0"
+              >
+                <div
+                  class="MuiListItemText-root css-MuiListItemText-root"
+                  id="menu-itemText-2"
+                >
+                  <span
+                    class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-MuiTypography-root"
+                  >
+                    Browse
+                  </span>
+                </div>
+              </div>
+            </li>
+            <li
+              class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-MuiListItem-root"
+            >
+              <div
+                class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters menu-item-container css-MuiButtonBase-root-MuiListItemButton-root"
+                id="menu-item-3"
+                role="button"
+                tabindex="0"
+              >
+                <div
+                  class="MuiListItemText-root css-MuiListItemText-root"
+                  id="menu-itemText-3"
+                >
+                  <span
+                    class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-MuiTypography-root"
+                  >
+                    Help
+                  </span>
+                </div>
+              </div>
+            </li>
+            <li
+              class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-MuiListItem-root"
+            >
+              <div
+                class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters menu-item-container css-MuiButtonBase-root-MuiListItemButton-root"
+                id="menu-item-4"
+                role="button"
+                tabindex="0"
+              >
+                <div
+                  class="MuiListItemText-root css-MuiListItemText-root"
+                  id="menu-itemText-4"
+                >
+                  <span
+                    class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-MuiTypography-root"
+                  >
+                    About
+                  </span>
+                  <p
+                    class="MuiTypography-root MuiTypography-body2 MuiListItemText-secondary css-MuiTypography-root"
+                  />
+                </div>
+              </div>
+            </li>
+            <li
+              class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-MuiListItem-root"
+            >
+              <div
+                class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters menu-item-container css-MuiButtonBase-root-MuiListItemButton-root"
+                id="menu-item-5"
+                role="button"
+                tabindex="0"
+              >
+                <div
+                  class="MuiListItemText-root css-MuiListItemText-root"
+                  id="menu-itemText-5"
+                >
+                  <span
+                    class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-MuiTypography-root"
+                  >
+                    <a
+                      class="noHover css"
+                      data-analyticsid="5-copyright-information-link"
+                      data-testid="5-copyright-information-link"
+                      id="5-copyright-information-link"
+                      rel="noopener noreferrer"
+                      tabindex="0"
+                      target="_blank"
+                      title="Copyright Information"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
+                        data-testid="OpenInNewIcon"
+                        focusable="false"
+                        id="5-copyright-information-link-new-window-icon"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3z"
+                        />
+                      </svg>
+                      Copyright Information
+                    </a>
+                  </span>
+                </div>
+              </div>
+            </li>
+          </ul>
         </nav>
         <div
           data-testid="after-menu-drawer"
           id="afterMenuDrawer"
           tabindex="-1"
         />
-        <div
+        <footer
           class="MuiBox-root css"
         >
           CRICOS Provider No: 
@@ -417,10 +424,10 @@ exports[`Application component Should display mobile correctly 1`] = `
           >
             00025B
           </a>
-        </div>
+        </footer>
       </div>
     </div>
-    <div
+    <main
       class="content-container"
       id="content-container"
       style="padding-left: 260px;"
@@ -794,7 +801,7 @@ exports[`Application component Should display mobile correctly 1`] = `
           </div>
         </div>
       </div>
-    </div>
+    </main>
     <div
       class="offlineSnackbar"
     />
@@ -907,6 +914,8 @@ exports[`Application component should render alert if user is not fez author 1`]
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-4 css-MuiGrid-root"
           >
             <form
+              aria-label="Site search"
+              role="search"
               style="margin: 8px;"
             >
               <div
@@ -1010,7 +1019,7 @@ exports[`Application component should render alert if user is not fez author 1`]
         </div>
       </div>
     </header>
-    <div
+    <main
       class="content-container"
       id="content-container"
     >
@@ -1376,7 +1385,7 @@ exports[`Application component should render alert if user is not fez author 1`]
           </div>
         </div>
       </div>
-    </div>
+    </main>
     <div
       class="offlineSnackbar"
     />
@@ -1483,6 +1492,8 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-4 css-MuiGrid-root"
           >
             <form
+              aria-label="Site search"
+              role="search"
               style="margin: 8px;"
             >
               <div
@@ -1586,7 +1597,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         </div>
       </div>
     </header>
-    <div
+    <main
       class="content-container"
       id="content-container"
     >
@@ -1888,7 +1899,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           </div>
         </div>
       </div>
-    </div>
+    </main>
     <div
       class="offlineSnackbar"
     />
@@ -1995,6 +2006,8 @@ exports[`Application component should render app for account with fez author wit
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-4 css-MuiGrid-root"
           >
             <form
+              aria-label="Site search"
+              role="search"
               style="margin: 8px;"
             >
               <div
@@ -2098,7 +2111,7 @@ exports[`Application component should render app for account with fez author wit
         </div>
       </div>
     </header>
-    <div
+    <main
       class="content-container"
       id="content-container"
     >
@@ -2400,7 +2413,7 @@ exports[`Application component should render app for account with fez author wit
           </div>
         </div>
       </div>
-    </div>
+    </main>
     <div
       class="offlineSnackbar"
     />
@@ -2507,6 +2520,8 @@ exports[`Application component should render application with routing for the us
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-4 css-MuiGrid-root"
           >
             <form
+              aria-label="Site search"
+              role="search"
               style="margin: 8px;"
             >
               <div
@@ -2610,7 +2625,7 @@ exports[`Application component should render application with routing for the us
         </div>
       </div>
     </header>
-    <div
+    <main
       class="content-container"
       id="content-container"
     >
@@ -2699,7 +2714,7 @@ exports[`Application component should render application with routing for the us
           />
         </div>
       </div>
-    </div>
+    </main>
     <div
       class="offlineSnackbar"
     />
@@ -2806,6 +2821,8 @@ exports[`Application component should render for anon user 1`] = `
             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 MuiGrid-grid-sm-4 css-MuiGrid-root"
           >
             <form
+              aria-label="Site search"
+              role="search"
               style="margin: 8px;"
             >
               <div
@@ -2909,7 +2926,7 @@ exports[`Application component should render for anon user 1`] = `
         </div>
       </div>
     </header>
-    <div
+    <main
       class="content-container"
       id="content-container"
     >
@@ -3211,7 +3228,7 @@ exports[`Application component should render for anon user 1`] = `
           </div>
         </div>
       </div>
-    </div>
+    </main>
     <div
       class="offlineSnackbar"
     />

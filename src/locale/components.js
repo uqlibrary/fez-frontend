@@ -2416,6 +2416,8 @@ export default {
         },
         searchComponent: {
             searchBoxPlaceholder: 'Search eSpace',
+            siteSearchAriaLabel: 'Site search',
+            pageSearchAriaLabel: 'Search eSpace',
             searchBoxHint: 'Enter your search query to search all fields in eSpace',
             ariaInputLabel: 'Enter your search query to search eSpace and then press Enter',
             searchButtonHint: 'Search eSpace',
@@ -4853,6 +4855,7 @@ export default {
             },
             journalSearchInterface: {
                 title: 'Journal search',
+                searchAriaLabel: 'Journal search',
                 intro: (
                     <React.Fragment>
                         <p>Search UQ's curated master journal list to inform your strategic publishing decisions:</p>

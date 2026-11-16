@@ -245,6 +245,7 @@ export const Alert = ({
                         sx={{
                             flexBasis: { xs: '100%', sm: 'auto' },
                             maxWidth: { xs: '100%', sm: 'none' },
+                            minWidth: { xs: 'unset', sm: 'auto' },
                             mt: { xs: 1, sm: 0 },
                             minWidth: { xs: 'unset', sm: 'auto' },
                         }}

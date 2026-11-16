@@ -3,8 +3,10 @@
 exports[`AdvancedSearchComponent should render with default props 1`] = `
 <div>
   <form
+    aria-labelledby="advanced-search-title"
     data-testid="advanced-search-form"
     id="advancedSearchForm"
+    role="search"
   >
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
@@ -16,11 +18,12 @@ exports[`AdvancedSearchComponent should render with default props 1`] = `
           class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
           style="flex-grow: 1; width: 1px;"
         >
-          <h5
+          <h3
             class="MuiTypography-root MuiTypography-h5 css-MuiTypography-root"
+            id="advanced-search-title"
           >
             Advanced search
-          </h5>
+          </h3>
         </div>
         <div
           class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"

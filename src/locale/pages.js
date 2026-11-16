@@ -53,6 +53,7 @@ export default {
             title: 'eSpace',
         },
         about: {
+            title: 'About',
             children: (
                 <React.Fragment>
                     <StandardCard noHeader>
