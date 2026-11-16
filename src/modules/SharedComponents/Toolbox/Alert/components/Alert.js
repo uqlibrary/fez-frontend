@@ -223,6 +223,7 @@ export const Alert = ({
                                     data-analyticsid="dismiss-mobile"
                                     data-testid="dismiss-mobile"
                                     size="large"
+                                    color="black"
                                 >
                                     <Close className="dismiss" />
                                 </IconButton>
@@ -231,7 +232,10 @@ export const Alert = ({
                     </Grid>
                 </Grid>
                 {action && actionButtonLabel && (
-                    <StyledGridActionButton size={{ xs: 'grow', sm: 'auto' }}>
+                    <StyledGridActionButton
+                        size={{ xs: 'grow', sm: 'auto' }}
+                        sx={{ minWidth: { xs: 'unset', sm: 'auto' } }}
+                    >
                         <Button
                             variant="text"
                             children={actionButtonLabel}
@@ -255,6 +259,7 @@ export const Alert = ({
                             data-analyticsid="dismiss"
                             data-testid="dismiss"
                             size="large"
+                            color="black"
                         >
                             <Close className="dismiss" />
                         </IconButton>
