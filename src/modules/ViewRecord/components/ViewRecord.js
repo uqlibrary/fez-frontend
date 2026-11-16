@@ -293,12 +293,7 @@ export const ViewRecord = () => {
                                     )}
                                 </Grid>
                                 <Grid sx={{ display: 'flex', alignItems: 'center' }}>
-                                    <SocialShare
-                                        publication={recordToView}
-                                        services={['email', 'print']}
-                                        spaceBetween={4}
-                                        round
-                                    />
+                                    <SocialShare publication={recordToView} services={['email', 'print']} round />
                                 </Grid>
                             </Grid>
                         </Grid>

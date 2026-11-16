@@ -97,7 +97,7 @@ const JournalsListHeaderRow = ({ checked, onChange, isSelectable = true }) => {
                     id="journal-list-header"
                     data-testid="journal-list-header"
                 >
-                    <Grid container sx={{ alignItems: 'flex-end' }}>
+                    <Grid container sx={{ alignItems: 'center', display: 'flex' }}>
                         {JournalFieldsMap.filter(item => item.compactView).map((header, index) => {
                             const id = sanitiseId(`journal-list-header-${header.key}`);
 
@@ -117,7 +117,7 @@ const JournalsListHeaderRow = ({ checked, onChange, isSelectable = true }) => {
                                     <Box
                                         sx={{
                                             display: 'flex',
-                                            alignItems: 'flex-end',
+                                            alignItems: 'center',
                                         }}
                                     >
                                         <Typography variant="body1" sx={{ ...classes.inputLabel }}>
@@ -126,17 +126,13 @@ const JournalsListHeaderRow = ({ checked, onChange, isSelectable = true }) => {
                                                 <Box component={'span'} sx={{ display: 'block', fontWeight: 400 }}>
                                                     {header.subLabel}
                                                     {!!header.titleHelp && (
-                                                        <HelpIcon
-                                                            {...header.titleHelp}
-                                                            testId={header.key}
-                                                            iconSize={'small'}
-                                                        />
+                                                        <HelpIcon {...header.titleHelp} testId={header.key} />
                                                     )}
                                                 </Box>
                                             )}
                                         </Typography>
                                         {!!!header.subLabel && !!header.titleHelp && (
-                                            <HelpIcon {...header.titleHelp} testId={header.key} iconSize={'small'} />
+                                            <HelpIcon {...header.titleHelp} testId={header.key} />
                                         )}
                                     </Box>
                                 </Grid>

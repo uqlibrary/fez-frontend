@@ -120,23 +120,23 @@ const StyledGridDismissButton = styled(Grid)(({ theme }) => ({
 export const renderIcon = type => {
     switch (type) {
         case 'error':
-            return <Error id="error-icon" className="icon" />;
+            return <Error id="error-icon" className="icon" fontSize="medium" />;
         case 'error_outline':
-            return <ErrorOutline id="error-outline-icon" className="icon" />;
+            return <ErrorOutline id="error-outline-icon" className="icon" fontSize="medium" />;
         case 'warning':
-            return <Warning id="warning-icon" className="icon" />;
+            return <Warning id="warning-icon" className="icon" fontSize="medium" />;
         case 'info':
-            return <Info id="info-icon" className="icon" />;
+            return <Info id="info-icon" className="icon" fontSize="medium" />;
         case 'info_outline':
-            return <InfoOutlined id="info-outline-icon" className="icon" />;
+            return <InfoOutlined id="info-outline-icon" className="icon" fontSize="medium" />;
         case 'help':
-            return <Help id="help-icon" className="icon" />;
+            return <Help id="help-icon" className="icon" fontSize="medium" />;
         case 'help_outline':
-            return <HelpOutline id="help-outline-icon" className="icon" />;
+            return <HelpOutline id="help-outline-icon" className="icon" fontSize="medium" />;
         case 'done':
-            return <Done id="done-icon" className="icon" />;
+            return <Done id="done-icon" className="icon" fontSize="medium" />;
         default:
-            return <Error id="error-icon" className="icon" />;
+            return <Error id="error-icon" className="icon" fontSize="medium" />;
     }
 };
 
@@ -235,6 +235,7 @@ export const Alert = ({
                                     data-analyticsid="dismiss-mobile"
                                     data-testid="dismiss-mobile"
                                     size="large"
+                                    color="black"
                                 >
                                     <Close className="dismiss" />
                                 </IconButton>
@@ -243,7 +244,10 @@ export const Alert = ({
                     </Grid>
                 </Grid>
                 {action && actionButtonLabel && (
-                    <StyledGridActionButton size={{ xs: 'grow', sm: 'auto' }}>
+                    <StyledGridActionButton
+                        size={{ xs: 'grow', sm: 'auto' }}
+                        sx={{ minWidth: { xs: 'unset', sm: 'auto' } }}
+                    >
                         <Button
                             variant="text"
                             children={actionButtonLabel}
@@ -267,6 +271,7 @@ export const Alert = ({
                             data-analyticsid="dismiss"
                             data-testid="dismiss"
                             size="large"
+                            color="black"
                         >
                             <Close className="dismiss" />
                         </IconButton>

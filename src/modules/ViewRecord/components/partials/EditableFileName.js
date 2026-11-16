@@ -130,9 +130,9 @@ const EditableFileName = ({
                     </Grid>
                     <Grid size={{ sm: 'grow' }} sx={{ display: { xs: 'none', md: 'flex' } }}>
                         <IconButton
-                            aria-label="rename file"
+                            aria-label="Rename file"
                             onClick={handleFileEditFilename}
-                            size={'small'}
+                            size={'medium'}
                             id={`${props.id}-edit`}
                             data-analyticsid={`${props.id}-edit`}
                             data-testid={`${props.id}-edit`}
@@ -141,9 +141,9 @@ const EditableFileName = ({
                         </IconButton>
                         {!!isEdited && (
                             <IconButton
-                                aria-label="reset file name"
+                                aria-label="Reset file name"
                                 onClick={handleFileRestoreFilename}
-                                size={'small'}
+                                size={'medium'}
                                 id={`${props.id}-reset`}
                                 data-analyticsid={`${props.id}-reset`}
                                 data-testid={`${props.id}-reset`}
@@ -172,9 +172,9 @@ const EditableFileName = ({
                                 <>
                                     <InputAdornment position="end">
                                         <IconButton
-                                            aria-label="save rename"
+                                            aria-label="Save new filename"
                                             onClick={handleFileSaveFilename}
-                                            size={'small'}
+                                            size={'medium'}
                                             id={`${props.id}-save`}
                                             data-analyticsid={`${props.id}-save`}
                                             data-testid={`${props.id}-save`}
@@ -182,9 +182,9 @@ const EditableFileName = ({
                                             <CheckIcon />
                                         </IconButton>
                                         <IconButton
-                                            aria-label="cancel rename"
+                                            aria-label="Cancel rename"
                                             onClick={handleFileCancelEdit}
-                                            size={'small'}
+                                            size={'medium'}
                                             id={`${props.id}-cancel`}
                                             data-analyticsid={`${props.id}-cancel`}
                                             data-testid={`${props.id}-cancel`}

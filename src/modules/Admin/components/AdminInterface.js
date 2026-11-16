@@ -424,7 +424,7 @@ export const AdminInterface = ({
                         </Grid>
                     )}
                     {/* Admin lock alert */}
-                    {!!locked && <LockedAlert />}
+                    {!!locked && <LockedAlert size="medium" />}
                     <Grid container spacing={1} sx={{ width: '100%' }}>
                         <Grid size={12}>
                             <Grid container spacing={1} style={{ marginBottom: 8, marginTop: 4 }}>
