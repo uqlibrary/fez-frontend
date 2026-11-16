@@ -124,7 +124,7 @@ export default {
                                 style={{ display: 'block', float: 'left', padding: '0 10px 10px 0' }}
                                 width={100}
                                 src={locale.components.culturalNoticeOC.imagePath}
-                                alt={locale.components.culturalNoticeOC.title}
+                                alt=""
                             />
 
                             <p style={{ marginLeft: 110, marginTop: 0 }}>
@@ -137,7 +137,7 @@ export default {
                                 style={{ display: 'block', float: 'left', padding: '0 10px 10px 0' }}
                                 width={100}
                                 src={locale.components.culturalNoticeAI.imagePath}
-                                alt={locale.components.culturalNoticeAI.title}
+                                alt=""
                             />
 
                             <p style={{ marginLeft: 110, marginTop: 0 }}>
@@ -262,7 +262,7 @@ export default {
                     ariaPrefix: 'Photograph of ',
                 },
                 dashboardResearcherIds: {
-                    researcherIsLinked: 'Your [resource] ID is [id] - Click to review',
+                    researcherIsLinked: 'Click to review your [resource] ID (opens in new window)',
                     researcherIsNotLinked: 'You are not linked to [resource] - Click for more information',
                     orcidlinkLabel: 'Click to visit your ORCID profile',
                     titles: {
@@ -289,7 +289,7 @@ export default {
                     },
                 },
                 dashboardOrcidSync: {
-                    badgeTooltip: 'Information about uploading your UQ eSpace works to ORCID',
+                    badgeTooltip: 'View information about uploading your UQ eSpace works to ORCID',
                     helpDrawer: {
                         messages: {
                             activated: 'Weekly automatic upload of your works to ORCID is activated.',
@@ -677,6 +677,7 @@ export default {
         viewRecord: {
             loadingMessage: 'Loading work',
             thumbnailTitle: 'Click to open a preview of [image]',
+            thumbnailExternalLinkLabel: 'Open [file] in a new tab',
             deletedAlert: {
                 type: 'info_outline',
                 title: '',

@@ -293,12 +293,7 @@ export const ViewRecord = () => {
                                     )}
                                 </Grid>
                                 <Grid sx={{ display: 'flex', alignItems: 'center' }}>
-                                    <SocialShare
-                                        publication={recordToView}
-                                        services={['email', 'print']}
-                                        spaceBetween={4}
-                                        round
-                                    />
+                                    <SocialShare publication={recordToView} services={['email', 'print']} round />
                                 </Grid>
                             </Grid>
                         </Grid>
@@ -326,7 +321,7 @@ export const ViewRecord = () => {
                         <Alert {...txt.version.alert.warning} />
                     </Grid>
                 )}
-                {/* eslint-disable-next-line camelcase */}
+                {}
                 {!!recordToView.fez_record_search_key_advisory_statement?.rek_advisory_statement && (
                     <Grid size={12} style={{ marginBottom: 24 }}>
                         <Alert

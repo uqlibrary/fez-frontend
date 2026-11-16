@@ -121,9 +121,13 @@ export const SimpleSearchComponent = ({
                             className={classes.inHeader}
                         >
                             {showPrefixIcon && (
-                                <Grid size="auto" sx={{ padding: '4px' }}>
+                                <Grid size="auto" sx={{ padding: '4px', display: 'flex', alignItems: 'center' }}>
                                     <Search
-                                        sx={theme => ({ fill: theme.palette.secondary.main, opacity: 0.66 })}
+                                        sx={theme => ({
+                                            display: 'flex',
+                                            fill: theme.palette.secondary.main,
+                                            opacity: 0.66,
+                                        })}
                                         className={classes.searchIconPrefix}
                                     />
                                 </Grid>
@@ -193,7 +197,11 @@ export const SimpleSearchComponent = ({
                                     >
                                         {showMobileSearchButton && (
                                             <Grid>
-                                                <IconButton onClick={_handleToggleMobile} size="large">
+                                                <IconButton
+                                                    onClick={_handleToggleMobile}
+                                                    size="large"
+                                                    aria-label={txt.mobileSearchCloseButtonAriaLabel}
+                                                >
                                                     <Close
                                                         sx={theme => ({
                                                             fill: theme.palette.secondary.main,
@@ -237,6 +245,7 @@ export const SimpleSearchComponent = ({
                                         {showMobileSearchButton && (
                                             <Grid>
                                                 <IconButton
+                                                    aria-label={txt.mobileSearchButtonAriaLabel}
                                                     onClick={_handleSearch}
                                                     disabled={state.searchTerm.trim().length === 0}
                                                     size="large"

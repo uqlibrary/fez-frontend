@@ -48,7 +48,7 @@ exports[`SearchComponent getFieldRowsFromSearchQuery should process empty search
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-MuiGrid-root"
       >
         <button
-          aria-label="Click to search eSpace"
+          aria-label="Search eSpace"
           class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="simple-search-button"
           data-testid="simple-search-button"
@@ -63,7 +63,7 @@ exports[`SearchComponent getFieldRowsFromSearchQuery should process empty search
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-MuiGrid-root"
       >
         <button
-          aria-label="Click to switch to Advanced search"
+          aria-label="Switch to Advanced search"
           class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth advancedButton css-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="show-advanced-search"
           data-testid="show-advanced-search"
@@ -127,7 +127,7 @@ exports[`SearchComponent getFieldRowsFromSearchQuery should process missing labe
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-MuiGrid-root"
       >
         <button
-          aria-label="Click to search eSpace"
+          aria-label="Search eSpace"
           class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="simple-search-button"
           data-testid="simple-search-button"
@@ -142,7 +142,7 @@ exports[`SearchComponent getFieldRowsFromSearchQuery should process missing labe
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-MuiGrid-root"
       >
         <button
-          aria-label="Click to switch to Advanced search"
+          aria-label="Switch to Advanced search"
           class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth advancedButton css-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="show-advanced-search"
           data-testid="show-advanced-search"
@@ -206,7 +206,7 @@ exports[`SearchComponent should display simple search with query string 1`] = `
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-MuiGrid-root"
       >
         <button
-          aria-label="Click to search eSpace"
+          aria-label="Search eSpace"
           class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="simple-search-button"
           data-testid="simple-search-button"
@@ -221,7 +221,7 @@ exports[`SearchComponent should display simple search with query string 1`] = `
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-MuiGrid-root"
       >
         <button
-          aria-label="Click to switch to Advanced search"
+          aria-label="Switch to Advanced search"
           class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth advancedButton css-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="show-advanced-search"
           data-testid="show-advanced-search"
@@ -285,7 +285,7 @@ exports[`SearchComponent should display simple search with query string 2`] = `
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-MuiGrid-root"
       >
         <button
-          aria-label="Click to search eSpace"
+          aria-label="Search eSpace"
           class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="simple-search-button"
           data-testid="simple-search-button"
@@ -300,7 +300,7 @@ exports[`SearchComponent should display simple search with query string 2`] = `
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-MuiGrid-root"
       >
         <button
-          aria-label="Click to switch to Advanced search"
+          aria-label="Switch to Advanced search"
           class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth advancedButton css-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="show-advanced-search"
           data-testid="show-advanced-search"
@@ -364,7 +364,7 @@ exports[`SearchComponent should render default view 1`] = `
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-MuiGrid-root"
       >
         <button
-          aria-label="Click to search eSpace"
+          aria-label="Search eSpace"
           class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="simple-search-button"
           data-testid="simple-search-button"
@@ -379,7 +379,7 @@ exports[`SearchComponent should render default view 1`] = `
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-MuiGrid-root"
       >
         <button
-          aria-label="Click to switch to Advanced search"
+          aria-label="Switch to Advanced search"
           class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth advancedButton css-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="show-advanced-search"
           data-testid="show-advanced-search"
@@ -470,7 +470,7 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
                     id="field-type-select-label"
                   >
                     <div
-                      aria-label="Click to select a field to search from the list - Select a field currently selected"
+                      aria-label="Select a field to search from the list - Select a field currently selected"
                       class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiSelect-root css-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                     >
                       <div
@@ -813,7 +813,7 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-MuiGrid-root"
         >
           <button
-            aria-label="Click to search eSpace"
+            aria-label="Search eSpace"
             class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-MuiButtonBase-root-MuiButton-root"
             data-analyticsid="advanced-search"
             data-testid="advanced-search"
@@ -922,7 +922,7 @@ exports[`SearchComponent should render in advanced search and take in considerat
                     id="field-type-select-label"
                   >
                     <div
-                      aria-label="Click to select a field to search from the list - Select a field currently selected"
+                      aria-label="Select a field to search from the list - Select a field currently selected"
                       class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiSelect-root css-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                     >
                       <div
@@ -1265,7 +1265,7 @@ exports[`SearchComponent should render in advanced search and take in considerat
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-MuiGrid-root"
         >
           <button
-            aria-label="Click to search eSpace"
+            aria-label="Search eSpace"
             class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-MuiButtonBase-root-MuiButton-root"
             data-analyticsid="advanced-search"
             data-testid="advanced-search"
@@ -1363,7 +1363,7 @@ exports[`SearchComponent should render simple search even if it says is advanced
       class="MuiBox-root css"
     >
       <button
-        aria-label="Click to search eSpace"
+        aria-label="Search eSpace"
         class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
         data-mui-internal-clone-element="true"
         tabindex="0"
@@ -1427,7 +1427,7 @@ exports[`SearchComponent should render with a class "header" for use in AppBar 1
       class="MuiBox-root css"
     >
       <button
-        aria-label="Click to search eSpace"
+        aria-label="Search eSpace"
         class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
         data-mui-internal-clone-element="true"
         tabindex="0"
@@ -1525,7 +1525,7 @@ exports[`SearchComponent should reset advanced search 1`] = `
                     id="field-type-select-label"
                   >
                     <div
-                      aria-label="Click to select a field to search from the list - Select a field currently selected"
+                      aria-label="Select a field to search from the list - Select a field currently selected"
                       class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiSelect-root css-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                     >
                       <div
@@ -1869,7 +1869,7 @@ exports[`SearchComponent should reset advanced search 1`] = `
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-MuiGrid-root"
         >
           <button
-            aria-label="Click to search eSpace"
+            aria-label="Search eSpace"
             class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-MuiButtonBase-root-MuiButton-root"
             data-analyticsid="advanced-search"
             data-testid="advanced-search"
@@ -2052,7 +2052,7 @@ exports[`SearchComponent should toggle open access for advanced search 1`] = `
                     id="field-type-select-label"
                   >
                     <div
-                      aria-label="Click to select a field to search from the list - Select a field currently selected"
+                      aria-label="Select a field to search from the list - Select a field currently selected"
                       class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiSelect-root css-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                     >
                       <div
@@ -2395,7 +2395,7 @@ exports[`SearchComponent should toggle open access for advanced search 1`] = `
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-MuiGrid-root"
         >
           <button
-            aria-label="Click to search eSpace"
+            aria-label="Search eSpace"
             class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-MuiButtonBase-root-MuiButton-root"
             data-analyticsid="advanced-search"
             data-testid="advanced-search"
@@ -2500,7 +2500,7 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-MuiGrid-root"
       >
         <button
-          aria-label="Click to search eSpace"
+          aria-label="Search eSpace"
           class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="simple-search-button"
           data-testid="simple-search-button"
@@ -2515,7 +2515,7 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-MuiGrid-root"
       >
         <button
-          aria-label="Click to switch to Advanced search"
+          aria-label="Switch to Advanced search"
           class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth advancedButton css-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="show-advanced-search"
           data-testid="show-advanced-search"
@@ -2606,7 +2606,7 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
                     id="field-type-select-label"
                   >
                     <div
-                      aria-label="Click to select a field to search from the list - Any field currently selected"
+                      aria-label="Select a field to search from the list - Any field currently selected"
                       class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                     >
                       <div
@@ -2946,7 +2946,7 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-MuiGrid-root"
         >
           <button
-            aria-label="Click to search eSpace"
+            aria-label="Search eSpace"
             class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-MuiButtonBase-root-MuiButton-root"
             data-analyticsid="advanced-search"
             data-testid="advanced-search"
@@ -3081,7 +3081,7 @@ exports[`SearchComponent should toggle to advanced search 1`] = `
                     id="field-type-select-label"
                   >
                     <div
-                      aria-label="Click to select a field to search from the list - Select a field currently selected"
+                      aria-label="Select a field to search from the list - Select a field currently selected"
                       class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiSelect-root css-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                     >
                       <div
@@ -3424,7 +3424,7 @@ exports[`SearchComponent should toggle to advanced search 1`] = `
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-MuiGrid-root"
         >
           <button
-            aria-label="Click to search eSpace"
+            aria-label="Search eSpace"
             class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-MuiButtonBase-root-MuiButton-root"
             data-analyticsid="advanced-search"
             data-testid="advanced-search"
@@ -3506,7 +3506,7 @@ exports[`SearchComponent should toggle to simple search 1`] = `
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-MuiGrid-root"
       >
         <button
-          aria-label="Click to search eSpace"
+          aria-label="Search eSpace"
           class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="simple-search-button"
           data-testid="simple-search-button"
@@ -3521,7 +3521,7 @@ exports[`SearchComponent should toggle to simple search 1`] = `
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-MuiGrid-root"
       >
         <button
-          aria-label="Click to switch to Advanced search"
+          aria-label="Switch to Advanced search"
           class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedDefault MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorDefault MuiButton-fullWidth advancedButton css-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="show-advanced-search"
           data-testid="show-advanced-search"
@@ -3612,7 +3612,7 @@ exports[`SearchComponent should update advanced search row on search text change
                     id="field-type-select-label"
                   >
                     <div
-                      aria-label="Click to select a field to search from the list - Any field currently selected"
+                      aria-label="Select a field to search from the list - Any field currently selected"
                       class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                     >
                       <div
@@ -3952,7 +3952,7 @@ exports[`SearchComponent should update advanced search row on search text change
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-MuiGrid-root"
         >
           <button
-            aria-label="Click to search eSpace"
+            aria-label="Search eSpace"
             class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-MuiButtonBase-root-MuiButton-root"
             data-analyticsid="advanced-search"
             data-testid="advanced-search"
@@ -4087,7 +4087,7 @@ exports[`SearchComponent should update date range filter 1`] = `
                     id="field-type-select-label"
                   >
                     <div
-                      aria-label="Click to select a field to search from the list - Select a field currently selected"
+                      aria-label="Select a field to search from the list - Select a field currently selected"
                       class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiSelect-root css-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                     >
                       <div
@@ -4693,7 +4693,7 @@ exports[`SearchComponent should update date range filter 1`] = `
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-MuiGrid-root"
         >
           <button
-            aria-label="Click to search eSpace"
+            aria-label="Search eSpace"
             class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-MuiButtonBase-root-MuiButton-root"
             data-analyticsid="advanced-search"
             data-testid="advanced-search"
@@ -4828,7 +4828,7 @@ exports[`SearchComponent should update date range filter 2`] = `
                     id="field-type-select-label"
                   >
                     <div
-                      aria-label="Click to select a field to search from the list - Select a field currently selected"
+                      aria-label="Select a field to search from the list - Select a field currently selected"
                       class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiSelect-root css-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                     >
                       <div
@@ -5434,7 +5434,7 @@ exports[`SearchComponent should update date range filter 2`] = `
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-MuiGrid-root"
         >
           <button
-            aria-label="Click to search eSpace"
+            aria-label="Search eSpace"
             class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth css-MuiButtonBase-root-MuiButton-root"
             data-analyticsid="advanced-search"
             data-testid="advanced-search"

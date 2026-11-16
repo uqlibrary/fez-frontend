@@ -38,7 +38,7 @@ describe('SimpleSearchComponent', () => {
                 mobileHeader: 'mobileHeaderTest',
             },
         });
-        fireEvent.click(getByRole('button', { name: 'Click to search eSpace' }));
+        fireEvent.click(getByRole('button', { name: 'Search eSpace' }));
         expect(container.querySelector('.mobileHeaderTest')).toBeInTheDocument();
     });
 
@@ -112,7 +112,7 @@ describe('SimpleSearchComponent', () => {
             searchText: ' ',
             onSearch: searchFn,
         });
-        fireEvent.click(getByRole('button', { name: 'Click to search eSpace' }));
+        fireEvent.click(getByRole('button', { name: 'Search eSpace' }));
         expect(searchFn).not.toHaveBeenCalled();
     });
 
@@ -122,7 +122,7 @@ describe('SimpleSearchComponent', () => {
             showAdvancedSearchButton: true,
             onToggleSearchMode: testToggleFn,
         });
-        fireEvent.click(getByRole('button', { name: 'Click to switch to Advanced search' }));
+        fireEvent.click(getByRole('button', { name: 'Switch to Advanced search' }));
         expect(testToggleFn).toHaveBeenCalled();
     });
 
@@ -130,7 +130,7 @@ describe('SimpleSearchComponent', () => {
         const { container, getByRole } = setup({
             showAdvancedSearchButton: true,
         });
-        fireEvent.click(getByRole('button', { name: 'Click to switch to Advanced search' }));
+        fireEvent.click(getByRole('button', { name: 'Switch to Advanced search' }));
         expect(container).toBeInTheDocument();
     });
 
@@ -139,7 +139,7 @@ describe('SimpleSearchComponent', () => {
             showMobileSearchButton: true,
             isInHeader: true,
         });
-        fireEvent.click(getByRole('button', { name: 'Click to search eSpace' }));
+        fireEvent.click(getByRole('button', { name: 'Search eSpace' }));
         fireEvent.click(getByTestId('CloseIcon'));
         expect(getByTestId('SearchIcon')).toBeInTheDocument();
     });

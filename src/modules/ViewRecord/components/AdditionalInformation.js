@@ -37,7 +37,7 @@ const renderLink = (link, value, testId = '', icon = '', iconHint = '') => {
             {value}
             {icon && (
                 <Tooltip title={iconHint}>
-                    <span className={`fez-icon ${icon} medium`} style={{ margin: '0 4px' }} />
+                    <span className={`fez-icon ${icon} xxlarge`} style={{ margin: '0 4px' }} />
                 </Tooltip>
             )}
         </Link>
@@ -189,7 +189,7 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
                     ))}
                 {licenseLink && (
                     <ExternalLink href={licenseLink.url} openInNewIcon={!!uqLicenseLinkText} id="rek-license">
-                        {uqLicenseLinkText || <div className={`fez-icon license ${licenseLink.className}`} />}
+                        {uqLicenseLinkText || <div className={`fez-icon license ${licenseLink.className} xxlarge`} />}
                     </ExternalLink>
                 )}
             </span>
@@ -201,7 +201,7 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
             <span>
                 <div
                     data-testid="fez-icon-cilabel"
-                    className={'fez-icon_cilabel'}
+                    className={'fez-icon_cilabel xxlarge'}
                     style={{
                         backgroundImage: `url(${locale.viewRecord.culturalNoticeAI.imagePath})`,
                         width: 100,
@@ -414,7 +414,7 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
                                                     <span
                                                         key={`rek-sdg-source-${item.rek_sdg}-${source.rek_sdg_source}-${index}`}
                                                         data-testid={`rek-sdg-source-${item.rek_sdg}-${source.rek_sdg_source}-${index}`}
-                                                        className={`fez-icon ${icon} medium`}
+                                                        className={`fez-icon ${icon} xxlarge`}
                                                         style={{ margin: '0 4px' }}
                                                     />
                                                 </Tooltip>

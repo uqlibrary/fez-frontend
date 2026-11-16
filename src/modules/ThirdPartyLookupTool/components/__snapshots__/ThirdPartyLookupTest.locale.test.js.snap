@@ -238,10 +238,10 @@ exports[`Component ThirdPartyLookupTool should render a form ready for input 1`]
                   class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
                 >
                   <button
+                    aria-label="Hide form for Incites"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                     data-testid="minimise-toggle"
                     tabindex="0"
-                    tooltip="Hide form for Incites"
                     type="button"
                   >
                     <svg
@@ -388,10 +388,10 @@ exports[`Component ThirdPartyLookupTool should set state with submitted data 1`]
                   class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
                 >
                   <button
+                    aria-label="Hide form for Incites"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                     data-testid="minimise-toggle"
                     tabindex="0"
-                    tooltip="Hide form for Incites"
                     type="button"
                   >
                     <svg

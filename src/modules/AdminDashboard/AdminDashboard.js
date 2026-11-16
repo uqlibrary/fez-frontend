@@ -81,7 +81,14 @@ const AdminDashboard = () => {
             )}
             {!!adminDashboardConfigData && (
                 <>
-                    <Tabs value={activeTab} onChange={handleChange} aria-label="admin dashboard tabbed interface">
+                    <Tabs
+                        value={activeTab}
+                        onChange={handleChange}
+                        aria-label="admin dashboard tabbed interface"
+                        variant="scrollable"
+                        scrollButtons="auto"
+                        allowScrollButtonsMobile
+                    >
                         {tabConfig.map(tab => {
                             return (
                                 <Tab

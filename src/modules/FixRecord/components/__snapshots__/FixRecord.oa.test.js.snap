@@ -110,7 +110,7 @@ exports[`Component FixRecord for non-compliant Open Access should render fix rec
                   class="MuiCardHeader-action css-MuiCardHeader-action"
                 >
                   <button
-                    aria-label="Click for more information"
+                    aria-label="Author Accepted Manuscript - Click for more information"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="help-icon"
                     data-mui-internal-clone-element="true"
@@ -120,18 +120,15 @@ exports[`Component FixRecord for non-compliant Open Access should render fix rec
                     type="button"
                   >
                     <svg
+                      aria-hidden="true"
                       class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
                       data-testid="HelpOutlineIcon"
                       focusable="false"
-                      role="img"
                       viewBox="0 0 24 24"
                     >
                       <path
                         d="M11 18h2v-2h-2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4"
                       />
-                      <title>
-                        Click for more information
-                      </title>
                     </svg>
                   </button>
                 </div>
@@ -303,10 +300,9 @@ exports[`Component FixRecord for non-compliant Open Access should render fix rec
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
-                                      title="Full citation in Web of science will open in a new window"
                                     >
                                       <span
-                                        class="fez-icon wos large"
+                                        class="fez-icon wos xxlarge"
                                       />
                                       <span
                                         class="MuiBox-root css"
@@ -324,10 +320,9 @@ exports[`Component FixRecord for non-compliant Open Access should render fix rec
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
-                                      title="Full citation in Google scholar will open in a new window"
                                     >
                                       <span
-                                        class="fez-icon google large"
+                                        class="fez-icon google xxlarge"
                                       />
                                     </a>
                                     <span
@@ -663,13 +658,16 @@ exports[`Component FixRecord for non-compliant Open Access should render fix rec
                       <svg
                         aria-hidden="true"
                         class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-MuiSvgIcon-root"
-                        data-testid="WarningIcon"
+                        data-testid="WarningAmberIcon"
                         focusable="false"
                         id="warning-icon"
                         viewBox="0 0 24 24"
                       >
                         <path
-                          d="M1 21h22L12 2zm12-3h-2v-2h2zm0-4h-2v-4h2z"
+                          d="M12 5.99 19.53 19H4.47zM12 2 1 21h22z"
+                        />
+                        <path
+                          d="M13 16h-2v2h2zm0-6h-2v5h2z"
                         />
                       </svg>
                     </div>
@@ -943,7 +941,7 @@ exports[`Component FixRecord for non-compliant Open Access should render record 
                   class="MuiCardHeader-action css-MuiCardHeader-action"
                 >
                   <button
-                    aria-label="Click for more information"
+                    aria-label="Author Accepted Manuscript - Click for more information"
                     class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-MuiButtonBase-root-MuiIconButton-root"
                     data-analyticsid="help-icon"
                     data-mui-internal-clone-element="true"
@@ -953,18 +951,15 @@ exports[`Component FixRecord for non-compliant Open Access should render record 
                     type="button"
                   >
                     <svg
+                      aria-hidden="true"
                       class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
                       data-testid="HelpOutlineIcon"
                       focusable="false"
-                      role="img"
                       viewBox="0 0 24 24"
                     >
                       <path
                         d="M11 18h2v-2h-2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4"
                       />
-                      <title>
-                        Click for more information
-                      </title>
                     </svg>
                   </button>
                 </div>
@@ -1136,10 +1131,9 @@ exports[`Component FixRecord for non-compliant Open Access should render record 
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
-                                      title="Full citation in Web of science will open in a new window"
                                     >
                                       <span
-                                        class="fez-icon wos large"
+                                        class="fez-icon wos xxlarge"
                                       />
                                       <span
                                         class="MuiBox-root css"
@@ -1157,10 +1151,9 @@ exports[`Component FixRecord for non-compliant Open Access should render record 
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
-                                      title="Full citation in Google scholar will open in a new window"
                                     >
                                       <span
-                                        class="fez-icon google large"
+                                        class="fez-icon google xxlarge"
                                       />
                                     </a>
                                     <span
@@ -1496,13 +1489,16 @@ exports[`Component FixRecord for non-compliant Open Access should render record 
                       <svg
                         aria-hidden="true"
                         class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-MuiSvgIcon-root"
-                        data-testid="WarningIcon"
+                        data-testid="WarningAmberIcon"
                         focusable="false"
                         id="warning-icon"
                         viewBox="0 0 24 24"
                       >
                         <path
-                          d="M1 21h22L12 2zm12-3h-2v-2h2zm0-4h-2v-4h2z"
+                          d="M12 5.99 19.53 19H4.47zM12 2 1 21h22z"
+                        />
+                        <path
+                          d="M13 16h-2v2h2zm0-6h-2v5h2z"
                         />
                       </svg>
                     </div>

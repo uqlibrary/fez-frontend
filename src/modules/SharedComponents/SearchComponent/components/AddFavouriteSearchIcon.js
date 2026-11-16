@@ -76,6 +76,7 @@ export const AddFavouriteSearchIcon = () => {
                 <Tooltip title={txt.favouriteSearchHint}>
                     <span>
                         <IconButton
+                            aria-label={txt.favouriteSearchHint}
                             onClick={showConfirmation}
                             id="favourite-search-save"
                             data-analyticsid="favourite-search-save"
@@ -91,6 +92,7 @@ export const AddFavouriteSearchIcon = () => {
                 <Tooltip title={txt.favouriteSearchSaved}>
                     <span>
                         <IconButton
+                            aria-label={txt.favouriteSearchSaved}
                             id="favourite-search-saved"
                             data-analyticsid="favourite-search-saved"
                             data-testid="favourite-search-saved"

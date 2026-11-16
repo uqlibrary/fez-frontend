@@ -727,6 +727,7 @@ exports[`NtroSection component should not render ismn field for Book - Creative 
                         data-mui-internal-clone-element="true"
                       >
                         <button
+                          aria-label="Remove all items"
                           class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                           data-analyticsid="delete-all-rek-significance"
                           data-testid="delete-all-rek-significance"
@@ -1602,6 +1603,7 @@ exports[`NtroSection component should render default view 1`] = `
                         data-mui-internal-clone-element="true"
                       >
                         <button
+                          aria-label="Remove all items"
                           class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                           data-analyticsid="delete-all-rek-significance"
                           data-testid="delete-all-rek-significance"
@@ -2477,6 +2479,7 @@ exports[`NtroSection component should render design form fields 1`] = `
                         data-mui-internal-clone-element="true"
                       >
                         <button
+                          aria-label="Remove all items"
                           class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                           data-analyticsid="delete-all-rek-significance"
                           data-testid="delete-all-rek-significance"
@@ -3366,6 +3369,7 @@ exports[`NtroSection component should render disabled view 1`] = `
                         data-mui-internal-clone-element="true"
                       >
                         <button
+                          aria-label="Remove all items"
                           class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                           data-analyticsid="delete-all-rek-significance"
                           data-testid="delete-all-rek-significance"
