@@ -67,7 +67,6 @@ export const CollectionForm = ({ disableSubmit }) => {
 
         const queryStringObject = queryString.parse(
             location && ((location.hash && location.hash.replace('?', '&').replace('#', '?')) || location.search),
-            { ignoreQueryPrefix: true },
         );
 
         let parentPID = {};
@@ -97,7 +96,6 @@ export const CollectionForm = ({ disableSubmit }) => {
 
     const queryStringObject = queryString.parse(
         location && ((location.hash && location.hash.replace('?', '&').replace('#', '?')) || location.search),
-        { ignoreQueryPrefix: true },
     );
     if (queryStringObject?.pid && queryStringObject?.name) {
         hasParams = true;
