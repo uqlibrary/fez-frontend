@@ -40,19 +40,19 @@ const DrawingControls = ({ draw, ...props }: DrawingControlsProps) => {
             }}
         >
             <ToggleButton value="static" aria-label="static" data-testid="static-button">
-                <PanToolOutlined fontSize="small" />
+                <PanToolOutlined fontSize="medium" />
             </ToggleButton>
             <ToggleButton value="marker" aria-label="marker" data-testid="marker-button">
-                <Room fontSize="small" />
+                <Room fontSize="medium" />
             </ToggleButton>
             <ToggleButton value="polygon" aria-label="polygon" data-testid="polygon-button">
-                <PentagonTwoTone fontSize="small" />
+                <PentagonTwoTone fontSize="medium" />
             </ToggleButton>
             <ToggleButton value="rectangle" aria-label="rectangle" data-testid="rectangle-button">
-                <RectangleTwoTone fontSize="small" />
+                <RectangleTwoTone fontSize="medium" />
             </ToggleButton>
             <ToggleButton value="clear" aria-label="clear" data-testid="clear-button">
-                <DeleteForever fontSize="small" />
+                <DeleteForever fontSize="medium" />
             </ToggleButton>
         </ToggleButtonGroup>
     );

@@ -68,7 +68,7 @@ export const ChildVocabDataRow = ({ row, parentId, rootId, locked }) => {
                             {row.cvo_title}
                             {row.cvo_hide === 1 && (
                                 <Tooltip title={txt.admin.tooltip.hidden} data-testid={`row-hidden-icon-${row.cvo_id}`}>
-                                    <VisibilityOffIcon fontSize="small" sx={{ paddingLeft: 1 }} />
+                                    <VisibilityOffIcon fontSize="medium" sx={{ paddingLeft: 1 }} />
                                 </Tooltip>
                             )}
                         </Link>
@@ -98,7 +98,7 @@ export const ChildVocabDataRow = ({ row, parentId, rootId, locked }) => {
                                 size="large"
                                 disabled={state.isOpen}
                             >
-                                <Edit fontSize="small" />
+                                <Edit fontSize="medium" />
                             </IconButton>
                         </Grid>
                     )}

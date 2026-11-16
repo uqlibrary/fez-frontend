@@ -8,7 +8,7 @@ import PrintIcon from '@mui/icons-material/Print';
 import EmailOutlined from '@mui/icons-material/EmailOutlined';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 
-export const SocialShare = ({ publication, size = 24, spaceBetween = 4, services }) => {
+export const SocialShare = ({ publication, spaceBetween = 12, services }) => {
     const printPage = () => window.print();
     const locale = {
         email: {
@@ -33,20 +33,24 @@ export const SocialShare = ({ publication, size = 24, spaceBetween = 4, services
         },
     };
     return (
-        <Grid container spacing={0} id="social-share">
+        <Grid container spacing={0} id="social-share" alignItems="space-between">
             {services &&
                 services.length > 0 &&
                 services.map((item, index) => {
                     const Icon = locale[item].icon;
                     return (
-                        <Grid id={item.id} key={index} style={{ marginRight: spaceBetween }}>
+                        <Grid
+                            id={item.id}
+                            key={index}
+                            style={{ marginRight: index < services.length - 1 ? spaceBetween : 0 }}
+                        >
                             <ExternalLink
                                 {...locale[item].link}
                                 id={locale[item].id}
                                 data-testid={`social-share-${locale[item].id}-link`}
                             >
-                                <Avatar sx={{ width: size, height: size, bgcolor: grey[600] }}>
-                                    <Icon sx={{ width: 0.7 * size, height: 0.7 * size }} />
+                                <Avatar sx={{ bgcolor: grey[600] }}>
+                                    <Icon />
                                 </Avatar>
                             </ExternalLink>
                         </Grid>

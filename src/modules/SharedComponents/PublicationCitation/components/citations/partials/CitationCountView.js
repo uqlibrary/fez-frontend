@@ -14,15 +14,15 @@ export const CitationCountView = ({ source, count, link, title }) => {
             <ExternalLink
                 id={`${source}-citation-count`}
                 className={`${source}CitationCount`}
-                sx={{ ...theme.typography.caption, marginRight: '8px' }}
+                sx={{ ...theme.typography.caption, marginRight: '8px', display: 'inline-flex', alignItems: 'center' }}
                 href={link}
                 aria-label={title}
                 title={title}
                 openInNewIcon={false}
             >
-                <span className={`fez-icon ${source} large`} />
+                <span className={`fez-icon ${source} xxlarge`} />
                 {count !== null && (
-                    <Box component={'span'} sx={{ marginLeft: '0.4em' }}>
+                    <Box component={'span'} sx={{ marginLeft: '0.4em', fontSize: 'initial' }}>
                         {count}
                     </Box>
                 )}

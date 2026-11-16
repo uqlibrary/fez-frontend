@@ -132,7 +132,7 @@ const EditableFileName = ({
                         <IconButton
                             aria-label="rename file"
                             onClick={handleFileEditFilename}
-                            size={'small'}
+                            size={'medium'}
                             id={`${props.id}-edit`}
                             data-analyticsid={`${props.id}-edit`}
                             data-testid={`${props.id}-edit`}
@@ -143,7 +143,7 @@ const EditableFileName = ({
                             <IconButton
                                 aria-label="reset file name"
                                 onClick={handleFileRestoreFilename}
-                                size={'small'}
+                                size={'medium'}
                                 id={`${props.id}-reset`}
                                 data-analyticsid={`${props.id}-reset`}
                                 data-testid={`${props.id}-reset`}
@@ -174,7 +174,7 @@ const EditableFileName = ({
                                         <IconButton
                                             aria-label="save rename"
                                             onClick={handleFileSaveFilename}
-                                            size={'small'}
+                                            size={'medium'}
                                             id={`${props.id}-save`}
                                             data-analyticsid={`${props.id}-save`}
                                             data-testid={`${props.id}-save`}
@@ -184,7 +184,7 @@ const EditableFileName = ({
                                         <IconButton
                                             aria-label="cancel rename"
                                             onClick={handleFileCancelEdit}
-                                            size={'small'}
+                                            size={'medium'}
                                             id={`${props.id}-cancel`}
                                             data-analyticsid={`${props.id}-cancel`}
                                             data-testid={`${props.id}-cancel`}

@@ -100,7 +100,7 @@ exports[`Dashboard Author Profile test Render the authors profile as expected fo
                 >
                   <div
                     aria-label="Your Researcher (ISI) ID is A-1137-2007 - Click to review"
-                    class="fez-icon researcher ok"
+                    class="fez-icon researcher ok xxlarge"
                     data-mui-internal-clone-element="true"
                     style="width: 32px; height: 32px; border-radius: 32px;"
                   />
@@ -121,7 +121,7 @@ exports[`Dashboard Author Profile test Render the authors profile as expected fo
                 >
                   <div
                     aria-label="Your Scopus ID is 35478294000 - Click to review"
-                    class="fez-icon scopus ok"
+                    class="fez-icon scopus ok xxlarge"
                     data-mui-internal-clone-element="true"
                     style="width: 32px; height: 32px; border-radius: 32px;"
                   />
@@ -142,7 +142,7 @@ exports[`Dashboard Author Profile test Render the authors profile as expected fo
                 >
                   <div
                     aria-label="Your Google Scholar ID is kUemDfMAAAAJ - Click to review"
-                    class="fez-icon google_scholar ok"
+                    class="fez-icon google_scholar ok xxlarge"
                     data-mui-internal-clone-element="true"
                     style="width: 32px; height: 32px; border-radius: 32px;"
                   />
@@ -163,7 +163,7 @@ exports[`Dashboard Author Profile test Render the authors profile as expected fo
                 >
                   <div
                     aria-label="Your ORCID ID is 0000-0001-1111-1111 - Click to review"
-                    class="fez-icon orcid ok"
+                    class="fez-icon orcid ok xxlarge"
                     data-mui-internal-clone-element="true"
                     style="width: 32px; height: 32px; border-radius: 32px;"
                   />
@@ -275,7 +275,7 @@ exports[`Dashboard Author Profile test Renders empty div if there is no profile 
                 >
                   <div
                     aria-label="You are not linked to Researcher (ISI) - Click for more information"
-                    class="fez-icon researcher error"
+                    class="fez-icon researcher error xxlarge"
                     data-mui-internal-clone-element="true"
                     style="width: 32px; height: 32px; border-radius: 32px;"
                   />
@@ -296,7 +296,7 @@ exports[`Dashboard Author Profile test Renders empty div if there is no profile 
                 >
                   <div
                     aria-label="You are not linked to Scopus - Click for more information"
-                    class="fez-icon scopus error"
+                    class="fez-icon scopus error xxlarge"
                     data-mui-internal-clone-element="true"
                     style="width: 32px; height: 32px; border-radius: 32px;"
                   />
@@ -313,7 +313,7 @@ exports[`Dashboard Author Profile test Renders empty div if there is no profile 
                   title="You are not linked to Google Scholar - Click to link via ORCID"
                 >
                   <div
-                    class="fez-icon google_scholar dashboard error"
+                    class="fez-icon google_scholar dashboard error xxlarge"
                     title="You are not linked to Google Scholar - Click to link via ORCID"
                   />
                 </a>
@@ -329,7 +329,7 @@ exports[`Dashboard Author Profile test Renders empty div if there is no profile 
                   title="You are not linked to ORCID - Click for more information"
                 >
                   <div
-                    class="fez-icon orcid dashboard error"
+                    class="fez-icon orcid dashboard error xxlarge"
                     title="You are not linked to ORCID - Click for more information"
                   />
                 </a>

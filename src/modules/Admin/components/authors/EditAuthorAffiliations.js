@@ -265,7 +265,7 @@ const EditAuthorAffiliations = ({ rowData, locale, setEditing, onChange }) => {
                                         data-testid={`orgChip-${item.af_org_id}`}
                                         label={getChipLabel(item.af_percent_affiliation, PRECISION)}
                                         variant="outlined"
-                                        size={'small'}
+                                        size={'medium'}
                                         color="primary"
                                     />
                                 </Grid>

@@ -47,7 +47,7 @@ exports[`PublicationsListPaging renders  component should update page buttons 1`
       >
         <button
           aria-label="Click to select page 1 of 3 result pages"
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="test-select-page-1"
           data-testid="test-select-page-1"
           id="test-select-page-1"
@@ -58,7 +58,7 @@ exports[`PublicationsListPaging renders  component should update page buttons 1`
         </button>
         <button
           aria-label="Click to select page 2 of 3 result pages"
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorPrimary paging-button css-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorPrimary paging-button css-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="test-select-page-2"
           data-testid="test-select-page-2"
           id="test-select-page-2"
@@ -69,7 +69,7 @@ exports[`PublicationsListPaging renders  component should update page buttons 1`
         </button>
         <button
           aria-label="Click to select page 3 of 3 result pages"
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="test-select-page-3"
           data-testid="test-select-page-3"
           id="test-select-page-3"
@@ -163,7 +163,7 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
       >
         <button
           aria-label="Click to select page 1 of 50 result pages"
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="test-select-page-1"
           data-testid="test-select-page-1"
           id="test-select-page-1"
@@ -175,7 +175,7 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
         ...
         <button
           aria-label="Click to select page 8 of 50 result pages"
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="test-select-page-8"
           data-testid="test-select-page-8"
           id="test-select-page-8"
@@ -186,7 +186,7 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
         </button>
         <button
           aria-label="Click to select page 9 of 50 result pages"
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="test-select-page-9"
           data-testid="test-select-page-9"
           id="test-select-page-9"
@@ -197,7 +197,7 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
         </button>
         <button
           aria-label="Click to select page 10 of 50 result pages"
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorPrimary paging-button css-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorPrimary paging-button css-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="test-select-page-10"
           data-testid="test-select-page-10"
           id="test-select-page-10"
@@ -208,7 +208,7 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
         </button>
         <button
           aria-label="Click to select page 11 of 50 result pages"
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="test-select-page-11"
           data-testid="test-select-page-11"
           id="test-select-page-11"
@@ -219,7 +219,7 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
         </button>
         <button
           aria-label="Click to select page 12 of 50 result pages"
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="test-select-page-12"
           data-testid="test-select-page-12"
           id="test-select-page-12"
@@ -231,7 +231,7 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
         ...
         <button
           aria-label="Click to select page 50 of 50 result pages"
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="test-select-page-50"
           data-testid="test-select-page-50"
           id="test-select-page-50"
@@ -334,7 +334,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, f
       >
         <button
           aria-label="Click to select page 1 of 3 result pages"
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorPrimary paging-button css-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorPrimary paging-button css-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="test-select-page-1"
           data-testid="test-select-page-1"
           id="test-select-page-1"
@@ -345,7 +345,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, f
         </button>
         <button
           aria-label="Click to select page 2 of 3 result pages"
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="test-select-page-2"
           data-testid="test-select-page-2"
           id="test-select-page-2"
@@ -356,7 +356,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, f
         </button>
         <button
           aria-label="Click to select page 3 of 3 result pages"
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="test-select-page-3"
           data-testid="test-select-page-3"
           id="test-select-page-3"
@@ -450,7 +450,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, l
       >
         <button
           aria-label="Click to select page 1 of 3 result pages"
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="test-select-page-1"
           data-testid="test-select-page-1"
           id="test-select-page-1"
@@ -461,7 +461,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, l
         </button>
         <button
           aria-label="Click to select page 2 of 3 result pages"
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="test-select-page-2"
           data-testid="test-select-page-2"
           id="test-select-page-2"
@@ -472,7 +472,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, l
         </button>
         <button
           aria-label="Click to select page 3 of 3 result pages"
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorPrimary paging-button css-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorPrimary paging-button css-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="test-select-page-3"
           data-testid="test-select-page-3"
           id="test-select-page-3"
@@ -567,7 +567,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, s
       >
         <button
           aria-label="Click to select page 1 of 3 result pages"
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="test-select-page-1"
           data-testid="test-select-page-1"
           id="test-select-page-1"
@@ -578,7 +578,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, s
         </button>
         <button
           aria-label="Click to select page 2 of 3 result pages"
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorPrimary paging-button css-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorPrimary paging-button css-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="test-select-page-2"
           data-testid="test-select-page-2"
           id="test-select-page-2"
@@ -589,7 +589,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, s
         </button>
         <button
           aria-label="Click to select page 3 of 3 result pages"
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="test-select-page-3"
           data-testid="test-select-page-3"
           id="test-select-page-3"

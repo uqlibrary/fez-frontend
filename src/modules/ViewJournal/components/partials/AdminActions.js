@@ -59,7 +59,7 @@ export const AdminActions = ({ adminActions = [...defaultActions], navigatedFrom
                 size="large"
                 {...rest}
             >
-                <MoreVertIcon fontSize="small" />
+                <MoreVertIcon fontSize="medium" />
             </IconButton>
             <Menu
                 id="admin-actions-menu"

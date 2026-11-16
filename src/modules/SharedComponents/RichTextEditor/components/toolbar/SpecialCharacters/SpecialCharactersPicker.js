@@ -149,8 +149,8 @@ const SpecialCharactersPicker = ({ open, position, onClose }) => {
                     Special characters
                 </Typography>
 
-                <IconButton size="small" onClick={onClose} data-testid="special-character-close-button">
-                    <CloseIcon fontSize="small" />
+                <IconButton size="medium" onClick={onClose} data-testid="special-character-close-button">
+                    <CloseIcon fontSize="medium" />
                 </IconButton>
             </Box>
 
