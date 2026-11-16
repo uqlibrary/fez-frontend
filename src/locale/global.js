@@ -35,18 +35,21 @@ export default {
                     title="Click to return to the eSpace home page"
                     style={{ color: '#FFFFFF' }}
                 >
-                    UQ eSpace {process.env.TITLE_SUFFIX || ''}
+                    UQ eSpace{process.env.TITLE_SUFFIX ? ` ${process.env.TITLE_SUFFIX}` : ''}
                 </LocaleLink>
-                <a
-                    className="appTitle"
-                    title="Click to view the blog post"
-                    href="https://web.library.uq.edu.au/stories/celebrating-20-years-uq-espace"
-                    style={{ color: '#FFFFFF' }}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    : Celebrating 20 years
-                </a>
+                <span className="appTitleTagline" style={{ color: '#FFFFFF' }}>
+                    {' : '}
+                    <a
+                        className="appTitle"
+                        title="Click to view the blog post"
+                        href="https://web.library.uq.edu.au/stories/celebrating-20-years-uq-espace"
+                        style={{ color: '#FFFFFF' }}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Celebrating 20 years
+                    </a>
+                </span>
             </>
         ),
         logo: {

@@ -23,8 +23,8 @@ exports[`Application component Should display mobile correctly 1`] = `
               class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-MuiGrid-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-MuiGrid-root"
-                style="overflow: hidden; text-overflow: ellipsis;"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-MuiGrid-root"
+                style="min-width: 0; overflow: hidden; text-overflow: ellipsis;"
               >
                 <h1
                   class="MuiTypography-root MuiTypography-h1 MuiTypography-noWrap css-MuiTypography-root"
@@ -35,18 +35,24 @@ exports[`Application component Should display mobile correctly 1`] = `
                     style="color: rgb(255, 255, 255);"
                     title="Click to return to the eSpace home page"
                   >
-                    UQ eSpace 
+                    UQ eSpace
                   </a>
-                  <a
-                    class="appTitle"
-                    href="https://web.library.uq.edu.au/stories/celebrating-20-years-uq-espace"
-                    rel="noopener noreferrer"
+                  <span
+                    class="appTitleTagline"
                     style="color: rgb(255, 255, 255);"
-                    target="_blank"
-                    title="Click to view the blog post"
                   >
-                    : Celebrating 20 years
-                  </a>
+                     : 
+                    <a
+                      class="appTitle"
+                      href="https://web.library.uq.edu.au/stories/celebrating-20-years-uq-espace"
+                      rel="noopener noreferrer"
+                      style="color: rgb(255, 255, 255);"
+                      target="_blank"
+                      title="Click to view the blog post"
+                    >
+                      Celebrating 20 years
+                    </a>
+                  </span>
                 </h1>
               </div>
             </div>
@@ -863,8 +869,8 @@ exports[`Application component should render alert if user is not fez author 1`]
                 </div>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-MuiGrid-root"
-                style="overflow: hidden; text-overflow: ellipsis;"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-MuiGrid-root"
+                style="min-width: 0; overflow: hidden; text-overflow: ellipsis;"
               >
                 <h1
                   class="MuiTypography-root MuiTypography-h1 MuiTypography-noWrap css-MuiTypography-root"
@@ -875,18 +881,24 @@ exports[`Application component should render alert if user is not fez author 1`]
                     style="color: rgb(255, 255, 255);"
                     title="Click to return to the eSpace home page"
                   >
-                    UQ eSpace 
+                    UQ eSpace
                   </a>
-                  <a
-                    class="appTitle"
-                    href="https://web.library.uq.edu.au/stories/celebrating-20-years-uq-espace"
-                    rel="noopener noreferrer"
+                  <span
+                    class="appTitleTagline"
                     style="color: rgb(255, 255, 255);"
-                    target="_blank"
-                    title="Click to view the blog post"
                   >
-                    : Celebrating 20 years
-                  </a>
+                     : 
+                    <a
+                      class="appTitle"
+                      href="https://web.library.uq.edu.au/stories/celebrating-20-years-uq-espace"
+                      rel="noopener noreferrer"
+                      style="color: rgb(255, 255, 255);"
+                      target="_blank"
+                      title="Click to view the blog post"
+                    >
+                      Celebrating 20 years
+                    </a>
+                  </span>
                 </h1>
               </div>
             </div>
@@ -1433,8 +1445,8 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                 </div>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-MuiGrid-root"
-                style="overflow: hidden; text-overflow: ellipsis;"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-MuiGrid-root"
+                style="min-width: 0; overflow: hidden; text-overflow: ellipsis;"
               >
                 <h1
                   class="MuiTypography-root MuiTypography-h1 MuiTypography-noWrap css-MuiTypography-root"
@@ -1445,18 +1457,24 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                     style="color: rgb(255, 255, 255);"
                     title="Click to return to the eSpace home page"
                   >
-                    UQ eSpace 
+                    UQ eSpace
                   </a>
-                  <a
-                    class="appTitle"
-                    href="https://web.library.uq.edu.au/stories/celebrating-20-years-uq-espace"
-                    rel="noopener noreferrer"
+                  <span
+                    class="appTitleTagline"
                     style="color: rgb(255, 255, 255);"
-                    target="_blank"
-                    title="Click to view the blog post"
                   >
-                    : Celebrating 20 years
-                  </a>
+                     : 
+                    <a
+                      class="appTitle"
+                      href="https://web.library.uq.edu.au/stories/celebrating-20-years-uq-espace"
+                      rel="noopener noreferrer"
+                      style="color: rgb(255, 255, 255);"
+                      target="_blank"
+                      title="Click to view the blog post"
+                    >
+                      Celebrating 20 years
+                    </a>
+                  </span>
                 </h1>
               </div>
             </div>
@@ -1939,8 +1957,8 @@ exports[`Application component should render app for account with fez author wit
                 </div>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-MuiGrid-root"
-                style="overflow: hidden; text-overflow: ellipsis;"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-MuiGrid-root"
+                style="min-width: 0; overflow: hidden; text-overflow: ellipsis;"
               >
                 <h1
                   class="MuiTypography-root MuiTypography-h1 MuiTypography-noWrap css-MuiTypography-root"
@@ -1951,18 +1969,24 @@ exports[`Application component should render app for account with fez author wit
                     style="color: rgb(255, 255, 255);"
                     title="Click to return to the eSpace home page"
                   >
-                    UQ eSpace 
+                    UQ eSpace
                   </a>
-                  <a
-                    class="appTitle"
-                    href="https://web.library.uq.edu.au/stories/celebrating-20-years-uq-espace"
-                    rel="noopener noreferrer"
+                  <span
+                    class="appTitleTagline"
                     style="color: rgb(255, 255, 255);"
-                    target="_blank"
-                    title="Click to view the blog post"
                   >
-                    : Celebrating 20 years
-                  </a>
+                     : 
+                    <a
+                      class="appTitle"
+                      href="https://web.library.uq.edu.au/stories/celebrating-20-years-uq-espace"
+                      rel="noopener noreferrer"
+                      style="color: rgb(255, 255, 255);"
+                      target="_blank"
+                      title="Click to view the blog post"
+                    >
+                      Celebrating 20 years
+                    </a>
+                  </span>
                 </h1>
               </div>
             </div>
@@ -2445,8 +2469,8 @@ exports[`Application component should render application with routing for the us
                 </div>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-MuiGrid-root"
-                style="overflow: hidden; text-overflow: ellipsis;"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-MuiGrid-root"
+                style="min-width: 0; overflow: hidden; text-overflow: ellipsis;"
               >
                 <h1
                   class="MuiTypography-root MuiTypography-h1 MuiTypography-noWrap css-MuiTypography-root"
@@ -2457,18 +2481,24 @@ exports[`Application component should render application with routing for the us
                     style="color: rgb(255, 255, 255);"
                     title="Click to return to the eSpace home page"
                   >
-                    UQ eSpace 
+                    UQ eSpace
                   </a>
-                  <a
-                    class="appTitle"
-                    href="https://web.library.uq.edu.au/stories/celebrating-20-years-uq-espace"
-                    rel="noopener noreferrer"
+                  <span
+                    class="appTitleTagline"
                     style="color: rgb(255, 255, 255);"
-                    target="_blank"
-                    title="Click to view the blog post"
                   >
-                    : Celebrating 20 years
-                  </a>
+                     : 
+                    <a
+                      class="appTitle"
+                      href="https://web.library.uq.edu.au/stories/celebrating-20-years-uq-espace"
+                      rel="noopener noreferrer"
+                      style="color: rgb(255, 255, 255);"
+                      target="_blank"
+                      title="Click to view the blog post"
+                    >
+                      Celebrating 20 years
+                    </a>
+                  </span>
                 </h1>
               </div>
             </div>
@@ -2738,8 +2768,8 @@ exports[`Application component should render for anon user 1`] = `
                 </div>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-MuiGrid-root"
-                style="overflow: hidden; text-overflow: ellipsis;"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-MuiGrid-root"
+                style="min-width: 0; overflow: hidden; text-overflow: ellipsis;"
               >
                 <h1
                   class="MuiTypography-root MuiTypography-h1 MuiTypography-noWrap css-MuiTypography-root"
@@ -2750,18 +2780,24 @@ exports[`Application component should render for anon user 1`] = `
                     style="color: rgb(255, 255, 255);"
                     title="Click to return to the eSpace home page"
                   >
-                    UQ eSpace 
+                    UQ eSpace
                   </a>
-                  <a
-                    class="appTitle"
-                    href="https://web.library.uq.edu.au/stories/celebrating-20-years-uq-espace"
-                    rel="noopener noreferrer"
+                  <span
+                    class="appTitleTagline"
                     style="color: rgb(255, 255, 255);"
-                    target="_blank"
-                    title="Click to view the blog post"
                   >
-                    : Celebrating 20 years
-                  </a>
+                     : 
+                    <a
+                      class="appTitle"
+                      href="https://web.library.uq.edu.au/stories/celebrating-20-years-uq-espace"
+                      rel="noopener noreferrer"
+                      style="color: rgb(255, 255, 255);"
+                      target="_blank"
+                      title="Click to view the blog post"
+                    >
+                      Celebrating 20 years
+                    </a>
+                  </span>
                 </h1>
               </div>
             </div>
