@@ -569,7 +569,22 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
             showAlertBanner: false,
             showLoadingOverlay: isBusy,
         },
-        displayColumnDefOptions: { 'mrt-row-actions': { minSize: 80 } },
+        displayColumnDefOptions: {
+            'mrt-row-actions': {
+                minSize: 100,
+                muiTableHeadCellProps: {
+                    align: 'center',
+                },
+                muiTableBodyCellProps: {
+                    sx: {
+                        '& > div': {
+                            justifyContent: 'space-between',
+                            gap: 0,
+                        },
+                    },
+                },
+            },
+        },
         renderCreateRowDialogContent: ({ table, row, internalEditComponents }) => (
             <Box
                 id={`my-editorial-appointments-dialog-${addButtonTooltip.toLowerCase().replace(/ /g, '-')}`}
@@ -631,6 +646,7 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                 <Box sx={{ display: 'flex', flexWrap: 'nowrap' }}>
                     <Tooltip title={editButtonTooltip}>
                         <IconButton
+                            aria-label={editButtonTooltip}
                             onClick={() => {
                                 setEditRow(row);
                                 table.setCreatingRow(null);
@@ -649,6 +665,7 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                     </Tooltip>
                     <Tooltip title={deleteButtonTooltip}>
                         <IconButton
+                            aria-label={deleteButtonTooltip}
                             onClick={openDeleteConfirmModal(row.id)}
                             disabled={!!pendingDeleteRowId || !!isBusy || !!editingRow}
                             id={`my-editorial-appointments-list-row-${

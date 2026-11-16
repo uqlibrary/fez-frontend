@@ -265,7 +265,7 @@ const EditAuthorAffiliations = ({ rowData, locale, setEditing, onChange }) => {
                                         data-testid={`orgChip-${item.af_org_id}`}
                                         label={getChipLabel(item.af_percent_affiliation, PRECISION)}
                                         variant="outlined"
-                                        size={'small'}
+                                        size={'medium'}
                                         color="primary"
                                     />
                                 </Grid>
@@ -279,7 +279,7 @@ const EditAuthorAffiliations = ({ rowData, locale, setEditing, onChange }) => {
                                 >
                                     {(hasNonHerdc(currentAffiliations) === false || isNonHerdc(item)) && (
                                         <IconButton
-                                            aria-label="delete"
+                                            aria-label="Delete"
                                             onClick={() => actionHandler[ACTIONS.DELETE](actionDispatch, index)}
                                             id={`deleteOrgBtn-${item.af_org_id}`}
                                             data-testid={`deleteOrgBtn-${item.af_org_id}`}

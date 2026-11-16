@@ -365,7 +365,7 @@
   },
   "jest": {
     "transform": {
-      "node_modules/(query-string|filter-obj|split-on-first)/.*\\.js$": [
+      "node_modules[\\\\/](query-string|filter-obj|split-on-first)[\\\\/].*\\.js$": [
         "<rootDir>/node_modules/babel-jest",
         {
           "plugins": [

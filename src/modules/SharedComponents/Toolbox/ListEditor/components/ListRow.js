@@ -81,6 +81,7 @@ export const ListRow = ({
                                     <Tooltip title={moveUpHint}>
                                         <span>
                                             <IconButton
+                                                aria-label={moveUpHint}
                                                 onClick={_handleMoveUp}
                                                 disabled={disabled}
                                                 id={`${listRowId}-move-up`}
@@ -99,6 +100,7 @@ export const ListRow = ({
                                     <Tooltip title={moveDownHint}>
                                         <span>
                                             <IconButton
+                                                aria-label={moveDownHint}
                                                 onClick={_handleMoveDown}
                                                 disabled={disabled}
                                                 id={`${listRowId}-move-down`}
@@ -142,6 +144,7 @@ export const ListRow = ({
                         <Tooltip title={deleteHint}>
                             <span>
                                 <IconButton
+                                    aria-label={deleteHint}
                                     onClick={showConfirmation}
                                     disabled={disabled}
                                     id={`${listRowId}-delete`}

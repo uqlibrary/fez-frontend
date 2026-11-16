@@ -79,12 +79,12 @@ export const AdminActions = ({
                 id={`admin-actions-button-${record}`}
                 data-analyticsid={`admin-actions-button-${record}`}
                 data-testid={`admin-actions-button-${record}`}
-                aria-label="More"
+                aria-label="Show available actions"
                 aria-haspopup="true"
                 onClick={handleClick}
                 size="large"
             >
-                <MoreVertIcon fontSize="small" />
+                <MoreVertIcon fontSize="medium" />
             </IconButton>
             <Menu
                 id={`admin-actions-menu-${record}`}

@@ -235,10 +235,9 @@ exports[`Component FixRecord should render fix record form 1`] = `
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
-                                      title="Full citation in Web of science will open in a new window"
                                     >
                                       <span
-                                        class="fez-icon wos large"
+                                        class="fez-icon wos xxlarge"
                                       />
                                       <span
                                         class="MuiBox-root css"
@@ -256,10 +255,9 @@ exports[`Component FixRecord should render fix record form 1`] = `
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
-                                      title="Full citation in Google scholar will open in a new window"
                                     >
                                       <span
-                                        class="fez-icon google large"
+                                        class="fez-icon google xxlarge"
                                       />
                                     </a>
                                     <span
@@ -719,10 +717,9 @@ exports[`Component FixRecord should render record citation, two actions in selec
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
-                                      title="Full citation in Web of science will open in a new window"
                                     >
                                       <span
-                                        class="fez-icon wos large"
+                                        class="fez-icon wos xxlarge"
                                       />
                                       <span
                                         class="MuiBox-root css"
@@ -740,10 +737,9 @@ exports[`Component FixRecord should render record citation, two actions in selec
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
-                                      title="Full citation in Google scholar will open in a new window"
                                     >
                                       <span
-                                        class="fez-icon google large"
+                                        class="fez-icon google xxlarge"
                                       />
                                     </a>
                                     <span
@@ -1093,10 +1089,9 @@ exports[`Component FixRecord should render unclaim form 1`] = `
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
-                                      title="Full citation in Web of science will open in a new window"
                                     >
                                       <span
-                                        class="fez-icon wos large"
+                                        class="fez-icon wos xxlarge"
                                       />
                                       <span
                                         class="MuiBox-root css"
@@ -1114,10 +1109,9 @@ exports[`Component FixRecord should render unclaim form 1`] = `
                                       rel="noopener noreferrer"
                                       tabindex="0"
                                       target="_blank"
-                                      title="Full citation in Google scholar will open in a new window"
                                     >
                                       <span
-                                        class="fez-icon google large"
+                                        class="fez-icon google xxlarge"
                                       />
                                     </a>
                                     <span
@@ -1271,13 +1265,16 @@ exports[`Component FixRecord should render unclaim form 1`] = `
                           <svg
                             aria-hidden="true"
                             class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-MuiSvgIcon-root"
-                            data-testid="WarningIcon"
+                            data-testid="WarningAmberIcon"
                             focusable="false"
                             id="warning-icon"
                             viewBox="0 0 24 24"
                           >
                             <path
-                              d="M1 21h22L12 2zm12-3h-2v-2h2zm0-4h-2v-4h2z"
+                              d="M12 5.99 19.53 19H4.47zM12 2 1 21h22z"
+                            />
+                            <path
+                              d="M13 16h-2v2h2zm0-6h-2v5h2z"
                             />
                           </svg>
                         </div>

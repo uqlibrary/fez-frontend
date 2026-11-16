@@ -85,7 +85,7 @@ export const ConfirmationBox = ({
                             <Button
                                 variant={'contained'}
                                 sx={{
-                                    color: 'white.main',
+                                    color: 'warning.contrastText',
                                     backgroundColor: 'warning.main',
                                     '&:hover': {
                                         backgroundColor: 'warning.dark',
