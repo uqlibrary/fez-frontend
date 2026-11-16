@@ -53,13 +53,13 @@ export const AdminActions = ({ adminActions = [...defaultActions], navigatedFrom
                 id="admin-actions-button"
                 data-testid="admin-actions-button"
                 data-analyticsid="admin-actions-button"
-                aria-label="More"
+                aria-label="Admin options"
                 aria-haspopup="true"
                 onClick={handleClick}
                 size="large"
                 {...rest}
             >
-                <MoreVertIcon fontSize="small" />
+                <MoreVertIcon fontSize="medium" />
             </IconButton>
             <Menu
                 id="admin-actions-menu"

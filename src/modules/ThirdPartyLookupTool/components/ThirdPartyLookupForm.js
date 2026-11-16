@@ -82,7 +82,7 @@ export const ThirdPartyLookupForm = ({
                         <Grid>
                             <IconButton
                                 onClick={_toggleMinimise}
-                                tooltip={!!state.isMinimised ? `${txt.labelShow}` : `${txt.labelHide}`}
+                                aria-label={!!state.isMinimised ? `${txt.labelShow}` : `${txt.labelHide}`}
                                 size="large"
                                 data-testid="minimise-toggle"
                             >

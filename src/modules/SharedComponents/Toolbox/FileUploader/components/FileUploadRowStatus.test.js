@@ -67,4 +67,9 @@ describe('Component FileUploadRowStatus', () => {
         const { container } = setup({}, { progress: 100, isUploadInProgress: false });
         expect(container).toMatchSnapshot();
     });
+
+    it('should render done icon if progress is 100% but uploading is still in progress', () => {
+        const { container } = setup({}, { progress: 100, isUploadInProgress: true });
+        expect(container).toMatchSnapshot();
+    });
 });

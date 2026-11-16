@@ -244,8 +244,8 @@ export default {
         },
         audioPlayer: {
             controls: {
-                playAudio: 'Click to play audio file [fileName]',
-                pauseAudio: 'Click to pause audio file [fileName]',
+                playAudio: 'Play audio file [fileName]',
+                pauseAudio: 'Pause audio file [fileName]',
             },
         },
         sessionExpiredConfirmation: {

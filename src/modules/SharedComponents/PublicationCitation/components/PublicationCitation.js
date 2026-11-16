@@ -193,7 +193,7 @@ const renderCopyCitationTextButton = pid => {
         <Tooltip title={isEnabled ? 'Copy citation text' : 'Feature unavailable'}>
             <span>
                 <IconButton
-                    aria-label={isEnabled ? `Copy ${pid}'s citation text` : 'Unavailable feature'}
+                    aria-label={`Copy citation text`}
                     onClick={handleCopy(pid)}
                     id={`publication-citation-copy-button-${pid}`}
                     data-analyticsid={`publication-citation-copy-button-${pid}`}
@@ -203,8 +203,9 @@ const renderCopyCitationTextButton = pid => {
                 >
                     <Copy
                         color={isEnabled ? 'secondary' : 'disabled'}
-                        style={{ width: 14, marginLeft: 6, marginTop: -6 }}
+                        style={{ marginLeft: 6, marginTop: -6 }}
                         sx={{ display: { xs: 'none', sm: 'inline' } }}
+                        fontSize="medium"
                     />
                 </IconButton>
             </span>

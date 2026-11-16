@@ -1,5 +1,7 @@
 import React, { createRef } from 'react';
 import HelpIcon from './HelpIcon';
+import KeyboardIcon from '@mui/icons-material/Keyboard';
+import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 import { rtlRender, fireEvent, WithReduxStore } from 'test-utils';
 
 import * as actions from '../actions';
@@ -32,6 +34,34 @@ describe('HelpIcon snapshots tests', () => {
     it('renders help icon', () => {
         const { getByTestId } = setup({ testId: 'test' });
         expect(getByTestId('help-icon-test')).toBeInTheDocument();
+    });
+
+    it('should include the title in the aria-label for the default help icon', () => {
+        const { getByTestId } = setup();
+        expect(getByTestId('help-icon')).toHaveAttribute('aria-label', 'This is the title - This is a tooltip');
+    });
+
+    it('should include the title in the aria-label when HelpOutlineIcon is passed explicitly', () => {
+        const { getByTestId } = setup({ IconComponent: HelpOutlineIcon });
+        expect(getByTestId('help-icon')).toHaveAttribute('aria-label', 'This is the title - This is a tooltip');
+    });
+
+    it('should use only the tooltip as aria-label for a non-help icon', () => {
+        const { getByTestId } = setup({ IconComponent: KeyboardIcon });
+        expect(getByTestId('help-icon')).toHaveAttribute('aria-label', 'This is a tooltip');
+    });
+
+    it('should use the default tooltip text in the aria-label when no tooltip is given', () => {
+        const { getByTestId } = setup({ tooltip: undefined });
+        expect(getByTestId('help-icon')).toHaveAttribute(
+            'aria-label',
+            'This is the title - Click for more information',
+        );
+    });
+
+    it('should use only the tooltip as aria-label when no title is given', () => {
+        const { getByTestId } = setup({ title: undefined });
+        expect(getByTestId('help-icon')).toHaveAttribute('aria-label', 'This is a tooltip');
     });
 
     it('should open drawer', () => {
