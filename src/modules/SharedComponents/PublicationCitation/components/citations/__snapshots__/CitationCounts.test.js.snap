@@ -18,10 +18,9 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
         rel="noopener noreferrer"
         tabindex="0"
         target="_blank"
-        title="Full citation in Scopus will open in a new window"
       >
         <span
-          class="fez-icon scopus large"
+          class="fez-icon scopus xxlarge"
         />
         <span
           class="MuiBox-root css"
@@ -39,10 +38,9 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
         rel="noopener noreferrer"
         tabindex="0"
         target="_blank"
-        title="Full citation in Altmetric will open in a new window"
       >
         <span
-          class="fez-icon altmetric large"
+          class="fez-icon altmetric xxlarge"
         />
         <span
           class="MuiBox-root css"
@@ -60,10 +58,9 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
         rel="noopener noreferrer"
         tabindex="0"
         target="_blank"
-        title="Full citation in Google scholar will open in a new window"
       >
         <span
-          class="fez-icon google large"
+          class="fez-icon google xxlarge"
         />
       </a>
       <span
@@ -96,10 +93,9 @@ exports[`CitationCounts should render component with all metrics 1`] = `
         rel="noopener noreferrer"
         tabindex="0"
         target="_blank"
-        title="Full citation in Web of science will open in a new window"
       >
         <span
-          class="fez-icon wos large"
+          class="fez-icon wos xxlarge"
         />
         <span
           class="MuiBox-root css"
@@ -117,10 +113,9 @@ exports[`CitationCounts should render component with all metrics 1`] = `
         rel="noopener noreferrer"
         tabindex="0"
         target="_blank"
-        title="Full citation in Scopus will open in a new window"
       >
         <span
-          class="fez-icon scopus large"
+          class="fez-icon scopus xxlarge"
         />
         <span
           class="MuiBox-root css"
@@ -138,10 +133,9 @@ exports[`CitationCounts should render component with all metrics 1`] = `
         rel="noopener noreferrer"
         tabindex="0"
         target="_blank"
-        title="Full citation in Altmetric will open in a new window"
       >
         <span
-          class="fez-icon altmetric large"
+          class="fez-icon altmetric xxlarge"
         />
         <span
           class="MuiBox-root css"
@@ -159,10 +153,9 @@ exports[`CitationCounts should render component with all metrics 1`] = `
         rel="noopener noreferrer"
         tabindex="0"
         target="_blank"
-        title="Full citation in Dimensions will open in a new window"
       >
         <span
-          class="fez-icon dimensions large"
+          class="fez-icon dimensions xxlarge"
         />
         <span
           class="MuiBox-root css"
@@ -180,10 +173,9 @@ exports[`CitationCounts should render component with all metrics 1`] = `
         rel="noopener noreferrer"
         tabindex="0"
         target="_blank"
-        title="Full citation in Google scholar will open in a new window"
       >
         <span
-          class="fez-icon google large"
+          class="fez-icon google xxlarge"
         />
         <span
           class="MuiBox-root css"
@@ -201,10 +193,9 @@ exports[`CitationCounts should render component with all metrics 1`] = `
         rel="noopener noreferrer"
         tabindex="0"
         target="_blank"
-        title="Full citation in OpenAlex will open in a new window"
       >
         <span
-          class="fez-icon openalex large"
+          class="fez-icon openalex xxlarge"
         />
         <span
           class="MuiBox-root css"
@@ -262,10 +253,9 @@ exports[`CitationCounts should render null as 0 1`] = `
         rel="noopener noreferrer"
         tabindex="0"
         target="_blank"
-        title="Full citation in Dimensions will open in a new window"
       >
         <span
-          class="fez-icon dimensions large"
+          class="fez-icon dimensions xxlarge"
         />
         <span
           class="MuiBox-root css"
@@ -283,10 +273,9 @@ exports[`CitationCounts should render null as 0 1`] = `
         rel="noopener noreferrer"
         tabindex="0"
         target="_blank"
-        title="Full citation in Google scholar will open in a new window"
       >
         <span
-          class="fez-icon google large"
+          class="fez-icon google xxlarge"
         />
       </a>
       <span
@@ -319,10 +308,9 @@ exports[`CitationCounts should render open access icon when required 1`] = `
         rel="noopener noreferrer"
         tabindex="0"
         target="_blank"
-        title="Full citation in Scopus will open in a new window"
       >
         <span
-          class="fez-icon scopus large"
+          class="fez-icon scopus xxlarge"
         />
         <span
           class="MuiBox-root css"
@@ -340,10 +328,9 @@ exports[`CitationCounts should render open access icon when required 1`] = `
         rel="noopener noreferrer"
         tabindex="0"
         target="_blank"
-        title="Full citation in Altmetric will open in a new window"
       >
         <span
-          class="fez-icon altmetric large"
+          class="fez-icon altmetric xxlarge"
         />
         <span
           class="MuiBox-root css"
@@ -361,10 +348,9 @@ exports[`CitationCounts should render open access icon when required 1`] = `
         rel="noopener noreferrer"
         tabindex="0"
         target="_blank"
-        title="Full citation in Google scholar will open in a new window"
       >
         <span
-          class="fez-icon google large"
+          class="fez-icon google xxlarge"
         />
       </a>
       <span

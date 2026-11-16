@@ -197,7 +197,7 @@ const BulkExport = ({
                         {buttonText}
                     </Typography>
                     <IconButton
-                        aria-label="close"
+                        aria-label="Close dialog"
                         onClick={closeDialog}
                         sx={theme => ({
                             position: 'absolute',

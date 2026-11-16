@@ -186,13 +186,16 @@ exports[`Component FileUploader should alphabetically order files as they are ad
                 <svg
                   aria-hidden="true"
                   class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-MuiSvgIcon-root"
-                  data-testid="WarningIcon"
+                  data-testid="WarningAmberIcon"
                   focusable="false"
                   id="warning-icon"
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M1 21h22L12 2zm12-3h-2v-2h2zm0-4h-2v-4h2z"
+                    d="M12 5.99 19.53 19H4.47zM12 2 1 21h22z"
+                  />
+                  <path
+                    d="M13 16h-2v2h2zm0-6h-2v5h2z"
                   />
                 </svg>
               </div>
@@ -253,6 +256,7 @@ exports[`Component FileUploader should alphabetically order files as they are ad
                 data-mui-internal-clone-element="true"
               >
                 <button
+                  aria-label="Remove all files from the upload queue"
                   class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                   data-analyticsid="delete-all-files"
                   data-testid="delete-all-files"
@@ -339,6 +343,7 @@ exports[`Component FileUploader should alphabetically order files as they are ad
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this file"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-0-delete"
                 data-testid="dsi-dsid-0-delete"
@@ -418,6 +423,7 @@ exports[`Component FileUploader should alphabetically order files as they are ad
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this file"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-1-delete"
                 data-testid="dsi-dsid-1-delete"
@@ -631,13 +637,16 @@ exports[`Component FileUploader should alphabetically order files as they are ad
                 <svg
                   aria-hidden="true"
                   class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-MuiSvgIcon-root"
-                  data-testid="WarningIcon"
+                  data-testid="WarningAmberIcon"
                   focusable="false"
                   id="warning-icon"
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M1 21h22L12 2zm12-3h-2v-2h2zm0-4h-2v-4h2z"
+                    d="M12 5.99 19.53 19H4.47zM12 2 1 21h22z"
+                  />
+                  <path
+                    d="M13 16h-2v2h2zm0-6h-2v5h2z"
                   />
                 </svg>
               </div>
@@ -698,6 +707,7 @@ exports[`Component FileUploader should alphabetically order files as they are ad
                 data-mui-internal-clone-element="true"
               >
                 <button
+                  aria-label="Remove all files from the upload queue"
                   class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                   data-analyticsid="delete-all-files"
                   data-testid="delete-all-files"
@@ -784,6 +794,7 @@ exports[`Component FileUploader should alphabetically order files as they are ad
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this file"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-0-delete"
                 data-testid="dsi-dsid-0-delete"
@@ -863,6 +874,7 @@ exports[`Component FileUploader should alphabetically order files as they are ad
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this file"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-1-delete"
                 data-testid="dsi-dsid-1-delete"
@@ -942,6 +954,7 @@ exports[`Component FileUploader should alphabetically order files as they are ad
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this file"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-2-delete"
                 data-testid="dsi-dsid-2-delete"
@@ -1274,13 +1287,16 @@ exports[`Component FileUploader should delete first file 1`] = `
                 <svg
                   aria-hidden="true"
                   class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-MuiSvgIcon-root"
-                  data-testid="WarningIcon"
+                  data-testid="WarningAmberIcon"
                   focusable="false"
                   id="warning-icon"
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M1 21h22L12 2zm12-3h-2v-2h2zm0-4h-2v-4h2z"
+                    d="M12 5.99 19.53 19H4.47zM12 2 1 21h22z"
+                  />
+                  <path
+                    d="M13 16h-2v2h2zm0-6h-2v5h2z"
                   />
                 </svg>
               </div>
@@ -1341,6 +1357,7 @@ exports[`Component FileUploader should delete first file 1`] = `
                 data-mui-internal-clone-element="true"
               >
                 <button
+                  aria-label="Remove all files from the upload queue"
                   class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                   data-analyticsid="delete-all-files"
                   data-testid="delete-all-files"
@@ -1427,6 +1444,7 @@ exports[`Component FileUploader should delete first file 1`] = `
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this file"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-0-delete"
                 data-testid="dsi-dsid-0-delete"
@@ -1640,13 +1658,16 @@ exports[`Component FileUploader should drag and drop 2 files 1`] = `
                 <svg
                   aria-hidden="true"
                   class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-MuiSvgIcon-root"
-                  data-testid="WarningIcon"
+                  data-testid="WarningAmberIcon"
                   focusable="false"
                   id="warning-icon"
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M1 21h22L12 2zm12-3h-2v-2h2zm0-4h-2v-4h2z"
+                    d="M12 5.99 19.53 19H4.47zM12 2 1 21h22z"
+                  />
+                  <path
+                    d="M13 16h-2v2h2zm0-6h-2v5h2z"
                   />
                 </svg>
               </div>
@@ -1707,6 +1728,7 @@ exports[`Component FileUploader should drag and drop 2 files 1`] = `
                 data-mui-internal-clone-element="true"
               >
                 <button
+                  aria-label="Remove all files from the upload queue"
                   class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                   data-analyticsid="delete-all-files"
                   data-testid="delete-all-files"
@@ -1793,6 +1815,7 @@ exports[`Component FileUploader should drag and drop 2 files 1`] = `
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this file"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-0-delete"
                 data-testid="dsi-dsid-0-delete"
@@ -1872,6 +1895,7 @@ exports[`Component FileUploader should drag and drop 2 files 1`] = `
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this file"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-1-delete"
                 data-testid="dsi-dsid-1-delete"
@@ -2339,13 +2363,16 @@ exports[`Component FileUploader should not render rows for uploaded files with a
                 <svg
                   aria-hidden="true"
                   class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-MuiSvgIcon-root"
-                  data-testid="WarningIcon"
+                  data-testid="WarningAmberIcon"
                   focusable="false"
                   id="warning-icon"
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M1 21h22L12 2zm12-3h-2v-2h2zm0-4h-2v-4h2z"
+                    d="M12 5.99 19.53 19H4.47zM12 2 1 21h22z"
+                  />
+                  <path
+                    d="M13 16h-2v2h2zm0-6h-2v5h2z"
                   />
                 </svg>
               </div>
@@ -2406,6 +2433,7 @@ exports[`Component FileUploader should not render rows for uploaded files with a
                 data-mui-internal-clone-element="true"
               >
                 <button
+                  aria-label="Remove all files from the upload queue"
                   class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                   data-analyticsid="delete-all-files"
                   data-testid="delete-all-files"
@@ -2492,6 +2520,7 @@ exports[`Component FileUploader should not render rows for uploaded files with a
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this file"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-0-delete"
                 data-testid="dsi-dsid-0-delete"
@@ -2571,6 +2600,7 @@ exports[`Component FileUploader should not render rows for uploaded files with a
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this file"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-1-delete"
                 data-testid="dsi-dsid-1-delete"
@@ -2903,13 +2933,16 @@ exports[`Component FileUploader should not reset file access or embargo date inf
                 <svg
                   aria-hidden="true"
                   class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-MuiSvgIcon-root"
-                  data-testid="WarningIcon"
+                  data-testid="WarningAmberIcon"
                   focusable="false"
                   id="warning-icon"
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M1 21h22L12 2zm12-3h-2v-2h2zm0-4h-2v-4h2z"
+                    d="M12 5.99 19.53 19H4.47zM12 2 1 21h22z"
+                  />
+                  <path
+                    d="M13 16h-2v2h2zm0-6h-2v5h2z"
                   />
                 </svg>
               </div>
@@ -2988,6 +3021,7 @@ exports[`Component FileUploader should not reset file access or embargo date inf
                 data-mui-internal-clone-element="true"
               >
                 <button
+                  aria-label="Remove all files from the upload queue"
                   class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                   data-analyticsid="delete-all-files"
                   data-testid="delete-all-files"
@@ -3168,6 +3202,7 @@ exports[`Component FileUploader should not reset file access or embargo date inf
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this file"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-0-delete"
                 data-testid="dsi-dsid-0-delete"
@@ -3313,6 +3348,7 @@ exports[`Component FileUploader should not reset file access or embargo date inf
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this file"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-1-delete"
                 data-testid="dsi-dsid-1-delete"
@@ -4038,13 +4074,16 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                 <svg
                   aria-hidden="true"
                   class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-MuiSvgIcon-root"
-                  data-testid="WarningIcon"
+                  data-testid="WarningAmberIcon"
                   focusable="false"
                   id="warning-icon"
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M1 21h22L12 2zm12-3h-2v-2h2zm0-4h-2v-4h2z"
+                    d="M12 5.99 19.53 19H4.47zM12 2 1 21h22z"
+                  />
+                  <path
+                    d="M13 16h-2v2h2zm0-6h-2v5h2z"
                   />
                 </svg>
               </div>
@@ -4123,6 +4162,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                 data-mui-internal-clone-element="true"
               >
                 <button
+                  aria-label="Remove all files from the upload queue"
                   class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                   data-analyticsid="delete-all-files"
                   data-testid="delete-all-files"
@@ -4275,6 +4315,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this file"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-0-delete"
                 data-testid="dsi-dsid-0-delete"
@@ -4420,6 +4461,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this file"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-1-delete"
                 data-testid="dsi-dsid-1-delete"
@@ -4633,13 +4675,16 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                 <svg
                   aria-hidden="true"
                   class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-MuiSvgIcon-root"
-                  data-testid="WarningIcon"
+                  data-testid="WarningAmberIcon"
                   focusable="false"
                   id="warning-icon"
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M1 21h22L12 2zm12-3h-2v-2h2zm0-4h-2v-4h2z"
+                    d="M12 5.99 19.53 19H4.47zM12 2 1 21h22z"
+                  />
+                  <path
+                    d="M13 16h-2v2h2zm0-6h-2v5h2z"
                   />
                 </svg>
               </div>
@@ -4718,6 +4763,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                 data-mui-internal-clone-element="true"
               >
                 <button
+                  aria-label="Remove all files from the upload queue"
                   class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                   data-analyticsid="delete-all-files"
                   data-testid="delete-all-files"
@@ -4862,6 +4908,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this file"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-0-delete"
                 data-testid="dsi-dsid-0-delete"
@@ -5007,6 +5054,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this file"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-1-delete"
                 data-testid="dsi-dsid-1-delete"
@@ -5220,13 +5268,16 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                 <svg
                   aria-hidden="true"
                   class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-MuiSvgIcon-root"
-                  data-testid="WarningIcon"
+                  data-testid="WarningAmberIcon"
                   focusable="false"
                   id="warning-icon"
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M1 21h22L12 2zm12-3h-2v-2h2zm0-4h-2v-4h2z"
+                    d="M12 5.99 19.53 19H4.47zM12 2 1 21h22z"
+                  />
+                  <path
+                    d="M13 16h-2v2h2zm0-6h-2v5h2z"
                   />
                 </svg>
               </div>
@@ -5305,6 +5356,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                 data-mui-internal-clone-element="true"
               >
                 <button
+                  aria-label="Remove all files from the upload queue"
                   class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                   data-analyticsid="delete-all-files"
                   data-testid="delete-all-files"
@@ -5449,6 +5501,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this file"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-0-delete"
                 data-testid="dsi-dsid-0-delete"
@@ -5622,6 +5675,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this file"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-1-delete"
                 data-testid="dsi-dsid-1-delete"
@@ -5990,13 +6044,16 @@ exports[`Component FileUploader should render rows for uploaded files with defau
                 <svg
                   aria-hidden="true"
                   class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-MuiSvgIcon-root"
-                  data-testid="WarningIcon"
+                  data-testid="WarningAmberIcon"
                   focusable="false"
                   id="warning-icon"
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M1 21h22L12 2zm12-3h-2v-2h2zm0-4h-2v-4h2z"
+                    d="M12 5.99 19.53 19H4.47zM12 2 1 21h22z"
+                  />
+                  <path
+                    d="M13 16h-2v2h2zm0-6h-2v5h2z"
                   />
                 </svg>
               </div>
@@ -6057,6 +6114,7 @@ exports[`Component FileUploader should render rows for uploaded files with defau
                 data-mui-internal-clone-element="true"
               >
                 <button
+                  aria-label="Remove all files from the upload queue"
                   class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                   data-analyticsid="delete-all-files"
                   data-testid="delete-all-files"
@@ -6143,6 +6201,7 @@ exports[`Component FileUploader should render rows for uploaded files with defau
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this file"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-0-delete"
                 data-testid="dsi-dsid-0-delete"
@@ -6222,6 +6281,7 @@ exports[`Component FileUploader should render rows for uploaded files with defau
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this file"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-1-delete"
                 data-testid="dsi-dsid-1-delete"
@@ -6554,13 +6614,16 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                 <svg
                   aria-hidden="true"
                   class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-MuiSvgIcon-root"
-                  data-testid="WarningIcon"
+                  data-testid="WarningAmberIcon"
                   focusable="false"
                   id="warning-icon"
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M1 21h22L12 2zm12-3h-2v-2h2zm0-4h-2v-4h2z"
+                    d="M12 5.99 19.53 19H4.47zM12 2 1 21h22z"
+                  />
+                  <path
+                    d="M13 16h-2v2h2zm0-6h-2v5h2z"
                   />
                 </svg>
               </div>
@@ -6639,6 +6702,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                 data-mui-internal-clone-element="true"
               >
                 <button
+                  aria-label="Remove all files from the upload queue"
                   class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                   data-analyticsid="delete-all-files"
                   data-testid="delete-all-files"
@@ -6795,6 +6859,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this file"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-0-delete"
                 data-testid="dsi-dsid-0-delete"
@@ -6944,6 +7009,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this file"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-1-delete"
                 data-testid="dsi-dsid-1-delete"
@@ -7157,13 +7223,16 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                 <svg
                   aria-hidden="true"
                   class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-MuiSvgIcon-root"
-                  data-testid="WarningIcon"
+                  data-testid="WarningAmberIcon"
                   focusable="false"
                   id="warning-icon"
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M1 21h22L12 2zm12-3h-2v-2h2zm0-4h-2v-4h2z"
+                    d="M12 5.99 19.53 19H4.47zM12 2 1 21h22z"
+                  />
+                  <path
+                    d="M13 16h-2v2h2zm0-6h-2v5h2z"
                   />
                 </svg>
               </div>
@@ -7242,6 +7311,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                 data-mui-internal-clone-element="true"
               >
                 <button
+                  aria-label="Remove all files from the upload queue"
                   class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                   data-analyticsid="delete-all-files"
                   data-testid="delete-all-files"
@@ -7392,6 +7462,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this file"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-0-delete"
                 data-testid="dsi-dsid-0-delete"
@@ -7541,6 +7612,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this file"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-1-delete"
                 data-testid="dsi-dsid-1-delete"
@@ -7754,13 +7826,16 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                 <svg
                   aria-hidden="true"
                   class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-MuiSvgIcon-root"
-                  data-testid="WarningIcon"
+                  data-testid="WarningAmberIcon"
                   focusable="false"
                   id="warning-icon"
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M1 21h22L12 2zm12-3h-2v-2h2zm0-4h-2v-4h2z"
+                    d="M12 5.99 19.53 19H4.47zM12 2 1 21h22z"
+                  />
+                  <path
+                    d="M13 16h-2v2h2zm0-6h-2v5h2z"
                   />
                 </svg>
               </div>
@@ -7839,6 +7914,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                 data-mui-internal-clone-element="true"
               >
                 <button
+                  aria-label="Remove all files from the upload queue"
                   class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                   data-analyticsid="delete-all-files"
                   data-testid="delete-all-files"
@@ -7989,6 +8065,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this file"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-0-delete"
                 data-testid="dsi-dsid-0-delete"
@@ -8168,6 +8245,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this file"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-1-delete"
                 data-testid="dsi-dsid-1-delete"
@@ -8536,13 +8614,16 @@ exports[`Component FileUploader should set max files error message 1`] = `
                 <svg
                   aria-hidden="true"
                   class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-MuiSvgIcon-root"
-                  data-testid="WarningIcon"
+                  data-testid="WarningAmberIcon"
                   focusable="false"
                   id="warning-icon"
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M1 21h22L12 2zm12-3h-2v-2h2zm0-4h-2v-4h2z"
+                    d="M12 5.99 19.53 19H4.47zM12 2 1 21h22z"
+                  />
+                  <path
+                    d="M13 16h-2v2h2zm0-6h-2v5h2z"
                   />
                 </svg>
               </div>
@@ -8585,13 +8666,13 @@ exports[`Component FileUploader should set max files error message 1`] = `
                 <svg
                   aria-hidden="true"
                   class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-MuiSvgIcon-root"
-                  data-testid="ErrorIcon"
+                  data-testid="HighlightOffIcon"
                   focusable="false"
                   id="error-icon"
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m1 15h-2v-2h2zm0-4h-2V7h2z"
+                    d="M14.59 8 12 10.59 9.41 8 8 9.41 10.59 12 8 14.59 9.41 16 12 13.41 14.59 16 16 14.59 13.41 12 16 9.41zM12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8"
                   />
                 </svg>
               </div>
@@ -8652,6 +8733,7 @@ exports[`Component FileUploader should set max files error message 1`] = `
                 data-mui-internal-clone-element="true"
               >
                 <button
+                  aria-label="Remove all files from the upload queue"
                   class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                   data-analyticsid="delete-all-files"
                   data-testid="delete-all-files"
@@ -8738,6 +8820,7 @@ exports[`Component FileUploader should set max files error message 1`] = `
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this file"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-0-delete"
                 data-testid="dsi-dsid-0-delete"
@@ -8951,13 +9034,16 @@ exports[`Component FileUploader should update file description 1`] = `
                 <svg
                   aria-hidden="true"
                   class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-MuiSvgIcon-root"
-                  data-testid="WarningIcon"
+                  data-testid="WarningAmberIcon"
                   focusable="false"
                   id="warning-icon"
                   viewBox="0 0 24 24"
                 >
                   <path
-                    d="M1 21h22L12 2zm12-3h-2v-2h2zm0-4h-2v-4h2z"
+                    d="M12 5.99 19.53 19H4.47zM12 2 1 21h22z"
+                  />
+                  <path
+                    d="M13 16h-2v2h2zm0-6h-2v5h2z"
                   />
                 </svg>
               </div>
@@ -9036,6 +9122,7 @@ exports[`Component FileUploader should update file description 1`] = `
                 data-mui-internal-clone-element="true"
               >
                 <button
+                  aria-label="Remove all files from the upload queue"
                   class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                   data-analyticsid="delete-all-files"
                   data-testid="delete-all-files"
@@ -9188,6 +9275,7 @@ exports[`Component FileUploader should update file description 1`] = `
               data-mui-internal-clone-element="true"
             >
               <button
+                aria-label="Remove this file"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                 data-analyticsid="dsi-dsid-0-delete"
                 data-testid="dsi-dsid-0-delete"

@@ -8,9 +8,10 @@ exports[`Component SocialShare should fire print method on click 1`] = `
   >
     <div
       class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
-      style="margin-right: 4px;"
+      style="margin-right: 12px;"
     >
       <a
+        aria-label="Share this record via Email"
         class="css"
         data-analyticsid="email-link"
         data-testid="email-link"
@@ -19,7 +20,6 @@ exports[`Component SocialShare should fire print method on click 1`] = `
         rel="noopener noreferrer"
         tabindex="0"
         target="_blank"
-        title="Share this record via Email"
       >
         <div
           class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault css-MuiAvatar-root"
@@ -40,9 +40,10 @@ exports[`Component SocialShare should fire print method on click 1`] = `
     </div>
     <div
       class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
-      style="margin-right: 4px;"
+      style="margin-right: 0px;"
     >
       <a
+        aria-label="Print this record"
         class="css"
         data-analyticsid="print-link"
         data-testid="print-link"
@@ -51,7 +52,6 @@ exports[`Component SocialShare should fire print method on click 1`] = `
         rel="noopener noreferrer"
         tabindex="0"
         target="_blank"
-        title="Print this record"
       >
         <div
           class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault css-MuiAvatar-root"
@@ -82,9 +82,10 @@ exports[`Component SocialShare should render component 1`] = `
   >
     <div
       class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
-      style="margin-right: 4px;"
+      style="margin-right: 12px;"
     >
       <a
+        aria-label="Share this record via Email"
         class="css"
         data-analyticsid="email-link"
         data-testid="email-link"
@@ -93,7 +94,6 @@ exports[`Component SocialShare should render component 1`] = `
         rel="noopener noreferrer"
         tabindex="0"
         target="_blank"
-        title="Share this record via Email"
       >
         <div
           class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault css-MuiAvatar-root"
@@ -114,9 +114,10 @@ exports[`Component SocialShare should render component 1`] = `
     </div>
     <div
       class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
-      style="margin-right: 4px;"
+      style="margin-right: 0px;"
     >
       <a
+        aria-label="Print this record"
         class="css"
         data-analyticsid="print-link"
         data-testid="print-link"
@@ -125,7 +126,6 @@ exports[`Component SocialShare should render component 1`] = `
         rel="noopener noreferrer"
         tabindex="0"
         target="_blank"
-        title="Print this record"
       >
         <div
           class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault css-MuiAvatar-root"

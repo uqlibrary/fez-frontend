@@ -22,12 +22,12 @@ const JournalFieldsMap = [
             actionsCol: {
                 xs: {
                     width: '10%',
-                    padding: '6px',
+                    padding: '12px',
                 },
                 selectable: {
                     xs: {
                         width: '30%',
-                        padding: '6px',
+                        padding: '12px',
                     },
                     sm: {
                         width: '10%',
@@ -101,9 +101,7 @@ const JournalFieldsMap = [
                                     )
                                 }
                             </Typography>
-                            {!!data.titleHelp && (
-                                <HelpIcon {...data.titleHelp} testId={`${data.key}-${index}`} iconSize={'small'} />
-                            )}
+                            {!!data.titleHelp && <HelpIcon {...data.titleHelp} testId={`${data.key}-${index}`} />}
                         </Box>
                     </Typography>
                 );
@@ -259,11 +257,7 @@ const JournalFieldsMap = [
                                     <Box component={'span'} sx={{ ...classes?.subLabel }}>
                                         {data.subLabel}
                                         {!!data.titleHelp && (
-                                            <HelpIcon
-                                                {...data.titleHelp}
-                                                testId={`${data.key}-${index}`}
-                                                iconSize={'small'}
-                                            />
+                                            <HelpIcon {...data.titleHelp} testId={`${data.key}-${index}`} />
                                         )}
                                     </Box>
                                 )}
