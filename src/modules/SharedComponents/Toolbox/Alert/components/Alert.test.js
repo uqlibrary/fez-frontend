@@ -26,7 +26,7 @@ describe('Alert', () => {
         const { container, getByText, getByTestId } = setup();
         expect(getByText(/Title*/)).toBeInTheDocument();
         expect(getByText('Message')).toBeInTheDocument();
-        expect(getByTestId('WarningIcon')).toBeInTheDocument();
+        expect(getByTestId('WarningAmberIcon')).toBeInTheDocument();
         expect(container).toMatchSnapshot();
     });
 
@@ -39,7 +39,7 @@ describe('Alert', () => {
 
         expect(getByText(/This is an error title*/)).toBeInTheDocument();
         expect(getByText('This is an error message')).toBeInTheDocument();
-        expect(getByTestId('ErrorIcon')).toBeInTheDocument();
+        expect(getByTestId('HighlightOffIcon')).toBeInTheDocument();
         expect(container).toMatchSnapshot();
     });
     it('should render error type of alert by default', () => {
@@ -51,7 +51,7 @@ describe('Alert', () => {
 
         expect(getByText(/This is an error title*/)).toBeInTheDocument();
         expect(getByText('This is an error message')).toBeInTheDocument();
-        expect(getByTestId('ErrorIcon')).toBeInTheDocument();
+        expect(getByTestId('HighlightOffIcon')).toBeInTheDocument();
         expect(container).toMatchSnapshot();
     });
 
@@ -92,7 +92,7 @@ describe('Alert', () => {
 
         expect(getByText(/This is an info title*/)).toBeInTheDocument();
         expect(getByText('This is an info message')).toBeInTheDocument();
-        expect(getByTestId('InfoIcon')).toBeInTheDocument();
+        expect(getByTestId('InfoOutlinedIcon')).toBeInTheDocument();
         expect(container).toMatchSnapshot();
     });
 
@@ -159,7 +159,7 @@ describe('Alert', () => {
 
         expect(getByText(/This is an error title*/)).toBeInTheDocument();
         expect(getByText('This is an error message')).toBeInTheDocument();
-        expect(getByTestId('ErrorIcon')).toBeInTheDocument();
+        expect(getByTestId('HighlightOffIcon')).toBeInTheDocument();
         expect(getByTestId('action-button')).toBeInTheDocument();
 
         fireEvent.click(getByTestId('action-button'));

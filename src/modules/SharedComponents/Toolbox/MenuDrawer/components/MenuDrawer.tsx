@@ -198,16 +198,24 @@ export const MenuDrawer: React.FC<MenuDrawerProps> = ({
                         sx={{ outline: 'none', flexGrow: 1, paddingTop: 0 }}
                         tabIndex={-1}
                     >
-                        <Grid container spacing={0} wrap="nowrap" alignContent="center" alignItems="center">
+                        <Grid
+                            container
+                            spacing={0}
+                            wrap="nowrap"
+                            alignContent="center"
+                            alignItems="center"
+                            sx={{
+                                backgroundColor: 'primary.main',
+                                height: '70px',
+                                boxShadow:
+                                    '0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), ' +
+                                    '0px 1px 10px 0px rgba(0, 0, 0, 0.12)',
+                            }}
+                        >
                             <Grid
                                 size={{ xs: 10, sm: 12 }}
                                 sx={{
                                     minWidth: 0,
-                                    backgroundColor: 'primary.main',
-                                    height: '70px',
-                                    boxShadow:
-                                        '0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), ' +
-                                        '0px 1px 10px 0px rgba(0, 0, 0, 0.12)',
                                     textAlign: 'center',
                                     '& img': {
                                         maxHeight: '45px',
@@ -231,7 +239,7 @@ export const MenuDrawer: React.FC<MenuDrawerProps> = ({
                                     </ExternalLink>
                                 )}
                             </Grid>
-                            <Grid size={2} sx={{ display: { xs: 'block', sm: 'none' } }}>
+                            <Grid size={2} sx={{ display: { xs: 'block', sm: 'none' }, textAlign: 'center' }}>
                                 <IconButton onClick={onToggleDrawer} aria-label={locale.closeMenuLabel} size="medium">
                                     <KeyboardArrowLeft sx={{ color: 'white.main' }} />
                                 </IconButton>
