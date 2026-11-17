@@ -1,5 +1,4 @@
 import { createTheme } from '@mui/material/styles';
-import { orange, red } from '@mui/material/colors';
 import { IS_JEST_TEST } from './general';
 import ds from './designSystemTokens';
 
@@ -27,20 +26,20 @@ const palette = {
     },
     default: {
         light: 'rgba(0, 0, 0, 0.87)',
-        main: '#5e5b60', // $grey-800
-        dark: '#302c33', // $grey-925
+        main: ds.colour.grey[800], // $grey-800
+        dark: ds.colour.grey[925], // $grey-925
     },
     secondary: {
-        light: '#f3f3f4', // $grey-50
-        main: '#5e5b60', // $grey-800
-        dark: '#302c33', // $grey-925
+        light: ds.colour.grey[50], // $grey-50
+        main: ds.colour.grey[800], // $grey-800
+        dark: ds.colour.grey[925], // $grey-925
     },
     accent: {
         // UQ Design System $utility-500 (#0d6dcd) — the DS utility blue; single colour across weights.
         // Used as decorative header / selected-row backgrounds with white text (white on #0d6dcd ~5.1:1 AA).
-        light: '#0d6dcd',
-        main: '#0d6dcd',
-        dark: '#0d6dcd',
+        light: ds.colour.utility[500],
+        main: ds.colour.utility[500],
+        dark: ds.colour.utility[500],
     },
     white: {
         main: ds.colour.white,
@@ -48,34 +47,34 @@ const palette = {
     warning: {
         // UQ Design System $warning-500 (#f7ba1e) — the DS warning fill, single colour across weights.
         // Pair with dark text (contrastText $grey-900): grey-900 on #f7ba1e ~6.7:1 passes AA. Never white text.
-        light: '#f7ba1e',
-        main: '#f7ba1e',
-        dark: '#f7ba1e',
-        contrastText: '#3b383e', // $grey-900
+        light: ds.colour.warning[500],
+        main: ds.colour.warning[500],
+        dark: ds.colour.warning[500],
+        contrastText: ds.colour.grey[900], // $grey-900
     },
     success: {
         // UQ Design System $success-700 (#3b7c3e) — single colour across weights (the DS defines no weighted
         // success variant for these uses); AA on white (~5:1) for non-alert success text/icon
-        light: '#3b7c3e',
-        main: '#3b7c3e',
-        dark: '#3b7c3e',
+        light: ds.colour.success[700],
+        main: ds.colour.success[700],
+        dark: ds.colour.success[700],
     },
     error: {
         // UQ Design System $error-700 (#9d2424) — single colour across weights; AA on white (~7.4:1) and on
         // #efefef fields (~5.9:1), e.g. form-field error text (DS $error-500 #d62929 fails on #efefef)
-        light: '#9d2424',
-        main: '#9d2424',
-        dark: '#9d2424',
+        light: ds.colour.error[700],
+        main: ds.colour.error[700],
+        dark: ds.colour.error[700],
     },
     // UQ Design System "page" alert colours: a light $*-50 tint background + $grey-900 text (for every
     // type). Keyed by the palette entry each alert type maps to (see the Alert component's paletteIndex).
     alert: {
-        text: '#3b383e', // $grey-900
-        accent: { background: '#e7f0fa' }, // info → $utility-50
-        success: { background: '#edf6ed' }, // done → $success-50
-        warning: { background: '#fef8e8' }, // $warning-50
-        error: { background: '#fbeaea' }, // $error-50
-        secondary: { background: '#f3f3f4' }, // help → $grey-50
+        text: ds.colour.grey[900], // $grey-900
+        accent: { background: ds.colour.utility[50] }, // info → $utility-50
+        success: { background: ds.colour.success[50] }, // done → $success-50
+        warning: { background: ds.colour.warning[50] }, // $warning-50
+        error: { background: ds.colour.error[50] }, // $error-50
+        secondary: { background: ds.colour.grey[50] }, // help → $grey-50
     },
 };
 
@@ -106,15 +105,15 @@ const typography = {
     allVariants: { letterSpacing: ds.spacing.letter },
     h1: displayHeading({
         fontSize: ds.font.size.xxxxl,
-        [desktopMediaQuery]: { fontSize: ds.desktop.font.size.xxxxl },
+        [desktopMediaQuery]: { fontSize: ds.font.size.uul },
     }),
     h2: heading({
         fontSize: ds.font.size.xxxl,
-        [desktopMediaQuery]: { fontSize: ds.desktop.font.size.xxxl },
+        [desktopMediaQuery]: { fontSize: ds.font.size.ul },
     }),
     h3: heading({
         fontSize: ds.font.size.xxl,
-        [desktopMediaQuery]: { fontSize: ds.desktop.font.size.xxl },
+        [desktopMediaQuery]: { fontSize: ds.font.size.xxxl },
     }),
     h4: heading({ fontSize: ds.font.size.xl }),
     h5: heading({ fontSize: ds.font.size.l }),
@@ -128,9 +127,9 @@ const dsOutlineStandard = {
 };
 const narrowLabelReflow = {
     '@media (max-width:899.95px)': {
-    whiteSpace: 'normal',
-    overflow: 'visible',
-    textOverflow: 'clip',
+        whiteSpace: 'normal',
+        overflow: 'visible',
+        textOverflow: 'clip',
     },
 };
 
@@ -165,6 +164,14 @@ export const commonThemeOverrides = {
             },
         },
     },
+
+    MuiInputLabel: {
+        styleOverrides: {
+            root: {
+                ...narrowLabelReflow,
+            },
+        },
+    },
     MuiAppBar: {
         styleOverrides: {
             // `&&` raises specificity above the global MuiButtonBase focus rule.
@@ -175,18 +182,6 @@ export const commonThemeOverrides = {
             },
         },
     },
-
-    // MuiInputLabel: { //
-    //     styleOverrides: {
-    //         root: {
-    //             transform: 'translate(0, 20px) scale(1)',
-
-    //             '&.MuiInputLabel-shrink': {
-    //                 transform: 'translate(0, -6px) scale(0.75)', // Change -4px to shift it up or down
-    //             },
-    //         },
-    //     },
-    // },
 
     'MuiTiptap-FieldContainer': {
         defaultProps: {
@@ -326,10 +321,6 @@ export const commonThemeOverrides = {
 export const mui1theme = createTheme(
     {
         palette: palette,
-        status: {
-            danger: red[500],
-            warning: orange[500],
-        },
         typography,
         components: {
             MuiFormLabel: {
@@ -339,6 +330,7 @@ export const mui1theme = createTheme(
                         overflow: 'hidden',
                         width: '100%',
                         textOverflow: 'ellipsis',
+                        ...narrowLabelReflow,
                     },
                 },
             },
@@ -455,6 +447,7 @@ export const adminTheme = createTheme(
                 styleOverrides: {
                     root: {
                         color: '#4085C6',
+                        ...narrowLabelReflow,
                     },
                 },
             },

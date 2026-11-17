@@ -28,7 +28,10 @@ export const FileUploadTermsAndConditions = ({
                     }}
                     checked={isTermsAndConditionsAccepted}
                     onChange={_handleChange}
-                    sx={theme => ({ color: theme.status.danger, '&.Mui-checked': { color: 'primary.main' } })}
+                    sx={theme => ({
+                        color: theme.palette.error.main,
+                        '&.Mui-checked': { color: theme.palette.primary.main },
+                    })}
                 />
             }
             label={
