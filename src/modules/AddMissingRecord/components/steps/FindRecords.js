@@ -68,7 +68,6 @@ export const FindRecords = () => {
                             name="searchQuery"
                             fullWidth
                             label={txt.fieldLabels.search}
-                            autoFocus
                             validate={[validation.required, validate]}
                             textFieldId="search-query"
                         />

@@ -107,22 +107,15 @@ exports[`MenuDrawer Snapshot should create component 1`] = `
                 <span
                   class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-MuiTypography-root"
                 >
-                  <a
-                    class="noHover css"
-                    data-analyticsid="1-external-link-link"
-                    data-testid="1-external-link-link"
+                  <span
+                    class="MuiBox-root css"
                     id="1-external-link-link"
-                    rel="noopener noreferrer"
-                    tabindex="0"
-                    target="_blank"
-                    title="External Link"
                   >
                     <svg
                       aria-hidden="true"
                       class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
                       data-testid="OpenInNewIcon"
                       focusable="false"
-                      id="1-external-link-link-new-window-icon"
                       viewBox="0 0 24 24"
                     >
                       <path
@@ -130,18 +123,18 @@ exports[`MenuDrawer Snapshot should create component 1`] = `
                       />
                     </svg>
                     External Link
-                  </a>
+                    <span
+                      class="MuiBox-root css"
+                    >
+                       (opens in a new window)
+                    </span>
+                  </span>
                 </span>
               </div>
             </div>
           </li>
         </ul>
       </nav>
-      <div
-        data-testid="after-menu-drawer"
-        id="afterMenuDrawer"
-        tabindex="-1"
-      />
       <footer
         class="MuiBox-root css"
       >

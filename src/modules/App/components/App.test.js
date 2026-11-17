@@ -96,6 +96,14 @@ describe('Application component', () => {
         expect(getByRole('main')).toHaveAttribute('id', 'content-container');
     });
 
+    it('should have a skip link that moves focus to the main content', () => {
+        const { getByRole } = setup({ account, author });
+        const skipLink = getByRole('link', { name: 'Skip to main content' });
+        expect(skipLink).toHaveAttribute('href', '#content-container');
+        fireEvent.click(skipLink);
+        expect(getByRole('main')).toHaveFocus();
+    });
+
     it('should render for anon user', () => {
         const { container } = setup();
         expect(container).toMatchSnapshot();
