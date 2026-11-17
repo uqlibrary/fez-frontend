@@ -2,9 +2,9 @@
   <profile version="1.0">
     <option name="myName" value="Project Default" />
     <inspection_tool class="Eslint" enabled="true" level="ERROR" enabled_by_default="true" />
-    <inspection_tool class="SpellCheckingInspection" enabled="true" level="ERROR" enabled_by_default="true" editorAttributes="ERRORS_ATTRIBUTES">
+    <inspection_tool class="SpellCheckingInspection" enabled="true" level="TYPO" enabled_by_default="true" editorAttributes="TYPO">
       <option name="processCode" value="true" />
-      <option name="processLiterals" value="true" />
+      <option name="processLiterals" value="false" />
       <option name="processComments" value="true" />
     </inspection_tool>
   </profile>
