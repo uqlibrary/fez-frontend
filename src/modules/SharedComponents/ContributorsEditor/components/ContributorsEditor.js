@@ -97,6 +97,8 @@ export class ContributorsEditor extends PureComponent {
         // Authors, not used by SoS
         if (JSON.stringify(prevProps?.value) !== JSON.stringify(this.props?.value)) {
             const items = this.getContributorsWithAffiliationsFromProps(this.props);
+            // TODO: Refactor to avoid calling setState inside componentDidUpdate.
+            // eslint-disable-next-line @eslint-react/no-set-state-in-component-did-update
             this.setState({
                 contributors: items,
                 error:
@@ -109,11 +111,15 @@ export class ContributorsEditor extends PureComponent {
 
         // == SoS specific section
         if (this.props.isNtro === true && prevProps.isNtro !== this.props.isNtro) {
+            // TODO: Refactor to avoid calling setState inside componentDidUpdate.
+            // eslint-disable-next-line @eslint-react/no-set-state-in-component-did-update
             this.setState({ scaleOfSignificance: this.buildInitialScaleOfSignificance(this.props) });
             // notify parent component when local state has been updated, eg contributors added/removed/reordered
         } else if (this.props.useFormReducer) {
             const updated = diff(this.props.scaleOfSignificance, prevProps.scaleOfSignificance);
             if (Object.keys(updated).length > 0) {
+                // TODO: Refactor to avoid calling setState inside componentDidUpdate.
+                // eslint-disable-next-line @eslint-react/no-set-state-in-component-did-update
                 this.setState({ scaleOfSignificance: this.props.scaleOfSignificance });
             } else {
                 const newSos = this.handleSoSChange(
@@ -121,6 +127,8 @@ export class ContributorsEditor extends PureComponent {
                     this.state.contributors,
                     this.props.scaleOfSignificance,
                 );
+                // TODO: Refactor to avoid calling setState inside componentDidUpdate.
+                // eslint-disable-next-line @eslint-react/no-set-state-in-component-did-update
                 this.setState({ scaleOfSignificance: newSos });
             }
         }
