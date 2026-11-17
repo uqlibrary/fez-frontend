@@ -6799,7 +6799,6 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                                       data-testid="embargoed-oa-icon"
                                       focusable="false"
                                       role="img"
-                                      tabindex="0"
                                       viewBox="0 0 24 24"
                                     >
                                       <path
@@ -6925,7 +6924,6 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                                       data-testid="oa-icon"
                                       focusable="false"
                                       role="img"
-                                      tabindex="0"
                                       viewBox="0 0 24 24"
                                     >
                                       <path
@@ -7051,7 +7049,6 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                                       data-testid="oa-icon"
                                       focusable="false"
                                       role="img"
-                                      tabindex="0"
                                       viewBox="0 0 24 24"
                                     >
                                       <path
@@ -7177,7 +7174,6 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                                       data-testid="oa-icon"
                                       focusable="false"
                                       role="img"
-                                      tabindex="0"
                                       viewBox="0 0 24 24"
                                     >
                                       <path
@@ -7303,7 +7299,6 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                                       data-testid="oa-icon"
                                       focusable="false"
                                       role="img"
-                                      tabindex="0"
                                       viewBox="0 0 24 24"
                                     >
                                       <path
@@ -7429,7 +7424,6 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                                       data-testid="oa-icon"
                                       focusable="false"
                                       role="img"
-                                      tabindex="0"
                                       viewBox="0 0 24 24"
                                     >
                                       <path
@@ -7555,7 +7549,6 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                                       data-testid="oa-icon"
                                       focusable="false"
                                       role="img"
-                                      tabindex="0"
                                       viewBox="0 0 24 24"
                                     >
                                       <path
@@ -7681,7 +7674,6 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                                       data-testid="oa-icon"
                                       focusable="false"
                                       role="img"
-                                      tabindex="0"
                                       viewBox="0 0 24 24"
                                     >
                                       <path

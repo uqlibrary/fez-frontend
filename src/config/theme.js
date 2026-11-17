@@ -236,8 +236,12 @@ export const commonThemeOverrides = {
                 '&&.Mui-focusVisible:is(.MuiCheckbox-root, .MuiRadio-root)': {
                     '& svg': {
                         ...dsOutlineStandard,
-                        outlineOffset: '-6px',
+                        outlineOffset: '-4px',
                     },
+                },
+                '&&.Mui-focusVisible:is(.MuiIconButton-root)': {
+                    ...dsOutlineStandard,
+                    outlineOffset: '-4px',
                 },
             },
         },
