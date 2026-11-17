@@ -8,6 +8,7 @@ import locale from 'locale/global';
 import { isFileUrl } from 'config/routes';
 import { redirectUserToLogin } from 'helpers/redirectUserToLogin';
 import { useQueryRedirector } from 'hooks/useQueryRedirector';
+import { useFocusPageOnNavigate } from 'hooks/useFocusPageOnNavigate';
 
 // application components
 import { AppLoader, ContentLoader, InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
@@ -39,6 +40,29 @@ const StyledGrid = styled(Grid)({
     maxHeight: '100%',
     height: '100%',
 });
+// Skip link: the first thing in the tab order, hidden until it has keyboard focus (WCAG 2.4.1).
+const StyledSkipLink = styled('a')(({ theme }) => ({
+    position: 'absolute',
+    left: '-10000px',
+    top: 'auto',
+    width: '1px',
+    height: '1px',
+    overflow: 'hidden',
+    '&:focus': {
+        position: 'fixed',
+        left: '8px',
+        top: '8px',
+        width: 'auto',
+        height: 'auto',
+        zIndex: theme.zIndex.tooltip + 1,
+        padding: '8px 16px',
+        backgroundColor: theme.palette.common.white,
+        color: theme.palette.primary.main,
+        fontWeight: theme.typography.fontWeightMedium,
+        outline: `4px solid ${theme.palette.accent.main}`,
+    },
+}));
+
 const StyledGridCard = styled(Grid)(({ theme }) => ({
     maxWidth: '1200px',
     margin: '0 auto',
@@ -95,6 +119,7 @@ const AppClass = ({
 }) => {
     const navigate = useNavigate();
     const location = useLocation();
+    useFocusPageOnNavigate(location.pathname, 'content-container');
 
     const hadLoggedInUser = useRef(false);
     const [sessionExpiredConfirmationBox, setSessionExpiredConfirmationBox] = useState(null);
@@ -271,7 +296,6 @@ const AppClass = ({
         isHdrStudent: isHdrStudent,
     });
     const titleOffset = docked && !isThesisSubmissionPage ? 284 : 0;
-    const isIndex = location.pathname === '/';
     const isAdminPage =
         location.pathname?.startsWith('/admin') ||
         location.pathname?.startsWith('/batch-import') ||
@@ -298,8 +322,16 @@ const AppClass = ({
         return null;
     };
 
+    const skipToMainContent = event => {
+        event.preventDefault();
+        document.getElementById('content-container')?.focus();
+    };
+
     return (
         <StyledGrid container sx={{ width: '100%' }}>
+            <StyledSkipLink href="#content-container" id="skip-to-main-content" onClick={skipToMainContent}>
+                {locale.global.skipNav.title}
+            </StyledSkipLink>
             <Meta routesConfig={routesConfig} />
             {/* UQ Design System header is a solid $purple-500 (#51247a), applied here via color="primary"
                 (-> primary.main). The DS deprecated the purple->magenta gradient for the header - the
@@ -364,13 +396,7 @@ const AppClass = ({
                         {/* Search */}
                         {!isThesisSubmissionPage && !isSearchPage && (
                             <Grid size={{ xs: 2, sm: 4 }}>
-                                <SearchComponent
-                                    autoFocus={isIndex}
-                                    isMobile={isMobile}
-                                    isInHeader
-                                    showPrefixIcon
-                                    showMobileSearchButton
-                                />
+                                <SearchComponent isMobile={isMobile} isInHeader showPrefixIcon showMobileSearchButton />
                             </Grid>
                         )}
                         <Grid>
@@ -409,14 +435,18 @@ const AppClass = ({
                     onToggleDrawer={toggleDrawer}
                     isMobile={isMobile}
                     locale={{
-                        skipNavAriaLabel: locale.global.skipNav.ariaLabel,
-                        skipNavTitle: locale.global.skipNav.title,
                         closeMenuLabel: locale.global.mainNavButton.closeMenuLabel,
                         navAriaLabel: locale.global.mainNavButton.navAriaLabel,
+                        opensInNewWindow: locale.global.opensInNewWindow,
                     }}
                 />
             )}
-            <main className="content-container" id="content-container" style={containerStyle}>
+            <main
+                className="content-container"
+                id="content-container"
+                style={{ ...containerStyle, outline: 'none' }}
+                tabIndex={-1}
+            >
                 <ScrollTop show containerId="content-container" />
 
                 <div id="espace-alerts-area" role="region" aria-label="eSpace alerts" style={{ paddingBottom: 24 }}>

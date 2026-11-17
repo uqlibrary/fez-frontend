@@ -6,6 +6,161 @@ exports[`Component MenuDrawer should render empty drawer 1`] = `
 </body>
 `;
 
+exports[`Component MenuDrawer should render opened docked drawer with menus and divider 1`] = `
+<body
+  style=""
+>
+  <div>
+    <div
+      class="MuiDrawer-root MuiDrawer-anchorLeft MuiDrawer-docked css-MuiDrawer-docked"
+      id="menudrawer"
+    >
+      <div
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation0 MuiDrawer-paper MuiDrawer-paperAnchorLeft MuiDrawer-paperAnchorDockedLeft css-MuiPaper-root-MuiDrawer-paper"
+        style="--Paper-shadow: none;"
+      >
+        <nav
+          aria-label="Main menu"
+          class="MuiBox-root css"
+          id="mainMenu"
+          tabindex="-1"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-sm-12 css-MuiGrid-root"
+            >
+              <a
+                class="noHover css"
+                data-analyticsid="main-menu-logo-link"
+                data-testid="main-menu-logo-link"
+                href="test"
+                id="main-menu-logo-link"
+                rel="noopener noreferrer"
+                tabindex="0"
+                target="_blank"
+                title="test"
+              >
+                <div
+                  class="test"
+                  style="height: 50px; width: 160px; margin: 8px auto;"
+                >
+                  test
+                </div>
+              </a>
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 css-MuiGrid-root"
+            >
+              <button
+                aria-label="Close menu"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-MuiButtonBase-root-MuiIconButton-root"
+                tabindex="0"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
+                  data-testid="KeyboardArrowLeftIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M15.41 16.59 10.83 12l4.58-4.59L14 6l-6 6 6 6z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <ul
+            class="MuiList-root MuiList-padding css-MuiList-root"
+          >
+            <li
+              class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-MuiListItem-root"
+            >
+              <div
+                class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters menu-item-container css-MuiButtonBase-root-MuiListItemButton-root"
+                id="menu-item-0"
+                role="button"
+                tabindex="0"
+              >
+                <div
+                  class="MuiListItemText-root MuiListItemText-multiline css-MuiListItemText-root"
+                  id="menu-itemText-0"
+                >
+                  <span
+                    class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-MuiTypography-root"
+                  >
+                    Primary text 0
+                  </span>
+                  <p
+                    class="MuiTypography-root MuiTypography-body2 MuiListItemText-secondary css-MuiTypography-root"
+                  >
+                    secondary text 0
+                  </p>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <hr
+            class="MuiDivider-root MuiDivider-fullWidth css-MuiDivider-root"
+          />
+          <ul
+            class="MuiList-root MuiList-padding css-MuiList-root"
+          >
+            <li
+              class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-MuiListItem-root"
+            >
+              <div
+                class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters menu-item-container css-MuiButtonBase-root-MuiListItemButton-root"
+                id="menu-item-2"
+                role="button"
+                tabindex="0"
+              >
+                <div
+                  class="MuiListItemText-root MuiListItemText-multiline css-MuiListItemText-root"
+                  id="menu-itemText-2"
+                >
+                  <span
+                    class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-MuiTypography-root"
+                  >
+                    Primary text 1
+                  </span>
+                  <p
+                    class="MuiTypography-root MuiTypography-body2 MuiListItemText-secondary css-MuiTypography-root"
+                  >
+                    secondary text 1
+                  </p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </nav>
+        <footer
+          class="MuiBox-root css"
+        >
+          CRICOS Provider No: 
+          <a
+            class="css"
+            data-analyticsid="cricos-link"
+            data-testid="cricos-link"
+            href="http://www.uq.edu.au/about/cricos-link"
+            id="cricos-link"
+            rel="noopener noreferrer"
+            tabindex="0"
+            target="_blank"
+            title="CRICOS Provider No: "
+          >
+            00025B
+          </a>
+        </footer>
+      </div>
+    </div>
+  </div>
+</body>
+`;
+
 exports[`Component MenuDrawer should render opened drawer with menus, divider 1`] = `
 <body
   style="padding-right: 1024px; overflow: hidden;"
@@ -152,11 +307,6 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider 1`
           </li>
         </ul>
       </nav>
-      <div
-        data-testid="after-menu-drawer"
-        id="afterMenuDrawer"
-        tabindex="-1"
-      />
       <footer
         class="MuiBox-root css"
       >
@@ -180,180 +330,6 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider 1`
       data-testid="sentinelEnd"
       tabindex="0"
     />
-  </div>
-</body>
-`;
-
-exports[`Component MenuDrawer should render opened drawer with menus, divider and skip nav button 1`] = `
-<body
-  style=""
->
-  <div>
-    <div
-      class="MuiDrawer-root MuiDrawer-anchorLeft MuiDrawer-docked css-MuiDrawer-docked"
-      id="menudrawer"
-    >
-      <div
-        class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation0 MuiDrawer-paper MuiDrawer-paperAnchorLeft MuiDrawer-paperAnchorDockedLeft css-MuiPaper-root-MuiDrawer-paper"
-        style="--Paper-shadow: none;"
-      >
-        <nav
-          aria-label="Main menu"
-          class="MuiBox-root css"
-          id="mainMenu"
-          tabindex="-1"
-        >
-          <div
-            class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row css-MuiGrid-root"
-          >
-            <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-10 MuiGrid-grid-sm-12 css-MuiGrid-root"
-            >
-              <a
-                class="noHover css"
-                data-analyticsid="main-menu-logo-link"
-                data-testid="main-menu-logo-link"
-                href="test"
-                id="main-menu-logo-link"
-                rel="noopener noreferrer"
-                tabindex="0"
-                target="_blank"
-                title="test"
-              >
-                <div
-                  class="test"
-                  style="height: 50px; width: 160px; margin: 8px auto;"
-                >
-                  test
-                </div>
-              </a>
-            </div>
-            <div
-              class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-2 css-MuiGrid-root"
-            >
-              <button
-                aria-label="Close menu"
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-MuiButtonBase-root-MuiIconButton-root"
-                tabindex="0"
-                type="button"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
-                  data-testid="KeyboardArrowLeftIcon"
-                  focusable="false"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M15.41 16.59 10.83 12l4.58-4.59L14 6l-6 6 6 6z"
-                  />
-                </svg>
-              </button>
-            </div>
-          </div>
-          <div
-            aria-label="Skip navigation"
-            class="css"
-            id="skipNav"
-            tabindex="1"
-          >
-            <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary skipNavButton css-MuiButtonBase-root-MuiButton-root"
-              tabindex="-1"
-              type="button"
-            >
-              Skip navigation
-            </button>
-          </div>
-          <ul
-            class="MuiList-root MuiList-padding css-MuiList-root"
-          >
-            <li
-              class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-MuiListItem-root"
-            >
-              <div
-                class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters menu-item-container css-MuiButtonBase-root-MuiListItemButton-root"
-                id="menu-item-0"
-                role="button"
-                tabindex="0"
-              >
-                <div
-                  class="MuiListItemText-root MuiListItemText-multiline css-MuiListItemText-root"
-                  id="menu-itemText-0"
-                >
-                  <span
-                    class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-MuiTypography-root"
-                  >
-                    Primary text 0
-                  </span>
-                  <p
-                    class="MuiTypography-root MuiTypography-body2 MuiListItemText-secondary css-MuiTypography-root"
-                  >
-                    secondary text 0
-                  </p>
-                </div>
-              </div>
-            </li>
-          </ul>
-          <hr
-            class="MuiDivider-root MuiDivider-fullWidth css-MuiDivider-root"
-          />
-          <ul
-            class="MuiList-root MuiList-padding css-MuiList-root"
-          >
-            <li
-              class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-MuiListItem-root"
-            >
-              <div
-                class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters menu-item-container css-MuiButtonBase-root-MuiListItemButton-root"
-                id="menu-item-2"
-                role="button"
-                tabindex="0"
-              >
-                <div
-                  class="MuiListItemText-root MuiListItemText-multiline css-MuiListItemText-root"
-                  id="menu-itemText-2"
-                >
-                  <span
-                    class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-MuiTypography-root"
-                  >
-                    Primary text 1
-                  </span>
-                  <p
-                    class="MuiTypography-root MuiTypography-body2 MuiListItemText-secondary css-MuiTypography-root"
-                  >
-                    secondary text 1
-                  </p>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </nav>
-        <div
-          data-testid="after-menu-drawer"
-          id="afterMenuDrawer"
-          tabindex="-1"
-        />
-        <footer
-          class="MuiBox-root css"
-        >
-          CRICOS Provider No: 
-          <a
-            class="css"
-            data-analyticsid="cricos-link"
-            data-testid="cricos-link"
-            href="http://www.uq.edu.au/about/cricos-link"
-            id="cricos-link"
-            rel="noopener noreferrer"
-            tabindex="0"
-            target="_blank"
-            title="CRICOS Provider No: "
-          >
-            00025B
-          </a>
-        </footer>
-      </div>
-    </div>
   </div>
 </body>
 `;

@@ -19,9 +19,8 @@ const defaultMenuItems = [
 ];
 
 const defaultLocale = {
-    skipNavTitle: 'Skip navigation',
-    skipNavAriaLabel: 'Skip navigation',
     closeMenuLabel: 'Close menu',
+    opensInNewWindow: '(opens in a new window)',
     navAriaLabel: 'Main menu',
 };
 
@@ -79,16 +78,9 @@ describe('Component MenuDrawer', () => {
         expect(baseElement).toMatchSnapshot();
     });
 
-    it('should render opened drawer with menus, divider and skip nav button', () => {
+    it('should render opened docked drawer with menus and divider', () => {
         const { baseElement } = setup({ drawerOpen: true, docked: true });
         expect(baseElement).toMatchSnapshot();
-    });
-
-    it('should call the lifecycle method of the component if props change', () => {
-        const { rerender, queryByRole } = setup({ drawerOpen: true, docked: true });
-        expect(queryByRole('button', { name: 'Skip navigation' })).toBeInTheDocument();
-        setup({ drawerOpen: true, docked: false }, rerender);
-        expect(queryByRole('button', { name: 'Skip navigation' })).not.toBeInTheDocument();
     });
 
     it('should have working method for navigating to links', () => {
@@ -105,9 +97,30 @@ describe('Component MenuDrawer', () => {
         expect(global.open).toHaveBeenCalledWith('https://www.example.com', '_blank');
     });
 
-    it('should have working method for skipping menu items', () => {
-        const { queryByRole, getByTestId } = setup({ drawerOpen: true, docked: true });
-        fireEvent.click(queryByRole('button', { name: 'Skip navigation' }));
-        expect(getByTestId('after-menu-drawer')).toHaveFocus();
+    it('should give an external menu item one tab stop that says it opens a new window', () => {
+        global.open = jest.fn();
+        const menuItems = [
+            { linkTo: 'https://www.example.com', primaryText: 'Copyright Information', isExternal: true },
+        ];
+        const { getByRole } = setup({ drawerOpen: true, docked: true, menuItems });
+        const button = getByRole('button', { name: 'Copyright Information (opens in a new window)' });
+        expect(within(button).queryByRole('link')).not.toBeInTheDocument();
+        expect(button.querySelectorAll('[tabindex="0"]')).toHaveLength(0);
+
+        fireEvent.click(button);
+        expect(global.open).toHaveBeenCalledWith('https://www.example.com', '_blank');
+    });
+
+    it('should not announce a new window when the locale has no text for it', () => {
+        const menuItems = [
+            { linkTo: 'https://www.example.com', primaryText: 'Copyright Information', isExternal: true },
+        ];
+        const { getByRole } = setup({
+            drawerOpen: true,
+            docked: true,
+            menuItems,
+            locale: { closeMenuLabel: 'Close menu', navAriaLabel: 'Main menu' },
+        });
+        expect(getByRole('button', { name: 'Copyright Information' })).toBeInTheDocument();
     });
 });

@@ -6,7 +6,10 @@ import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 /* istanbul ignore next */
 const scrollWindowToTop = event => {
     event.preventDefault();
-    document.getElementById('content-container').scrollTop = 0;
+    const container = document.getElementById('content-container');
+    container.scrollTop = 0;
+    // The button hides at the top of the page, so move focus to the start of the content with it
+    container.focus();
 };
 
 export const ScrollTop = ({ show = false, showAfter = 100 }) => {
@@ -26,10 +29,13 @@ export const ScrollTop = ({ show = false, showAfter = 100 }) => {
                 console.log('not found scroll');
                 return;
             }
+            // visibility (not just opacity) keeps the hidden button out of the tab order and screen readers
             if (scrollableContainer.scrollTop > showAfter) {
+                scrollTopButton.style.visibility = 'visible';
                 scrollTopButton.style.opacity = '0.5';
                 scrollTopButton.style.right = '32px !important';
             } else {
+                scrollTopButton.style.visibility = 'hidden';
                 scrollTopButton.style.opacity = '0';
                 scrollTopButton.style.right = '-1000px !important';
             }
@@ -46,6 +52,7 @@ export const ScrollTop = ({ show = false, showAfter = 100 }) => {
                 sx={{
                     display: { xs: 'none', md: 'inline-flex' },
                     opacity: 0,
+                    visibility: 'hidden',
                     position: 'absolute',
                     right: '32px',
                     bottom: '16px',

@@ -247,6 +247,7 @@ export default {
             title: 'Admin dashboard',
         },
         dashboard: {
+            title: 'My dashboard',
             loading: 'Loading your dashboard',
             header: {
                 // help: {

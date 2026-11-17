@@ -5,6 +5,13 @@ exports[`Application component Should display mobile correctly 1`] = `
   <div
     class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
   >
+    <a
+      class="css"
+      href="#content-container"
+      id="skip-to-main-content"
+    >
+      Skip to main content
+    </a>
     <header
       class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed AppBar mui-fixed css-MuiPaper-root-MuiAppBar-root"
       style="--Paper-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);"
@@ -228,20 +235,6 @@ exports[`Application component Should display mobile correctly 1`] = `
               </button>
             </div>
           </div>
-          <div
-            aria-label="Click to skip, or tab to progress to the navigation"
-            class="css"
-            id="skipNav"
-            tabindex="1"
-          >
-            <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary skipNavButton css-MuiButtonBase-root-MuiButton-root"
-              tabindex="-1"
-              type="button"
-            >
-              Skip Navigation
-            </button>
-          </div>
           <ul
             class="MuiList-root MuiList-padding css-MuiList-root"
           >
@@ -372,22 +365,15 @@ exports[`Application component Should display mobile correctly 1`] = `
                   <span
                     class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-MuiTypography-root"
                   >
-                    <a
-                      class="noHover css"
-                      data-analyticsid="5-copyright-information-link"
-                      data-testid="5-copyright-information-link"
+                    <span
+                      class="MuiBox-root css"
                       id="5-copyright-information-link"
-                      rel="noopener noreferrer"
-                      tabindex="0"
-                      target="_blank"
-                      title="Copyright Information"
                     >
                       <svg
                         aria-hidden="true"
                         class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
                         data-testid="OpenInNewIcon"
                         focusable="false"
-                        id="5-copyright-information-link-new-window-icon"
                         viewBox="0 0 24 24"
                       >
                         <path
@@ -395,18 +381,18 @@ exports[`Application component Should display mobile correctly 1`] = `
                         />
                       </svg>
                       Copyright Information
-                    </a>
+                      <span
+                        class="MuiBox-root css"
+                      >
+                         (opens in a new window)
+                      </span>
+                    </span>
                   </span>
                 </div>
               </div>
             </li>
           </ul>
         </nav>
-        <div
-          data-testid="after-menu-drawer"
-          id="afterMenuDrawer"
-          tabindex="-1"
-        />
         <footer
           class="MuiBox-root css"
         >
@@ -430,7 +416,8 @@ exports[`Application component Should display mobile correctly 1`] = `
     <main
       class="content-container"
       id="content-container"
-      style="padding-left: 260px;"
+      style="outline: none; padding-left: 260px;"
+      tabindex="-1"
     >
       <button
         aria-label="Scroll to top of page"
@@ -820,6 +807,13 @@ exports[`Application component should render alert if user is not fez author 1`]
   <div
     class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
   >
+    <a
+      class="css"
+      href="#content-container"
+      id="skip-to-main-content"
+    >
+      Skip to main content
+    </a>
     <header
       class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed AppBar mui-fixed css-MuiPaper-root-MuiAppBar-root"
       style="--Paper-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);"
@@ -1022,6 +1016,8 @@ exports[`Application component should render alert if user is not fez author 1`]
     <main
       class="content-container"
       id="content-container"
+      style="outline: none;"
+      tabindex="-1"
     >
       <button
         aria-label="Scroll to top of page"
@@ -1398,6 +1394,13 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
   <div
     class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
   >
+    <a
+      class="css"
+      href="#content-container"
+      id="skip-to-main-content"
+    >
+      Skip to main content
+    </a>
     <header
       class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed AppBar mui-fixed css-MuiPaper-root-MuiAppBar-root"
       style="--Paper-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);"
@@ -1522,7 +1525,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                     data-testid="simple-search"
                   >
                     <div
-                      class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth Mui-focused MuiInputBase-formControl css-MuiInputBase-root-MuiInput-root"
+                      class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-MuiInputBase-root-MuiInput-root"
                     >
                       <input
                         aria-invalid="false"
@@ -1600,6 +1603,8 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
     <main
       class="content-container"
       id="content-container"
+      style="outline: none;"
+      tabindex="-1"
     >
       <button
         aria-label="Scroll to top of page"
@@ -1912,6 +1917,13 @@ exports[`Application component should render app for account with fez author wit
   <div
     class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
   >
+    <a
+      class="css"
+      href="#content-container"
+      id="skip-to-main-content"
+    >
+      Skip to main content
+    </a>
     <header
       class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed AppBar mui-fixed css-MuiPaper-root-MuiAppBar-root"
       style="--Paper-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);"
@@ -2036,7 +2048,7 @@ exports[`Application component should render app for account with fez author wit
                     data-testid="simple-search"
                   >
                     <div
-                      class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth Mui-focused MuiInputBase-formControl css-MuiInputBase-root-MuiInput-root"
+                      class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-MuiInputBase-root-MuiInput-root"
                     >
                       <input
                         aria-invalid="false"
@@ -2114,6 +2126,8 @@ exports[`Application component should render app for account with fez author wit
     <main
       class="content-container"
       id="content-container"
+      style="outline: none;"
+      tabindex="-1"
     >
       <button
         aria-label="Scroll to top of page"
@@ -2426,6 +2440,13 @@ exports[`Application component should render application with routing for the us
   <div
     class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
   >
+    <a
+      class="css"
+      href="#content-container"
+      id="skip-to-main-content"
+    >
+      Skip to main content
+    </a>
     <header
       class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed AppBar mui-fixed css-MuiPaper-root-MuiAppBar-root"
       style="--Paper-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);"
@@ -2550,7 +2571,7 @@ exports[`Application component should render application with routing for the us
                     data-testid="simple-search"
                   >
                     <div
-                      class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth Mui-focused MuiInputBase-formControl css-MuiInputBase-root-MuiInput-root"
+                      class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-MuiInputBase-root-MuiInput-root"
                     >
                       <input
                         aria-invalid="false"
@@ -2628,6 +2649,8 @@ exports[`Application component should render application with routing for the us
     <main
       class="content-container"
       id="content-container"
+      style="outline: none;"
+      tabindex="-1"
     >
       <button
         aria-label="Scroll to top of page"
@@ -2727,6 +2750,13 @@ exports[`Application component should render for anon user 1`] = `
   <div
     class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
   >
+    <a
+      class="css"
+      href="#content-container"
+      id="skip-to-main-content"
+    >
+      Skip to main content
+    </a>
     <header
       class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed AppBar mui-fixed css-MuiPaper-root-MuiAppBar-root"
       style="--Paper-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);"
@@ -2851,7 +2881,7 @@ exports[`Application component should render for anon user 1`] = `
                     data-testid="simple-search"
                   >
                     <div
-                      class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth Mui-focused MuiInputBase-formControl css-MuiInputBase-root-MuiInput-root"
+                      class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-MuiInputBase-root-MuiInput-root"
                     >
                       <input
                         aria-invalid="false"
@@ -2929,6 +2959,8 @@ exports[`Application component should render for anon user 1`] = `
     <main
       class="content-container"
       id="content-container"
+      style="outline: none;"
+      tabindex="-1"
     >
       <button
         aria-label="Scroll to top of page"
