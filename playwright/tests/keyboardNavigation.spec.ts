@@ -54,6 +54,15 @@ test.describe('Keyboard and screen reader navigation', () => {
         }
     });
 
+    test('a redirect while the page loads leaves focus at the start, so the skip link is first', async ({ page }) => {
+        // Without a search, the results step redirects to the find step during load.
+        await page.goto('/records/add/results?user=uqresearcher');
+        await expect(page).toHaveURL(/\/records\/add\/find/);
+        await expect(page.getByRole('heading', { level: 2 }).first()).toBeVisible();
+        await page.keyboard.press('Tab');
+        await expect(page.getByRole('link', { name: 'Skip to main content' })).toBeFocused();
+    });
+
     test('pages with a search box do not take focus away from the skip link on load', async ({ page }) => {
         for (const url of ['/journals/search/?user=uqresearcher', '/records/add/find?user=uqresearcher']) {
             await page.goto(url);
