@@ -567,12 +567,9 @@ export const AttachedFiles = ({
                                                 sx={{ marginLeft: 1, flexGrow: 1 }}
                                             >
                                                 {(openAccessConfig.openAccessFiles.includes(openAccessStatusId) ||
-                                                    !!item.securityPolicyStatus.isEmbargoed) && (
+                                                    !!item.embargoDate) && (
                                                     <FileUploadEmbargoDate
-                                                        value={
-                                                            item.openAccessStatus.embargoDate ??
-                                                            item.securityPolicyStatus.embargoDate
-                                                        }
+                                                        value={item.embargoDate}
                                                         onChange={onEmbargoDateChange(item.id)}
                                                         onKeyUp={onEmbargoDateKeyUp}
                                                         disabled={disabled}
@@ -591,6 +588,7 @@ export const AttachedFiles = ({
                                                             onClick={onFileDelete(item.fileName)}
                                                             disabled={disabled}
                                                             sx={{ padding: '12px' }}
+                                                            aria-label={deleteHint}
                                                         >
                                                             <Delete />
                                                         </IconButton>
@@ -651,11 +649,11 @@ export const AttachedFiles = ({
                                     >
                                         <Grid size={6} />
                                         <Grid size={6}>
-                                            <Typography sx={{ color: mui1theme.palette.warning.main }}>
+                                            <Typography sx={{ color: mui1theme.palette.warning.contrastText }}>
                                                 <WarningIcon
                                                     fontSize={'small'}
                                                     sx={{
-                                                        color: mui1theme.palette.warning.main,
+                                                        color: mui1theme.palette.warning.contrastText,
                                                         marginRight: '10px',
                                                         marginBottom: '-4px',
                                                     }}

@@ -24,7 +24,7 @@ export const tabProps = [
             const count = data?.systemalerts?.mine;
             return count
                 ? {
-                      icon: <Chip color="error" label={count} size="small" data-testid={`tab-counter-${count}`} />,
+                      icon: <Chip color="error" label={count} size="medium" data-testid={`tab-counter-${count}`} />,
                       iconPosition: 'end',
                   }
                 : {};

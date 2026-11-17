@@ -387,6 +387,62 @@ describe('AttachedFiles component', () => {
         expect(onDateChangeFn).toHaveBeenCalledWith('dsi_embargo_date', '2018-01-26', 0);
     });
 
+    it('should keep embargo date field visible when an existing embargo date is changed to today', async () => {
+        const userIsAdmin = jest.spyOn(UserIsAdminHook, 'userIsAdmin');
+        userIsAdmin.mockImplementation(() => true);
+
+        const today = moment().startOf('day');
+        const tomorrow = today.clone().add(1, 'day');
+        const todayFormatted = today.format('YYYY-MM-DD');
+
+        const onDateChangeFn = jest.fn();
+        const { getAllByRole, getByRole, getByTestId } = setup({
+            canEdit: true,
+            disabled: false,
+            openAccessStatusId: 453694,
+            dataStreams: [
+                {
+                    dsi_id: '252236',
+                    dsi_pid: 'UQ:252236',
+                    dsi_dsid: 'My_UQ_eSpace_UPO_guidelines_2016.pdf',
+                    dsi_embargo_date: tomorrow.format('YYYY-MM-DD'),
+                    dsi_label: 'UPO Guide v.4',
+                    dsi_mimetype: 'application/pdf',
+                    dsi_copyright: null,
+                    dsi_state: 'A',
+                    dsi_size: 587005,
+                    dsi_security_inherited: 0,
+                    dsi_security_policy: 1,
+                },
+            ],
+            onDateChange: onDateChangeFn,
+        });
+
+        const embargoDateInput = getByTestId('dsi-embargo-date-0-input');
+
+        expect(embargoDateInput).toBeInTheDocument();
+
+        fireEvent.click(getAllByRole('button')[1]);
+
+        // Tomorrow may be in the next month, so navigate back to today's month.
+        if (!tomorrow.isSame(today, 'month')) {
+            fireEvent.click(getByRole('button', { name: /previous month/i }));
+        }
+
+        const todayCell = getAllByRole('gridcell').find(cell =>
+            moment(Number(cell.getAttribute('data-timestamp'))).isSame(today, 'day'),
+        );
+
+        expect(todayCell).toBeDefined();
+
+        await act(async () => {
+            fireEvent.click(todayCell);
+        });
+        expect(onDateChangeFn).toHaveBeenCalledWith('dsi_embargo_date', todayFormatted, 0);
+
+        expect(getByTestId('dsi-embargo-date-0-input')).toBeInTheDocument();
+    });
+
     it('should yield a warning when entering an invalid embargo date', async () => {
         const userIsAdmin = jest.spyOn(UserIsAdminHook, 'userIsAdmin');
         userIsAdmin.mockImplementation(() => true);

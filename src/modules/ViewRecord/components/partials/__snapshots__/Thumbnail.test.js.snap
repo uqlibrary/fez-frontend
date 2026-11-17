@@ -3,13 +3,16 @@
 exports[`Thumbnail component should render component 1`] = `
 <div>
   <a
+    aria-label="Click to open a preview of /test/mediaUrl"
     data-testid="preview-link-undefined"
     id="preview-link-undefined"
+    role="button"
+    tabindex="0"
     title="Click to open a preview of /test/mediaUrl"
   >
     <svg
       aria-hidden="true"
-      class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-1fs0kq3-MuiSvgIcon-root"
+      class="MuiSvgIcon-root MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeMedium css-MuiSvgIcon-root"
       data-testid="LockIcon"
       focusable="false"
       viewBox="0 0 24 24"

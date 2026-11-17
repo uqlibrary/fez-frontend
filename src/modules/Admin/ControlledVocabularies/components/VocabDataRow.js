@@ -52,30 +52,36 @@ export const VocabDataRow = ({ row }) => {
                         }}
                     >
                         <Grid size={{ xs: 12, sm: 1 }}>
-                            <IconButton
-                                sx={{ paddingTop: '5px' }}
-                                aria-label="expand row"
-                                size="small"
-                                id={`expand-row-${row.cvo_id}`}
-                                data-analyticsid={`expand-row-${row.cvo_id}`}
-                                data-testid={`expand-row-${row.cvo_id}`}
-                                onClick={() => {
-                                    setIsOpen(!open);
-                                    if (state.isOpen && state.rootVocabId === row.cvo_id) {
-                                        onHandleDialogClickClose();
-                                    }
-                                }}
+                            <Tooltip
+                                title={open ? txt.admin.tooltip.hide : txt.admin.tooltip.show}
+                                data-testid={`show-hide-child-vocabs-${row.cvo_id}`}
                             >
-                                {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
-                            </IconButton>
+                                <IconButton
+                                    sx={{ paddingTop: '5px' }}
+                                    aria-label={`${row.cvo_title} - ${open ? txt.admin.tooltip.hide : txt.admin.tooltip.show}`}
+                                    size="medium"
+                                    id={`expand-row-${row.cvo_id}`}
+                                    data-analyticsid={`expand-row-${row.cvo_id}`}
+                                    data-testid={`expand-row-${row.cvo_id}`}
+                                    onClick={() => {
+                                        setIsOpen(!open);
+                                        if (state.isOpen && state.rootVocabId === row.cvo_id) {
+                                            onHandleDialogClickClose();
+                                        }
+                                    }}
+                                >
+                                    {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
+                                </IconButton>
+                            </Tooltip>
                         </Grid>
                         <Grid size={{ xs: 12, sm: 4 }}>
                             {row.cvo_title}
                             {row.cvo_hide === 1 && (
                                 <Tooltip title={txt.admin.tooltip.hidden} data-testid={`row-hidden-icon-${row.cvo_id}`}>
                                     <VisibilityOffIcon
-                                        fontSize="small"
+                                        fontSize="medium"
                                         sx={{ display: 'inline-block', paddingLeft: 1 }}
+                                        titleAccess={txt.admin.tooltip.hidden}
                                     />
                                 </Tooltip>
                             )}
@@ -84,7 +90,7 @@ export const VocabDataRow = ({ row }) => {
                                     title={txt.admin.tooltip.readonly}
                                     data-testid={`row-locked-icon-${row.cvo_id}`}
                                 >
-                                    <LockOutlinedIcon fontSize="small" color={'secondary'} />
+                                    <LockOutlinedIcon fontSize="medium" color={'secondary'} />
                                 </Tooltip>
                             )}
                         </Grid>
@@ -98,17 +104,21 @@ export const VocabDataRow = ({ row }) => {
                         <Grid size={{ xs: 12, sm: 1 }}>{row.cvo_external_id}</Grid>
                         <Grid size={{ xs: 12, sm: 1 }}>
                             {!locked && (
-                                <IconButton
-                                    id={`admin-edit-button-${row.cvo_id}`}
-                                    data-analyticsid={`admin-edit-button-${row.cvo_id}`}
-                                    data-testid={`admin-edit-button-${row.cvo_id}`}
-                                    aria-label="Edit"
-                                    onClick={() => onAdminEditActionClick({ row, parentId: 0, rootVocabId: 0 })}
-                                    size="large"
-                                    disabled={state.isOpen}
-                                >
-                                    <Edit fontSize="small" />
-                                </IconButton>
+                                <Tooltip title={txt.admin.tooltip.edit} data-testid={`edit-button-${row.cvo_id}`}>
+                                    <span>
+                                        <IconButton
+                                            id={`admin-edit-button-${row.cvo_id}`}
+                                            data-analyticsid={`admin-edit-button-${row.cvo_id}`}
+                                            data-testid={`admin-edit-button-${row.cvo_id}`}
+                                            aria-label={txt.admin.tooltip.edit}
+                                            onClick={() => onAdminEditActionClick({ row, parentId: 0, rootVocabId: 0 })}
+                                            size="large"
+                                            disabled={state.isOpen}
+                                        >
+                                            <Edit fontSize="medium" />
+                                        </IconButton>
+                                    </span>
+                                </Tooltip>
                             )}
                         </Grid>
                     </Box>

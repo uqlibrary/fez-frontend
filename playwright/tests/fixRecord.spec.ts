@@ -29,7 +29,7 @@ test.describe('Request correction form', () => {
                 .first(),
         ).toBeVisible();
         await expect(
-            page.locator('.StandardCard .publicationCitation h6 a', { hasText: record.rek_title }).first(),
+            page.locator('.StandardCard .publicationCitation h4 a', { hasText: record.rek_title }).first(),
         ).toBeVisible();
         await expect(
             page

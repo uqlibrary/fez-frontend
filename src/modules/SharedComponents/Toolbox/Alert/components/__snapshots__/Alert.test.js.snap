@@ -7,32 +7,32 @@ exports[`Alert should dismiss alert 1`] = `
     style="margin-top: 5px;"
   >
     <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-qpkc91-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-gwe745-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-MuiGrid-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-MuiGrid-root"
           >
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-1umw9bq-MuiSvgIcon-root"
-              data-testid="ErrorIcon"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-MuiSvgIcon-root"
+              data-testid="HighlightOffIcon"
               focusable="false"
               id="error-icon"
               viewBox="0 0 24 24"
             >
               <path
-                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m1 15h-2v-2h2zm0-4h-2V7h2z"
+                d="M14.59 8 12 10.59 9.41 8 8 9.41 10.59 12 8 14.59 9.41 16 12 13.41 14.59 16 16 14.59 13.41 12 16 9.41zM12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8"
               />
             </svg>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-1evjzfr-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
           >
             <b>
               Title - 
@@ -44,11 +44,11 @@ exports[`Alert should dismiss alert 1`] = `
             </span>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row css-14zzsck-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
           >
             <button
               aria-label="Click to dismiss this alert"
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorBlack MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="dismiss-mobile"
               data-testid="dismiss-mobile"
               id="dismiss-mobile"
@@ -58,7 +58,7 @@ exports[`Alert should dismiss alert 1`] = `
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-1umw9bq-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-MuiSvgIcon-root"
                 data-testid="CloseIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -72,10 +72,10 @@ exports[`Alert should dismiss alert 1`] = `
         </div>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-auto css-38f80h-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-auto css-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-1n5sf3i-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="action-button"
           data-testid="action-button"
           id="action-button"
@@ -86,11 +86,11 @@ exports[`Alert should dismiss alert 1`] = `
         </button>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-direction-xs-row css-18udcrc-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
       >
         <button
           aria-label="Click to dismiss this alert"
-          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorBlack MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
           data-analyticsid="dismiss"
           data-testid="dismiss"
           id="dismiss"
@@ -100,7 +100,7 @@ exports[`Alert should dismiss alert 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-1umw9bq-MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-MuiSvgIcon-root"
             data-testid="CloseIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -123,32 +123,35 @@ exports[`Alert should display dismiss button for smaller screen size 1`] = `
     style="margin-top: 5px;"
   >
     <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-v8je32-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-gwe745-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-MuiGrid-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-MuiGrid-root"
           >
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-1umw9bq-MuiSvgIcon-root"
-              data-testid="WarningIcon"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-MuiSvgIcon-root"
+              data-testid="WarningAmberIcon"
               focusable="false"
               id="warning-icon"
               viewBox="0 0 24 24"
             >
               <path
-                d="M1 21h22L12 2zm12-3h-2v-2h2zm0-4h-2v-4h2z"
+                d="M12 5.99 19.53 19H4.47zM12 2 1 21h22z"
+              />
+              <path
+                d="M13 16h-2v2h2zm0-6h-2v5h2z"
               />
             </svg>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-1evjzfr-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
           >
             <b>
               Title - 
@@ -160,11 +163,11 @@ exports[`Alert should display dismiss button for smaller screen size 1`] = `
             </span>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row css-14zzsck-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
           >
             <button
               aria-label="Click to dismiss this alert"
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorBlack MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="dismiss-mobile"
               data-testid="dismiss-mobile"
               id="dismiss-mobile"
@@ -174,7 +177,7 @@ exports[`Alert should display dismiss button for smaller screen size 1`] = `
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-1umw9bq-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-MuiSvgIcon-root"
                 data-testid="CloseIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -188,10 +191,10 @@ exports[`Alert should display dismiss button for smaller screen size 1`] = `
         </div>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-auto css-38f80h-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-auto css-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-1n5sf3i-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="action-button"
           data-testid="action-button"
           id="action-button"
@@ -202,11 +205,11 @@ exports[`Alert should display dismiss button for smaller screen size 1`] = `
         </button>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-direction-xs-row css-18udcrc-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
       >
         <button
           aria-label="Click to dismiss this alert"
-          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorBlack MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
           data-analyticsid="dismiss"
           data-testid="dismiss"
           id="dismiss"
@@ -216,7 +219,7 @@ exports[`Alert should display dismiss button for smaller screen size 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-1umw9bq-MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-MuiSvgIcon-root"
             data-testid="CloseIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -239,30 +242,30 @@ exports[`Alert should display loader 1`] = `
     style="margin-top: 5px;"
   >
     <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-v8je32-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-gwe745-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-MuiGrid-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-MuiGrid-root"
           >
             <span
-              class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary spinner css-1jjkwrz-MuiCircularProgress-root"
+              class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary spinner css-MuiCircularProgress-root"
               data-testid="spinner"
               id="spinner"
               role="progressbar"
               style="width: 38px; height: 38px;"
             >
               <svg
-                class="MuiCircularProgress-svg css-54pwck-MuiCircularProgress-svg"
+                class="MuiCircularProgress-svg css-MuiCircularProgress-svg"
                 viewBox="22 22 44 44"
               >
                 <circle
-                  class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-19t5dcl-MuiCircularProgress-circle"
+                  class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-MuiCircularProgress-circle"
                   cx="44"
                   cy="44"
                   fill="none"
@@ -273,7 +276,7 @@ exports[`Alert should display loader 1`] = `
             </span>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-1evjzfr-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
           >
             <b>
               Title - 
@@ -285,11 +288,11 @@ exports[`Alert should display loader 1`] = `
             </span>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row css-14zzsck-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
           >
             <button
               aria-label="Click to dismiss this alert"
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorBlack MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="dismiss-mobile"
               data-testid="dismiss-mobile"
               id="dismiss-mobile"
@@ -299,7 +302,7 @@ exports[`Alert should display loader 1`] = `
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-1umw9bq-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-MuiSvgIcon-root"
                 data-testid="CloseIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -313,10 +316,10 @@ exports[`Alert should display loader 1`] = `
         </div>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-auto css-38f80h-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-auto css-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-1n5sf3i-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="action-button"
           data-testid="action-button"
           disabled=""
@@ -328,11 +331,11 @@ exports[`Alert should display loader 1`] = `
         </button>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-direction-xs-row css-18udcrc-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
       >
         <button
           aria-label="Click to dismiss this alert"
-          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorBlack MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
           data-analyticsid="dismiss"
           data-testid="dismiss"
           id="dismiss"
@@ -342,7 +345,7 @@ exports[`Alert should display loader 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-1umw9bq-MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-MuiSvgIcon-root"
             data-testid="CloseIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -365,32 +368,35 @@ exports[`Alert should fire an action when user clicks on the message text 1`] = 
     style="margin-top: 5px;"
   >
     <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-v8je32-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-gwe745-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-MuiGrid-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-MuiGrid-root"
           >
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-1umw9bq-MuiSvgIcon-root"
-              data-testid="WarningIcon"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-MuiSvgIcon-root"
+              data-testid="WarningAmberIcon"
               focusable="false"
               id="warning-icon"
               viewBox="0 0 24 24"
             >
               <path
-                d="M1 21h22L12 2zm12-3h-2v-2h2zm0-4h-2v-4h2z"
+                d="M12 5.99 19.53 19H4.47zM12 2 1 21h22z"
+              />
+              <path
+                d="M13 16h-2v2h2zm0-6h-2v5h2z"
               />
             </svg>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-1evjzfr-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
           >
             <b>
               Title - 
@@ -402,11 +408,11 @@ exports[`Alert should fire an action when user clicks on the message text 1`] = 
             </span>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row css-14zzsck-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
           >
             <button
               aria-label="Click to dismiss this alert"
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorBlack MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="dismiss-mobile"
               data-testid="dismiss-mobile"
               id="dismiss-mobile"
@@ -416,7 +422,7 @@ exports[`Alert should fire an action when user clicks on the message text 1`] = 
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-1umw9bq-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-MuiSvgIcon-root"
                 data-testid="CloseIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -430,10 +436,10 @@ exports[`Alert should fire an action when user clicks on the message text 1`] = 
         </div>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-auto css-38f80h-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-auto css-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-1n5sf3i-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="action-button"
           data-testid="action-button"
           id="action-button"
@@ -444,11 +450,11 @@ exports[`Alert should fire an action when user clicks on the message text 1`] = 
         </button>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-direction-xs-row css-18udcrc-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
       >
         <button
           aria-label="Click to dismiss this alert"
-          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorBlack MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
           data-analyticsid="dismiss"
           data-testid="dismiss"
           id="dismiss"
@@ -458,7 +464,7 @@ exports[`Alert should fire an action when user clicks on the message text 1`] = 
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-1umw9bq-MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-MuiSvgIcon-root"
             data-testid="CloseIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -481,32 +487,35 @@ exports[`Alert should not fire an action when user clicks on the message text an
     style="margin-top: 5px;"
   >
     <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-v8je32-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-1hz2gq3-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-MuiGrid-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-MuiGrid-root"
           >
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-1umw9bq-MuiSvgIcon-root"
-              data-testid="WarningIcon"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-MuiSvgIcon-root"
+              data-testid="WarningAmberIcon"
               focusable="false"
               id="warning-icon"
               viewBox="0 0 24 24"
             >
               <path
-                d="M1 21h22L12 2zm12-3h-2v-2h2zm0-4h-2v-4h2z"
+                d="M12 5.99 19.53 19H4.47zM12 2 1 21h22z"
+              />
+              <path
+                d="M13 16h-2v2h2zm0-6h-2v5h2z"
               />
             </svg>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-1evjzfr-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
           >
             <b>
               Title - 
@@ -518,11 +527,11 @@ exports[`Alert should not fire an action when user clicks on the message text an
             </span>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row css-14zzsck-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
           >
             <button
               aria-label="Click to dismiss this alert"
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorBlack MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="dismiss-mobile"
               data-testid="dismiss-mobile"
               id="dismiss-mobile"
@@ -532,7 +541,7 @@ exports[`Alert should not fire an action when user clicks on the message text an
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-1umw9bq-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-MuiSvgIcon-root"
                 data-testid="CloseIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -546,11 +555,11 @@ exports[`Alert should not fire an action when user clicks on the message text an
         </div>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-direction-xs-row css-18udcrc-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
       >
         <button
           aria-label="Click to dismiss this alert"
-          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorBlack MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
           data-analyticsid="dismiss"
           data-testid="dismiss"
           id="dismiss"
@@ -560,7 +569,7 @@ exports[`Alert should not fire an action when user clicks on the message text an
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-1umw9bq-MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-MuiSvgIcon-root"
             data-testid="CloseIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -583,32 +592,32 @@ exports[`Alert should render clickable action button 1`] = `
     style="margin-top: 5px;"
   >
     <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-qpkc91-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-gwe745-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-MuiGrid-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-MuiGrid-root"
           >
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-1umw9bq-MuiSvgIcon-root"
-              data-testid="ErrorIcon"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-MuiSvgIcon-root"
+              data-testid="HighlightOffIcon"
               focusable="false"
               id="error-icon"
               viewBox="0 0 24 24"
             >
               <path
-                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m1 15h-2v-2h2zm0-4h-2V7h2z"
+                d="M14.59 8 12 10.59 9.41 8 8 9.41 10.59 12 8 14.59 9.41 16 12 13.41 14.59 16 16 14.59 13.41 12 16 9.41zM12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8"
               />
             </svg>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-1evjzfr-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
           >
             <b>
               This is an error title - 
@@ -620,11 +629,11 @@ exports[`Alert should render clickable action button 1`] = `
             </span>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row css-14zzsck-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
           >
             <button
               aria-label="Click to dismiss this alert"
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorBlack MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="dismiss-mobile"
               data-testid="dismiss-mobile"
               id="dismiss-mobile"
@@ -634,7 +643,7 @@ exports[`Alert should render clickable action button 1`] = `
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-1umw9bq-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-MuiSvgIcon-root"
                 data-testid="CloseIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -648,10 +657,10 @@ exports[`Alert should render clickable action button 1`] = `
         </div>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-auto css-38f80h-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-auto css-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-1n5sf3i-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="action-button"
           data-testid="action-button"
           id="action-button"
@@ -662,11 +671,11 @@ exports[`Alert should render clickable action button 1`] = `
         </button>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-direction-xs-row css-18udcrc-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
       >
         <button
           aria-label="Click to dismiss this alert"
-          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorBlack MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
           data-analyticsid="dismiss"
           data-testid="dismiss"
           id="dismiss"
@@ -676,7 +685,7 @@ exports[`Alert should render clickable action button 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-1umw9bq-MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-MuiSvgIcon-root"
             data-testid="CloseIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -699,21 +708,21 @@ exports[`Alert should render custom alert 1`] = `
     style="margin-top: 5px;"
   >
     <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-qpkc91-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-gwe745-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-MuiGrid-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-6v8acz-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-MuiGrid-root"
           >
             test
           </div>
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-1evjzfr-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
           >
             <b>
               This is a custom title - 
@@ -725,11 +734,11 @@ exports[`Alert should render custom alert 1`] = `
             </span>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row css-14zzsck-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
           >
             <button
               aria-label="Click to dismiss this alert"
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorBlack MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="dismiss-mobile"
               data-testid="dismiss-mobile"
               id="dismiss-mobile"
@@ -739,7 +748,7 @@ exports[`Alert should render custom alert 1`] = `
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-1umw9bq-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-MuiSvgIcon-root"
                 data-testid="CloseIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -753,10 +762,10 @@ exports[`Alert should render custom alert 1`] = `
         </div>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-auto css-38f80h-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-auto css-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-1n5sf3i-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="action-button"
           data-testid="action-button"
           id="action-button"
@@ -767,11 +776,11 @@ exports[`Alert should render custom alert 1`] = `
         </button>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-direction-xs-row css-18udcrc-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
       >
         <button
           aria-label="Click to dismiss this alert"
-          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorBlack MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
           data-analyticsid="dismiss"
           data-testid="dismiss"
           id="dismiss"
@@ -781,7 +790,7 @@ exports[`Alert should render custom alert 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-1umw9bq-MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-MuiSvgIcon-root"
             data-testid="CloseIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -804,32 +813,35 @@ exports[`Alert should render default view 1`] = `
     style="margin-top: 5px;"
   >
     <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-v8je32-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-gwe745-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-MuiGrid-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-MuiGrid-root"
           >
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-1umw9bq-MuiSvgIcon-root"
-              data-testid="WarningIcon"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-MuiSvgIcon-root"
+              data-testid="WarningAmberIcon"
               focusable="false"
               id="warning-icon"
               viewBox="0 0 24 24"
             >
               <path
-                d="M1 21h22L12 2zm12-3h-2v-2h2zm0-4h-2v-4h2z"
+                d="M12 5.99 19.53 19H4.47zM12 2 1 21h22z"
+              />
+              <path
+                d="M13 16h-2v2h2zm0-6h-2v5h2z"
               />
             </svg>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-1evjzfr-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
           >
             <b>
               Title - 
@@ -841,11 +853,11 @@ exports[`Alert should render default view 1`] = `
             </span>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row css-14zzsck-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
           >
             <button
               aria-label="Click to dismiss this alert"
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorBlack MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="dismiss-mobile"
               data-testid="dismiss-mobile"
               id="dismiss-mobile"
@@ -855,7 +867,7 @@ exports[`Alert should render default view 1`] = `
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-1umw9bq-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-MuiSvgIcon-root"
                 data-testid="CloseIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -869,10 +881,10 @@ exports[`Alert should render default view 1`] = `
         </div>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-auto css-38f80h-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-auto css-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-1n5sf3i-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="action-button"
           data-testid="action-button"
           id="action-button"
@@ -883,11 +895,11 @@ exports[`Alert should render default view 1`] = `
         </button>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-direction-xs-row css-18udcrc-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
       >
         <button
           aria-label="Click to dismiss this alert"
-          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorBlack MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
           data-analyticsid="dismiss"
           data-testid="dismiss"
           id="dismiss"
@@ -897,7 +909,7 @@ exports[`Alert should render default view 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-1umw9bq-MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-MuiSvgIcon-root"
             data-testid="CloseIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -920,20 +932,20 @@ exports[`Alert should render done type of alert 1`] = `
     style="margin-top: 5px;"
   >
     <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-9wcyi6-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-gwe745-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-MuiGrid-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-MuiGrid-root"
           >
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-1umw9bq-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-MuiSvgIcon-root"
               data-testid="DoneIcon"
               focusable="false"
               id="done-icon"
@@ -945,7 +957,7 @@ exports[`Alert should render done type of alert 1`] = `
             </svg>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-1evjzfr-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
           >
             <b>
               This is an done title - 
@@ -957,11 +969,11 @@ exports[`Alert should render done type of alert 1`] = `
             </span>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row css-14zzsck-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
           >
             <button
               aria-label="Click to dismiss this alert"
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorBlack MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="dismiss-mobile"
               data-testid="dismiss-mobile"
               id="dismiss-mobile"
@@ -971,7 +983,7 @@ exports[`Alert should render done type of alert 1`] = `
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-1umw9bq-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-MuiSvgIcon-root"
                 data-testid="CloseIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -985,10 +997,10 @@ exports[`Alert should render done type of alert 1`] = `
         </div>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-auto css-38f80h-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-auto css-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-1n5sf3i-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="action-button"
           data-testid="action-button"
           id="action-button"
@@ -999,11 +1011,11 @@ exports[`Alert should render done type of alert 1`] = `
         </button>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-direction-xs-row css-18udcrc-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
       >
         <button
           aria-label="Click to dismiss this alert"
-          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorBlack MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
           data-analyticsid="dismiss"
           data-testid="dismiss"
           id="dismiss"
@@ -1013,7 +1025,7 @@ exports[`Alert should render done type of alert 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-1umw9bq-MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-MuiSvgIcon-root"
             data-testid="CloseIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -1036,20 +1048,20 @@ exports[`Alert should render error outline type of alert 1`] = `
     style="margin-top: 5px;"
   >
     <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-qpkc91-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-gwe745-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-MuiGrid-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-MuiGrid-root"
           >
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-1umw9bq-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-MuiSvgIcon-root"
               data-testid="ErrorOutlineIcon"
               focusable="false"
               id="error-outline-icon"
@@ -1061,7 +1073,7 @@ exports[`Alert should render error outline type of alert 1`] = `
             </svg>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-1evjzfr-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
           >
             <b>
               This is an error outline title - 
@@ -1073,11 +1085,11 @@ exports[`Alert should render error outline type of alert 1`] = `
             </span>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row css-14zzsck-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
           >
             <button
               aria-label="Click to dismiss this alert"
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorBlack MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="dismiss-mobile"
               data-testid="dismiss-mobile"
               id="dismiss-mobile"
@@ -1087,7 +1099,7 @@ exports[`Alert should render error outline type of alert 1`] = `
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-1umw9bq-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-MuiSvgIcon-root"
                 data-testid="CloseIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -1101,10 +1113,10 @@ exports[`Alert should render error outline type of alert 1`] = `
         </div>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-auto css-38f80h-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-auto css-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-1n5sf3i-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="action-button"
           data-testid="action-button"
           id="action-button"
@@ -1115,11 +1127,11 @@ exports[`Alert should render error outline type of alert 1`] = `
         </button>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-direction-xs-row css-18udcrc-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
       >
         <button
           aria-label="Click to dismiss this alert"
-          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorBlack MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
           data-analyticsid="dismiss"
           data-testid="dismiss"
           id="dismiss"
@@ -1129,7 +1141,7 @@ exports[`Alert should render error outline type of alert 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-1umw9bq-MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-MuiSvgIcon-root"
             data-testid="CloseIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -1152,32 +1164,32 @@ exports[`Alert should render error type of alert 1`] = `
     style="margin-top: 5px;"
   >
     <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-qpkc91-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-gwe745-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-MuiGrid-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-MuiGrid-root"
           >
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-1umw9bq-MuiSvgIcon-root"
-              data-testid="ErrorIcon"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-MuiSvgIcon-root"
+              data-testid="HighlightOffIcon"
               focusable="false"
               id="error-icon"
               viewBox="0 0 24 24"
             >
               <path
-                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m1 15h-2v-2h2zm0-4h-2V7h2z"
+                d="M14.59 8 12 10.59 9.41 8 8 9.41 10.59 12 8 14.59 9.41 16 12 13.41 14.59 16 16 14.59 13.41 12 16 9.41zM12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8"
               />
             </svg>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-1evjzfr-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
           >
             <b>
               This is an error title - 
@@ -1189,11 +1201,11 @@ exports[`Alert should render error type of alert 1`] = `
             </span>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row css-14zzsck-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
           >
             <button
               aria-label="Click to dismiss this alert"
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorBlack MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="dismiss-mobile"
               data-testid="dismiss-mobile"
               id="dismiss-mobile"
@@ -1203,7 +1215,7 @@ exports[`Alert should render error type of alert 1`] = `
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-1umw9bq-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-MuiSvgIcon-root"
                 data-testid="CloseIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -1217,10 +1229,10 @@ exports[`Alert should render error type of alert 1`] = `
         </div>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-auto css-38f80h-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-auto css-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-1n5sf3i-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="action-button"
           data-testid="action-button"
           id="action-button"
@@ -1231,11 +1243,11 @@ exports[`Alert should render error type of alert 1`] = `
         </button>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-direction-xs-row css-18udcrc-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
       >
         <button
           aria-label="Click to dismiss this alert"
-          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorBlack MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
           data-analyticsid="dismiss"
           data-testid="dismiss"
           id="dismiss"
@@ -1245,7 +1257,7 @@ exports[`Alert should render error type of alert 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-1umw9bq-MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-MuiSvgIcon-root"
             data-testid="CloseIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -1268,32 +1280,32 @@ exports[`Alert should render error type of alert by default 1`] = `
     style="margin-top: 5px;"
   >
     <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-qpkc91-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-gwe745-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-MuiGrid-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-MuiGrid-root"
           >
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-1umw9bq-MuiSvgIcon-root"
-              data-testid="ErrorIcon"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-MuiSvgIcon-root"
+              data-testid="HighlightOffIcon"
               focusable="false"
               id="error-icon"
               viewBox="0 0 24 24"
             >
               <path
-                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m1 15h-2v-2h2zm0-4h-2V7h2z"
+                d="M14.59 8 12 10.59 9.41 8 8 9.41 10.59 12 8 14.59 9.41 16 12 13.41 14.59 16 16 14.59 13.41 12 16 9.41zM12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8"
               />
             </svg>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-1evjzfr-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
           >
             <b>
               This is an error title - 
@@ -1305,11 +1317,11 @@ exports[`Alert should render error type of alert by default 1`] = `
             </span>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row css-14zzsck-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
           >
             <button
               aria-label="Click to dismiss this alert"
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorBlack MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="dismiss-mobile"
               data-testid="dismiss-mobile"
               id="dismiss-mobile"
@@ -1319,7 +1331,7 @@ exports[`Alert should render error type of alert by default 1`] = `
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-1umw9bq-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-MuiSvgIcon-root"
                 data-testid="CloseIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -1333,10 +1345,10 @@ exports[`Alert should render error type of alert by default 1`] = `
         </div>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-auto css-38f80h-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-auto css-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-1n5sf3i-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="action-button"
           data-testid="action-button"
           id="action-button"
@@ -1347,11 +1359,11 @@ exports[`Alert should render error type of alert by default 1`] = `
         </button>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-direction-xs-row css-18udcrc-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
       >
         <button
           aria-label="Click to dismiss this alert"
-          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorBlack MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
           data-analyticsid="dismiss"
           data-testid="dismiss"
           id="dismiss"
@@ -1361,7 +1373,7 @@ exports[`Alert should render error type of alert by default 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-1umw9bq-MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-MuiSvgIcon-root"
             data-testid="CloseIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -1384,20 +1396,20 @@ exports[`Alert should render help outline type of alert 1`] = `
     style="margin-top: 5px;"
   >
     <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1twgdvq-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-gwe745-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-MuiGrid-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-MuiGrid-root"
           >
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-1umw9bq-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-MuiSvgIcon-root"
               data-testid="HelpOutlineIcon"
               focusable="false"
               id="help-outline-icon"
@@ -1409,7 +1421,7 @@ exports[`Alert should render help outline type of alert 1`] = `
             </svg>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-1evjzfr-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
           >
             <b>
               This is an help outline title - 
@@ -1421,11 +1433,11 @@ exports[`Alert should render help outline type of alert 1`] = `
             </span>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row css-14zzsck-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
           >
             <button
               aria-label="Click to dismiss this alert"
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorBlack MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="dismiss-mobile"
               data-testid="dismiss-mobile"
               id="dismiss-mobile"
@@ -1435,7 +1447,7 @@ exports[`Alert should render help outline type of alert 1`] = `
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-1umw9bq-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-MuiSvgIcon-root"
                 data-testid="CloseIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -1449,10 +1461,10 @@ exports[`Alert should render help outline type of alert 1`] = `
         </div>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-auto css-38f80h-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-auto css-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-1n5sf3i-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="action-button"
           data-testid="action-button"
           id="action-button"
@@ -1463,11 +1475,11 @@ exports[`Alert should render help outline type of alert 1`] = `
         </button>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-direction-xs-row css-18udcrc-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
       >
         <button
           aria-label="Click to dismiss this alert"
-          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorBlack MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
           data-analyticsid="dismiss"
           data-testid="dismiss"
           id="dismiss"
@@ -1477,7 +1489,7 @@ exports[`Alert should render help outline type of alert 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-1umw9bq-MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-MuiSvgIcon-root"
             data-testid="CloseIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -1500,20 +1512,20 @@ exports[`Alert should render help type of alert 1`] = `
     style="margin-top: 5px;"
   >
     <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-1twgdvq-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-gwe745-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-MuiGrid-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-MuiGrid-root"
           >
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-1umw9bq-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-MuiSvgIcon-root"
               data-testid="HelpIcon"
               focusable="false"
               id="help-icon"
@@ -1525,7 +1537,7 @@ exports[`Alert should render help type of alert 1`] = `
             </svg>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-1evjzfr-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
           >
             <b>
               This is an help title - 
@@ -1537,11 +1549,11 @@ exports[`Alert should render help type of alert 1`] = `
             </span>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row css-14zzsck-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
           >
             <button
               aria-label="Click to dismiss this alert"
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorBlack MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="dismiss-mobile"
               data-testid="dismiss-mobile"
               id="dismiss-mobile"
@@ -1551,7 +1563,7 @@ exports[`Alert should render help type of alert 1`] = `
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-1umw9bq-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-MuiSvgIcon-root"
                 data-testid="CloseIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -1565,10 +1577,10 @@ exports[`Alert should render help type of alert 1`] = `
         </div>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-auto css-38f80h-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-auto css-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-1n5sf3i-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="action-button"
           data-testid="action-button"
           id="action-button"
@@ -1579,11 +1591,11 @@ exports[`Alert should render help type of alert 1`] = `
         </button>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-direction-xs-row css-18udcrc-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
       >
         <button
           aria-label="Click to dismiss this alert"
-          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorBlack MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
           data-analyticsid="dismiss"
           data-testid="dismiss"
           id="dismiss"
@@ -1593,7 +1605,7 @@ exports[`Alert should render help type of alert 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-1umw9bq-MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-MuiSvgIcon-root"
             data-testid="CloseIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -1616,20 +1628,20 @@ exports[`Alert should render info outline type of alert 1`] = `
     style="margin-top: 5px;"
   >
     <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-ht57af-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-gwe745-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-MuiGrid-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-MuiGrid-root"
           >
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-1umw9bq-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-MuiSvgIcon-root"
               data-testid="InfoOutlinedIcon"
               focusable="false"
               id="info-outline-icon"
@@ -1641,7 +1653,7 @@ exports[`Alert should render info outline type of alert 1`] = `
             </svg>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-1evjzfr-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
           >
             <b>
               This is an info outline title - 
@@ -1653,11 +1665,11 @@ exports[`Alert should render info outline type of alert 1`] = `
             </span>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row css-14zzsck-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
           >
             <button
               aria-label="Click to dismiss this alert"
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorBlack MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="dismiss-mobile"
               data-testid="dismiss-mobile"
               id="dismiss-mobile"
@@ -1667,7 +1679,7 @@ exports[`Alert should render info outline type of alert 1`] = `
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-1umw9bq-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-MuiSvgIcon-root"
                 data-testid="CloseIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -1681,10 +1693,10 @@ exports[`Alert should render info outline type of alert 1`] = `
         </div>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-auto css-38f80h-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-auto css-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-1n5sf3i-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="action-button"
           data-testid="action-button"
           id="action-button"
@@ -1695,11 +1707,11 @@ exports[`Alert should render info outline type of alert 1`] = `
         </button>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-direction-xs-row css-18udcrc-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
       >
         <button
           aria-label="Click to dismiss this alert"
-          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorBlack MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
           data-analyticsid="dismiss"
           data-testid="dismiss"
           id="dismiss"
@@ -1709,7 +1721,7 @@ exports[`Alert should render info outline type of alert 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-1umw9bq-MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-MuiSvgIcon-root"
             data-testid="CloseIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -1732,32 +1744,32 @@ exports[`Alert should render info type of alert 1`] = `
     style="margin-top: 5px;"
   >
     <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-ht57af-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
     >
       <div
-        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-gwe745-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-grow css-MuiGrid-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-12qu8xr-MuiGrid-root"
+          class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-1giczoj-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row alert-icon css-MuiGrid-root"
           >
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-1umw9bq-MuiSvgIcon-root"
-              data-testid="InfoIcon"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-MuiSvgIcon-root"
+              data-testid="InfoOutlinedIcon"
               focusable="false"
               id="info-icon"
               viewBox="0 0 24 24"
             >
               <path
-                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m1 15h-2v-6h2zm0-8h-2V7h2z"
+                d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8"
               />
             </svg>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-1evjzfr-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
           >
             <b>
               This is an info title - 
@@ -1769,11 +1781,11 @@ exports[`Alert should render info type of alert 1`] = `
             </span>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-direction-xs-row css-14zzsck-MuiGrid-root"
+            class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
           >
             <button
               aria-label="Click to dismiss this alert"
-              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorBlack MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
               data-analyticsid="dismiss-mobile"
               data-testid="dismiss-mobile"
               id="dismiss-mobile"
@@ -1783,7 +1795,7 @@ exports[`Alert should render info type of alert 1`] = `
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-1umw9bq-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-MuiSvgIcon-root"
                 data-testid="CloseIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -1797,10 +1809,10 @@ exports[`Alert should render info type of alert 1`] = `
         </div>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-auto css-38f80h-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow MuiGrid-grid-sm-auto css-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-1n5sf3i-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-fullWidth action alert-button css-MuiButtonBase-root-MuiButton-root"
           data-analyticsid="action-button"
           data-testid="action-button"
           id="action-button"
@@ -1811,11 +1823,11 @@ exports[`Alert should render info type of alert 1`] = `
         </button>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-direction-xs-row css-18udcrc-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
       >
         <button
           aria-label="Click to dismiss this alert"
-          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-15ix11i-MuiButtonBase-root-MuiIconButton-root"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorBlack MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
           data-analyticsid="dismiss"
           data-testid="dismiss"
           id="dismiss"
@@ -1825,7 +1837,7 @@ exports[`Alert should render info type of alert 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-1umw9bq-MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium dismiss css-MuiSvgIcon-root"
             data-testid="CloseIcon"
             focusable="false"
             viewBox="0 0 24 24"

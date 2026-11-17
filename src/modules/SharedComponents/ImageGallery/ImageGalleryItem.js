@@ -53,7 +53,6 @@ const internalClasses = {
     },
     imageListAlertBarRoot: {
         background: 'none',
-        backgroundColor: '#4085c6',
         height: 'auto',
     },
     imageListAlertBarWrap: {
@@ -81,6 +80,12 @@ export const getAlertMessageText = ({ unavailable, restricted, advisory }) => {
     return null;
 };
 
+// UQ Design System: content/cultural advisory ("Content warning") is a WARNING — solid $warning-500
+// (#f7ba1e) with $grey-900 (#3b383e) text for AA contrast. Access-status messages (restricted /
+// unavailable) keep the informational blue used previously.
+export const getAlertBarColors = ({ advisory }) =>
+    advisory ? { backgroundColor: '#f7ba1e', color: '#3b383e' } : { backgroundColor: '#4085c6', color: '#ffffff' };
+
 const ImageGalleryItem = ({
     item,
     withTitle = true,
@@ -105,17 +110,16 @@ const ImageGalleryItem = ({
         return getAlertMessageText({ unavailable, restricted, advisory });
     }, [restricted, advisory, unavailable]);
 
+    const alertBarColors = React.useMemo(() => getAlertBarColors({ advisory }), [advisory]);
+
     const clickLink =
         !!url && url.length > 0
             ? {
                   onClick: () => viewRecord(navigate, url),
+                  onKeyPress: key => handleKeyboardPressActivate(key, () => viewRecord(navigate, url)),
                   role: 'button',
+                  tabIndex: 0,
               }
-            : {};
-
-    const listItemAriaLabel =
-        !advisory && !restricted
-            ? { 'aria-label': txt.components.imageGallery.thumbnail.ariaLabel.replace('[title]', item.rek_title) }
             : {};
 
     const { ref, inView } = useInView({
@@ -138,16 +142,13 @@ const ImageGalleryItem = ({
                     ...(!!clickLink.onClick && internalClasses.imageListItemWithLink),
                 },
             }}
-            tabIndex={0}
-            onKeyPress={key => handleKeyboardPressActivate(key, () => viewRecord(navigate, url))}
-            {...listItemAriaLabel}
             {...clickLink}
             {...rest}
         >
             <ImageGalleryItemImage
                 item={item}
                 security={security}
-                alt={item.rek_title}
+                alt=""
                 width={itemWidth}
                 height={itemHeight}
                 classes={{
@@ -184,9 +185,11 @@ const ImageGalleryItem = ({
                     position="top"
                     sx={{
                         ...internalClasses.imageListAlertBarRoot,
+                        backgroundColor: alertBarColors.backgroundColor,
                         ...(!!classes && classes?.imageListAlertBar?.root),
                         '& .MuiImageListItemBar-title': {
                             ...internalClasses.imageListAlertBarTitle,
+                            color: alertBarColors.color,
                             ...(!!classes && classes?.imageListAlertBar?.title),
                         },
                         '& .MuiImageListItemBar-titleWrap': {

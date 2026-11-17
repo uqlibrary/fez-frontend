@@ -47,6 +47,11 @@ export const StandardCard = ({
     const standardCardIdActual = !!standardCardId
         ? standardCardId
         : `standard-card${typeof title === 'string' ? '-' + title.replace(/ /g, '-').toLowerCase() : ''}`;
+    // Card title: component is the semantic heading level; variant sets the DS size. smallTitle renders
+    // one DS size smaller than the semantic level so "small" cards stay smaller (h3=24, h4=20, h5=18px).
+    const titleLevel = subCard ? 'h4' : 'h3';
+    const titleSmallVariant = subCard ? 'h5' : 'h4';
+    const titleVariant = smallTitle ? titleSmallVariant : titleLevel;
 
     return (
         <Card
@@ -76,8 +81,8 @@ export const StandardCard = ({
                     action={!!help && !!help.text && <HelpIcon {...help} />}
                     slotProps={{
                         title: {
-                            variant: smallTitle ? 'h6' : 'h5',
-                            component: subCard ? 'h4' : 'h3',
+                            variant: titleVariant,
+                            component: titleLevel,
                             color: 'inherit',
                             'data-testid': `${standardCardIdActual}-header`,
                             id: `${standardCardIdActual}-header`,

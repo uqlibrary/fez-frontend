@@ -109,16 +109,18 @@ const Reports = () => {
         [dispatch, showExportReportAlert],
     );
 
-    const handleExportDisplayReportClick = actionState => {
+    const handleExportDisplayReportClick = async actionState => {
         const fname = getFileName('xlsx');
 
         const sortedHeaders = columns.sort((a, b) => a.exportOrder - b.exportOrder);
-        const colHeaders = sortedHeaders.map(col => col.headerName);
+        const colHeaders = sortedHeaders
+            .map(col => ({ header: col.headerName, key: col.field, width: 20 }))
+            .filter(col => col.key !== 'actions');
 
         const sheetLabel = actionState.report.label;
 
         const data = transformDisplayReportExportData(sortedHeaders, adminDashboardDisplayReportData);
-        exportReportToExcel({ filename: fname, sheetLabel, colHeaders, data });
+        await exportReportToExcel({ filename: fname, sheetLabel, colHeaders, data });
     };
 
     const handleDisplayReportClick = actionState => {

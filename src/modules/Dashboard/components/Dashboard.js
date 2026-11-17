@@ -313,7 +313,7 @@ const Dashboard = ({
         (publicationsStats.thomson_citation_count_i.count > 0 ||
             publicationsStats.scopus_citation_count_i.count > 0) ? (
             <StandardCard noPadding noHeader fullHeight>
-                <PublicationStats publicationsStats={cleanPublicationsStats(publicationsStats)} />
+                <PublicationStats publicationsStats={cleanPublicationsStats(publicationsStats)} showHindexHelpLink />
             </StandardCard>
         ) : null;
     const pluralTextReplacement =

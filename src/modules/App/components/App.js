@@ -49,10 +49,16 @@ const StyledGridCard = styled(Grid)(({ theme }) => ({
     },
 }));
 
-const StyledAppTitle = styled(Typography, {
-    shouldForwardProp: prop => prop !== 'indentTitle',
-})(({ theme, indentTitle }) => ({
-    ...(indentTitle ? { textIndent: '282px' } : {}),
+// Width of "<title> : Celebrating 20 years" at the title font size, from the title length (the suffix varies
+// per environment). Measured in Montserrat at 24px: ~11.1em for the tagline plus up to ~0.65em per title
+// character; it slightly overestimates, so the tagline hides rather than clips.
+const taglineMinWidthEm = (11.1 + 0.65 * locale.global.title.trim().length).toFixed(2);
+
+const StyledAppTitle = styled(Typography)(({ theme }) => ({
+    // Keep the semantic h1 (and its Montserrat), but size the banner title for the header rather than
+    // the document h1 scale (DS h1 = 40px would overflow). DS $font-size-xxl (24px), fixed across widths.
+    fontSize: '1.5rem',
+    '@media (min-width:1024px)': { fontSize: '1.5rem' },
     textOverflow: 'ellipsis',
     overflow: 'hidden',
     color: theme.palette.common.white,
@@ -62,6 +68,15 @@ const StyledAppTitle = styled(Typography, {
         textDecoration: 'none',
         '&:hover': {
             textDecoration: 'underline',
+        },
+    },
+    // Size the title against its own cell rather than the viewport: the docked drawer and the search box
+    // both eat into the space, so a viewport breakpoint can't tell when the tagline fits (zoom left it
+    // clipped behind the search box). Hide the tagline when the cell is narrower than the full title.
+    containerType: 'inline-size',
+    [`@container (max-width: ${taglineMinWidthEm}em)`]: {
+        '& .appTitleTagline': {
+            display: 'none',
         },
     },
 }));
@@ -264,9 +279,31 @@ const AppClass = ({
         location.pathname?.startsWith('/records/claim') ||
         false;
 
+    const insertAlertList = () => {
+        if (!!isAdminPage) {
+            return null; // admins don't need to see this (enough to use up the sapce)
+        }
+
+        const alertElement = document.getElementById('alert-list');
+        if (!!alertElement) {
+            return null; // already created
+        }
+
+        const html = '<alert-list id="alert-list" system="espace" />';
+        const alertTemplate = document.createElement('template');
+        alertTemplate.innerHTML = html;
+        const alertBlock = document.getElementById('espace-alerts-area');
+        !!alertBlock && !!alertTemplate && alertBlock.appendChild(alertTemplate.content.cloneNode(true));
+
+        return null;
+    };
+
     return (
         <StyledGrid container sx={{ width: '100%' }}>
             <Meta routesConfig={routesConfig} />
+            {/* UQ Design System header is a solid $purple-500 (#51247a), applied here via color="primary"
+                (-> primary.main). The DS deprecated the purple->magenta gradient for the header - the
+                gradient is commented out in the DS header component and now applies only to the hero. */}
             <AppBar className="AppBar" color="primary" position="fixed">
                 <Toolbar sx={{ height: '70px' }}>
                     <Grid
@@ -311,14 +348,14 @@ const AppClass = ({
                         >
                             <Grid container spacing={2} alignItems="center" justifyContent="flex-start" wrap={'nowrap'}>
                                 {!docked && !menuDrawerOpen && (
-                                    <Grid sx={{ display: { xs: 'none', sm: 'block' } }}>
+                                    <Grid sx={{ display: { xs: 'none', sm: 'block' }, flexShrink: 0 }}>
                                         <div id="logo" className="smallLogo" style={{ height: 66, width: 60 }}>
                                             {locale.global.logo.label}
                                         </div>
                                     </Grid>
                                 )}
-                                <Grid size="auto" style={{ overflow: 'hidden', textOverflow: 'ellipsis' }}>
-                                    <StyledAppTitle variant="h5" component={'h1'} noWrap indentTitle={docked}>
+                                <Grid size="grow" style={{ minWidth: 0, overflow: 'hidden', textOverflow: 'ellipsis' }}>
+                                    <StyledAppTitle variant="h1" component={'h1'} noWrap>
                                         {locale.global.appTitle}
                                     </StyledAppTitle>
                                 </Grid>
@@ -381,8 +418,8 @@ const AppClass = ({
             <div className="content-container" id="content-container" style={containerStyle}>
                 <ScrollTop show containerId="content-container" />
 
-                <div role="region" aria-label="eSpace alerts" style={{ paddingBottom: 24 }}>
-                    {!isAdminPage && <alert-list system="espace" />}
+                <div id="espace-alerts-area" role="region" aria-label="eSpace alerts" style={{ paddingBottom: 24 }}>
+                    {insertAlertList()}
                 </div>
                 <ConfirmDialogBox
                     hideCancelButton

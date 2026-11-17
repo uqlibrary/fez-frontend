@@ -1,4 +1,5 @@
-import * as XLSX from 'xlsx';
+import ExcelJS from 'exceljs';
+import FileSaver from 'file-saver';
 import { IS_PRODUCTION, PRODUCTION_URL, STAGING_URL } from 'config/general';
 
 export const stringToColour = string => {
@@ -72,18 +73,29 @@ export const filterObjectPropsByKey = (key, data, propsToKeep) => {
     return obj;
 };
 
-export const exportReportToExcel = ({ filename, sheetLabel, colHeaders, data }) => {
-    const worksheet = XLSX.utils.json_to_sheet(data);
-    const workbook = XLSX.utils.book_new();
-    !!colHeaders &&
-        XLSX.utils.sheet_add_aoa(worksheet, [colHeaders], {
-            origin: 'A1',
+export const exportReportToExcel = async ({ filename, colHeaders, data, sheetLabel = 'sheet' }) => {
+    if (!filename || !data) return false;
+
+    const workbook = new ExcelJS.Workbook();
+    const worksheet = workbook.addWorksheet(sheetLabel);
+
+    !!colHeaders && (worksheet.columns = colHeaders);
+
+    worksheet.addRows(data);
+
+    try {
+        // Use a buffer to create the file in memory
+        // and then send to the browser for download
+        const buffer = await workbook.xlsx.writeBuffer();
+        const file = new Blob([buffer], {
+            type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
         });
-    XLSX.utils.book_append_sheet(workbook, worksheet, sheetLabel);
-
-    XLSX.writeFileXLSX(workbook, filename);
-
-    return true;
+        FileSaver.saveAs(file, filename);
+        return true;
+    } catch (error) {
+        console.error(`Error writing file ${filename}:`, error);
+        return false;
+    }
 };
 
 export const trimTrailingSlash = text => text.replace(/\/+$/g, '');

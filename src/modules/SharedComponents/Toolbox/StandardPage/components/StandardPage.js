@@ -17,7 +17,8 @@ const StyledGrid = styled(Grid)(({ theme }) => ({
 }));
 
 const StyledPageTitle = styled(Typography)(({ theme }) => ({
-    ...theme.typography.h5,
+    // Semantic h2 (matches the component): use the DS h2 scale rather than the smaller h4/h5.
+    ...theme.typography.h2,
     overflowWrap: 'break-word !important',
     maxWidth: 1200,
     width: '90%',
@@ -25,9 +26,6 @@ const StyledPageTitle = styled(Typography)(({ theme }) => ({
     padding: 0,
     [theme.breakpoints.down('md')]: {
         margin: '0 auto 12px auto',
-    },
-    [theme.breakpoints.up('sm')]: {
-        ...theme.typography.h4,
     },
 }));
 

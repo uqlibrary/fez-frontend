@@ -1,4 +1,6 @@
 import * as Utils from './utils';
+import ExcelJS from 'exceljs';
+import FileSaver from 'file-saver';
 import * as General from 'config/general';
 import { DOCUMENT_TYPES_LOOKUP } from 'config/general';
 import { transformBucketsToChartData } from './utils';
@@ -154,37 +156,74 @@ describe('utils', () => {
     });
 
     describe('exportReportToExcel', () => {
-        it('should return error result', () => {
-            expect(() => Utils.exportReportToExcel({})).toThrow(
-                "Cannot read properties of undefined (reading 'length')",
-            );
+        afterEach(() => {
+            jest.restoreAllMocks();
         });
-        it('should return true result for partial params', async () => {
-            const exportReportToExcelFn = jest.spyOn(Utils, 'exportReportToExcel').mockImplementation(() => {
-                return true;
-            });
-            expect(
+
+        it('should return error result', async () => {
+            const writeBufferFn = jest.spyOn(Object.getPrototypeOf(new ExcelJS.Workbook().xlsx), 'writeBuffer');
+            const saveAsFn = jest.spyOn(FileSaver, 'saveAs');
+
+            await expect(Utils.exportReportToExcel({})).resolves.toBe(false);
+            expect(writeBufferFn).not.toHaveBeenCalled();
+            expect(saveAsFn).not.toHaveBeenCalled();
+        });
+
+        it('should return false when writing the workbook fails (catch block)', async () => {
+            const error = new Error('write failed');
+            jest.spyOn(Object.getPrototypeOf(new ExcelJS.Workbook().xlsx), 'writeBuffer').mockRejectedValue(error);
+
+            await expect(
                 Utils.exportReportToExcel({
-                    filename: 'test.xslx',
+                    filename: 'test.xlsx',
+                    data: [{ id: 1 }],
+                }),
+            ).resolves.toBe(false);
+        });
+
+        it('should return true result for partial params', async () => {
+            const writeBufferFn = jest
+                .spyOn(Object.getPrototypeOf(new ExcelJS.Workbook().xlsx), 'writeBuffer')
+                .mockResolvedValue(new ArrayBuffer(0));
+            const saveAsFn = jest.spyOn(FileSaver, 'saveAs').mockImplementation(() => {});
+
+            await expect(
+                Utils.exportReportToExcel({
+                    filename: 'test.xlsx',
                     sheetLabel: 'test',
                     data: [{ id: 1 }],
                 }),
-            ).toBe(true);
-            expect(exportReportToExcelFn).toHaveBeenCalled();
+            ).resolves.toBe(true);
+            expect(writeBufferFn).toHaveBeenCalled();
+            expect(saveAsFn).toHaveBeenCalledWith(
+                expect.objectContaining({
+                    type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+                }),
+                'test.xlsx',
+            );
         });
-        it('should return true result for all params', () => {
-            const exportReportToExcelFn = jest.spyOn(Utils, 'exportReportToExcel').mockImplementation(() => {
-                return true;
-            });
-            expect(
+
+        it('should return true result for all params', async () => {
+            const writeBufferFn = jest
+                .spyOn(Object.getPrototypeOf(new ExcelJS.Workbook().xlsx), 'writeBuffer')
+                .mockResolvedValue(new ArrayBuffer(0));
+            const saveAsFn = jest.spyOn(FileSaver, 'saveAs').mockImplementation(() => {});
+
+            await expect(
                 Utils.exportReportToExcel({
-                    filename: 'test.xslx',
+                    filename: 'test.xlsx',
                     sheetLabel: 'test',
                     colHeaders: ['id'],
                     data: [{ id: 1 }],
                 }),
-            ).toBe(true);
-            expect(exportReportToExcelFn).toHaveBeenCalled();
+            ).resolves.toBe(true);
+            expect(writeBufferFn).toHaveBeenCalled();
+            expect(saveAsFn).toHaveBeenCalledWith(
+                expect.objectContaining({
+                    type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+                }),
+                'test.xlsx',
+            );
         });
     });
 

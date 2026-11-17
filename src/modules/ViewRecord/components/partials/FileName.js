@@ -25,7 +25,6 @@ const classes = {
 const StyledWithBody2 = styled('div')(({ theme }) => ({
     ...theme.typography.body2,
     cursor: 'pointer',
-    placeSelf: 'center',
 }));
 
 export const getDownloadLinkTestId = id => `${id}-download`;
@@ -106,7 +105,6 @@ const FileName = ({
                         sx={{
                             ...theme.typography.body2,
                             cursor: 'pointer',
-                            placeSelf: 'center',
                             ...classes.filenameParent,
                         }}
                         openInNewIcon

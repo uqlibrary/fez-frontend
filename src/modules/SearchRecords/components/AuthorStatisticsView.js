@@ -68,7 +68,7 @@ const AuthorStatisticsView = ({ authorId }) => {
                 (authorStats.thomson_citation_count_i?.count > 0 || authorStats.scopus_citation_count_i?.count > 0) && (
                     <Grid size={{ xs: 12, md: 6 }}>
                         <StandardCard noPadding noHeader fullHeight>
-                            <PublicationStats publicationsStats={authorStats} />
+                            <PublicationStats publicationsStats={authorStats} showHindexHelpLink />
                         </StandardCard>
                     </Grid>
                 )}

@@ -31,12 +31,15 @@ const AuthorsPublicationTypesCountChart = ({
         legend: {
             itemStyle: {
                 width: 110,
+                fontSize: '12px',
+                fontWeight: 'bold',
+                lineHeight: '16px',
             },
             align: 'center',
             symbolRadius: 0,
             floating: true,
             layout: 'vertical',
-            y: -110,
+            y: -90,
         },
         tooltip: {
             enabled: false,

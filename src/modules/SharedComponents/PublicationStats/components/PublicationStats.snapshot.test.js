@@ -23,6 +23,22 @@ describe('PublicationStats component', () => {
         expect(container).toMatchSnapshot();
     });
 
+    it('should render the h-index help link to the UQ guide when enabled', () => {
+        const { getByTestId } = setup({ publicationsStats: formattedData, showHindexHelpLink: true });
+        const link = getByTestId('hindex-help-link');
+        expect(link).toHaveAttribute(
+            'href',
+            'https://guides.library.uq.edu.au/research-and-teaching-staff/calculate-h-index',
+        );
+        expect(link).toHaveAttribute('target', '_blank');
+        expect(link).toHaveAttribute('aria-label', 'Learn more about the h-index (opens in a new tab)');
+    });
+
+    it('should not render the h-index help link by default', () => {
+        const { queryByTestId } = setup({ publicationsStats: formattedData });
+        expect(queryByTestId('hindex-help-link')).not.toBeInTheDocument();
+    });
+
     it('should render 1 for hindex because they round up to 1', () => {
         const fakeData = {
             thomson_citation_count_i: {

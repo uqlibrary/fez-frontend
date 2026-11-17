@@ -193,7 +193,7 @@ const renderCopyCitationTextButton = pid => {
         <Tooltip title={isEnabled ? 'Copy citation text' : 'Feature unavailable'}>
             <span>
                 <IconButton
-                    aria-label={isEnabled ? `Copy ${pid}'s citation text` : 'Unavailable feature'}
+                    aria-label={`Copy citation text`}
                     onClick={handleCopy(pid)}
                     id={`publication-citation-copy-button-${pid}`}
                     data-analyticsid={`publication-citation-copy-button-${pid}`}
@@ -203,8 +203,9 @@ const renderCopyCitationTextButton = pid => {
                 >
                     <Copy
                         color={isEnabled ? 'secondary' : 'disabled'}
-                        style={{ width: 14, marginLeft: 6, marginTop: -6 }}
+                        style={{ marginLeft: 6, marginTop: -6 }}
                         sx={{ display: { xs: 'none', sm: 'inline' } }}
+                        fontSize="medium"
                     />
                 </IconButton>
             </span>
@@ -222,6 +223,7 @@ export const PublicationCitation = ({
     hideCountTotal = false,
     hideLinks = false,
     hideTitle = false,
+    titleComponent = 'h3',
     publication,
     publicationsLoading,
     isPublicationDeleted = false,
@@ -419,10 +421,14 @@ export const PublicationCitation = ({
                             {!hideTitle ? (
                                 <Grid size="grow" style={{ minWidth: 1 }}>
                                     <Typography
-                                        variant="h6"
-                                        component="h6"
+                                        component={titleComponent}
                                         className={'PublicationCitation-citationTitle'}
                                         sx={{
+                                            // Decoupled: semantic heading level via `titleComponent` (for the
+                                            // a11y heading outline), size set explicitly so it doesn't ride the
+                                            // heading scale. DS $font-size-xl (20px), medium weight.
+                                            fontSize: '1.25rem',
+                                            fontWeight: 500,
                                             lineHeight: 1,
                                             letterSpacing: 0,
                                             mb: '6px',
@@ -583,6 +589,7 @@ PublicationCitation.propTypes = {
     hideCountTotal: PropTypes.bool,
     hideLinks: PropTypes.bool,
     hideTitle: PropTypes.bool,
+    titleComponent: PropTypes.string,
     publication: PropTypes.object.isRequired,
     publicationsLoading: PropTypes.bool,
     isPublicationDeleted: PropTypes.bool,

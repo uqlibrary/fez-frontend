@@ -3,14 +3,14 @@
 exports[`CitationCounts should render component with a mock record metrics 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-MuiGrid-root"
     >
       <a
         aria-label="Full citation in Scopus will open in a new window"
-        class="scopusCitationCount css-pi8u"
+        class="scopusCitationCount css"
         data-analyticsid="scopus-citation-count-link"
         data-testid="scopus-citation-count-link"
         href="https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-85026774540%26origin%3Dinward"
@@ -18,20 +18,19 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
         rel="noopener noreferrer"
         tabindex="0"
         target="_blank"
-        title="Full citation in Scopus will open in a new window"
       >
         <span
-          class="fez-icon scopus large"
+          class="fez-icon scopus xxlarge"
         />
         <span
-          class="MuiBox-root css-19k1sqg"
+          class="MuiBox-root css"
         >
           0
         </span>
       </a>
       <a
         aria-label="Full citation in Altmetric will open in a new window"
-        class="altmetricCitationCount css-pi8u"
+        class="altmetricCitationCount css"
         data-analyticsid="altmetric-citation-count-link"
         data-testid="altmetric-citation-count-link"
         href="https://queensland.altmetric.com/details/23535331"
@@ -39,20 +38,19 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
         rel="noopener noreferrer"
         tabindex="0"
         target="_blank"
-        title="Full citation in Altmetric will open in a new window"
       >
         <span
-          class="fez-icon altmetric large"
+          class="fez-icon altmetric xxlarge"
         />
         <span
-          class="MuiBox-root css-19k1sqg"
+          class="MuiBox-root css"
         >
           1
         </span>
       </a>
       <a
         aria-label="Full citation in Google scholar will open in a new window"
-        class="googleCitationCount css-pi8u"
+        class="googleCitationCount css"
         data-analyticsid="google-citation-count-link"
         data-testid="google-citation-count-link"
         href="https://scholar.google.com/scholar?q=intitle:ENA/VASP%20proteins%20regulate%20exocytosis%20by%20mediating%20myosin%20VI-dependent%20recruitment%20of%20secretory%20granules%20to%20the%20cortical%20actin%20network"
@@ -60,10 +58,9 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
         rel="noopener noreferrer"
         tabindex="0"
         target="_blank"
-        title="Full citation in Google scholar will open in a new window"
       >
         <span
-          class="fez-icon google large"
+          class="fez-icon google xxlarge"
         />
       </a>
       <span
@@ -72,7 +69,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
       />
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1miyk5m-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-MuiGrid-root"
     />
   </div>
 </div>
@@ -81,14 +78,14 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
 exports[`CitationCounts should render component with all metrics 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-MuiGrid-root"
     >
       <a
         aria-label="Full citation in Web of science will open in a new window"
-        class="wosCitationCount css-pi8u"
+        class="wosCitationCount css"
         data-analyticsid="wos-citation-count-link"
         data-testid="wos-citation-count-link"
         href="https://www.webofknowledge.com/?auth=ShibbolethIdPForm&entityID=https://idp.uq.edu.au/entity&ShibFederation=OpenAthensFederation&DestApp=WOS&target=https%253A%252F%252Fwww.webofscience.com%252Fapi%252Fgateway%253FGWVersion%253D2%2526SrcAuth%253Duqueensland%2526SrcApp%253Dresolve1%2526DestLinkType%253DFullRecord%2526DestApp%253DWOS_CPL%2526KeyUT%253D12345"
@@ -96,20 +93,19 @@ exports[`CitationCounts should render component with all metrics 1`] = `
         rel="noopener noreferrer"
         tabindex="0"
         target="_blank"
-        title="Full citation in Web of science will open in a new window"
       >
         <span
-          class="fez-icon wos large"
+          class="fez-icon wos xxlarge"
         />
         <span
-          class="MuiBox-root css-19k1sqg"
+          class="MuiBox-root css"
         >
           0
         </span>
       </a>
       <a
         aria-label="Full citation in Scopus will open in a new window"
-        class="scopusCitationCount css-pi8u"
+        class="scopusCitationCount css"
         data-analyticsid="scopus-citation-count-link"
         data-testid="scopus-citation-count-link"
         href="https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D12345%26origin%3Dinward"
@@ -117,20 +113,19 @@ exports[`CitationCounts should render component with all metrics 1`] = `
         rel="noopener noreferrer"
         tabindex="0"
         target="_blank"
-        title="Full citation in Scopus will open in a new window"
       >
         <span
-          class="fez-icon scopus large"
+          class="fez-icon scopus xxlarge"
         />
         <span
-          class="MuiBox-root css-19k1sqg"
+          class="MuiBox-root css"
         >
           1
         </span>
       </a>
       <a
         aria-label="Full citation in Altmetric will open in a new window"
-        class="altmetricCitationCount css-pi8u"
+        class="altmetricCitationCount css"
         data-analyticsid="altmetric-citation-count-link"
         data-testid="altmetric-citation-count-link"
         href="https://queensland.altmetric.com/details/12345"
@@ -138,20 +133,19 @@ exports[`CitationCounts should render component with all metrics 1`] = `
         rel="noopener noreferrer"
         tabindex="0"
         target="_blank"
-        title="Full citation in Altmetric will open in a new window"
       >
         <span
-          class="fez-icon altmetric large"
+          class="fez-icon altmetric xxlarge"
         />
         <span
-          class="MuiBox-root css-19k1sqg"
+          class="MuiBox-root css"
         >
           1
         </span>
       </a>
       <a
         aria-label="Full citation in Dimensions will open in a new window"
-        class="dimensionsCitationCount css-pi8u"
+        class="dimensionsCitationCount css"
         data-analyticsid="dimensions-citation-count-link"
         data-testid="dimensions-citation-count-link"
         href="https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fapp.dimensions.ai%2Fdetails%2Fpublication%2F12345"
@@ -159,20 +153,19 @@ exports[`CitationCounts should render component with all metrics 1`] = `
         rel="noopener noreferrer"
         tabindex="0"
         target="_blank"
-        title="Full citation in Dimensions will open in a new window"
       >
         <span
-          class="fez-icon dimensions large"
+          class="fez-icon dimensions xxlarge"
         />
         <span
-          class="MuiBox-root css-19k1sqg"
+          class="MuiBox-root css"
         >
           33
         </span>
       </a>
       <a
         aria-label="Full citation in Google scholar will open in a new window"
-        class="googleCitationCount css-pi8u"
+        class="googleCitationCount css"
         data-analyticsid="google-citation-count-link"
         data-testid="google-citation-count-link"
         href="https://scholar.google.com/scholar?q=intitle:This%20is%20test%20title"
@@ -180,20 +173,19 @@ exports[`CitationCounts should render component with all metrics 1`] = `
         rel="noopener noreferrer"
         tabindex="0"
         target="_blank"
-        title="Full citation in Google scholar will open in a new window"
       >
         <span
-          class="fez-icon google large"
+          class="fez-icon google xxlarge"
         />
         <span
-          class="MuiBox-root css-19k1sqg"
+          class="MuiBox-root css"
         >
           1
         </span>
       </a>
       <a
         aria-label="Full citation in OpenAlex will open in a new window"
-        class="openalexCitationCount css-pi8u"
+        class="openalexCitationCount css"
         data-analyticsid="openalex-citation-count-link"
         data-testid="openalex-citation-count-link"
         href="https://openalex.org/works?page=1&filter=cites:12345"
@@ -201,13 +193,12 @@ exports[`CitationCounts should render component with all metrics 1`] = `
         rel="noopener noreferrer"
         tabindex="0"
         target="_blank"
-        title="Full citation in OpenAlex will open in a new window"
       >
         <span
-          class="fez-icon openalex large"
+          class="fez-icon openalex xxlarge"
         />
         <span
-          class="MuiBox-root css-19k1sqg"
+          class="MuiBox-root css"
         >
           1
         </span>
@@ -218,7 +209,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
       />
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1miyk5m-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-MuiGrid-root"
     />
   </div>
 </div>
@@ -227,10 +218,10 @@ exports[`CitationCounts should render component with all metrics 1`] = `
 exports[`CitationCounts should render component with no metrics 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-MuiGrid-root"
     >
       <span
         class="noOaIcon"
@@ -238,7 +229,7 @@ exports[`CitationCounts should render component with no metrics 1`] = `
       />
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1miyk5m-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-MuiGrid-root"
     />
   </div>
 </div>
@@ -247,14 +238,14 @@ exports[`CitationCounts should render component with no metrics 1`] = `
 exports[`CitationCounts should render null as 0 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-MuiGrid-root"
     >
       <a
         aria-label="Full citation in Dimensions will open in a new window"
-        class="dimensionsCitationCount css-pi8u"
+        class="dimensionsCitationCount css"
         data-analyticsid="dimensions-citation-count-link"
         data-testid="dimensions-citation-count-link"
         href="https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fapp.dimensions.ai%2Fdetails%2Fpublication%2F12345"
@@ -262,20 +253,19 @@ exports[`CitationCounts should render null as 0 1`] = `
         rel="noopener noreferrer"
         tabindex="0"
         target="_blank"
-        title="Full citation in Dimensions will open in a new window"
       >
         <span
-          class="fez-icon dimensions large"
+          class="fez-icon dimensions xxlarge"
         />
         <span
-          class="MuiBox-root css-19k1sqg"
+          class="MuiBox-root css"
         >
           0
         </span>
       </a>
       <a
         aria-label="Full citation in Google scholar will open in a new window"
-        class="googleCitationCount css-pi8u"
+        class="googleCitationCount css"
         data-analyticsid="google-citation-count-link"
         data-testid="google-citation-count-link"
         href="https://scholar.google.com/scholar?q=intitle:This%20is%20test%20title"
@@ -283,10 +273,9 @@ exports[`CitationCounts should render null as 0 1`] = `
         rel="noopener noreferrer"
         tabindex="0"
         target="_blank"
-        title="Full citation in Google scholar will open in a new window"
       >
         <span
-          class="fez-icon google large"
+          class="fez-icon google xxlarge"
         />
       </a>
       <span
@@ -295,7 +284,7 @@ exports[`CitationCounts should render null as 0 1`] = `
       />
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1miyk5m-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-MuiGrid-root"
     />
   </div>
 </div>
@@ -304,14 +293,14 @@ exports[`CitationCounts should render null as 0 1`] = `
 exports[`CitationCounts should render open access icon when required 1`] = `
 <div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-d64g0g-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-1lu29ow-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-MuiGrid-root"
     >
       <a
         aria-label="Full citation in Scopus will open in a new window"
-        class="scopusCitationCount css-pi8u"
+        class="scopusCitationCount css"
         data-analyticsid="scopus-citation-count-link"
         data-testid="scopus-citation-count-link"
         href="https://resolver.library.uq.edu.au/openathens/redir?qurl=https%3A%2F%2Fwww.scopus.com%2Frecord%2Fdisplay.uri%3Feid%3D2-s2.0-85026774540%26origin%3Dinward"
@@ -319,20 +308,19 @@ exports[`CitationCounts should render open access icon when required 1`] = `
         rel="noopener noreferrer"
         tabindex="0"
         target="_blank"
-        title="Full citation in Scopus will open in a new window"
       >
         <span
-          class="fez-icon scopus large"
+          class="fez-icon scopus xxlarge"
         />
         <span
-          class="MuiBox-root css-19k1sqg"
+          class="MuiBox-root css"
         >
           0
         </span>
       </a>
       <a
         aria-label="Full citation in Altmetric will open in a new window"
-        class="altmetricCitationCount css-pi8u"
+        class="altmetricCitationCount css"
         data-analyticsid="altmetric-citation-count-link"
         data-testid="altmetric-citation-count-link"
         href="https://queensland.altmetric.com/details/23535331"
@@ -340,20 +328,19 @@ exports[`CitationCounts should render open access icon when required 1`] = `
         rel="noopener noreferrer"
         tabindex="0"
         target="_blank"
-        title="Full citation in Altmetric will open in a new window"
       >
         <span
-          class="fez-icon altmetric large"
+          class="fez-icon altmetric xxlarge"
         />
         <span
-          class="MuiBox-root css-19k1sqg"
+          class="MuiBox-root css"
         >
           1
         </span>
       </a>
       <a
         aria-label="Full citation in Google scholar will open in a new window"
-        class="googleCitationCount css-pi8u"
+        class="googleCitationCount css"
         data-analyticsid="google-citation-count-link"
         data-testid="google-citation-count-link"
         href="https://scholar.google.com/scholar?q=intitle:ENA/VASP%20proteins%20regulate%20exocytosis%20by%20mediating%20myosin%20VI-dependent%20recruitment%20of%20secretory%20granules%20to%20the%20cortical%20actin%20network"
@@ -361,10 +348,9 @@ exports[`CitationCounts should render open access icon when required 1`] = `
         rel="noopener noreferrer"
         tabindex="0"
         target="_blank"
-        title="Full citation in Google scholar will open in a new window"
       >
         <span
-          class="fez-icon google large"
+          class="fez-icon google xxlarge"
         />
       </a>
       <span
@@ -373,7 +359,7 @@ exports[`CitationCounts should render open access icon when required 1`] = `
       />
     </div>
     <div
-      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-1miyk5m-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-MuiGrid-root"
     />
   </div>
 </div>

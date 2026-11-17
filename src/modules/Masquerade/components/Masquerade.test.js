@@ -1,6 +1,6 @@
 import React from 'react';
 import Masquerade from './Masquerade';
-import { render, WithReduxStore, fireEvent } from 'test-utils';
+import { render, WithReduxStore, fireEvent, spyOnWindowLocationMethod } from 'test-utils';
 
 function setup(testProps = {}) {
     const props = {
@@ -16,12 +16,17 @@ function setup(testProps = {}) {
     );
 }
 
-beforeAll(() => {
-    delete global.window.location;
-    global.window.location = { href: '', replace: jest.fn(), assign: jest.fn() };
-});
-
 describe('Component Masquerade', () => {
+    let assignMock;
+
+    beforeEach(() => {
+        assignMock = spyOnWindowLocationMethod('assign');
+    });
+
+    afterEach(() => {
+        jest.resetAllMocks();
+    });
+
     it('Should render form as expected', () => {
         const { container } = setup();
         expect(container).toMatchSnapshot();
@@ -48,6 +53,7 @@ describe('Component Masquerade', () => {
         fireEvent.keyUp(getByTestId('submit-masquerade'), { key: 'Escape', keyCode: 27 });
 
         expect(getByTestId('submit-masquerade')).toBeEnabled();
+        expect(assignMock).not.toHaveBeenCalled();
     });
 
     it('should masquerade if Enter is pressed and username is set', () => {
@@ -56,12 +62,14 @@ describe('Component Masquerade', () => {
         fireEvent.keyUp(getByTestId('submit-masquerade'), { key: 'Enter', keyCode: 13 });
 
         expect(getByTestId('submit-masquerade')).toBeDisabled();
+        expect(assignMock).toHaveBeenCalledWith(expect.stringContaining('user=uqtest'));
     });
 
     it('should not masquerade if Enter is pressed without entering username', () => {
         const { getByTestId } = setup();
         fireEvent.keyUp(getByTestId('submit-masquerade'), { key: 'Enter', keyCode: 13 });
         expect(getByTestId('submit-masquerade')).toBeEnabled();
+        expect(assignMock).not.toHaveBeenCalled();
     });
 
     it('should masquerade if button is pressed and username is set', () => {
@@ -69,11 +77,13 @@ describe('Component Masquerade', () => {
         fireEvent.change(getByLabelText(/Enter a UQ staff or student username/i), { target: { value: 'uqtest' } });
         fireEvent.click(getByTestId('submit-masquerade'));
         expect(getByTestId('submit-masquerade')).toBeDisabled();
+        expect(assignMock).toHaveBeenCalledWith(expect.stringContaining('user=uqtest'));
     });
 
     it('should not masquerade if button is pressed without entering username', () => {
         const { getByTestId } = setup();
         fireEvent.click(getByTestId('submit-masquerade'));
         expect(getByTestId('submit-masquerade')).toBeEnabled();
+        expect(assignMock).not.toHaveBeenCalled();
     });
 });
