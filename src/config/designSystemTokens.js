@@ -1,4 +1,4 @@
-export const roboto = 'Roboto, Helvetica Neue, Helvetica, Arial, sans-serif';
+export const roboto = 'Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif';
 export const montserrat = 'Montserrat, Helvetica, Arial, sans-serif';
 export const courier = 'Courier New, DejaVu Sans Mono, monospace, sans-serif';
 
@@ -103,7 +103,8 @@ export default {
             xxl: '1.375rem',
             xxxl: '1.5rem',
             xxxxl: '1.875rem',
-            ul: '3rem',
+            ul: '2rem',
+            uul: '2.5rem',
         },
         weight: {
             light: 300,
@@ -170,13 +171,6 @@ export default {
 
     desktop: {
         breakpoint: '1024px',
-        font: {
-            size: {
-                xxl: '1.5rem',
-                xxxl: '2rem',
-                xxxxl: '2.5rem',
-            },
-        },
         gridGap: '2rem',
     },
 };

@@ -128,7 +128,6 @@ exports[`Component Links  Full mount render 1`] = `
               data-testid="oa-icon"
               focusable="false"
               role="img"
-              tabindex="0"
               viewBox="0 0 24 24"
             >
               <path
@@ -262,7 +261,6 @@ exports[`Component Links  Full mount render 1`] = `
               data-testid="oa-icon"
               focusable="false"
               role="img"
-              tabindex="0"
               viewBox="0 0 24 24"
             >
               <path
@@ -332,7 +330,6 @@ exports[`Component Links  Full mount render 1`] = `
               data-testid="oa-icon"
               focusable="false"
               role="img"
-              tabindex="0"
               viewBox="0 0 24 24"
             >
               <path
@@ -611,7 +608,6 @@ exports[`Component Links  Rendering due to a pubmed central id 1`] = `
               data-testid="oa-icon"
               focusable="false"
               role="img"
-              tabindex="0"
               viewBox="0 0 24 24"
             >
               <path
@@ -829,7 +825,6 @@ exports[`Component Links  should render 3 non OA links and NO OA google scholar 
               data-testid="oa-icon"
               focusable="false"
               role="img"
-              tabindex="0"
               viewBox="0 0 24 24"
             >
               <path
@@ -899,7 +894,6 @@ exports[`Component Links  should render 3 non OA links and NO OA google scholar 
               data-testid="oa-icon"
               focusable="false"
               role="img"
-              tabindex="0"
               viewBox="0 0 24 24"
             >
               <path
@@ -969,7 +963,6 @@ exports[`Component Links  should render 3 non OA links and NO OA google scholar 
               data-testid="oa-icon"
               focusable="false"
               role="img"
-              tabindex="0"
               viewBox="0 0 24 24"
             >
               <path
@@ -1112,7 +1105,6 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
               data-testid="oa-icon"
               focusable="false"
               role="img"
-              tabindex="0"
               viewBox="0 0 24 24"
             >
               <path
@@ -1187,7 +1179,6 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
               data-testid="oa-icon"
               focusable="false"
               role="img"
-              tabindex="0"
               viewBox="0 0 24 24"
             >
               <path
@@ -1507,7 +1498,6 @@ exports[`Component Links  should render 3 not OA links and DOI not OA and PMC al
               data-testid="oa-icon"
               focusable="false"
               role="img"
-              tabindex="0"
               viewBox="0 0 24 24"
             >
               <path
@@ -1891,7 +1881,6 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
               data-testid="oa-icon"
               focusable="false"
               role="img"
-              tabindex="0"
               viewBox="0 0 24 24"
             >
               <path
@@ -2211,7 +2200,6 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
               data-testid="oa-icon"
               focusable="false"
               role="img"
-              tabindex="0"
               viewBox="0 0 24 24"
             >
               <path
@@ -2595,7 +2583,6 @@ exports[`Component Links  should render OA for OPEN_ACCESS_ID_FILE_AUTHOR_PREPRI
               data-testid="oa-icon"
               focusable="false"
               role="img"
-              tabindex="0"
               viewBox="0 0 24 24"
             >
               <path
@@ -2983,7 +2970,6 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
               data-testid="embargoed-oa-icon"
               focusable="false"
               role="img"
-              tabindex="0"
               viewBox="0 0 24 24"
             >
               <path
@@ -3307,7 +3293,6 @@ exports[`Component Links  should render no oa icon and embargo dates for embargo
               data-testid="embargoed-oa-icon"
               focusable="false"
               role="img"
-              tabindex="0"
               viewBox="0 0 24 24"
             >
               <path
@@ -3580,7 +3565,6 @@ exports[`Component Links  should render oa icon for Link (no DOI) for link 1`] =
               data-testid="oa-icon"
               focusable="false"
               role="img"
-              tabindex="0"
               viewBox="0 0 24 24"
             >
               <path
@@ -3722,7 +3706,6 @@ exports[`Component Links  should render oa icon for open access rdm link 1`] = `
               data-testid="oa-icon"
               focusable="false"
               role="img"
-              tabindex="0"
               viewBox="0 0 24 24"
             >
               <path
@@ -3864,7 +3847,6 @@ exports[`Component Links  should render oa icon for past embargo date open acces
               data-testid="oa-icon"
               focusable="false"
               role="img"
-              tabindex="0"
               viewBox="0 0 24 24"
             >
               <path
