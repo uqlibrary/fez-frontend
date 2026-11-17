@@ -96,7 +96,6 @@ describe('AutoCompleteMultiSelectField component', () => {
     });
 
     it('should render give option template for options', async () => {
-        // eslint-disable-next-line react/prop-types
         const OptionTemplate = ({ option }) => <div data-testid="option-template">{option}</div>;
         const { getByTestId, getAllByTestId } = setup({
             itemsList: ['apple', 'orange', 'pineapple', 'orange juice', 'apple juice'],
