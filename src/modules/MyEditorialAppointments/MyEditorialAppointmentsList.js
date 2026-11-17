@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { styled } from '@mui/material/styles';
@@ -595,6 +594,7 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                     {internalEditComponents}
                 </DialogContent>
                 <DialogActions>
+                    {/* eslint-disable-next-line camelcase */}
                     <MRT_EditActionButtons
                         variant="text"
                         table={table}
@@ -614,6 +614,7 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                     {internalEditComponents}
                 </DialogContent>
                 <DialogActions>
+                    {/* eslint-disable-next-line camelcase */}
                     <MRT_EditActionButtons
                         variant="text"
                         table={table}

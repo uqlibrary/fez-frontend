@@ -3,7 +3,7 @@
 const rule = require('./no-uql-token');
 const RuleTester = require('eslint').RuleTester;
 
-const ruleTester = new RuleTester({ languageOptions: { ecmaVersion: 6, sourceType: 'module' } });
+const ruleTester = new RuleTester({ languageOptions: { ecmaVersion: 'latest', sourceType: 'module' } });
 ruleTester.run('no-uql-token', rule, {
     valid: [
         {
@@ -23,7 +23,6 @@ ruleTester.run('no-uql-token', rule, {
             errors: [
                 {
                     message: 'Please remove UQL token from conditional statement',
-                    type: 'AssignmentExpression',
                 },
             ],
         },
@@ -32,7 +31,6 @@ ruleTester.run('no-uql-token', rule, {
             errors: [
                 {
                     message: 'Please get UQL token from Cookies',
-                    type: 'AssignmentExpression',
                 },
             ],
         },
@@ -41,7 +39,6 @@ ruleTester.run('no-uql-token', rule, {
             errors: [
                 {
                     message: 'Please remove UQL token from conditional statement',
-                    type: 'AssignmentExpression',
                 },
             ],
         },

@@ -249,7 +249,6 @@ const DisplayReportInterface = ({ id, loading, disabled, exportDisabled, onRepor
                                     fullWidth
                                     sx={{ mt: 1 }}
                                     onChange={props =>
-                                        // eslint-disable-next-line react/prop-types
                                         handleDisplayReportChange({ type: 'record_id', value: props.target.value })
                                     }
                                     value={actionState.filters.record_id}
@@ -277,7 +276,6 @@ const DisplayReportInterface = ({ id, loading, disabled, exportDisabled, onRepor
                                     fullWidth
                                     sx={{ mt: 1 }}
                                     onChange={props =>
-                                        // eslint-disable-next-line react/prop-types
                                         handleDisplayReportChange({ type: 'requestor_id', value: props.target.value })
                                     }
                                     value={actionState.filters.requestor_id}
@@ -305,7 +303,6 @@ const DisplayReportInterface = ({ id, loading, disabled, exportDisabled, onRepor
                                     fullWidth
                                     sx={{ mt: 1 }}
                                     onChange={props =>
-                                        // eslint-disable-next-line react/prop-types
                                         handleDisplayReportChange({ type: 'pid', value: props.target.value })
                                     }
                                     value={actionState.filters.pid}

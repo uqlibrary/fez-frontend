@@ -14,7 +14,6 @@ import userEvent from '@testing-library/user-event';
 import { useWatch } from 'react-hook-form';
 import * as actions from 'actions/search';
 
-/* eslint-disable react/prop-types */
 jest.mock('modules/SharedComponents/Toolbox/ReactHookForm', () => ({
     Field: props => {
         return (
