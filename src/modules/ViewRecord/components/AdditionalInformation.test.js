@@ -5,7 +5,6 @@ import { PLACEHOLDER_ISO8601_ZULU_DATE } from 'config/general';
 import { rtlRender, WithRouter } from 'test-utils';
 import { initialize } from '@googlemaps/jest-mocks';
 
-/* eslint-disable react/prop-types */
 jest.mock('modules/SharedComponents/PublicationMap/PublicationMap', () => ({
     __esModule: true,
     default: ({ coordinates, readOnly }) => (

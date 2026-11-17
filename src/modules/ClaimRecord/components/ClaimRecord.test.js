@@ -31,7 +31,6 @@ jest.mock('react-router', () => ({
 const mockClearNewRecord = jest.fn();
 const mockClearRedirectPath = jest.fn();
 
-/* eslint-disable react/prop-types */
 jest.mock('actions', () => ({
     ...jest.requireActual('actions'),
     clearNewRecord: () => mockClearNewRecord,
