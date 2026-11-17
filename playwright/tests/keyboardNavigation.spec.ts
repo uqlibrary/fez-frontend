@@ -41,4 +41,25 @@ test.describe('Keyboard and screen reader navigation', () => {
         await expect(page.getByRole('heading', { level: 2, name: 'My works' })).toBeFocused();
         await expect(page).toHaveTitle(/^My works/);
     });
+
+    test('pages have their own browser title', async ({ page }) => {
+        for (const [url, title] of [
+            ['/about', /^About/],
+            ['/records/incomplete?user=uqresearcher', /^My incomplete works/],
+            ['/records/my-open-access?user=uqresearcher', /^My open access/],
+            ['/tool/lookup?user=uqstaff', /^Lookup Tools/],
+        ] as const) {
+            await page.goto(url);
+            await expect(page).toHaveTitle(title);
+        }
+    });
+
+    test('pages with a search box do not take focus away from the skip link on load', async ({ page }) => {
+        for (const url of ['/journals/search/?user=uqresearcher', '/records/add/find?user=uqresearcher']) {
+            await page.goto(url);
+            await expect(page.locator('main input').first()).toBeVisible();
+            await page.keyboard.press('Tab');
+            await expect(page.getByRole('link', { name: 'Skip to main content' })).toBeFocused();
+        }
+    });
 });

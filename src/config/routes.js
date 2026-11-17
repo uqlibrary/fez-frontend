@@ -92,6 +92,7 @@ export const getRoutesConfig = ({
         {
             path: pathConfig.about,
             element: <components.StandardPage {...locale.pages.about} hideTitle />,
+            pageTitle: locale.pages.about.title,
         },
         {
             path: pathConfig.records.view(':pid'),
@@ -232,7 +233,7 @@ export const getRoutesConfig = ({
                       element: <components.MyIncompleteRecords />,
                       access: [roles.researcher, roles.admin],
                       exact: true,
-                      pageTitle: locale.pages.incompletePublications.title,
+                      pageTitle: locale.pages.incompletePublications.pageTitle,
                   },
                   {
                       path: pathConfig.records.incompleteFix(pid),
@@ -281,7 +282,7 @@ export const getRoutesConfig = ({
                       element: <components.MyOpenAccessRecords />,
                       access: [roles.researcher, roles.admin],
                       exact: true,
-                      pageTitle: locale.pages.openAccessPublications.title,
+                      pageTitle: locale.pages.openAccessPublications.pageTitle,
                   },
                   {
                       path: pathConfig.records.openAccessComplianceFix(pid),
@@ -502,7 +503,7 @@ export const getRoutesConfig = ({
                       element: <components.ThirdPartyLookupTool />,
                       exact: true,
                       access: [roles.admin],
-                      pageTitle: locale.components.thirdPartyLookupTools.title,
+                      pageTitle: locale.components.thirdPartyLookupTools.display.title,
                   },
                   {
                       path: pathConfig.digiteam.batchImport,

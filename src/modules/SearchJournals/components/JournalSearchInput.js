@@ -72,7 +72,6 @@ export const JournalSearchInput = ({ initialValue = '', onReset }) => {
             </Grid>
             <Grid size={12}>
                 <TextField
-                    autoFocus
                     textFieldId="journal-search-keywords"
                     ariaLabel={txt.journalSearchInput.title}
                     name="journal-search-keywords-input"
