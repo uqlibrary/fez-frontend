@@ -32,8 +32,9 @@ export const VoiceToText = ({ sendHandler }) => {
                 <Grid size="auto">
                     <Tooltip title={'Use your microphone to search'} id={`${id}-tooltip`} data-testid={`${id}-tooltip`}>
                         <IconButton
+                            aria-label={'Use your microphone to search'}
                             onClick={SpeechRecognition.startListening}
-                            size={'small'}
+                            size={'medium'}
                             id={`${id}-start-button`}
                             data-analyticsid={`${id}-start-button`}
                             data-testid={`${id}-start-button`}
@@ -47,8 +48,9 @@ export const VoiceToText = ({ sendHandler }) => {
                 <Grid size="auto">
                     <Tooltip title={'Stop recording'} id={`${id}-voice-stop`} data-testid={`${id}-voice-stop`}>
                         <IconButton
+                            aria-label={'Stop recording'}
                             onClick={sendTranscript}
-                            size={'small'}
+                            size={'medium'}
                             id={`${id}-stop-button`}
                             data-analyticsid={`${id}-stop-button`}
                             data-testid={`${id}-stop-button`}

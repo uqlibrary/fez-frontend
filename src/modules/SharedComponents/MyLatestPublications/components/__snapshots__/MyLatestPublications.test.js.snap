@@ -368,10 +368,9 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Web of science will open in a new window"
                         >
                           <span
-                            class="fez-icon wos large"
+                            class="fez-icon wos xxlarge"
                           />
                           <span
                             class="MuiBox-root css"
@@ -389,10 +388,9 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Scopus will open in a new window"
                         >
                           <span
-                            class="fez-icon scopus large"
+                            class="fez-icon scopus xxlarge"
                           />
                           <span
                             class="MuiBox-root css"
@@ -410,10 +408,9 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Altmetric will open in a new window"
                         >
                           <span
-                            class="fez-icon altmetric large"
+                            class="fez-icon altmetric xxlarge"
                           />
                           <span
                             class="MuiBox-root css"
@@ -431,10 +428,9 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Google scholar will open in a new window"
                         >
                           <span
-                            class="fez-icon google large"
+                            class="fez-icon google xxlarge"
                           />
                         </a>
                         <span
@@ -621,10 +617,9 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Google scholar will open in a new window"
                         >
                           <span
-                            class="fez-icon google large"
+                            class="fez-icon google xxlarge"
                           />
                         </a>
                         <span
@@ -785,10 +780,9 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Google scholar will open in a new window"
                         >
                           <span
-                            class="fez-icon google large"
+                            class="fez-icon google xxlarge"
                           />
                         </a>
                         <span
@@ -952,10 +946,9 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Google scholar will open in a new window"
                         >
                           <span
-                            class="fez-icon google large"
+                            class="fez-icon google xxlarge"
                           />
                         </a>
                         <span
@@ -1281,10 +1274,9 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Web of science will open in a new window"
                         >
                           <span
-                            class="fez-icon wos large"
+                            class="fez-icon wos xxlarge"
                           />
                           <span
                             class="MuiBox-root css"
@@ -1302,10 +1294,9 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Scopus will open in a new window"
                         >
                           <span
-                            class="fez-icon scopus large"
+                            class="fez-icon scopus xxlarge"
                           />
                           <span
                             class="MuiBox-root css"
@@ -1323,10 +1314,9 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Altmetric will open in a new window"
                         >
                           <span
-                            class="fez-icon altmetric large"
+                            class="fez-icon altmetric xxlarge"
                           />
                           <span
                             class="MuiBox-root css"
@@ -1344,10 +1334,9 @@ exports[`Component MyLatestPublications should render latest publications 1`] = 
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
-                          title="Full citation in Google scholar will open in a new window"
                         >
                           <span
-                            class="fez-icon google large"
+                            class="fez-icon google xxlarge"
                           />
                         </a>
                         <span

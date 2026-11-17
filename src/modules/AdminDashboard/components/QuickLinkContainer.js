@@ -129,12 +129,9 @@ const QuickLinkContainer = ({ locale, initialViewProps = { opacity: 0 } }) => {
             sx={{
                 paddingInlineStart: 2,
                 borderLeft: '1px solid rgba(224, 224, 224, 1)',
-                height: '100%',
                 minHeight: '100%',
-                maxHeight: '800px',
                 display: 'flex',
                 flexDirection: 'column',
-                overflow: 'auto',
             }}
         >
             <SectionTitle sx={{ display: 'flex', alignItems: 'center' }}>
@@ -194,8 +191,6 @@ const QuickLinkContainer = ({ locale, initialViewProps = { opacity: 0 } }) => {
                                 <Box
                                     sx={{
                                         paddingInlineEnd: 2,
-                                        maxHeight: 500,
-                                        overflow: 'auto',
                                     }}
                                 >
                                     <Stack

@@ -4,7 +4,6 @@ const { resolve, join } = require('path');
 const webpack = require('webpack');
 const TerserPlugin = require('terser-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
 const chalk = require('chalk');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
@@ -97,7 +96,12 @@ const webpackConfig = {
     output: {
         path: resolve(__dirname, './dist/', config.basePath),
         filename: `frontend-js/${currentCommitHash}/[name]-[contenthash].min.js`,
+        cssFilename: `frontend-css/${currentCommitHash}/[name]-[contenthash].min.css`,
+        cssChunkFilename: `frontend-css/${currentCommitHash}/[name]-[contenthash].min.css`,
         publicPath: config.basePath ? `/${config.basePath}${config.publicPath}` : config.publicPath,
+    },
+    experiments: {
+        css: true,
     },
     devServer: {
         compress: true,
@@ -126,8 +130,9 @@ const webpackConfig = {
                 },
             },
             {
-                test: /\.scss/,
-                use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+                test: /\.scss$/i,
+                type: 'css/auto',
+                use: ['sass-loader'],
             },
             {
                 test: /\.(png|jp(e*)g|svg|gif)$/,
@@ -165,10 +170,6 @@ const webpackConfig = {
             )} (It took :elapsed seconds to build)\n`,
             clear: false,
         }),
-        new MiniCssExtractPlugin({
-            filename: `frontend-css/${currentCommitHash}/[name]-[contenthash].min.css`,
-        }),
-
         // plugin for passing in data to the js, like what NODE_ENV we are in.
         new webpack.DefinePlugin({
             __DEVELOPMENT__: !process.env.CI_BRANCH, // always production build on CI
@@ -240,6 +241,9 @@ const webpackConfig = {
         ],
     },
     resolve: {
+        alias: {
+            '~': resolve(__dirname),
+        },
         descriptionFiles: ['package.json'],
         enforceExtension: false,
         extensions: ['.jsx', '.js', '.ts', '.tsx', '.json'],

@@ -147,7 +147,7 @@ export const optionDoubleRowRender = (props, option) => {
                                 variant="outlined"
                                 color="primary"
                                 label={binding.replace(':', '').replace('_', ' ')}
-                                size="small"
+                                size="medium"
                             />
                         ))}
                     </Stack>
@@ -219,7 +219,7 @@ const SystemAlertStatusCell = ({ params, isActionable, color, ariaLabel, onViewD
             data-testid={`alert-status-${params.id}`}
             label={params.formattedValue}
             variant="filled"
-            size="small"
+            size="medium"
             color={color}
             {...(isActionable && {
                 tabIndex,

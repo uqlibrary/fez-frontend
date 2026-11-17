@@ -103,9 +103,9 @@ export const AuthorDetailPanel = ({ rowData, locale, isEditing, setEditing, onCh
                     <Tooltip title={affiliationsLocale.editButton.tooltip}>
                         <span>
                             <IconButton
-                                aria-label="delete"
+                                aria-label={affiliationsLocale.editButton.tooltip}
                                 onClick={() => setEditing({ editing: !isEditing, aut_id: rowData.aut_id })}
-                                size={'small'}
+                                size={'medium'}
                                 id={`affiliationEditBtn-${rowData.aut_id}`}
                                 data-testid={`affiliationEditBtn-${rowData.aut_id}`}
                             >
@@ -515,11 +515,10 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
                 },
                 muiTableBodyCellProps: {
                     sx: {
-                        justifyContent: 'flex-end',
                         '& > div': {
+                            justifyContent: 'space-evenly',
                             gap: 0,
                             flexDirection: 'row-reverse',
-                            justifyContent: 'center',
                             [`&:has(${MUI_SAVE_BUTTON_CLASS})`]: {
                                 '& button[aria-label=Save]': { order: 1 },
                                 '& button[aria-label=Cancel]': { order: 2 },
@@ -584,10 +583,45 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
                     {...props}
                 />
             ),
+            SearchIcon: props => (
+                <tableIcons.Search
+                    id={`${contributorEditorId}-list-search`}
+                    data-testid={`${contributorEditorId}-list-search`}
+                    color="secondary"
+                    {...props}
+                    fontSize="large"
+                />
+            ),
+            SearchOffIcon: props => (
+                <tableIcons.SearchOff
+                    id={`${contributorEditorId}-list-search-off`}
+                    data-testid={`${contributorEditorId}-list-search-off`}
+                    color="secondary"
+                    {...props}
+                    fontSize="large"
+                />
+            ),
+            ChevronLeftIcon: props => (
+                <tableIcons.ChevronLeft
+                    id={`${contributorEditorId}-prev-results`}
+                    data-testid={`${contributorEditorId}-prev-results`}
+                    fontSize="large"
+                    {...props}
+                />
+            ),
+            ChevronRightIcon: props => (
+                <tableIcons.ChevronRight
+                    id={`${contributorEditorId}-next-results`}
+                    data-testid={`${contributorEditorId}-next-results`}
+                    fontSize="large"
+                    {...props}
+                />
+            ),
         },
         muiExpandButtonProps: ({ table, row }) => ({
             id: `expandPanelIcon-${row.original.aut_id}`,
             ['data-testid']: `expandPanelIcon-${row.original.aut_id}`,
+            size: 'medium',
             sx: {
                 alignSelf: 'center',
                 display: !!!row.original.uqUsername || row.original.uqUsername === '' ? 'none' : 'inline-flex',
@@ -612,6 +646,7 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
             <Tooltip title={addButton}>
                 <span>
                     <IconButton
+                        aria-label={addButton}
                         id={`${contributorEditorId}-${addButton.toLowerCase().replace(/ /g, '-')}`}
                         data-testid={`${contributorEditorId}-${addButton.toLowerCase().replace(/ /g, '-')}`}
                         disabled={disabled || table.getState().creatingRow !== null}
@@ -639,6 +674,7 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
                     <Tooltip title={deleteHint}>
                         <span>
                             <IconButton
+                                aria-label={deleteHint}
                                 onClick={openDeleteConfirmModal(row.index)}
                                 disabled={
                                     disabled ||
@@ -649,7 +685,7 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
                                 }
                                 id={`${contributorEditorId}-list-row-${row.index}-delete`}
                                 data-testid={`${contributorEditorId}-list-row-${row.index}-delete`}
-                                size="small"
+                                size="medium"
                                 color="primary"
                             >
                                 <tableIcons.Delete />
@@ -659,6 +695,7 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
                     <Tooltip title={editHint}>
                         <span>
                             <IconButton
+                                aria-label={editHint}
                                 onClick={() => {
                                     setEditRow(row);
                                     table.setCreatingRow(null);
@@ -673,7 +710,7 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
                                 }
                                 id={`${contributorEditorId}-list-row-${row.index}-edit`}
                                 data-testid={`${contributorEditorId}-list-row-${row.index}-edit`}
-                                size="small"
+                                size="medium"
                                 color="primary"
                             >
                                 <tableIcons.Edit />
@@ -684,6 +721,7 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
                     <Tooltip title={moveDownHint}>
                         <span>
                             <IconButton
+                                aria-label={moveDownHint}
                                 onClick={() => {
                                     const index = row.index;
                                     /* istanbul ignore else */
@@ -705,7 +743,7 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
                                 }
                                 id={`${contributorEditorId}-list-row-${row.index}-move-down`}
                                 data-testid={`${contributorEditorId}-list-row-${row.index}-move-down`}
-                                size="small"
+                                size="medium"
                                 color="primary"
                             >
                                 <KeyboardArrowDown />
@@ -715,6 +753,7 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
                     <Tooltip title={moveUpHint}>
                         <span>
                             <IconButton
+                                aria-label={moveUpHint}
                                 onClick={() => {
                                     const index = row.index;
                                     /* istanbul ignore else */
@@ -736,7 +775,7 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
                                 }
                                 id={`${contributorEditorId}-list-row-${row.index}-move-up`}
                                 data-testid={`${contributorEditorId}-list-row-${row.index}-move-up`}
-                                size="small"
+                                size="medium"
                                 color="primary"
                             >
                                 <KeyboardArrowUp />

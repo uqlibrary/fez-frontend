@@ -320,7 +320,22 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
         rowCount: pagination.resultCount,
         autoResetPageIndex: false,
         enableKeyboardShortcuts: false,
-        displayColumnDefOptions: { 'mrt-row-actions': { minSize: 80 } },
+        displayColumnDefOptions: {
+            'mrt-row-actions': {
+                minSize: 100,
+                muiTableHeadCellProps: {
+                    align: 'center',
+                },
+                muiTableBodyCellProps: {
+                    sx: {
+                        '& > div': {
+                            justifyContent: 'space-between',
+                            gap: 0,
+                        },
+                    },
+                },
+            },
+        },
         initialState: {
             expanded: true,
             columnPinning: { left: ['mrt-row-select'], right: ['mrt-row-actions'] },
@@ -337,6 +352,8 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
         positionToolbarAlertBanner: isLoading ? 'none' : 'top',
         muiPaginationProps: {
             rowsPerPageOptions: tablePageSizeOptions,
+            showFirstButton: true,
+            showLastButton: true,
         },
         muiEditRowDialogProps: {
             scroll: 'paper',
@@ -370,6 +387,41 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
             sx: {
                 padding: 1,
             },
+        },
+
+        icons: {
+            FirstPageIcon: props => (
+                <tableIcons.FirstPage
+                    id={`manage-authors-first-page`}
+                    data-testid={`manage-authors-first-page`}
+                    fontSize="large"
+                    {...props}
+                />
+            ),
+            LastPageIcon: props => (
+                <tableIcons.LastPage
+                    id={`manage-authors-last-page`}
+                    data-testid={`manage-authors-last-page`}
+                    fontSize="large"
+                    {...props}
+                />
+            ),
+            ChevronLeftIcon: props => (
+                <tableIcons.ChevronLeft
+                    id={`manage-authors-prev-page`}
+                    data-testid={`manage-authors-prev-page`}
+                    fontSize="large"
+                    {...props}
+                />
+            ),
+            ChevronRightIcon: props => (
+                <tableIcons.ChevronRight
+                    id={`manage-authors-next-page`}
+                    data-testid={`manage-authors-next-page`}
+                    fontSize="large"
+                    {...props}
+                />
+            ),
         },
         muiTableBodyRowProps: ({ row }) => ({
             id: `authors-list-row-${row.index}`,
@@ -485,6 +537,7 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                     <Tooltip title={scopusIngestButtonTooltip}>
                         <span>
                             <IconButton
+                                aria-label={scopusIngestButtonTooltip}
                                 onClick={handleShowScopusIngestConfirmation(row.original.aut_id)}
                                 disabled={
                                     isCookieSet ||
@@ -514,6 +567,7 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                                     table.setEditingRow(row);
                                 }}
                                 disabled={isPendingDelete || !!isBusy || !!editingRow}
+                                aria-label={editButtonTooltip}
                                 id={`authors-list-row-${row.index}-${editButtonTooltip.toLowerCase().replace(/ /g, '-')}`}
                                 data-testid={`authors-list-row-${row.index}-${editButtonTooltip
                                     .toLowerCase()
@@ -528,6 +582,7 @@ export const ManageAuthorsList = ({ onBulkRowDelete, onRowAdd, onRowDelete, onRo
                             <IconButton
                                 onClick={openDeleteConfirmModal(row.index)}
                                 disabled={isPendingDelete || !!isBusy || !!editingRow}
+                                aria-label={deleteButtonTooltip}
                                 id={`authors-list-row-${row.index}-${deleteButtonTooltip.toLowerCase().replace(/ /g, '-')}`}
                                 data-testid={`authors-list-row-${row.index}-${deleteButtonTooltip
                                     .toLowerCase()

@@ -536,7 +536,7 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
                       >
                         <button
                           aria-label="Click to select page 1 of 8 result pages"
-                          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorPrimary paging-button css-MuiButtonBase-root-MuiButton-root"
+                          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorPrimary paging-button css-MuiButtonBase-root-MuiButton-root"
                           data-analyticsid="my-records-paging-top-select-page-1"
                           data-testid="my-records-paging-top-select-page-1"
                           id="my-records-paging-top-select-page-1"
@@ -547,7 +547,7 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
                         </button>
                         <button
                           aria-label="Click to select page 2 of 8 result pages"
-                          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
+                          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
                           data-analyticsid="my-records-paging-top-select-page-2"
                           data-testid="my-records-paging-top-select-page-2"
                           id="my-records-paging-top-select-page-2"
@@ -558,7 +558,7 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
                         </button>
                         <button
                           aria-label="Click to select page 3 of 8 result pages"
-                          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
+                          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
                           data-analyticsid="my-records-paging-top-select-page-3"
                           data-testid="my-records-paging-top-select-page-3"
                           id="my-records-paging-top-select-page-3"
@@ -569,7 +569,7 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
                         </button>
                         <button
                           aria-label="Click to select page 4 of 8 result pages"
-                          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
+                          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
                           data-analyticsid="my-records-paging-top-select-page-4"
                           data-testid="my-records-paging-top-select-page-4"
                           id="my-records-paging-top-select-page-4"
@@ -580,7 +580,7 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
                         </button>
                         <button
                           aria-label="Click to select page 5 of 8 result pages"
-                          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
+                          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
                           data-analyticsid="my-records-paging-top-select-page-5"
                           data-testid="my-records-paging-top-select-page-5"
                           id="my-records-paging-top-select-page-5"
@@ -592,7 +592,7 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
                         ...
                         <button
                           aria-label="Click to select page 8 of 8 result pages"
-                          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
+                          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
                           data-analyticsid="my-records-paging-top-select-page-8"
                           data-testid="my-records-paging-top-select-page-8"
                           id="my-records-paging-top-select-page-8"
@@ -726,10 +726,9 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
                                           rel="noopener noreferrer"
                                           tabindex="0"
                                           target="_blank"
-                                          title="Full citation in Google scholar will open in a new window"
                                         >
                                           <span
-                                            class="fez-icon google large"
+                                            class="fez-icon google xxlarge"
                                           />
                                         </a>
                                         <span
@@ -814,7 +813,7 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
                       >
                         <button
                           aria-label="Click to select page 1 of 8 result pages"
-                          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorPrimary paging-button css-MuiButtonBase-root-MuiButton-root"
+                          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorPrimary paging-button css-MuiButtonBase-root-MuiButton-root"
                           data-analyticsid="my-records-paging-bottom-select-page-1"
                           data-testid="my-records-paging-bottom-select-page-1"
                           id="my-records-paging-bottom-select-page-1"
@@ -825,7 +824,7 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
                         </button>
                         <button
                           aria-label="Click to select page 2 of 8 result pages"
-                          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
+                          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
                           data-analyticsid="my-records-paging-bottom-select-page-2"
                           data-testid="my-records-paging-bottom-select-page-2"
                           id="my-records-paging-bottom-select-page-2"
@@ -836,7 +835,7 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
                         </button>
                         <button
                           aria-label="Click to select page 3 of 8 result pages"
-                          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
+                          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
                           data-analyticsid="my-records-paging-bottom-select-page-3"
                           data-testid="my-records-paging-bottom-select-page-3"
                           id="my-records-paging-bottom-select-page-3"
@@ -847,7 +846,7 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
                         </button>
                         <button
                           aria-label="Click to select page 4 of 8 result pages"
-                          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
+                          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
                           data-analyticsid="my-records-paging-bottom-select-page-4"
                           data-testid="my-records-paging-bottom-select-page-4"
                           id="my-records-paging-bottom-select-page-4"
@@ -858,7 +857,7 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
                         </button>
                         <button
                           aria-label="Click to select page 5 of 8 result pages"
-                          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
+                          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
                           data-analyticsid="my-records-paging-bottom-select-page-5"
                           data-testid="my-records-paging-bottom-select-page-5"
                           id="my-records-paging-bottom-select-page-5"
@@ -870,7 +869,7 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
                         ...
                         <button
                           aria-label="Click to select page 8 of 8 result pages"
-                          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
+                          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
                           data-analyticsid="my-records-paging-bottom-select-page-8"
                           data-testid="my-records-paging-bottom-select-page-8"
                           id="my-records-paging-bottom-select-page-8"
@@ -1193,7 +1192,7 @@ exports[`MyRecords test renders list of publications with custom actions 1`] = `
                       >
                         <button
                           aria-label="Click to select page 1 of 8 result pages"
-                          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorPrimary paging-button css-MuiButtonBase-root-MuiButton-root"
+                          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorPrimary paging-button css-MuiButtonBase-root-MuiButton-root"
                           data-analyticsid="my-records-paging-top-select-page-1"
                           data-testid="my-records-paging-top-select-page-1"
                           id="my-records-paging-top-select-page-1"
@@ -1204,7 +1203,7 @@ exports[`MyRecords test renders list of publications with custom actions 1`] = `
                         </button>
                         <button
                           aria-label="Click to select page 2 of 8 result pages"
-                          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
+                          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
                           data-analyticsid="my-records-paging-top-select-page-2"
                           data-testid="my-records-paging-top-select-page-2"
                           id="my-records-paging-top-select-page-2"
@@ -1215,7 +1214,7 @@ exports[`MyRecords test renders list of publications with custom actions 1`] = `
                         </button>
                         <button
                           aria-label="Click to select page 3 of 8 result pages"
-                          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
+                          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
                           data-analyticsid="my-records-paging-top-select-page-3"
                           data-testid="my-records-paging-top-select-page-3"
                           id="my-records-paging-top-select-page-3"
@@ -1226,7 +1225,7 @@ exports[`MyRecords test renders list of publications with custom actions 1`] = `
                         </button>
                         <button
                           aria-label="Click to select page 4 of 8 result pages"
-                          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
+                          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
                           data-analyticsid="my-records-paging-top-select-page-4"
                           data-testid="my-records-paging-top-select-page-4"
                           id="my-records-paging-top-select-page-4"
@@ -1237,7 +1236,7 @@ exports[`MyRecords test renders list of publications with custom actions 1`] = `
                         </button>
                         <button
                           aria-label="Click to select page 5 of 8 result pages"
-                          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
+                          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
                           data-analyticsid="my-records-paging-top-select-page-5"
                           data-testid="my-records-paging-top-select-page-5"
                           id="my-records-paging-top-select-page-5"
@@ -1249,7 +1248,7 @@ exports[`MyRecords test renders list of publications with custom actions 1`] = `
                         ...
                         <button
                           aria-label="Click to select page 8 of 8 result pages"
-                          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
+                          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
                           data-analyticsid="my-records-paging-top-select-page-8"
                           data-testid="my-records-paging-top-select-page-8"
                           id="my-records-paging-top-select-page-8"
@@ -1383,10 +1382,9 @@ exports[`MyRecords test renders list of publications with custom actions 1`] = `
                                           rel="noopener noreferrer"
                                           tabindex="0"
                                           target="_blank"
-                                          title="Full citation in Google scholar will open in a new window"
                                         >
                                           <span
-                                            class="fez-icon google large"
+                                            class="fez-icon google xxlarge"
                                           />
                                         </a>
                                         <span
@@ -1471,7 +1469,7 @@ exports[`MyRecords test renders list of publications with custom actions 1`] = `
                       >
                         <button
                           aria-label="Click to select page 1 of 8 result pages"
-                          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorPrimary paging-button css-MuiButtonBase-root-MuiButton-root"
+                          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorPrimary paging-button css-MuiButtonBase-root-MuiButton-root"
                           data-analyticsid="my-records-paging-bottom-select-page-1"
                           data-testid="my-records-paging-bottom-select-page-1"
                           id="my-records-paging-bottom-select-page-1"
@@ -1482,7 +1480,7 @@ exports[`MyRecords test renders list of publications with custom actions 1`] = `
                         </button>
                         <button
                           aria-label="Click to select page 2 of 8 result pages"
-                          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
+                          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
                           data-analyticsid="my-records-paging-bottom-select-page-2"
                           data-testid="my-records-paging-bottom-select-page-2"
                           id="my-records-paging-bottom-select-page-2"
@@ -1493,7 +1491,7 @@ exports[`MyRecords test renders list of publications with custom actions 1`] = `
                         </button>
                         <button
                           aria-label="Click to select page 3 of 8 result pages"
-                          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
+                          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
                           data-analyticsid="my-records-paging-bottom-select-page-3"
                           data-testid="my-records-paging-bottom-select-page-3"
                           id="my-records-paging-bottom-select-page-3"
@@ -1504,7 +1502,7 @@ exports[`MyRecords test renders list of publications with custom actions 1`] = `
                         </button>
                         <button
                           aria-label="Click to select page 4 of 8 result pages"
-                          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
+                          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
                           data-analyticsid="my-records-paging-bottom-select-page-4"
                           data-testid="my-records-paging-bottom-select-page-4"
                           id="my-records-paging-bottom-select-page-4"
@@ -1515,7 +1513,7 @@ exports[`MyRecords test renders list of publications with custom actions 1`] = `
                         </button>
                         <button
                           aria-label="Click to select page 5 of 8 result pages"
-                          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
+                          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
                           data-analyticsid="my-records-paging-bottom-select-page-5"
                           data-testid="my-records-paging-bottom-select-page-5"
                           id="my-records-paging-bottom-select-page-5"
@@ -1527,7 +1525,7 @@ exports[`MyRecords test renders list of publications with custom actions 1`] = `
                         ...
                         <button
                           aria-label="Click to select page 8 of 8 result pages"
-                          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
+                          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
                           data-analyticsid="my-records-paging-bottom-select-page-8"
                           data-testid="my-records-paging-bottom-select-page-8"
                           id="my-records-paging-bottom-select-page-8"
@@ -1850,7 +1848,7 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
                       >
                         <button
                           aria-label="Click to select page 1 of 8 result pages"
-                          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorPrimary paging-button css-MuiButtonBase-root-MuiButton-root"
+                          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorPrimary paging-button css-MuiButtonBase-root-MuiButton-root"
                           data-analyticsid="my-records-paging-top-select-page-1"
                           data-testid="my-records-paging-top-select-page-1"
                           id="my-records-paging-top-select-page-1"
@@ -1861,7 +1859,7 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
                         </button>
                         <button
                           aria-label="Click to select page 2 of 8 result pages"
-                          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
+                          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
                           data-analyticsid="my-records-paging-top-select-page-2"
                           data-testid="my-records-paging-top-select-page-2"
                           id="my-records-paging-top-select-page-2"
@@ -1872,7 +1870,7 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
                         </button>
                         <button
                           aria-label="Click to select page 3 of 8 result pages"
-                          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
+                          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
                           data-analyticsid="my-records-paging-top-select-page-3"
                           data-testid="my-records-paging-top-select-page-3"
                           id="my-records-paging-top-select-page-3"
@@ -1883,7 +1881,7 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
                         </button>
                         <button
                           aria-label="Click to select page 4 of 8 result pages"
-                          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
+                          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
                           data-analyticsid="my-records-paging-top-select-page-4"
                           data-testid="my-records-paging-top-select-page-4"
                           id="my-records-paging-top-select-page-4"
@@ -1894,7 +1892,7 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
                         </button>
                         <button
                           aria-label="Click to select page 5 of 8 result pages"
-                          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
+                          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
                           data-analyticsid="my-records-paging-top-select-page-5"
                           data-testid="my-records-paging-top-select-page-5"
                           id="my-records-paging-top-select-page-5"
@@ -1906,7 +1904,7 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
                         ...
                         <button
                           aria-label="Click to select page 8 of 8 result pages"
-                          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
+                          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
                           data-analyticsid="my-records-paging-top-select-page-8"
                           data-testid="my-records-paging-top-select-page-8"
                           id="my-records-paging-top-select-page-8"
@@ -2040,10 +2038,9 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
                                           rel="noopener noreferrer"
                                           tabindex="0"
                                           target="_blank"
-                                          title="Full citation in Google scholar will open in a new window"
                                         >
                                           <span
-                                            class="fez-icon google large"
+                                            class="fez-icon google xxlarge"
                                           />
                                         </a>
                                         <span
@@ -2128,7 +2125,7 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
                       >
                         <button
                           aria-label="Click to select page 1 of 8 result pages"
-                          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorPrimary paging-button css-MuiButtonBase-root-MuiButton-root"
+                          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorPrimary paging-button css-MuiButtonBase-root-MuiButton-root"
                           data-analyticsid="my-records-paging-bottom-select-page-1"
                           data-testid="my-records-paging-bottom-select-page-1"
                           id="my-records-paging-bottom-select-page-1"
@@ -2139,7 +2136,7 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
                         </button>
                         <button
                           aria-label="Click to select page 2 of 8 result pages"
-                          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
+                          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
                           data-analyticsid="my-records-paging-bottom-select-page-2"
                           data-testid="my-records-paging-bottom-select-page-2"
                           id="my-records-paging-bottom-select-page-2"
@@ -2150,7 +2147,7 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
                         </button>
                         <button
                           aria-label="Click to select page 3 of 8 result pages"
-                          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
+                          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
                           data-analyticsid="my-records-paging-bottom-select-page-3"
                           data-testid="my-records-paging-bottom-select-page-3"
                           id="my-records-paging-bottom-select-page-3"
@@ -2161,7 +2158,7 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
                         </button>
                         <button
                           aria-label="Click to select page 4 of 8 result pages"
-                          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
+                          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
                           data-analyticsid="my-records-paging-bottom-select-page-4"
                           data-testid="my-records-paging-bottom-select-page-4"
                           id="my-records-paging-bottom-select-page-4"
@@ -2172,7 +2169,7 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
                         </button>
                         <button
                           aria-label="Click to select page 5 of 8 result pages"
-                          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
+                          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
                           data-analyticsid="my-records-paging-bottom-select-page-5"
                           data-testid="my-records-paging-bottom-select-page-5"
                           id="my-records-paging-bottom-select-page-5"
@@ -2184,7 +2181,7 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
                         ...
                         <button
                           aria-label="Click to select page 8 of 8 result pages"
-                          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
+                          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit MuiButton-root MuiButton-text MuiButton-textInherit MuiButton-sizeLarge MuiButton-textSizeLarge MuiButton-colorInherit paging-button css-MuiButtonBase-root-MuiButton-root"
                           data-analyticsid="my-records-paging-bottom-select-page-8"
                           data-testid="my-records-paging-bottom-select-page-8"
                           id="my-records-paging-bottom-select-page-8"
