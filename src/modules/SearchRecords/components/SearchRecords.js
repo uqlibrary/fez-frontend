@@ -253,7 +253,12 @@ const SearchRecords = ({ canUseExport = true, isAdvancedSearch, publicationsList
                         exportPublicationsLoading ||
                         (hasSearchParams && searchLoading) ||
                         (!!publicationsList && publicationsList.length > 0)) && (
-                        <Grid size={{ xs: 'grow', sm: 'grow', md: displayLookup === 'author_statistics' ? 12 : 9 }}>
+                        <Grid
+                            size={{ xs: 'grow', sm: 'grow', md: displayLookup === 'author_statistics' ? 12 : 9 }}
+                            // A named region, so screen reader users can jump straight to the results (D in NVDA)
+                            component="section"
+                            aria-label={txt.resultsAriaLabel}
+                        >
                             <StandardCard noHeader standardCardId="search-records-results">
                                 <Grid container spacing={2} justifyContent="space-between">
                                     {displayLookup !== 'author_statistics' && (
