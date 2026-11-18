@@ -51,7 +51,11 @@ export const ChangeDisplayTypeForm = ({ onCancel, recordsSelected }) => {
         <form data-testid="change-display-type-form" id="change-display-type-form">
             <Grid container spacing={2}>
                 <Grid size={12}>
-                    <Alert alertId="alert-info-change-display-type" announce="off" {...txt.changeDisplayTypeForm.alert} />
+                    <Alert
+                        alertId="alert-info-change-display-type"
+                        announce="off"
+                        {...txt.changeDisplayTypeForm.alert}
+                    />
                 </Grid>
                 <Grid size={12}>
                     <Field
