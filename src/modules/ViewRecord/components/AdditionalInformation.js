@@ -189,7 +189,7 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
                     ))}
                 {licenseLink && (
                     <ExternalLink href={licenseLink.url} openInNewIcon={!!uqLicenseLinkText} id="rek-license">
-                        {uqLicenseLinkText || <div className={`fez-icon license ${licenseLink.className} xxlarge`} />}
+                        {uqLicenseLinkText || <div className={`fez-icon license ${licenseLink.className}`} />}
                     </ExternalLink>
                 )}
             </span>
@@ -201,7 +201,7 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
             <span>
                 <div
                     data-testid="fez-icon-cilabel"
-                    className={'fez-icon_cilabel xxlarge'}
+                    className={'fez-icon_cilabel'}
                     style={{
                         backgroundImage: `url(${locale.viewRecord.culturalNoticeAI.imagePath})`,
                         width: 100,
