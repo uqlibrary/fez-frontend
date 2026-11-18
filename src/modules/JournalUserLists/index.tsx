@@ -26,7 +26,7 @@ const JournalUserLists = () => {
             <Grid container spacing={3}>
                 {error && (
                     <Grid size={12}>
-                        <Alert alertId="journal-user-lists-error" type="error" {...error} />
+                        <Alert alertId="journal-user-lists-error" type="error" announce="off" {...error} />
                     </Grid>
                 )}
                 <Grid size="grow">

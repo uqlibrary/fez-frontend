@@ -61,6 +61,7 @@ export const CopyToOrRemoveFromCollectionForm = ({ isRemoveFrom, onCancel, recor
                 <Grid size={12}>
                     <Alert
                         alertId={`alert-info-${idText}-collection`}
+                        announce="off"
                         {...txt.copyToOrRemoveFromCollectionForm.alert(isRemoveFrom)}
                     />
                 </Grid>
@@ -76,6 +77,7 @@ export const CopyToOrRemoveFromCollectionForm = ({ isRemoveFrom, onCancel, recor
                     <Grid size={12}>
                         <Alert
                             alertId={`alert-warning-${idText}-collection`}
+                            announce="off"
                             {...txt.copyToOrRemoveFromCollectionForm.warningAlert}
                         />
                     </Grid>

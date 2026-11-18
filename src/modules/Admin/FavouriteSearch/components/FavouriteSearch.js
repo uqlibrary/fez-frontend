@@ -49,7 +49,7 @@ export const FavouriteSearch = () => {
                 <Grid container spacing={2}>
                     {!!existingAliasCheckError && (
                         <Grid size={12}>
-                            <Alert {...existingAliasCheckError} />
+                            <Alert {...existingAliasCheckError} announce="off" />
                         </Grid>
                     )}
                     <Grid size={12}>

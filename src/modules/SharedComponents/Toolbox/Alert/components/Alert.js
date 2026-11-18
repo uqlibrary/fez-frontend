@@ -148,7 +148,7 @@ export const renderIcon = type => {
     }
 };
 
-export const ALERTABLE_TYPES = ['error', 'error_outline', 'warning'];
+export const ASSERTIVE_TYPES = ['error', 'error_outline', 'warning', 'done'];
 
 export const Alert = ({
     action,
@@ -173,7 +173,7 @@ export const Alert = ({
     // announce: 'auto' picks the live region role from the alert type, 'assertive' forces role="alert" (e.g. results
     // shown after a user action) and 'off' renders static content (e.g. alerts present on page load) with no role
     const liveRole = {
-        auto: ALERTABLE_TYPES.includes(effectiveType) ? 'alert' : 'status',
+        auto: ASSERTIVE_TYPES.includes(effectiveType) ? 'alert' : 'status',
         assertive: 'alert',
         off: undefined,
     }[announce];

@@ -753,7 +753,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
                     >
                       <span
-                        role="status"
+                        role="alert"
                       >
                         <b>
                           Success - 

@@ -502,9 +502,7 @@ exports[`Application component Should display mobile correctly 1`] = `
                   <div
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
                   >
-                    <span
-                      role="status"
-                    >
+                    <span>
                       <b>
                         You are not logged in - 
                       </b>
@@ -1095,9 +1093,7 @@ exports[`Application component should render alert if user is not fez author 1`]
                   <div
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
                   >
-                    <span
-                      role="status"
-                    >
+                    <span>
                       <b>
                         You are not registered in UQ eSpace as an author - 
                       </b>

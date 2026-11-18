@@ -220,13 +220,13 @@ describe('Alert', () => {
     });
 
     describe('live region announcements', () => {
-        it.each(['error', 'error_outline', 'warning'])('should use role="alert" for %s type', type => {
+        it.each(['error', 'error_outline', 'warning', 'success', 'done'])('should use role="alert" for %s type', type => {
             const { getByRole, queryByRole } = setup({ type });
             expect(getByRole('alert')).toBeInTheDocument();
             expect(queryByRole('status')).not.toBeInTheDocument();
         });
 
-        it.each(['info', 'info_outline', 'help', 'help_outline', 'success', 'done'])(
+        it.each(['info', 'info_outline', 'help', 'help_outline'])(
             'should use role="status" for %s type',
             type => {
                 const { getByRole, queryByRole } = setup({ type });

@@ -165,7 +165,7 @@ export const ViewJournal = () => {
         } else {
             return (
                 <StandardPage>
-                    <Alert {...txt.loadFailureAlert} />
+                    <Alert {...txt.loadFailureAlert} announce="off" />
                 </StandardPage>
             );
         }

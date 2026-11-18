@@ -13,7 +13,7 @@ const AppAlert = () => {
     return (
         <div className="dashAlert">
             <div className="layout-card">
-                <Alert {...appAlert} />
+                <Alert {...appAlert} announce="off" />
             </div>
         </div>
     );
