@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import React, { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import JournalAdvisoryStatementTypeField from '../../SharedComponents/LookupFields/containers/JournalAdvisoryStatementTypeField';

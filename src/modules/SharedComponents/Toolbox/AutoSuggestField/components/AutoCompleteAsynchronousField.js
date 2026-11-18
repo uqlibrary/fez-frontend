@@ -211,9 +211,7 @@ export const AutoCompleteAsynchronousField = React.forwardRef(
                                     key={
                                         option.id ??
                                         option.key ??
-                                        // eslint-disable-next-line react/prop-types
                                         props.id ??
-                                        // eslint-disable-next-line react/prop-types
                                         /* istanbul ignore next */ props.key ??
                                         /* istanbul ignore next */ ''
                                     }
