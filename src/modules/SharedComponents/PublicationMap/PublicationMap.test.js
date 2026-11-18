@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
 import { render as defaultRender, act } from 'test-utils';
 import PublicationMap from './PublicationMap';

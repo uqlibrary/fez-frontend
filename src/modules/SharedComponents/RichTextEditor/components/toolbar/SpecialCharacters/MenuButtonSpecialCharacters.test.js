@@ -10,7 +10,6 @@ const mockEditor = {
 };
 
 jest.mock('mui-tiptap', () => ({
-    // eslint-disable-next-line react/prop-types
     MenuButton: ({ onClick, IconComponent }) => (
         <button data-testid="special-character-button" onClick={onClick}>
             <IconComponent />

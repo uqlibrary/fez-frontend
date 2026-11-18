@@ -108,7 +108,6 @@ describe('AutoCompleteAsynchronousField component', () => {
     });
 
     it('should render given option template for options', async () => {
-        // eslint-disable-next-line react/prop-types
         const OptionTemplate = ({ option, index }) => <div data-testid={`option-template-${index}`}>{option}</div>;
 
         const { getByTestId, getByRole, rerender } = setup({});
@@ -162,7 +161,6 @@ describe('AutoCompleteAsynchronousField component', () => {
     });
 
     it('should not remove provided suggestions on close when clearSuggestionsOnClose is set to false', async () => {
-        // eslint-disable-next-line react/prop-types
         const OptionTemplate = ({ option }) => <div data-testid="option-template">{option}</div>;
 
         const { getByTestId } = setup({

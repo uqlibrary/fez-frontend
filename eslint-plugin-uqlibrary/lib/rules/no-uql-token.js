@@ -1,40 +1,39 @@
 const MOCK_UQL_TOKEN = 'abc123';
-const ERROR_MESSAGE_CONDITIONAL = 'Please remove UQL token from conditional statement';
-const ERROR_MESSAGE_DIRECT_ASSIGNMENT = 'Please get UQL token from Cookies';
 
-const isLeftNodeApiToken = node => {
-    if (
-        node.left.hasOwnProperty('object') &&
-        node.left.object.hasOwnProperty('object') &&
-        node.left.object.object.hasOwnProperty('object') &&
-        node.left.object.object.object.hasOwnProperty('property')
-    ) {
-        return (
-            node.left.object.object.object.property.name === 'defaults' &&
-            node.left.object.object.property.name === 'headers' &&
-            node.left.object.property.name === 'common' &&
-            node.left.property.name === 'TOKEN_NAME'
-        );
-    }
-    return false;
-};
+const isProperty = (node, name) =>
+    node?.type === 'MemberExpression' && node.property.type === 'Identifier' && node.property.name === name;
 
-const isMockToken = node => {
-    return node.right.type === 'Literal' && node.right.value === MOCK_UQL_TOKEN;
-};
+const isLeftNodeApiToken = node =>
+    isProperty(node, 'TOKEN_NAME') &&
+    isProperty(node.object, 'common') &&
+    isProperty(node.object.object, 'headers') &&
+    isProperty(node.object.object.object, 'defaults');
+
+const isMockToken = node => node.type === 'Literal' && node.value === MOCK_UQL_TOKEN;
 
 module.exports = {
+    meta: {
+        type: 'problem',
+        docs: {
+            description: 'Prevent direct UQL token assignments',
+        },
+        schema: [],
+        messages: {
+            conditional: 'Please remove UQL token from conditional statement',
+            directAssignment: 'Please get UQL token from Cookies',
+        },
+    },
     create(context) {
         return {
             AssignmentExpression: node => {
-                if (isLeftNodeApiToken(node)) {
+                if (isLeftNodeApiToken(node.left)) {
                     if (
                         node.right.type === 'LogicalExpression' &&
                         (node.right.left.type === 'Literal' || node.right.right.type === 'Literal')
                     ) {
-                        context.report(node, ERROR_MESSAGE_CONDITIONAL);
-                    } else if (node.right.type === 'Literal' && !isMockToken(node)) {
-                        context.report(node, ERROR_MESSAGE_DIRECT_ASSIGNMENT);
+                        context.report({ node, messageId: 'conditional' });
+                    } else if (node.right.type === 'Literal' && !isMockToken(node.right)) {
+                        context.report({ node, messageId: 'directAssignment' });
                     }
                 }
             },
