@@ -61,7 +61,7 @@ export const FindRecords = () => {
                         <Field
                             control={control}
                             component={TextField}
-                            autoComplete={'search'}
+                            autoComplete={'on'}
                             aria-describedby="search-description"
                             color={'primary'}
                             required

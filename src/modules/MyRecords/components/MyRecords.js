@@ -240,7 +240,12 @@ export default class MyRecords extends PureComponent {
                         // results to display or loading if user is filtering/paging
                         this.state.hasPublications &&
                             (this.props.loadingPublicationsList || this.props.publicationsList.length > 0) && (
-                                <Grid size={{ xs: 12, md: 9 }}>
+                                <Grid
+                                    size={{ xs: 12, md: 9 }}
+                                    // A named region, so screen reader users can jump straight to the results (D in NVDA)
+                                    component="section"
+                                    aria-label={locale.components.resultsList.ariaLabel}
+                                >
                                     <StandardCard
                                         {...(txt?.help ? { title: txt.cardTitle, help: txt.help } : { noHeader: true })}
                                     >

@@ -2242,6 +2242,10 @@ export default {
             pageButtonAriaLabel: 'Click to select page [pageNumber] of [totalPages] result pages',
             firstLastSeparator: '...',
         },
+        // Name of the results region on list pages (My works, Claim possible works and others)
+        resultsList: {
+            ariaLabel: 'Results',
+        },
         sorting: {
             pageSize: 'Works per page',
             sortLabel: 'Sort results by',
@@ -4569,6 +4573,7 @@ export default {
             },
         },
         searchJournals: {
+            resultsAriaLabel: 'Journal search results',
             snackbar: {
                 message: 'Search results updated',
             },

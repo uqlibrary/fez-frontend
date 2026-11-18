@@ -136,7 +136,7 @@ export const SimpleSearchComponent = ({
                                 <TextField
                                     textFieldId="simple-search"
                                     type="search"
-                                    autoComplete={'search'}
+                                    autoComplete={'on'}
                                     fullWidth
                                     autoFocus={autoFocus}
                                     label={''}

@@ -146,7 +146,7 @@ exports[`AdvancedSearchComponent should render with default props 1`] = `
                     >
                       <input
                         aria-invalid="false"
-                        autocomplete="search"
+                        autocomplete="on"
                         class="MuiInputBase-input MuiInput-input Mui-disabled css-MuiInputBase-input-MuiInput-input"
                         data-analyticsid="initial-input"
                         data-testid="initial-input"

@@ -103,7 +103,7 @@ exports[`Application component Should display mobile correctly 1`] = `
                       <input
                         aria-invalid="false"
                         aria-label=""
-                        autocomplete="search"
+                        autocomplete="on"
                         class="MuiInputBase-input MuiInput-input MuiInputBase-inputTypeSearch css-MuiInputBase-input-MuiInput-input"
                         data-analyticsid="simple-search-input"
                         data-testid="simple-search-input"
@@ -943,7 +943,7 @@ exports[`Application component should render alert if user is not fez author 1`]
                       <input
                         aria-invalid="false"
                         aria-label=""
-                        autocomplete="search"
+                        autocomplete="on"
                         class="MuiInputBase-input MuiInput-input MuiInputBase-inputTypeSearch css-MuiInputBase-input-MuiInput-input"
                         data-analyticsid="simple-search-input"
                         data-testid="simple-search-input"
@@ -1530,7 +1530,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                       <input
                         aria-invalid="false"
                         aria-label=""
-                        autocomplete="search"
+                        autocomplete="on"
                         class="MuiInputBase-input MuiInput-input MuiInputBase-inputTypeSearch css-MuiInputBase-input-MuiInput-input"
                         data-analyticsid="simple-search-input"
                         data-testid="simple-search-input"
@@ -2053,7 +2053,7 @@ exports[`Application component should render app for account with fez author wit
                       <input
                         aria-invalid="false"
                         aria-label=""
-                        autocomplete="search"
+                        autocomplete="on"
                         class="MuiInputBase-input MuiInput-input MuiInputBase-inputTypeSearch css-MuiInputBase-input-MuiInput-input"
                         data-analyticsid="simple-search-input"
                         data-testid="simple-search-input"
@@ -2576,7 +2576,7 @@ exports[`Application component should render application with routing for the us
                       <input
                         aria-invalid="false"
                         aria-label=""
-                        autocomplete="search"
+                        autocomplete="on"
                         class="MuiInputBase-input MuiInput-input MuiInputBase-inputTypeSearch css-MuiInputBase-input-MuiInput-input"
                         data-analyticsid="simple-search-input"
                         data-testid="simple-search-input"
@@ -2886,7 +2886,7 @@ exports[`Application component should render for anon user 1`] = `
                       <input
                         aria-invalid="false"
                         aria-label=""
-                        autocomplete="search"
+                        autocomplete="on"
                         class="MuiInputBase-input MuiInput-input MuiInputBase-inputTypeSearch css-MuiInputBase-input-MuiInput-input"
                         data-analyticsid="simple-search-input"
                         data-testid="simple-search-input"
