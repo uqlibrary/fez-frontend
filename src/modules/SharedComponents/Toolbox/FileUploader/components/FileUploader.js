@@ -413,7 +413,7 @@ export class FileUploader extends PureComponent {
                 )}
                 {errorMessage.length > 0 && (
                     <Grid size={12}>
-                        <Alert title={errorTitle} message={errorMessage} type="error"  />
+                        <Alert title={errorTitle} message={errorMessage} type="error" />
                     </Grid>
                 )}
                 {filesInQueue.length > 0 && (
