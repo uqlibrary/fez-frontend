@@ -104,6 +104,8 @@ export class ScaleOfSignificanceListEditor extends Component {
         }
 
         if (Object.keys(diff(this.props.scaleOfSignificance, prevProps.scaleOfSignificance)).length > 0) {
+            // TODO: Refactor to avoid calling setState inside componentDidUpdate.
+            // eslint-disable-next-line @eslint-react/no-set-state-in-component-did-update
             this.setState({
                 itemList: [...this.props.scaleOfSignificance],
             });

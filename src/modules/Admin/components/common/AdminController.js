@@ -11,7 +11,6 @@ import { Controller as Base } from 'modules/SharedComponents/Toolbox/ReactHookFo
  * @return {Element}
  * @constructor
  */
-// eslint-disable-next-line react/prop-types
 const Controller = ({ render, ...props }) => {
     return (
         <Base

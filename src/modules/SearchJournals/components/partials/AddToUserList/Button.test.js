@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
 import { render as defaultRender, userEvent, act } from 'test-utils';
 import { useDispatch, useSelector } from 'react-redux';
