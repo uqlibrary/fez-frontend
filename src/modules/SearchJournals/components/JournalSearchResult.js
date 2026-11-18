@@ -109,7 +109,12 @@ export const JournalSearchResult = ({ onSearch, onSearchAll, browseAllJournals =
 
     return (
         <Grid container spacing={2} id={`${id}-container`} data-testid={`${id}-container`}>
-            <Grid size={{ xs: 'grow', sm: 'grow', md: 9 }}>
+            <Grid
+                size={{ xs: 'grow', sm: 'grow', md: 9 }}
+                // A named region, so screen reader users can jump straight to the results (D in NVDA)
+                component="section"
+                aria-label={txt.resultsAriaLabel}
+            >
                 <StandardCard noHeader>
                     <Grid container spacing={2}>
                         {!!journalsListLoading && (

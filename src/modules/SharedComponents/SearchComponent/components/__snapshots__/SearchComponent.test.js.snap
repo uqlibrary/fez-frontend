@@ -541,7 +541,7 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
                     >
                       <input
                         aria-invalid="false"
-                        autocomplete="search"
+                        autocomplete="on"
                         class="MuiInputBase-input MuiInput-input Mui-disabled css-MuiInputBase-input-MuiInput-input"
                         data-analyticsid="initial-input"
                         data-testid="initial-input"
@@ -994,7 +994,7 @@ exports[`SearchComponent should render in advanced search and take in considerat
                     >
                       <input
                         aria-invalid="false"
-                        autocomplete="search"
+                        autocomplete="on"
                         class="MuiInputBase-input MuiInput-input Mui-disabled css-MuiInputBase-input-MuiInput-input"
                         data-analyticsid="initial-input"
                         data-testid="initial-input"
@@ -1347,7 +1347,7 @@ exports[`SearchComponent should render simple search even if it says is advanced
             <input
               aria-invalid="false"
               aria-label=""
-              autocomplete="search"
+              autocomplete="on"
               class="MuiInputBase-input MuiInput-input MuiInputBase-inputTypeSearch css-MuiInputBase-input-MuiInput-input"
               data-analyticsid="simple-search-input"
               data-testid="simple-search-input"
@@ -1411,7 +1411,7 @@ exports[`SearchComponent should render with a class "header" for use in AppBar 1
             <input
               aria-invalid="false"
               aria-label=""
-              autocomplete="search"
+              autocomplete="on"
               class="MuiInputBase-input MuiInput-input MuiInputBase-inputTypeSearch css-MuiInputBase-input-MuiInput-input"
               data-analyticsid="simple-search-input"
               data-testid="simple-search-input"
@@ -1598,7 +1598,7 @@ exports[`SearchComponent should reset advanced search 1`] = `
                     >
                       <input
                         aria-invalid="false"
-                        autocomplete="search"
+                        autocomplete="on"
                         class="MuiInputBase-input MuiInput-input Mui-disabled css-MuiInputBase-input-MuiInput-input"
                         data-analyticsid="initial-input"
                         data-testid="initial-input"
@@ -2126,7 +2126,7 @@ exports[`SearchComponent should toggle open access for advanced search 1`] = `
                     >
                       <input
                         aria-invalid="false"
-                        autocomplete="search"
+                        autocomplete="on"
                         class="MuiInputBase-input MuiInput-input Mui-disabled css-MuiInputBase-input-MuiInput-input"
                         data-analyticsid="initial-input"
                         data-testid="initial-input"
@@ -2680,7 +2680,7 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
                     >
                       <input
                         aria-invalid="false"
-                        autocomplete="search"
+                        autocomplete="on"
                         class="MuiInputBase-input MuiInput-input css-MuiInputBase-input-MuiInput-input"
                         data-analyticsid="any-field-input"
                         data-testid="any-field-input"
@@ -3157,7 +3157,7 @@ exports[`SearchComponent should toggle to advanced search 1`] = `
                     >
                       <input
                         aria-invalid="false"
-                        autocomplete="search"
+                        autocomplete="on"
                         class="MuiInputBase-input MuiInput-input Mui-disabled css-MuiInputBase-input-MuiInput-input"
                         data-analyticsid="initial-input"
                         data-testid="initial-input"
@@ -3688,7 +3688,7 @@ exports[`SearchComponent should update advanced search row on search text change
                     >
                       <input
                         aria-invalid="false"
-                        autocomplete="search"
+                        autocomplete="on"
                         class="MuiInputBase-input MuiInput-input css-MuiInputBase-input-MuiInput-input"
                         data-analyticsid="any-field-input"
                         data-testid="any-field-input"
@@ -4165,7 +4165,7 @@ exports[`SearchComponent should update date range filter 1`] = `
                     >
                       <input
                         aria-invalid="false"
-                        autocomplete="search"
+                        autocomplete="on"
                         class="MuiInputBase-input MuiInput-input Mui-disabled css-MuiInputBase-input-MuiInput-input"
                         data-analyticsid="initial-input"
                         data-testid="initial-input"
@@ -4907,7 +4907,7 @@ exports[`SearchComponent should update date range filter 2`] = `
                     >
                       <input
                         aria-invalid="false"
-                        autocomplete="search"
+                        autocomplete="on"
                         class="MuiInputBase-input MuiInput-input Mui-disabled css-MuiInputBase-input-MuiInput-input"
                         data-analyticsid="initial-input"
                         data-testid="initial-input"

@@ -56,6 +56,33 @@ test.describe('Keyboard and screen reader navigation', () => {
         expect(order.indexOf('Refine results')).toBeGreaterThan(order.indexOf('Search results'));
     });
 
+    test('list pages put their results in a named region, before the filters', async ({ page }) => {
+        const listPages: [string, string][] = [
+            ['/records/mine', 'Results'],
+            ['/data-collections/mine', 'Results'],
+            ['/records/incomplete', 'Results'],
+            ['/records/my-open-access', 'Results'],
+            ['/records/possible', 'Results'],
+            [
+                '/journals/search/?keywords%5BKeyword-bio%5D%5Btype%5D=Keyword&keywords%5BKeyword-bio%5D%5Btext%5D=bio',
+                'Journal search results',
+            ],
+        ];
+        for (const [url, name] of listPages) {
+            await page.goto(`${url}${url.includes('?') ? '&' : '?'}user=uqresearcher`);
+            await expect(page.getByRole('region', { name }), url).toBeVisible();
+            // Landmark order, as NVDA's D key moves through them: the results come before the filters.
+            const order = await page.evaluate(() =>
+                Array.from(document.querySelectorAll('section[aria-label], nav[aria-label]')).map(
+                    el => el.getAttribute('aria-label') || '',
+                ),
+            );
+            if (order.includes('Refine results')) {
+                expect(order.indexOf('Refine results'), url).toBeGreaterThan(order.indexOf(name));
+            }
+        }
+    });
+
     test('pages have their own browser title', async ({ page }) => {
         for (const [url, title] of [
             ['/about', /^About/],

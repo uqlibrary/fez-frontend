@@ -157,6 +157,15 @@ describe('Search Journals Results component', () => {
         expect(pageSize).toEqual(50);
     });
 
+    it('should put the results in a named region screen readers can jump to', () => {
+        const initialEntries = [
+            '/?keywords%5BTitle-Astrobiology%5D%5Btype%5D=Title&keywords%5BTitle-Astrobiology%5D%5Btext%5D=Astrobiology&keywords%5BTitle-Astrobiology%5D%5Bid%5D=Title-Astrobiology',
+        ];
+        const { getByRole } = setup({ state: { journalsListLoaded: true, journalsList: mockData }, initialEntries });
+        const region = getByRole('region', { name: 'Journal search results' });
+        expect(region).toContainElement(getByRole('checkbox', { name: 'Select Astrobiology' }));
+    });
+
     it('should update the URL when the Journal comparison button is clicked', () => {
         const initialEntries = [
             '/?keywords%5BTitle-Astrobiology%5D%5Btype%5D=Title&keywords%5BTitle-Astrobiology%5D%5Btext%5D=Astrobiology&keywords%5BTitle-Astrobiology%5D%5Bid%5D=Title-Astrobiology',

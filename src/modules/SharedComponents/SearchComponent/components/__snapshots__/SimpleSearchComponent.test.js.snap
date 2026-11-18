@@ -181,7 +181,7 @@ exports[`SimpleSearchComponent should render with a class "header" for use in Ap
             <input
               aria-invalid="false"
               aria-label=""
-              autocomplete="search"
+              autocomplete="on"
               class="MuiInputBase-input MuiInput-input MuiInputBase-inputTypeSearch css-MuiInputBase-input-MuiInput-input"
               data-analyticsid="simple-search-input"
               data-testid="simple-search-input"
@@ -418,7 +418,7 @@ exports[`SimpleSearchComponent should show prefix icon when in header 1`] = `
             <input
               aria-invalid="false"
               aria-label=""
-              autocomplete="search"
+              autocomplete="on"
               class="MuiInputBase-input MuiInput-input MuiInputBase-inputTypeSearch css-MuiInputBase-input-MuiInput-input"
               data-analyticsid="simple-search-input"
               data-testid="simple-search-input"
