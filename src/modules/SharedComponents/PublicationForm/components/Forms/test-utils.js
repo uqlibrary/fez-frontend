@@ -9,7 +9,6 @@ export const ControlledFieldWithReduxStore = (Form, props) => {
             formState: { isSubmitting },
         } = useForm();
 
-        // eslint-disable-next-line react/prop-types
         return <Form {...{ control, isSubmitting, ...props, values: props?.values || {} }} />;
     };
 

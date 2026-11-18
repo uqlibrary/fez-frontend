@@ -5,15 +5,11 @@ import Controller from './Controller';
 import { fireEvent, waitFor } from 'test-utils';
 import { TextField } from '../../TextField';
 
-// eslint-disable-next-line react/prop-types
 const InputComponent = ({ field, fieldState, formState }) => (
     <div>
         <TextField {...field} />
-        {/* eslint-disable-next-line react/prop-types */}
         {fieldState.error?.message && <span data-testid="error">{fieldState.error.message}</span>}
-        {/* eslint-disable-next-line react/prop-types */}
         {field.state?.error && <span data-testid="meta-error">state: {field.state.error}</span>}
-        {/* eslint-disable-next-line react/prop-types */}
         {formState.errors?.[field.name]?.message && formState.isSubmitted && (
             <span data-testid="form-state">Form has errors</span>
         )}
@@ -25,9 +21,8 @@ const setup = (props = {}, render = defaultRender) => {
         const { control, handleSubmit, setFocus } = useForm();
 
         useEffect(() => {
-            // eslint-disable-next-line react/prop-types
             if (props?.focusInputOnRender) setFocus('test-text-field');
-        }, [props]);
+        }, [setFocus]);
 
         return (
             <form onSubmit={handleSubmit(jest.fn())}>

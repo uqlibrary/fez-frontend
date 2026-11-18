@@ -9,7 +9,6 @@ jest.mock('../ReactHookForm', () => {
     const React = require('react');
 
     return {
-        // eslint-disable-next-line react/prop-types
         Field: ({ component: Component, disabled, name, 'data-testid': testId }) => {
             const [value, setValue] = React.useState(false);
 
