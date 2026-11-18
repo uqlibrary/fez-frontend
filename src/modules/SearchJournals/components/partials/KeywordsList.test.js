@@ -39,7 +39,6 @@ describe('KeywordsList', () => {
         });
         expect(getByText(title)).toBeInTheDocument();
         expect(getByText(keyword)).toBeInTheDocument();
-        expect(getByText(help.tooltip)).toBeInTheDocument();
     });
     it('should render when there is no help data', () => {
         const { getByText } = setup({

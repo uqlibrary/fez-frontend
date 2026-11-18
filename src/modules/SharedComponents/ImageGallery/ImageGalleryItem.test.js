@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, WithRouter, fireEvent } from 'test-utils';
 
-import ImageGalleryItem, { getAlertMessageText } from './ImageGalleryItem';
+import ImageGalleryItem, { getAlertMessageText, getAlertBarColors } from './ImageGalleryItem';
 import collectionSearchResultsImages from 'mock/data/records/collectionSearchResultsImages';
 import txt from 'locale/components';
 
@@ -42,6 +42,24 @@ describe('Image Gallery Item', () => {
         const galleryElement = getByTestId(`image-gallery-item-${collectionSearchResultsImages.data[1].rek_pid}`);
         expect(galleryElement).toBeInTheDocument();
         expect(getByText(collectionSearchResultsImages.data[1].rek_title)).toBeInTheDocument();
+    });
+
+    it('should not be focusable or expose a button role if no URL prop supplied', () => {
+        const pid = collectionSearchResultsImages.data[1].rek_pid;
+        const { getByTestId } = setup({ item: collectionSearchResultsImages.data[1], withTitle: false });
+        const element = getByTestId(`image-gallery-item-${pid}`);
+        expect(element).not.toHaveAttribute('tabindex');
+        expect(element).not.toHaveAttribute('role');
+        fireEvent.keyPress(element, { charCode: 13, code: 'Enter' });
+        expect(mockUseNavigate).not.toHaveBeenCalled();
+    });
+
+    it('should be a focusable button if URL prop supplied', () => {
+        const pid = collectionSearchResultsImages.data[1].rek_pid;
+        const { getByTestId } = setup({ item: collectionSearchResultsImages.data[1], url: pid });
+        const element = getByTestId(`image-gallery-item-${pid}`);
+        expect(element).toHaveAttribute('tabindex', '0');
+        expect(element).toHaveAttribute('role', 'button');
     });
 
     it('should enable clickable gallery item if URL prop supplied', () => {
@@ -484,6 +502,15 @@ describe('Image Gallery Item', () => {
         });
         it('should return no title text', () => {
             expect(getAlertMessageText({ unavailable: false, restricted: false, advisory: false })).toBeNull();
+        });
+    });
+
+    describe('getAlertBarColors function', () => {
+        it('should return the DS warning colours for an advisory (content warning)', () => {
+            expect(getAlertBarColors({ advisory: true })).toEqual({ backgroundColor: '#f7ba1e', color: '#3b383e' });
+        });
+        it('should return the informational blue for non-advisory (restricted/unavailable) messages', () => {
+            expect(getAlertBarColors({ advisory: false })).toEqual({ backgroundColor: '#4085c6', color: '#ffffff' });
         });
     });
 });

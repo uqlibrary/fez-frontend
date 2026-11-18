@@ -77,6 +77,7 @@ export const ChangeAuthorIdForm = ({ recordsSelected, onCancel }) => {
                     <Grid size={12}>
                         <Alert
                             alertId="alert-warning-change-author-id"
+                            announce="off"
                             {...txt.changeAuthorIdForm.warningAlert}
                             message={txt.changeAuthorIdForm.warningAlert.message
                                 .replace('[authorNameNoMatchCount]', authorNameNoMatchCount)

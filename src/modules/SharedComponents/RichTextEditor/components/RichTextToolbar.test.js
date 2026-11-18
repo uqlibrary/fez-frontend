@@ -5,14 +5,12 @@ import { rtlRender } from 'test-utils';
 import RichTextToolbar from './RichTextToolbar';
 
 jest.mock('mui-tiptap', () => ({
-    // eslint-disable-next-line react/prop-types
     MenuButton: ({ onClick, IconComponent }) => (
         <button data-testid="menu-button" onClick={onClick}>
             <IconComponent />
         </button>
     ),
 
-    // eslint-disable-next-line react/prop-types
     MenuControlsContainer: ({ children }) => <div data-testid="menu-controls-container">{children}</div>,
 
     MenuDivider: () => <hr data-testid="menu-divider" />,

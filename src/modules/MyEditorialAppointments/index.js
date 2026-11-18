@@ -89,6 +89,7 @@ export const MyEditorialAppointments = () => {
                             {...myEditorialAppointmentsListError}
                             type="error"
                             alertId="alert-error-my-editorial-appointments-list"
+                            announce="off"
                         />
                     </Grid>
                 )}

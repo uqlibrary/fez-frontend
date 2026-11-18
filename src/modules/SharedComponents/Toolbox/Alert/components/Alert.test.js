@@ -26,7 +26,7 @@ describe('Alert', () => {
         const { container, getByText, getByTestId } = setup();
         expect(getByText(/Title*/)).toBeInTheDocument();
         expect(getByText('Message')).toBeInTheDocument();
-        expect(getByTestId('WarningIcon')).toBeInTheDocument();
+        expect(getByTestId('WarningAmberIcon')).toBeInTheDocument();
         expect(container).toMatchSnapshot();
     });
 
@@ -39,7 +39,7 @@ describe('Alert', () => {
 
         expect(getByText(/This is an error title*/)).toBeInTheDocument();
         expect(getByText('This is an error message')).toBeInTheDocument();
-        expect(getByTestId('ErrorIcon')).toBeInTheDocument();
+        expect(getByTestId('HighlightOffIcon')).toBeInTheDocument();
         expect(container).toMatchSnapshot();
     });
     it('should render error type of alert by default', () => {
@@ -51,7 +51,7 @@ describe('Alert', () => {
 
         expect(getByText(/This is an error title*/)).toBeInTheDocument();
         expect(getByText('This is an error message')).toBeInTheDocument();
-        expect(getByTestId('ErrorIcon')).toBeInTheDocument();
+        expect(getByTestId('HighlightOffIcon')).toBeInTheDocument();
         expect(container).toMatchSnapshot();
     });
 
@@ -92,7 +92,7 @@ describe('Alert', () => {
 
         expect(getByText(/This is an info title*/)).toBeInTheDocument();
         expect(getByText('This is an info message')).toBeInTheDocument();
-        expect(getByTestId('InfoIcon')).toBeInTheDocument();
+        expect(getByTestId('InfoOutlinedIcon')).toBeInTheDocument();
         expect(container).toMatchSnapshot();
     });
 
@@ -159,7 +159,7 @@ describe('Alert', () => {
 
         expect(getByText(/This is an error title*/)).toBeInTheDocument();
         expect(getByText('This is an error message')).toBeInTheDocument();
-        expect(getByTestId('ErrorIcon')).toBeInTheDocument();
+        expect(getByTestId('HighlightOffIcon')).toBeInTheDocument();
         expect(getByTestId('action-button')).toBeInTheDocument();
 
         fireEvent.click(getByTestId('action-button'));
@@ -220,13 +220,13 @@ describe('Alert', () => {
     });
 
     describe('live region announcements', () => {
-        it.each(['error', 'error_outline', 'warning'])('should use role="alert" for %s type', type => {
+        it.each(['error', 'error_outline', 'warning', 'success', 'done'])('should use role="alert" for %s type', type => {
             const { getByRole, queryByRole } = setup({ type });
             expect(getByRole('alert')).toBeInTheDocument();
             expect(queryByRole('status')).not.toBeInTheDocument();
         });
 
-        it.each(['info', 'info_outline', 'help', 'help_outline', 'success', 'done'])(
+        it.each(['info', 'info_outline', 'help', 'help_outline'])(
             'should use role="status" for %s type',
             type => {
                 const { getByRole, queryByRole } = setup({ type });

@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import React, { useMemo } from 'react';
 import PropTypes from 'prop-types';
 
@@ -845,10 +844,27 @@ export const AuthorsList = ({
                     {...props}
                 />
             ),
+            ChevronLeftIcon: props => (
+                <tableIcons.ChevronLeft
+                    id={`${contributorEditorId}-prev-results`}
+                    data-testid={`${contributorEditorId}-prev-results`}
+                    fontSize="large"
+                    {...props}
+                />
+            ),
+            ChevronRightIcon: props => (
+                <tableIcons.ChevronRight
+                    id={`${contributorEditorId}-next-results`}
+                    data-testid={`${contributorEditorId}-next-results`}
+                    fontSize="large"
+                    {...props}
+                />
+            ),
         },
         muiExpandButtonProps: ({ table, row }) => ({
             id: `expandPanelIcon-${row.original.aut_id}`,
             ['data-testid']: `expandPanelIcon-${row.original.aut_id}`,
+            size: 'medium',
             sx: {
                 alignSelf: 'center',
             },
@@ -878,6 +894,7 @@ export const AuthorsList = ({
                         // immediately force validation of new row
                         handleValidation({ id: 'mrt-row-create' }, columns[0].accessorKey, '');
                     }}
+                    aria-label={addButton}
                 >
                     <AddCircle
                         color="primary"
@@ -914,7 +931,7 @@ export const AuthorsList = ({
                             }
                             id={`${contributorEditorId}-list-row-${row.index}-move-up`}
                             data-testid={`${contributorEditorId}-list-row-${row.index}-move-up`}
-                            size="small"
+                            size="medium"
                             color="primary"
                         >
                             <KeyboardArrowUp />
@@ -943,10 +960,10 @@ export const AuthorsList = ({
                             }
                             id={`${contributorEditorId}-list-row-${row.index}-move-down`}
                             data-testid={`${contributorEditorId}-list-row-${row.index}-move-down`}
-                            size="small"
+                            size="medium"
                             color="primary"
                         >
-                            <KeyboardArrowDown />
+                            <KeyboardArrowDown fontSize="medium" />
                         </IconButton>
                     </Tooltip>
 
@@ -966,7 +983,7 @@ export const AuthorsList = ({
                             }
                             id={`${contributorEditorId}-list-row-${row.index}-edit`}
                             data-testid={`${contributorEditorId}-list-row-${row.index}-edit`}
-                            size="small"
+                            size="medium"
                             color="primary"
                         >
                             <tableIcons.Edit />
@@ -984,7 +1001,7 @@ export const AuthorsList = ({
                             }
                             id={`${contributorEditorId}-list-row-${row.index}-delete`}
                             data-testid={`${contributorEditorId}-list-row-${row.index}-delete`}
-                            size="small"
+                            size="medium"
                             color="primary"
                         >
                             <tableIcons.Delete />

@@ -119,7 +119,7 @@ export const JournalSearchResult = ({ onSearch, onSearchAll, browseAllJournals =
                         )}
                         {!!journalsListError && (
                             <Grid size={12}>
-                                <Alert {...journalsListError} />
+                                <Alert announce="off" {...journalsListError} />
                             </Grid>
                         )}
                         {!!journalsList && (

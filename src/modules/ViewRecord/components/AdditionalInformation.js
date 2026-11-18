@@ -37,7 +37,7 @@ const renderLink = (link, value, testId = '', icon = '', iconHint = '') => {
             {value}
             {icon && (
                 <Tooltip title={iconHint}>
-                    <span className={`fez-icon ${icon} medium`} style={{ margin: '0 4px' }} />
+                    <span className={`fez-icon ${icon} xxlarge`} style={{ margin: '0 4px' }} />
                 </Tooltip>
             )}
         </Link>
@@ -414,7 +414,7 @@ const AdditionalInformation = ({ account, publication, isNtro }) => {
                                                     <span
                                                         key={`rek-sdg-source-${item.rek_sdg}-${source.rek_sdg_source}-${index}`}
                                                         data-testid={`rek-sdg-source-${item.rek_sdg}-${source.rek_sdg_source}-${index}`}
-                                                        className={`fez-icon ${icon} medium`}
+                                                        className={`fez-icon ${icon} xxlarge`}
                                                         style={{ margin: '0 4px' }}
                                                     />
                                                 </Tooltip>

@@ -36,7 +36,7 @@ export const CreateOrUpdateDoiForm = ({ onCancel, recordsSelected }) => {
         <form data-testid="create-or-update-doi-form" id="create-or-update-doi-form">
             <Grid container spacing={2}>
                 <Grid size={12}>
-                    <Alert alertId="alert-info-create-or-update-doi" {...txt.createOrUpdateDoiForm.alert} />
+                    <Alert alertId="alert-info-create-or-update-doi" announce="off" {...txt.createOrUpdateDoiForm.alert} />
                 </Grid>
                 {!!hasCollectionsAmongSelectedRecords && (
                     <Grid size={12}>

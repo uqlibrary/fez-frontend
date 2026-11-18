@@ -155,15 +155,6 @@ const Reports = () => {
                             />
                         </Grid>
                     )}
-                    {/*
-                            HERE - test that NVDA will read this success message after requesting a
-                            report. This code first needs pushing to our feature branch.
-                            We will need to recap the other componenets updated in the last
-                            commit to see where else this may be needed, but note this
-                            component was not initially auto updated, so there will likely
-                            be other components that havent been captured but where it is
-                            desirable to announce the result of a user action.
-                        */}
                     {exportReportAlertIsVisible && !!exportReportAlertProps?.message && (
                         <Grid size={12}>
                             <Alert {...exportReportAlertProps} announce="assertive" />

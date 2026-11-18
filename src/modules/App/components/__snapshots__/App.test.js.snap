@@ -23,8 +23,8 @@ exports[`Application component Should display mobile correctly 1`] = `
               class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-MuiGrid-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-MuiGrid-root"
-                style="overflow: hidden; text-overflow: ellipsis;"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-MuiGrid-root"
+                style="min-width: 0; overflow: hidden; text-overflow: ellipsis;"
               >
                 <h1
                   class="MuiTypography-root MuiTypography-h1 MuiTypography-noWrap css-MuiTypography-root"
@@ -35,18 +35,24 @@ exports[`Application component Should display mobile correctly 1`] = `
                     style="color: rgb(255, 255, 255);"
                     title="Click to return to the eSpace home page"
                   >
-                    UQ eSpace 
+                    UQ eSpace
                   </a>
-                  <a
-                    class="appTitle"
-                    href="https://web.library.uq.edu.au/stories/celebrating-20-years-uq-espace"
-                    rel="noopener noreferrer"
+                  <span
+                    class="appTitleTagline"
                     style="color: rgb(255, 255, 255);"
-                    target="_blank"
-                    title="Click to view the blog post"
                   >
-                    : Celebrating 20 years
-                  </a>
+                     : 
+                    <a
+                      class="appTitle"
+                      href="https://web.library.uq.edu.au/stories/celebrating-20-years-uq-espace"
+                      rel="noopener noreferrer"
+                      style="color: rgb(255, 255, 255);"
+                      target="_blank"
+                      title="Click to view the blog post"
+                    >
+                      Celebrating 20 years
+                    </a>
+                  </span>
                 </h1>
               </div>
             </div>
@@ -106,7 +112,7 @@ exports[`Application component Should display mobile correctly 1`] = `
                 class="MuiBox-root css"
               >
                 <button
-                  aria-label="Click to search eSpace"
+                  aria-label="Search eSpace"
                   class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                   data-mui-internal-clone-element="true"
                   tabindex="0"
@@ -201,7 +207,7 @@ exports[`Application component Should display mobile correctly 1`] = `
             >
               <button
                 aria-label="Close menu"
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-MuiButtonBase-root-MuiIconButton-root"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-MuiButtonBase-root-MuiIconButton-root"
                 tabindex="0"
                 type="button"
               >
@@ -496,9 +502,7 @@ exports[`Application component Should display mobile correctly 1`] = `
                   <div
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
                   >
-                    <span
-                      role="status"
-                    >
+                    <span>
                       <b>
                         You are not logged in - 
                       </b>
@@ -772,7 +776,7 @@ exports[`Application component Should display mobile correctly 1`] = `
                         class="css"
                       >
                         <img
-                          alt="Open to Collaborate"
+                          alt=""
                           class="css"
                           src="https://assets.library.uq.edu.au/local-contexts/ci_notice_open_to_collaborate.png"
                         />
@@ -867,8 +871,8 @@ exports[`Application component should render alert if user is not fez author 1`]
                 </div>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-MuiGrid-root"
-                style="overflow: hidden; text-overflow: ellipsis;"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-MuiGrid-root"
+                style="min-width: 0; overflow: hidden; text-overflow: ellipsis;"
               >
                 <h1
                   class="MuiTypography-root MuiTypography-h1 MuiTypography-noWrap css-MuiTypography-root"
@@ -879,18 +883,24 @@ exports[`Application component should render alert if user is not fez author 1`]
                     style="color: rgb(255, 255, 255);"
                     title="Click to return to the eSpace home page"
                   >
-                    UQ eSpace 
+                    UQ eSpace
                   </a>
-                  <a
-                    class="appTitle"
-                    href="https://web.library.uq.edu.au/stories/celebrating-20-years-uq-espace"
-                    rel="noopener noreferrer"
+                  <span
+                    class="appTitleTagline"
                     style="color: rgb(255, 255, 255);"
-                    target="_blank"
-                    title="Click to view the blog post"
                   >
-                    : Celebrating 20 years
-                  </a>
+                     : 
+                    <a
+                      class="appTitle"
+                      href="https://web.library.uq.edu.au/stories/celebrating-20-years-uq-espace"
+                      rel="noopener noreferrer"
+                      style="color: rgb(255, 255, 255);"
+                      target="_blank"
+                      title="Click to view the blog post"
+                    >
+                      Celebrating 20 years
+                    </a>
+                  </span>
                 </h1>
               </div>
             </div>
@@ -950,7 +960,7 @@ exports[`Application component should render alert if user is not fez author 1`]
                 class="MuiBox-root css"
               >
                 <button
-                  aria-label="Click to search eSpace"
+                  aria-label="Search eSpace"
                   class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                   data-mui-internal-clone-element="true"
                   tabindex="0"
@@ -1083,9 +1093,7 @@ exports[`Application component should render alert if user is not fez author 1`]
                   <div
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
                   >
-                    <span
-                      role="status"
-                    >
+                    <span>
                       <b>
                         You are not registered in UQ eSpace as an author - 
                       </b>
@@ -1352,7 +1360,7 @@ exports[`Application component should render alert if user is not fez author 1`]
                         class="css"
                       >
                         <img
-                          alt="Open to Collaborate"
+                          alt=""
                           class="css"
                           src="https://assets.library.uq.edu.au/local-contexts/ci_notice_open_to_collaborate.png"
                         />
@@ -1441,8 +1449,8 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                 </div>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-MuiGrid-root"
-                style="overflow: hidden; text-overflow: ellipsis;"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-MuiGrid-root"
+                style="min-width: 0; overflow: hidden; text-overflow: ellipsis;"
               >
                 <h1
                   class="MuiTypography-root MuiTypography-h1 MuiTypography-noWrap css-MuiTypography-root"
@@ -1453,18 +1461,24 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                     style="color: rgb(255, 255, 255);"
                     title="Click to return to the eSpace home page"
                   >
-                    UQ eSpace 
+                    UQ eSpace
                   </a>
-                  <a
-                    class="appTitle"
-                    href="https://web.library.uq.edu.au/stories/celebrating-20-years-uq-espace"
-                    rel="noopener noreferrer"
+                  <span
+                    class="appTitleTagline"
                     style="color: rgb(255, 255, 255);"
-                    target="_blank"
-                    title="Click to view the blog post"
                   >
-                    : Celebrating 20 years
-                  </a>
+                     : 
+                    <a
+                      class="appTitle"
+                      href="https://web.library.uq.edu.au/stories/celebrating-20-years-uq-espace"
+                      rel="noopener noreferrer"
+                      style="color: rgb(255, 255, 255);"
+                      target="_blank"
+                      title="Click to view the blog post"
+                    >
+                      Celebrating 20 years
+                    </a>
+                  </span>
                 </h1>
               </div>
             </div>
@@ -1524,7 +1538,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                 class="MuiBox-root css"
               >
                 <button
-                  aria-label="Click to search eSpace"
+                  aria-label="Search eSpace"
                   class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                   data-mui-internal-clone-element="true"
                   tabindex="0"
@@ -1858,7 +1872,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                         class="css"
                       >
                         <img
-                          alt="Open to Collaborate"
+                          alt=""
                           class="css"
                           src="https://assets.library.uq.edu.au/local-contexts/ci_notice_open_to_collaborate.png"
                         />
@@ -1947,8 +1961,8 @@ exports[`Application component should render app for account with fez author wit
                 </div>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-MuiGrid-root"
-                style="overflow: hidden; text-overflow: ellipsis;"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-MuiGrid-root"
+                style="min-width: 0; overflow: hidden; text-overflow: ellipsis;"
               >
                 <h1
                   class="MuiTypography-root MuiTypography-h1 MuiTypography-noWrap css-MuiTypography-root"
@@ -1959,18 +1973,24 @@ exports[`Application component should render app for account with fez author wit
                     style="color: rgb(255, 255, 255);"
                     title="Click to return to the eSpace home page"
                   >
-                    UQ eSpace 
+                    UQ eSpace
                   </a>
-                  <a
-                    class="appTitle"
-                    href="https://web.library.uq.edu.au/stories/celebrating-20-years-uq-espace"
-                    rel="noopener noreferrer"
+                  <span
+                    class="appTitleTagline"
                     style="color: rgb(255, 255, 255);"
-                    target="_blank"
-                    title="Click to view the blog post"
                   >
-                    : Celebrating 20 years
-                  </a>
+                     : 
+                    <a
+                      class="appTitle"
+                      href="https://web.library.uq.edu.au/stories/celebrating-20-years-uq-espace"
+                      rel="noopener noreferrer"
+                      style="color: rgb(255, 255, 255);"
+                      target="_blank"
+                      title="Click to view the blog post"
+                    >
+                      Celebrating 20 years
+                    </a>
+                  </span>
                 </h1>
               </div>
             </div>
@@ -2030,7 +2050,7 @@ exports[`Application component should render app for account with fez author wit
                 class="MuiBox-root css"
               >
                 <button
-                  aria-label="Click to search eSpace"
+                  aria-label="Search eSpace"
                   class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                   data-mui-internal-clone-element="true"
                   tabindex="0"
@@ -2364,7 +2384,7 @@ exports[`Application component should render app for account with fez author wit
                         class="css"
                       >
                         <img
-                          alt="Open to Collaborate"
+                          alt=""
                           class="css"
                           src="https://assets.library.uq.edu.au/local-contexts/ci_notice_open_to_collaborate.png"
                         />
@@ -2453,8 +2473,8 @@ exports[`Application component should render application with routing for the us
                 </div>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-MuiGrid-root"
-                style="overflow: hidden; text-overflow: ellipsis;"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-MuiGrid-root"
+                style="min-width: 0; overflow: hidden; text-overflow: ellipsis;"
               >
                 <h1
                   class="MuiTypography-root MuiTypography-h1 MuiTypography-noWrap css-MuiTypography-root"
@@ -2465,18 +2485,24 @@ exports[`Application component should render application with routing for the us
                     style="color: rgb(255, 255, 255);"
                     title="Click to return to the eSpace home page"
                   >
-                    UQ eSpace 
+                    UQ eSpace
                   </a>
-                  <a
-                    class="appTitle"
-                    href="https://web.library.uq.edu.au/stories/celebrating-20-years-uq-espace"
-                    rel="noopener noreferrer"
+                  <span
+                    class="appTitleTagline"
                     style="color: rgb(255, 255, 255);"
-                    target="_blank"
-                    title="Click to view the blog post"
                   >
-                    : Celebrating 20 years
-                  </a>
+                     : 
+                    <a
+                      class="appTitle"
+                      href="https://web.library.uq.edu.au/stories/celebrating-20-years-uq-espace"
+                      rel="noopener noreferrer"
+                      style="color: rgb(255, 255, 255);"
+                      target="_blank"
+                      title="Click to view the blog post"
+                    >
+                      Celebrating 20 years
+                    </a>
+                  </span>
                 </h1>
               </div>
             </div>
@@ -2536,7 +2562,7 @@ exports[`Application component should render application with routing for the us
                 class="MuiBox-root css"
               >
                 <button
-                  aria-label="Click to search eSpace"
+                  aria-label="Search eSpace"
                   class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                   data-mui-internal-clone-element="true"
                   tabindex="0"
@@ -2746,8 +2772,8 @@ exports[`Application component should render for anon user 1`] = `
                 </div>
               </div>
               <div
-                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-MuiGrid-root"
-                style="overflow: hidden; text-overflow: ellipsis;"
+                class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-MuiGrid-root"
+                style="min-width: 0; overflow: hidden; text-overflow: ellipsis;"
               >
                 <h1
                   class="MuiTypography-root MuiTypography-h1 MuiTypography-noWrap css-MuiTypography-root"
@@ -2758,18 +2784,24 @@ exports[`Application component should render for anon user 1`] = `
                     style="color: rgb(255, 255, 255);"
                     title="Click to return to the eSpace home page"
                   >
-                    UQ eSpace 
+                    UQ eSpace
                   </a>
-                  <a
-                    class="appTitle"
-                    href="https://web.library.uq.edu.au/stories/celebrating-20-years-uq-espace"
-                    rel="noopener noreferrer"
+                  <span
+                    class="appTitleTagline"
                     style="color: rgb(255, 255, 255);"
-                    target="_blank"
-                    title="Click to view the blog post"
                   >
-                    : Celebrating 20 years
-                  </a>
+                     : 
+                    <a
+                      class="appTitle"
+                      href="https://web.library.uq.edu.au/stories/celebrating-20-years-uq-espace"
+                      rel="noopener noreferrer"
+                      style="color: rgb(255, 255, 255);"
+                      target="_blank"
+                      title="Click to view the blog post"
+                    >
+                      Celebrating 20 years
+                    </a>
+                  </span>
                 </h1>
               </div>
             </div>
@@ -2829,7 +2861,7 @@ exports[`Application component should render for anon user 1`] = `
                 class="MuiBox-root css"
               >
                 <button
-                  aria-label="Click to search eSpace"
+                  aria-label="Search eSpace"
                   class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-MuiButtonBase-root-MuiIconButton-root"
                   data-mui-internal-clone-element="true"
                   tabindex="0"
@@ -3163,7 +3195,7 @@ exports[`Application component should render for anon user 1`] = `
                         class="css"
                       >
                         <img
-                          alt="Open to Collaborate"
+                          alt=""
                           class="css"
                           src="https://assets.library.uq.edu.au/local-contexts/ci_notice_open_to_collaborate.png"
                         />

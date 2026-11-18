@@ -107,7 +107,7 @@ describe('File Name Component ', () => {
         expect(getByText('test.mp3')).toBeInTheDocument();
         expect(queryByTestId(`${id}-download-button`)).toBe(null);
         expect(queryByTestId('audio-player')).toBeInTheDocument();
-        expect(container.querySelector('button[aria-label^="Click to play audio file"]')).toBeInTheDocument();
+        expect(container.querySelector('button[aria-label^="Play audio file"]')).toBeInTheDocument();
     });
 
     it("shouldn't render audio player when a restrictive license is being used", () => {
@@ -121,7 +121,7 @@ describe('File Name Component ', () => {
         expect(getByText('test.mp3')).toBeInTheDocument();
         expect(getByTestId(`${id}-download-button`)).toBeInTheDocument();
         expect(queryByTestId('audioPlayer')).toBe(null);
-        expect(container.querySelector('button[aria-label^="Click to play audio file"]')).toBe(null);
+        expect(container.querySelector('button[aria-label^="Play audio file"]')).toBe(null);
     });
 
     it('should run onFileSelect function on click', () => {

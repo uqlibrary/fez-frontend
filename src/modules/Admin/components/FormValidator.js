@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { useWatch } from 'react-hook-form';
 import { useMemo, useEffect } from 'react';
 import { validate } from 'config/admin';
