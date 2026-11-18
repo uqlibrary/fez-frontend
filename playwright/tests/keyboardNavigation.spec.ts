@@ -42,6 +42,20 @@ test.describe('Keyboard and screen reader navigation', () => {
         await expect(page).toHaveTitle(/^My works/);
     });
 
+    test('search results are a named region, between the search form and the filters', async ({ page }) => {
+        await page.goto('/records/search?searchQueryParams%5Ball%5D=water');
+        const results = page.getByRole('region', { name: 'Search results' });
+        await expect(results).toContainText(/Displaying works \d+ to \d+ of \d+ total works/);
+        // Landmark order, as NVDA's D key moves through them on this page.
+        const order = await page.evaluate(() =>
+            Array.from(document.querySelectorAll('[role="search"], section[aria-label], nav[aria-label]')).map(
+                el => el.getAttribute('aria-label') || '',
+            ),
+        );
+        expect(order.indexOf('Search results')).toBeGreaterThan(order.indexOf('Search eSpace'));
+        expect(order.indexOf('Refine results')).toBeGreaterThan(order.indexOf('Search results'));
+    });
+
     test('pages have their own browser title', async ({ page }) => {
         for (const [url, title] of [
             ['/about', /^About/],
