@@ -103,9 +103,7 @@ module.exports = {
                 use: ['postcss-loader', 'sass-loader'],
             },
             {
-                // Match webpack-dist: asset modules, not file-loader. file-loader under webpack 5 double-processes
-                // css url() images, emitting a JS stub as the .svg so the header .smallLogo never rendered in dev.
-                test: /\.(jpe?g|png|gif|svg)$/i,
+                test: /\.(avif|bmp|gif|ico|jpe?g|png|svg|webp|woff2?|eot|ttf|otf|pdf)$/i,
                 type: 'asset/resource',
                 generator: {
                     filename: 'assets/[hash][ext]',
