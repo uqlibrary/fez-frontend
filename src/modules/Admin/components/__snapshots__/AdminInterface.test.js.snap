@@ -280,7 +280,9 @@ exports[`AdminInterface component should disabled button and render alert for fo
                     <div
                       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
                     >
-                      <span>
+                      <span
+                        role="status"
+                      >
                         <b>
                           Saving - 
                         </b>
@@ -985,7 +987,9 @@ exports[`AdminInterface component should display job created alert 2`] = `
                     <div
                       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
                     >
-                      <span>
+                      <span
+                        role="alert"
+                      >
                         <b>
                           Success - 
                         </b>
@@ -1620,7 +1624,9 @@ exports[`AdminInterface component should display successful alert 2`] = `
                     <div
                       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
                     >
-                      <span>
+                      <span
+                        role="alert"
+                      >
                         <b>
                           Success - 
                         </b>
