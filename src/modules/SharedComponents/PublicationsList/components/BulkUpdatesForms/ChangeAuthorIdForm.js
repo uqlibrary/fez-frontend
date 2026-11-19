@@ -71,12 +71,13 @@ export const ChangeAuthorIdForm = ({ recordsSelected, onCancel }) => {
         <form data-testid="change-author-id-form" id="change-author-id-form">
             <Grid container spacing={2}>
                 <Grid size={12}>
-                    <Alert alertId="alert-info-change-author-id" {...txt.changeAuthorIdForm.alert} />
+                    <Alert alertId="alert-info-change-author-id" {...txt.changeAuthorIdForm.alert} announce="off" />
                 </Grid>
                 {searchAuthorBy === SEARCH_BY_AUTHOR_NAME && !!searchAuthorByName && !!authorNameNoMatchCount && (
                     <Grid size={12}>
                         <Alert
                             alertId="alert-warning-change-author-id"
+                            announce="off"
                             {...txt.changeAuthorIdForm.warningAlert}
                             message={txt.changeAuthorIdForm.warningAlert.message
                                 .replace('[authorNameNoMatchCount]', authorNameNoMatchCount)
@@ -181,7 +182,11 @@ export const ChangeAuthorIdForm = ({ recordsSelected, onCancel }) => {
                         <Alert alertId="alert-info-change-author-id" {...txt.changeAuthorIdForm.submittingAlert} />
                     )}
                     {isSubmitSuccessful && (
-                        <Alert alertId="alert-done-change-author-id" {...txt.changeAuthorIdForm.successAlert} />
+                        <Alert
+                            alertId="alert-done-change-author-id"
+                            announce="assertive"
+                            {...txt.changeAuthorIdForm.successAlert}
+                        />
                     )}
                     {hasServerError && (
                         <Alert alertId="alert-error-change-author-id" {...txt.changeAuthorIdForm.errorAlert}>

@@ -496,13 +496,15 @@ exports[`Application component Should display mobile correctly 1`] = `
                   <div
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
                   >
-                    <b>
-                      You are not logged in - 
-                    </b>
-                    <span
-                      data-testid="alert-message"
-                    >
-                      Login to UQ eSpace for full search results and more services.
+                    <span>
+                      <b>
+                        You are not logged in - 
+                      </b>
+                      <span
+                        data-testid="alert-message"
+                      >
+                        Login to UQ eSpace for full search results and more services.
+                      </span>
                     </span>
                   </div>
                 </div>
@@ -1096,20 +1098,22 @@ exports[`Application component should render alert if user is not fez author 1`]
                   <div
                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
                   >
-                    <b>
-                      You are not registered in UQ eSpace as an author - 
-                    </b>
-                    <span
-                      data-testid="alert-message"
-                    >
-                      Please
-                       
-                      <a
-                        href="https://guides.library.uq.edu.au/research-and-teaching-staff/uqespace-publications-datasets/contact-us"
-                        target="_blank"
+                    <span>
+                      <b>
+                        You are not registered in UQ eSpace as an author - 
+                      </b>
+                      <span
+                        data-testid="alert-message"
                       >
-                        contact the UQ eSpace team.
-                      </a>
+                        Please
+                         
+                        <a
+                          href="https://guides.library.uq.edu.au/research-and-teaching-staff/uqespace-publications-datasets/contact-us"
+                          target="_blank"
+                        >
+                          contact the UQ eSpace team.
+                        </a>
+                      </span>
                     </span>
                   </div>
                 </div>

@@ -1273,11 +1273,12 @@ exports[`Files Component  should not render sensitive handling note - scenario 1
                 <div
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
                 >
-                  <b />
-                  <span
-                    data-testid="alert-message"
-                  >
-                    Indigenous/First Nations people should be aware that this output contains images, voices and/or names of deceased persons.
+                  <span>
+                    <span
+                      data-testid="alert-message"
+                    >
+                      Indigenous/First Nations people should be aware that this output contains images, voices and/or names of deceased persons.
+                    </span>
                   </span>
                 </div>
               </div>
@@ -1637,11 +1638,12 @@ exports[`Files Component  should not render sensitive handling note - scenario 2
                 <div
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
                 >
-                  <b />
-                  <span
-                    data-testid="alert-message"
-                  >
-                    Other
+                  <span>
+                    <span
+                      data-testid="alert-message"
+                    >
+                      Other
+                    </span>
                   </span>
                 </div>
               </div>
@@ -2001,11 +2003,12 @@ exports[`Files Component  should render an image as the original filename with n
                 <div
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
                 >
-                  <b />
-                  <span
-                    data-testid="alert-message"
-                  >
-                    test
+                  <span>
+                    <span
+                      data-testid="alert-message"
+                    >
+                      test
+                    </span>
                   </span>
                 </div>
               </div>
@@ -2964,13 +2967,15 @@ exports[`Files Component  should render component 2`] = `
                 <div
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
                 >
-                  <b>
-                    You are not logged in - 
-                  </b>
-                  <span
-                    data-testid="alert-message"
-                  >
-                    Login to UQ eSpace to access the files on this work
+                  <span>
+                    <b>
+                      You are not logged in - 
+                    </b>
+                    <span
+                      data-testid="alert-message"
+                    >
+                      Login to UQ eSpace to access the files on this work
+                    </span>
                   </span>
                 </div>
               </div>
@@ -3874,13 +3879,15 @@ exports[`Files Component  should render component for public users 1`] = `
                 <div
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
                 >
-                  <b>
-                    You are not logged in - 
-                  </b>
-                  <span
-                    data-testid="alert-message"
-                  >
-                    Login to UQ eSpace to access the files on this work
+                  <span>
+                    <b>
+                      You are not logged in - 
+                    </b>
+                    <span
+                      data-testid="alert-message"
+                    >
+                      Login to UQ eSpace to access the files on this work
+                    </span>
                   </span>
                 </div>
               </div>
@@ -5360,11 +5367,12 @@ exports[`Files Component  should render sensitive handling note - other 1`] = `
                 <div
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
                 >
-                  <b />
-                  <span
-                    data-testid="alert-message"
-                  >
-                    test
+                  <span>
+                    <span
+                      data-testid="alert-message"
+                    >
+                      test
+                    </span>
                   </span>
                 </div>
               </div>
@@ -5724,11 +5732,12 @@ exports[`Files Component  should render sensitive handling note 1`] = `
                 <div
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
                 >
-                  <b />
-                  <span
-                    data-testid="alert-message"
-                  >
-                    Indigenous/First Nations people should be aware that this output contains images, voices and/or names of deceased persons.
+                  <span>
+                    <span
+                      data-testid="alert-message"
+                    >
+                      Indigenous/First Nations people should be aware that this output contains images, voices and/or names of deceased persons.
+                    </span>
                   </span>
                 </div>
               </div>
@@ -6088,11 +6097,12 @@ exports[`Files Component  should show a blacklisted collection member when the u
                 <div
                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
                 >
-                  <b />
-                  <span
-                    data-testid="alert-message"
-                  >
-                    test
+                  <span>
+                    <span
+                      data-testid="alert-message"
+                    >
+                      test
+                    </span>
                   </span>
                 </div>
               </div>

@@ -157,7 +157,7 @@ const Reports = () => {
                     )}
                     {exportReportAlertIsVisible && !!exportReportAlertProps?.message && (
                         <Grid size={12}>
-                            <Alert {...exportReportAlertProps} />
+                            <Alert {...exportReportAlertProps} announce="assertive" />
                         </Grid>
                     )}
                 </Grid>

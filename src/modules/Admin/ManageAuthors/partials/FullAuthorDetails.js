@@ -147,6 +147,7 @@ export const FullAuthorDetails = ({ disabled, data: rowData, mode, onEditingAppr
         message: message,
         title: 'Validation',
         type: 'warning',
+        ...(!apiError ? { announce: 'off' } : {}),
     };
 
     const onSubmit = async data => {

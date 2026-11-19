@@ -403,10 +403,11 @@ export class FileUploader extends PureComponent {
                                 title={successTitle}
                                 message={successMessage.replace('[numberOfFiles]', filesInQueue.length)}
                                 type="done"
+                                announce="off"
                             />
                         </Grid>
                         <Grid size={12}>
-                            <Alert title={delayNotice} message={delayMessage} type="warning" />
+                            <Alert title={delayNotice} message={delayMessage} type="warning" announce="off" />
                         </Grid>
                     </Fragment>
                 )}
