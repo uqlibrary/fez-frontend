@@ -205,12 +205,7 @@ export default defineConfig([
              */
             'jsx-a11y/aria-props': 2,
             'jsx-a11y/heading-has-content': 2,
-            'jsx-a11y/label-has-associated-control': [
-                1,
-                {
-                    allowChildren: true,
-                },
-            ],
+            'jsx-a11y/label-has-associated-control': [1, { assert: 'either' }],
 
             'jsx-a11y/mouse-events-have-key-events': 2,
             'jsx-a11y/role-has-required-aria-props': 2,
