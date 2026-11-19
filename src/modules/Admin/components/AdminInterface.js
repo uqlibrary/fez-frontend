@@ -382,7 +382,6 @@ export const AdminInterface = ({
                                   actionButtonLabel: txt.current.alerts.errorAlert.clear,
                               }
                             : {})}
-                        announce="off" // test if we need this i.e. does the FE read the dialog popup anyway?
                     />
                 </Grid>
             )}

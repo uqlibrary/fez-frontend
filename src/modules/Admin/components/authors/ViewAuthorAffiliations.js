@@ -86,7 +86,7 @@ const ViewAuthorAffiliations = ({ rowData, locale, onChange }) => {
             )}
             {hasProblems && (
                 <Grid size={12}>
-                    <Alert type={'warning'} {...alertOptions} />
+                    <Alert type={'warning'} {...alertOptions} announce="off" />
                 </Grid>
             )}
         </Grid>

@@ -407,7 +407,7 @@ export class FileUploader extends PureComponent {
                             />
                         </Grid>
                         <Grid size={12}>
-                            <Alert title={delayNotice} message={delayMessage} type="warning" />
+                            <Alert title={delayNotice} message={delayMessage} type="warning" announce="off" />
                         </Grid>
                     </Fragment>
                 )}

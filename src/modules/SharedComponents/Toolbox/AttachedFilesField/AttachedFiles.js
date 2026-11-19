@@ -686,6 +686,7 @@ export const AttachedFiles = ({
                                 title={errorTitle}
                                 message={fileNameErrorMessage || embargoDateErrorMessage}
                                 type={fileNameErrorMessage ? 'error' : 'warning'}
+                                announce="off"
                             />
                         </Grid>
                     )
