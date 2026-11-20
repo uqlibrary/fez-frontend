@@ -149,7 +149,6 @@ exports[`Application component Should display mobile correctly 1`] = `
               class="auth-button-wrapper"
             >
               <button
-                aria-haspopup="true"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge log-in-button css-MuiButtonBase-root-MuiIconButton-root"
                 tabindex="0"
                 type="button"
@@ -2952,7 +2951,6 @@ exports[`Application component should render for anon user 1`] = `
               class="auth-button-wrapper"
             >
               <button
-                aria-haspopup="true"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge log-in-button css-MuiButtonBase-root-MuiIconButton-root"
                 tabindex="0"
                 type="button"
