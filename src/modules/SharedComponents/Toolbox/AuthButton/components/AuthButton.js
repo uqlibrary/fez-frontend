@@ -15,6 +15,10 @@ export const AuthButton = ({ isAuthorizedUser, signOutTooltipText, signInTooltip
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
     const handleClick = event => {
+        if (!isAuthorizedUser) {
+            onClick?.(event);
+            return;
+        }
         setAnchorEl(event.currentTarget);
     };
     const handleClose = () => {
@@ -25,7 +29,7 @@ export const AuthButton = ({ isAuthorizedUser, signOutTooltipText, signInTooltip
         <div className="auth-button-wrapper">
             <IconButton
                 aria-controls={open ? 'auth-menu' : undefined}
-                aria-haspopup="true"
+                aria-haspopup={isAuthorizedUser ? 'true' : undefined}
                 aria-expanded={open ? 'true' : undefined}
                 onClick={handleClick}
                 className={isAuthorizedUser ? 'log-out-button' : 'log-in-button'}
@@ -38,40 +42,42 @@ export const AuthButton = ({ isAuthorizedUser, signOutTooltipText, signInTooltip
                 )}
                 <span className="sr-only">{isAuthorizedUser ? signOutTooltipText : signInTooltipText}</span>
             </IconButton>
-            <Menu
-                id="auth-menu"
-                anchorEl={anchorEl}
-                open={open}
-                onClose={handleClose}
-                slotProps={{
-                    list: {
-                        className: 'auth-menu',
-                        'aria-labelledby': 'auth-button',
-                    },
-                }}
-            >
-                <MenuItem onClick={onClick} className="auth-menu-item">
-                    <ListItemIcon>
-                        <LogoutIcon fontSize="small" sx={{ color: 'primary.main' }} />
-                    </ListItemIcon>
-                    <ListItemText>
-                        {' '}
-                        <Tooltip
-                            id="auth-button"
-                            title={isAuthorizedUser ? signOutTooltipText : signInTooltipText}
-                            placement="bottom-start"
-                            slots={{
-                                transition: Fade,
-                            }}
-                            slotProps={{
-                                transition: { timeout: 300 },
-                            }}
-                        >
-                            Logout
-                        </Tooltip>
-                    </ListItemText>
-                </MenuItem>
-            </Menu>
+            {isAuthorizedUser && (
+                <Menu
+                    id="auth-menu"
+                    anchorEl={anchorEl}
+                    open={open}
+                    onClose={handleClose}
+                    slotProps={{
+                        list: {
+                            className: 'auth-menu',
+                            'aria-labelledby': 'auth-button',
+                        },
+                    }}
+                >
+                    <MenuItem onClick={onClick} className="auth-menu-item">
+                        <ListItemIcon>
+                            <LogoutIcon fontSize="small" sx={{ color: 'primary.main' }} />
+                        </ListItemIcon>
+                        <ListItemText>
+                            {' '}
+                            <Tooltip
+                                id="auth-button"
+                                title={signOutTooltipText}
+                                placement="bottom-start"
+                                slots={{
+                                    transition: Fade,
+                                }}
+                                slotProps={{
+                                    transition: { timeout: 300 },
+                                }}
+                            >
+                                Logout
+                            </Tooltip>
+                        </ListItemText>
+                    </MenuItem>
+                </Menu>
+            )}
         </div>
     );
 };
