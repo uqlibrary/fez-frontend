@@ -341,6 +341,7 @@ exports[`AdvancedSearchComponent should render with default props 1`] = `
                     data-indeterminate="false"
                     data-testid="advanced-search-open-access"
                     id="advanced-search-open-access"
+                    tabindex="0"
                     type="checkbox"
                   />
                   <svg

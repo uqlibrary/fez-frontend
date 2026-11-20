@@ -161,6 +161,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                           <a
                             data-discover="true"
                             href="/view/UQ:330391"
+                            tabindex="0"
                           >
                             Development and implementation of papillomavirus prophylactic vaccines
                           </a>
@@ -507,6 +508,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                           <a
                             data-discover="true"
                             href="/view/UQ:103860"
+                            tabindex="0"
                           >
                             Prophylactic HPV vaccines: Underlying mechanisms
                           </a>
@@ -868,6 +870,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                           <a
                             data-discover="true"
                             href="/view/UQ:330391"
+                            tabindex="0"
                           >
                             Development and implementation of papillomavirus prophylactic vaccines
                           </a>

@@ -1,12 +1,14 @@
 import { createTheme } from '@mui/material/styles';
-import { orange, red } from '@mui/material/colors';
 import { IS_JEST_TEST } from './general';
+import ds from './designSystemTokens';
+
+const desktopMediaQuery = `@media (min-width:${ds.desktop.breakpoint})`;
 
 const palette = {
     primary: {
-        light: '#962A8B', // $purple-light
-        main: '#51247A', // $purple-500
-        dark: '#3a1f53', // $purple-700
+        light: ds.colour.purple.light,
+        main: ds.colour.purple[500],
+        dark: ds.colour.purple[700],
         gradient: {
             horizontal: {
                 background: 'linear-gradient(to right, rgb(81,36,122) 55%,rgb(150,42,139) 100%)',
@@ -24,55 +26,55 @@ const palette = {
     },
     default: {
         light: 'rgba(0, 0, 0, 0.87)',
-        main: '#5e5b60', // $grey-800
-        dark: '#302c33', // $grey-925
+        main: ds.colour.grey[800], // $grey-800
+        dark: ds.colour.grey[925], // $grey-925
     },
     secondary: {
-        light: '#f3f3f4', // $grey-50
-        main: '#5e5b60', // $grey-800
-        dark: '#302c33', // $grey-925
+        light: ds.colour.grey[50], // $grey-50
+        main: ds.colour.grey[800], // $grey-800
+        dark: ds.colour.grey[925], // $grey-925
     },
     accent: {
         // UQ Design System $utility-500 (#0d6dcd) — the DS utility blue; single colour across weights.
         // Used as decorative header / selected-row backgrounds with white text (white on #0d6dcd ~5.1:1 AA).
-        light: '#0d6dcd',
-        main: '#0d6dcd',
-        dark: '#0d6dcd',
+        light: ds.colour.utility[500],
+        main: ds.colour.utility[500],
+        dark: ds.colour.utility[500],
     },
     white: {
-        main: '#FFFFFF',
+        main: ds.colour.white,
     },
     warning: {
         // UQ Design System $warning-500 (#f7ba1e) — the DS warning fill, single colour across weights.
         // Pair with dark text (contrastText $grey-900): grey-900 on #f7ba1e ~6.7:1 passes AA. Never white text.
-        light: '#f7ba1e',
-        main: '#f7ba1e',
-        dark: '#f7ba1e',
-        contrastText: '#3b383e', // $grey-900
+        light: ds.colour.warning[500],
+        main: ds.colour.warning[500],
+        dark: ds.colour.warning[500],
+        contrastText: ds.colour.grey[900], // $grey-900
     },
     success: {
         // UQ Design System $success-700 (#3b7c3e) — single colour across weights (the DS defines no weighted
         // success variant for these uses); AA on white (~5:1) for non-alert success text/icon
-        light: '#3b7c3e',
-        main: '#3b7c3e',
-        dark: '#3b7c3e',
+        light: ds.colour.success[700],
+        main: ds.colour.success[700],
+        dark: ds.colour.success[700],
     },
     error: {
         // UQ Design System $error-700 (#9d2424) — single colour across weights; AA on white (~7.4:1) and on
         // #efefef fields (~5.9:1), e.g. form-field error text (DS $error-500 #d62929 fails on #efefef)
-        light: '#9d2424',
-        main: '#9d2424',
-        dark: '#9d2424',
+        light: ds.colour.error[700],
+        main: ds.colour.error[700],
+        dark: ds.colour.error[700],
     },
     // UQ Design System "page" alert colours: a light $*-50 tint background + $grey-900 text (for every
     // type). Keyed by the palette entry each alert type maps to (see the Alert component's paletteIndex).
     alert: {
-        text: '#3b383e', // $grey-900
-        accent: { background: '#e7f0fa' }, // info → $utility-50
-        success: { background: '#edf6ed' }, // done → $success-50
-        warning: { background: '#fef8e8' }, // $warning-50
-        error: { background: '#fbeaea' }, // $error-50
-        secondary: { background: '#f3f3f4' }, // help → $grey-50
+        text: ds.colour.grey[900], // $grey-900
+        accent: { background: ds.colour.utility[50] }, // info → $utility-50
+        success: { background: ds.colour.success[50] }, // done → $success-50
+        warning: { background: ds.colour.warning[50] }, // $warning-50
+        error: { background: ds.colour.error[50] }, // $error-50
+        secondary: { background: ds.colour.grey[50] }, // help → $grey-50
     },
 };
 
@@ -82,30 +84,47 @@ const palette = {
 // and no 700 (bold === medium). Body line-height 1.6, heading line-height 1.2, 1% letter-spacing on
 // every variant. Heading sizes follow the DS type scale; H1-H3 drop to the DS mobile sizes below 1024px
 // (the DS switches at min-width:1024px in _css-variables.scss). H4-H6 are a single size.
-const montserrat = '"Montserrat", Helvetica, Arial, sans-serif';
-const roboto = '"Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif';
+const montserrat = ds.font.face.montserrat;
+const roboto = ds.font.face.roboto;
 // h2-h6: Roboto (the DS body font) at medium weight; h1 alone gets Montserrat via displayHeading.
-const heading = size => ({ fontFamily: roboto, fontWeight: 500, lineHeight: 1.2, ...size });
+const heading = size => ({
+    fontFamily: roboto,
+    fontWeight: ds.font.weight.medium,
+    lineHeight: ds.lineHeight.short,
+    ...size,
+});
 const displayHeading = size => ({ ...heading(size), fontFamily: montserrat });
 const typography = {
     fontFamily: roboto,
-    fontWeightLight: 400, // DS has no light weight; floor at normal
-    fontWeightRegular: 400, // $font-weight-normal
-    fontWeightMedium: 500, // $font-weight-medium
-    fontWeightBold: 500, // $font-weight-bold === medium
+    fontWeightLight: ds.font.weight.light,
+    fontWeightRegular: ds.font.weight.normal,
+    fontWeightMedium: ds.font.weight.medium,
+    fontWeightBold: ds.font.weight.bold,
     useNextVariants: true,
     suppressDeprecationWarnings: true,
-    allVariants: { letterSpacing: '0.01rem' }, // DS $letter-spacing (1%)
-    h1: displayHeading({ fontSize: '1.875rem', '@media (min-width:1024px)': { fontSize: '2.5rem' } }),
-    h2: heading({ fontSize: '1.5rem', '@media (min-width:1024px)': { fontSize: '2rem' } }),
-    h3: heading({ fontSize: '1.375rem', '@media (min-width:1024px)': { fontSize: '1.5rem' } }),
-    h4: heading({ fontSize: '1.25rem' }),
-    h5: heading({ fontSize: '1.125rem' }),
-    h6: heading({ fontSize: '1rem' }),
-    body1: { lineHeight: 1.6 }, // DS $line-height
-    body2: { lineHeight: 1.6 },
+    allVariants: { letterSpacing: ds.spacing.letter },
+    h1: displayHeading({
+        fontSize: ds.font.size.xxxxl,
+        [desktopMediaQuery]: { fontSize: ds.font.size.uul },
+    }),
+    h2: heading({
+        fontSize: ds.font.size.xxxl,
+        [desktopMediaQuery]: { fontSize: ds.font.size.ul },
+    }),
+    h3: heading({
+        fontSize: ds.font.size.xxl,
+        [desktopMediaQuery]: { fontSize: ds.font.size.xxxl },
+    }),
+    h4: heading({ fontSize: ds.font.size.xl }),
+    h5: heading({ fontSize: ds.font.size.l }),
+    h6: heading({ fontSize: ds.font.size.m }),
+    body1: { lineHeight: ds.lineHeight.long },
+    body2: { lineHeight: ds.lineHeight.long },
 };
-
+const dsOutlineStandard = {
+    outline: `4px solid ${ds.colour.utility[500]}`,
+    outlineOffset: '0px', // Prevents the outline from touching the text
+};
 const narrowLabelReflow = {
     '@media (max-width:899.95px)': {
         whiteSpace: 'normal',
@@ -114,177 +133,355 @@ const narrowLabelReflow = {
     },
 };
 
-export const mui1theme = createTheme({
-    palette: palette,
-    status: {
-        danger: red[500],
-        warning: orange[500],
+// DS theme overrides defined here in one place, then
+// merged in to the two themes below. This allows us to
+// not only have a single source of truth for the overrides,
+// but also easily allows us to override/add to them in
+// each specific theme if required - Mui will merge both
+// sets of settings together for us.
+export const commonThemeOverrides = {
+    MuiInputBase: {
+        styleOverrides: {
+            root: {
+                '&.Mui-focused': {
+                    ...dsOutlineStandard,
+
+                    '&:before': {
+                        borderBottom: 'none !important',
+                    },
+                },
+                // padding: `12px ${ds.spacing.m}`, // might be needed for ds input spacing
+            },
+        },
     },
-    typography,
-    components: {
-        MuiButtonBase: {
-            defaultProps: {
-                // Disable ripple for jest tests
-                disableRipple: IS_JEST_TEST,
-            },
-        },
-        MuiFormLabel: {
-            styleOverrides: {
-                root: {
-                    whiteSpace: 'nowrap',
-                    overflow: 'hidden',
-                    width: '100%',
-                    textOverflow: 'ellipsis',
-                    ...narrowLabelReflow,
+    MuiInput: {
+        styleOverrides: {
+            root: {
+                // Remove the default expanding blue bottom line on focus
+                '&:after': {
+                    borderBottom: 'none',
                 },
             },
         },
-        MuiInputLabel: {
-            styleOverrides: {
-                root: {
-                    ...narrowLabelReflow,
+    },
+
+    MuiInputLabel: {
+        styleOverrides: {
+            root: {
+                ...narrowLabelReflow,
+            },
+        },
+    },
+    MuiAppBar: {
+        styleOverrides: {
+            // `&&` raises specificity above the global MuiButtonBase focus rule.
+            root: {
+                '&& .MuiButtonBase-root.Mui-focusVisible': {
+                    outlineOffset: '-4px', // Draws the outline inside the button
                 },
             },
         },
-        MuiMenuItem: {
-            styleOverrides: {
-                root: {
-                    '&.selected': {
-                        backgroundColor: '#4085C6 !important',
-                        color: '#FFFFFF',
+    },
+
+    'MuiTiptap-FieldContainer': {
+        defaultProps: {
+            // If no `variant` value is set, use "standard"
+            variant: 'standard',
+        },
+        styleOverrides: {
+            // Apply this background color to the `root` slot
+            root: {
+                '&.MuiTiptap-FieldContainer-focused': {
+                    ...dsOutlineStandard,
+
+                    '&:hover': {
+                        '& .MuiTiptap-FieldContainer-notchedOutline': {
+                            border: 'none',
+                        },
                     },
                 },
             },
         },
-        MuiIconButton: {
-            styleOverrides: {
-                colorInherit: {
-                    color: 'none',
+    },
+
+    'MuiTiptap-MenuButton': {
+        styleOverrides: {
+            root: {
+                '& button.Mui-focusVisible': {
+                    ...dsOutlineStandard,
+                    borderRadius: '16px',
                 },
             },
         },
-        MUIDataTable: {
-            styleOverrides: {
-                paper: {
-                    boxShadow: 'none',
-                    padding: 0,
-                    margin: 0,
+    },
+
+    MuiButtonBase: {
+        styleOverrides: {
+            root: {
+                '&.Mui-focusVisible:not(.MuiSwitch-switchBase, .MuiCheckbox-root, .MuiRadio-root)': {
+                    ...dsOutlineStandard,
+                },
+                '&.Mui-focusVisible:is(.MuiTableSortLabel-root)': {
+                    outlineWidth: '2px',
+                    outlineOffset: '-2px',
+                    opacity: 1,
+                },
+                // keep the standard outline, but make it visible on the purple header
+                'header &.Mui-focusVisible:not(.MuiSwitch-switchBase)': {
+                    ...dsOutlineStandard,
+                    outlineColor: ds.colour.white,
+                },
+                // draw the outline inside the box for checkbox / radio buttons
+                // (`&&` keeps this above the header rule when they sit in the header)
+                '&&.Mui-focusVisible:is(.MuiCheckbox-root, .MuiRadio-root)': {
+                    '& svg': {
+                        ...dsOutlineStandard,
+                        outlineOffset: '-4px',
+                    },
+                },
+                '&&.Mui-focusVisible:is(.MuiIconButton-root)': {
+                    ...dsOutlineStandard,
+                    outlineOffset: '-4px',
                 },
             },
         },
-        MuiButton: {
-            styleOverrides: {
-                root: {
-                    variants: [
-                        {
-                            props: { variant: 'contained', color: 'default' }, // restore button default style to mui5
-                            style: {
-                                color: palette.default,
-                                boxShadow:
-                                    '0px 3px 1px -2px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12)',
-                                backgroundColor: '#e0e0e0',
-                                '&:hover': {
+    },
+
+    MuiSwitch: {
+        styleOverrides: {
+            // outline the switch thumb only when the input has keyboard focus
+            switchBase: {
+                '&.Mui-focusVisible .MuiSwitch-thumb': {
+                    ...dsOutlineStandard,
+                    outline: `4px solid ${ds.colour.utility[500]}`,
+                    outlineOffset: '0px',
+                },
+            },
+        },
+    },
+
+    MuiChip: {
+        styleOverrides: {
+            colorDefault: {
+                '&.Mui-focusVisible': {
+                    background: ds.colour.grey[100], // or 'transparent' to keep the chip's normal fill
+                },
+                '&:hover': {
+                    backgroundColor: ds.colour.grey[100], // only matters for clickable chips
+                },
+            },
+        },
+    },
+
+    MuiImageListItem: {
+        styleOverrides: {
+            root: {
+                '&:focus-visible': {
+                    ...dsOutlineStandard,
+                },
+            },
+        },
+    },
+
+    MuiTab: {
+        styleOverrides: {
+            root: {
+                '&.Mui-focusVisible.MuiTab-root': {
+                    outlineOffset: '-4px',
+                },
+            },
+        },
+    },
+
+    MuiDataGrid: {
+        styleOverrides: {
+            cell: {
+                '&:focus': {
+                    ...dsOutlineStandard,
+                    outlineOffset: '-4px',
+                },
+            },
+            columnHeader: {
+                '&:focus': {
+                    ...dsOutlineStandard,
+                    outlineOffset: '-4px',
+                },
+            },
+        },
+    },
+
+    MuiTableCell: {
+        styleOverrides: {
+            root: {
+                '&:focus-visible': {
+                    ...dsOutlineStandard,
+                    outlineOffset: '-4px',
+                },
+            },
+        },
+    },
+};
+
+export const mui1theme = createTheme(
+    {
+        palette: palette,
+        typography,
+        components: {
+            MuiFormLabel: {
+                styleOverrides: {
+                    root: {
+                        whiteSpace: 'nowrap',
+                        overflow: 'hidden',
+                        width: '100%',
+                        textOverflow: 'ellipsis',
+                        ...narrowLabelReflow,
+                    },
+                },
+            },
+            MuiMenuItem: {
+                styleOverrides: {
+                    root: {
+                        '&.selected': {
+                            backgroundColor: '#4085C6 !important',
+                            color: '#FFFFFF',
+                        },
+                    },
+                },
+            },
+            MuiIconButton: {
+                styleOverrides: {
+                    colorInherit: {
+                        color: 'none',
+                    },
+                },
+            },
+            MUIDataTable: {
+                styleOverrides: {
+                    paper: {
+                        boxShadow: 'none',
+                        padding: 0,
+                        margin: 0,
+                    },
+                },
+            },
+            MuiButtonBase: {
+                defaultProps: {
+                    // Disable ripple for jest tests
+                    disableRipple: IS_JEST_TEST,
+                },
+            },
+
+            MuiButton: {
+                styleOverrides: {
+                    root: {
+                        variants: [
+                            {
+                                props: { variant: 'contained', color: 'default' }, // restore button default style to mui5
+                                style: {
+                                    color: palette.default,
                                     boxShadow:
-                                        '0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12)',
-                                    backgroundColor: '#d5d5d5',
+                                        '0px 3px 1px -2px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12)',
+                                    backgroundColor: '#e0e0e0',
+                                    '&:hover': {
+                                        boxShadow:
+                                            '0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12)',
+                                        backgroundColor: '#d5d5d5',
+                                    },
                                 },
                             },
-                        },
-                    ],
-                },
-            },
-        },
-        MuiUseMediaQuery: {
-            defaultProps: {
-                noSsr: true,
-            },
-        },
-        MuiDataGrid: {
-            styleOverrides: {
-                root: {
-                    '& .MuiDataGrid-columnHeader:focus, .MuiDataGrid-cell:focus': {
-                        outline: 'none',
-                    },
-                    '& .MuiDataGrid-columnHeader:focus-within, .MuiDataGrid-cell:focus-within': {
-                        outline: 'none',
+                        ],
                     },
                 },
             },
+            MuiUseMediaQuery: {
+                defaultProps: {
+                    noSsr: true,
+                },
+            },
+            // MuiDataGrid: { // might need this to come back
+            //     styleOverrides: {
+            //         root: {
+            //             '& .MuiDataGrid-columnHeader:focus, .MuiDataGrid-cell:focus': {
+            //                 outline: 'none',
+            //             },
+            //             '& .MuiDataGrid-columnHeader:focus-within, .MuiDataGrid-cell:focus-within': {
+            //                 outline: 'none',
+            //             },
+            //         },
+            //     },
+            // },
         },
-    },
-    graphs: {
-        color1: '#d72865',
-        color2: '#1e7d94',
-        color3: '#49075E',
-        color4: '#468fcc',
-        color5: '#f28620',
-        color6: '#333333',
-        color7: '#595959',
-    },
-    // Converts a color hex code to RGBA when referenced from a component
-    hexToRGBA: (hex, alpha) => {
-        const r = parseInt(hex.slice(1, 3), 16);
-        const g = parseInt(hex.slice(3, 5), 16);
-        const b = parseInt(hex.slice(5, 7), 16);
+        graphs: {
+            color1: '#d72865',
+            color2: '#1e7d94',
+            color3: '#49075E',
+            color4: '#468fcc',
+            color5: '#f28620',
+            color6: '#333333',
+            color7: '#595959',
+        },
+        // Converts a color hex code to RGBA when referenced from a component
+        hexToRGBA: (hex, alpha) => {
+            const r = parseInt(hex.slice(1, 3), 16);
+            const g = parseInt(hex.slice(3, 5), 16);
+            const b = parseInt(hex.slice(5, 7), 16);
 
-        if (alpha) {
-            return 'rgba(' + r + ', ' + g + ', ' + b + ', ' + alpha + ')';
-        } else {
-            return 'rgb(' + r + ', ' + g + ', ' + b + ')';
-        }
+            if (alpha) {
+                return 'rgba(' + r + ', ' + g + ', ' + b + ', ' + alpha + ')';
+            } else {
+                return 'rgb(' + r + ', ' + g + ', ' + b + ')';
+            }
+        },
     },
-});
+    { components: commonThemeOverrides }, // merge in our DS overrides
+);
 
-export const adminTheme = createTheme({
-    palette: palette,
-    typography,
-    components: {
-        MuiButtonBase: {
-            defaultProps: {
-                // Disable ripple for jest tests
-                disableRipple: IS_JEST_TEST,
-            },
-        },
-        MuiFormLabel: {
-            styleOverrides: {
-                root: {
-                    color: '#4085C6',
-                    ...narrowLabelReflow,
+export const adminTheme = createTheme(
+    {
+        palette: palette,
+        typography,
+        components: {
+            MuiButton: {
+                defaultProps: {
+                    // Disable ripple for jest tests
+                    disableRipple: IS_JEST_TEST,
                 },
             },
-        },
-        MuiInputLabel: {
-            styleOverrides: {
-                root: {
-                    ...narrowLabelReflow,
+            MuiFormLabel: {
+                styleOverrides: {
+                    root: {
+                        color: '#4085C6',
+                        ...narrowLabelReflow,
+                    },
                 },
             },
-        },
-        MuiInputBase: {
-            styleOverrides: {
-                root: {
-                    fontWeight: 400,
+            MuiInputBase: {
+                styleOverrides: {
+                    root: {
+                        fontWeight: 400,
+                    },
                 },
             },
-        },
-        MuiIconButton: {
-            styleOverrides: {
-                colorInherit: {
-                    color: 'none',
+            MuiIconButton: {
+                styleOverrides: {
+                    colorInherit: {
+                        color: 'none',
+                    },
                 },
             },
-        },
-        MuiGrid: {
-            styleOverrides: {
-                root: {
-                    minWidth: 'auto',
+            MuiGrid: {
+                styleOverrides: {
+                    root: {
+                        minWidth: 'auto',
+                    },
                 },
             },
-        },
-        MuiUseMediaQuery: {
-            defaultProps: {
-                noSsr: true,
+            MuiUseMediaQuery: {
+                defaultProps: {
+                    noSsr: true,
+                },
             },
         },
     },
-});
+    { components: commonThemeOverrides }, // merge in our DS overrides
+);

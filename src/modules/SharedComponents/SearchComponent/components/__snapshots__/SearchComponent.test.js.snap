@@ -719,6 +719,7 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
                     data-indeterminate="false"
                     data-testid="advanced-search-open-access"
                     id="advanced-search-open-access"
+                    tabindex="0"
                     type="checkbox"
                   />
                   <svg
@@ -1168,6 +1169,7 @@ exports[`SearchComponent should render in advanced search and take in considerat
                     data-indeterminate="false"
                     data-testid="advanced-search-open-access"
                     id="advanced-search-open-access"
+                    tabindex="0"
                     type="checkbox"
                   />
                   <svg
@@ -1765,6 +1767,7 @@ exports[`SearchComponent should reset advanced search 1`] = `
                     data-indeterminate="false"
                     data-testid="advanced-search-open-access"
                     id="advanced-search-open-access"
+                    tabindex="0"
                     type="checkbox"
                   />
                   <svg
@@ -2285,6 +2288,7 @@ exports[`SearchComponent should toggle open access for advanced search 1`] = `
                     data-indeterminate="false"
                     data-testid="advanced-search-open-access"
                     id="advanced-search-open-access"
+                    tabindex="0"
                     type="checkbox"
                   />
                   <svg
@@ -2832,6 +2836,7 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
                     data-indeterminate="false"
                     data-testid="advanced-search-open-access"
                     id="advanced-search-open-access"
+                    tabindex="0"
                     type="checkbox"
                   />
                   <svg
@@ -3306,6 +3311,7 @@ exports[`SearchComponent should toggle to advanced search 1`] = `
                     data-indeterminate="false"
                     data-testid="advanced-search-open-access"
                     id="advanced-search-open-access"
+                    tabindex="0"
                     type="checkbox"
                   />
                   <svg
@@ -3830,6 +3836,7 @@ exports[`SearchComponent should update advanced search row on search text change
                     data-indeterminate="false"
                     data-testid="advanced-search-open-access"
                     id="advanced-search-open-access"
+                    tabindex="0"
                     type="checkbox"
                   />
                   <svg
@@ -4568,6 +4575,7 @@ exports[`SearchComponent should update date range filter 1`] = `
                     data-indeterminate="false"
                     data-testid="advanced-search-open-access"
                     id="advanced-search-open-access"
+                    tabindex="0"
                     type="checkbox"
                   />
                   <svg
@@ -5306,6 +5314,7 @@ exports[`SearchComponent should update date range filter 2`] = `
                     data-indeterminate="false"
                     data-testid="advanced-search-open-access"
                     id="advanced-search-open-access"
+                    tabindex="0"
                     type="checkbox"
                   />
                   <svg

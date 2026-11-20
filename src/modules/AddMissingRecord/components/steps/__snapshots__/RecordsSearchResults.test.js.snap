@@ -324,6 +324,7 @@ exports[`Search record results should render a single claimable item with no aut
                                 <a
                                   data-discover="true"
                                   href="/view/UQ:795469"
+                                  tabindex="0"
                                 >
                                   Early Onset Scoliosis - this is an edited book with editors only
                                 </a>
@@ -1168,6 +1169,7 @@ exports[`Search record results should render a single unclaimable item with no a
                                 <a
                                   data-discover="true"
                                   href="/view/UQ:795469"
+                                  tabindex="0"
                                 />
                               </h3>
                             </div>
@@ -1944,6 +1946,7 @@ exports[`Search record results should render a single unclaimable item with no a
                                 <a
                                   data-discover="true"
                                   href="/view/UQ:795469"
+                                  tabindex="0"
                                 />
                               </h3>
                             </div>
@@ -2720,6 +2723,7 @@ exports[`Search record results should render publications list with one publicat
                                 <a
                                   data-discover="true"
                                   href="/view/UQ:255472"
+                                  tabindex="0"
                                 />
                               </h3>
                             </div>

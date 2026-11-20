@@ -1,7 +1,7 @@
 import React from 'react';
-import { render } from 'test-utils';
+import { render, fireEvent } from 'test-utils';
 
-import locale from 'locale/components';
+import appLocale from 'locale/components';
 
 import {
     exportReportFilters,
@@ -55,7 +55,7 @@ describe('config', () => {
     });
 
     describe('exportReportFilters', () => {
-        const txt = locale.components.adminDashboard.tabs.reports;
+        const txt = appLocale.components.adminDashboard.tabs.reports;
         // const setup = (Component, testProps = {}, renderer = render) => {
         //     const props = {
         //         ...testProps,
@@ -259,6 +259,94 @@ describe('config', () => {
 
             expect(fn(null, rowUnassigned)).toBe(true);
             expect(fn(null, rowAssigned)).toBe(false);
+        });
+
+        describe('status cell view details action', () => {
+            const txt = appLocale.components.adminDashboard.tabs.systemalerts;
+            const params = {
+                id: 7,
+                formattedValue: 'Unassigned',
+                row: { sat_id: 7, sat_title: 'Broken thing', sat_assigned_to: null },
+            };
+            const renderStatusCell = (onViewDetails, onParentClick = jest.fn(), onParentKeyDown = jest.fn()) => {
+                const columns = getSystemAlertColumns(txt, users, currentUser, statusOptions, onViewDetails);
+                const statusCol = columns.find(c => c.field === 'sat_assigned_to');
+                return render(
+                    <div onClick={onParentClick} onKeyDown={onParentKeyDown}>
+                        {statusCol.renderCell(params)}
+                    </div>,
+                );
+            };
+
+            it('is not interactive when no handler is supplied', () => {
+                const { getByTestId } = renderStatusCell(undefined);
+                const chip = getByTestId('alert-status-7');
+                expect(chip).not.toHaveAttribute('role', 'button');
+                expect(chip).not.toHaveAttribute('aria-label');
+            });
+
+            it('renders a labelled, focusable button that runs the action once without reaching the row', () => {
+                const onViewDetails = jest.fn();
+                const onParentClick = jest.fn();
+                const { getByRole } = renderStatusCell(onViewDetails, onParentClick);
+                const button = getByRole('button', { name: 'Unassigned - click to view details and assign' });
+                expect(button).toHaveAttribute('tabindex', '0');
+
+                fireEvent.click(button);
+                expect(onViewDetails).toHaveBeenCalledTimes(1);
+                expect(onViewDetails).toHaveBeenCalledWith(params.row);
+                expect(onParentClick).not.toHaveBeenCalled();
+            });
+
+            it.each([
+                [{ sat_assigned_to: 13 }, 'Staff', 'Alert is assigned to Staff - click to view details'],
+                [
+                    { sat_assigned_to: 999 },
+                    'Unknown',
+                    'An unknown user is assigned to this alert - click to view details',
+                ],
+            ])('describes the assignment in the label for %j', (rowOverride, formattedValue, expected) => {
+                const columns = getSystemAlertColumns(txt, users, currentUser, statusOptions, jest.fn());
+                const statusCol = columns.find(c => c.field === 'sat_assigned_to');
+                const { getByRole } = render(
+                    statusCol.renderCell({ ...params, formattedValue, row: { ...params.row, ...rowOverride } }),
+                );
+                expect(getByRole('button', { name: expected })).toBeInTheDocument();
+            });
+
+            it('follows the grid roving tabindex and takes focus when its cell is focused', () => {
+                const columns = getSystemAlertColumns(txt, users, currentUser, statusOptions, jest.fn());
+                const statusCol = columns.find(c => c.field === 'sat_assigned_to');
+                const { getByRole, rerender } = render(
+                    statusCol.renderCell({ ...params, tabIndex: -1, hasFocus: false }),
+                );
+                const button = getByRole('button');
+                expect(button).toHaveAttribute('tabindex', '-1');
+                expect(button).not.toHaveFocus();
+
+                rerender(statusCol.renderCell({ ...params, tabIndex: 0, hasFocus: true }));
+                expect(getByRole('button')).toHaveAttribute('tabindex', '0');
+                expect(getByRole('button')).toHaveFocus();
+            });
+
+            it('activates with Enter and Space without the keys reaching the grid', () => {
+                const onViewDetails = jest.fn();
+                const onParentKeyDown = jest.fn();
+                const { getByRole } = renderStatusCell(onViewDetails, jest.fn(), onParentKeyDown);
+                const button = getByRole('button');
+
+                fireEvent.keyDown(button, { key: 'Enter' });
+                expect(onViewDetails).toHaveBeenCalledTimes(1);
+                fireEvent.keyDown(button, { key: ' ' });
+                fireEvent.keyUp(button, { key: ' ' });
+                expect(onViewDetails).toHaveBeenCalledTimes(2);
+                expect(onParentKeyDown).not.toHaveBeenCalled();
+
+                // other keys, e.g. arrows, must still bubble so grid navigation keeps working
+                fireEvent.keyDown(button, { key: 'ArrowRight' });
+                expect(onParentKeyDown).toHaveBeenCalledTimes(1);
+                expect(onViewDetails).toHaveBeenCalledTimes(2);
+            });
         });
     });
 
