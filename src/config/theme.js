@@ -320,6 +320,31 @@ export const commonThemeOverrides = {
             },
         },
     },
+    MuiList: {
+        styleOverrides: {
+            root: {
+                '&.auth-menu': {
+                    padding: '8px 0 24px 0',
+                    color: ds.colour.purple[500],
+                    minWidth: '200px',
+                },
+            },
+        },
+    },
+    MuiMenuItem: {
+        styleOverrides: {
+            root: {
+                '&.auth-menu-item': {
+                    padding: '12px 16px 0 24px',
+                    textDecoration: 'none',
+                    '&:hover': {
+                        backgroundColor: 'initial',
+                        textDecoration: 'underline',
+                    },
+                },
+            },
+        },
+    },
 };
 
 export const mui1theme = createTheme(

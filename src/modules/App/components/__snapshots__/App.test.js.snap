@@ -140,9 +140,8 @@ exports[`Application component Should display mobile correctly 1`] = `
               class="auth-button-wrapper"
             >
               <button
-                aria-label="Log in"
+                aria-haspopup="true"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge log-in-button css-MuiButtonBase-root-MuiIconButton-root"
-                data-mui-internal-clone-element="true"
                 tabindex="0"
                 type="button"
               >
@@ -158,6 +157,11 @@ exports[`Application component Should display mobile correctly 1`] = `
                     d="M12 5.9c1.16 0 2.1.94 2.1 2.1s-.94 2.1-2.1 2.1S9.9 9.16 9.9 8s.94-2.1 2.1-2.1m0 9c2.97 0 6.1 1.46 6.1 2.1v1.1H5.9V17c0-.64 3.13-2.1 6.1-2.1M12 4C9.79 4 8 5.79 8 8s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4m0 9c-2.67 0-8 1.34-8 4v3h16v-3c0-2.66-5.33-4-8-4"
                   />
                 </svg>
+                <span
+                  class="sr-only"
+                >
+                  Log in
+                </span>
               </button>
             </div>
           </div>
@@ -986,9 +990,8 @@ exports[`Application component should render alert if user is not fez author 1`]
               class="auth-button-wrapper"
             >
               <button
-                aria-label="Log out - undefined"
+                aria-haspopup="true"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge log-out-button css-MuiButtonBase-root-MuiIconButton-root"
-                data-mui-internal-clone-element="true"
                 tabindex="0"
                 type="button"
               >
@@ -1004,6 +1007,11 @@ exports[`Application component should render alert if user is not fez author 1`]
                     d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4m0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4"
                   />
                 </svg>
+                <span
+                  class="sr-only"
+                >
+                  Log out - undefined
+                </span>
               </button>
             </div>
           </div>
@@ -1562,9 +1570,8 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
               class="auth-button-wrapper"
             >
               <button
-                aria-label="Log out - J RHD Student"
+                aria-haspopup="true"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge log-out-button css-MuiButtonBase-root-MuiIconButton-root"
-                data-mui-internal-clone-element="true"
                 tabindex="0"
                 type="button"
               >
@@ -1580,6 +1587,11 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                     d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4m0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4"
                   />
                 </svg>
+                <span
+                  class="sr-only"
+                >
+                  Log out - J RHD Student
+                </span>
               </button>
             </div>
           </div>
@@ -2074,9 +2086,8 @@ exports[`Application component should render app for account with fez author wit
               class="auth-button-wrapper"
             >
               <button
-                aria-label="Log out - undefined"
+                aria-haspopup="true"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge log-out-button css-MuiButtonBase-root-MuiIconButton-root"
-                data-mui-internal-clone-element="true"
                 tabindex="0"
                 type="button"
               >
@@ -2092,6 +2103,11 @@ exports[`Application component should render app for account with fez author wit
                     d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4m0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4"
                   />
                 </svg>
+                <span
+                  class="sr-only"
+                >
+                  Log out - undefined
+                </span>
               </button>
             </div>
           </div>
@@ -2586,9 +2602,8 @@ exports[`Application component should render application with routing for the us
               class="auth-button-wrapper"
             >
               <button
-                aria-label="Log out - undefined"
+                aria-haspopup="true"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge log-out-button css-MuiButtonBase-root-MuiIconButton-root"
-                data-mui-internal-clone-element="true"
                 tabindex="0"
                 type="button"
               >
@@ -2604,6 +2619,11 @@ exports[`Application component should render application with routing for the us
                     d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4m0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4"
                   />
                 </svg>
+                <span
+                  class="sr-only"
+                >
+                  Log out - undefined
+                </span>
               </button>
             </div>
           </div>
@@ -2885,9 +2905,8 @@ exports[`Application component should render for anon user 1`] = `
               class="auth-button-wrapper"
             >
               <button
-                aria-label="Log in"
+                aria-haspopup="true"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge log-in-button css-MuiButtonBase-root-MuiIconButton-root"
-                data-mui-internal-clone-element="true"
                 tabindex="0"
                 type="button"
               >
@@ -2903,6 +2922,11 @@ exports[`Application component should render for anon user 1`] = `
                     d="M12 5.9c1.16 0 2.1.94 2.1 2.1s-.94 2.1-2.1 2.1S9.9 9.16 9.9 8s.94-2.1 2.1-2.1m0 9c2.97 0 6.1 1.46 6.1 2.1v1.1H5.9V17c0-.64 3.13-2.1 6.1-2.1M12 4C9.79 4 8 5.79 8 8s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4m0 9c-2.67 0-8 1.34-8 4v3h16v-3c0-2.66-5.33-4-8-4"
                   />
                 </svg>
+                <span
+                  class="sr-only"
+                >
+                  Log in
+                </span>
               </button>
             </div>
           </div>

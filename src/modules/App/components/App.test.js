@@ -9,6 +9,7 @@ import {
     WithReduxStore,
     WithMemoryRouter,
     fireEvent,
+    userEvent,
     waitForText,
     spyOnWindowLocationMethod,
 } from 'test-utils';
@@ -183,13 +184,14 @@ describe('Application component', () => {
         expect(mockUseNavigate).toHaveBeenCalledWith('/admin/dashboard', { replace: true });
     });
 
-    it('should redirect to logout page', () => {
+    it('should redirect to logout page', async () => {
         const { getByRole } = setup({
             account: account,
             author: author,
         });
 
-        fireEvent.click(getByRole('button', { name: /Log out/i }));
+        await userEvent.click(getByRole('button', { name: /Log out/i }));
+        await userEvent.click(getByRole('menuitem'));
         expect(assignMock).toHaveBeenCalledWith('https://auth.library.uq.edu.au/logout?url=aHR0cDovL2xvY2FsaG9zdC8=');
     });
 
