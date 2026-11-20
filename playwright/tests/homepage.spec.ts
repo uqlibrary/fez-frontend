@@ -15,25 +15,25 @@ test.describe('Homepage', () => {
             .getByText(/Trending on Scopus/)
             .first()
             .click();
-        await expect(page.locator('h6').getByText(/Scopus citation count/)).toBeVisible();
-        await expect(page.locator('h6').getByText(/Web of Science citation count/)).not.toBeVisible();
-        await expect(page.locator('h6').getByText(/Altmetric score/)).not.toBeVisible();
+        await expect(page.locator('h2').getByText(/Scopus citation count/)).toBeVisible();
+        await expect(page.locator('h2').getByText(/Web of Science citation count/)).not.toBeVisible();
+        await expect(page.locator('h2').getByText(/Altmetric score/)).not.toBeVisible();
         await page
             .locator('button[role="tab"]')
             .getByText(/Trending on Web of science/)
             .first()
             .click();
-        await expect(page.locator('h6').getByText(/Scopus citation count/)).not.toBeVisible();
-        await expect(page.locator('h6').getByText(/Web of Science citation count/)).toBeVisible();
-        await expect(page.locator('h6').getByText(/Altmetric score/)).not.toBeVisible();
+        await expect(page.locator('h2').getByText(/Scopus citation count/)).not.toBeVisible();
+        await expect(page.locator('h2').getByText(/Web of Science citation count/)).toBeVisible();
+        await expect(page.locator('h2').getByText(/Altmetric score/)).not.toBeVisible();
         await page
             .locator('button[role="tab"]')
             .getByText(/Trending on Altmetric/)
             .first()
             .click();
-        await expect(page.locator('h6').getByText(/Scopus citation count/)).not.toBeVisible();
-        await expect(page.locator('h6').getByText(/Web of Science citation count/)).not.toBeVisible();
-        await expect(page.locator('h6').getByText(/Altmetric score/)).toBeVisible();
+        await expect(page.locator('h2').getByText(/Scopus citation count/)).not.toBeVisible();
+        await expect(page.locator('h2').getByText(/Web of Science citation count/)).not.toBeVisible();
+        await expect(page.locator('h2').getByText(/Altmetric score/)).toBeVisible();
         await expect(page.locator('h3', { hasText: /Acknowledgement of Country/ }).first()).toBeVisible();
         await expect(page.locator('h3', { hasText: /Cultural advice/ }).first()).toBeVisible();
     });

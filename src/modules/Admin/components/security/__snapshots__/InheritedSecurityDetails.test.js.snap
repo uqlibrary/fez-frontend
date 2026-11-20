@@ -6,12 +6,12 @@ exports[`InheritedSecurityDetails component should render collections correctly 
     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
     style="padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
   >
-    <h6
+    <h5
       class="MuiTypography-root MuiTypography-h6 css-MuiTypography-root"
       style="margin-top: -8px;"
     >
       Inherited security policy details
-    </h6>
+    </h5>
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-MuiGrid-root"
       style="margin-top: 8px;"
@@ -19,20 +19,20 @@ exports[`InheritedSecurityDetails component should render collections correctly 
       <div
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-MuiGrid-root"
       >
-        <h6
+        <div
           class="MuiTypography-root MuiTypography-subtitle1 css-MuiTypography-root"
         >
           UQ:11111
-        </h6>
+        </div>
       </div>
       <div
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-7 css-MuiGrid-root"
       >
-        <h6
+        <div
           class="MuiTypography-root MuiTypography-subtitle2 css-MuiTypography-root"
         >
           Test collection
-        </h6>
+        </div>
       </div>
       <div
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-MuiGrid-root"
@@ -46,20 +46,20 @@ exports[`InheritedSecurityDetails component should render collections correctly 
       <div
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-MuiGrid-root"
       >
-        <h6
+        <div
           class="MuiTypography-root MuiTypography-subtitle1 css-MuiTypography-root"
         >
           UQ:22222
-        </h6>
+        </div>
       </div>
       <div
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-7 css-MuiGrid-root"
       >
-        <h6
+        <div
           class="MuiTypography-root MuiTypography-subtitle2 css-MuiTypography-root"
         >
           Another test collection
-        </h6>
+        </div>
       </div>
       <div
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-MuiGrid-root"
@@ -81,12 +81,12 @@ exports[`InheritedSecurityDetails component should render collections for datast
     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
     style="padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
   >
-    <h6
+    <h5
       class="MuiTypography-root MuiTypography-h6 css-MuiTypography-root"
       style="margin-top: -8px;"
     >
       Inherited datastream security policy details
-    </h6>
+    </h5>
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-MuiGrid-root"
       style="margin-top: 8px;"
@@ -94,20 +94,20 @@ exports[`InheritedSecurityDetails component should render collections for datast
       <div
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-MuiGrid-root"
       >
-        <h6
+        <div
           class="MuiTypography-root MuiTypography-subtitle1 css-MuiTypography-root"
         >
           UQ:11111
-        </h6>
+        </div>
       </div>
       <div
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-7 css-MuiGrid-root"
       >
-        <h6
+        <div
           class="MuiTypography-root MuiTypography-subtitle2 css-MuiTypography-root"
         >
           Test collection
-        </h6>
+        </div>
       </div>
       <div
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-MuiGrid-root"
@@ -121,20 +121,20 @@ exports[`InheritedSecurityDetails component should render collections for datast
       <div
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-MuiGrid-root"
       >
-        <h6
+        <div
           class="MuiTypography-root MuiTypography-subtitle1 css-MuiTypography-root"
         >
           UQ:22222
-        </h6>
+        </div>
       </div>
       <div
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-7 css-MuiGrid-root"
       >
-        <h6
+        <div
           class="MuiTypography-root MuiTypography-subtitle2 css-MuiTypography-root"
         >
           Another test collection
-        </h6>
+        </div>
       </div>
       <div
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-MuiGrid-root"
@@ -156,12 +156,12 @@ exports[`InheritedSecurityDetails component should render collections for datast
     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
     style="padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
   >
-    <h6
+    <h5
       class="MuiTypography-root MuiTypography-h6 css-MuiTypography-root"
       style="margin-top: -8px;"
     >
       Inherited datastream security policy details
-    </h6>
+    </h5>
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-MuiGrid-root"
       style="margin-top: 8px;"
@@ -169,20 +169,20 @@ exports[`InheritedSecurityDetails component should render collections for datast
       <div
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-MuiGrid-root"
       >
-        <h6
+        <div
           class="MuiTypography-root MuiTypography-subtitle1 css-MuiTypography-root"
         >
           UQ:11111
-        </h6>
+        </div>
       </div>
       <div
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-7 css-MuiGrid-root"
       >
-        <h6
+        <div
           class="MuiTypography-root MuiTypography-subtitle2 css-MuiTypography-root"
         >
           Test collection
-        </h6>
+        </div>
       </div>
       <div
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-MuiGrid-root"
@@ -194,20 +194,20 @@ exports[`InheritedSecurityDetails component should render collections for datast
       <div
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-MuiGrid-root"
       >
-        <h6
+        <div
           class="MuiTypography-root MuiTypography-subtitle1 css-MuiTypography-root"
         >
           UQ:22222
-        </h6>
+        </div>
       </div>
       <div
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-7 css-MuiGrid-root"
       >
-        <h6
+        <div
           class="MuiTypography-root MuiTypography-subtitle2 css-MuiTypography-root"
         >
           Another test collection
-        </h6>
+        </div>
       </div>
       <div
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-MuiGrid-root"
@@ -227,12 +227,12 @@ exports[`InheritedSecurityDetails component should render collections for record
     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
     style="padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
   >
-    <h6
+    <h5
       class="MuiTypography-root MuiTypography-h6 css-MuiTypography-root"
       style="margin-top: -8px;"
     >
       Inherited security policy details
-    </h6>
+    </h5>
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-MuiGrid-root"
       style="margin-top: 8px;"
@@ -240,20 +240,20 @@ exports[`InheritedSecurityDetails component should render collections for record
       <div
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-MuiGrid-root"
       >
-        <h6
+        <div
           class="MuiTypography-root MuiTypography-subtitle1 css-MuiTypography-root"
         >
           UQ:11111
-        </h6>
+        </div>
       </div>
       <div
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-7 css-MuiGrid-root"
       >
-        <h6
+        <div
           class="MuiTypography-root MuiTypography-subtitle2 css-MuiTypography-root"
         >
           Test collection
-        </h6>
+        </div>
       </div>
       <div
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-MuiGrid-root"
@@ -265,20 +265,20 @@ exports[`InheritedSecurityDetails component should render collections for record
       <div
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-MuiGrid-root"
       >
-        <h6
+        <div
           class="MuiTypography-root MuiTypography-subtitle1 css-MuiTypography-root"
         >
           UQ:22222
-        </h6>
+        </div>
       </div>
       <div
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-7 css-MuiGrid-root"
       >
-        <h6
+        <div
           class="MuiTypography-root MuiTypography-subtitle2 css-MuiTypography-root"
         >
           Another test collection
-        </h6>
+        </div>
       </div>
       <div
         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-MuiGrid-root"
@@ -298,12 +298,12 @@ exports[`InheritedSecurityDetails component should render properly 1`] = `
     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
     style="padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
   >
-    <h6
+    <h5
       class="MuiTypography-root MuiTypography-h6 css-MuiTypography-root"
       style="margin-top: -8px;"
     >
       Inherited security policy details
-    </h6>
+    </h5>
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-MuiGrid-root"
       style="margin-top: 8px;"

@@ -30,7 +30,7 @@ const Masquerade = ({ account }) => {
     };
 
     return (
-        <StandardPage>
+        <StandardPage title={txt.title} hideTitle>
             <StandardCard title={txt.title} help={txt.help}>
                 {account.canMasqueradeType && account.canMasqueradeType === 'readonly' ? (
                     <Typography>{txt.description.readonly}</Typography>

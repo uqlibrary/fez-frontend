@@ -61,14 +61,13 @@ export const FindRecords = () => {
                         <Field
                             control={control}
                             component={TextField}
-                            autoComplete={'search'}
+                            autoComplete={'on'}
                             aria-describedby="search-description"
                             color={'primary'}
                             required
                             name="searchQuery"
                             fullWidth
                             label={txt.fieldLabels.search}
-                            autoFocus
                             validate={[validation.required, validate]}
                             textFieldId="search-query"
                         />

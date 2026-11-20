@@ -140,6 +140,15 @@ describe('Component PossiblyMyRecords', () => {
         expect(mockSearchPossiblyYourPublications).toHaveBeenCalledTimes(2);
     });
 
+    it('puts the list in a named region screen readers can jump to', () => {
+        const { getByRole } = setup({
+            possibleCounts: 1,
+            possiblePublicationsList: [{ rek_pid: 'UQ:1', rek_title: 'Possible work one' }],
+            possiblePublicationsPagingData: { total: 1, per_page: 20, current_page: 1, from: 1, to: 1 },
+        });
+        expect(getByRole('region', { name: 'Results' })).toHaveTextContent('Possible work one');
+    });
+
     it('renders alert when the hide pub api fails', async () => {
         const { container } = setup({
             hidePublicationFailed: true,

@@ -247,6 +247,18 @@ describe('SearchRecords page', () => {
         expect(getByText('Displaying works 10 to 20 of 100 total works.')).toBeInTheDocument();
     });
 
+    it('should put the results in a named region screen readers can jump to', () => {
+        const { getByRole } = setup(null, {
+            searchRecordsReducer: {
+                publicationsList: [{ rek_title: 'Title 01' }, { rek_title: 'Title 02' }],
+                publicationsListPagingData: { from: 1, to: 2, total: 2 },
+            },
+        });
+        expect(getByRole('region', { name: 'Search results' })).toHaveTextContent(
+            'Displaying works 1 to 2 of 2 total works.',
+        );
+    });
+
     it('should show facets even if there are no results', () => {
         const { getByText } = setup(
             {

@@ -228,11 +228,11 @@ exports[`Component ThirdPartyLookupTool should render a form ready for input 1`]
                   class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
                   style="flex-grow: 1; width: 1px;"
                 >
-                  <h5
+                  <h3
                     class="MuiTypography-root MuiTypography-h5 css-MuiTypography-root"
                   >
                     Incites
-                  </h5>
+                  </h3>
                 </div>
                 <div
                   class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
@@ -378,11 +378,11 @@ exports[`Component ThirdPartyLookupTool should set state with submitted data 1`]
                   class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
                   style="flex-grow: 1; width: 1px;"
                 >
-                  <h5
+                  <h3
                     class="MuiTypography-root MuiTypography-h5 css-MuiTypography-root"
                   >
                     Incites
-                  </h5>
+                  </h3>
                 </div>
                 <div
                   class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"

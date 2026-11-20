@@ -77,7 +77,9 @@ export const ThirdPartyLookupForm = ({
                 <StandardCard noHeader>
                     <Grid container spacing={3}>
                         <Grid style={{ flexGrow: 1, width: 1 }}>
-                            <Typography variant="h5">{lookupLabel}</Typography>
+                            <Typography variant="h5" component="h3">
+                                {lookupLabel}
+                            </Typography>
                         </Grid>
                         <Grid>
                             <IconButton

@@ -64,6 +64,7 @@ export default {
             tooltip: 'Main navigation',
             aria: 'Click to open the main navigation',
             closeMenuLabel: 'Close menu',
+            navAriaLabel: 'Main menu',
         },
         authentication: {
             signInText: 'Log in',
@@ -72,9 +73,9 @@ export default {
             ariaOut: 'Click to log out of eSpace',
         },
         skipNav: {
-            title: 'Skip Navigation',
-            ariaLabel: 'Click to skip, or tab to progress to the navigation',
+            title: 'Skip to main content',
         },
+        opensInNewWindow: '(opens in a new window)',
         loginAlert: {
             title: 'You are not logged in',
             message: 'Login to UQ eSpace for full search results and more services.',
