@@ -27,11 +27,11 @@ exports[`Component ThirdPartyLookupForm should display form in minimised view 1`
               class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
               style="flex-grow: 1; width: 1px;"
             >
-              <h5
+              <h3
                 class="MuiTypography-root MuiTypography-h5 css-MuiTypography-root"
               >
                 Test Form
-              </h5>
+              </h3>
             </div>
             <div
               class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
@@ -91,11 +91,11 @@ exports[`Component ThirdPartyLookupForm should display form without a secondary 
               class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
               style="flex-grow: 1; width: 1px;"
             >
-              <h5
+              <h3
                 class="MuiTypography-root MuiTypography-h5 css-MuiTypography-root"
               >
                 Incites
-              </h5>
+              </h3>
             </div>
             <div
               class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
@@ -194,11 +194,11 @@ exports[`Component ThirdPartyLookupForm should show form with non-minimised form
               class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
               style="flex-grow: 1; width: 1px;"
             >
-              <h5
+              <h3
                 class="MuiTypography-root MuiTypography-h5 css-MuiTypography-root"
               >
                 Test Form
-              </h5>
+              </h3>
             </div>
             <div
               class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
@@ -319,11 +319,11 @@ exports[`Component ThirdPartyLookupForm should toggle nested items on click 1`] 
               class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
               style="flex-grow: 1; width: 1px;"
             >
-              <h5
+              <h3
                 class="MuiTypography-root MuiTypography-h5 css-MuiTypography-root"
               >
                 Test Form
-              </h5>
+              </h3>
             </div>
             <div
               class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
@@ -383,11 +383,11 @@ exports[`Component ThirdPartyLookupForm should toggle nested items on click 2`] 
               class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
               style="flex-grow: 1; width: 1px;"
             >
-              <h5
+              <h3
                 class="MuiTypography-root MuiTypography-h5 css-MuiTypography-root"
               >
                 Test Form
-              </h5>
+              </h3>
             </div>
             <div
               class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
@@ -508,11 +508,11 @@ exports[`Component ThirdPartyLookupForm should toggle nested items on click 3`] 
               class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
               style="flex-grow: 1; width: 1px;"
             >
-              <h5
+              <h3
                 class="MuiTypography-root MuiTypography-h5 css-MuiTypography-root"
               >
                 Test Form
-              </h5>
+              </h3>
             </div>
             <div
               class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
@@ -572,11 +572,11 @@ exports[`Component ThirdPartyLookupForm should use defaults when locale values a
               class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
               style="flex-grow: 1; width: 1px;"
             >
-              <h5
+              <h3
                 class="MuiTypography-root MuiTypography-h5 css-MuiTypography-root"
               >
                 this form
-              </h5>
+              </h3>
             </div>
             <div
               class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
@@ -699,11 +699,11 @@ exports[`Component ThirdPartyLookupForm should use locale values when provided 1
               class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
               style="flex-grow: 1; width: 1px;"
             >
-              <h5
+              <h3
                 class="MuiTypography-root MuiTypography-h5 css-MuiTypography-root"
               >
                 this form
-              </h5>
+              </h3>
             </div>
             <div
               class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"

@@ -236,7 +236,9 @@ const FeedbackRecord = () => {
                                         />
                                     </Grid>
                                     <Grid size={12}>
-                                        <Typography variant={'h6'}>{txtForm.indigenousIdentity.title}</Typography>
+                                        <Typography variant={'h6'} component={'h4'}>
+                                            {txtForm.indigenousIdentity.title}
+                                        </Typography>
                                         <Field
                                             control={control}
                                             component={RadioGroupField}
@@ -248,7 +250,9 @@ const FeedbackRecord = () => {
                                         />
                                     </Grid>
                                     <Grid size={12}>
-                                        <Typography variant={'h6'}>{txtForm.hasKinshipConnection.title}</Typography>
+                                        <Typography variant={'h6'} component={'h4'}>
+                                            {txtForm.hasKinshipConnection.title}
+                                        </Typography>
                                         <Field
                                             control={control}
                                             component={RadioGroupField}
@@ -260,7 +264,7 @@ const FeedbackRecord = () => {
                                         />
                                     </Grid>
                                     <Grid size={12}>
-                                        <Typography variant={'h6'}>
+                                        <Typography variant={'h6'} component={'h4'}>
                                             {txtForm.isICIPHolder.title}
                                             <HelpIcon
                                                 {...txtForm.isICIPHolder.helpPanel}
@@ -280,7 +284,9 @@ const FeedbackRecord = () => {
                                     </Grid>
                                     {data.isIcipHolder === '1' && (
                                         <Grid size={12}>
-                                            <Typography variant={'h6'}>{txtForm.communityParticipant.title}</Typography>
+                                            <Typography variant={'h6'} component={'h4'}>
+                                                {txtForm.communityParticipant.title}
+                                            </Typography>
                                             <Field
                                                 control={control}
                                                 component={RadioGroupField}
@@ -313,7 +319,9 @@ const FeedbackRecord = () => {
                                 <StandardCard>
                                     <Grid container spacing={3}>
                                         <Grid size={12}>
-                                            <Typography variant={'h6'}>{txtForm.communityInfo.title}</Typography>
+                                            <Typography variant={'h6'} component={'h4'}>
+                                                {txtForm.communityInfo.title}
+                                            </Typography>
                                             <Field
                                                 control={control}
                                                 component={TextField}
@@ -329,7 +337,9 @@ const FeedbackRecord = () => {
                                             />
                                         </Grid>
                                         <Grid size={12}>
-                                            <Typography variant={'h6'}>{txtForm.relatedPeople.title}</Typography>
+                                            <Typography variant={'h6'} component={'h4'}>
+                                                {txtForm.relatedPeople.title}
+                                            </Typography>
                                             <Field
                                                 control={control}
                                                 component={TextField}
@@ -351,7 +361,9 @@ const FeedbackRecord = () => {
                         {feedbackTypes?.hasOwnProperty('story') && (
                             <Grid size={12}>
                                 <StandardCard>
-                                    <Typography variant={'h6'}>{txtForm.story.title}</Typography>
+                                    <Typography variant={'h6'} component={'h4'}>
+                                        {txtForm.story.title}
+                                    </Typography>
                                     <Field
                                         control={control}
                                         component={TextField}
@@ -378,7 +390,9 @@ const FeedbackRecord = () => {
                                         }}
                                     >
                                         <Grid size={12}>
-                                            <Typography variant={'h6'}>{txtForm.culturalInfo.title}</Typography>
+                                            <Typography variant={'h6'} component={'h4'}>
+                                                {txtForm.culturalInfo.title}
+                                            </Typography>
                                             <Field
                                                 control={control}
                                                 component={CheckboxGroup}
@@ -390,7 +404,9 @@ const FeedbackRecord = () => {
                                             />
                                         </Grid>
                                         <Grid size={12}>
-                                            <Typography variant={'h6'}>{txtForm.specialCare.title}</Typography>
+                                            <Typography variant={'h6'} component={'h4'}>
+                                                {txtForm.specialCare.title}
+                                            </Typography>
                                             <Field
                                                 control={control}
                                                 component={CheckboxGroup}
@@ -409,7 +425,9 @@ const FeedbackRecord = () => {
                             <StandardCard>
                                 <Grid container spacing={3}>
                                     <Grid size={12}>
-                                        <Typography variant={'h6'}>{txtForm.acknowledgement.title}</Typography>
+                                        <Typography variant={'h6'} component={'h4'}>
+                                            {txtForm.acknowledgement.title}
+                                        </Typography>
                                         <Field
                                             control={control}
                                             component={RadioGroupField}

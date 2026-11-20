@@ -72,10 +72,8 @@ export const JournalSearchInput = ({ initialValue = '', onReset }) => {
             </Grid>
             <Grid size={12}>
                 <TextField
-                    autoFocus
                     textFieldId="journal-search-keywords"
-                    placeholder={txt.placeholder}
-                    ariaLabel={`${txt.aria_label} ${txt.placeholder}`}
+                    ariaLabel={txt.journalSearchInput.title}
                     name="journal-search-keywords-input"
                     autoComplete="off"
                     onChange={handleJournalSearchInput}

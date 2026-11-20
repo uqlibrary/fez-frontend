@@ -461,12 +461,19 @@ export const PublicationCitation = ({
                                             {showSourceCountIcon && (
                                                 <Grid>
                                                     <span className={`fez-icon ${recordValue.source} xxxlarge`} />
-                                                    <Typography variant="h6">{recordValue.count}</Typography>
+                                                    <Typography variant="h6" component="div">
+                                                        {recordValue.count}
+                                                    </Typography>
                                                 </Grid>
                                             )}
                                             {!showSourceCountIcon && !hideCountTotal && (
                                                 <Grid>
-                                                    <Typography variant="h6" color="inherit" className="count">
+                                                    <Typography
+                                                        variant="h6"
+                                                        component="div"
+                                                        color="inherit"
+                                                        className="count"
+                                                    >
                                                         {Math.round(recordValue.count)}
                                                     </Typography>
                                                 </Grid>
@@ -475,6 +482,7 @@ export const PublicationCitation = ({
                                                 <Grid>
                                                     <Typography
                                                         variant="h6"
+                                                        component="div"
                                                         color="inherit"
                                                         className="difference"
                                                         title={

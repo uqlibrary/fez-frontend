@@ -17,6 +17,12 @@ describe('Snapshot tests for StandardPage component', () => {
         expect(container).toMatchSnapshot();
     });
 
+    it('keeps a visually hidden title in the heading outline', () => {
+        const { getByRole } = setup({ title: 'Hidden page title', hideTitle: true });
+        const heading = getByRole('heading', { level: 2, name: 'Hidden page title' });
+        expect(heading.parentElement).toHaveStyle({ position: 'absolute', width: '1px', height: '1px' });
+    });
+
     it('renders StandardPage without a title', () => {
         const { container } = setup();
         expect(container).toMatchSnapshot();

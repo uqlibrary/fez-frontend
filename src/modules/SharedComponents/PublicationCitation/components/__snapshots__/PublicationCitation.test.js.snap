@@ -4836,22 +4836,22 @@ exports[`PublicationCitation  should render publication citation metric with cou
                     <span
                       class="fez-icon altmetric xxxlarge"
                     />
-                    <h6
+                    <div
                       class="MuiTypography-root MuiTypography-h6 css-MuiTypography-root"
                     >
                       23
-                    </h6>
+                    </div>
                   </div>
                   <div
                     class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
                   >
-                    <h6
+                    <div
                       class="MuiTypography-root MuiTypography-h6 difference css-MuiTypography-root"
                       title="Difference in social media activities"
                     >
                       +
                       5
-                    </h6>
+                    </div>
                   </div>
                 </div>
               </a>
@@ -5105,22 +5105,22 @@ exports[`PublicationCitation  should render publication citation metric without 
                   <div
                     class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
                   >
-                    <h6
+                    <div
                       class="MuiTypography-root MuiTypography-h6 count css-MuiTypography-root"
                     >
                       23
-                    </h6>
+                    </div>
                   </div>
                   <div
                     class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
                   >
-                    <h6
+                    <div
                       class="MuiTypography-root MuiTypography-h6 difference css-MuiTypography-root"
                       title="Difference in social media activities"
                     >
                       +
                       5
-                    </h6>
+                    </div>
                   </div>
                 </div>
               </a>

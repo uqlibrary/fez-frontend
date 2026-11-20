@@ -8673,12 +8673,12 @@ exports[`AdminContainer component should render default view 1`] = `
                               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                               style="padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
                             >
-                              <h6
+                              <h5
                                 class="MuiTypography-root MuiTypography-h6 css-MuiTypography-root"
                                 style="margin-top: -8px;"
                               >
                                 Inherited security policy details
-                              </h6>
+                              </h5>
                               <div
                                 class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-MuiGrid-root"
                                 style="margin-top: 8px;"
@@ -8686,20 +8686,20 @@ exports[`AdminContainer component should render default view 1`] = `
                                 <div
                                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-MuiGrid-root"
                                 >
-                                  <h6
+                                  <div
                                     class="MuiTypography-root MuiTypography-subtitle1 css-MuiTypography-root"
                                   >
                                     UQ:3935
-                                  </h6>
+                                  </div>
                                 </div>
                                 <div
                                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-7 css-MuiGrid-root"
                                 >
-                                  <h6
+                                  <div
                                     class="MuiTypography-root MuiTypography-subtitle2 css-MuiTypography-root"
                                   >
                                     System Documentation and Instructions
-                                  </h6>
+                                  </div>
                                 </div>
                                 <div
                                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-MuiGrid-root"
@@ -8713,20 +8713,20 @@ exports[`AdminContainer component should render default view 1`] = `
                                 <div
                                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-MuiGrid-root"
                                 >
-                                  <h6
+                                  <div
                                     class="MuiTypography-root MuiTypography-subtitle1 css-MuiTypography-root"
                                   >
                                     UQ:230658
-                                  </h6>
+                                  </div>
                                 </div>
                                 <div
                                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-7 css-MuiGrid-root"
                                 >
-                                  <h6
+                                  <div
                                     class="MuiTypography-root MuiTypography-subtitle2 css-MuiTypography-root"
                                   >
                                     UQ Library - Scholarly Communication and Digitisation Services
-                                  </h6>
+                                  </div>
                                 </div>
                                 <div
                                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-MuiGrid-root"
@@ -8826,12 +8826,12 @@ exports[`AdminContainer component should render default view 1`] = `
                               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                               style="padding: 24px; background-color: rgba(0, 0, 0, 0.05);"
                             >
-                              <h6
+                              <h5
                                 class="MuiTypography-root MuiTypography-h6 css-MuiTypography-root"
                                 style="margin-top: -8px;"
                               >
                                 Inherited datastream security policy details
-                              </h6>
+                              </h5>
                               <div
                                 class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-1 css-MuiGrid-root"
                                 style="margin-top: 8px;"
@@ -8839,20 +8839,20 @@ exports[`AdminContainer component should render default view 1`] = `
                                 <div
                                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-MuiGrid-root"
                                 >
-                                  <h6
+                                  <div
                                     class="MuiTypography-root MuiTypography-subtitle1 css-MuiTypography-root"
                                   >
                                     UQ:3935
-                                  </h6>
+                                  </div>
                                 </div>
                                 <div
                                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-7 css-MuiGrid-root"
                                 >
-                                  <h6
+                                  <div
                                     class="MuiTypography-root MuiTypography-subtitle2 css-MuiTypography-root"
                                   >
                                     System Documentation and Instructions
-                                  </h6>
+                                  </div>
                                 </div>
                                 <div
                                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-MuiGrid-root"
@@ -8866,20 +8866,20 @@ exports[`AdminContainer component should render default view 1`] = `
                                 <div
                                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-MuiGrid-root"
                                 >
-                                  <h6
+                                  <div
                                     class="MuiTypography-root MuiTypography-subtitle1 css-MuiTypography-root"
                                   >
                                     UQ:230658
-                                  </h6>
+                                  </div>
                                 </div>
                                 <div
                                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-7 css-MuiGrid-root"
                                 >
-                                  <h6
+                                  <div
                                     class="MuiTypography-root MuiTypography-subtitle2 css-MuiTypography-root"
                                   >
                                     UQ Library - Scholarly Communication and Digitisation Services
-                                  </h6>
+                                  </div>
                                 </div>
                                 <div
                                   class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-MuiGrid-root"
@@ -8896,11 +8896,11 @@ exports[`AdminContainer component should render default view 1`] = `
                           <div
                             class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                           >
-                            <h6
+                            <h5
                               class="MuiTypography-root MuiTypography-h6 css-MuiTypography-root"
                             >
                               Override datastream security policy details
-                            </h6>
+                            </h5>
                             <div
                               style="margin-top: 8px; padding: 16px;"
                             >

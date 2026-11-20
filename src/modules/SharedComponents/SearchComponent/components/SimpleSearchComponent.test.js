@@ -1,6 +1,6 @@
 import React from 'react';
 import { SimpleSearchComponent } from './SimpleSearchComponent';
-import { rtlRender, fireEvent, createEvent } from 'test-utils';
+import { rtlRender, fireEvent, createEvent, act } from 'test-utils';
 
 jest.mock('config/general', () => ({
     ...jest.requireActual('config/general'),
@@ -20,6 +20,14 @@ describe('SimpleSearchComponent', () => {
     it('should render default view', () => {
         const { container } = setup();
         expect(container).toMatchSnapshot();
+    });
+
+    it('should be a search landmark named for where it is shown', () => {
+        const { getByRole, unmount } = setup({ isInHeader: true });
+        expect(getByRole('search', { name: 'Site search' })).toBeInTheDocument();
+        unmount();
+
+        expect(setup().getByRole('search', { name: 'Search eSpace' })).toBeInTheDocument();
     });
 
     it('should render mobile view', () => {
@@ -88,6 +96,22 @@ describe('SimpleSearchComponent', () => {
         });
         fireEvent.keyDown(getByTestId('simple-search-input'), { key: 'Enter', code: 13 });
         expect(searchFn).toHaveBeenCalled();
+    });
+
+    it('should blur the search field after a search, except in the header', () => {
+        const pressEnter = props => {
+            const { getByTestId, unmount } = setup({ searchText: 'cats', onSearch: jest.fn(), ...props });
+            const input = getByTestId('simple-search-input');
+            act(() => input.focus());
+            fireEvent.keyDown(input, { key: 'Enter', code: 13 });
+            const stillFocused = document.activeElement === input;
+            unmount();
+            return stillFocused;
+        };
+
+        // The header search opens the results page, which moves focus to its heading
+        expect(pressEnter({ isInHeader: true })).toBe(true);
+        expect(pressEnter()).toBe(false);
     });
 
     it('should render with default onSearch callback', () => {

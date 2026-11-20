@@ -106,6 +106,14 @@ const typography = {
     body2: { lineHeight: 1.6 },
 };
 
+// MUI maps subtitle1/subtitle2 to <h6> by default, which adds fake headings to the page outline
+// (WCAG 1.3.1). Render them as plain blocks; use `component` where a real heading is wanted.
+const typographyOverrides = {
+    defaultProps: {
+        variantMapping: { subtitle1: 'div', subtitle2: 'div' },
+    },
+};
+
 const narrowLabelReflow = {
     '@media (max-width:899.95px)': {
         whiteSpace: 'normal',
@@ -122,6 +130,7 @@ export const mui1theme = createTheme({
     },
     typography,
     components: {
+        MuiTypography: typographyOverrides,
         MuiButtonBase: {
             defaultProps: {
                 // Disable ripple for jest tests
@@ -239,6 +248,7 @@ export const adminTheme = createTheme({
     palette: palette,
     typography,
     components: {
+        MuiTypography: typographyOverrides,
         MuiButtonBase: {
             defaultProps: {
                 // Disable ripple for jest tests
