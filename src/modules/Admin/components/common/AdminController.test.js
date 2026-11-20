@@ -31,16 +31,11 @@ jest.mock('modules/SharedComponents/Toolbox/ReactHookForm', () => {
     };
 });
 
-// eslint-disable-next-line react/prop-types
 const MockInput = ({ field, fieldState, formState }) => (
     <div>
-        {/* eslint-disable-next-line react/prop-types */}
         <input {...field} value={field.value ?? ''} data-testid="field-input" />
-        {/* eslint-disable-next-line react/prop-types */}
         {fieldState.error?.message && <span data-testid="error">{fieldState.error.message}</span>}
-        {/* eslint-disable-next-line react/prop-types */}
         {field.state?.error && <span data-testid="meta-error">state: {field.state.error}</span>}
-        {/* eslint-disable-next-line react/prop-types */}
         {formState.errors?.mockInput?.message && formState.isSubmitted && (
             <span data-testid="form-state">Form has errors</span>
         )}

@@ -1396,7 +1396,7 @@ exports[`Additional Information Component  should not render map with empty geo 
                     target="_blank"
                   >
                     <div
-                      class="fez-icon license cc-by-nc-nd xxlarge"
+                      class="fez-icon license cc-by-nc-nd"
                     />
                   </a>
                 </span>
@@ -2248,7 +2248,7 @@ exports[`Additional Information Component  should render component with Attribut
                 >
                   <span>
                     <div
-                      class="fez-icon_cilabel xxlarge"
+                      class="fez-icon_cilabel"
                       data-testid="fez-icon-cilabel"
                       style="background-image: url("https://assets.library.uq.edu.au/local-contexts/ci_notice_attribution_incomplete.png"); width: 100px; height: 100px; background-size: cover;"
                     />
@@ -3262,7 +3262,7 @@ exports[`Additional Information Component  should render component with audio do
                     target="_blank"
                   >
                     <div
-                      class="fez-icon license cc-by-nc-nd xxlarge"
+                      class="fez-icon license cc-by-nc-nd"
                     />
                   </a>
                 </span>
@@ -10028,7 +10028,7 @@ exports[`Additional Information Component  should render component with data col
                     target="_blank"
                   >
                     <div
-                      class="fez-icon license cc-by xxlarge"
+                      class="fez-icon license cc-by"
                     />
                   </a>
                 </span>
@@ -27535,7 +27535,7 @@ exports[`Additional Information Component  should render map with geo coordinate
                     target="_blank"
                   >
                     <div
-                      class="fez-icon license cc-by-nc-nd xxlarge"
+                      class="fez-icon license cc-by-nc-nd"
                     />
                   </a>
                 </span>

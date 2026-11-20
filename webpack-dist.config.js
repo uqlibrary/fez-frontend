@@ -135,7 +135,7 @@ const webpackConfig = {
                 use: ['sass-loader'],
             },
             {
-                test: /\.(png|jp(e*)g|svg|gif)$/,
+                test: /\.(avif|bmp|gif|ico|jpe?g|png|svg|webp|woff2?|eot|ttf|otf|pdf)$/i,
                 type: 'asset/resource',
                 generator: {
                     filename: 'assets/[hash][ext]',

@@ -1,12 +1,11 @@
 import { defineConfig, globalIgnores } from 'eslint/config';
-import react from 'eslint-plugin-react';
+import eslintReact from '@eslint-react/eslint-plugin';
 import reactHooks from 'eslint-plugin-react-hooks';
-import jsxA11Y from 'eslint-plugin-jsx-a11y';
+import jsxA11Y from 'eslint-plugin-jsx-a11y-x';
 import uqlibrary from 'eslint-plugin-uqlibrary';
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
 import stylistic from '@stylistic/eslint-plugin';
 import globals from 'globals';
-import babelParser from '@babel/eslint-parser';
 import tseslint from 'typescript-eslint';
 import js from '@eslint/js';
 
@@ -32,10 +31,12 @@ export default defineConfig([
         '**/node_modules',
         '**/scripts',
         '**/mock/data/**/*.js',
+        '**/__snapshots__/**',
+        '**/*.snap',
     ]),
     {
         plugins: {
-            react,
+            '@eslint-react': eslintReact,
             'react-hooks': reactHooks,
             'jsx-a11y': jsxA11Y,
             '@stylistic': stylistic,
@@ -70,17 +71,11 @@ export default defineConfig([
                 dr: true,
             },
 
-            parser: babelParser,
-            ecmaVersion: 6,
+            ecmaVersion: 'latest',
             sourceType: 'module',
-
             parserOptions: {
-                requireConfigFile: false,
                 ecmaFeatures: {
                     jsx: true,
-                },
-                babelOptions: {
-                    presets: ['@babel/preset-react'],
                 },
             },
         },
@@ -112,6 +107,9 @@ export default defineConfig([
                     vars: 'local',
                     args: 'after-used',
                     caughtErrors: 'none',
+                    // Allow unused React imports because they are retained for compatibility
+                    // with existing files, even though the automatic JSX runtime doesn't require them.
+                    varsIgnorePattern: '^React$',
                 },
             ],
 
@@ -189,29 +187,12 @@ export default defineConfig([
              * React
              */
             'jsx-quotes': [2, 'prefer-double'],
-            'react/display-name': 0,
-            'react/jsx-boolean-value': 1,
-            'react/jsx-no-undef': 2,
-            'react/jsx-sort-prop-types': 0,
-            'react/jsx-sort-props': 0,
-            'react/jsx-uses-react': 2,
-            'react/jsx-uses-vars': 2,
-            'react/no-did-update-set-state': 2,
-            'react/no-did-mount-set-state': 2,
-
-            'react/no-multi-comp': [
-                2,
-                {
-                    ignoreStateless: true,
-                },
-            ],
-
-            'react/no-unknown-property': 2,
-            'react/prop-types': 2,
-            'react/react-in-jsx-scope': 2,
-            'react/self-closing-comp': 2,
-            'react/sort-comp': 2,
-            'react/jsx-wrap-multilines': 2,
+            'uqlibrary/jsx-boolean-value': 1,
+            '@eslint-react/no-set-state-in-component-did-update': 2,
+            '@eslint-react/no-set-state-in-component-did-mount': 2,
+            '@eslint-react/dom-no-unknown-property': 2,
+            '@stylistic/jsx-self-closing-comp': 2,
+            '@stylistic/jsx-wrap-multilines': 2,
 
             /**
              * React Hooks
@@ -224,23 +205,17 @@ export default defineConfig([
              */
             'jsx-a11y/aria-props': 2,
             'jsx-a11y/heading-has-content': 2,
-
-            'jsx-a11y/label-has-for': [
-                1,
-                {
-                    allowChildren: true,
-                },
-            ],
+            'jsx-a11y/label-has-associated-control': [1, { assert: 'either' }],
 
             'jsx-a11y/mouse-events-have-key-events': 2,
             'jsx-a11y/role-has-required-aria-props': 2,
             'jsx-a11y/role-supports-aria-props': 2,
             'jsx-a11y/html-has-lang': 2,
             'jsx-a11y/click-events-have-key-events': 2,
-            'jsx-a11y/no-onchange': 2,
-            'jsx-a11y/img-has-alt': 'off',
-            'jsx-a11y/onclick-has-focus': 'off',
-            'jsx-a11y/href-no-hash': 'off',
+
+            /**
+             * Custom Rules
+             */
             'uqlibrary/no-uql-token': 2,
 
             /**
