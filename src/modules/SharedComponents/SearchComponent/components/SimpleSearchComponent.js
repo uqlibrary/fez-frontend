@@ -82,8 +82,10 @@ export const SimpleSearchComponent = ({
         // Perform search
         onSearch();
 
-        // Blur the input so the mobile keyboard is deactivated
-        event && event.target && event.target.blur();
+        // Blur the input so the mobile keyboard is deactivated. Not in the header: that search opens the results
+        // page, which moves focus to its heading. Blurring here would drop focus to the document while it still
+        // has the previous page's title, and NVDA would announce that stale title.
+        !isInHeader && event && event.target && event.target.blur();
     };
 
     const _handleSubmit = event => {
