@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import React, { useMemo } from 'react';
 import PropTypes from 'prop-types';
 

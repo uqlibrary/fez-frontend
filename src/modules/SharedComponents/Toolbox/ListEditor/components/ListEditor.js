@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ListRowHeader from './ListRowHeader';
@@ -109,6 +108,8 @@ export default class ListEditor extends Component {
         if (this.props.onChange && !isArrayDeeplyEqual(prevState.itemList, this.state.itemList)) {
             // notify parent component when local state has been updated, eg itemList added/removed/reordered
             const transformedState = this.transformOutput(this.state.itemList);
+            // TODO: Refactor to avoid calling setState inside componentDidUpdate.
+            // eslint-disable-next-line @eslint-react/no-set-state-in-component-did-update
             this.setState({ transformedState: JSON.stringify(transformedState) });
             this.props.onChange(transformedState);
         }

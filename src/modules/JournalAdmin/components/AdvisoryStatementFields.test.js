@@ -21,12 +21,11 @@ import { waitFor } from '@testing-library/dom';
 let defaultComponentProps;
 
 const TestForm = (props = {}) => {
-    // eslint-disable-next-line react/prop-types
     const methods = useValidatedForm(props?.form || {});
     return (
         <FormProvider {...methods}>
             <form>
-                <AdvisoryStatementFields {...(props?.field || {}) /* eslint-disable-line react/prop-types */} />
+                <AdvisoryStatementFields {...(props?.field || {})} />
             </form>
         </FormProvider>
     );
