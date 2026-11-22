@@ -220,6 +220,7 @@ export const AdvancedSearchComponent = ({
                                                     checked={isOpenAccess}
                                                     onChange={_toggleOpenAccess}
                                                     disabled={isLoading}
+                                                    tabIndex={0}
                                                 />
                                             }
                                             label={txt.advancedSearch.openAccess.title}

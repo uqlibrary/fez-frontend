@@ -94,6 +94,7 @@ exports[`Component DeleteRecord should render delete record form with data colle
                               <a
                                 data-discover="true"
                                 href="/view/UQ:41878"
+                                tabindex="0"
                               >
                                 Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
                               </a>
@@ -1128,6 +1129,7 @@ exports[`Component DeleteRecord should render delete record form with deleted da
                               <a
                                 data-discover="true"
                                 href="/view/UQ:41878"
+                                tabindex="0"
                               >
                                 Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
                               </a>
@@ -2162,6 +2164,7 @@ exports[`Component DeleteRecord should render delete record form with deleted re
                               <a
                                 data-discover="true"
                                 href="/view/UQ:41878"
+                                tabindex="0"
                               >
                                 Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
                               </a>

@@ -143,6 +143,7 @@ export const FullUserDetails = ({ disabled, data: rowData, mode, onEditingApprov
         message: message,
         title: 'Validation',
         type: 'warning',
+        ...(!apiError ? { announce: 'off' } : {}),
     };
 
     const onSubmit = async data => {

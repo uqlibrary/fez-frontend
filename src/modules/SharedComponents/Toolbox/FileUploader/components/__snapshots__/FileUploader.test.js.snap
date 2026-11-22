@@ -150,13 +150,15 @@ exports[`Component FileUploader should alphabetically order files as they are ad
               <div
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
               >
-                <b>
-                  Success - 
-                </b>
-                <span
-                  data-testid="alert-message"
-                >
-                  Successfully added 2 file(s) to upload queue.
+                <span>
+                  <b>
+                    Success - 
+                  </b>
+                  <span
+                    data-testid="alert-message"
+                  >
+                    Successfully added 2 file(s) to upload queue.
+                  </span>
                 </span>
               </div>
             </div>
@@ -202,13 +204,15 @@ exports[`Component FileUploader should alphabetically order files as they are ad
               <div
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
               >
-                <b>
-                  Notice - 
-                </b>
-                <span
-                  data-testid="alert-message"
-                >
-                  During peak times, there may be a delay before newly uploaded files appear on the record.
+                <span>
+                  <b>
+                    Notice - 
+                  </b>
+                  <span
+                    data-testid="alert-message"
+                  >
+                    During peak times, there may be a delay before newly uploaded files appear on the record.
+                  </span>
                 </span>
               </div>
             </div>
@@ -601,13 +605,15 @@ exports[`Component FileUploader should alphabetically order files as they are ad
               <div
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
               >
-                <b>
-                  Success - 
-                </b>
-                <span
-                  data-testid="alert-message"
-                >
-                  Successfully added 3 file(s) to upload queue.
+                <span>
+                  <b>
+                    Success - 
+                  </b>
+                  <span
+                    data-testid="alert-message"
+                  >
+                    Successfully added 3 file(s) to upload queue.
+                  </span>
                 </span>
               </div>
             </div>
@@ -653,13 +659,15 @@ exports[`Component FileUploader should alphabetically order files as they are ad
               <div
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
               >
-                <b>
-                  Notice - 
-                </b>
-                <span
-                  data-testid="alert-message"
-                >
-                  During peak times, there may be a delay before newly uploaded files appear on the record.
+                <span>
+                  <b>
+                    Notice - 
+                  </b>
+                  <span
+                    data-testid="alert-message"
+                  >
+                    During peak times, there may be a delay before newly uploaded files appear on the record.
+                  </span>
                 </span>
               </div>
             </div>
@@ -1251,13 +1259,15 @@ exports[`Component FileUploader should delete first file 1`] = `
               <div
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
               >
-                <b>
-                  Success - 
-                </b>
-                <span
-                  data-testid="alert-message"
-                >
-                  Successfully added 1 file(s) to upload queue.
+                <span>
+                  <b>
+                    Success - 
+                  </b>
+                  <span
+                    data-testid="alert-message"
+                  >
+                    Successfully added 1 file(s) to upload queue.
+                  </span>
                 </span>
               </div>
             </div>
@@ -1303,13 +1313,15 @@ exports[`Component FileUploader should delete first file 1`] = `
               <div
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
               >
-                <b>
-                  Notice - 
-                </b>
-                <span
-                  data-testid="alert-message"
-                >
-                  During peak times, there may be a delay before newly uploaded files appear on the record.
+                <span>
+                  <b>
+                    Notice - 
+                  </b>
+                  <span
+                    data-testid="alert-message"
+                  >
+                    During peak times, there may be a delay before newly uploaded files appear on the record.
+                  </span>
                 </span>
               </div>
             </div>
@@ -1622,13 +1634,15 @@ exports[`Component FileUploader should drag and drop 2 files 1`] = `
               <div
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
               >
-                <b>
-                  Success - 
-                </b>
-                <span
-                  data-testid="alert-message"
-                >
-                  Successfully added 2 file(s) to upload queue.
+                <span>
+                  <b>
+                    Success - 
+                  </b>
+                  <span
+                    data-testid="alert-message"
+                  >
+                    Successfully added 2 file(s) to upload queue.
+                  </span>
                 </span>
               </div>
             </div>
@@ -1674,13 +1688,15 @@ exports[`Component FileUploader should drag and drop 2 files 1`] = `
               <div
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
               >
-                <b>
-                  Notice - 
-                </b>
-                <span
-                  data-testid="alert-message"
-                >
-                  During peak times, there may be a delay before newly uploaded files appear on the record.
+                <span>
+                  <b>
+                    Notice - 
+                  </b>
+                  <span
+                    data-testid="alert-message"
+                  >
+                    During peak times, there may be a delay before newly uploaded files appear on the record.
+                  </span>
                 </span>
               </div>
             </div>
@@ -2327,13 +2343,15 @@ exports[`Component FileUploader should not render rows for uploaded files with a
               <div
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
               >
-                <b>
-                  Success - 
-                </b>
-                <span
-                  data-testid="alert-message"
-                >
-                  Successfully added 2 file(s) to upload queue.
+                <span>
+                  <b>
+                    Success - 
+                  </b>
+                  <span
+                    data-testid="alert-message"
+                  >
+                    Successfully added 2 file(s) to upload queue.
+                  </span>
                 </span>
               </div>
             </div>
@@ -2379,13 +2397,15 @@ exports[`Component FileUploader should not render rows for uploaded files with a
               <div
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
               >
-                <b>
-                  Notice - 
-                </b>
-                <span
-                  data-testid="alert-message"
-                >
-                  During peak times, there may be a delay before newly uploaded files appear on the record.
+                <span>
+                  <b>
+                    Notice - 
+                  </b>
+                  <span
+                    data-testid="alert-message"
+                  >
+                    During peak times, there may be a delay before newly uploaded files appear on the record.
+                  </span>
                 </span>
               </div>
             </div>
@@ -2897,13 +2917,15 @@ exports[`Component FileUploader should not reset file access or embargo date inf
               <div
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
               >
-                <b>
-                  Success - 
-                </b>
-                <span
-                  data-testid="alert-message"
-                >
-                  Successfully added 2 file(s) to upload queue.
+                <span>
+                  <b>
+                    Success - 
+                  </b>
+                  <span
+                    data-testid="alert-message"
+                  >
+                    Successfully added 2 file(s) to upload queue.
+                  </span>
                 </span>
               </div>
             </div>
@@ -2949,13 +2971,15 @@ exports[`Component FileUploader should not reset file access or embargo date inf
               <div
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
               >
-                <b>
-                  Notice - 
-                </b>
-                <span
-                  data-testid="alert-message"
-                >
-                  During peak times, there may be a delay before newly uploaded files appear on the record.
+                <span>
+                  <b>
+                    Notice - 
+                  </b>
+                  <span
+                    data-testid="alert-message"
+                  >
+                    During peak times, there may be a delay before newly uploaded files appear on the record.
+                  </span>
                 </span>
               </div>
             </div>
@@ -4038,13 +4062,15 @@ exports[`Component FileUploader should render rows for uploaded files with acces
               <div
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
               >
-                <b>
-                  Success - 
-                </b>
-                <span
-                  data-testid="alert-message"
-                >
-                  Successfully added 2 file(s) to upload queue.
+                <span>
+                  <b>
+                    Success - 
+                  </b>
+                  <span
+                    data-testid="alert-message"
+                  >
+                    Successfully added 2 file(s) to upload queue.
+                  </span>
                 </span>
               </div>
             </div>
@@ -4090,13 +4116,15 @@ exports[`Component FileUploader should render rows for uploaded files with acces
               <div
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
               >
-                <b>
-                  Notice - 
-                </b>
-                <span
-                  data-testid="alert-message"
-                >
-                  During peak times, there may be a delay before newly uploaded files appear on the record.
+                <span>
+                  <b>
+                    Notice - 
+                  </b>
+                  <span
+                    data-testid="alert-message"
+                  >
+                    During peak times, there may be a delay before newly uploaded files appear on the record.
+                  </span>
                 </span>
               </div>
             </div>
@@ -4639,13 +4667,15 @@ exports[`Component FileUploader should render rows for uploaded files with acces
               <div
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
               >
-                <b>
-                  Success - 
-                </b>
-                <span
-                  data-testid="alert-message"
-                >
-                  Successfully added 2 file(s) to upload queue.
+                <span>
+                  <b>
+                    Success - 
+                  </b>
+                  <span
+                    data-testid="alert-message"
+                  >
+                    Successfully added 2 file(s) to upload queue.
+                  </span>
                 </span>
               </div>
             </div>
@@ -4691,13 +4721,15 @@ exports[`Component FileUploader should render rows for uploaded files with acces
               <div
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
               >
-                <b>
-                  Notice - 
-                </b>
-                <span
-                  data-testid="alert-message"
-                >
-                  During peak times, there may be a delay before newly uploaded files appear on the record.
+                <span>
+                  <b>
+                    Notice - 
+                  </b>
+                  <span
+                    data-testid="alert-message"
+                  >
+                    During peak times, there may be a delay before newly uploaded files appear on the record.
+                  </span>
                 </span>
               </div>
             </div>
@@ -5232,13 +5264,15 @@ exports[`Component FileUploader should render rows for uploaded files with acces
               <div
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
               >
-                <b>
-                  Success - 
-                </b>
-                <span
-                  data-testid="alert-message"
-                >
-                  Successfully added 2 file(s) to upload queue.
+                <span>
+                  <b>
+                    Success - 
+                  </b>
+                  <span
+                    data-testid="alert-message"
+                  >
+                    Successfully added 2 file(s) to upload queue.
+                  </span>
                 </span>
               </div>
             </div>
@@ -5284,13 +5318,15 @@ exports[`Component FileUploader should render rows for uploaded files with acces
               <div
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
               >
-                <b>
-                  Notice - 
-                </b>
-                <span
-                  data-testid="alert-message"
-                >
-                  During peak times, there may be a delay before newly uploaded files appear on the record.
+                <span>
+                  <b>
+                    Notice - 
+                  </b>
+                  <span
+                    data-testid="alert-message"
+                  >
+                    During peak times, there may be a delay before newly uploaded files appear on the record.
+                  </span>
                 </span>
               </div>
             </div>
@@ -6008,13 +6044,15 @@ exports[`Component FileUploader should render rows for uploaded files with defau
               <div
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
               >
-                <b>
-                  Success - 
-                </b>
-                <span
-                  data-testid="alert-message"
-                >
-                  Successfully added 2 file(s) to upload queue.
+                <span>
+                  <b>
+                    Success - 
+                  </b>
+                  <span
+                    data-testid="alert-message"
+                  >
+                    Successfully added 2 file(s) to upload queue.
+                  </span>
                 </span>
               </div>
             </div>
@@ -6060,13 +6098,15 @@ exports[`Component FileUploader should render rows for uploaded files with defau
               <div
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
               >
-                <b>
-                  Notice - 
-                </b>
-                <span
-                  data-testid="alert-message"
-                >
-                  During peak times, there may be a delay before newly uploaded files appear on the record.
+                <span>
+                  <b>
+                    Notice - 
+                  </b>
+                  <span
+                    data-testid="alert-message"
+                  >
+                    During peak times, there may be a delay before newly uploaded files appear on the record.
+                  </span>
                 </span>
               </div>
             </div>
@@ -6578,13 +6618,15 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               <div
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
               >
-                <b>
-                  Success - 
-                </b>
-                <span
-                  data-testid="alert-message"
-                >
-                  Successfully added 2 file(s) to upload queue.
+                <span>
+                  <b>
+                    Success - 
+                  </b>
+                  <span
+                    data-testid="alert-message"
+                  >
+                    Successfully added 2 file(s) to upload queue.
+                  </span>
                 </span>
               </div>
             </div>
@@ -6630,13 +6672,15 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               <div
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
               >
-                <b>
-                  Notice - 
-                </b>
-                <span
-                  data-testid="alert-message"
-                >
-                  During peak times, there may be a delay before newly uploaded files appear on the record.
+                <span>
+                  <b>
+                    Notice - 
+                  </b>
+                  <span
+                    data-testid="alert-message"
+                  >
+                    During peak times, there may be a delay before newly uploaded files appear on the record.
+                  </span>
                 </span>
               </div>
             </div>
@@ -7187,13 +7231,15 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               <div
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
               >
-                <b>
-                  Success - 
-                </b>
-                <span
-                  data-testid="alert-message"
-                >
-                  Successfully added 2 file(s) to upload queue.
+                <span>
+                  <b>
+                    Success - 
+                  </b>
+                  <span
+                    data-testid="alert-message"
+                  >
+                    Successfully added 2 file(s) to upload queue.
+                  </span>
                 </span>
               </div>
             </div>
@@ -7239,13 +7285,15 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               <div
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
               >
-                <b>
-                  Notice - 
-                </b>
-                <span
-                  data-testid="alert-message"
-                >
-                  During peak times, there may be a delay before newly uploaded files appear on the record.
+                <span>
+                  <b>
+                    Notice - 
+                  </b>
+                  <span
+                    data-testid="alert-message"
+                  >
+                    During peak times, there may be a delay before newly uploaded files appear on the record.
+                  </span>
                 </span>
               </div>
             </div>
@@ -7790,13 +7838,15 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               <div
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
               >
-                <b>
-                  Success - 
-                </b>
-                <span
-                  data-testid="alert-message"
-                >
-                  Successfully added 2 file(s) to upload queue.
+                <span>
+                  <b>
+                    Success - 
+                  </b>
+                  <span
+                    data-testid="alert-message"
+                  >
+                    Successfully added 2 file(s) to upload queue.
+                  </span>
                 </span>
               </div>
             </div>
@@ -7842,13 +7892,15 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               <div
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
               >
-                <b>
-                  Notice - 
-                </b>
-                <span
-                  data-testid="alert-message"
-                >
-                  During peak times, there may be a delay before newly uploaded files appear on the record.
+                <span>
+                  <b>
+                    Notice - 
+                  </b>
+                  <span
+                    data-testid="alert-message"
+                  >
+                    During peak times, there may be a delay before newly uploaded files appear on the record.
+                  </span>
                 </span>
               </div>
             </div>
@@ -8578,13 +8630,15 @@ exports[`Component FileUploader should set max files error message 1`] = `
               <div
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
               >
-                <b>
-                  Success - 
-                </b>
-                <span
-                  data-testid="alert-message"
-                >
-                  Successfully added 1 file(s) to upload queue.
+                <span>
+                  <b>
+                    Success - 
+                  </b>
+                  <span
+                    data-testid="alert-message"
+                  >
+                    Successfully added 1 file(s) to upload queue.
+                  </span>
                 </span>
               </div>
             </div>
@@ -8630,13 +8684,15 @@ exports[`Component FileUploader should set max files error message 1`] = `
               <div
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
               >
-                <b>
-                  Notice - 
-                </b>
-                <span
-                  data-testid="alert-message"
-                >
-                  During peak times, there may be a delay before newly uploaded files appear on the record.
+                <span>
+                  <b>
+                    Notice - 
+                  </b>
+                  <span
+                    data-testid="alert-message"
+                  >
+                    During peak times, there may be a delay before newly uploaded files appear on the record.
+                  </span>
                 </span>
               </div>
             </div>
@@ -8679,13 +8735,17 @@ exports[`Component FileUploader should set max files error message 1`] = `
               <div
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
               >
-                <b>
-                  Upload Errors - 
-                </b>
                 <span
-                  data-testid="alert-message"
+                  role="alert"
                 >
-                  Maximum number of files (1) has been exceeded. File(s) (hello2.png) will not be uploaded
+                  <b>
+                    Upload Errors - 
+                  </b>
+                  <span
+                    data-testid="alert-message"
+                  >
+                    Maximum number of files (1) has been exceeded. File(s) (hello2.png) will not be uploaded
+                  </span>
                 </span>
               </div>
             </div>
@@ -8998,13 +9058,15 @@ exports[`Component FileUploader should update file description 1`] = `
               <div
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
               >
-                <b>
-                  Success - 
-                </b>
-                <span
-                  data-testid="alert-message"
-                >
-                  Successfully added 1 file(s) to upload queue.
+                <span>
+                  <b>
+                    Success - 
+                  </b>
+                  <span
+                    data-testid="alert-message"
+                  >
+                    Successfully added 1 file(s) to upload queue.
+                  </span>
                 </span>
               </div>
             </div>
@@ -9050,13 +9112,15 @@ exports[`Component FileUploader should update file description 1`] = `
               <div
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
               >
-                <b>
-                  Notice - 
-                </b>
-                <span
-                  data-testid="alert-message"
-                >
-                  During peak times, there may be a delay before newly uploaded files appear on the record.
+                <span>
+                  <b>
+                    Notice - 
+                  </b>
+                  <span
+                    data-testid="alert-message"
+                  >
+                    During peak times, there may be a delay before newly uploaded files appear on the record.
+                  </span>
                 </span>
               </div>
             </div>

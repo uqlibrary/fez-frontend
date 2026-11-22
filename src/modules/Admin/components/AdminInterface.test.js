@@ -14,6 +14,7 @@ import {
     fireEvent,
     within,
     act,
+    preview,
 } from 'test-utils';
 
 jest.mock('../submitHandler', () => ({
@@ -234,7 +235,7 @@ describe('AdminInterface component', () => {
                 },
             },
         });
-
+        preview.debug();
         expect(getByTestId('alert-error')).toHaveTextContent(
             'THIS WORK IS LOCKED - ' +
                 'This work is currently being edited by undefined (uqtest). Make sure that you confirm with this user before ignoring the work lock as it may cause work overwrite issues.',

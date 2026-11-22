@@ -60,7 +60,11 @@ export const CopyToCommunityForm = ({ recordsSelected, onCancel, isRemoveFrom })
         <form data-testid={`${idText}-community-form`} id={`${idText}-community-form`}>
             <Grid container spacing={2}>
                 <Grid size={12}>
-                    <Alert alertId={`alert-info-${idText}-community`} {...txt.copyToCommunity.alert(isRemoveFrom)} />
+                    <Alert
+                        alertId={`alert-info-${idText}-community`}
+                        announce="off"
+                        {...txt.copyToCommunity.alert(isRemoveFrom)}
+                    />
                 </Grid>
                 {!!hasMoreThanCollectionsSelected && (
                     <Grid size={12}>
@@ -72,7 +76,11 @@ export const CopyToCommunityForm = ({ recordsSelected, onCancel, isRemoveFrom })
                 )}
                 {!!alertUser && (
                     <Grid size={12}>
-                        <Alert alertId={`alert-warning-${idText}-community`} {...txt.copyToCommunity.warningAlert} />
+                        <Alert
+                            alertId={`alert-warning-${idText}-community`}
+                            announce="off"
+                            {...txt.copyToCommunity.warningAlert}
+                        />
                     </Grid>
                 )}
                 {!hasMoreThanCollectionsSelected && (
@@ -136,6 +144,7 @@ export const CopyToCommunityForm = ({ recordsSelected, onCancel, isRemoveFrom })
                     {isSubmitSuccessful && (
                         <Alert
                             alertId={`alert-done-${idText}-community`}
+                            announce="assertive"
                             {...txt.copyToCommunity.successAlert(isRemoveFrom)}
                         />
                     )}

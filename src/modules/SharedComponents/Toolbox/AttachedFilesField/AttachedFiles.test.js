@@ -11,6 +11,7 @@ import {
     act,
     createMatchMedia,
     within,
+    preview,
 } from 'test-utils';
 import { openAccessConfig } from 'config';
 import * as fileUploadLocale from '../FileUploader/locale';
@@ -310,6 +311,7 @@ describe('AttachedFiles component', () => {
             onDelete: jest.fn(),
         });
         const fileList = document.querySelectorAll('#standard-card-files-content > .MuiBox-root');
+        preview.debug();
         expect(fileList).toHaveLength(4); // (3 + header)
         expect(fileList[1]).toHaveTextContent('A_file.pdf');
         expect(fileList[2]).toHaveTextContent('B_file.pdf');

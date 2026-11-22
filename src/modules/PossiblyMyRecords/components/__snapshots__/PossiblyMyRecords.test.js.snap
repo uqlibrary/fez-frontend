@@ -161,13 +161,17 @@ exports[`Component PossiblyMyRecords renders alert when the hide pub api fails 1
               <div
                 class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
               >
-                <b>
-                  Error - 
-                </b>
                 <span
-                  data-testid="alert-message"
+                  role="alert"
                 >
-                  Error has occurred during request and request cannot be processed. Test error message Please contact eSpace administrators or try again later.
+                  <b>
+                    Error - 
+                  </b>
+                  <span
+                    data-testid="alert-message"
+                  >
+                    Error has occurred during request and request cannot be processed. Test error message Please contact eSpace administrators or try again later.
+                  </span>
                 </span>
               </div>
             </div>
@@ -315,6 +319,7 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                                   <a
                                     data-discover="true"
                                     href="/view/UQ:1"
+                                    tabindex="0"
                                   >
                                     1
                                   </a>
@@ -436,6 +441,7 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                                   <a
                                     data-discover="true"
                                     href="/view/UQ:2"
+                                    tabindex="0"
                                   >
                                     2
                                   </a>
@@ -557,6 +563,7 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                                   <a
                                     data-discover="true"
                                     href="/view/UQ:3"
+                                    tabindex="0"
                                   >
                                     3
                                   </a>

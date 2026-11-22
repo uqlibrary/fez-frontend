@@ -467,7 +467,7 @@ const AppClass = ({
                         style={{ marginBottom: 12 }}
                     >
                         <StyledGridCard item>
-                            <Alert {...userStatusAlert} />
+                            <Alert {...userStatusAlert} announce="off" />
                         </StyledGridCard>
                     </Grid>
                 )}

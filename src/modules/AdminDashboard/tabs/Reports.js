@@ -157,7 +157,7 @@ const Reports = () => {
                     )}
                     {exportReportAlertIsVisible && !!exportReportAlertProps?.message && (
                         <Grid size={12}>
-                            <Alert {...exportReportAlertProps} />
+                            <Alert {...exportReportAlertProps} announce="assertive" />
                         </Grid>
                     )}
                 </Grid>
@@ -246,6 +246,7 @@ const Reports = () => {
                                         },
                                     }}
                                     forwardedProps={{ 'data-testid': 'report-display-data-grid' }}
+                                    aria-label={txt.ariaLabel}
                                 />
                             </Grid>
                         </Grid>

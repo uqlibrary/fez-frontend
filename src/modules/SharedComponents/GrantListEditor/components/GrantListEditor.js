@@ -172,6 +172,7 @@ const GrantListEditor = ({
                     title={this.props.locale.errorTitle}
                     message={errorMessage}
                     type="warning"
+                    announce="off"
                 />
             )}
             <GrantListEditorForm

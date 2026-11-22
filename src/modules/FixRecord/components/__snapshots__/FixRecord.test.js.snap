@@ -101,6 +101,7 @@ exports[`Component FixRecord should render fix record form 1`] = `
                               <a
                                 data-discover="true"
                                 href="/view/UQ:41878"
+                                tabindex="0"
                               >
                                 Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
                               </a>
@@ -583,6 +584,7 @@ exports[`Component FixRecord should render record citation, two actions in selec
                               <a
                                 data-discover="true"
                                 href="/view/UQ:41878"
+                                tabindex="0"
                               >
                                 Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
                               </a>
@@ -955,6 +957,7 @@ exports[`Component FixRecord should render unclaim form 1`] = `
                               <a
                                 data-discover="true"
                                 href="/view/UQ:41878"
+                                tabindex="0"
                               >
                                 Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
                               </a>
@@ -1281,13 +1284,15 @@ exports[`Component FixRecord should render unclaim form 1`] = `
                         <div
                           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow alert-text css-MuiGrid-root"
                         >
-                          <b>
-                            WARNING - 
-                          </b>
-                          <span
-                            data-testid="alert-message"
-                          >
-                            You are about to remove this work from your eSpace profile.
+                          <span>
+                            <b>
+                              WARNING - 
+                            </b>
+                            <span
+                              data-testid="alert-message"
+                            >
+                              You are about to remove this work from your eSpace profile.
+                            </span>
                           </span>
                         </div>
                       </div>
