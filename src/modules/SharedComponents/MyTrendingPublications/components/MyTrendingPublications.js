@@ -44,7 +44,7 @@ export const MyTrendingPublications = () => {
                     return (
                         <Grid container key={metricIndex} spacing={3}>
                             <Grid size="grow">
-                                <Typography variant={'h6'}>
+                                <Typography variant={'h6'} component={'h3'}>
                                     <div className={`fez-icon ${key} xxlarge`} />
                                     {txt.metrics[key].title}
                                 </Typography>

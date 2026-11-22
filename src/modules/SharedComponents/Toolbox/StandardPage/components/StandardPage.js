@@ -29,11 +29,24 @@ const StyledPageTitle = styled(Typography)(({ theme }) => ({
     },
 }));
 
-export const StandardPage = ({ title, help, children, standardPageId }) => {
+// Keeps the page title in the heading outline for screen readers on pages that have no visible title.
+const visuallyHidden = {
+    border: 0,
+    clip: 'rect(0 0 0 0)',
+    height: '1px',
+    margin: '-1px',
+    overflow: 'hidden',
+    padding: 0,
+    position: 'absolute',
+    whiteSpace: 'nowrap',
+    width: '1px',
+};
+
+export const StandardPage = ({ title, hideTitle = false, help, children, standardPageId }) => {
     return (
         <Grid container className="StandardPage" id={standardPageId} data-testid={standardPageId}>
             {title && (
-                <Grid size={12}>
+                <Grid size={12} sx={hideTitle ? visuallyHidden : undefined}>
                     <StyledPageTitle
                         color="primary"
                         component="h2"
@@ -58,6 +71,7 @@ export const StandardPage = ({ title, help, children, standardPageId }) => {
 
 StandardPage.propTypes = {
     title: PropTypes.any,
+    hideTitle: PropTypes.bool,
     help: PropTypes.object,
     children: PropTypes.any,
     standardPageId: PropTypes.string,

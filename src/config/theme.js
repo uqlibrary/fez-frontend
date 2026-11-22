@@ -133,6 +133,14 @@ const narrowLabelReflow = {
     },
 };
 
+// MUI maps subtitle1/subtitle2 to <h6> by default, which adds fake headings to the page outline
+// (WCAG 1.3.1). Render them as plain blocks; use `component` where a real heading is wanted.
+const typographyOverrides = {
+    defaultProps: {
+        variantMapping: { subtitle1: 'div', subtitle2: 'div' },
+    },
+};
+
 // DS theme overrides defined here in one place, then
 // merged in to the two themes below. This allows us to
 // not only have a single source of truth for the overrides,
@@ -140,6 +148,7 @@ const narrowLabelReflow = {
 // each specific theme if required - Mui will merge both
 // sets of settings together for us.
 export const commonThemeOverrides = {
+    MuiTypography: typographyOverrides,
     MuiInputBase: {
         styleOverrides: {
             root: {
@@ -398,18 +407,6 @@ export const mui1theme = createTheme(
                     noSsr: true,
                 },
             },
-            // MuiDataGrid: { // might need this to come back
-            //     styleOverrides: {
-            //         root: {
-            //             '& .MuiDataGrid-columnHeader:focus, .MuiDataGrid-cell:focus': {
-            //                 outline: 'none',
-            //             },
-            //             '& .MuiDataGrid-columnHeader:focus-within, .MuiDataGrid-cell:focus-within': {
-            //                 outline: 'none',
-            //             },
-            //         },
-            //     },
-            // },
         },
         graphs: {
             color1: '#d72865',

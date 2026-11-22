@@ -1,0 +1,115 @@
+import { test, expect } from '../test';
+
+test.describe('Keyboard and screen reader navigation', () => {
+    test.use({ viewport: { width: 1280, height: 900 } });
+
+    test('the first tab stop is a skip link that moves focus to the main content', async ({ page }) => {
+        await page.goto('/');
+        await expect(page.locator('.StandardPage')).toBeVisible();
+        await expect(page.locator('#simple-search-input')).not.toBeFocused();
+
+        await page.keyboard.press('Tab');
+        const skipLink = page.getByRole('link', { name: 'Skip to main content' });
+        await expect(skipLink).toBeFocused();
+        await expect(skipLink).toBeInViewport();
+
+        await page.keyboard.press('Enter');
+        await expect(page.getByRole('main')).toBeFocused();
+    });
+
+    test('an external menu item is a single tab stop', async ({ page }) => {
+        await page.goto('/');
+        const copyright = page.getByRole('button', { name: 'Copyright Information (opens in a new window)' });
+        await copyright.focus();
+        await page.keyboard.press('Tab');
+        await expect(page.locator('#cricos-link')).toBeFocused();
+    });
+
+    test('the hidden scroll to top button is not a tab stop', async ({ page }) => {
+        await page.goto('/');
+        await expect(page.locator('.StandardPage')).toBeVisible();
+        await page.locator('#cricos-link').focus();
+        await page.keyboard.press('Tab');
+        await expect(page.locator('#scrolltopbtn')).not.toBeFocused();
+        await expect(page.locator('#scrolltopbtn')).toHaveCSS('visibility', 'hidden');
+    });
+
+    test('choosing a menu item moves focus to the new page heading', async ({ page }) => {
+        await page.goto('/?user=uqresearcher');
+        await page.getByRole('button', { name: 'My works' }).focus();
+        await page.keyboard.press('Enter');
+        await expect(page.getByRole('heading', { level: 2, name: 'My works' })).toBeFocused();
+        await expect(page).toHaveTitle(/^My works/);
+    });
+
+    test('search results are a named region, between the search form and the filters', async ({ page }) => {
+        await page.goto('/records/search?searchQueryParams%5Ball%5D=water');
+        const results = page.getByRole('region', { name: 'Search results' });
+        await expect(results).toContainText(/Displaying works \d+ to \d+ of \d+ total works/);
+        // Landmark order, as NVDA's D key moves through them on this page.
+        const order = await page.evaluate(() =>
+            Array.from(document.querySelectorAll('[role="search"], section[aria-label], nav[aria-label]')).map(
+                el => el.getAttribute('aria-label') || '',
+            ),
+        );
+        expect(order.indexOf('Search results')).toBeGreaterThan(order.indexOf('Search eSpace'));
+        expect(order.indexOf('Refine results')).toBeGreaterThan(order.indexOf('Search results'));
+    });
+
+    test('list pages put their results in a named region, before the filters', async ({ page }) => {
+        const listPages: [string, string][] = [
+            ['/records/mine', 'Results'],
+            ['/data-collections/mine', 'Results'],
+            ['/records/incomplete', 'Results'],
+            ['/records/my-open-access', 'Results'],
+            ['/records/possible', 'Results'],
+            [
+                '/journals/search/?keywords%5BKeyword-bio%5D%5Btype%5D=Keyword&keywords%5BKeyword-bio%5D%5Btext%5D=bio',
+                'Journal search results',
+            ],
+        ];
+        for (const [url, name] of listPages) {
+            await page.goto(`${url}${url.includes('?') ? '&' : '?'}user=uqresearcher`);
+            await expect(page.getByRole('region', { name }), url).toBeVisible();
+            // Landmark order, as NVDA's D key moves through them: the results come before the filters.
+            const order = await page.evaluate(() =>
+                Array.from(document.querySelectorAll('section[aria-label], nav[aria-label]')).map(
+                    el => el.getAttribute('aria-label') || '',
+                ),
+            );
+            if (order.includes('Refine results')) {
+                expect(order.indexOf('Refine results'), url).toBeGreaterThan(order.indexOf(name));
+            }
+        }
+    });
+
+    test('pages have their own browser title', async ({ page }) => {
+        for (const [url, title] of [
+            ['/about', /^About/],
+            ['/records/incomplete?user=uqresearcher', /^My incomplete works/],
+            ['/records/my-open-access?user=uqresearcher', /^My open access/],
+            ['/tool/lookup?user=uqstaff', /^Lookup Tools/],
+        ] as const) {
+            await page.goto(url);
+            await expect(page).toHaveTitle(title);
+        }
+    });
+
+    test('a redirect while the page loads leaves focus at the start, so the skip link is first', async ({ page }) => {
+        // Without a search, the results step redirects to the find step during load.
+        await page.goto('/records/add/results?user=uqresearcher');
+        await expect(page).toHaveURL(/\/records\/add\/find/);
+        await expect(page.getByRole('heading', { level: 2 }).first()).toBeVisible();
+        await page.keyboard.press('Tab');
+        await expect(page.getByRole('link', { name: 'Skip to main content' })).toBeFocused();
+    });
+
+    test('pages with a search box do not take focus away from the skip link on load', async ({ page }) => {
+        for (const url of ['/journals/search/?user=uqresearcher', '/records/add/find?user=uqresearcher']) {
+            await page.goto(url);
+            await expect(page.locator('main input').first()).toBeVisible();
+            await page.keyboard.press('Tab');
+            await expect(page.getByRole('link', { name: 'Skip to main content' })).toBeFocused();
+        }
+    });
+});

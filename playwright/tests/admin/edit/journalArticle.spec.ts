@@ -329,10 +329,12 @@ test.describe('Journal Article admin edit', () => {
             `Work level security - ${record.rek_pid}`,
         );
         const securityCardContent = page.getByTestId('record-security-card-content');
-        await expect(securityCardContent.locator('h6').first()).toHaveText('Inherited security policy details');
+        await expect(securityCardContent.locator('h5').first()).toHaveText('Inherited security policy details');
         for (const [index, collection] of record.fez_record_search_key_ismemberof.entries()) {
-            await expect(securityCardContent.locator('h6').nth(2 * index + 1)).toHaveText(collection.rek_ismemberof);
-            await expect(securityCardContent.locator('h6').nth(2 * index + 2)).toHaveText(
+            await expect(securityCardContent.locator('.MuiTypography-subtitle1').nth(index)).toHaveText(
+                collection.rek_ismemberof,
+            );
+            await expect(securityCardContent.locator('.MuiTypography-subtitle2').nth(index)).toHaveText(
                 collection.rek_ismemberof_lookup,
             );
             await expect(securityCardContent.locator('p').nth(index)).toHaveText(

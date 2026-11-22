@@ -66,6 +66,11 @@ describe('JournalSearchInterface', () => {
         );
     });
 
+    it('should be a named search landmark', () => {
+        const { getByRole } = setup();
+        expect(getByRole('search', { name: 'Journal search' })).toBeInTheDocument();
+    });
+
     it('should render', () => {
         const { queryByTestId } = setup();
         expect(queryByTestId(`${id}-search-input`)).toBeInTheDocument();

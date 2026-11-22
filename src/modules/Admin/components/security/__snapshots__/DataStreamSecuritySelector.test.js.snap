@@ -2,7 +2,7 @@
 
 exports[`DataStreamSecuritySelector component should hide derivative datastreams 1`] = `
 <DocumentFragment>
-  <h6
+  <h5
     class="MuiTypography-root MuiTypography-h6 css-MuiTypography-root"
   />
   <div
@@ -111,7 +111,7 @@ Compared values have no visual difference."
 
 exports[`DataStreamSecuritySelector component should render default view 1`] = `
 <DocumentFragment>
-  <h6
+  <h5
     class="MuiTypography-root MuiTypography-h6 css-MuiTypography-root"
   />
   <div
@@ -210,7 +210,7 @@ exports[`DataStreamSecuritySelector component should render default view 1`] = `
 
 exports[`DataStreamSecuritySelector component should show non-derivative datastreams 1`] = `
 <DocumentFragment>
-  <h6
+  <h5
     class="MuiTypography-root MuiTypography-h6 css-MuiTypography-root"
   />
   <div

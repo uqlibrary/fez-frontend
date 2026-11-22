@@ -16,6 +16,9 @@ export const AddMissingRecord = ({ addRecordStep: AddRecordStep, ...props }) => 
 
     if (!rawSearchQuery && location.pathname === pathConfig.records.add.results) {
         navigate(pathConfig.records.add.find, { replace: true });
+        // Render nothing until the redirect lands: mounting the results step would focus its button, and
+        // the browser would then start Tab from that point, past the skip link.
+        return null;
     }
 
     const getStepperIndex = location => {

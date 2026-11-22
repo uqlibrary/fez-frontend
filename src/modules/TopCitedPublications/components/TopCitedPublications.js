@@ -128,7 +128,7 @@ export const TopCitedPublications = () => {
                                     style={{ marginTop: 24 }}
                                 >
                                     <Grid size="grow">
-                                        <Typography key={key} variant={'h6'} color={'primary'}>
+                                        <Typography key={key} variant={'h6'} component={'h2'} color={'primary'}>
                                             <div key={key} className={`fez-icon ${key} xxlarge`} />
                                             {txt[key].heading}
                                         </Typography>
