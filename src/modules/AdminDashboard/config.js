@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import moment from 'moment';
 import momentTz from 'moment-timezone';
 
@@ -10,7 +11,14 @@ import Grid from '@mui/material/Grid';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
-import { GridFilterInputSingleSelect } from '@mui/x-data-grid';
+import {
+    GridCellCheckboxRenderer,
+    GridFilterInputSingleSelect,
+    GRID_CHECKBOX_SELECTION_COL_DEF,
+    gridRowSelectionStateSelector,
+    useGridApiContext,
+    useGridSelector,
+} from '@mui/x-data-grid';
 import { isEmptyString, isURL } from '../../helpers/general';
 // Date formats and getFormattedServerDate live in a leaf module (no React/MUI) so data modules can
 // import them without pulling in this file's UI graph. Re-exported below to keep this file's API stable.
@@ -193,12 +201,94 @@ export const buildStatusFilterOptions = (users = [], currentUser, locale) => {
     ];
 };
 
-export const getSystemAlertColumns = (locale, users, currentUser, statusOptions) => {
+// The chip is interactive, so it must follow the grid's roving tabindex (one tab stop for the whole grid)
+// and take focus when its cell is focused via arrow keys.
+const SystemAlertStatusCell = ({ params, isActionable, color, ariaLabel, onViewDetails }) => {
+    const chipRef = React.useRef(null);
+    const { hasFocus, tabIndex } = params;
+
+    React.useLayoutEffect(() => {
+        if (isActionable && hasFocus) {
+            chipRef.current?.focus();
+        }
+    }, [isActionable, hasFocus]);
+
+    return (
+        <Chip
+            ref={chipRef}
+            data-testid={`alert-status-${params.id}`}
+            label={params.formattedValue}
+            variant="filled"
+            size="medium"
+            color={color}
+            {...(isActionable && {
+                tabIndex,
+                'aria-label': ariaLabel,
+                // stop the click reaching the grid's onRowClick so the action only runs once
+                onClick: e => {
+                    e.stopPropagation();
+                    onViewDetails(params.row);
+                },
+                // Enter/Space are activation keys for the chip; keep the grid from treating them as navigation
+                onKeyDown: e => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.stopPropagation();
+                    }
+                },
+            })}
+        />
+    );
+};
+
+SystemAlertStatusCell.propTypes = {
+    params: PropTypes.shape({
+        id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+        formattedValue: PropTypes.string,
+        hasFocus: PropTypes.bool,
+        tabIndex: PropTypes.number,
+        row: PropTypes.object,
+    }).isRequired,
+    isActionable: PropTypes.bool,
+    color: PropTypes.string,
+    ariaLabel: PropTypes.string,
+    onViewDetails: PropTypes.func,
+};
+
+const SystemAlertCheckboxCell = ({ params, getLabel }) => {
+    const apiRef = useGridApiContext();
+    const selected = useGridSelector(apiRef, gridRowSelectionStateSelector).includes(params.id);
+
+    return (
+        <GridCellCheckboxRenderer
+            {...params}
+            inputProps={{ 'aria-label': getLabel(params.row.sat_title, selected), name: 'select_row' }}
+        />
+    );
+};
+
+SystemAlertCheckboxCell.propTypes = {
+    params: PropTypes.shape({
+        id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+        row: PropTypes.object,
+    }).isRequired,
+    getLabel: PropTypes.func.isRequired,
+};
+
+export const getSystemAlertColumns = (locale, users, currentUser, statusOptions, onViewDetails) => {
     const alertStatus = locale.alertStatus;
     const alertStatusOption = Object.values(alertStatus);
     const userMap = new Map(users.map(u => [u.id, u.preferred_name]));
+    const getViewDetailsLabel = ({ row, formattedValue }) => {
+        if (!row.sat_assigned_to) return locale.viewDetailsLabel.unassigned;
+        if (formattedValue === alertStatus.UNKNOWN) return locale.viewDetailsLabel.unknown;
+        return locale.viewDetailsLabel.assigned(formattedValue);
+    };
 
     return [
+        {
+            ...GRID_CHECKBOX_SELECTION_COL_DEF,
+            renderCell: params => <SystemAlertCheckboxCell params={params} getLabel={locale.selectRowLabel} />,
+        },
         {
             field: 'sat_created_date',
             headerName: locale.columns.createdDate,
@@ -209,7 +299,14 @@ export const getSystemAlertColumns = (locale, users, currentUser, statusOptions)
             valueGetter: value => moment(value, DEFAULT_SERVER_DATE_FORMAT).toDate(),
             valueFormatter: value => moment(value).format(DEFAULT_DATE_FORMAT_WITH_TIME_24H),
         },
-        { field: 'sat_title', headerName: locale.columns.topic, flex: 1, disableColumnMenu: true, filterable: false },
+        {
+            field: 'sat_title',
+            headerName: locale.columns.topic,
+            rowHeader: true,
+            flex: 1,
+            disableColumnMenu: true,
+            filterable: false,
+        },
         {
             field: 'sat_assigned_to',
             headerName: locale.columns.status,
@@ -220,12 +317,12 @@ export const getSystemAlertColumns = (locale, users, currentUser, statusOptions)
                 return userMap.get(value) || alertStatus.UNKNOWN;
             },
             renderCell: params => (
-                <Chip
-                    data-testid={`alert-status-${params.id}`}
-                    label={params.formattedValue}
-                    variant="filled"
-                    size="medium"
+                <SystemAlertStatusCell
+                    params={params}
+                    isActionable={!!onViewDetails}
                     color={alertStatusOption.includes(params.formattedValue) ? 'default' : 'primary'}
+                    ariaLabel={onViewDetails && getViewDetailsLabel(params)}
+                    onViewDetails={onViewDetails}
                 />
             ),
             filterable: true,

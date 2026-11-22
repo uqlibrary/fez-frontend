@@ -51,6 +51,7 @@ exports[`AdminContainer component should render default view 1`] = `
                     <input
                       class="PrivateSwitchBase-input MuiSwitch-input css-MuiSwitchBase-root"
                       role="switch"
+                      tabindex="0"
                       type="checkbox"
                       value="tabbed"
                     />
@@ -262,7 +263,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                     data-testid="rek-ismemberof-0"
                                     id="rek-ismemberof-0"
                                     role="button"
-                                    tabindex="-1"
+                                    tabindex="0"
                                   >
                                     <span
                                       class="MuiChip-label MuiChip-labelMedium css-MuiChip-label"
@@ -287,7 +288,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                     data-testid="rek-ismemberof-1"
                                     id="rek-ismemberof-1"
                                     role="button"
-                                    tabindex="-1"
+                                    tabindex="0"
                                   >
                                     <span
                                       class="MuiChip-label MuiChip-labelMedium css-MuiChip-label"
@@ -3363,6 +3364,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                   class="MuiTableContainer-root css-MuiTableContainer-root"
                                 >
                                   <table
+                                    aria-label="This work's authors"
                                     class="MuiTable-root MuiTable-stickyHeader css-MuiTable-root"
                                     style="--header-mrt_row_expand-size: 20; --col-mrt_row_expand-size: 20; --header-nameAsPublished-size: 250; --col-nameAsPublished-size: 250; --header-uqIdentifier-size: 150; --col-uqIdentifier-size: 150; --header-mrt_row_actions-size: 100; --col-mrt_row_actions-size: 100;"
                                   >
@@ -4120,6 +4122,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                   class="MuiTableContainer-root css-MuiTableContainer-root"
                                 >
                                   <table
+                                    aria-label="This work's authors"
                                     class="MuiTable-root MuiTable-stickyHeader css-MuiTable-root"
                                     style="--header-mrt_row_expand-size: 20; --col-mrt_row_expand-size: 20; --header-nameAsPublished-size: 250; --col-nameAsPublished-size: 250; --header-uqIdentifier-size: 150; --col-uqIdentifier-size: 150; --header-mrt_row_actions-size: 100; --col-mrt_row_actions-size: 100;"
                                   >
@@ -6553,6 +6556,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                   data-indeterminate="false"
                                   data-testid="attributionIncomplete-input"
                                   id="attributionIncomplete-input"
+                                  tabindex="0"
                                   type="checkbox"
                                 />
                                 <svg
@@ -6795,7 +6799,6 @@ exports[`AdminContainer component should render default view 1`] = `
                                       data-testid="embargoed-oa-icon"
                                       focusable="false"
                                       role="img"
-                                      tabindex="0"
                                       viewBox="0 0 24 24"
                                     >
                                       <path
@@ -6921,7 +6924,6 @@ exports[`AdminContainer component should render default view 1`] = `
                                       data-testid="oa-icon"
                                       focusable="false"
                                       role="img"
-                                      tabindex="0"
                                       viewBox="0 0 24 24"
                                     >
                                       <path
@@ -7047,7 +7049,6 @@ exports[`AdminContainer component should render default view 1`] = `
                                       data-testid="oa-icon"
                                       focusable="false"
                                       role="img"
-                                      tabindex="0"
                                       viewBox="0 0 24 24"
                                     >
                                       <path
@@ -7173,7 +7174,6 @@ exports[`AdminContainer component should render default view 1`] = `
                                       data-testid="oa-icon"
                                       focusable="false"
                                       role="img"
-                                      tabindex="0"
                                       viewBox="0 0 24 24"
                                     >
                                       <path
@@ -7299,7 +7299,6 @@ exports[`AdminContainer component should render default view 1`] = `
                                       data-testid="oa-icon"
                                       focusable="false"
                                       role="img"
-                                      tabindex="0"
                                       viewBox="0 0 24 24"
                                     >
                                       <path
@@ -7425,7 +7424,6 @@ exports[`AdminContainer component should render default view 1`] = `
                                       data-testid="oa-icon"
                                       focusable="false"
                                       role="img"
-                                      tabindex="0"
                                       viewBox="0 0 24 24"
                                     >
                                       <path
@@ -7551,7 +7549,6 @@ exports[`AdminContainer component should render default view 1`] = `
                                       data-testid="oa-icon"
                                       focusable="false"
                                       role="img"
-                                      tabindex="0"
                                       viewBox="0 0 24 24"
                                     >
                                       <path
@@ -7677,7 +7674,6 @@ exports[`AdminContainer component should render default view 1`] = `
                                       data-testid="oa-icon"
                                       focusable="false"
                                       role="img"
-                                      tabindex="0"
                                       viewBox="0 0 24 24"
                                     >
                                       <path
@@ -8563,6 +8559,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                   data-indeterminate="false"
                                   data-testid="rek-copyright-input"
                                   id="rek-copyright-input"
+                                  tabindex="0"
                                   type="checkbox"
                                 />
                                 <svg
@@ -8755,6 +8752,7 @@ exports[`AdminContainer component should render default view 1`] = `
                                   data-indeterminate="false"
                                   data-testid="rek-security-inherited-input"
                                   id="rek-security-inherited-input"
+                                  tabindex="0"
                                   type="checkbox"
                                 />
                                 <svg

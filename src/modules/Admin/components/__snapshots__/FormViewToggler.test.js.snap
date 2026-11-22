@@ -19,6 +19,7 @@ exports[`FormViewToggler component should render default view 1`] = `
           <input
             class="PrivateSwitchBase-input MuiSwitch-input css-MuiSwitchBase-root"
             role="switch"
+            tabindex="0"
             type="checkbox"
             value="tabbed"
           />
@@ -81,6 +82,7 @@ exports[`FormViewToggler component should render tooltip for full form 1`] = `
             checked=""
             class="PrivateSwitchBase-input MuiSwitch-input css-MuiSwitchBase-root"
             role="switch"
+            tabindex="0"
             type="checkbox"
             value="tabbed"
           />

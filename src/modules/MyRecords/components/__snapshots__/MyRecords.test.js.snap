@@ -689,6 +689,7 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
                                   <a
                                     data-discover="true"
                                     href="/view/UQ:1"
+                                    tabindex="0"
                                   >
                                     1
                                   </a>
@@ -1345,6 +1346,7 @@ exports[`MyRecords test renders list of publications with custom actions 1`] = `
                                   <a
                                     data-discover="true"
                                     href="/view/UQ:1"
+                                    tabindex="0"
                                   >
                                     1
                                   </a>
@@ -2001,6 +2003,7 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
                                   <a
                                     data-discover="true"
                                     href="/view/UQ:1"
+                                    tabindex="0"
                                   >
                                     1
                                   </a>

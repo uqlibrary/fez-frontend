@@ -29,6 +29,7 @@ export const CopyrightAgreement = ({
                     checked={isCopyrightAgreementAccepted}
                     onChange={_handleChange}
                     sx={{ color: 'status.danger', '&.Mui-checked': { color: 'primary.main' } }}
+                    tabIndex={0}
                 />
             }
             label={

@@ -122,6 +122,7 @@ export const FavouriteSearchList = ({ handleRowDelete, handleRowUpdate, list }) 
             {
                 field: 'fvs_description',
                 headerName: favouriteSearchList.columns.description.title,
+                rowHeader: true,
                 editable: true,
                 renderCell: props => {
                     const index = rows.findIndex(row => row.fvs_id === props.id);
@@ -330,6 +331,7 @@ export const FavouriteSearchList = ({ handleRowDelete, handleRowUpdate, list }) 
                     <DataGrid
                         id="favourite-search-list"
                         data-testid="favourite-search-list"
+                        aria-label={favouriteSearchList.ariaLabel}
                         rows={rows}
                         getRowId={row => row.fvs_id}
                         columns={columns}

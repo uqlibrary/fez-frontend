@@ -20,6 +20,7 @@ exports[`Component AttributionIncompleteField should render default view 1`] = `
         data-indeterminate="false"
         data-testid="attributionIncomplete-input"
         id="attributionIncomplete-input"
+        tabindex="0"
         type="checkbox"
       />
       <svg

@@ -29,13 +29,7 @@ export const OpenAccessIcon = ({
                     transition: Fade,
                 }}
             >
-                <Lock
-                    sx={{ ...style }}
-                    data-testid={getIconTestId('no-oa')}
-                    role="img"
-                    tabIndex="0"
-                    aria-hidden="false"
-                />
+                <Lock sx={{ ...style }} data-testid={getIconTestId('no-oa')} role="img" aria-hidden="false" />
             </Tooltip>
         );
     } else if (isOpenAccess && !embargoDate) {
@@ -52,13 +46,7 @@ export const OpenAccessIcon = ({
                     transition: Fade,
                 }}
             >
-                <LockOpen
-                    sx={{ ...style }}
-                    data-testid={getIconTestId('oa')}
-                    role="img"
-                    tabIndex="0"
-                    aria-hidden="false"
-                />
+                <LockOpen sx={{ ...style }} data-testid={getIconTestId('oa')} role="img" aria-hidden="false" />
             </Tooltip>
         );
     } else if (!isOpenAccess && !!embargoDate) {
@@ -83,7 +71,6 @@ export const OpenAccessIcon = ({
                         sx={{ ...style }}
                         data-testid={getIconTestId('embargoed-oa')}
                         role="img"
-                        tabIndex="0"
                         aria-hidden="false"
                     />
                 </Tooltip>

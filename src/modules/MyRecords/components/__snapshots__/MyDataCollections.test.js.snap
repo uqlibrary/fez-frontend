@@ -490,6 +490,7 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
                                   <a
                                     data-discover="true"
                                     href="/view/UQ:1"
+                                    tabindex="0"
                                   >
                                     1
                                   </a>
@@ -856,6 +857,7 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
                                   <a
                                     data-discover="true"
                                     href="/view/UQ:1"
+                                    tabindex="0"
                                   >
                                     1
                                   </a>
