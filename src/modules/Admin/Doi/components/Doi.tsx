@@ -389,7 +389,9 @@ export const Doi: React.FC<Doi> = ({
                         <PublicationCitation publication={record} hideTitle hideCitationCounts hideContentIndicators />
                     </Grid>
                     <Grid size={12}>
-                        {(!!errorMessage && <Alert message={errorMessage} type="error" alertId="rek-doi-error" />) ||
+                        {(!!errorMessage && (
+                            <Alert message={errorMessage} type="error" alertId="rek-doi-error" announce="off" />
+                        )) ||
                             (!!warningMessage && (
                                 <Alert message={warningMessage} type="warning" alertId="rek-doi-warning" />
                             ))}

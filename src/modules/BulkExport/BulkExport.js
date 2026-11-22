@@ -217,7 +217,7 @@ const BulkExport = ({
                         </Grid>
                         {hasSuccess.current && (
                             <Grid size={12}>
-                                <Alert message={successMessage} type="info" />
+                                <Alert message={successMessage} type="success" />
                             </Grid>
                         )}
                         {exportOptionRender}

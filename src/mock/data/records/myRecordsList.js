@@ -298,7 +298,7 @@ const myRecordsList = {
             rek_link_description: 'desc1',
             rek_link_order: 1,
         },{
-            rek_link: 'desc2',
+            rek_link_description: 'desc2',
             rek_link_order: 2,
         },
         ],

@@ -5,7 +5,16 @@ import * as UseIsUserSuperAdmin from 'hooks/useIsUserSuperAdmin';
 import { journalDoaj } from 'mock/data/journalDoaj';
 import * as redux from 'react-redux';
 
-import { render, WithReduxStore, WithRouter, FormProviderWrapper, fireEvent, act, userEvent } from 'test-utils';
+import {
+    render,
+    WithReduxStore,
+    WithRouter,
+    FormProviderWrapper,
+    fireEvent,
+    act,
+    userEvent,
+    preview,
+} from 'test-utils';
 import { ADMIN_JOURNAL } from 'config/general';
 
 jest.mock('../submitHandler', () => ({
@@ -155,7 +164,7 @@ describe('JournalAdminInterface component', () => {
                     },
                 },
             });
-
+            preview.debug();
             expect(getByTestId('alert')).toHaveTextContent(
                 'Error - Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later',
             );

@@ -110,7 +110,7 @@ export const KeywordsBrowser = ({ onKeywordAdd, onKeywordDelete, selectedKeyword
         <Grid container spacing={0}>
             {hasJournalSearchKeywordsFailed && (
                 <Grid>
-                    <Alert {...journalSearchKeywordsError} />
+                    <Alert announce="off" {...journalSearchKeywordsError} />
                 </Grid>
             )}
             <Grid size={12} style={{ padding: '10px 0' }}>

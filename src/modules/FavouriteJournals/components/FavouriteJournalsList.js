@@ -39,7 +39,7 @@ export const FavouriteJournalsList = ({
     if (error) {
         return (
             <Grid id="favourite-journals-list-error" data-testid="favourite-journals-list-error" size={12}>
-                <Alert {...error} />
+                <Alert {...error} announce="off" />
             </Grid>
         );
     }

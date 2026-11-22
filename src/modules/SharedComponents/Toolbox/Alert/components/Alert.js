@@ -148,6 +148,8 @@ export const renderIcon = type => {
     }
 };
 
+export const ASSERTIVE_TYPES = ['error', 'error_outline', 'warning', 'done'];
+
 export const Alert = ({
     action,
     actionButtonLabel,
@@ -160,18 +162,26 @@ export const Alert = ({
     message = 'Unexpected error',
     showLoader = false,
     alertId,
+    announce = 'auto',
     title,
     type = 'error',
     wiggle = null,
 }) => {
-    /* istanbul ignore next */
     const convertedType = type === 'success' ? 'done' : type;
     const renderedIcon = convertedType !== 'custom' ? renderIcon(convertedType) : customIcon;
+    const effectiveType = !!customIcon ? customType : convertedType;
+    // announce: 'auto' picks the live region role from the alert type, 'assertive' forces role="alert" (e.g. results
+    // shown after a user action) and 'off' renders static content (e.g. alerts present on page load) with no role
+    const liveRole = {
+        auto: ASSERTIVE_TYPES.includes(effectiveType) ? 'alert' : 'status',
+        assertive: 'alert',
+        off: undefined,
+    }[announce];
     return (
         <div data-testid="alert" style={{ marginTop: '5px' }}>
             <StyledGridWithIcon
                 container
-                type={!!customIcon ? customType : convertedType}
+                type={effectiveType}
                 justifyContent="center"
                 alignItems="flex-start"
                 alignContent="center"
@@ -218,8 +228,10 @@ export const Alert = ({
                             onClick={(!disableAlertClick && action) || undefined}
                             onKeyDown={(!disableAlertClick && action) || undefined}
                         >
-                            <b>{title && `${title} - `}</b>
-                            <span data-testid="alert-message">{message}</span>
+                            <span role={liveRole}>
+                                {title && <b>{`${title} - `}</b>}
+                                <span data-testid="alert-message">{message}</span>
+                            </span>
                         </StyledGridTitle>
                         {allowDismiss && dismissAction && (
                             <StyledGridDismissButton sx={{ display: { xs: 'block', sm: 'none' } }}>
@@ -306,6 +318,7 @@ Alert.propTypes = {
     message: PropTypes.any.isRequired,
     showLoader: PropTypes.bool,
     alertId: PropTypes.string,
+    announce: PropTypes.oneOf(['auto', 'assertive', 'off']),
     title: PropTypes.string,
     type: PropTypes.oneOf([
         'error',
