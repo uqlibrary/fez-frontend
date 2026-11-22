@@ -1,3 +1,5 @@
+// UQ Design System CSS variables
+@use "./ds";
 // Charts styles from toolbox
 @use "./charts";
 // SVG Icons
@@ -8,6 +10,8 @@
 @use "./print";
 // Browser update script styles
 @use './browserUpdate';
+// Shared mixins
+@use './mixins' as *;
 
 html, body {
   overflow: hidden;
@@ -36,12 +40,26 @@ a, button.MuiLink-button:enabled {
       text-decoration: none;
     }
   }
+  &:focus-visible {
+    @include focus-ring;
+  }
+}
+
+#FileUploadDropZone {
+  &:focus-visible {
+    @include focus-ring;
+  }
 }
 
 .smallLogo,
 .largeLogo {
   color: transparent;
   background: center center url(~/src/images/uq-logo-white-minimal.svg) no-repeat;
+}
+#main-menu-logo-link {
+  &:focus {
+    @include focus-ring(var(--uq-white));
+  }
 }
 
 .largeLogo {

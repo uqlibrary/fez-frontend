@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { styled } from '@mui/material/styles';
+import { visuallyHidden } from '@mui/utils';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import menuLocale from 'locale/menu';
 
@@ -12,7 +12,7 @@ import Divider from '@mui/material/Divider';
 import Grid from '@mui/material/Grid';
 import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
 import IconButton from '@mui/material/IconButton';
-import Button from '@mui/material/Button';
+import OpenInNew from '@mui/icons-material/OpenInNew';
 import Drawer from '@mui/material/Drawer';
 import { useNavigate } from 'react-router';
 import kebabCase from 'lodash/kebabCase';
@@ -29,9 +29,9 @@ interface MenuItem {
 }
 
 interface MenuDrawerLocale {
-    skipNavTitle: string;
-    skipNavAriaLabel: string;
     closeMenuLabel: string;
+    navAriaLabel?: string;
+    opensInNewWindow?: string;
 }
 
 interface MenuDrawerProps {
@@ -45,48 +45,37 @@ interface MenuDrawerProps {
     locale: MenuDrawerLocale;
 }
 
-const StyledSkipNav = styled('div')(() => ({
-    width: '100%',
-    height: '90%',
-    position: 'absolute',
-    zIndex: 998,
-    left: '-2000px',
-    outline: 'none',
-    background:
-        'linear-gradient(to bottom, rgba(255,255,255,0.75) 0%,rgba(255,255,255,0.75) 78%,rgba(255,255,255,0) 100%)',
-    filter: 'progid:DXImageTransform.Microsoft.gradient( startColorstr="#bfffffff", endColorstr="#00ffffff",GradientType=0 )',
-    '&:focus': {
-        left: 0,
-    },
-    '& .skipNavButton': {
-        position: 'absolute',
-        top: '25%',
-        left: 'calc(50% - 90px)',
-        textAlign: 'center',
-        width: '160px',
-        whiteSpace: 'normal',
-        overflow: 'visible',
-        zIndex: 999,
-    },
-}));
-
 const renderMenuItem = (
     navigateToLink: (url: string, target?: string) => void,
     menuItem: MenuItem,
     index: number,
+    opensInNewWindow?: string,
 ): React.JSX.Element => {
     let primaryText: React.ReactNode = menuItem.primaryText;
     if (menuItem.isExternal) {
+        // The menu button already opens the link, so this is plain text with the new window icon rather
+        // than a nested link: a second focusable element gave keyboard users two stops for one item.
         primaryText = (
-            <ExternalLink
-                sx={{ color: 'text.primary' }}
-                className="noHover"
-                openInNewIcon
-                id={`${index}-${kebabCase(String(menuItem.primaryText))}`}
-                title={menuItem.primaryText}
+            <Box
+                component="span"
+                id={`${index}-${kebabCase(String(menuItem.primaryText))}-link`}
+                sx={{
+                    color: 'text.primary',
+                    display: 'inline-block',
+                    maxWidth: '100%',
+                    verticalAlign: 'bottom',
+                    overflow: 'hidden',
+                    whiteSpace: 'nowrap',
+                    textOverflow: 'ellipsis',
+                }}
             >
+                <OpenInNew
+                    aria-hidden="true"
+                    sx={{ color: 'inherit', fontSize: '0.66rem', float: 'right', marginLeft: '0.25rem' }}
+                />
                 {menuItem.primaryText}
-            </ExternalLink>
+                {!!opensInNewWindow && <Box component="span" sx={visuallyHidden}>{` ${opensInNewWindow}`}</Box>}
+            </Box>
         );
     }
     return (
@@ -119,16 +108,36 @@ const renderMenuItem = (
     );
 };
 
+// Each run of items between dividers is its own list, so screen readers announce real lists with the
+// divider as a separator between them (WCAG 1.3.1). Item indexes stay global so element ids are unchanged.
 const renderMenuItems = (
     navigateToLink: (url: string, target?: string) => void,
     items: MenuItem[],
-): React.JSX.Element[] =>
-    items.map((menuItem, index) => {
+    opensInNewWindow?: string,
+): React.JSX.Element[] => {
+    const elements: React.JSX.Element[] = [];
+    let listKey = 0;
+    let listItems: React.JSX.Element[] = [];
+    const closeList = (): void => {
+        elements.push(
+            <List key={`menu_list_${listKey}`} sx={{ paddingTop: 0, paddingBottom: 0 }}>
+                {listItems}
+            </List>,
+        );
+    };
+    items.forEach((menuItem: MenuItem, index: number) => {
         if (menuItem.divider) {
-            return <Divider key={`menu_item_${index}`} />;
+            closeList();
+            elements.push(<Divider key={`menu_item_${index}`} />);
+            listKey = index;
+            listItems = [];
+        } else {
+            listItems.push(renderMenuItem(navigateToLink, menuItem, index, opensInNewWindow));
         }
-        return renderMenuItem(navigateToLink, menuItem, index);
     });
+    closeList();
+    return elements;
+};
 
 export const MenuDrawer: React.FC<MenuDrawerProps> = ({
     menuItems,
@@ -144,10 +153,6 @@ export const MenuDrawer: React.FC<MenuDrawerProps> = ({
 
     const focusOnElementId = (elementId: string): void => {
         document.getElementById(elementId)?.focus?.();
-    };
-
-    const skipMenuItems = (): void => {
-        focusOnElementId('afterMenuDrawer');
     };
 
     const navigateToLink = (url: string, target: string = '_blank'): void => {
@@ -192,10 +197,12 @@ export const MenuDrawer: React.FC<MenuDrawerProps> = ({
         >
             {drawerOpen && (
                 <Fragment>
-                    <List
+                    {/* The nav holds the menu header and the lists of menu items. */}
+                    <Box
                         component="nav"
                         id="mainMenu"
-                        sx={{ outline: 'none', flexGrow: 1, paddingTop: 0 }}
+                        aria-label={locale.navAriaLabel}
+                        sx={{ outline: 'none', flexGrow: 1, paddingBottom: '8px' }}
                         tabIndex={-1}
                     >
                         <Grid
@@ -245,32 +252,10 @@ export const MenuDrawer: React.FC<MenuDrawerProps> = ({
                                 </IconButton>
                             </Grid>
                         </Grid>
-                        {
-                            // Skip nav section
-                            docked && (
-                                <StyledSkipNav
-                                    id="skipNav"
-                                    onClick={skipMenuItems}
-                                    onKeyPress={skipMenuItems}
-                                    tabIndex={1}
-                                    aria-label={locale.skipNavAriaLabel}
-                                >
-                                    <Button
-                                        variant="contained"
-                                        color="primary"
-                                        onClick={skipMenuItems}
-                                        className="skipNavButton"
-                                        tabIndex={-1}
-                                    >
-                                        {locale.skipNavTitle}
-                                    </Button>
-                                </StyledSkipNav>
-                            )
-                        }
-                        {renderMenuItems(navigateToLink, menuItems)}
-                    </List>
-                    <div id="afterMenuDrawer" data-testid="after-menu-drawer" tabIndex={-1} />
+                        {renderMenuItems(navigateToLink, menuItems, locale.opensInNewWindow)}
+                    </Box>
                     <Box
+                        component="footer"
                         sx={theme => ({
                             textAlign: 'center',
                             paddingBottom: '12px',

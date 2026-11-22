@@ -105,6 +105,24 @@ describe('SystemAlerts tab', () => {
         expect(getByTestId('alert-status-12')).toHaveTextContent('Unknown');
         expect(getByTestId('alert-status-13')).toHaveTextContent('Another Staff');
 
+        // row checkboxes are named after their alert
+        expect(
+            getByRole('checkbox', { name: 'Select alert: My Works - Claimed Work - UQ:8efd126 - uqwtomas' }),
+        ).toBeInTheDocument();
+        expect(getByRole('checkbox', { name: 'Select alert: Issues on record - UQ:34555c6' })).toBeInTheDocument();
+
+        // header and row checkboxes share the grid's default centred alignment
+        expect(getByRole('checkbox', { name: 'Select all rows' }).closest('[role=columnheader]')).toHaveClass(
+            'MuiDataGrid-columnHeader--alignCenter',
+        );
+        expect(
+            getByRole('checkbox', { name: 'Select alert: Issues on record - UQ:34555c6' }).closest('[role=gridcell]'),
+        ).toHaveClass('MuiDataGrid-cell--textCenter');
+
+        // the label reflects the selected state
+        await userEvent.click(getByRole('checkbox', { name: 'Select alert: Issues on record - UQ:34555c6' }));
+        expect(getByRole('checkbox', { name: 'Unselect alert: Issues on record - UQ:34555c6' })).toBeChecked();
+
         // pagination buttons
         expect(getByTitle('Go to previous page')).toHaveAttribute('disabled');
         expect(getByTitle('Go to next page')).toHaveAttribute('disabled');
@@ -183,6 +201,26 @@ describe('SystemAlerts tab', () => {
         });
 
         await waitForElementToBeRemoved(getByTestId('system-alert-detail'));
+    });
+
+    it('should open the drawer once from the keyboard-reachable status button, not just the row click', async () => {
+        mockApi
+            .onGet(repositories.routes.ADMIN_DASHBOARD_SYSTEM_ALERTS_API().apiUrl)
+            .reply(200, { data: [...adminDashboardSystemAlerts] });
+
+        const { getByTestId, queryByTestId } = setup();
+        await waitForElementToBeRemoved(getByTestId('admin-dashboard-systemalerts-skeleton'));
+
+        const statusButton = within(getByTestId('alert-status-1').closest('[role=gridcell]')).getByRole('button', {
+            name: 'Unassigned - click to view details and assign',
+        });
+        expect(queryByTestId('system-alert-detail')).not.toBeInTheDocument();
+
+        statusButton.focus();
+        expect(statusButton).toHaveFocus();
+        await userEvent.keyboard('{Enter}');
+
+        await waitFor(() => expect(getByTestId('system-alert-detail')).toBeInTheDocument());
     });
 
     it('filters Mine correctly', async () => {
@@ -317,7 +355,7 @@ describe('SystemAlerts tab', () => {
         await userEvent.click(checkboxes[1]);
 
         expect(getByText(/1 selected/i)).toBeInTheDocument();
-        expect(getByLabelText(/assign/i)).toBeInTheDocument();
+        expect(getByLabelText(/^assign$/i)).toBeInTheDocument();
     });
 
     it('should call batch assign API with correct payload', async () => {
@@ -344,7 +382,7 @@ describe('SystemAlerts tab', () => {
         await userEvent.click(checkboxes[1]); // select first row
 
         // open assign dropdown
-        await userEvent.click(getByLabelText(/assign/i));
+        await userEvent.click(getByLabelText(/^assign$/i));
 
         // select user
         await userEvent.click(getByRole('option', { name: 'Staff' }));
@@ -373,7 +411,7 @@ describe('SystemAlerts tab', () => {
         await userEvent.click(checkboxes[1]);
         await userEvent.click(checkboxes[4]);
 
-        expect(getByLabelText(/assign/i)).toBeDisabled();
+        expect(getByLabelText(/^assign$/i)).toBeDisabled();
     });
 
     it('should keep selection if batch assign fails', async () => {
@@ -390,7 +428,7 @@ describe('SystemAlerts tab', () => {
         const checkboxes = getAllByRole('checkbox');
         await userEvent.click(checkboxes[1]);
 
-        await userEvent.click(getByLabelText(/assign/i));
+        await userEvent.click(getByLabelText(/^assign$/i));
         await userEvent.click(getByRole('option', { name: 'Staff' }));
 
         await waitFor(() => {

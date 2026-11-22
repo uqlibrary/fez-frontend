@@ -21,9 +21,8 @@ function setup(testProps = {}) {
         drawerOpen: true,
         docker: true,
         locale: {
-            skipNavTitle: 'skip-nav',
-            skipNavAriaLabel: 'skip-nav',
             closeMenuLabel: 'close',
+            opensInNewWindow: '(opens in a new window)',
         },
         menuItems: testProps.menuItems || defaultMenuItems,
     };

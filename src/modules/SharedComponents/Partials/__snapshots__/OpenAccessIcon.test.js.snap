@@ -10,7 +10,6 @@ exports[`Journal Name Component test  should pass style to child component 1`] =
     data-testid="oa-icon"
     focusable="false"
     role="img"
-    tabindex="0"
     viewBox="0 0 24 24"
   >
     <path
@@ -39,7 +38,6 @@ exports[`Journal Name Component test  should render embargoed 1`] = `
     data-testid="embargoed-oa-icon"
     focusable="false"
     role="img"
-    tabindex="0"
     viewBox="0 0 24 24"
   >
     <path
@@ -64,7 +62,6 @@ exports[`Journal Name Component test  should render embargoed 2`] = `
     data-testid="embargoed-oa-icon"
     focusable="false"
     role="img"
-    tabindex="0"
     viewBox="0 0 24 24"
   >
     <path
@@ -84,7 +81,6 @@ exports[`Journal Name Component test  should render locked 1`] = `
     data-testid="no-oa-icon"
     focusable="false"
     role="img"
-    tabindex="0"
     viewBox="0 0 24 24"
   >
     <path
@@ -113,7 +109,6 @@ exports[`Journal Name Component test  should render open access 1`] = `
     data-testid="oa-icon"
     focusable="false"
     role="img"
-    tabindex="0"
     viewBox="0 0 24 24"
   >
     <path
@@ -133,7 +128,6 @@ exports[`Journal Name Component test  should render open access with OPEN_ACCESS
     data-testid="oa-icon"
     focusable="false"
     role="img"
-    tabindex="0"
     viewBox="0 0 24 24"
   >
     <path

@@ -246,11 +246,11 @@ exports[`MyRecords test renders active filters 1`] = `
             <div
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-MuiGrid-root"
             >
-              <div
+              <h3
                 class="MuiTypography-root MuiTypography-h6 StandardRighthandCard-title css-MuiTypography-root"
               >
                 Refine results
-              </div>
+              </h3>
             </div>
             <div
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
@@ -302,7 +302,8 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
       <div
         class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-MuiGrid-root"
       >
-        <div
+        <section
+          aria-label="Results"
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-9 css-MuiGrid-root"
         >
           <div
@@ -688,6 +689,7 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
                                   <a
                                     data-discover="true"
                                     href="/view/UQ:1"
+                                    tabindex="0"
                                   >
                                     1
                                   </a>
@@ -924,7 +926,7 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
               </div>
             </div>
           </div>
-        </div>
+        </section>
       </div>
     </div>
   </div>
@@ -957,7 +959,8 @@ exports[`MyRecords test renders list of publications with custom actions 1`] = `
       <div
         class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-MuiGrid-root"
       >
-        <div
+        <section
+          aria-label="Results"
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-9 css-MuiGrid-root"
         >
           <div
@@ -1343,6 +1346,7 @@ exports[`MyRecords test renders list of publications with custom actions 1`] = `
                                   <a
                                     data-discover="true"
                                     href="/view/UQ:1"
+                                    tabindex="0"
                                   >
                                     1
                                   </a>
@@ -1579,7 +1583,7 @@ exports[`MyRecords test renders list of publications with custom actions 1`] = `
               </div>
             </div>
           </div>
-        </div>
+        </section>
       </div>
     </div>
   </div>
@@ -1612,7 +1616,8 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
       <div
         class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-MuiGrid-root"
       >
-        <div
+        <section
+          aria-label="Results"
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-9 css-MuiGrid-root"
         >
           <div
@@ -1998,6 +2003,7 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
                                   <a
                                     data-discover="true"
                                     href="/view/UQ:1"
+                                    tabindex="0"
                                   >
                                     1
                                   </a>
@@ -2234,7 +2240,7 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
               </div>
             </div>
           </div>
-        </div>
+        </section>
         <div
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-3 css-MuiGrid-root"
         >
@@ -2244,11 +2250,11 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
             <div
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-MuiGrid-root"
             >
-              <div
+              <h3
                 class="MuiTypography-root MuiTypography-h6 StandardRighthandCard-title css-MuiTypography-root"
               >
                 Refine results
-              </div>
+              </h3>
             </div>
             <div
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
@@ -2266,6 +2272,7 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
                 id="facets-filter"
               >
                 <nav
+                  aria-label="Refine results"
                   class="MuiList-root MuiList-padding MuiList-dense css-MuiList-root"
                 >
                   <div
@@ -2449,7 +2456,8 @@ exports[`MyRecords test renders loading screen while export publications loading
       <div
         class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-MuiGrid-root"
       >
-        <div
+        <section
+          aria-label="Results"
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-9 css-MuiGrid-root"
         >
           <div
@@ -2727,7 +2735,7 @@ exports[`MyRecords test renders loading screen while export publications loading
               </div>
             </div>
           </div>
-        </div>
+        </section>
       </div>
     </div>
   </div>
@@ -2848,7 +2856,8 @@ exports[`MyRecords test renders loading screen while loading publications while 
       <div
         class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-2 css-MuiGrid-root"
       >
-        <div
+        <section
+          aria-label="Results"
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-9 css-MuiGrid-root"
         >
           <div
@@ -3126,7 +3135,7 @@ exports[`MyRecords test renders loading screen while loading publications while 
               </div>
             </div>
           </div>
-        </div>
+        </section>
       </div>
     </div>
   </div>

@@ -15,6 +15,7 @@ exports[`Component CopyrightAgreement should render checked if deposit agreement
         data-indeterminate="false"
         data-testid="test-input"
         id="test-input"
+        tabindex="0"
         type="checkbox"
       />
       <svg
@@ -54,6 +55,7 @@ exports[`Component CopyrightAgreement should render default view 1`] = `
         data-indeterminate="false"
         data-testid="test-input"
         id="test-input"
+        tabindex="0"
         type="checkbox"
       />
       <svg

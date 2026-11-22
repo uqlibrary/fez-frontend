@@ -73,11 +73,11 @@ exports[`Component PossiblyMyRecords renders active filters 1`] = `
             <div
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-MuiGrid-root"
             >
-              <div
+              <h3
                 class="MuiTypography-root MuiTypography-h6 StandardRighthandCard-title css-MuiTypography-root"
               >
                 Refine results
-              </div>
+              </h3>
             </div>
             <div
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
@@ -255,7 +255,8 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
       <div
         class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row MuiGrid-spacing-xs-3 css-MuiGrid-root"
       >
-        <div
+        <section
+          aria-label="Results"
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 MuiGrid-grid-md-9 css-MuiGrid-root"
         >
           <div
@@ -318,6 +319,7 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                                   <a
                                     data-discover="true"
                                     href="/view/UQ:1"
+                                    tabindex="0"
                                   >
                                     1
                                   </a>
@@ -439,6 +441,7 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                                   <a
                                     data-discover="true"
                                     href="/view/UQ:2"
+                                    tabindex="0"
                                   >
                                     2
                                   </a>
@@ -560,6 +563,7 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                                   <a
                                     data-discover="true"
                                     href="/view/UQ:3"
+                                    tabindex="0"
                                   >
                                     3
                                   </a>
@@ -659,7 +663,7 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
               </div>
             </div>
           </div>
-        </div>
+        </section>
         <div
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-sm-3 css-MuiGrid-root"
         >
@@ -669,11 +673,11 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
             <div
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-MuiGrid-root"
             >
-              <div
+              <h3
                 class="MuiTypography-root MuiTypography-h6 StandardRighthandCard-title css-MuiTypography-root"
               >
                 Refine results
-              </div>
+              </h3>
             </div>
             <div
               class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
@@ -691,6 +695,7 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
                 id="facets-filter"
               >
                 <nav
+                  aria-label="Refine results"
                   class="MuiList-root MuiList-padding MuiList-dense css-MuiList-root"
                 >
                   <div

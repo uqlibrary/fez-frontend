@@ -293,7 +293,9 @@ export const PublicationCitation = ({
 
     const renderTitle = () => {
         return publication.rek_pid && !hideLinks ? (
-            <Link to={pathConfig.records.view(publication.rek_pid)}>{parseHtmlToJSX(publication.rek_title)}</Link>
+            <Link to={pathConfig.records.view(publication.rek_pid)} tabIndex={0}>
+                {parseHtmlToJSX(publication.rek_title)}
+            </Link>
         ) : (
             parseHtmlToJSX(publication.rek_title)
         );
@@ -461,12 +463,19 @@ export const PublicationCitation = ({
                                             {showSourceCountIcon && (
                                                 <Grid>
                                                     <span className={`fez-icon ${recordValue.source} xxxlarge`} />
-                                                    <Typography variant="h6">{recordValue.count}</Typography>
+                                                    <Typography variant="h6" component="div">
+                                                        {recordValue.count}
+                                                    </Typography>
                                                 </Grid>
                                             )}
                                             {!showSourceCountIcon && !hideCountTotal && (
                                                 <Grid>
-                                                    <Typography variant="h6" color="inherit" className="count">
+                                                    <Typography
+                                                        variant="h6"
+                                                        component="div"
+                                                        color="inherit"
+                                                        className="count"
+                                                    >
                                                         {Math.round(recordValue.count)}
                                                     </Typography>
                                                 </Grid>
@@ -475,6 +484,7 @@ export const PublicationCitation = ({
                                                 <Grid>
                                                     <Typography
                                                         variant="h6"
+                                                        component="div"
                                                         color="inherit"
                                                         className="difference"
                                                         title={

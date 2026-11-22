@@ -3,6 +3,8 @@
 exports[`SearchComponent getFieldRowsFromSearchQuery should process empty search query 1`] = `
 <div>
   <form
+    aria-label="Search eSpace"
+    role="search"
     style="margin: 8px;"
   >
     <div
@@ -80,6 +82,8 @@ exports[`SearchComponent getFieldRowsFromSearchQuery should process empty search
 exports[`SearchComponent getFieldRowsFromSearchQuery should process missing label 1`] = `
 <div>
   <form
+    aria-label="Search eSpace"
+    role="search"
     style="margin: 8px;"
   >
     <div
@@ -157,6 +161,8 @@ exports[`SearchComponent getFieldRowsFromSearchQuery should process missing labe
 exports[`SearchComponent should display simple search with query string 1`] = `
 <div>
   <form
+    aria-label="Search eSpace"
+    role="search"
     style="margin: 8px;"
   >
     <div
@@ -234,6 +240,8 @@ exports[`SearchComponent should display simple search with query string 1`] = `
 exports[`SearchComponent should display simple search with query string 2`] = `
 <div>
   <form
+    aria-label="Search eSpace"
+    role="search"
     style="margin: 8px;"
   >
     <div
@@ -311,6 +319,8 @@ exports[`SearchComponent should display simple search with query string 2`] = `
 exports[`SearchComponent should render default view 1`] = `
 <div>
   <form
+    aria-label="Search eSpace"
+    role="search"
     style="margin: 8px;"
   >
     <div
@@ -388,8 +398,10 @@ exports[`SearchComponent should render default view 1`] = `
 exports[`SearchComponent should render default view with advanced search 1`] = `
 <div>
   <form
+    aria-labelledby="advanced-search-title"
     data-testid="advanced-search-form"
     id="advancedSearchForm"
+    role="search"
   >
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
@@ -401,11 +413,12 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
           class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
           style="flex-grow: 1; width: 1px;"
         >
-          <h5
+          <h3
             class="MuiTypography-root MuiTypography-h5 css-MuiTypography-root"
+            id="advanced-search-title"
           >
             Advanced search
-          </h5>
+          </h3>
         </div>
         <div
           class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
@@ -528,7 +541,7 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
                     >
                       <input
                         aria-invalid="false"
-                        autocomplete="search"
+                        autocomplete="on"
                         class="MuiInputBase-input MuiInput-input Mui-disabled css-MuiInputBase-input-MuiInput-input"
                         data-analyticsid="initial-input"
                         data-testid="initial-input"
@@ -719,6 +732,7 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
                     data-indeterminate="false"
                     data-testid="advanced-search-open-access"
                     id="advanced-search-open-access"
+                    tabindex="0"
                     type="checkbox"
                   />
                   <svg
@@ -837,8 +851,10 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
 exports[`SearchComponent should render in advanced search and take in consideration isOpenAccessInAdvancedMode changes 1`] = `
 <div>
   <form
+    aria-labelledby="advanced-search-title"
     data-testid="advanced-search-form"
     id="advancedSearchForm"
+    role="search"
   >
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
@@ -850,11 +866,12 @@ exports[`SearchComponent should render in advanced search and take in considerat
           class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
           style="flex-grow: 1; width: 1px;"
         >
-          <h5
+          <h3
             class="MuiTypography-root MuiTypography-h5 css-MuiTypography-root"
+            id="advanced-search-title"
           >
             Advanced search
-          </h5>
+          </h3>
         </div>
         <div
           class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
@@ -977,7 +994,7 @@ exports[`SearchComponent should render in advanced search and take in considerat
                     >
                       <input
                         aria-invalid="false"
-                        autocomplete="search"
+                        autocomplete="on"
                         class="MuiInputBase-input MuiInput-input Mui-disabled css-MuiInputBase-input-MuiInput-input"
                         data-analyticsid="initial-input"
                         data-testid="initial-input"
@@ -1168,6 +1185,7 @@ exports[`SearchComponent should render in advanced search and take in considerat
                     data-indeterminate="false"
                     data-testid="advanced-search-open-access"
                     id="advanced-search-open-access"
+                    tabindex="0"
                     type="checkbox"
                   />
                   <svg
@@ -1309,6 +1327,8 @@ exports[`SearchComponent should render in advanced search and take in considerat
 exports[`SearchComponent should render simple search even if it says is advanced, if in header 1`] = `
 <div>
   <form
+    aria-label="Site search"
+    role="search"
     style="margin: 8px;"
   >
     <div
@@ -1327,7 +1347,7 @@ exports[`SearchComponent should render simple search even if it says is advanced
             <input
               aria-invalid="false"
               aria-label=""
-              autocomplete="search"
+              autocomplete="on"
               class="MuiInputBase-input MuiInput-input MuiInputBase-inputTypeSearch css-MuiInputBase-input-MuiInput-input"
               data-analyticsid="simple-search-input"
               data-testid="simple-search-input"
@@ -1371,6 +1391,8 @@ exports[`SearchComponent should render simple search even if it says is advanced
 exports[`SearchComponent should render with a class "header" for use in AppBar 1`] = `
 <div>
   <form
+    aria-label="Site search"
+    role="search"
     style="margin: 8px;"
   >
     <div
@@ -1389,7 +1411,7 @@ exports[`SearchComponent should render with a class "header" for use in AppBar 1
             <input
               aria-invalid="false"
               aria-label=""
-              autocomplete="search"
+              autocomplete="on"
               class="MuiInputBase-input MuiInput-input MuiInputBase-inputTypeSearch css-MuiInputBase-input-MuiInput-input"
               data-analyticsid="simple-search-input"
               data-testid="simple-search-input"
@@ -1433,8 +1455,10 @@ exports[`SearchComponent should render with a class "header" for use in AppBar 1
 exports[`SearchComponent should reset advanced search 1`] = `
 <div>
   <form
+    aria-labelledby="advanced-search-title"
     data-testid="advanced-search-form"
     id="advancedSearchForm"
+    role="search"
   >
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
@@ -1446,11 +1470,12 @@ exports[`SearchComponent should reset advanced search 1`] = `
           class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
           style="flex-grow: 1; width: 1px;"
         >
-          <h5
+          <h3
             class="MuiTypography-root MuiTypography-h5 css-MuiTypography-root"
+            id="advanced-search-title"
           >
             Advanced search
-          </h5>
+          </h3>
         </div>
         <div
           class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
@@ -1573,7 +1598,7 @@ exports[`SearchComponent should reset advanced search 1`] = `
                     >
                       <input
                         aria-invalid="false"
-                        autocomplete="search"
+                        autocomplete="on"
                         class="MuiInputBase-input MuiInput-input Mui-disabled css-MuiInputBase-input-MuiInput-input"
                         data-analyticsid="initial-input"
                         data-testid="initial-input"
@@ -1765,6 +1790,7 @@ exports[`SearchComponent should reset advanced search 1`] = `
                     data-indeterminate="false"
                     data-testid="advanced-search-open-access"
                     id="advanced-search-open-access"
+                    tabindex="0"
                     type="checkbox"
                   />
                   <svg
@@ -1883,8 +1909,10 @@ exports[`SearchComponent should reset advanced search 1`] = `
 exports[`SearchComponent should toggle advanced search to minimised view 1`] = `
 <div>
   <form
+    aria-labelledby="advanced-search-title"
     data-testid="advanced-search-form"
     id="advancedSearchForm"
+    role="search"
   >
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
@@ -1896,11 +1924,12 @@ exports[`SearchComponent should toggle advanced search to minimised view 1`] = `
           class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
           style="flex-grow: 1; width: 1px;"
         >
-          <h5
+          <h3
             class="MuiTypography-root MuiTypography-h5 css-MuiTypography-root"
+            id="advanced-search-title"
           >
             Advanced search
-          </h5>
+          </h3>
         </div>
         <div
           class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
@@ -1954,8 +1983,10 @@ exports[`SearchComponent should toggle advanced search to minimised view 1`] = `
 exports[`SearchComponent should toggle open access for advanced search 1`] = `
 <div>
   <form
+    aria-labelledby="advanced-search-title"
     data-testid="advanced-search-form"
     id="advancedSearchForm"
+    role="search"
   >
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
@@ -1967,11 +1998,12 @@ exports[`SearchComponent should toggle open access for advanced search 1`] = `
           class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
           style="flex-grow: 1; width: 1px;"
         >
-          <h5
+          <h3
             class="MuiTypography-root MuiTypography-h5 css-MuiTypography-root"
+            id="advanced-search-title"
           >
             Advanced search
-          </h5>
+          </h3>
         </div>
         <div
           class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
@@ -2094,7 +2126,7 @@ exports[`SearchComponent should toggle open access for advanced search 1`] = `
                     >
                       <input
                         aria-invalid="false"
-                        autocomplete="search"
+                        autocomplete="on"
                         class="MuiInputBase-input MuiInput-input Mui-disabled css-MuiInputBase-input-MuiInput-input"
                         data-analyticsid="initial-input"
                         data-testid="initial-input"
@@ -2285,6 +2317,7 @@ exports[`SearchComponent should toggle open access for advanced search 1`] = `
                     data-indeterminate="false"
                     data-testid="advanced-search-open-access"
                     id="advanced-search-open-access"
+                    tabindex="0"
                     type="checkbox"
                   />
                   <svg
@@ -2426,6 +2459,8 @@ exports[`SearchComponent should toggle open access for advanced search 1`] = `
 exports[`SearchComponent should toggle search to minimised view of advanced search 1`] = `
 <div>
   <form
+    aria-label="Search eSpace"
+    role="search"
     style="margin: 8px;"
   >
     <div
@@ -2503,8 +2538,10 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
 exports[`SearchComponent should toggle search to minimised view of advanced search 2`] = `
 <div>
   <form
+    aria-labelledby="advanced-search-title"
     data-testid="advanced-search-form"
     id="advancedSearchForm"
+    role="search"
   >
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
@@ -2516,11 +2553,12 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
           class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
           style="flex-grow: 1; width: 1px;"
         >
-          <h5
+          <h3
             class="MuiTypography-root MuiTypography-h5 css-MuiTypography-root"
+            id="advanced-search-title"
           >
             Advanced search
-          </h5>
+          </h3>
         </div>
         <div
           class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
@@ -2642,7 +2680,7 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
                     >
                       <input
                         aria-invalid="false"
-                        autocomplete="search"
+                        autocomplete="on"
                         class="MuiInputBase-input MuiInput-input css-MuiInputBase-input-MuiInput-input"
                         data-analyticsid="any-field-input"
                         data-testid="any-field-input"
@@ -2832,6 +2870,7 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
                     data-indeterminate="false"
                     data-testid="advanced-search-open-access"
                     id="advanced-search-open-access"
+                    tabindex="0"
                     type="checkbox"
                   />
                   <svg
@@ -2975,8 +3014,10 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
 exports[`SearchComponent should toggle to advanced search 1`] = `
 <div>
   <form
+    aria-labelledby="advanced-search-title"
     data-testid="advanced-search-form"
     id="advancedSearchForm"
+    role="search"
   >
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
@@ -2988,11 +3029,12 @@ exports[`SearchComponent should toggle to advanced search 1`] = `
           class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
           style="flex-grow: 1; width: 1px;"
         >
-          <h5
+          <h3
             class="MuiTypography-root MuiTypography-h5 css-MuiTypography-root"
+            id="advanced-search-title"
           >
             Advanced search
-          </h5>
+          </h3>
         </div>
         <div
           class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
@@ -3115,7 +3157,7 @@ exports[`SearchComponent should toggle to advanced search 1`] = `
                     >
                       <input
                         aria-invalid="false"
-                        autocomplete="search"
+                        autocomplete="on"
                         class="MuiInputBase-input MuiInput-input Mui-disabled css-MuiInputBase-input-MuiInput-input"
                         data-analyticsid="initial-input"
                         data-testid="initial-input"
@@ -3306,6 +3348,7 @@ exports[`SearchComponent should toggle to advanced search 1`] = `
                     data-indeterminate="false"
                     data-testid="advanced-search-open-access"
                     id="advanced-search-open-access"
+                    tabindex="0"
                     type="checkbox"
                   />
                   <svg
@@ -3424,6 +3467,8 @@ exports[`SearchComponent should toggle to advanced search 1`] = `
 exports[`SearchComponent should toggle to simple search 1`] = `
 <div>
   <form
+    aria-label="Search eSpace"
+    role="search"
     style="margin: 8px;"
   >
     <div
@@ -3501,8 +3546,10 @@ exports[`SearchComponent should toggle to simple search 1`] = `
 exports[`SearchComponent should update advanced search row on search text changed 1`] = `
 <div>
   <form
+    aria-labelledby="advanced-search-title"
     data-testid="advanced-search-form"
     id="advancedSearchForm"
+    role="search"
   >
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
@@ -3514,11 +3561,12 @@ exports[`SearchComponent should update advanced search row on search text change
           class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
           style="flex-grow: 1; width: 1px;"
         >
-          <h5
+          <h3
             class="MuiTypography-root MuiTypography-h5 css-MuiTypography-root"
+            id="advanced-search-title"
           >
             Advanced search
-          </h5>
+          </h3>
         </div>
         <div
           class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
@@ -3640,7 +3688,7 @@ exports[`SearchComponent should update advanced search row on search text change
                     >
                       <input
                         aria-invalid="false"
-                        autocomplete="search"
+                        autocomplete="on"
                         class="MuiInputBase-input MuiInput-input css-MuiInputBase-input-MuiInput-input"
                         data-analyticsid="any-field-input"
                         data-testid="any-field-input"
@@ -3830,6 +3878,7 @@ exports[`SearchComponent should update advanced search row on search text change
                     data-indeterminate="false"
                     data-testid="advanced-search-open-access"
                     id="advanced-search-open-access"
+                    tabindex="0"
                     type="checkbox"
                   />
                   <svg
@@ -3973,8 +4022,10 @@ exports[`SearchComponent should update advanced search row on search text change
 exports[`SearchComponent should update date range filter 1`] = `
 <div>
   <form
+    aria-labelledby="advanced-search-title"
     data-testid="advanced-search-form"
     id="advancedSearchForm"
+    role="search"
   >
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
@@ -3986,11 +4037,12 @@ exports[`SearchComponent should update date range filter 1`] = `
           class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
           style="flex-grow: 1; width: 1px;"
         >
-          <h5
+          <h3
             class="MuiTypography-root MuiTypography-h5 css-MuiTypography-root"
+            id="advanced-search-title"
           >
             Advanced search
-          </h5>
+          </h3>
         </div>
         <div
           class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
@@ -4113,7 +4165,7 @@ exports[`SearchComponent should update date range filter 1`] = `
                     >
                       <input
                         aria-invalid="false"
-                        autocomplete="search"
+                        autocomplete="on"
                         class="MuiInputBase-input MuiInput-input Mui-disabled css-MuiInputBase-input-MuiInput-input"
                         data-analyticsid="initial-input"
                         data-testid="initial-input"
@@ -4568,6 +4620,7 @@ exports[`SearchComponent should update date range filter 1`] = `
                     data-indeterminate="false"
                     data-testid="advanced-search-open-access"
                     id="advanced-search-open-access"
+                    tabindex="0"
                     type="checkbox"
                   />
                   <svg
@@ -4711,8 +4764,10 @@ exports[`SearchComponent should update date range filter 1`] = `
 exports[`SearchComponent should update date range filter 2`] = `
 <div>
   <form
+    aria-labelledby="advanced-search-title"
     data-testid="advanced-search-form"
     id="advancedSearchForm"
+    role="search"
   >
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-row css-MuiGrid-root"
@@ -4724,11 +4779,12 @@ exports[`SearchComponent should update date range filter 2`] = `
           class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
           style="flex-grow: 1; width: 1px;"
         >
-          <h5
+          <h3
             class="MuiTypography-root MuiTypography-h5 css-MuiTypography-root"
+            id="advanced-search-title"
           >
             Advanced search
-          </h5>
+          </h3>
         </div>
         <div
           class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
@@ -4851,7 +4907,7 @@ exports[`SearchComponent should update date range filter 2`] = `
                     >
                       <input
                         aria-invalid="false"
-                        autocomplete="search"
+                        autocomplete="on"
                         class="MuiInputBase-input MuiInput-input Mui-disabled css-MuiInputBase-input-MuiInput-input"
                         data-analyticsid="initial-input"
                         data-testid="initial-input"
@@ -5306,6 +5362,7 @@ exports[`SearchComponent should update date range filter 2`] = `
                     data-indeterminate="false"
                     data-testid="advanced-search-open-access"
                     id="advanced-search-open-access"
+                    tabindex="0"
                     type="checkbox"
                   />
                   <svg

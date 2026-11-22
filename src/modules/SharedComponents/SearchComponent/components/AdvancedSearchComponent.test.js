@@ -41,6 +41,12 @@ describe('AdvancedSearchComponent', () => {
         expect(container).toMatchSnapshot();
     });
 
+    it('should be a search landmark labelled by its heading', () => {
+        const { getByRole } = setup();
+        expect(getByRole('search', { name: 'Advanced search' })).toHaveAttribute('id', 'advancedSearchForm');
+        expect(getByRole('heading', { level: 3, name: 'Advanced search' })).toBeInTheDocument();
+    });
+
     it('should render default view', () => {
         const { getByTestId, getByText } = setup();
         expect(getByText(/advanced search/i)).toBeInTheDocument();

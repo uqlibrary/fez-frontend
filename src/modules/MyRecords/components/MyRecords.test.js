@@ -97,6 +97,13 @@ describe('MyRecords test', () => {
         });
         expect(container).toMatchSnapshot();
     });
+    it('puts the list in a named region screen readers can jump to', () => {
+        const { getByRole } = setup({
+            publicationsList: [{ rek_pid: 'UQ:1', rek_title: 'Work one' }],
+            publicationsListPagingData: { total: 1, per_page: 20, current_page: 1, from: 1, to: 1 },
+        });
+        expect(getByRole('region', { name: 'Results' })).toHaveTextContent('Work one');
+    });
     it('renders list of publications with custom actions', () => {
         const { container } = setup({
             publicationsList: [{ rek_pid: 'UQ:1', rek_title: '1' }],

@@ -14,6 +14,7 @@ exports[`Component CopyrightAgreement should render default view 1`] = `
         data-indeterminate="false"
         data-testid="test-input"
         id="test-input"
+        tabindex="0"
         type="checkbox"
       />
       <svg

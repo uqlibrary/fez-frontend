@@ -86,7 +86,7 @@ const getInputProps = (inputField, value, onChange, label) => {
         case 'TextField':
             return {
                 ...textFieldMui1Props,
-                autoComplete: 'search',
+                autoComplete: 'on',
                 onChange: event => onChange(event.target.value),
                 hideLabel: true,
             };

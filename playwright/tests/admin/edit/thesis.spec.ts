@@ -176,13 +176,13 @@ test.describe('Thesis admin edit', () => {
         const securitySectionContent = page.getByTestId('security-section-content');
         const workLevelSecurityCard = securitySectionContent.locator('div:nth-child(1) > .StandardCard');
         await expect(workLevelSecurityCard.locator('h4')).toHaveText(`Work level security - ${record.rek_pid}`);
-        await expect(workLevelSecurityCard.locator('h6').first()).toHaveText('Inherited security policy details');
+        await expect(workLevelSecurityCard.locator('h5').first()).toHaveText('Inherited security policy details');
         await Promise.all(
             record.fez_record_search_key_ismemberof.map(async (collection, index) => {
-                await expect(workLevelSecurityCard.locator('h6').nth(2 * index + 1)).toHaveText(
+                await expect(workLevelSecurityCard.locator('.MuiTypography-subtitle1').nth(index)).toHaveText(
                     collection.rek_ismemberof,
                 );
-                await expect(workLevelSecurityCard.locator('h6').nth(2 * index + 2)).toHaveText(
+                await expect(workLevelSecurityCard.locator('.MuiTypography-subtitle2').nth(index)).toHaveText(
                     collection.rek_ismemberof_lookup,
                 );
                 await expect(workLevelSecurityCard.locator('p').nth(index)).toHaveText(
@@ -203,10 +203,10 @@ test.describe('Thesis admin edit', () => {
         await expect(datastreamLevelSecurityCard.locator('h4')).toHaveText(
             `Datastream level security - ${record.rek_pid}`,
         );
-        await expect(datastreamLevelSecurityCard.locator('h6').first()).toHaveText(
+        await expect(datastreamLevelSecurityCard.locator('h5').first()).toHaveText(
             'Inherited datastream security policy details',
         );
-        await expect(datastreamLevelSecurityCard.locator('h6').nth(5)).toHaveText(
+        await expect(datastreamLevelSecurityCard.locator('h5').last()).toHaveText(
             'Override datastream security policy details',
         );
         await expect(datastreamLevelSecurityCard.locator('a')).toHaveCount(9); // only non-derivatives are displayed

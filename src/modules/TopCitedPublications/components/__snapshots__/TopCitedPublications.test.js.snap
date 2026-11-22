@@ -141,14 +141,14 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
         <div
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-MuiGrid-root"
         >
-          <h6
+          <h2
             class="MuiTypography-root MuiTypography-h6 css-MuiTypography-root"
           >
             <div
               class="fez-icon altmetric xxlarge"
             />
             Altmetric score
-          </h6>
+          </h2>
         </div>
         <div
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-MuiGrid-root"
@@ -214,6 +214,7 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
                           <a
                             data-discover="true"
                             href="/view/UQ:330391"
+                            tabindex="0"
                           >
                             Development and implementation of papillomavirus prophylactic vaccines
                           </a>
@@ -240,13 +241,13 @@ exports[`Component TopCitedPublications should render tabs larger than xs width 
                             <div
                               class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
                             >
-                              <h6
+                              <div
                                 class="MuiTypography-root MuiTypography-h6 difference css-MuiTypography-root"
                                 title="Difference in social media activities"
                               >
                                 +
                                 3
-                              </h6>
+                              </div>
                             </div>
                           </div>
                         </a>
@@ -596,14 +597,14 @@ exports[`Component TopCitedPublications should render top cited publications wit
         <div
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-MuiGrid-root"
         >
-          <h6
+          <h2
             class="MuiTypography-root MuiTypography-h6 css-MuiTypography-root"
           >
             <div
               class="fez-icon altmetric xxlarge"
             />
             Altmetric score
-          </h6>
+          </h2>
         </div>
         <div
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto css-MuiGrid-root"
@@ -669,6 +670,7 @@ exports[`Component TopCitedPublications should render top cited publications wit
                           <a
                             data-discover="true"
                             href="/view/UQ:330391"
+                            tabindex="0"
                           >
                             Development and implementation of papillomavirus prophylactic vaccines
                           </a>
@@ -695,13 +697,13 @@ exports[`Component TopCitedPublications should render top cited publications wit
                             <div
                               class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
                             >
-                              <h6
+                              <div
                                 class="MuiTypography-root MuiTypography-h6 difference css-MuiTypography-root"
                                 title="Difference in social media activities"
                               >
                                 +
                                 3
-                              </h6>
+                              </div>
                             </div>
                           </div>
                         </a>

@@ -82,8 +82,10 @@ export const SimpleSearchComponent = ({
         // Perform search
         onSearch();
 
-        // Blur the input so the mobile keyboard is deactivated
-        event && event.target && event.target.blur();
+        // Blur the input so the mobile keyboard is deactivated. Not in the header: that search opens the results
+        // page, which moves focus to its heading. Blurring here would drop focus to the document while it still
+        // has the previous page's title, and NVDA would announce that stale title.
+        !isInHeader && event && event.target && event.target.blur();
     };
 
     const _handleSubmit = event => {
@@ -94,7 +96,12 @@ export const SimpleSearchComponent = ({
     const ariaLabel = { 'aria-label': txt.ariaInputLabel };
     return (
         <React.Fragment>
-            <form style={{ margin: 8 }} onSubmit={_handleSubmit}>
+            <form
+                style={{ margin: 8 }}
+                onSubmit={_handleSubmit}
+                role="search"
+                aria-label={isInHeader ? txt.siteSearchAriaLabel : txt.pageSearchAriaLabel}
+            >
                 {isInHeader ? (
                     <React.Fragment>
                         {/* DESKTOP in header */}
@@ -131,7 +138,7 @@ export const SimpleSearchComponent = ({
                                 <TextField
                                     textFieldId="simple-search"
                                     type="search"
-                                    autoComplete={'search'}
+                                    autoComplete={'on'}
                                     fullWidth
                                     autoFocus={autoFocus}
                                     label={''}

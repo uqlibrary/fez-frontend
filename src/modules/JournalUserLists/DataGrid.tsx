@@ -256,6 +256,7 @@ export const DataGrid = ({ data, loading, createAction, updateAction, deleteActi
                 disableColumnFilter
                 disableColumnSelector
                 disableRowSelectionOnClick
+                aria-label={txt.ariaLabel}
             />
         </>
     );

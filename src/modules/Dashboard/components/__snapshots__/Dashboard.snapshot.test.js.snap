@@ -53,7 +53,7 @@ exports[`Dashboard test Rendering MyLatestPublications tab 1`] = `
                       <div
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                       >
-                        <h6
+                        <h2
                           class="MuiTypography-root MuiTypography-h6 css-MuiTypography-root"
                         >
                           Professor
@@ -61,7 +61,7 @@ exports[`Dashboard test Rendering MyLatestPublications tab 1`] = `
                           J
                            
                           Researcher
-                        </h6>
+                        </h2>
                       </div>
                       <div
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
@@ -810,7 +810,7 @@ exports[`Dashboard test Rendering MyTrendingPublications tab 1`] = `
                       <div
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                       >
-                        <h6
+                        <h2
                           class="MuiTypography-root MuiTypography-h6 css-MuiTypography-root"
                         >
                           Professor
@@ -818,7 +818,7 @@ exports[`Dashboard test Rendering MyTrendingPublications tab 1`] = `
                           J
                            
                           Researcher
-                        </h6>
+                        </h2>
                       </div>
                       <div
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
@@ -1626,7 +1626,7 @@ exports[`Dashboard test Should only render barChart 1`] = `
                       <div
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                       >
-                        <h6
+                        <h2
                           class="MuiTypography-root MuiTypography-h6 css-MuiTypography-root"
                         >
                           Professor
@@ -1634,7 +1634,7 @@ exports[`Dashboard test Should only render barChart 1`] = `
                           J
                            
                           Researcher
-                        </h6>
+                        </h2>
                       </div>
                       <div
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
@@ -1972,7 +1972,7 @@ exports[`Dashboard test componentDidMount without account id 1`] = `
                       <div
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                       >
-                        <h6
+                        <h2
                           class="MuiTypography-root MuiTypography-h6 css-MuiTypography-root"
                         >
                           Professor
@@ -1980,7 +1980,7 @@ exports[`Dashboard test componentDidMount without account id 1`] = `
                           J
                            
                           Researcher
-                        </h6>
+                        </h2>
                       </div>
                       <div
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
@@ -2798,7 +2798,7 @@ exports[`Dashboard test displays a lure to a single work when the user has incom
                       <div
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                       >
-                        <h6
+                        <h2
                           class="MuiTypography-root MuiTypography-h6 css-MuiTypography-root"
                         >
                           Professor
@@ -2806,7 +2806,7 @@ exports[`Dashboard test displays a lure to a single work when the user has incom
                           J
                            
                           Researcher
-                        </h6>
+                        </h2>
                       </div>
                       <div
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
@@ -3202,7 +3202,7 @@ exports[`Dashboard test displays a lure when the user has incomplete NTRO submis
                       <div
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                       >
-                        <h6
+                        <h2
                           class="MuiTypography-root MuiTypography-h6 css-MuiTypography-root"
                         >
                           Professor
@@ -3210,7 +3210,7 @@ exports[`Dashboard test displays a lure when the user has incomplete NTRO submis
                           J
                            
                           Researcher
-                        </h6>
+                        </h2>
                       </div>
                       <div
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
@@ -3603,7 +3603,7 @@ exports[`Dashboard test displays a lure when the user has non-compliant open acc
                       <div
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                       >
-                        <h6
+                        <h2
                           class="MuiTypography-root MuiTypography-h6 css-MuiTypography-root"
                         >
                           Professor
@@ -3611,7 +3611,7 @@ exports[`Dashboard test displays a lure when the user has non-compliant open acc
                           J
                            
                           Researcher
-                        </h6>
+                        </h2>
                       </div>
                       <div
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
@@ -3938,7 +3938,7 @@ exports[`Dashboard test does render latest and trending publications tabs correc
                       <div
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                       >
-                        <h6
+                        <h2
                           class="MuiTypography-root MuiTypography-h6 css-MuiTypography-root"
                         >
                           Professor
@@ -3946,7 +3946,7 @@ exports[`Dashboard test does render latest and trending publications tabs correc
                           J
                            
                           Researcher
-                        </h6>
+                        </h2>
                       </div>
                       <div
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
@@ -4453,7 +4453,7 @@ exports[`Dashboard test does render latest publications tab correctly 1`] = `
                       <div
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                       >
-                        <h6
+                        <h2
                           class="MuiTypography-root MuiTypography-h6 css-MuiTypography-root"
                         >
                           Professor
@@ -4461,7 +4461,7 @@ exports[`Dashboard test does render latest publications tab correctly 1`] = `
                           J
                            
                           Researcher
-                        </h6>
+                        </h2>
                       </div>
                       <div
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
@@ -4896,7 +4896,7 @@ exports[`Dashboard test does render the donut/bar graph cards when data is avail
                       <div
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                       >
-                        <h6
+                        <h2
                           class="MuiTypography-root MuiTypography-h6 css-MuiTypography-root"
                         >
                           Professor
@@ -4904,7 +4904,7 @@ exports[`Dashboard test does render the donut/bar graph cards when data is avail
                           J
                            
                           Researcher
-                        </h6>
+                        </h2>
                       </div>
                       <div
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
@@ -5303,7 +5303,7 @@ exports[`Dashboard test does render trending publications tab correctly 1`] = `
                       <div
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                       >
-                        <h6
+                        <h2
                           class="MuiTypography-root MuiTypography-h6 css-MuiTypography-root"
                         >
                           Professor
@@ -5311,7 +5311,7 @@ exports[`Dashboard test does render trending publications tab correctly 1`] = `
                           J
                            
                           Researcher
-                        </h6>
+                        </h2>
                       </div>
                       <div
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
@@ -5751,7 +5751,7 @@ exports[`Dashboard test doesn't render either the publications lure or the add a
                       <div
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                       >
-                        <h6
+                        <h2
                           class="MuiTypography-root MuiTypography-h6 css-MuiTypography-root"
                         >
                           Professor
@@ -5759,7 +5759,7 @@ exports[`Dashboard test doesn't render either the publications lure or the add a
                           J
                            
                           Researcher
-                        </h6>
+                        </h2>
                       </div>
                       <div
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
@@ -6020,7 +6020,7 @@ exports[`Dashboard test doesn't render possibly your publications lure and shows
                       <div
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                       >
-                        <h6
+                        <h2
                           class="MuiTypography-root MuiTypography-h6 css-MuiTypography-root"
                         >
                           Professor
@@ -6028,7 +6028,7 @@ exports[`Dashboard test doesn't render possibly your publications lure and shows
                           J
                            
                           Researcher
-                        </h6>
+                        </h2>
                       </div>
                       <div
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
@@ -6355,7 +6355,7 @@ exports[`Dashboard test doesn't render possibly your publications lure or the ad
                       <div
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                       >
-                        <h6
+                        <h2
                           class="MuiTypography-root MuiTypography-h6 css-MuiTypography-root"
                         >
                           Professor
@@ -6363,7 +6363,7 @@ exports[`Dashboard test doesn't render possibly your publications lure or the ad
                           J
                            
                           Researcher
-                        </h6>
+                        </h2>
                       </div>
                       <div
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
@@ -6624,7 +6624,7 @@ exports[`Dashboard test doesn't render the bar/donut graph cards when no data is
                       <div
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                       >
-                        <h6
+                        <h2
                           class="MuiTypography-root MuiTypography-h6 css-MuiTypography-root"
                         >
                           Professor
@@ -6632,7 +6632,7 @@ exports[`Dashboard test doesn't render the bar/donut graph cards when no data is
                           J
                            
                           Researcher
-                        </h6>
+                        </h2>
                       </div>
                       <div
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
@@ -7025,7 +7025,7 @@ exports[`Dashboard test publicationStats should render stats 1`] = `
                       <div
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                       >
-                        <h6
+                        <h2
                           class="MuiTypography-root MuiTypography-h6 css-MuiTypography-root"
                         >
                           Professor
@@ -7033,7 +7033,7 @@ exports[`Dashboard test publicationStats should render stats 1`] = `
                           J
                            
                           Researcher
-                        </h6>
+                        </h2>
                       </div>
                       <div
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
@@ -7635,7 +7635,7 @@ exports[`Dashboard test publicationStats should render stats 1 1`] = `
                       <div
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                       >
-                        <h6
+                        <h2
                           class="MuiTypography-root MuiTypography-h6 css-MuiTypography-root"
                         >
                           Professor
@@ -7643,7 +7643,7 @@ exports[`Dashboard test publicationStats should render stats 1 1`] = `
                           J
                            
                           Researcher
-                        </h6>
+                        </h2>
                       </div>
                       <div
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
@@ -8173,7 +8173,7 @@ exports[`Dashboard test publicationStats should render stats 2 1`] = `
                       <div
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                       >
-                        <h6
+                        <h2
                           class="MuiTypography-root MuiTypography-h6 css-MuiTypography-root"
                         >
                           Professor
@@ -8181,7 +8181,7 @@ exports[`Dashboard test publicationStats should render stats 2 1`] = `
                           J
                            
                           Researcher
-                        </h6>
+                        </h2>
                       </div>
                       <div
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
@@ -8711,7 +8711,7 @@ exports[`Dashboard test publicationStats should render stats with ancient date 1
                       <div
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                       >
-                        <h6
+                        <h2
                           class="MuiTypography-root MuiTypography-h6 css-MuiTypography-root"
                         >
                           Professor
@@ -8719,7 +8719,7 @@ exports[`Dashboard test publicationStats should render stats with ancient date 1
                           J
                            
                           Researcher
-                        </h6>
+                        </h2>
                       </div>
                       <div
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
@@ -9663,7 +9663,7 @@ exports[`Dashboard test renders alert for non-authors 1`] = `
                       <div
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                       >
-                        <h6
+                        <h2
                           class="MuiTypography-root MuiTypography-h6 css-MuiTypography-root"
                         >
                           Professor
@@ -9671,7 +9671,7 @@ exports[`Dashboard test renders alert for non-authors 1`] = `
                           J
                            
                           Researcher
-                        </h6>
+                        </h2>
                       </div>
                       <div
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
@@ -9973,7 +9973,7 @@ exports[`Dashboard test renders dashboard header only 1`] = `
                       <div
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                       >
-                        <h6
+                        <h2
                           class="MuiTypography-root MuiTypography-h6 css-MuiTypography-root"
                         >
                           Professor
@@ -9981,7 +9981,7 @@ exports[`Dashboard test renders dashboard header only 1`] = `
                           J
                            
                           Researcher
-                        </h6>
+                        </h2>
                       </div>
                       <div
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
@@ -10388,7 +10388,7 @@ exports[`Dashboard test renders possibly your publications lure but not the add 
                       <div
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                       >
-                        <h6
+                        <h2
                           class="MuiTypography-root MuiTypography-h6 css-MuiTypography-root"
                         >
                           Professor
@@ -10396,7 +10396,7 @@ exports[`Dashboard test renders possibly your publications lure but not the add 
                           J
                            
                           Researcher
-                        </h6>
+                        </h2>
                       </div>
                       <div
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
@@ -10709,7 +10709,7 @@ exports[`Dashboard test sets context for showing ORCID sync UI 1`] = `
                       <div
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                       >
-                        <h6
+                        <h2
                           class="MuiTypography-root MuiTypography-h6 css-MuiTypography-root"
                         >
                           Professor
@@ -10717,7 +10717,7 @@ exports[`Dashboard test sets context for showing ORCID sync UI 1`] = `
                           J
                            
                           Researcher
-                        </h6>
+                        </h2>
                       </div>
                       <div
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
@@ -11005,7 +11005,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                       <div
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"
                       >
-                        <h6
+                        <h2
                           class="MuiTypography-root MuiTypography-h6 css-MuiTypography-root"
                         >
                           Professor
@@ -11013,7 +11013,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                           J
                            
                           Researcher
-                        </h6>
+                        </h2>
                       </div>
                       <div
                         class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-12 css-MuiGrid-root"

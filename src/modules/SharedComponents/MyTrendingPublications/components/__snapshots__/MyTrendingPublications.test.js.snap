@@ -86,19 +86,19 @@ exports[`Component MyTrendingPublications should render trending publications 1`
         <div
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-MuiGrid-root"
         >
-          <h6
+          <h3
             class="MuiTypography-root MuiTypography-h6 css-MuiTypography-root"
           >
             <div
               class="fez-icon scopus xxlarge"
             />
             Scopus citation count
-          </h6>
-          <h6
+          </h3>
+          <div
             class="MuiTypography-root MuiTypography-subtitle1 css-MuiTypography-root"
           >
             The + (plus) value indicates how much the citation count has increased in the last three months.
-          </h6>
+          </div>
         </div>
         <div
           class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
@@ -161,6 +161,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                           <a
                             data-discover="true"
                             href="/view/UQ:330391"
+                            tabindex="0"
                           >
                             Development and implementation of papillomavirus prophylactic vaccines
                           </a>
@@ -187,22 +188,22 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                             <div
                               class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
                             >
-                              <h6
+                              <div
                                 class="MuiTypography-root MuiTypography-h6 count css-MuiTypography-root"
                               >
                                 13
-                              </h6>
+                              </div>
                             </div>
                             <div
                               class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
                             >
-                              <h6
+                              <div
                                 class="MuiTypography-root MuiTypography-h6 difference css-MuiTypography-root"
                                 title="Difference in citations"
                               >
                                 +
                                 1
-                              </h6>
+                              </div>
                             </div>
                           </div>
                         </a>
@@ -432,19 +433,19 @@ exports[`Component MyTrendingPublications should render trending publications 1`
         <div
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-MuiGrid-root"
         >
-          <h6
+          <h3
             class="MuiTypography-root MuiTypography-h6 css-MuiTypography-root"
           >
             <div
               class="fez-icon thomson xxlarge"
             />
             Web of Science citation count
-          </h6>
-          <h6
+          </h3>
+          <div
             class="MuiTypography-root MuiTypography-subtitle1 css-MuiTypography-root"
           >
             The + (plus) value indicates how much the citation count has increased in the last three months.
-          </h6>
+          </div>
         </div>
         <div
           class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
@@ -507,6 +508,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                           <a
                             data-discover="true"
                             href="/view/UQ:103860"
+                            tabindex="0"
                           >
                             Prophylactic HPV vaccines: Underlying mechanisms
                           </a>
@@ -533,22 +535,22 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                             <div
                               class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
                             >
-                              <h6
+                              <div
                                 class="MuiTypography-root MuiTypography-h6 count css-MuiTypography-root"
                               >
                                 83
-                              </h6>
+                              </div>
                             </div>
                             <div
                               class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
                             >
-                              <h6
+                              <div
                                 class="MuiTypography-root MuiTypography-h6 difference css-MuiTypography-root"
                                 title="Difference in citations"
                               >
                                 +
                                 2
-                              </h6>
+                              </div>
                             </div>
                           </div>
                         </a>
@@ -793,19 +795,19 @@ exports[`Component MyTrendingPublications should render trending publications 1`
         <div
           class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-MuiGrid-root"
         >
-          <h6
+          <h3
             class="MuiTypography-root MuiTypography-h6 css-MuiTypography-root"
           >
             <div
               class="fez-icon altmetric xxlarge"
             />
             Altmetric score
-          </h6>
-          <h6
+          </h3>
+          <div
             class="MuiTypography-root MuiTypography-subtitle1 css-MuiTypography-root"
           >
             The +plus score indicates recent increase in social media activity
-          </h6>
+          </div>
         </div>
         <div
           class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
@@ -868,6 +870,7 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                           <a
                             data-discover="true"
                             href="/view/UQ:330391"
+                            tabindex="0"
                           >
                             Development and implementation of papillomavirus prophylactic vaccines
                           </a>
@@ -894,22 +897,22 @@ exports[`Component MyTrendingPublications should render trending publications 1`
                             <div
                               class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
                             >
-                              <h6
+                              <div
                                 class="MuiTypography-root MuiTypography-h6 count css-MuiTypography-root"
                               >
                                 5
-                              </h6>
+                              </div>
                             </div>
                             <div
                               class="MuiGrid-root MuiGrid-direction-xs-row css-MuiGrid-root"
                             >
-                              <h6
+                              <div
                                 class="MuiTypography-root MuiTypography-h6 difference css-MuiTypography-root"
                                 title="Difference in social media activities"
                               >
                                 +
                                 3
-                              </h6>
+                              </div>
                             </div>
                           </div>
                         </a>

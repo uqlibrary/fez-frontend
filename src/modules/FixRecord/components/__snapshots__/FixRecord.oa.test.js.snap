@@ -166,6 +166,7 @@ exports[`Component FixRecord for non-compliant Open Access should render fix rec
                               <a
                                 data-discover="true"
                                 href="/view/UQ:41878"
+                                tabindex="0"
                               >
                                 Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
                               </a>
@@ -1001,6 +1002,7 @@ exports[`Component FixRecord for non-compliant Open Access should render record 
                               <a
                                 data-discover="true"
                                 href="/view/UQ:41878"
+                                tabindex="0"
                               >
                                 Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
                               </a>

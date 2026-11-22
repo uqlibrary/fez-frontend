@@ -31,7 +31,7 @@ export const DashboardAuthorDetails = ({ title, familyName, givenName, orgUnits,
     return (
         <Grid container spacing={1}>
             <Grid size={12}>
-                <StyledTypography variant={'h6'}>
+                <StyledTypography variant={'h6'} component={'h2'}>
                     {title}&nbsp;{givenName}&nbsp;{familyName}
                 </StyledTypography>
             </Grid>

@@ -52,6 +52,7 @@ exports[`AdminInterface component should disabled button and render alert for fo
                       checked=""
                       class="PrivateSwitchBase-input MuiSwitch-input css-MuiSwitchBase-root"
                       role="switch"
+                      tabindex="0"
                       type="checkbox"
                       value="tabbed"
                     />
@@ -480,6 +481,7 @@ exports[`AdminInterface component should display job created alert 1`] = `
                       checked=""
                       class="PrivateSwitchBase-input MuiSwitch-input css-MuiSwitchBase-root"
                       role="switch"
+                      tabindex="0"
                       type="checkbox"
                       value="tabbed"
                     />
@@ -770,6 +772,7 @@ exports[`AdminInterface component should display job created alert 2`] = `
                       checked=""
                       class="PrivateSwitchBase-input MuiSwitch-input css-MuiSwitchBase-root"
                       role="switch"
+                      tabindex="0"
                       type="checkbox"
                       value="tabbed"
                     />
@@ -1117,6 +1120,7 @@ exports[`AdminInterface component should display successful alert 1`] = `
                       checked=""
                       class="PrivateSwitchBase-input MuiSwitch-input css-MuiSwitchBase-root"
                       role="switch"
+                      tabindex="0"
                       type="checkbox"
                       value="tabbed"
                     />
@@ -1407,6 +1411,7 @@ exports[`AdminInterface component should display successful alert 2`] = `
                       checked=""
                       class="PrivateSwitchBase-input MuiSwitch-input css-MuiSwitchBase-root"
                       role="switch"
+                      tabindex="0"
                       type="checkbox"
                       value="tabbed"
                     />
@@ -1761,6 +1766,7 @@ exports[`AdminInterface component should render a title with html correctly 1`] 
                     <input
                       class="PrivateSwitchBase-input MuiSwitch-input css-MuiSwitchBase-root"
                       role="switch"
+                      tabindex="0"
                       type="checkbox"
                       value="tabbed"
                     />
@@ -2014,6 +2020,7 @@ exports[`AdminInterface component should render default view as a full form view
                     <input
                       class="PrivateSwitchBase-input MuiSwitch-input css-MuiSwitchBase-root"
                       role="switch"
+                      tabindex="0"
                       type="checkbox"
                       value="tabbed"
                     />
@@ -2336,6 +2343,7 @@ exports[`AdminInterface component should render default view as a tabbed form vi
                       checked=""
                       class="PrivateSwitchBase-input MuiSwitch-input css-MuiSwitchBase-root"
                       role="switch"
+                      tabindex="0"
                       type="checkbox"
                       value="tabbed"
                     />
@@ -2635,6 +2643,7 @@ exports[`AdminInterface component should render in create mode 1`] = `
                       checked=""
                       class="PrivateSwitchBase-input MuiSwitch-input css-MuiSwitchBase-root"
                       role="switch"
+                      tabindex="0"
                       type="checkbox"
                       value="tabbed"
                     />
@@ -2917,6 +2926,7 @@ exports[`AdminInterface component should render locked alert in edit mode 1`] = 
                       checked=""
                       class="PrivateSwitchBase-input MuiSwitch-input css-MuiSwitchBase-root"
                       role="switch"
+                      tabindex="0"
                       type="checkbox"
                       value="tabbed"
                     />
@@ -3304,6 +3314,7 @@ exports[`AdminInterface component should render locked info alert 1`] = `
                       checked=""
                       class="PrivateSwitchBase-input MuiSwitch-input css-MuiSwitchBase-root"
                       role="switch"
+                      tabindex="0"
                       type="checkbox"
                       value="tabbed"
                     />
@@ -3687,6 +3698,7 @@ exports[`AdminInterface component should render undelete title and button 1`] = 
                       checked=""
                       class="PrivateSwitchBase-input MuiSwitch-input css-MuiSwitchBase-root"
                       role="switch"
+                      tabindex="0"
                       type="checkbox"
                       value="tabbed"
                     />
