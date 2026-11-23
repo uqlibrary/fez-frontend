@@ -404,7 +404,7 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                                 <div
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
-                                  aria-labelledby="rek-herdc-code-select"
+                                  aria-labelledby="rek-herdc-code-label rek-herdc-code-select"
                                   class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                                   data-testid="rek-herdc-code-select"
                                   id="rek-herdc-code-select"
@@ -463,7 +463,7 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                                 <div
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
-                                  aria-labelledby="rek-herdc-status-select"
+                                  aria-labelledby="rek-herdc-status-label rek-herdc-status-select"
                                   class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                                   data-testid="rek-herdc-status-select"
                                   id="rek-herdc-status-select"
@@ -522,7 +522,7 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                                 <div
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
-                                  aria-labelledby="rek-institutional-status-select"
+                                  aria-labelledby="rek-institutional-status-label rek-institutional-status-select"
                                   class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                                   data-testid="rek-institutional-status-select"
                                   id="rek-institutional-status-select"
@@ -576,7 +576,7 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                                 <div
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
-                                  aria-labelledby="rek-refereed-source-select"
+                                  aria-labelledby="rek-refereed-source-label rek-refereed-source-select"
                                   class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                                   data-testid="rek-refereed-source-select"
                                   id="rek-refereed-source-select"
@@ -630,7 +630,7 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                                 <div
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
-                                  aria-labelledby="rek-content-indicator-select"
+                                  aria-labelledby="rek-content-indicator-label rek-content-indicator-select"
                                   class="MuiSelect-select MuiSelect-standard MuiSelect-multiple MuiInputBase-input MuiInput-input css-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                                   data-testid="rek-content-indicator-select"
                                   id="rek-content-indicator-select"
@@ -689,7 +689,7 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                                 <div
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
-                                  aria-labelledby="rek-oa-status-select"
+                                  aria-labelledby="rek-oa-status-label rek-oa-status-select"
                                   class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                                   data-testid="rek-oa-status-select"
                                   id="rek-oa-status-select"
@@ -743,7 +743,7 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                                 <div
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
-                                  aria-labelledby="rek-oa-status-type-select"
+                                  aria-labelledby="rek-oa-status-type-label rek-oa-status-type-select"
                                   class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                                   data-testid="rek-oa-status-type-select"
                                   id="rek-oa-status-type-select"
@@ -802,7 +802,7 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                                 <div
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
-                                  aria-labelledby="rek-license-select"
+                                  aria-labelledby="rek-license-label rek-license-select"
                                   class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                                   data-testid="rek-license-select"
                                   id="rek-license-select"
@@ -1395,7 +1395,7 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                                 <div
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
-                                  aria-labelledby="rek-language-select"
+                                  aria-labelledby="rek-language-label rek-language-select"
                                   class="MuiSelect-select MuiSelect-standard MuiSelect-multiple MuiInputBase-input MuiInput-input css-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                                   data-testid="rek-language-select"
                                   id="rek-language-select"
@@ -1930,11 +1930,11 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                                       >
                                         <input
                                           aria-invalid="false"
+                                          aria-label="Day"
                                           class="MuiInputBase-input MuiInput-input css-MuiInputBase-input-MuiInput-input"
                                           data-analyticsid="rek-date-day-input"
                                           data-testid="rek-date-day-input"
                                           id="rek-date-day-input"
-                                          label="day"
                                           maxlength="2"
                                           name="day"
                                           placeholder="Day"
@@ -1947,13 +1947,19 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                                   <div
                                     class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-MuiGrid-root"
                                   >
+                                    <label
+                                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-animated css-MuiFormLabel-root-MuiInputLabel-root"
+                                      id="rek-date-month-label"
+                                    >
+                                      Month
+                                    </label>
                                     <div
                                       class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiSelect-root css-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                                     >
                                       <div
                                         aria-expanded="false"
                                         aria-haspopup="listbox"
-                                        aria-labelledby="rek-date-month-select"
+                                        aria-labelledby="rek-date-month-label rek-date-month-select"
                                         class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                                         data-analyticsid="rek-date-month-select"
                                         data-testid="rek-date-month-select"
@@ -1970,7 +1976,6 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                                         data-analyticsid="rek-date-month-input"
                                         data-testid="rek-date-month-input"
                                         id="rek-date-month-input"
-                                        label="month"
                                         maxlength="2"
                                         name="month"
                                         placeholder="Month"
@@ -2001,11 +2006,11 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                                       >
                                         <input
                                           aria-invalid="false"
+                                          aria-label="Year"
                                           class="MuiInputBase-input MuiInput-input css-MuiInputBase-input-MuiInput-input"
                                           data-analyticsid="rek-date-year-input"
                                           data-testid="rek-date-year-input"
                                           id="rek-date-year-input"
-                                          label="year"
                                           maxlength="4"
                                           name="year"
                                           placeholder="Year"
@@ -8459,7 +8464,7 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                                 <div
                                   aria-expanded="false"
                                   aria-haspopup="listbox"
-                                  aria-labelledby="rek-sensitive-handling-note-id-select"
+                                  aria-labelledby="rek-sensitive-handling-note-id-label rek-sensitive-handling-note-id-select"
                                   class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                                   data-testid="rek-sensitive-handling-note-id-select"
                                   id="rek-sensitive-handling-note-id-select"
@@ -8952,7 +8957,7 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                                       <div
                                         aria-expanded="false"
                                         aria-haspopup="listbox"
-                                        aria-labelledby="dsi-security-policy-0-select"
+                                        aria-labelledby="dsi-security-policy-0-label dsi-security-policy-0-select"
                                         aria-required="true"
                                         class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                                         data-testid="dsi-security-policy-0-select"
@@ -9036,7 +9041,7 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                                       <div
                                         aria-expanded="false"
                                         aria-haspopup="listbox"
-                                        aria-labelledby="dsi-security-policy-1-select"
+                                        aria-labelledby="dsi-security-policy-1-label dsi-security-policy-1-select"
                                         aria-required="true"
                                         class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                                         data-testid="dsi-security-policy-1-select"
@@ -9120,7 +9125,7 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                                       <div
                                         aria-expanded="false"
                                         aria-haspopup="listbox"
-                                        aria-labelledby="dsi-security-policy-2-select"
+                                        aria-labelledby="dsi-security-policy-2-label dsi-security-policy-2-select"
                                         aria-required="true"
                                         class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                                         data-testid="dsi-security-policy-2-select"
@@ -9204,7 +9209,7 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                                       <div
                                         aria-expanded="false"
                                         aria-haspopup="listbox"
-                                        aria-labelledby="dsi-security-policy-3-select"
+                                        aria-labelledby="dsi-security-policy-3-label dsi-security-policy-3-select"
                                         aria-required="true"
                                         class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                                         data-testid="dsi-security-policy-3-select"
@@ -9288,7 +9293,7 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                                       <div
                                         aria-expanded="false"
                                         aria-haspopup="listbox"
-                                        aria-labelledby="dsi-security-policy-4-select"
+                                        aria-labelledby="dsi-security-policy-4-label dsi-security-policy-4-select"
                                         aria-required="true"
                                         class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                                         data-testid="dsi-security-policy-4-select"
@@ -9372,7 +9377,7 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                                       <div
                                         aria-expanded="false"
                                         aria-haspopup="listbox"
-                                        aria-labelledby="dsi-security-policy-5-select"
+                                        aria-labelledby="dsi-security-policy-5-label dsi-security-policy-5-select"
                                         aria-required="true"
                                         class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                                         data-testid="dsi-security-policy-5-select"
@@ -9456,7 +9461,7 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                                       <div
                                         aria-expanded="false"
                                         aria-haspopup="listbox"
-                                        aria-labelledby="dsi-security-policy-6-select"
+                                        aria-labelledby="dsi-security-policy-6-label dsi-security-policy-6-select"
                                         aria-required="true"
                                         class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                                         data-testid="dsi-security-policy-6-select"
@@ -9540,7 +9545,7 @@ exports[`Mobile AdminContainer component should render mobile view 1`] = `
                                       <div
                                         aria-expanded="false"
                                         aria-haspopup="listbox"
-                                        aria-labelledby="dsi-security-policy-7-select"
+                                        aria-labelledby="dsi-security-policy-7-label dsi-security-policy-7-select"
                                         aria-required="true"
                                         class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                                         data-testid="dsi-security-policy-7-select"
