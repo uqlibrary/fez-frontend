@@ -7,6 +7,8 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
+import InputLabel from '@mui/material/InputLabel';
+import { visuallyHidden } from '@mui/utils';
 
 import { PublicationCitation } from 'modules/SharedComponents/PublicationCitation';
 import { useRecordsSelector } from 'hooks';
@@ -97,9 +99,11 @@ export const PublicationsList = ({
                         sx={{ alignItems: 'center', margin: 0 }}
                         control={
                             <Checkbox
-                                inputProps={{
-                                    'data-testid': 'select-all-publications-input',
-                                    id: 'select-all-publications-input',
+                                slotProps={{
+                                    input: {
+                                        'data-testid': 'select-all-publications-input',
+                                        id: 'select-all-publications-input',
+                                    },
                                 }}
                                 onChange={handleSelectAll}
                                 name="select-all-publications"
@@ -137,11 +141,17 @@ export const PublicationsList = ({
                 {publicationsList.map((publication, index) => (
                     <Grid container spacing={0} alignItems="flex-start" key={`publication-${index}`}>
                         <Grid size={{ xs: 2, sm: 1 }}>
+                            <InputLabel id={`select-publication-${index}-label`} sx={visuallyHidden}>
+                                {locale.components.publicationsList.selectPublicationText}
+                            </InputLabel>
                             <Checkbox
-                                inputProps={{
-                                    'data-analyticsid': `select-publication-${index}-input`,
-                                    'data-testid': `select-publication-${index}-input`,
-                                    id: `select-publication-${index}-input`,
+                                slotProps={{
+                                    input: {
+                                        'aria-labelledby': `select-publication-${index}-label`,
+                                        'data-analyticsid': `select-publication-${index}-input`,
+                                        'data-testid': `select-publication-${index}-input`,
+                                        id: `select-publication-${index}-input`,
+                                    },
                                 }}
                                 name={`select-publication-${index}-input`}
                                 onChange={handleChange(publication)}

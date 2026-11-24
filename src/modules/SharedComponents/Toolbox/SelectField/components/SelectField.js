@@ -3,6 +3,7 @@ import Select from '@mui/material/Select';
 import FormControl from '@mui/material/FormControl';
 // import Input from '@mui/material/Input';
 import FormHelperText from '@mui/material/FormHelperText';
+import { visuallyHidden } from '@mui/utils';
 
 import PropTypes from 'prop-types';
 import propFilter from '../../helpers/_filterProps';
@@ -30,7 +31,9 @@ const SelectFieldWrapper = forwardRef((props, ref) => {
     return (
         <React.Fragment>
             <FormControl variant="standard" error={error} style={{ width: '100%' }} required={filteredProps.required}>
-                {!hideLabel && <InputLabel id={`${props.selectFieldId}-label`}>{filteredProps.label}</InputLabel>}
+                <InputLabel id={`${props.selectFieldId}-label`} sx={{ ...(hideLabel ? visuallyHidden : {}) }}>
+                    {filteredProps.label}
+                </InputLabel>
                 <Select
                     ref={ref}
                     variant="standard"

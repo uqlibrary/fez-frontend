@@ -6955,6 +6955,20 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               class="MuiFormControl-root css-MuiFormControl-root"
               style="width: 100%;"
             >
+              <label
+                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-focused Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-MuiFormLabel-root-MuiInputLabel-root"
+                data-shrink="true"
+                id="dsi-security-policy-0-label"
+              >
+                Work level policy to apply to this PID
+                <span
+                  aria-hidden="true"
+                  class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-MuiFormLabel-asterisk"
+                >
+                   
+                  *
+                </span>
+              </label>
               <div
                 aria-label="Work level policy to apply to this PID"
                 class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-error Mui-focused MuiInputBase-formControl MuiSelect-root css-MuiInputBase-root-MuiInput-root-MuiSelect-root"
@@ -7108,6 +7122,20 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               class="MuiFormControl-root css-MuiFormControl-root"
               style="width: 100%;"
             >
+              <label
+                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-MuiFormLabel-root-MuiInputLabel-root"
+                data-shrink="false"
+                id="dsi-security-policy-1-label"
+              >
+                Work level policy to apply to this PID
+                <span
+                  aria-hidden="true"
+                  class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-MuiFormLabel-asterisk"
+                >
+                   
+                  *
+                </span>
+              </label>
               <div
                 aria-label="Work level policy to apply to this PID"
                 class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiSelect-root css-MuiInputBase-root-MuiInput-root-MuiSelect-root"
@@ -7574,6 +7602,20 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               class="MuiFormControl-root css-MuiFormControl-root"
               style="width: 100%;"
             >
+              <label
+                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-focused Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-MuiFormLabel-root-MuiInputLabel-root"
+                data-shrink="true"
+                id="dsi-security-policy-0-label"
+              >
+                Work level policy to apply to this PID
+                <span
+                  aria-hidden="true"
+                  class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-MuiFormLabel-asterisk"
+                >
+                   
+                  *
+                </span>
+              </label>
               <div
                 aria-label="Work level policy to apply to this PID"
                 class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-focused MuiInputBase-formControl MuiSelect-root css-MuiInputBase-root-MuiInput-root-MuiSelect-root"
@@ -7719,6 +7761,20 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               class="MuiFormControl-root css-MuiFormControl-root"
               style="width: 100%;"
             >
+              <label
+                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-MuiFormLabel-root-MuiInputLabel-root"
+                data-shrink="false"
+                id="dsi-security-policy-1-label"
+              >
+                Work level policy to apply to this PID
+                <span
+                  aria-hidden="true"
+                  class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-MuiFormLabel-asterisk"
+                >
+                   
+                  *
+                </span>
+              </label>
               <div
                 aria-label="Work level policy to apply to this PID"
                 class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiSelect-root css-MuiInputBase-root-MuiInput-root-MuiSelect-root"
@@ -8185,6 +8241,20 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               class="MuiFormControl-root css-MuiFormControl-root"
               style="width: 100%;"
             >
+              <label
+                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-MuiFormLabel-root-MuiInputLabel-root"
+                data-shrink="true"
+                id="dsi-security-policy-0-label"
+              >
+                Work level policy to apply to this PID
+                <span
+                  aria-hidden="true"
+                  class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-MuiFormLabel-asterisk"
+                >
+                   
+                  *
+                </span>
+              </label>
               <div
                 aria-label="Work level policy to apply to this PID"
                 class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-MuiInputBase-root-MuiInput-root-MuiSelect-root"
@@ -8330,6 +8400,20 @@ exports[`Component FileUploader should render rows for uploaded files with secur
               class="MuiFormControl-root css-MuiFormControl-root"
               style="width: 100%;"
             >
+              <label
+                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-focused Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-MuiFormLabel-root-MuiInputLabel-root"
+                data-shrink="true"
+                id="dsi-security-policy-1-label"
+              >
+                Work level policy to apply to this PID
+                <span
+                  aria-hidden="true"
+                  class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-MuiFormLabel-asterisk"
+                >
+                   
+                  *
+                </span>
+              </label>
               <div
                 aria-label="Work level policy to apply to this PID"
                 class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-focused MuiInputBase-formControl MuiSelect-root css-MuiInputBase-root-MuiInput-root-MuiSelect-root"

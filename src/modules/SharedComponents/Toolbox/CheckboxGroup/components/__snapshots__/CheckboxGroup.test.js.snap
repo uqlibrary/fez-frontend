@@ -134,6 +134,7 @@ exports[`CheckboxGroup tests renders an error 1`] = `
             label="option A"
           >
             <input
+              aria-describedby="test-helper-text"
               class="PrivateSwitchBase-input css-MuiSwitchBase-root"
               data-analyticsid="test-a-option"
               data-indeterminate="false"
@@ -171,6 +172,7 @@ exports[`CheckboxGroup tests renders an error 1`] = `
             label="option b"
           >
             <input
+              aria-describedby="test-helper-text"
               class="PrivateSwitchBase-input css-MuiSwitchBase-root"
               data-analyticsid="test-b-option"
               data-indeterminate="false"
@@ -218,6 +220,7 @@ exports[`CheckboxGroup tests renders an error 1`] = `
     </div>
     <p
       class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium css-MuiFormHelperText-root"
+      id="test-helper-text"
     >
       Something bad happened
     </p>

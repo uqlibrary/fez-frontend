@@ -10,6 +10,7 @@ import {
     TextField,
     Box,
 } from '@mui/material';
+import { visuallyHidden } from '@mui/utils';
 import propFilter from '../../helpers/_filterProps';
 
 const CheckboxGroup = props => {
@@ -44,7 +45,9 @@ const CheckboxGroup = props => {
     return (
         <React.Fragment>
             <FormControl variant="standard" error={error} style={{ width: '100%' }} required={filteredProps.required}>
-                {!hideLabel && <FormLabel id={`${props.checkboxGroupId}-label`}>{filteredProps.label}</FormLabel>}
+                <FormLabel id={`${props.checkboxGroupId}-label`} sx={{ ...(hideLabel ? visuallyHidden : {}) }}>
+                    {filteredProps.label}
+                </FormLabel>
                 <FormGroup row={filteredProps.row}>
                     {props.options.map(option => (
                         <Box key={`${option.value}-parent`}>
@@ -53,12 +56,17 @@ const CheckboxGroup = props => {
                                     <Checkbox
                                         checked={filteredProps.value.hasOwnProperty(option.value)}
                                         label={option.label}
-                                        inputProps={{
-                                            'data-analyticsid': `${props.checkboxGroupId}-${option.value}-option`,
-                                            'data-testid': `${props.checkboxGroupId}-${option.value}-option`,
-                                            id: `${props.checkboxGroupId}-${option.value}-option`,
-                                        }}
                                         onChange={() => handleChange(option.value, option.value)}
+                                        slotProps={{
+                                            input: {
+                                                'data-analyticsid': `${props.checkboxGroupId}-${option.value}-option`,
+                                                'data-testid': `${props.checkboxGroupId}-${option.value}-option`,
+                                                id: `${props.checkboxGroupId}-${option.value}-option`,
+                                                ...(!!helperText && {
+                                                    'aria-describedby': `${filteredProps.name}-helper-text`,
+                                                }),
+                                            },
+                                        }}
                                     />
                                 }
                                 label={option.label}
@@ -87,7 +95,11 @@ const CheckboxGroup = props => {
                         </Box>
                     ))}
                 </FormGroup>
-                {helperText && <FormHelperText {...formHelperTextProps}>{helperText}</FormHelperText>}
+                {helperText && (
+                    <FormHelperText {...formHelperTextProps} id={`${filteredProps.name}-helper-text`}>
+                        {helperText}
+                    </FormHelperText>
+                )}
             </FormControl>
         </React.Fragment>
     );

@@ -10,6 +10,8 @@ import ClearIcon from '@mui/icons-material/Clear';
 import EditIcon from '@mui/icons-material/Edit';
 import CheckIcon from '@mui/icons-material/Check';
 import ReplayIcon from '@mui/icons-material/Replay';
+import InputLabel from '@mui/material/InputLabel';
+import { visuallyHidden } from '@mui/utils';
 
 import FileName from './FileName';
 import { FileNameProps } from './FileName';
@@ -155,10 +157,12 @@ const EditableFileName = ({
                 </Grid>
             ) : (
                 <>
+                    <InputLabel id={`${props.id}-label`} sx={visuallyHidden}>
+                        File name
+                    </InputLabel>
                     <TextField
                         autoFocus
                         fullWidth
-                        hideLabel
                         required
                         textFieldId={`${props.id}-editing`}
                         value={proxyFilename}
@@ -194,6 +198,9 @@ const EditableFileName = ({
                                     </InputAdornment>
                                 </>
                             ),
+                        }}
+                        inputProps={{
+                            'aria-labelledby': `${props.id}-label`,
                         }}
                     />
                 </>

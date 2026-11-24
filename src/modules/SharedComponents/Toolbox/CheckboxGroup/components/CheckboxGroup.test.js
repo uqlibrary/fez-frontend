@@ -10,6 +10,7 @@ function setup(testProps = {}) {
             { label: 'option b', value: 'b', appendTextField: true },
         ],
         onChange: jest.fn(),
+        name: 'test',
         ...testProps,
     };
     return rtlRender(<CheckboxGroup {...props} />);

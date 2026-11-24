@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import TextField from '@mui/material/TextField';
 import PropTypes from 'prop-types';
 
@@ -21,40 +21,38 @@ export const TextFieldWrapper = React.forwardRef((props, ref) => {
     delete filteredProps.ariaLabel;
 
     return (
-        <Fragment>
-            <TextField
-                variant="standard"
-                {...filteredProps}
-                ref={ref}
-                helperText={helperText}
-                id={id}
-                data-testid={testId}
-                slotProps={{
-                    htmlInput: {
-                        id: `${id}-input`,
-                        'data-analyticsid': `${id}-input`,
-                        'data-testid': `${testId}-input`,
-                        label: filteredProps.label,
-                        'aria-label': props.ariaLabel || filteredProps.label,
-                        ...(props.ariaLabelledby && { 'aria-labelledby': props.ariaLabelledby }),
-                        ...filteredProps.inputProps,
-                    },
+        <TextField
+            variant="standard"
+            {...filteredProps}
+            ref={ref}
+            helperText={helperText}
+            id={id}
+            data-testid={testId}
+            slotProps={{
+                htmlInput: {
+                    id: `${id}-input`,
+                    'data-analyticsid': `${id}-input`,
+                    'data-testid': `${testId}-input`,
+                    label: filteredProps.label,
+                    'aria-label': props.ariaLabel || filteredProps.label,
+                    ...(props.ariaLabelledby && { 'aria-labelledby': props.ariaLabelledby }),
+                    ...filteredProps.inputProps,
+                },
 
-                    inputLabel: {
-                        shrink: filteredProps.floatinglabelfixed ? true : undefined,
-                        id: `${id}-label`,
-                        'data-testid': `${id}-label`,
-                        htmlFor: `${id}-input`,
-                        hidden: hideLabel,
-                        ...filteredProps.InputLabelProps,
-                    },
+                inputLabel: {
+                    shrink: filteredProps.floatinglabelfixed ? true : undefined,
+                    id: `${id}-label`,
+                    'data-testid': `${id}-label`,
+                    htmlFor: `${id}-input`,
+                    hidden: hideLabel,
+                    ...filteredProps.InputLabelProps,
+                },
 
-                    formHelperText: {
-                        'data-testid': `${id}-helper-text`,
-                    },
-                }}
-            />
-        </Fragment>
+                formHelperText: {
+                    'data-testid': `${id}-helper-text`,
+                },
+            }}
+        />
     );
 });
 
