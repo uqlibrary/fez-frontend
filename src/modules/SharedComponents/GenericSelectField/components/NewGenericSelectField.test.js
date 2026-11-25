@@ -27,6 +27,18 @@ describe('NewGenericSelectField', () => {
         expect(combobox.getAttribute('aria-labelledby')).toContain('rek-test-label');
     });
 
+    it('should visually hide the label while keeping it available to screen readers', () => {
+        const label = 'Content indicators';
+        const { getByRole, getByTestId } = setup({ label, hideLabel: true });
+
+        expect(getByRole('combobox', { name: label })).toBeInTheDocument();
+        expect(getByTestId('rek-test-label')).toHaveStyle({
+            position: 'absolute',
+            width: '1px',
+            height: '1px',
+        });
+    });
+
     it('should render select field', () => {
         const { getByTestId } = setup({
             itemsList: [

@@ -35,6 +35,17 @@ describe('AutoCompleteAsynchronousField component', () => {
         expect(loadSuggestionsFn).toHaveBeenCalledWith('apple');
     });
 
+    it('should visually hide the label while keeping it available to screen readers', () => {
+        const { getByRole, getByText } = setup({ hideLabel: true });
+
+        expect(getByRole('combobox', { name: 'Autocomplete asynchronous field' })).toBeInTheDocument();
+        expect(getByText('Autocomplete asynchronous field')).toHaveStyle({
+            position: 'absolute',
+            width: '1px',
+            height: '1px',
+        });
+    });
+
     it('should render component and select options', async () => {
         const loadSuggestionsFn = jest.fn();
 

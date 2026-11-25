@@ -5,6 +5,7 @@ import Select from '@mui/material/Select';
 import FormHelperText from '@mui/material/FormHelperText';
 import FormControl from '@mui/material/FormControl';
 import InputLabel from '@mui/material/InputLabel';
+import { visuallyHidden } from '@mui/utils';
 
 /**
  * 'canUnselect' prop allows the editing user to 'unselect' the entry in the dropdown
@@ -131,7 +132,7 @@ export const NewGenericSelectField = ({
                 always resolves to a real element. MUI otherwise labels the combobox with its own
                 display id, leaving it with no accessible name. */}
             <InputLabel
-                hidden={hideLabel}
+                sx={{ ...(hideLabel ? visuallyHidden : {}) }}
                 data-testid={`${genericSelectFieldId}-label`}
                 id={`${genericSelectFieldId}-label`}
             >
