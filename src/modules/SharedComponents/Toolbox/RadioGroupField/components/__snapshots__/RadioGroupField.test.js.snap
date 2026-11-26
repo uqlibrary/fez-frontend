@@ -8,6 +8,7 @@ exports[`RadioGroupField tests renders RadioGroupField component 1`] = `
   >
     <label
       class="MuiFormLabel-root MuiFormLabel-colorPrimary css-MuiFormLabel-root"
+      for="test-label"
       id="test-label"
     >
       text
@@ -28,7 +29,7 @@ exports[`RadioGroupField tests renders RadioGroupField component 1`] = `
             data-analyticsid="test-a-option"
             data-testid="test-a-option"
             id="test-a-option"
-            name="_r_1_"
+            name="test"
             type="radio"
             value="a"
           />
@@ -76,7 +77,7 @@ exports[`RadioGroupField tests renders RadioGroupField component 1`] = `
             data-analyticsid="test-b-option"
             data-testid="test-b-option"
             id="test-b-option"
-            name="_r_1_"
+            name="test"
             type="radio"
             value="b"
           />
@@ -126,6 +127,7 @@ exports[`RadioGroupField tests renders an error 1`] = `
   >
     <label
       class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-error css-MuiFormLabel-root"
+      for="test-label"
       id="test-label"
     >
       text
@@ -142,11 +144,12 @@ exports[`RadioGroupField tests renders an error 1`] = `
           class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
         >
           <input
+            aria-describedby="test-helper-text"
             class="PrivateSwitchBase-input css-MuiSwitchBase-root"
             data-analyticsid="test-a-option"
             data-testid="test-a-option"
             id="test-a-option"
-            name="_r_3_"
+            name="test"
             type="radio"
             value="a"
           />
@@ -190,11 +193,12 @@ exports[`RadioGroupField tests renders an error 1`] = `
           class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-MuiButtonBase-root-MuiSwitchBase-root-MuiRadio-root"
         >
           <input
+            aria-describedby="test-helper-text"
             class="PrivateSwitchBase-input css-MuiSwitchBase-root"
             data-analyticsid="test-b-option"
             data-testid="test-b-option"
             id="test-b-option"
-            name="_r_3_"
+            name="test"
             type="radio"
             value="b"
           />
@@ -234,6 +238,7 @@ exports[`RadioGroupField tests renders an error 1`] = `
     </div>
     <p
       class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium css-MuiFormHelperText-root"
+      id="test-helper-text"
     >
       Something bad happened
     </p>

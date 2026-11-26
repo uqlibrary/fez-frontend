@@ -209,8 +209,8 @@ describe('FreeTextForm behaviour tests', () => {
         expect(getByText('Edit')).toBeVisible();
     });
 
-    it('should display remind to add text', () => {
-        const { getByTestId, getByText } = rtlRender(
+    it('should display remind to add text as error helper text', () => {
+        const { getByTestId } = rtlRender(
             <FreeTextForm
                 onAdd={jest.fn()}
                 locale={{
@@ -228,7 +228,10 @@ describe('FreeTextForm behaviour tests', () => {
         );
 
         fireEvent.change(getByTestId('test-input'), { target: { value: 'testing' } });
-        expect(getByText('Please click "Add" button to add item to the list')).toBeVisible();
+        const helperText = getByTestId('test-helper-text');
+        expect(helperText).toHaveTextContent('Please click "Add" button to add item to the list');
+        expect(helperText).toHaveAttribute('id', 'test-helper-text');
+        expect(helperText).toHaveClass('Mui-error');
     });
 
     it('should display error state for the input form', () => {

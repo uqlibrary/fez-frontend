@@ -10,6 +10,7 @@ npm-debug.log*
 e2eTestLog
 chromedriver.log
 /coverage
+/test-results
 yarn.lock
 frontend.json
 # ignore js bungle analyser files

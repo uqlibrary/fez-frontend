@@ -261,11 +261,11 @@ exports[`VideoDocumentForm component 1`] = `
                         >
                           <input
                             aria-invalid="true"
+                            aria-label="Day"
                             class="MuiInputBase-input MuiInput-input css-MuiInputBase-input-MuiInput-input"
                             data-analyticsid="rek-date-day-input"
                             data-testid="rek-date-day-input"
                             id="rek-date-day-input"
-                            label="day"
                             maxlength="2"
                             name="day"
                             placeholder="Day"
@@ -283,6 +283,12 @@ exports[`VideoDocumentForm component 1`] = `
                     <div
                       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-MuiGrid-root"
                     >
+                      <label
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-animated css-MuiFormLabel-root-MuiInputLabel-root"
+                        id="rek-date-month-label"
+                      >
+                        Month
+                      </label>
                       <div
                         class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiSelect-root css-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
@@ -290,7 +296,7 @@ exports[`VideoDocumentForm component 1`] = `
                           aria-expanded="false"
                           aria-haspopup="listbox"
                           aria-invalid="true"
-                          aria-labelledby="rek-date-month-select"
+                          aria-labelledby="rek-date-month-label rek-date-month-select"
                           class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                           data-analyticsid="rek-date-month-select"
                           data-testid="rek-date-month-select"
@@ -307,7 +313,6 @@ exports[`VideoDocumentForm component 1`] = `
                           data-analyticsid="rek-date-month-input"
                           data-testid="rek-date-month-input"
                           id="rek-date-month-input"
-                          label="month"
                           maxlength="2"
                           name="month"
                           placeholder="Month"
@@ -338,11 +343,11 @@ exports[`VideoDocumentForm component 1`] = `
                         >
                           <input
                             aria-invalid="true"
+                            aria-label="Year"
                             class="MuiInputBase-input MuiInput-input css-MuiInputBase-input-MuiInput-input"
                             data-analyticsid="rek-date-year-input"
                             data-testid="rek-date-year-input"
                             id="rek-date-year-input"
-                            label="year"
                             maxlength="4"
                             name="year"
                             placeholder="Year"
@@ -1118,11 +1123,11 @@ exports[`VideoDocumentForm component should render contributor assignment 1`] = 
                         >
                           <input
                             aria-invalid="true"
+                            aria-label="Day"
                             class="MuiInputBase-input MuiInput-input css-MuiInputBase-input-MuiInput-input"
                             data-analyticsid="rek-date-day-input"
                             data-testid="rek-date-day-input"
                             id="rek-date-day-input"
-                            label="day"
                             maxlength="2"
                             name="day"
                             placeholder="Day"
@@ -1140,6 +1145,12 @@ exports[`VideoDocumentForm component should render contributor assignment 1`] = 
                     <div
                       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-MuiGrid-root"
                     >
+                      <label
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-animated css-MuiFormLabel-root-MuiInputLabel-root"
+                        id="rek-date-month-label"
+                      >
+                        Month
+                      </label>
                       <div
                         class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiSelect-root css-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
@@ -1147,7 +1158,7 @@ exports[`VideoDocumentForm component should render contributor assignment 1`] = 
                           aria-expanded="false"
                           aria-haspopup="listbox"
                           aria-invalid="true"
-                          aria-labelledby="rek-date-month-select"
+                          aria-labelledby="rek-date-month-label rek-date-month-select"
                           class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                           data-analyticsid="rek-date-month-select"
                           data-testid="rek-date-month-select"
@@ -1164,7 +1175,6 @@ exports[`VideoDocumentForm component should render contributor assignment 1`] = 
                           data-analyticsid="rek-date-month-input"
                           data-testid="rek-date-month-input"
                           id="rek-date-month-input"
-                          label="month"
                           maxlength="2"
                           name="month"
                           placeholder="Month"
@@ -1195,11 +1205,11 @@ exports[`VideoDocumentForm component should render contributor assignment 1`] = 
                         >
                           <input
                             aria-invalid="true"
+                            aria-label="Year"
                             class="MuiInputBase-input MuiInput-input css-MuiInputBase-input-MuiInput-input"
                             data-analyticsid="rek-date-year-input"
                             data-testid="rek-date-year-input"
                             id="rek-date-year-input"
-                            label="year"
                             maxlength="4"
                             name="year"
                             placeholder="Year"
@@ -1967,12 +1977,12 @@ exports[`VideoDocumentForm component with all fields disabled 1`] = `
                         >
                           <input
                             aria-invalid="true"
+                            aria-label="Day"
                             class="MuiInputBase-input MuiInput-input Mui-disabled css-MuiInputBase-input-MuiInput-input"
                             data-analyticsid="rek-date-day-input"
                             data-testid="rek-date-day-input"
                             disabled=""
                             id="rek-date-day-input"
-                            label="day"
                             maxlength="2"
                             name="day"
                             placeholder="Day"
@@ -1990,6 +2000,12 @@ exports[`VideoDocumentForm component with all fields disabled 1`] = `
                     <div
                       class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow css-MuiGrid-root"
                     >
+                      <label
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-animated MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-animated css-MuiFormLabel-root-MuiInputLabel-root"
+                        id="rek-date-month-label"
+                      >
+                        Month
+                      </label>
                       <div
                         class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled Mui-error MuiInputBase-fullWidth MuiSelect-root css-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
@@ -1998,7 +2014,7 @@ exports[`VideoDocumentForm component with all fields disabled 1`] = `
                           aria-expanded="false"
                           aria-haspopup="listbox"
                           aria-invalid="true"
-                          aria-labelledby="rek-date-month-select"
+                          aria-labelledby="rek-date-month-label rek-date-month-select"
                           class="MuiSelect-select MuiSelect-standard Mui-disabled Mui-error MuiInputBase-input MuiInput-input Mui-disabled css-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                           data-analyticsid="rek-date-month-select"
                           data-testid="rek-date-month-select"
@@ -2015,7 +2031,6 @@ exports[`VideoDocumentForm component with all fields disabled 1`] = `
                           data-testid="rek-date-month-input"
                           disabled=""
                           id="rek-date-month-input"
-                          label="month"
                           maxlength="2"
                           name="month"
                           placeholder="Month"
@@ -2046,12 +2061,12 @@ exports[`VideoDocumentForm component with all fields disabled 1`] = `
                         >
                           <input
                             aria-invalid="true"
+                            aria-label="Year"
                             class="MuiInputBase-input MuiInput-input Mui-disabled css-MuiInputBase-input-MuiInput-input"
                             data-analyticsid="rek-date-year-input"
                             data-testid="rek-date-year-input"
                             disabled=""
                             id="rek-date-year-input"
-                            label="year"
                             maxlength="4"
                             name="year"
                             placeholder="Year"

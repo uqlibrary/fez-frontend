@@ -299,6 +299,7 @@ export default {
         },
         publicationsList: {
             selectAllText: 'Select all',
+            selectPublicationText: 'Select publication',
         },
         facetsFilter: {
             title: 'Refine results',

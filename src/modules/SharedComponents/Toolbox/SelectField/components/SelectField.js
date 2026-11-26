@@ -3,6 +3,7 @@ import Select from '@mui/material/Select';
 import FormControl from '@mui/material/FormControl';
 // import Input from '@mui/material/Input';
 import FormHelperText from '@mui/material/FormHelperText';
+import { visuallyHidden } from '@mui/utils';
 
 import PropTypes from 'prop-types';
 import propFilter from '../../helpers/_filterProps';
@@ -16,6 +17,12 @@ const SelectFieldWrapper = forwardRef((props, ref) => {
     const error = !!filteredProps.errorText || !!filteredProps.error;
     const helperText = filteredProps.errorText || filteredProps.error || null;
     const hideLabel = !!filteredProps.hideLabel;
+    // WCAG 4.1.2 / 3.3.1: MUI labels the combobox display element from `labelId` + the display id.
+    // Without labelId it points the combobox at its own id, leaving it with no accessible name, so
+    // pass the InputLabel's id (or an aria-label when the label is hidden). helperTextId ties the
+    // error message to the control via aria-describedby.
+    const labelId = `${props.selectFieldId}-label`;
+    const helperTextId = `${props.selectFieldId}-helper-text`;
     const formHelperTextProps = filteredProps.formHelperTextProps ?? {};
     delete filteredProps.formHelperTextProps;
     delete filteredProps.hideLabel;
@@ -24,12 +31,15 @@ const SelectFieldWrapper = forwardRef((props, ref) => {
     return (
         <React.Fragment>
             <FormControl variant="standard" error={error} style={{ width: '100%' }} required={filteredProps.required}>
-                {!hideLabel && <InputLabel id={`${props.selectFieldId}-label`}>{filteredProps.label}</InputLabel>}
+                <InputLabel id={labelId} sx={{ ...(hideLabel ? visuallyHidden : {}) }}>
+                    {filteredProps.label}
+                </InputLabel>
                 <Select
                     ref={ref}
                     variant="standard"
+                    labelId={labelId}
                     inputProps={{
-                        'aria-labelledby': `${props.selectFieldId}-label`,
+                        'aria-labelledby': labelId,
                         'data-analyticsid': `${props.selectFieldId}-input`,
                         'data-testid': `${props.selectFieldId}-input`,
                         id: `${props.selectFieldId}-input`,
@@ -44,9 +54,14 @@ const SelectFieldWrapper = forwardRef((props, ref) => {
                         'data-testid': `${props.selectFieldId}-options`,
                     }}
                     {...filteredProps}
+                    {...(!!helperText && { 'aria-describedby': helperTextId })}
                     autoWidth
                 />
-                {helperText && <FormHelperText {...formHelperTextProps}>{helperText}</FormHelperText>}
+                {helperText && (
+                    <FormHelperText id={helperTextId} {...formHelperTextProps}>
+                        {helperText}
+                    </FormHelperText>
+                )}
             </FormControl>
         </React.Fragment>
     );

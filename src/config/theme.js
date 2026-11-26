@@ -121,15 +121,10 @@ const typography = {
     body1: { lineHeight: ds.lineHeight.long },
     body2: { lineHeight: ds.lineHeight.long },
 };
-
-// MUI maps subtitle1/subtitle2 to <h6> by default, which adds fake headings to the page outline
-// (WCAG 1.3.1). Render them as plain blocks; use `component` where a real heading is wanted.
-const typographyOverrides = {
-    defaultProps: {
-        variantMapping: { subtitle1: 'div', subtitle2: 'div' },
-    },
+const dsOutlineStandard = {
+    outline: `4px solid ${ds.colour.utility[500]}`,
+    outlineOffset: '0px', // Prevents the outline from touching the text
 };
-
 const narrowLabelReflow = {
     '@media (max-width:899.95px)': {
         whiteSpace: 'normal',
@@ -137,9 +132,13 @@ const narrowLabelReflow = {
         textOverflow: 'clip',
     },
 };
-const dsOutlineStandard = {
-    outline: `4px solid ${ds.colour.utility[500]}`,
-    outlineOffset: '0px', // Prevents the outline from touching the text
+
+// MUI maps subtitle1/subtitle2 to <h6> by default, which adds fake headings to the page outline
+// (WCAG 1.3.1). Render them as plain blocks; use `component` where a real heading is wanted.
+const typographyOverrides = {
+    defaultProps: {
+        variantMapping: { subtitle1: 'div', subtitle2: 'div' },
+    },
 };
 
 // DS theme overrides defined here in one place, then
@@ -433,18 +432,6 @@ export const mui1theme = createTheme(
                     noSsr: true,
                 },
             },
-            // MuiDataGrid: { // might need this to come back
-            //     styleOverrides: {
-            //         root: {
-            //             '& .MuiDataGrid-columnHeader:focus, .MuiDataGrid-cell:focus': {
-            //                 outline: 'none',
-            //             },
-            //             '& .MuiDataGrid-columnHeader:focus-within, .MuiDataGrid-cell:focus-within': {
-            //                 outline: 'none',
-            //             },
-            //         },
-            //     },
-            // },
         },
         graphs: {
             color1: '#d72865',

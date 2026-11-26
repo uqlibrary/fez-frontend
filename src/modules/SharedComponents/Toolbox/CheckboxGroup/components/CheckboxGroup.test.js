@@ -10,6 +10,7 @@ function setup(testProps = {}) {
             { label: 'option b', value: 'b', appendTextField: true },
         ],
         onChange: jest.fn(),
+        name: 'test',
         ...testProps,
     };
     return rtlRender(<CheckboxGroup {...props} />);
@@ -29,6 +30,20 @@ describe('CheckboxGroup tests', () => {
 
         const { container } = setup(props);
         expect(container).toMatchSnapshot();
+    });
+
+    it('gives the checkbox group an accessible name from its visible label', () => {
+        const { getByRole, getByText } = setup({ label: 'Available options' });
+
+        expect(getByRole('group', { name: 'Available options' })).toHaveAttribute('aria-labelledby', 'test-label');
+        expect(getByText('Available options')).toHaveAttribute('id', 'test-label');
+    });
+
+    it('keeps an accessible group name when hideLabel is true', () => {
+        const { getByRole, queryByText } = setup({ label: 'Available options', hideLabel: true });
+
+        expect(queryByText('Available options')).not.toBeInTheDocument();
+        expect(getByRole('group', { name: 'Available options' })).toHaveAttribute('aria-label', 'Available options');
     });
 
     it('should call onChange', () => {

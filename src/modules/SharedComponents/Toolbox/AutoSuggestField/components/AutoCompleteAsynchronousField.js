@@ -4,6 +4,7 @@ import { throttle } from 'throttle-debounce';
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
 import CircularProgress from '@mui/material/CircularProgress';
+import { visuallyHidden } from '@mui/utils';
 
 export const AutoCompleteAsynchronousField = React.forwardRef(
     (
@@ -165,7 +166,7 @@ export const AutoCompleteAsynchronousField = React.forwardRef(
                             placeholder={placeholder}
                             helperText={(error && errorText) || ''}
                             fullWidth
-                            label={!hideLabel && floatingLabelText}
+                            label={floatingLabelText}
                             value={inputValue}
                             onChange={handleSearchTextChange}
                             required={required}
@@ -185,6 +186,11 @@ export const AutoCompleteAsynchronousField = React.forwardRef(
                                             {params.InputProps.endAdornment}
                                         </React.Fragment>
                                     ),
+                                },
+
+                                inputLabel: {
+                                    ...params.InputLabelProps,
+                                    sx: { ...(hideLabel ? visuallyHidden : {}) },
                                 },
 
                                 htmlInput: {

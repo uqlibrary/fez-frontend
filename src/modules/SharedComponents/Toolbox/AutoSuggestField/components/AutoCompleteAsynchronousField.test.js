@@ -35,6 +35,17 @@ describe('AutoCompleteAsynchronousField component', () => {
         expect(loadSuggestionsFn).toHaveBeenCalledWith('apple');
     });
 
+    it('should visually hide the label while keeping it available to screen readers', () => {
+        const { getByRole, getByText } = setup({ hideLabel: true });
+
+        expect(getByRole('combobox', { name: 'Autocomplete asynchronous field' })).toBeInTheDocument();
+        expect(getByText('Autocomplete asynchronous field')).toHaveStyle({
+            position: 'absolute',
+            width: '1px',
+            height: '1px',
+        });
+    });
+
     it('should render component and select options', async () => {
         const loadSuggestionsFn = jest.fn();
 
@@ -128,12 +139,16 @@ describe('AutoCompleteAsynchronousField component', () => {
     });
 
     it('should display error text', () => {
-        const { getByText } = setup({
+        const { getByText, getByTestId } = setup({
             error: true,
             errorText: 'Please select some value',
         });
 
-        expect(getByText('Please select some value')).toBeInTheDocument();
+        const errorText = getByText('Please select some value');
+        const input = getByTestId('autocomplete-asynchronous-field-input');
+
+        expect(errorText).toBeInTheDocument();
+        expect(input).toHaveAttribute('aria-describedby', errorText.id);
     });
 
     it('should clear the input value on deleting input value by keyboard', () => {

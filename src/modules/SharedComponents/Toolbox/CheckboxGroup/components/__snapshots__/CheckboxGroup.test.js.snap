@@ -6,12 +6,9 @@ exports[`CheckboxGroup tests renders CheckboxGroup component 1`] = `
     class="MuiFormControl-root css-MuiFormControl-root"
     style="width: 100%;"
   >
-    <label
-      class="MuiFormLabel-root MuiFormLabel-colorPrimary css-MuiFormLabel-root"
-      id="test-label"
-    />
     <div
       class="MuiFormGroup-root css-MuiFormGroup-root"
+      role="group"
     >
       <div
         class="MuiBox-root css"
@@ -116,12 +113,9 @@ exports[`CheckboxGroup tests renders an error 1`] = `
     class="MuiFormControl-root css-MuiFormControl-root"
     style="width: 100%;"
   >
-    <label
-      class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-error css-MuiFormLabel-root"
-      id="test-label"
-    />
     <div
       class="MuiFormGroup-root Mui-error css-MuiFormGroup-root"
+      role="group"
     >
       <div
         class="MuiBox-root css"
@@ -134,6 +128,7 @@ exports[`CheckboxGroup tests renders an error 1`] = `
             label="option A"
           >
             <input
+              aria-describedby="test-helper-text"
               class="PrivateSwitchBase-input css-MuiSwitchBase-root"
               data-analyticsid="test-a-option"
               data-indeterminate="false"
@@ -171,6 +166,7 @@ exports[`CheckboxGroup tests renders an error 1`] = `
             label="option b"
           >
             <input
+              aria-describedby="test-helper-text"
               class="PrivateSwitchBase-input css-MuiSwitchBase-root"
               data-analyticsid="test-b-option"
               data-indeterminate="false"
@@ -218,6 +214,7 @@ exports[`CheckboxGroup tests renders an error 1`] = `
     </div>
     <p
       class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium css-MuiFormHelperText-root"
+      id="test-helper-text"
     >
       Something bad happened
     </p>

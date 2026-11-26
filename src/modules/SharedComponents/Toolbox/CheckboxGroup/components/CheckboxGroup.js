@@ -18,6 +18,7 @@ const CheckboxGroup = props => {
     const error = !!filteredProps.errorText || !!filteredProps.error;
     const helperText = filteredProps.errorText || filteredProps.error || null;
     const hideLabel = !!filteredProps.hideLabel;
+    const labelId = `${props.checkboxGroupId}-label`;
     const formHelperTextProps = filteredProps.formHelperTextProps ?? {};
     delete filteredProps.formHelperTextProps;
     delete filteredProps.hideLabel;
@@ -44,8 +45,13 @@ const CheckboxGroup = props => {
     return (
         <React.Fragment>
             <FormControl variant="standard" error={error} style={{ width: '100%' }} required={filteredProps.required}>
-                {!hideLabel && <FormLabel id={`${props.checkboxGroupId}-label`}>{filteredProps.label}</FormLabel>}
-                <FormGroup row={filteredProps.row}>
+                {!hideLabel && filteredProps.label && <FormLabel id={labelId}>{filteredProps.label}</FormLabel>}
+                <FormGroup
+                    row={filteredProps.row}
+                    role="group"
+                    aria-labelledby={!hideLabel && filteredProps.label ? labelId : undefined}
+                    aria-label={hideLabel && filteredProps.label ? filteredProps.label : undefined}
+                >
                     {props.options.map(option => (
                         <Box key={`${option.value}-parent`}>
                             <FormControlLabel
@@ -53,12 +59,17 @@ const CheckboxGroup = props => {
                                     <Checkbox
                                         checked={filteredProps.value.hasOwnProperty(option.value)}
                                         label={option.label}
-                                        inputProps={{
-                                            'data-analyticsid': `${props.checkboxGroupId}-${option.value}-option`,
-                                            'data-testid': `${props.checkboxGroupId}-${option.value}-option`,
-                                            id: `${props.checkboxGroupId}-${option.value}-option`,
-                                        }}
                                         onChange={() => handleChange(option.value, option.value)}
+                                        slotProps={{
+                                            input: {
+                                                'data-analyticsid': `${props.checkboxGroupId}-${option.value}-option`,
+                                                'data-testid': `${props.checkboxGroupId}-${option.value}-option`,
+                                                id: `${props.checkboxGroupId}-${option.value}-option`,
+                                                ...(!!helperText && {
+                                                    'aria-describedby': `${filteredProps.name}-helper-text`,
+                                                }),
+                                            },
+                                        }}
                                     />
                                 }
                                 label={option.label}
@@ -87,7 +98,11 @@ const CheckboxGroup = props => {
                         </Box>
                     ))}
                 </FormGroup>
-                {helperText && <FormHelperText {...formHelperTextProps}>{helperText}</FormHelperText>}
+                {helperText && (
+                    <FormHelperText {...formHelperTextProps} id={`${filteredProps.name}-helper-text`}>
+                        {helperText}
+                    </FormHelperText>
+                )}
             </FormControl>
         </React.Fragment>
     );

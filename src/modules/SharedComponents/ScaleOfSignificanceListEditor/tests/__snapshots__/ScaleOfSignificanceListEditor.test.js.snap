@@ -71,10 +71,11 @@ exports[`ScaleOfSignificanceListEditor tests should process incomplete props wit
             class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiSelect-root css-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
+              aria-describedby="rek-significance-helper-text"
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-invalid="true"
-              aria-labelledby="rek-significance-select"
+              aria-labelledby="rek-significance-label rek-significance-select"
               aria-required="true"
               class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
               data-testid="rek-significance-select"
@@ -776,10 +777,11 @@ exports[`ScaleOfSignificanceListEditor tests should render edit form 1`] = `
             class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiSelect-root css-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
+              aria-describedby="rek-significance-helper-text"
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-invalid="true"
-              aria-labelledby="rek-significance-select"
+              aria-labelledby="rek-significance-label rek-significance-select"
               aria-required="true"
               class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
               data-testid="rek-significance-select"
@@ -1566,11 +1568,12 @@ exports[`ScaleOfSignificanceListEditor tests should render full component as dis
             class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled Mui-error MuiInputBase-formControl MuiSelect-root css-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
+              aria-describedby="rek-significance-helper-text"
               aria-disabled="true"
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-invalid="true"
-              aria-labelledby="rek-significance-select"
+              aria-labelledby="rek-significance-label rek-significance-select"
               aria-required="true"
               class="MuiSelect-select MuiSelect-standard Mui-disabled Mui-error MuiInputBase-input MuiInput-input Mui-disabled css-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
               data-testid="rek-significance-select"
@@ -2372,10 +2375,11 @@ exports[`ScaleOfSignificanceListEditor tests should render full component with a
             class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiSelect-root css-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
+              aria-describedby="rek-significance-helper-text"
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-invalid="true"
-              aria-labelledby="rek-significance-select"
+              aria-labelledby="rek-significance-label rek-significance-select"
               aria-required="true"
               class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
               data-testid="rek-significance-select"
@@ -3162,10 +3166,11 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
             class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiSelect-root css-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
+              aria-describedby="rek-significance-helper-text"
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-invalid="true"
-              aria-labelledby="rek-significance-select"
+              aria-labelledby="rek-significance-label rek-significance-select"
               aria-required="true"
               class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
               data-testid="rek-significance-select"
@@ -4108,10 +4113,11 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
             class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiSelect-root css-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
+              aria-describedby="rek-significance-helper-text"
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-invalid="true"
-              aria-labelledby="rek-significance-select"
+              aria-labelledby="rek-significance-label rek-significance-select"
               aria-required="true"
               class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
               data-testid="rek-significance-select"
@@ -5054,10 +5060,11 @@ exports[`ScaleOfSignificanceListEditor tests should update an object item in the
             class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiSelect-root css-MuiInputBase-root-MuiInput-root-MuiSelect-root"
           >
             <div
+              aria-describedby="rek-significance-helper-text"
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-invalid="true"
-              aria-labelledby="rek-significance-select"
+              aria-labelledby="rek-significance-label rek-significance-select"
               aria-required="true"
               class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
               data-testid="rek-significance-select"

@@ -41,6 +41,33 @@ describe('SelectfieldWrapper snapshots tests', () => {
         expect(container).toMatchSnapshot();
     });
 
+    it('should give the combobox an accessible name and tie its error to it (AD-1294)', () => {
+        const { getByRole, container } = setup({
+            label: 'Publication type',
+            error: true,
+            errorText: 'Please select a type',
+        });
+        const combobox = getByRole('combobox');
+        // labelId makes the combobox reference the InputLabel, not its own id (accessible name)
+        expect(combobox.getAttribute('aria-labelledby')).toContain('test-label');
+        // the error message is programmatically linked to the control
+        const helper = container.querySelector('#test-helper-text');
+        expect(helper).toHaveTextContent('Please select a type');
+        expect(combobox.getAttribute('aria-describedby')).toContain('test-helper-text');
+    });
+
+    it('should visually hide the label while keeping it available to screen readers', () => {
+        const label = 'Publication type';
+        const { getByRole, getByText } = setup({ label, hideLabel: true });
+
+        expect(getByRole('combobox', { name: label })).toBeInTheDocument();
+        expect(getByText(label)).toHaveStyle({
+            position: 'absolute',
+            width: '1px',
+            height: '1px',
+        });
+    });
+
     it('should call onChange', () => {
         const onChangeFn = jest.fn();
         const onBlurFn = jest.fn();

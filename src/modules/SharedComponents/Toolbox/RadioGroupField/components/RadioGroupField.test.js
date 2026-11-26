@@ -12,6 +12,7 @@ function setup(testProps = {}) {
             { label: 'Option B', value: 'b' },
         ],
         onChange: jest.fn(),
+        name: 'test',
         ...testProps,
     };
     return rtlRender(<RadioGroupField {...props} />);

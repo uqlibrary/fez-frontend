@@ -55,14 +55,29 @@ exports[`FileUploadRow renders with uploaded file 1`] = `
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth css-MuiFormControl-root"
         >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="false"
+            data-testid="dsi-open-access-0-label"
+            id="dsi-open-access-0-label"
+          >
+            <span
+              aria-hidden="true"
+              class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-MuiFormLabel-asterisk"
+            >
+               
+              *
+            </span>
+          </label>
           <div
             class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiSelect-root css-MuiInputBase-root-MuiInput-root"
           >
             <div
+              aria-describedby="dsi-open-access-0-helper-text"
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-invalid="true"
-              aria-labelledby="dsi-open-access-0-select"
+              aria-labelledby="dsi-open-access-0-label dsi-open-access-0-select"
               aria-required="true"
               class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
               data-testid="dsi-open-access-0-select"
@@ -221,14 +236,29 @@ exports[`FileUploadRow should show confirmation and delete file 1`] = `
           <div
             class="MuiFormControl-root MuiFormControl-fullWidth css-MuiFormControl-root"
           >
+            <label
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-MuiFormLabel-root-MuiInputLabel-root"
+              data-shrink="false"
+              data-testid="dsi-open-access-0-label"
+              id="dsi-open-access-0-label"
+            >
+              <span
+                aria-hidden="true"
+                class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-MuiFormLabel-asterisk"
+              >
+                 
+                *
+              </span>
+            </label>
             <div
               class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiSelect-root css-MuiInputBase-root-MuiInput-root"
             >
               <div
+                aria-describedby="dsi-open-access-0-helper-text"
                 aria-expanded="false"
                 aria-haspopup="listbox"
                 aria-invalid="true"
-                aria-labelledby="dsi-open-access-0-select"
+                aria-labelledby="dsi-open-access-0-label dsi-open-access-0-select"
                 aria-required="true"
                 class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                 data-testid="dsi-open-access-0-select"

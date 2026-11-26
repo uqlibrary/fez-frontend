@@ -5,6 +5,7 @@ import Select from '@mui/material/Select';
 import FormHelperText from '@mui/material/FormHelperText';
 import FormControl from '@mui/material/FormControl';
 import InputLabel from '@mui/material/InputLabel';
+import { visuallyHidden } from '@mui/utils';
 
 /**
  * 'canUnselect' prop allows the editing user to 'unselect' the entry in the dropdown
@@ -127,15 +128,16 @@ export const NewGenericSelectField = ({
 
     return (
         <FormControl variant="standard" fullWidth required={required} error={!!inputError}>
-            {!hideLabel && (
-                <InputLabel
-                    hidden={hideLabel}
-                    data-testid={`${genericSelectFieldId}-label`}
-                    id={`${genericSelectFieldId}-label`}
-                >
-                    {label}
-                </InputLabel>
-            )}
+            {/* AD-1294: always render the label (hidden when hideLabel) so the Select's labelId
+                always resolves to a real element. MUI otherwise labels the combobox with its own
+                display id, leaving it with no accessible name. */}
+            <InputLabel
+                sx={{ ...(hideLabel ? visuallyHidden : {}) }}
+                data-testid={`${genericSelectFieldId}-label`}
+                id={`${genericSelectFieldId}-label`}
+            >
+                {label}
+            </InputLabel>
             <Select
                 variant="standard"
                 disabled={disabled}
@@ -162,6 +164,8 @@ export const NewGenericSelectField = ({
                 value={selectValue}
                 {...(hideLabel && multiple ? { renderValue: /* istanbul ignore next */ () => selectPrompt } : {})}
                 {...(!!selectProps ? { ...selectProps } : {})}
+                labelId={`${genericSelectFieldId}-label`}
+                {...(!!inputError && { 'aria-describedby': `${genericSelectFieldId}-helper-text` })}
             >
                 {itemsLoading ? renderMenuItems([loadingMenuItem]) : renderMenuItems([promptMenuItem, ...itemsList])}
             </Select>

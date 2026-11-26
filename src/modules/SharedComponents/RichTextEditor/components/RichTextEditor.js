@@ -161,6 +161,7 @@ const RichTextEditor = ({
                 editorProps={{
                     attributes: {
                         ...(id ? { id, 'data-testid': id } : {}),
+                        ...(error ? { 'aria-describedby': `${id}-helper-text` } : {}),
                     },
                 }}
                 RichTextFieldProps={{
@@ -202,6 +203,8 @@ const RichTextEditor = ({
                     style={{
                         display: 'inline-block',
                     }}
+                    id={`${id}-helper-text`}
+                    data-testid={`${id}-helper-text`}
                 >
                     {error}
                     {maxValue && <span>&nbsp;-&nbsp;</span>}

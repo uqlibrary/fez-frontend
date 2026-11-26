@@ -40,4 +40,21 @@ describe('TextFieldWrapper snapshots tests', () => {
         });
         expect(container).toMatchSnapshot();
     });
+
+    it('renders a visually hidden label that remains available to screen readers', () => {
+        const label = 'Text field label';
+        const { getByRole, getByTestId } = setup({
+            ...testProps,
+            label,
+            hideLabel: true,
+            ariaLabelledby: undefined,
+        });
+
+        expect(getByRole('textbox', { name: label })).toBeInTheDocument();
+        expect(getByTestId('test-label')).toHaveStyle({
+            position: 'absolute',
+            width: '1px',
+            height: '1px',
+        });
+    });
 });

@@ -288,12 +288,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                       class="MuiFormControl-root css-MuiFormControl-root"
                       style="width: 100%;"
                     >
-                      <label
-                        class="MuiFormLabel-root MuiFormLabel-colorPrimary css-MuiFormLabel-root"
-                        id="share-details-label"
-                      />
                       <div
-                        aria-labelledby="share-details-label"
                         class="MuiFormGroup-root MuiRadioGroup-root css-MuiFormGroup-root"
                         role="radiogroup"
                       >
@@ -577,12 +572,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                       class="MuiFormControl-root css-MuiFormControl-root"
                       style="width: 100%;"
                     >
-                      <label
-                        class="MuiFormLabel-root MuiFormLabel-colorPrimary css-MuiFormLabel-root"
-                        id="indigenous-identity-label"
-                      />
                       <div
-                        aria-labelledby="indigenous-identity-label"
                         class="MuiFormGroup-root MuiRadioGroup-root css-MuiFormGroup-root"
                         role="radiogroup"
                       >
@@ -793,12 +783,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                       class="MuiFormControl-root css-MuiFormControl-root"
                       style="width: 100%;"
                     >
-                      <label
-                        class="MuiFormLabel-root MuiFormLabel-colorPrimary css-MuiFormLabel-root"
-                        id="has-kinship-connection-label"
-                      />
                       <div
-                        aria-labelledby="has-kinship-connection-label"
                         class="MuiFormGroup-root MuiRadioGroup-root css-MuiFormGroup-root"
                         role="radiogroup"
                       >
@@ -936,12 +921,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                       class="MuiFormControl-root css-MuiFormControl-root"
                       style="width: 100%;"
                     >
-                      <label
-                        class="MuiFormLabel-root MuiFormLabel-colorPrimary css-MuiFormLabel-root"
-                        id="is-icip-holder-label"
-                      />
                       <div
-                        aria-labelledby="is-icip-holder-label"
                         class="MuiFormGroup-root MuiRadioGroup-root css-MuiFormGroup-root"
                         role="radiogroup"
                       >
@@ -1082,12 +1062,9 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                   class="MuiFormControl-root css-MuiFormControl-root"
                   style="width: 100%;"
                 >
-                  <label
-                    class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-focused css-MuiFormLabel-root"
-                    id="feedback-types-label"
-                  />
                   <div
                     class="MuiFormGroup-root css-MuiFormGroup-root"
+                    role="group"
                   >
                     <div
                       class="MuiBox-root css"
@@ -1407,12 +1384,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                       class="MuiFormControl-root css-MuiFormControl-root"
                       style="width: 100%;"
                     >
-                      <label
-                        class="MuiFormLabel-root MuiFormLabel-colorPrimary css-MuiFormLabel-root"
-                        id="acknowledgement-label"
-                      />
                       <div
-                        aria-labelledby="acknowledgement-label"
                         class="MuiFormGroup-root MuiRadioGroup-root css-MuiFormGroup-root"
                         role="radiogroup"
                       >
@@ -2019,12 +1991,7 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                       class="MuiFormControl-root css-MuiFormControl-root"
                       style="width: 100%;"
                     >
-                      <label
-                        class="MuiFormLabel-root MuiFormLabel-colorPrimary css-MuiFormLabel-root"
-                        id="share-details-label"
-                      />
                       <div
-                        aria-labelledby="share-details-label"
                         class="MuiFormGroup-root MuiRadioGroup-root css-MuiFormGroup-root"
                         role="radiogroup"
                       >
@@ -2308,12 +2275,7 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                       class="MuiFormControl-root css-MuiFormControl-root"
                       style="width: 100%;"
                     >
-                      <label
-                        class="MuiFormLabel-root MuiFormLabel-colorPrimary css-MuiFormLabel-root"
-                        id="indigenous-identity-label"
-                      />
                       <div
-                        aria-labelledby="indigenous-identity-label"
                         class="MuiFormGroup-root MuiRadioGroup-root css-MuiFormGroup-root"
                         role="radiogroup"
                       >
@@ -2524,12 +2486,7 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                       class="MuiFormControl-root css-MuiFormControl-root"
                       style="width: 100%;"
                     >
-                      <label
-                        class="MuiFormLabel-root MuiFormLabel-colorPrimary css-MuiFormLabel-root"
-                        id="has-kinship-connection-label"
-                      />
                       <div
-                        aria-labelledby="has-kinship-connection-label"
                         class="MuiFormGroup-root MuiRadioGroup-root css-MuiFormGroup-root"
                         role="radiogroup"
                       >
@@ -2667,12 +2624,7 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                       class="MuiFormControl-root css-MuiFormControl-root"
                       style="width: 100%;"
                     >
-                      <label
-                        class="MuiFormLabel-root MuiFormLabel-colorPrimary css-MuiFormLabel-root"
-                        id="is-icip-holder-label"
-                      />
                       <div
-                        aria-labelledby="is-icip-holder-label"
                         class="MuiFormGroup-root MuiRadioGroup-root css-MuiFormGroup-root"
                         role="radiogroup"
                       >
@@ -2813,12 +2765,9 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                   class="MuiFormControl-root css-MuiFormControl-root"
                   style="width: 100%;"
                 >
-                  <label
-                    class="MuiFormLabel-root MuiFormLabel-colorPrimary css-MuiFormLabel-root"
-                    id="feedback-types-label"
-                  />
                   <div
                     class="MuiFormGroup-root css-MuiFormGroup-root"
+                    role="group"
                   >
                     <div
                       class="MuiBox-root css"
@@ -2973,12 +2922,7 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                       class="MuiFormControl-root css-MuiFormControl-root"
                       style="width: 100%;"
                     >
-                      <label
-                        class="MuiFormLabel-root MuiFormLabel-colorPrimary css-MuiFormLabel-root"
-                        id="acknowledgement-label"
-                      />
                       <div
-                        aria-labelledby="acknowledgement-label"
                         class="MuiFormGroup-root MuiRadioGroup-root css-MuiFormGroup-root"
                         role="radiogroup"
                       >
@@ -3535,12 +3479,7 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                       class="MuiFormControl-root css-MuiFormControl-root"
                       style="width: 100%;"
                     >
-                      <label
-                        class="MuiFormLabel-root MuiFormLabel-colorPrimary css-MuiFormLabel-root"
-                        id="share-details-label"
-                      />
                       <div
-                        aria-labelledby="share-details-label"
                         class="MuiFormGroup-root MuiRadioGroup-root css-MuiFormGroup-root"
                         role="radiogroup"
                       >
@@ -3824,12 +3763,7 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                       class="MuiFormControl-root css-MuiFormControl-root"
                       style="width: 100%;"
                     >
-                      <label
-                        class="MuiFormLabel-root MuiFormLabel-colorPrimary css-MuiFormLabel-root"
-                        id="indigenous-identity-label"
-                      />
                       <div
-                        aria-labelledby="indigenous-identity-label"
                         class="MuiFormGroup-root MuiRadioGroup-root css-MuiFormGroup-root"
                         role="radiogroup"
                       >
@@ -4040,12 +3974,7 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                       class="MuiFormControl-root css-MuiFormControl-root"
                       style="width: 100%;"
                     >
-                      <label
-                        class="MuiFormLabel-root MuiFormLabel-colorPrimary css-MuiFormLabel-root"
-                        id="has-kinship-connection-label"
-                      />
                       <div
-                        aria-labelledby="has-kinship-connection-label"
                         class="MuiFormGroup-root MuiRadioGroup-root css-MuiFormGroup-root"
                         role="radiogroup"
                       >
@@ -4183,12 +4112,7 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                       class="MuiFormControl-root css-MuiFormControl-root"
                       style="width: 100%;"
                     >
-                      <label
-                        class="MuiFormLabel-root MuiFormLabel-colorPrimary css-MuiFormLabel-root"
-                        id="is-icip-holder-label"
-                      />
                       <div
-                        aria-labelledby="is-icip-holder-label"
                         class="MuiFormGroup-root MuiRadioGroup-root css-MuiFormGroup-root"
                         role="radiogroup"
                       >
@@ -4329,12 +4253,9 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                   class="MuiFormControl-root css-MuiFormControl-root"
                   style="width: 100%;"
                 >
-                  <label
-                    class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-focused css-MuiFormLabel-root"
-                    id="feedback-types-label"
-                  />
                   <div
                     class="MuiFormGroup-root css-MuiFormGroup-root"
+                    role="group"
                   >
                     <div
                       class="MuiBox-root css"
@@ -4580,12 +4501,7 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                       class="MuiFormControl-root css-MuiFormControl-root"
                       style="width: 100%;"
                     >
-                      <label
-                        class="MuiFormLabel-root MuiFormLabel-colorPrimary css-MuiFormLabel-root"
-                        id="acknowledgement-label"
-                      />
                       <div
-                        aria-labelledby="acknowledgement-label"
                         class="MuiFormGroup-root MuiRadioGroup-root css-MuiFormGroup-root"
                         role="radiogroup"
                       >
@@ -5142,12 +5058,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                       class="MuiFormControl-root css-MuiFormControl-root"
                       style="width: 100%;"
                     >
-                      <label
-                        class="MuiFormLabel-root MuiFormLabel-colorPrimary css-MuiFormLabel-root"
-                        id="share-details-label"
-                      />
                       <div
-                        aria-labelledby="share-details-label"
                         class="MuiFormGroup-root MuiRadioGroup-root css-MuiFormGroup-root"
                         role="radiogroup"
                       >
@@ -5431,12 +5342,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                       class="MuiFormControl-root css-MuiFormControl-root"
                       style="width: 100%;"
                     >
-                      <label
-                        class="MuiFormLabel-root MuiFormLabel-colorPrimary css-MuiFormLabel-root"
-                        id="indigenous-identity-label"
-                      />
                       <div
-                        aria-labelledby="indigenous-identity-label"
                         class="MuiFormGroup-root MuiRadioGroup-root css-MuiFormGroup-root"
                         role="radiogroup"
                       >
@@ -5647,12 +5553,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                       class="MuiFormControl-root css-MuiFormControl-root"
                       style="width: 100%;"
                     >
-                      <label
-                        class="MuiFormLabel-root MuiFormLabel-colorPrimary css-MuiFormLabel-root"
-                        id="has-kinship-connection-label"
-                      />
                       <div
-                        aria-labelledby="has-kinship-connection-label"
                         class="MuiFormGroup-root MuiRadioGroup-root css-MuiFormGroup-root"
                         role="radiogroup"
                       >
@@ -5790,12 +5691,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                       class="MuiFormControl-root css-MuiFormControl-root"
                       style="width: 100%;"
                     >
-                      <label
-                        class="MuiFormLabel-root MuiFormLabel-colorPrimary css-MuiFormLabel-root"
-                        id="is-icip-holder-label"
-                      />
                       <div
-                        aria-labelledby="is-icip-holder-label"
                         class="MuiFormGroup-root MuiRadioGroup-root css-MuiFormGroup-root"
                         role="radiogroup"
                       >
@@ -5936,12 +5832,9 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                   class="MuiFormControl-root css-MuiFormControl-root"
                   style="width: 100%;"
                 >
-                  <label
-                    class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-focused css-MuiFormLabel-root"
-                    id="feedback-types-label"
-                  />
                   <div
                     class="MuiFormGroup-root css-MuiFormGroup-root"
+                    role="group"
                   >
                     <div
                       class="MuiBox-root css"
@@ -6116,12 +6009,9 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                       class="MuiFormControl-root css-MuiFormControl-root"
                       style="width: 100%;"
                     >
-                      <label
-                        class="MuiFormLabel-root MuiFormLabel-colorPrimary css-MuiFormLabel-root"
-                        id="cultural-info-label"
-                      />
                       <div
                         class="MuiFormGroup-root css-MuiFormGroup-root"
+                        role="group"
                       >
                         <div
                           class="MuiBox-root css"
@@ -6341,12 +6231,9 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                       class="MuiFormControl-root css-MuiFormControl-root"
                       style="width: 100%;"
                     >
-                      <label
-                        class="MuiFormLabel-root MuiFormLabel-colorPrimary css-MuiFormLabel-root"
-                        id="special-care-label"
-                      />
                       <div
                         class="MuiFormGroup-root css-MuiFormGroup-root"
+                        role="group"
                       >
                         <div
                           class="MuiBox-root css"
@@ -6632,12 +6519,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                       class="MuiFormControl-root css-MuiFormControl-root"
                       style="width: 100%;"
                     >
-                      <label
-                        class="MuiFormLabel-root MuiFormLabel-colorPrimary css-MuiFormLabel-root"
-                        id="acknowledgement-label"
-                      />
                       <div
-                        aria-labelledby="acknowledgement-label"
                         class="MuiFormGroup-root MuiRadioGroup-root css-MuiFormGroup-root"
                         role="radiogroup"
                       >

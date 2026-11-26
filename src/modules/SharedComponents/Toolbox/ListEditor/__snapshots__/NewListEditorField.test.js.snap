@@ -115,6 +115,7 @@ exports[`NewListEditorField component should render new list editor component wi
       </div>
     </div>
     <div
+      aria-describedby="test-helper-text"
       data-testid="test-list"
       id="test-list"
     >
@@ -299,6 +300,8 @@ exports[`NewListEditorField component should render new list editor component wi
     </div>
     <p
       class="MuiFormHelperText-root Mui-error css-MuiFormHelperText-root"
+      data-testid="test-helper-text"
+      id="test-helper-text"
     >
       test1
     </p>
@@ -421,6 +424,7 @@ exports[`NewListEditorField component should render new list editor component wi
       </div>
     </div>
     <div
+      aria-describedby="test-helper-text"
       data-testid="test-list"
       id="test-list"
     >
@@ -605,6 +609,8 @@ exports[`NewListEditorField component should render new list editor component wi
     </div>
     <p
       class="MuiFormHelperText-root Mui-error css-MuiFormHelperText-root"
+      data-testid="test-helper-text"
+      id="test-helper-text"
     >
       test1
     </p>
@@ -675,6 +681,8 @@ exports[`NewListEditorField component should render new list editor component wi
     />
     <p
       class="MuiFormHelperText-root css-MuiFormHelperText-root"
+      data-testid="test-helper-text"
+      id="test-helper-text"
     />
   </div>
 </DocumentFragment>

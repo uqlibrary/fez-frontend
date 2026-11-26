@@ -32,6 +32,7 @@ export const NewListEditor = ({
     transform = (list, searchKey) =>
         list.map((listItem, index) => ({ [searchKey.value]: listItem, [searchKey.order]: index + 1 })),
 }) => {
+    console.log(listEditorId);
     const [mode, setMode] = React.useState('add');
     const [indexToUpdate, setIndexToUpdate] = React.useState(null);
     const [itemToUpdate, setItemToUpdate] = React.useState(null);
@@ -173,7 +174,12 @@ export const NewListEditor = ({
                     {...((locale && locale.header) || {})}
                 />
             )}
-            <div id={`${listEditorId}-list`} data-testid={`${listEditorId}-list`} {...scrollStyle}>
+            <div
+                id={`${listEditorId}-list`}
+                data-testid={`${listEditorId}-list`}
+                {...(!!errorText ? { 'aria-describedby': `${listEditorId}-helper-text` } : {})}
+                {...scrollStyle}
+            >
                 {itemsList.map((item, index) => (
                     <ListRow
                         key={JSON.stringify(item) + index}
@@ -194,7 +200,12 @@ export const NewListEditor = ({
                     />
                 ))}
             </div>
-            <FormHelperText error={error} children={errorText} />
+            <FormHelperText
+                error={error}
+                children={errorText}
+                id={`${listEditorId}-helper-text`}
+                data-testid={`${listEditorId}-helper-text`}
+            />
         </div>
     );
 };
