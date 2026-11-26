@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { RadioGroup, Radio, FormControl, FormControlLabel, FormHelperText, FormLabel } from '@mui/material';
-import { visuallyHidden } from '@mui/utils';
 
 import propFilter from '../../helpers/_filterProps';
 
@@ -15,19 +14,24 @@ const RadioGroupField = props => {
     delete filteredProps.formHelperTextProps;
     delete filteredProps.hideLabel;
     delete filteredProps.errorText;
-
+    console.log(props);
     return (
         <React.Fragment>
             <FormControl variant="standard" error={error} style={{ width: '100%' }} required={filteredProps.required}>
-                <FormLabel
-                    id={`${filteredProps.radioGroupFieldId}-label`}
-                    sx={{ ...(hideLabel ? visuallyHidden : {}) }}
-                >
-                    {filteredProps.label}
-                </FormLabel>
+                {!hideLabel && filteredProps.label && (
+                    <FormLabel
+                        id={`${filteredProps.radioGroupFieldId}-label`}
+                        htmlFor={`${filteredProps.radioGroupFieldId}-label`}
+                    >
+                        {filteredProps.label}
+                    </FormLabel>
+                )}
                 <RadioGroup
                     row={filteredProps.row}
-                    aria-labelledby={`${filteredProps.radioGroupFieldId}-label`}
+                    {...(!hideLabel &&
+                        filteredProps.label && {
+                            'aria-labelledby': `${filteredProps.radioGroupFieldId}-label`,
+                        })}
                     name={filteredProps.name}
                     onChange={filteredProps.onChange}
                     value={filteredProps.value}
@@ -37,7 +41,6 @@ const RadioGroupField = props => {
                         <FormControlLabel
                             control={
                                 <Radio
-                                    inputProps={{}}
                                     slotProps={{
                                         input: {
                                             'data-analyticsid': `${props.radioGroupFieldId}-${option.value}-option`,

@@ -6,12 +6,9 @@ exports[`CheckboxGroup tests renders CheckboxGroup component 1`] = `
     class="MuiFormControl-root css-MuiFormControl-root"
     style="width: 100%;"
   >
-    <label
-      class="MuiFormLabel-root MuiFormLabel-colorPrimary css-MuiFormLabel-root"
-      id="test-label"
-    />
     <div
       class="MuiFormGroup-root css-MuiFormGroup-root"
+      role="group"
     >
       <div
         class="MuiBox-root css"
@@ -116,12 +113,9 @@ exports[`CheckboxGroup tests renders an error 1`] = `
     class="MuiFormControl-root css-MuiFormControl-root"
     style="width: 100%;"
   >
-    <label
-      class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-error css-MuiFormLabel-root"
-      id="test-label"
-    />
     <div
       class="MuiFormGroup-root Mui-error css-MuiFormGroup-root"
+      role="group"
     >
       <div
         class="MuiBox-root css"

@@ -10,7 +10,6 @@ import {
     TextField,
     Box,
 } from '@mui/material';
-import { visuallyHidden } from '@mui/utils';
 import propFilter from '../../helpers/_filterProps';
 
 const CheckboxGroup = props => {
@@ -19,6 +18,7 @@ const CheckboxGroup = props => {
     const error = !!filteredProps.errorText || !!filteredProps.error;
     const helperText = filteredProps.errorText || filteredProps.error || null;
     const hideLabel = !!filteredProps.hideLabel;
+    const labelId = `${props.checkboxGroupId}-label`;
     const formHelperTextProps = filteredProps.formHelperTextProps ?? {};
     delete filteredProps.formHelperTextProps;
     delete filteredProps.hideLabel;
@@ -45,10 +45,13 @@ const CheckboxGroup = props => {
     return (
         <React.Fragment>
             <FormControl variant="standard" error={error} style={{ width: '100%' }} required={filteredProps.required}>
-                <FormLabel id={`${props.checkboxGroupId}-label`} sx={{ ...(hideLabel ? visuallyHidden : {}) }}>
-                    {filteredProps.label}
-                </FormLabel>
-                <FormGroup row={filteredProps.row}>
+                {!hideLabel && filteredProps.label && <FormLabel id={labelId}>{filteredProps.label}</FormLabel>}
+                <FormGroup
+                    row={filteredProps.row}
+                    role="group"
+                    aria-labelledby={!hideLabel && filteredProps.label ? labelId : undefined}
+                    aria-label={hideLabel && filteredProps.label ? filteredProps.label : undefined}
+                >
                     {props.options.map(option => (
                         <Box key={`${option.value}-parent`}>
                             <FormControlLabel

@@ -879,6 +879,8 @@ exports[`BibliographicSection component should render default view 1`] = `
                 />
                 <p
                   class="MuiFormHelperText-root css-MuiFormHelperText-root"
+                  data-testid="rek-issn-helper-text"
+                  id="rek-issn-helper-text"
                 />
               </div>
             </div>
@@ -2062,6 +2064,8 @@ exports[`BibliographicSection component should render default view 1`] = `
                 />
                 <p
                   class="MuiFormHelperText-root css-MuiFormHelperText-root"
+                  data-testid="rek-keywords-helper-text"
+                  id="rek-keywords-helper-text"
                 />
               </div>
             </div>
@@ -3184,6 +3188,8 @@ exports[`BibliographicSection component should render design form fields 1`] = `
                 />
                 <p
                   class="MuiFormHelperText-root css-MuiFormHelperText-root"
+                  data-testid="rek-issn-helper-text"
+                  id="rek-issn-helper-text"
                 />
               </div>
             </div>
@@ -4457,6 +4463,8 @@ exports[`BibliographicSection component should render design form fields 1`] = `
                 />
                 <p
                   class="MuiFormHelperText-root css-MuiFormHelperText-root"
+                  data-testid="rek-keywords-helper-text"
+                  id="rek-keywords-helper-text"
                 />
               </div>
             </div>
@@ -5689,6 +5697,8 @@ exports[`BibliographicSection component should render disabled view 1`] = `
                 />
                 <p
                   class="MuiFormHelperText-root css-MuiFormHelperText-root"
+                  data-testid="rek-issn-helper-text"
+                  id="rek-issn-helper-text"
                 />
               </div>
             </div>
@@ -6898,6 +6908,8 @@ exports[`BibliographicSection component should render disabled view 1`] = `
                 />
                 <p
                   class="MuiFormHelperText-root css-MuiFormHelperText-root"
+                  data-testid="rek-keywords-helper-text"
+                  id="rek-keywords-helper-text"
                 />
               </div>
             </div>

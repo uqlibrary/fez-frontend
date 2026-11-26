@@ -8,6 +8,7 @@ exports[`RadioGroupField tests renders RadioGroupField component 1`] = `
   >
     <label
       class="MuiFormLabel-root MuiFormLabel-colorPrimary css-MuiFormLabel-root"
+      for="test-label"
       id="test-label"
     >
       text
@@ -126,6 +127,7 @@ exports[`RadioGroupField tests renders an error 1`] = `
   >
     <label
       class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-error css-MuiFormLabel-root"
+      for="test-label"
       id="test-label"
     >
       text

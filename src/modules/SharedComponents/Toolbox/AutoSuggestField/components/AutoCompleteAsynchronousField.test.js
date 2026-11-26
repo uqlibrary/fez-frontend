@@ -139,12 +139,16 @@ describe('AutoCompleteAsynchronousField component', () => {
     });
 
     it('should display error text', () => {
-        const { getByText } = setup({
+        const { getByText, getByTestId } = setup({
             error: true,
             errorText: 'Please select some value',
         });
 
-        expect(getByText('Please select some value')).toBeInTheDocument();
+        const errorText = getByText('Please select some value');
+        const input = getByTestId('autocomplete-asynchronous-field-input');
+
+        expect(errorText).toBeInTheDocument();
+        expect(input).toHaveAttribute('aria-describedby', errorText.id);
     });
 
     it('should clear the input value on deleting input value by keyboard', () => {

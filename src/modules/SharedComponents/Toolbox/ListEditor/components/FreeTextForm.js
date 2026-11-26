@@ -2,7 +2,7 @@ import React, { useCallback, useRef, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import TextField from '@mui/material/TextField';
 import Grid from '@mui/material/Grid';
-import Typography from '@mui/material/Typography';
+import FormHelperText from '@mui/material/FormHelperText';
 import Button from '@mui/material/Button';
 import { isValidKeyword } from 'config/validation';
 import { indexOf } from 'lodash';
@@ -35,6 +35,7 @@ export const FreeTextForm = ({
 }) => {
     const [item, setItem] = useState(itemSelectedToEdit || '');
     const [itemSubmitted, setItemSubmitted] = useState(false);
+    const helperTextId = `${listEditorId}-helper-text`;
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
     const onItemChange = useCallback(...onItemChangeCallback(setItem, normalize));
@@ -103,15 +104,9 @@ export const FreeTextForm = ({
                     }}
                 />
                 {remindToAdd && remindToAddText && item.length !== 0 && !isValid(item) && (
-                    <Typography
-                        variant="caption"
-                        sx={{
-                            mt: '8px',
-                            color: '#f06f0d',
-                        }}
-                    >
+                    <FormHelperText error id={helperTextId} data-testid={helperTextId}>
                         {remindToAddText}
-                    </Typography>
+                    </FormHelperText>
                 )}
             </Grid>
             <Grid size={{ xs: 12, sm: 2 }}>

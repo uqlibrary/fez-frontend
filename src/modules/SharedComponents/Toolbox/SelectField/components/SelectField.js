@@ -54,7 +54,7 @@ const SelectFieldWrapper = forwardRef((props, ref) => {
                         'data-testid': `${props.selectFieldId}-options`,
                     }}
                     {...filteredProps}
-                    {...(error && { 'aria-describedby': helperTextId })}
+                    {...(!!helperText && { 'aria-describedby': helperTextId })}
                     autoWidth
                 />
                 {helperText && (
