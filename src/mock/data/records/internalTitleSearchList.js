@@ -594,7 +594,7 @@ const internalTitleSearchList = {
         "rek_status_lookup": "Published",
         "rek_wok_doc_type_lookup": null,
         "rek_editing_user": null,
-        "rek_editing_user_lookup":null,
+        "rek_editing_user_lookup": null,
         "rek_editing_start_date":null,
         "fez_internal_notes": null,
         "fez_author_affiliation": [
