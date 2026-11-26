@@ -1,6 +1,7 @@
 import React from 'react';
 import TextField from '@mui/material/TextField';
 import PropTypes from 'prop-types';
+import { visuallyHidden } from '@mui/utils';
 
 import propFilter from '../../helpers/_filterProps';
 
@@ -44,7 +45,7 @@ export const TextFieldWrapper = React.forwardRef((props, ref) => {
                     id: `${id}-label`,
                     'data-testid': `${id}-label`,
                     htmlFor: `${id}-input`,
-                    hidden: hideLabel,
+                    sx: hideLabel ? visuallyHidden : undefined,
                     ...filteredProps.InputLabelProps,
                 },
 

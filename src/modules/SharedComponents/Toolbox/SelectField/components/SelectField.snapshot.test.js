@@ -56,6 +56,18 @@ describe('SelectfieldWrapper snapshots tests', () => {
         expect(combobox.getAttribute('aria-describedby')).toContain('test-helper-text');
     });
 
+    it('should visually hide the label while keeping it available to screen readers', () => {
+        const label = 'Publication type';
+        const { getByRole, getByText } = setup({ label, hideLabel: true });
+
+        expect(getByRole('combobox', { name: label })).toBeInTheDocument();
+        expect(getByText(label)).toHaveStyle({
+            position: 'absolute',
+            width: '1px',
+            height: '1px',
+        });
+    });
+
     it('should call onChange', () => {
         const onChangeFn = jest.fn();
         const onBlurFn = jest.fn();

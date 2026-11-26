@@ -3133,7 +3133,6 @@ exports[`Component FileUploader should not reset file access or embargo date inf
                 class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-focused Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-MuiFormLabel-root-MuiInputLabel-root"
                 data-shrink="true"
                 data-testid="dsi-open-access-0-label"
-                hidden=""
                 id="dsi-open-access-0-label"
               >
                 <span
@@ -3322,7 +3321,6 @@ exports[`Component FileUploader should not reset file access or embargo date inf
                 class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-MuiFormLabel-root-MuiInputLabel-root"
                 data-shrink="false"
                 data-testid="dsi-open-access-1-label"
-                hidden=""
                 id="dsi-open-access-1-label"
               >
                 <span
@@ -4309,7 +4307,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                 class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-focused Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-MuiFormLabel-root-MuiInputLabel-root"
                 data-shrink="true"
                 data-testid="dsi-open-access-0-label"
-                hidden=""
                 id="dsi-open-access-0-label"
               >
                 <span
@@ -4471,7 +4468,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                 class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-MuiFormLabel-root-MuiInputLabel-root"
                 data-shrink="false"
                 data-testid="dsi-open-access-1-label"
-                hidden=""
                 id="dsi-open-access-1-label"
               >
                 <span
@@ -4946,7 +4942,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                 class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-focused Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-MuiFormLabel-root-MuiInputLabel-root"
                 data-shrink="true"
                 data-testid="dsi-open-access-0-label"
-                hidden=""
                 id="dsi-open-access-0-label"
               >
                 <span
@@ -5099,7 +5094,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                 class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-MuiFormLabel-root-MuiInputLabel-root"
                 data-shrink="false"
                 data-testid="dsi-open-access-1-label"
-                hidden=""
                 id="dsi-open-access-1-label"
               >
                 <span
@@ -5574,7 +5568,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                 class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-MuiFormLabel-root-MuiInputLabel-root"
                 data-shrink="true"
                 data-testid="dsi-open-access-0-label"
-                hidden=""
                 id="dsi-open-access-0-label"
               >
                 <span
@@ -5727,7 +5720,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                 class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-focused Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-MuiFormLabel-root-MuiInputLabel-root"
                 data-shrink="true"
                 data-testid="dsi-open-access-1-label"
-                hidden=""
                 id="dsi-open-access-1-label"
               >
                 <span
@@ -6970,7 +6962,6 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                 </span>
               </label>
               <div
-                aria-label="Work level policy to apply to this PID"
                 class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-error Mui-focused MuiInputBase-formControl MuiSelect-root css-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 required=""
                 validation="function required(value) {
@@ -6982,7 +6973,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                   aria-expanded="false"
                   aria-haspopup="listbox"
                   aria-invalid="true"
-                  aria-labelledby="dsi-security-policy-0-select"
+                  aria-labelledby="dsi-security-policy-0-label dsi-security-policy-0-select"
                   aria-required="true"
                   class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                   data-testid="dsi-security-policy-0-select"
@@ -7137,7 +7128,6 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                 </span>
               </label>
               <div
-                aria-label="Work level policy to apply to this PID"
                 class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiSelect-root css-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 required=""
                 validation="function required(value) {
@@ -7149,7 +7139,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                   aria-expanded="false"
                   aria-haspopup="listbox"
                   aria-invalid="true"
-                  aria-labelledby="dsi-security-policy-1-select"
+                  aria-labelledby="dsi-security-policy-1-label dsi-security-policy-1-select"
                   aria-required="true"
                   class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                   data-testid="dsi-security-policy-1-select"
@@ -7617,7 +7607,6 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                 </span>
               </label>
               <div
-                aria-label="Work level policy to apply to this PID"
                 class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-focused MuiInputBase-formControl MuiSelect-root css-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 required=""
                 validation="function required(value) {
@@ -7627,7 +7616,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                 <div
                   aria-expanded="false"
                   aria-haspopup="listbox"
-                  aria-labelledby="dsi-security-policy-0-select"
+                  aria-labelledby="dsi-security-policy-0-label dsi-security-policy-0-select"
                   aria-required="true"
                   class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                   data-testid="dsi-security-policy-0-select"
@@ -7776,7 +7765,6 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                 </span>
               </label>
               <div
-                aria-label="Work level policy to apply to this PID"
                 class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiSelect-root css-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 required=""
                 validation="function required(value) {
@@ -7788,7 +7776,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                   aria-expanded="false"
                   aria-haspopup="listbox"
                   aria-invalid="true"
-                  aria-labelledby="dsi-security-policy-1-select"
+                  aria-labelledby="dsi-security-policy-1-label dsi-security-policy-1-select"
                   aria-required="true"
                   class="MuiSelect-select MuiSelect-standard Mui-error MuiInputBase-input MuiInput-input css-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                   data-testid="dsi-security-policy-1-select"
@@ -8256,7 +8244,6 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                 </span>
               </label>
               <div
-                aria-label="Work level policy to apply to this PID"
                 class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 required=""
                 validation="function required(value) {
@@ -8266,7 +8253,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                 <div
                   aria-expanded="false"
                   aria-haspopup="listbox"
-                  aria-labelledby="dsi-security-policy-0-select"
+                  aria-labelledby="dsi-security-policy-0-label dsi-security-policy-0-select"
                   aria-required="true"
                   class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                   data-testid="dsi-security-policy-0-select"
@@ -8415,7 +8402,6 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                 </span>
               </label>
               <div
-                aria-label="Work level policy to apply to this PID"
                 class="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary Mui-focused MuiInputBase-formControl MuiSelect-root css-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                 required=""
                 validation="function required(value) {
@@ -8425,7 +8411,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                 <div
                   aria-expanded="false"
                   aria-haspopup="listbox"
-                  aria-labelledby="dsi-security-policy-1-select"
+                  aria-labelledby="dsi-security-policy-1-label dsi-security-policy-1-select"
                   aria-required="true"
                   class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                   data-testid="dsi-security-policy-1-select"
@@ -9494,7 +9480,6 @@ exports[`Component FileUploader should update file description 1`] = `
                 class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-focused Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-MuiFormLabel-root-MuiInputLabel-root"
                 data-shrink="true"
                 data-testid="dsi-open-access-0-label"
-                hidden=""
                 id="dsi-open-access-0-label"
               >
                 <span

@@ -5142,6 +5142,7 @@ exports[`ScaleOfSignificanceListEditor tests should update an object item in the
                         class="MuiTiptap-MenuButton-root css-MuiTiptap-MenuButton-root"
                       >
                         <span
+                          aria-labelledby="_r_55_"
                           class="MuiTiptap-MenuButtonTooltip-contentWrapper css-MuiTiptap-MenuButtonTooltip-contentWrapper"
                           data-mui-internal-clone-element="true"
                         >

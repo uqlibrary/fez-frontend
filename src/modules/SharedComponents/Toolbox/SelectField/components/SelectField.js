@@ -31,14 +31,15 @@ const SelectFieldWrapper = forwardRef((props, ref) => {
     return (
         <React.Fragment>
             <FormControl variant="standard" error={error} style={{ width: '100%' }} required={filteredProps.required}>
-                <InputLabel id={`${props.selectFieldId}-label`} sx={{ ...(hideLabel ? visuallyHidden : {}) }}>
+                <InputLabel id={labelId} sx={{ ...(hideLabel ? visuallyHidden : {}) }}>
                     {filteredProps.label}
                 </InputLabel>
                 <Select
                     ref={ref}
                     variant="standard"
+                    labelId={labelId}
                     inputProps={{
-                        'aria-labelledby': `${props.selectFieldId}-label`,
+                        'aria-labelledby': labelId,
                         'data-analyticsid': `${props.selectFieldId}-input`,
                         'data-testid': `${props.selectFieldId}-input`,
                         id: `${props.selectFieldId}-input`,
@@ -53,8 +54,6 @@ const SelectFieldWrapper = forwardRef((props, ref) => {
                         'data-testid': `${props.selectFieldId}-options`,
                     }}
                     {...filteredProps}
-                    {...(!hideLabel && { labelId })}
-                    {...(hideLabel && filteredProps.label && { 'aria-label': filteredProps.label })}
                     {...(error && { 'aria-describedby': helperTextId })}
                     autoWidth
                 />

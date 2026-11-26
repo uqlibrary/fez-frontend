@@ -59,7 +59,6 @@ exports[`FileUploadRow renders with uploaded file 1`] = `
             class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="false"
             data-testid="dsi-open-access-0-label"
-            hidden=""
             id="dsi-open-access-0-label"
           >
             <span
@@ -241,7 +240,6 @@ exports[`FileUploadRow should show confirmation and delete file 1`] = `
               class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-MuiFormLabel-root-MuiInputLabel-root"
               data-shrink="false"
               data-testid="dsi-open-access-0-label"
-              hidden=""
               id="dsi-open-access-0-label"
             >
               <span
