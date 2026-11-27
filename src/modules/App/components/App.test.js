@@ -206,7 +206,6 @@ describe('Application component', () => {
         });
 
         await userEvent.click(getByRole('button', { name: /Log out/i }));
-        await userEvent.click(getByRole('menuitem'));
         expect(assignMock).toHaveBeenCalledWith('https://auth.library.uq.edu.au/logout?url=aHR0cDovL2xvY2FsaG9zdC8=');
     });
 
