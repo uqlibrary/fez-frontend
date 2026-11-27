@@ -468,6 +468,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                         />
                       </div>
                       <p
+                        aria-live="polite"
                         class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-MuiFormHelperText-root"
                         data-testid="last-name-helper-text"
                         id="last-name-helper-text"
@@ -518,6 +519,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                         />
                       </div>
                       <p
+                        aria-live="polite"
                         class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-MuiFormHelperText-root"
                         data-testid="contact-detail-helper-text"
                         id="contact-detail-helper-text"
@@ -1064,7 +1066,7 @@ exports[`Component FeedbackRecord should render feedback fields 1`] = `
                 >
                   <div
                     class="MuiFormGroup-root css-MuiFormGroup-root"
-                    id="feedback-types-label"
+                    role="group"
                   >
                     <div
                       class="MuiBox-root css"
@@ -2171,6 +2173,7 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                         />
                       </div>
                       <p
+                        aria-live="polite"
                         class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-MuiFormHelperText-root"
                         data-testid="last-name-helper-text"
                         id="last-name-helper-text"
@@ -2221,6 +2224,7 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                         />
                       </div>
                       <p
+                        aria-live="polite"
                         class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-MuiFormHelperText-root"
                         data-testid="contact-detail-helper-text"
                         id="contact-detail-helper-text"
@@ -2767,7 +2771,7 @@ exports[`Component FeedbackRecord should render record citation, general fields 
                 >
                   <div
                     class="MuiFormGroup-root css-MuiFormGroup-root"
-                    id="feedback-types-label"
+                    role="group"
                   >
                     <div
                       class="MuiBox-root css"
@@ -3659,6 +3663,7 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                         />
                       </div>
                       <p
+                        aria-live="polite"
                         class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-MuiFormHelperText-root"
                         data-testid="last-name-helper-text"
                         id="last-name-helper-text"
@@ -3709,6 +3714,7 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                         />
                       </div>
                       <p
+                        aria-live="polite"
                         class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-MuiFormHelperText-root"
                         data-testid="contact-detail-helper-text"
                         id="contact-detail-helper-text"
@@ -4255,7 +4261,7 @@ exports[`Component FeedbackRecord should render story fields 1`] = `
                 >
                   <div
                     class="MuiFormGroup-root css-MuiFormGroup-root"
-                    id="feedback-types-label"
+                    role="group"
                   >
                     <div
                       class="MuiBox-root css"
@@ -5238,6 +5244,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                         />
                       </div>
                       <p
+                        aria-live="polite"
                         class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-MuiFormHelperText-root"
                         data-testid="last-name-helper-text"
                         id="last-name-helper-text"
@@ -5288,6 +5295,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                         />
                       </div>
                       <p
+                        aria-live="polite"
                         class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-MuiFormHelperText-root"
                         data-testid="contact-detail-helper-text"
                         id="contact-detail-helper-text"
@@ -5834,7 +5842,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                 >
                   <div
                     class="MuiFormGroup-root css-MuiFormGroup-root"
-                    id="feedback-types-label"
+                    role="group"
                   >
                     <div
                       class="MuiBox-root css"
@@ -6011,7 +6019,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                     >
                       <div
                         class="MuiFormGroup-root css-MuiFormGroup-root"
-                        id="cultural-info-label"
+                        role="group"
                       >
                         <div
                           class="MuiBox-root css"
@@ -6233,7 +6241,7 @@ exports[`Component FeedbackRecord should render takedown fields 1`] = `
                     >
                       <div
                         class="MuiFormGroup-root css-MuiFormGroup-root"
-                        id="special-care-label"
+                        role="group"
                       >
                         <div
                           class="MuiBox-root css"

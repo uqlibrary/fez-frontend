@@ -374,6 +374,7 @@ exports[`Component FileUploadRowMobileView should render default view 1`] = `
               </svg>
             </div>
             <p
+              aria-live="polite"
               class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-MuiFormHelperText-root"
               data-testid="dsi-open-access-0-helper-text"
               id="dsi-open-access-0-helper-text"

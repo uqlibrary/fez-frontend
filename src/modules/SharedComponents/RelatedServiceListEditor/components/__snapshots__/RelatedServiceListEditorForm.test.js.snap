@@ -55,6 +55,7 @@ exports[`RelatedServiceListEditorForm should render with default props 1`] = `
             />
           </div>
           <p
+            aria-live="polite"
             class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-MuiFormHelperText-root"
             data-testid="rek-related-service-id-helper-text"
             id="rek-related-service-id-helper-text"

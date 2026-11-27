@@ -281,6 +281,7 @@ exports[`HerdcCodeField component should render immutable list as selected value
       </svg>
     </div>
     <p
+      aria-live="polite"
       class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-filled css-MuiFormHelperText-root"
       data-testid="rek-herdc-code-helper-text"
       id="rek-herdc-code-helper-text"
@@ -410,6 +411,7 @@ exports[`HerdcCodeField component should render with given field props 1`] = `
       </svg>
     </div>
     <p
+      aria-live="polite"
       class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-filled css-MuiFormHelperText-root"
       data-testid="rek-herdc-code-helper-text"
       id="rek-herdc-code-helper-text"

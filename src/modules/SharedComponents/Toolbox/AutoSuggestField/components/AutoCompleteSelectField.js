@@ -111,6 +111,10 @@ export const AutoCompleteSelectField = ({
                         inputLabel: {
                             'data-testid': `${autoCompleteSelectFieldId}-label`,
                         },
+                        formHelperText: {
+                            'data-testid': `${autoCompleteSelectFieldId}-helper-text`,
+                            'aria-live': 'polite',
+                        },
                     }}
                 />
             )}

@@ -97,6 +97,8 @@ export const GrantListEditorForm = ({
     } = locale;
 
     const { grantAgencyName, grantAgencyType, grantId } = grant;
+    const showError = !!grantAgencyName && grantAgencyName.trim().length > 0 && !grantAgencyType;
+
     return (
         <React.Fragment>
             {description}
@@ -159,6 +161,7 @@ export const GrantListEditorForm = ({
                                 inputProps={{
                                     id: 'rek-grant-type-input',
                                     'data-testid': 'rek-grant-type-input',
+                                    ...(showError ? { 'aria-describedby': 'rek-grant-agency-helper-text' } : {}),
                                 }}
                                 name="grantAgencyType"
                                 label={grantAgencyType}
@@ -167,6 +170,7 @@ export const GrantListEditorForm = ({
                                 value={grantAgencyType}
                                 onChange={handleChange}
                                 disabled={disabled || !grantAgencyName || grantAgencyName.trim().length === 0}
+                                error={showError}
                             >
                                 <MenuItem value="" disabled>
                                     {grantAgencyTypeHint}
@@ -179,11 +183,12 @@ export const GrantListEditorForm = ({
                                     ) : null;
                                 })}
                             </Select>
-                            {!!grantAgencyName && grantAgencyName.trim().length > 0 && !grantAgencyType && (
+                            {showError && (
                                 <FormHelperText
                                     id="rek-grant-agency-helper-text"
                                     data-testid="rek-grant-agency-helper-text"
                                     error
+                                    aria-live="polite"
                                 >
                                     {validationLocale.validationErrors.required}
                                 </FormHelperText>

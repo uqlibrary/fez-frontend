@@ -33,6 +33,7 @@ exports[`PartialDateForm component should display errors correctly 1`] = `
               class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-MuiInputBase-root-MuiInput-root"
             >
               <input
+                aria-describedby="test-date-helper-text"
                 aria-invalid="true"
                 aria-label="Day"
                 class="MuiInputBase-input MuiInput-input css-MuiInputBase-input-MuiInput-input"
@@ -48,7 +49,9 @@ exports[`PartialDateForm component should display errors correctly 1`] = `
             </div>
           </div>
           <p
+            aria-live="polite"
             class="MuiFormHelperText-root Mui-error css-MuiFormHelperText-root"
+            id="test-date-helper-text"
           >
             Invalid date
           </p>
@@ -169,6 +172,7 @@ exports[`PartialDateForm component should handle keypress 1`] = `
               class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-MuiInputBase-root-MuiInput-root"
             >
               <input
+                aria-describedby="test-date-helper-text"
                 aria-invalid="true"
                 aria-label="Day"
                 class="MuiInputBase-input MuiInput-input css-MuiInputBase-input-MuiInput-input"
@@ -184,7 +188,9 @@ exports[`PartialDateForm component should handle keypress 1`] = `
             </div>
           </div>
           <p
+            aria-live="polite"
             class="MuiFormHelperText-root Mui-error css-MuiFormHelperText-root"
+            id="test-date-helper-text"
           >
             Invalid date
           </p>
@@ -305,6 +311,7 @@ exports[`PartialDateForm component should handle keypress 2`] = `
               class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-MuiInputBase-root-MuiInput-root"
             >
               <input
+                aria-describedby="test-date-helper-text"
                 aria-invalid="true"
                 aria-label="Day"
                 class="MuiInputBase-input MuiInput-input css-MuiInputBase-input-MuiInput-input"
@@ -320,7 +327,9 @@ exports[`PartialDateForm component should handle keypress 2`] = `
             </div>
           </div>
           <p
+            aria-live="polite"
             class="MuiFormHelperText-root Mui-error css-MuiFormHelperText-root"
+            id="test-date-helper-text"
           >
             Invalid date
           </p>
@@ -441,6 +450,7 @@ exports[`PartialDateForm component should handle keypress 3`] = `
               class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-MuiInputBase-root-MuiInput-root"
             >
               <input
+                aria-describedby="test-date-helper-text"
                 aria-invalid="true"
                 aria-label="Day"
                 class="MuiInputBase-input MuiInput-input css-MuiInputBase-input-MuiInput-input"
@@ -456,7 +466,9 @@ exports[`PartialDateForm component should handle keypress 3`] = `
             </div>
           </div>
           <p
+            aria-live="polite"
             class="MuiFormHelperText-root Mui-error css-MuiFormHelperText-root"
+            id="test-date-helper-text"
           >
             Invalid date
           </p>
@@ -577,6 +589,7 @@ exports[`PartialDateForm component should handle partial values 1`] = `
               class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-MuiInputBase-root-MuiInput-root"
             >
               <input
+                aria-describedby="test-date-helper-text"
                 aria-invalid="true"
                 aria-label="Day"
                 class="MuiInputBase-input MuiInput-input css-MuiInputBase-input-MuiInput-input"
@@ -592,7 +605,9 @@ exports[`PartialDateForm component should handle partial values 1`] = `
             </div>
           </div>
           <p
+            aria-live="polite"
             class="MuiFormHelperText-root Mui-error css-MuiFormHelperText-root"
+            id="test-date-helper-text"
           >
             Invalid date
           </p>
@@ -713,6 +728,7 @@ exports[`PartialDateForm component should handle partial values 2`] = `
               class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-MuiInputBase-root-MuiInput-root"
             >
               <input
+                aria-describedby="test-date-helper-text"
                 aria-invalid="true"
                 aria-label="Day"
                 class="MuiInputBase-input MuiInput-input css-MuiInputBase-input-MuiInput-input"
@@ -728,7 +744,9 @@ exports[`PartialDateForm component should handle partial values 2`] = `
             </div>
           </div>
           <p
+            aria-live="polite"
             class="MuiFormHelperText-root Mui-error css-MuiFormHelperText-root"
+            id="test-date-helper-text"
           >
             Invalid date
           </p>
@@ -849,6 +867,7 @@ exports[`PartialDateForm component should handle partial values day and year onl
               class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-MuiInputBase-root-MuiInput-root"
             >
               <input
+                aria-describedby="test-date-helper-text"
                 aria-invalid="true"
                 aria-label="Day"
                 class="MuiInputBase-input MuiInput-input css-MuiInputBase-input-MuiInput-input"
@@ -864,7 +883,9 @@ exports[`PartialDateForm component should handle partial values day and year onl
             </div>
           </div>
           <p
+            aria-live="polite"
             class="MuiFormHelperText-root Mui-error css-MuiFormHelperText-root"
+            id="test-date-helper-text"
           >
             Invalid date
           </p>
@@ -1772,6 +1793,7 @@ exports[`PartialDateForm component should render comp as a required field 1`] = 
               class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-MuiInputBase-root-MuiInput-root"
             >
               <input
+                aria-describedby="test-date-helper-text"
                 aria-invalid="true"
                 aria-label="Day"
                 class="MuiInputBase-input MuiInput-input css-MuiInputBase-input-MuiInput-input"
@@ -1787,7 +1809,9 @@ exports[`PartialDateForm component should render comp as a required field 1`] = 
             </div>
           </div>
           <p
+            aria-live="polite"
             class="MuiFormHelperText-root Mui-error css-MuiFormHelperText-root"
+            id="test-date-helper-text"
           >
             Invalid date
           </p>

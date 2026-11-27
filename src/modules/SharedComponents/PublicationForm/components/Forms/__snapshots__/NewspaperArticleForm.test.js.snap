@@ -247,6 +247,7 @@ exports[`NewspaperArticleForm component 1`] = `
                           class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-MuiInputBase-root-MuiInput-root"
                         >
                           <input
+                            aria-describedby="rek-date-date-helper-text"
                             aria-invalid="true"
                             aria-label="Day"
                             class="MuiInputBase-input MuiInput-input css-MuiInputBase-input-MuiInput-input"
@@ -262,7 +263,9 @@ exports[`NewspaperArticleForm component 1`] = `
                         </div>
                       </div>
                       <p
+                        aria-live="polite"
                         class="MuiFormHelperText-root Mui-error css-MuiFormHelperText-root"
+                        id="rek-date-date-helper-text"
                       >
                         Year required
                       </p>
@@ -916,6 +919,7 @@ exports[`NewspaperArticleForm component with all fields disabled 1`] = `
                           class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-MuiInputBase-root-MuiInput-root"
                         >
                           <input
+                            aria-describedby="rek-date-date-helper-text"
                             aria-invalid="true"
                             aria-label="Day"
                             class="MuiInputBase-input MuiInput-input Mui-disabled css-MuiInputBase-input-MuiInput-input"
@@ -932,7 +936,9 @@ exports[`NewspaperArticleForm component with all fields disabled 1`] = `
                         </div>
                       </div>
                       <p
+                        aria-live="polite"
                         class="MuiFormHelperText-root Mui-error css-MuiFormHelperText-root"
+                        id="rek-date-date-helper-text"
                       >
                         Year required
                       </p>

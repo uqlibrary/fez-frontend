@@ -296,6 +296,7 @@ exports[`BookChapterForm component 1`] = `
                           class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-MuiInputBase-root-MuiInput-root"
                         >
                           <input
+                            aria-describedby="rek-date-date-helper-text"
                             aria-invalid="true"
                             aria-label="Day"
                             class="MuiInputBase-input MuiInput-input css-MuiInputBase-input-MuiInput-input"
@@ -311,7 +312,9 @@ exports[`BookChapterForm component 1`] = `
                         </div>
                       </div>
                       <p
+                        aria-live="polite"
                         class="MuiFormHelperText-root Mui-error css-MuiFormHelperText-root"
+                        id="rek-date-date-helper-text"
                       >
                         Year required
                       </p>
@@ -1464,6 +1467,7 @@ exports[`BookChapterForm component with 4 input fields for NTRO 1`] = `
                           class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-MuiInputBase-root-MuiInput-root"
                         >
                           <input
+                            aria-describedby="rek-date-date-helper-text"
                             aria-invalid="true"
                             aria-label="Day"
                             class="MuiInputBase-input MuiInput-input css-MuiInputBase-input-MuiInput-input"
@@ -1479,7 +1483,9 @@ exports[`BookChapterForm component with 4 input fields for NTRO 1`] = `
                         </div>
                       </div>
                       <p
+                        aria-live="polite"
                         class="MuiFormHelperText-root Mui-error css-MuiFormHelperText-root"
+                        id="rek-date-date-helper-text"
                       >
                         Year required
                       </p>
@@ -3680,6 +3686,7 @@ exports[`BookChapterForm component with 5 input fields for NTRO with musical com
                           class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-MuiInputBase-root-MuiInput-root"
                         >
                           <input
+                            aria-describedby="rek-date-date-helper-text"
                             aria-invalid="true"
                             aria-label="Day"
                             class="MuiInputBase-input MuiInput-input css-MuiInputBase-input-MuiInput-input"
@@ -3695,7 +3702,9 @@ exports[`BookChapterForm component with 5 input fields for NTRO with musical com
                         </div>
                       </div>
                       <p
+                        aria-live="polite"
                         class="MuiFormHelperText-root Mui-error css-MuiFormHelperText-root"
+                        id="rek-date-date-helper-text"
                       >
                         Year required
                       </p>
@@ -5970,6 +5979,7 @@ exports[`BookChapterForm component with all fields disabled 1`] = `
                           class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-MuiInputBase-root-MuiInput-root"
                         >
                           <input
+                            aria-describedby="rek-date-date-helper-text"
                             aria-invalid="true"
                             aria-label="Day"
                             class="MuiInputBase-input MuiInput-input Mui-disabled css-MuiInputBase-input-MuiInput-input"
@@ -5986,7 +5996,9 @@ exports[`BookChapterForm component with all fields disabled 1`] = `
                         </div>
                       </div>
                       <p
+                        aria-live="polite"
                         class="MuiFormHelperText-root Mui-error css-MuiFormHelperText-root"
+                        id="rek-date-date-helper-text"
                       >
                         Year required
                       </p>
@@ -7150,6 +7162,7 @@ exports[`BookChapterForm shows an error when end page is less than start page 1`
                           class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-MuiInputBase-root-MuiInput-root"
                         >
                           <input
+                            aria-describedby="rek-date-date-helper-text"
                             aria-invalid="true"
                             aria-label="Day"
                             class="MuiInputBase-input MuiInput-input css-MuiInputBase-input-MuiInput-input"
@@ -7165,7 +7178,9 @@ exports[`BookChapterForm shows an error when end page is less than start page 1`
                         </div>
                       </div>
                       <p
+                        aria-live="polite"
                         class="MuiFormHelperText-root Mui-error css-MuiFormHelperText-root"
+                        id="rek-date-date-helper-text"
                       >
                         Year required
                       </p>
@@ -7894,6 +7909,7 @@ exports[`BookChapterForm shows an error when end page is less than start page 1`
                   />
                 </div>
                 <p
+                  aria-live="polite"
                   class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-MuiFormHelperText-root"
                   data-testid="fez_record_search_key_start_page.rek_start_page-helper-text"
                   id="fez_record_search_key_start_page.rek_start_page-helper-text"
@@ -7944,6 +7960,7 @@ exports[`BookChapterForm shows an error when end page is less than start page 1`
                   />
                 </div>
                 <p
+                  aria-live="polite"
                   class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-MuiFormHelperText-root"
                   data-testid="fez_record_search_key_end_page.rek_end_page-helper-text"
                   id="fez_record_search_key_end_page.rek_end_page-helper-text"

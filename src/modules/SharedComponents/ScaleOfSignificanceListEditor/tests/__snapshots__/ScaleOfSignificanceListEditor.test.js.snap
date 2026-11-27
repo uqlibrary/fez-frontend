@@ -115,6 +115,7 @@ exports[`ScaleOfSignificanceListEditor tests should process incomplete props wit
             </svg>
           </div>
           <p
+            aria-live="polite"
             class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-MuiFormHelperText-root"
             data-testid="rek-significance-helper-text"
             id="rek-significance-helper-text"
@@ -821,6 +822,7 @@ exports[`ScaleOfSignificanceListEditor tests should render edit form 1`] = `
             </svg>
           </div>
           <p
+            aria-live="polite"
             class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-MuiFormHelperText-root"
             data-testid="rek-significance-helper-text"
             id="rek-significance-helper-text"
@@ -1613,6 +1615,7 @@ exports[`ScaleOfSignificanceListEditor tests should render full component as dis
             </svg>
           </div>
           <p
+            aria-live="polite"
             class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-MuiFormHelperText-root"
             data-testid="rek-significance-helper-text"
             id="rek-significance-helper-text"
@@ -2419,6 +2422,7 @@ exports[`ScaleOfSignificanceListEditor tests should render full component with a
             </svg>
           </div>
           <p
+            aria-live="polite"
             class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-MuiFormHelperText-root"
             data-testid="rek-significance-helper-text"
             id="rek-significance-helper-text"
@@ -3210,6 +3214,7 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
             </svg>
           </div>
           <p
+            aria-live="polite"
             class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-MuiFormHelperText-root"
             data-testid="rek-significance-helper-text"
             id="rek-significance-helper-text"
@@ -4157,6 +4162,7 @@ exports[`ScaleOfSignificanceListEditor tests should render input value as itemLi
             </svg>
           </div>
           <p
+            aria-live="polite"
             class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-MuiFormHelperText-root"
             data-testid="rek-significance-helper-text"
             id="rek-significance-helper-text"
@@ -5104,6 +5110,7 @@ exports[`ScaleOfSignificanceListEditor tests should update an object item in the
             </svg>
           </div>
           <p
+            aria-live="polite"
             class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-MuiFormHelperText-root"
             data-testid="rek-significance-helper-text"
             id="rek-significance-helper-text"

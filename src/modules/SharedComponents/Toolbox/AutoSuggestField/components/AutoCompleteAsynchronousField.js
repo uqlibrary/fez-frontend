@@ -201,6 +201,7 @@ export const AutoCompleteAsynchronousField = React.forwardRef(
 
                                 formHelperText: {
                                     'data-testid': `${autoCompleteAsynchronousFieldId}-helper-text`,
+                                    'aria-live': 'polite',
                                 },
                             }}
                             inputRef={ref}

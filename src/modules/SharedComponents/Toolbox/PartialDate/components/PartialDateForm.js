@@ -328,10 +328,19 @@ const PartialDateForm = props => {
                                     id: `${partialDateFormId}-day-input`,
                                     'data-analyticsid': `${partialDateFormId}-day-input`,
                                     'data-testid': `${partialDateFormId}-day-input`,
+                                    ...(isError
+                                        ? {
+                                              'aria-describedby': `${partialDateFormId}-date-helper-text`,
+                                          }
+                                        : {}),
                                 },
                             }}
                         />
-                        {isError && <FormHelperText error>{isError}</FormHelperText>}
+                        {isError && (
+                            <FormHelperText error id={`${partialDateFormId}-date-helper-text`} aria-live="polite">
+                                {isError}
+                            </FormHelperText>
+                        )}
                     </Grid>
                     <Grid size="grow">
                         {/* AD-1294: visually-hidden label so MUI gives the month combobox an accessible

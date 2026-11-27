@@ -236,7 +236,10 @@ export const AuthorsList = ({
                                     onKeyPress={handleKeyPress}
                                     textFieldId={contributorEditorId}
                                     error={!!error}
-                                    errorText={validation.maxLength255Validator(value)}
+                                    errorText={
+                                        validation.minLengthValidator(1)(value) ||
+                                        validation.maxLength255Validator(value)
+                                    }
                                     label={nameAsPublishedLabel}
                                     placeholder={nameAsPublishedHint}
                                     required

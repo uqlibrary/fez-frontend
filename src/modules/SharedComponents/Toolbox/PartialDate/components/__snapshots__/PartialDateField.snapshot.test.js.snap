@@ -33,6 +33,7 @@ exports[`Field PartialDateField snapshots tests renders PartialDateField compone
               class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-MuiInputBase-root-MuiInput-root"
             >
               <input
+                aria-describedby="test-date-helper-text"
                 aria-invalid="true"
                 aria-label="Day"
                 class="MuiInputBase-input MuiInput-input css-MuiInputBase-input-MuiInput-input"
@@ -48,7 +49,9 @@ exports[`Field PartialDateField snapshots tests renders PartialDateField compone
             </div>
           </div>
           <p
+            aria-live="polite"
             class="MuiFormHelperText-root Mui-error css-MuiFormHelperText-root"
+            id="test-date-helper-text"
           >
             Invalid date
           </p>
@@ -169,6 +172,7 @@ exports[`Field PartialDateField snapshots tests renders PartialDateField compone
               class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-MuiInputBase-root-MuiInput-root"
             >
               <input
+                aria-describedby="test-date-helper-text"
                 aria-invalid="true"
                 aria-label="Day"
                 class="MuiInputBase-input MuiInput-input css-MuiInputBase-input-MuiInput-input"
@@ -184,7 +188,9 @@ exports[`Field PartialDateField snapshots tests renders PartialDateField compone
             </div>
           </div>
           <p
+            aria-live="polite"
             class="MuiFormHelperText-root Mui-error css-MuiFormHelperText-root"
+            id="test-date-helper-text"
           >
             Invalid date
           </p>
@@ -305,6 +311,7 @@ exports[`Field PartialDateField snapshots tests renders PartialDateField compone
               class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-MuiInputBase-root-MuiInput-root"
             >
               <input
+                aria-describedby="test-date-helper-text"
                 aria-invalid="true"
                 aria-label="Day"
                 class="MuiInputBase-input MuiInput-input css-MuiInputBase-input-MuiInput-input"
@@ -320,7 +327,9 @@ exports[`Field PartialDateField snapshots tests renders PartialDateField compone
             </div>
           </div>
           <p
+            aria-live="polite"
             class="MuiFormHelperText-root Mui-error css-MuiFormHelperText-root"
+            id="test-date-helper-text"
           >
             Invalid date
           </p>

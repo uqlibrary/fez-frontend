@@ -111,6 +111,7 @@ exports[`ScaleOfSignificanceForm component should render the default view 1`] = 
           </svg>
         </div>
         <p
+          aria-live="polite"
           class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-MuiFormHelperText-root"
           data-testid="rek-significance-helper-text"
           id="rek-significance-helper-text"

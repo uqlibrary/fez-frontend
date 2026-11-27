@@ -234,6 +234,7 @@ exports[`ContentIndicatorsField component should render with given field props 1
       </svg>
     </div>
     <p
+      aria-live="polite"
       class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-filled css-MuiFormHelperText-root"
       data-testid="rek-content-indicator-helper-text"
       id="rek-content-indicator-helper-text"
@@ -303,6 +304,7 @@ exports[`ContentIndicatorsField component should render with given field props i
       </svg>
     </div>
     <p
+      aria-live="polite"
       class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-filled css-MuiFormHelperText-root"
       data-testid="rek-content-indicator-helper-text"
       id="rek-content-indicator-helper-text"

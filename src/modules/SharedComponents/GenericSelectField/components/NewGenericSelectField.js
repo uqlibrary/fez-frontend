@@ -174,6 +174,7 @@ export const NewGenericSelectField = ({
                     error={!!inputError}
                     data-testid={`${genericSelectFieldId}-helper-text`}
                     id={`${genericSelectFieldId}-helper-text`}
+                    aria-live="polite"
                     {...(!!formHelperTextProps ? { ...formHelperTextProps } : {})}
                 >
                     {inputErrorText}

@@ -56,6 +56,7 @@ exports[`RelatedServiceListEditor should add related service to the list 1`] = `
               />
             </div>
             <p
+              aria-live="polite"
               class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-MuiFormHelperText-root"
               data-testid="rek-related-service-id-helper-text"
               id="rek-related-service-id-helper-text"
@@ -459,6 +460,7 @@ exports[`RelatedServiceListEditor should delete all services 1`] = `
               />
             </div>
             <p
+              aria-live="polite"
               class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-MuiFormHelperText-root"
               data-testid="rek-related-service-id-helper-text"
               id="rek-related-service-id-helper-text"
@@ -1016,6 +1018,7 @@ exports[`RelatedServiceListEditor should delete all services 2`] = `
               />
             </div>
             <p
+              aria-live="polite"
               class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-MuiFormHelperText-root"
               data-testid="rek-related-service-id-helper-text"
               id="rek-related-service-id-helper-text"
@@ -1136,6 +1139,7 @@ exports[`RelatedServiceListEditor should delete grant 1`] = `
               />
             </div>
             <p
+              aria-live="polite"
               class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-MuiFormHelperText-root"
               data-testid="rek-related-service-id-helper-text"
               id="rek-related-service-id-helper-text"
@@ -1695,6 +1699,7 @@ exports[`RelatedServiceListEditor should delete grant 2`] = `
               />
             </div>
             <p
+              aria-live="polite"
               class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-MuiFormHelperText-root"
               data-testid="rek-related-service-id-helper-text"
               id="rek-related-service-id-helper-text"
@@ -2098,6 +2103,7 @@ exports[`RelatedServiceListEditor should move the grant up 1`] = `
               />
             </div>
             <p
+              aria-live="polite"
               class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-MuiFormHelperText-root"
               data-testid="rek-related-service-id-helper-text"
               id="rek-related-service-id-helper-text"
@@ -2655,6 +2661,7 @@ exports[`RelatedServiceListEditor should move the grant up 2`] = `
               />
             </div>
             <p
+              aria-live="polite"
               class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-MuiFormHelperText-root"
               data-testid="rek-related-service-id-helper-text"
               id="rek-related-service-id-helper-text"
@@ -3212,6 +3219,7 @@ exports[`RelatedServiceListEditor should move the service down 1`] = `
               />
             </div>
             <p
+              aria-live="polite"
               class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-MuiFormHelperText-root"
               data-testid="rek-related-service-id-helper-text"
               id="rek-related-service-id-helper-text"
@@ -3769,6 +3777,7 @@ exports[`RelatedServiceListEditor should move the service down 2`] = `
               />
             </div>
             <p
+              aria-live="polite"
               class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-MuiFormHelperText-root"
               data-testid="rek-related-service-id-helper-text"
               id="rek-related-service-id-helper-text"
@@ -4326,6 +4335,7 @@ exports[`RelatedServiceListEditor should not move the grant up at index 0 1`] = 
               />
             </div>
             <p
+              aria-live="polite"
               class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-MuiFormHelperText-root"
               data-testid="rek-related-service-id-helper-text"
               id="rek-related-service-id-helper-text"
@@ -4729,6 +4739,7 @@ exports[`RelatedServiceListEditor should not move the grant up at index 0 2`] = 
               />
             </div>
             <p
+              aria-live="polite"
               class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-MuiFormHelperText-root"
               data-testid="rek-related-service-id-helper-text"
               id="rek-related-service-id-helper-text"
@@ -5132,6 +5143,7 @@ exports[`RelatedServiceListEditor should not move the service up the disabled gr
               />
             </div>
             <p
+              aria-live="polite"
               class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-MuiFormHelperText-root"
               data-testid="rek-related-service-id-helper-text"
               id="rek-related-service-id-helper-text"
@@ -5691,6 +5703,7 @@ exports[`RelatedServiceListEditor should not move the service up the disabled gr
               />
             </div>
             <p
+              aria-live="polite"
               class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-MuiFormHelperText-root"
               data-testid="rek-related-service-id-helper-text"
               id="rek-related-service-id-helper-text"
@@ -6250,6 +6263,7 @@ exports[`RelatedServiceListEditor should render default view 1`] = `
               />
             </div>
             <p
+              aria-live="polite"
               class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-MuiFormHelperText-root"
               data-testid="rek-related-service-id-helper-text"
               id="rek-related-service-id-helper-text"
@@ -6370,6 +6384,7 @@ exports[`RelatedServiceListEditor should render error from props 1`] = `
               />
             </div>
             <p
+              aria-live="polite"
               class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-MuiFormHelperText-root"
               data-testid="rek-related-service-id-helper-text"
               id="rek-related-service-id-helper-text"
@@ -6495,6 +6510,7 @@ exports[`RelatedServiceListEditor should render error from props as children 1`]
               />
             </div>
             <p
+              aria-live="polite"
               class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-MuiFormHelperText-root"
               data-testid="rek-related-service-id-helper-text"
               id="rek-related-service-id-helper-text"
@@ -6625,6 +6641,7 @@ exports[`RelatedServiceListEditor should render scroll class if grants are more 
               />
             </div>
             <p
+              aria-live="polite"
               class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-MuiFormHelperText-root"
               data-testid="rek-related-service-id-helper-text"
               id="rek-related-service-id-helper-text"
@@ -7490,6 +7507,7 @@ exports[`RelatedServiceListEditor should render string error from props 1`] = `
               />
             </div>
             <p
+              aria-live="polite"
               class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-MuiFormHelperText-root"
               data-testid="rek-related-service-id-helper-text"
               id="rek-related-service-id-helper-text"
@@ -7615,6 +7633,7 @@ exports[`RelatedServiceListEditor should render with default given value 1`] = `
               />
             </div>
             <p
+              aria-live="polite"
               class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-MuiFormHelperText-root"
               data-testid="rek-related-service-id-helper-text"
               id="rek-related-service-id-helper-text"

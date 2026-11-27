@@ -57,6 +57,10 @@ export const AutoCompleteMultiSelectField = ({
                             'data-analyticsid': `${autoCompleteMultiSelectFieldId}-input`,
                             'data-testid': `${autoCompleteMultiSelectFieldId}-input`,
                         },
+                        formHelperText: {
+                            'data-testid': `${autoCompleteMultiSelectFieldId}-helper-text`,
+                            'aria-live': 'polite',
+                        },
                     }}
                 />
             )}

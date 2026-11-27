@@ -72,6 +72,7 @@ export const FreeTextForm = ({
 
     const { inputFieldLabel, inputFieldHint, remindToAddText, addButtonLabel, editButtonLabel } = locale;
     const inputLengthText = isValid(item);
+    const hasHelperText = remindToAdd && remindToAddText && item.length !== 0 && !isValid(item);
     return (
         <Grid
             container
@@ -100,11 +101,16 @@ export const FreeTextForm = ({
                             ref: textField,
                             'data-analyticsid': `${listEditorId}-input`,
                             'data-testid': `${listEditorId}-input`,
+
+                            ...(hasHelperText ? { 'aria-describedby': helperTextId } : {}),
+                        },
+                        formHelperText: {
+                            'aria-live': 'polite',
                         },
                     }}
                 />
-                {remindToAdd && remindToAddText && item.length !== 0 && !isValid(item) && (
-                    <FormHelperText error id={helperTextId} data-testid={helperTextId}>
+                {hasHelperText && (
+                    <FormHelperText error id={helperTextId} data-testid={helperTextId} aria-live="polite">
                         {remindToAddText}
                     </FormHelperText>
                 )}

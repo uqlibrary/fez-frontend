@@ -320,6 +320,7 @@ exports[`DesignForm component 1`] = `
                           class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-MuiInputBase-root-MuiInput-root"
                         >
                           <input
+                            aria-describedby="rek-project-start-date-date-helper-text"
                             aria-invalid="true"
                             aria-label="Day"
                             class="MuiInputBase-input MuiInput-input css-MuiInputBase-input-MuiInput-input"
@@ -335,7 +336,9 @@ exports[`DesignForm component 1`] = `
                         </div>
                       </div>
                       <p
+                        aria-live="polite"
                         class="MuiFormHelperText-root Mui-error css-MuiFormHelperText-root"
+                        id="rek-project-start-date-date-helper-text"
                       >
                         Year required
                       </p>
@@ -455,6 +458,7 @@ exports[`DesignForm component 1`] = `
                           class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-MuiInputBase-root-MuiInput-root"
                         >
                           <input
+                            aria-describedby="rek-end-date-date-helper-text"
                             aria-invalid="true"
                             aria-label="Day"
                             class="MuiInputBase-input MuiInput-input css-MuiInputBase-input-MuiInput-input"
@@ -470,7 +474,9 @@ exports[`DesignForm component 1`] = `
                         </div>
                       </div>
                       <p
+                        aria-live="polite"
                         class="MuiFormHelperText-root Mui-error css-MuiFormHelperText-root"
+                        id="rek-end-date-date-helper-text"
                       >
                         Invalid date
                       </p>
@@ -1227,6 +1233,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                           class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-MuiInputBase-root-MuiInput-root"
                         >
                           <input
+                            aria-describedby="rek-project-start-date-date-helper-text"
                             aria-invalid="true"
                             aria-label="Day"
                             class="MuiInputBase-input MuiInput-input css-MuiInputBase-input-MuiInput-input"
@@ -1242,7 +1249,9 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                         </div>
                       </div>
                       <p
+                        aria-live="polite"
                         class="MuiFormHelperText-root Mui-error css-MuiFormHelperText-root"
+                        id="rek-project-start-date-date-helper-text"
                       >
                         Year required
                       </p>
@@ -1362,6 +1371,7 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                           class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-MuiInputBase-root-MuiInput-root"
                         >
                           <input
+                            aria-describedby="rek-end-date-date-helper-text"
                             aria-invalid="true"
                             aria-label="Day"
                             class="MuiInputBase-input MuiInput-input css-MuiInputBase-input-MuiInput-input"
@@ -1377,7 +1387,9 @@ exports[`DesignForm component with 6 input fields for NTRO 1`] = `
                         </div>
                       </div>
                       <p
+                        aria-live="polite"
                         class="MuiFormHelperText-root Mui-error css-MuiFormHelperText-root"
+                        id="rek-end-date-date-helper-text"
                       >
                         Invalid date
                       </p>
@@ -3266,6 +3278,7 @@ exports[`DesignForm component with all fields disabled 1`] = `
                           class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-MuiInputBase-root-MuiInput-root"
                         >
                           <input
+                            aria-describedby="rek-project-start-date-date-helper-text"
                             aria-invalid="true"
                             aria-label="Day"
                             class="MuiInputBase-input MuiInput-input Mui-disabled css-MuiInputBase-input-MuiInput-input"
@@ -3282,7 +3295,9 @@ exports[`DesignForm component with all fields disabled 1`] = `
                         </div>
                       </div>
                       <p
+                        aria-live="polite"
                         class="MuiFormHelperText-root Mui-error css-MuiFormHelperText-root"
+                        id="rek-project-start-date-date-helper-text"
                       >
                         Year required
                       </p>
@@ -3404,6 +3419,7 @@ exports[`DesignForm component with all fields disabled 1`] = `
                           class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-MuiInputBase-root-MuiInput-root"
                         >
                           <input
+                            aria-describedby="rek-end-date-date-helper-text"
                             aria-invalid="true"
                             aria-label="Day"
                             class="MuiInputBase-input MuiInput-input Mui-disabled css-MuiInputBase-input-MuiInput-input"
@@ -3420,7 +3436,9 @@ exports[`DesignForm component with all fields disabled 1`] = `
                         </div>
                       </div>
                       <p
+                        aria-live="polite"
                         class="MuiFormHelperText-root Mui-error css-MuiFormHelperText-root"
+                        id="rek-end-date-date-helper-text"
                       >
                         Invalid date
                       </p>
@@ -4183,6 +4201,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                           class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-MuiInputBase-root-MuiInput-root"
                         >
                           <input
+                            aria-describedby="rek-project-start-date-date-helper-text"
                             aria-invalid="true"
                             aria-label="Day"
                             class="MuiInputBase-input MuiInput-input css-MuiInputBase-input-MuiInput-input"
@@ -4198,7 +4217,9 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                         </div>
                       </div>
                       <p
+                        aria-live="polite"
                         class="MuiFormHelperText-root Mui-error css-MuiFormHelperText-root"
+                        id="rek-project-start-date-date-helper-text"
                       >
                         Year required
                       </p>
@@ -4318,6 +4339,7 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                           class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-MuiInputBase-root-MuiInput-root"
                         >
                           <input
+                            aria-describedby="rek-end-date-date-helper-text"
                             aria-invalid="true"
                             aria-label="Day"
                             class="MuiInputBase-input MuiInput-input css-MuiInputBase-input-MuiInput-input"
@@ -4333,7 +4355,9 @@ exports[`DesignForm should show architectural content correctly 1`] = `
                         </div>
                       </div>
                       <p
+                        aria-live="polite"
                         class="MuiFormHelperText-root Mui-error css-MuiFormHelperText-root"
+                        id="rek-end-date-date-helper-text"
                       >
                         Invalid date
                       </p>

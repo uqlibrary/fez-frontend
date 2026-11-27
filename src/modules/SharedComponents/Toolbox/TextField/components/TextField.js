@@ -51,6 +51,7 @@ export const TextFieldWrapper = React.forwardRef((props, ref) => {
 
                 formHelperText: {
                     'data-testid': `${id}-helper-text`,
+                    'aria-live': 'polite',
                 },
             }}
         />

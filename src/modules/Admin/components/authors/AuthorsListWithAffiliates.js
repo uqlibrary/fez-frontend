@@ -258,7 +258,7 @@ export const AuthorsListWithAffiliates = ({ contributorEditorId, disabled, list,
                                     onKeyPress={handleKeyPress}
                                     textFieldId={contributorEditorId}
                                     error={!!error}
-                                    errorText={validation.maxLength255Validator(value)}
+                                    errorText={validation.required(value) || validation.maxLength255Validator(value)}
                                     label={nameAsPublishedLabel}
                                     placeholder={nameAsPublishedHint}
                                     required
