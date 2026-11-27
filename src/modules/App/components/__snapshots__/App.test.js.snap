@@ -149,7 +149,9 @@ exports[`Application component Should display mobile correctly 1`] = `
               class="auth-button-wrapper"
             >
               <button
+                aria-label="Log in"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge log-in-button css-MuiButtonBase-root-MuiIconButton-root"
+                data-mui-internal-clone-element="true"
                 tabindex="0"
                 type="button"
               >
@@ -166,7 +168,7 @@ exports[`Application component Should display mobile correctly 1`] = `
                   />
                 </svg>
                 <span
-                  class="sr-only"
+                  class="MuiTypography-root MuiTypography-body1 css-MuiTypography-root"
                 >
                   Log in
                 </span>
@@ -994,8 +996,9 @@ exports[`Application component should render alert if user is not fez author 1`]
               class="auth-button-wrapper"
             >
               <button
-                aria-haspopup="true"
+                aria-label="Log out - undefined"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge log-out-button css-MuiButtonBase-root-MuiIconButton-root"
+                data-mui-internal-clone-element="true"
                 tabindex="0"
                 type="button"
               >
@@ -1012,9 +1015,9 @@ exports[`Application component should render alert if user is not fez author 1`]
                   />
                 </svg>
                 <span
-                  class="sr-only"
+                  class="MuiTypography-root MuiTypography-body1 css-MuiTypography-root"
                 >
-                  Log out - undefined
+                  Log out
                 </span>
               </button>
             </div>
@@ -1587,8 +1590,9 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
               class="auth-button-wrapper"
             >
               <button
-                aria-haspopup="true"
+                aria-label="Log out - J RHD Student"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge log-out-button css-MuiButtonBase-root-MuiIconButton-root"
+                data-mui-internal-clone-element="true"
                 tabindex="0"
                 type="button"
               >
@@ -1605,9 +1609,9 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                   />
                 </svg>
                 <span
-                  class="sr-only"
+                  class="MuiTypography-root MuiTypography-body1 css-MuiTypography-root"
                 >
-                  Log out - J RHD Student
+                  Log out
                 </span>
               </button>
             </div>
@@ -2114,8 +2118,9 @@ exports[`Application component should render app for account with fez author wit
               class="auth-button-wrapper"
             >
               <button
-                aria-haspopup="true"
+                aria-label="Log out - undefined"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge log-out-button css-MuiButtonBase-root-MuiIconButton-root"
+                data-mui-internal-clone-element="true"
                 tabindex="0"
                 type="button"
               >
@@ -2132,9 +2137,9 @@ exports[`Application component should render app for account with fez author wit
                   />
                 </svg>
                 <span
-                  class="sr-only"
+                  class="MuiTypography-root MuiTypography-body1 css-MuiTypography-root"
                 >
-                  Log out - undefined
+                  Log out
                 </span>
               </button>
             </div>
@@ -2641,8 +2646,9 @@ exports[`Application component should render application with routing for the us
               class="auth-button-wrapper"
             >
               <button
-                aria-haspopup="true"
+                aria-label="Log out - undefined"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge log-out-button css-MuiButtonBase-root-MuiIconButton-root"
+                data-mui-internal-clone-element="true"
                 tabindex="0"
                 type="button"
               >
@@ -2659,9 +2665,9 @@ exports[`Application component should render application with routing for the us
                   />
                 </svg>
                 <span
-                  class="sr-only"
+                  class="MuiTypography-root MuiTypography-body1 css-MuiTypography-root"
                 >
-                  Log out - undefined
+                  Log out
                 </span>
               </button>
             </div>
@@ -2955,7 +2961,9 @@ exports[`Application component should render for anon user 1`] = `
               class="auth-button-wrapper"
             >
               <button
+                aria-label="Log in"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge log-in-button css-MuiButtonBase-root-MuiIconButton-root"
+                data-mui-internal-clone-element="true"
                 tabindex="0"
                 type="button"
               >
@@ -2972,7 +2980,7 @@ exports[`Application component should render for anon user 1`] = `
                   />
                 </svg>
                 <span
-                  class="sr-only"
+                  class="MuiTypography-root MuiTypography-body1 css-MuiTypography-root"
                 >
                   Log in
                 </span>
